@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "默写小工具 · 词库数据模型 v1",
+  "description": "四级结构：版本 version → 年级 grade → 学科 subject → 单元 unit → 词条 word。一个文件承载全部内置词库，前端一次性加载。",
+  "type": "object",
+  "required": ["meta", "versions"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["schemaVersion", "updatedAt"],
+      "properties": {
+        "schemaVersion": { "type": "string", "const": "1.0" },
+        "updatedAt": { "type": "string", "description": "YYYY-MM-DD，数据更新时间" }
+      }
+    },
+    "versions": {
+      "type": "array",
+      "description": "教材版本列表",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "grades"],
+        "properties": {
+          "id": { "type": "string", "description": "稳定标识，如 pep（人教版）、bnu（北师大版）" },
+          "name": { "type": "string", "description": "展示名，如 人教版" },
+          "grades": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "name", "subjects"],
+              "properties": {
+                "id": { "type": "string", "description": "如 g3（三年级）" },
+                "name": { "type": "string", "description": "如 三年级" },
+                "semester": { "type": "string", "enum": ["上册", "下册"], "description": "可选，一个年级数据分上下册时用" },
+                "subjects": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["id", "name", "units"],
+                    "properties": {
+                      "id": { "type": "string", "enum": ["chinese", "english"], "description": "chinese=语文，english=英语" },
+                      "name": { "type": "string" },
+                      "units": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": ["id", "name", "words"],
+                          "properties": {
+                            "id": { "type": "string", "description": "如 u3（第3单元）" },
+                            "name": { "type": "string", "description": "如 第3单元 · 词语表" },
+                            "words": {
+                              "type": "array",
+                              "minItems": 1,
+                              "items": {
+                                "type": "object",
+                                "required": ["word"],
+                                "properties": {
+                                  "word": { "type": "string", "description": "默写目标词（语文词语 / 英语单词）" },
+                                  "tip": { "type": "string", "description": "语文：释义/提示，判错后展示" },
+                                  "meaning": { "type": "string", "description": "英语：中文释义（家长开启“附中文释义”时播报）" },
+                                  "example": { "type": "string", "description": "英语：例句，可选（P1，例句播报待 PRD 问题2确认）" }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

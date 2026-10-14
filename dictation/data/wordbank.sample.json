@@ -1,0 +1,135 @@
+{
+  "meta": { "schemaVersion": "1.0", "updatedAt": "2026-10-13" },
+  "versions": [
+    {
+      "id": "pep",
+      "name": "人教版",
+      "grades": [
+        {
+          "id": "g3", "name": "三年级", "semester": "上册",
+          "subjects": [
+            {
+              "id": "chinese", "name": "语文",
+              "units": [
+                {
+                  "id": "u1", "name": "第1单元 · 词语表",
+                  "words": [
+                    { "word": "早晨", "tip": "一天的开始" },
+                    { "word": "穿戴", "tip": "穿上衣物、佩戴饰品" },
+                    { "word": "鲜艳", "tip": "色彩鲜明亮丽" },
+                    { "word": "服装", "tip": "衣服鞋帽的总称" },
+                    { "word": "打扮", "tip": "修饰外表" },
+                    { "word": "校园", "tip": "学校的园子" },
+                    { "word": "敬爱", "tip": "尊敬热爱" },
+                    { "word": "国旗", "tip": "国家的旗帜" },
+                    { "word": "敬礼", "tip": "行礼表示敬意" },
+                    { "word": "铜钟", "tip": "铜铸的大钟" }
+                  ]
+                },
+                {
+                  "id": "u2", "name": "第2单元 · 词语表",
+                  "words": [
+                    { "word": "寒冷", "tip": "温度低，感觉冷" },
+                    { "word": "石径", "tip": "石头铺成的小路" },
+                    { "word": "霜叶", "tip": "经霜的枫叶" },
+                    { "word": "赠送", "tip": "无偿送给" },
+                    { "word": "菊花", "tip": "秋季开放的花" },
+                    { "word": "君子", "tip": "品德高尚的人" },
+                    { "word": "橙黄", "tip": "像橙子一样的黄色" },
+                    { "word": "加紧", "tip": "加快速度或强度" },
+                    { "word": "丰收", "tip": "收成好" },
+                    { "word": "铺满", "tip": "全部覆盖" }
+                  ]
+                },
+                {
+                  "id": "u3", "name": "第3单元 · 词语表",
+                  "words": [
+                    { "word": "颜料", "tip": "绘画用的色彩材料" },
+                    { "word": "邮票", "tip": "寄信贴的凭证" },
+                    { "word": "飘舞", "tip": "随风飞舞" },
+                    { "word": "紧张", "tip": "精神处于紧绷状态" },
+                    { "word": "争取", "tip": "努力获得" },
+                    { "word": "粗壮", "tip": "粗大而结实" },
+                    { "word": "排列", "tip": "按顺序摆放" },
+                    { "word": "规则", "tip": "共同遵守的章程" },
+                    { "word": "仲秋", "tip": "农历八月" },
+                    { "word": "犹如", "tip": "好像、如同" },
+                    { "word": "迟到", "tip": "比规定时间晚到" },
+                    { "word": "凉席", "tip": "夏天铺的席子" },
+                    { "word": "勾住", "tip": "挂住、拉住" },
+                    { "word": "喇叭", "tip": "一种管乐器" },
+                    { "word": "丰厚", "tip": "丰富厚重" },
+                    { "word": "钥匙", "tip": "开锁的工具" },
+                    { "word": "趁机", "tip": "抓住时机" },
+                    { "word": "缤纷", "tip": "色彩繁多艳丽" },
+                    { "word": "路径", "tip": "道路" },
+                    { "word": "丰收", "tip": "收成好" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "english", "name": "英语",
+              "units": [
+                {
+                  "id": "u1", "name": "Unit 1 · Hello",
+                  "words": [
+                    { "word": "hello", "meaning": "你好" },
+                    { "word": "goodbye", "meaning": "再见" },
+                    { "word": "name", "meaning": "名字" },
+                    { "word": "book", "meaning": "书" },
+                    { "word": "pen", "meaning": "钢笔" },
+                    { "word": "ruler", "meaning": "尺子" },
+                    { "word": "eraser", "meaning": "橡皮" },
+                    { "word": "school", "meaning": "学校" }
+                  ]
+                },
+                {
+                  "id": "u2", "name": "Unit 2 · Colours",
+                  "words": [
+                    { "word": "red", "meaning": "红色" },
+                    { "word": "blue", "meaning": "蓝色" },
+                    { "word": "green", "meaning": "绿色" },
+                    { "word": "yellow", "meaning": "黄色" },
+                    { "word": "black", "meaning": "黑色" },
+                    { "word": "white", "meaning": "白色" },
+                    { "word": "colour", "meaning": "颜色" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bnu",
+      "name": "北师大版",
+      "grades": [
+        {
+          "id": "g3", "name": "三年级", "semester": "上册",
+          "subjects": [
+            {
+              "id": "chinese", "name": "语文",
+              "units": [
+                {
+                  "id": "u1", "name": "第1单元 · 词语表",
+                  "words": [
+                    { "word": "考试", "tip": "测验知识水平" },
+                    { "word": "发现", "tip": "找到原本存在的事物" },
+                    { "word": "继续", "tip": "连下去、不间断" },
+                    { "word": "秘密", "tip": "不为人知的事情" },
+                    { "word": "急忙", "tip": "赶紧、连忙" },
+                    { "word": "错误", "tip": "不正确的地方" },
+                    { "word": "帮助", "tip": "替人出力" },
+                    { "word": "年龄", "tip": "岁数" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

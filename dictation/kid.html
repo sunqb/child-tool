@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>听写 · 默写小工具</title>
+<style>
+  :root {
+    --ink: #1f2328;
+    --ink-2: #5c6470;
+    --ink-3: #98a1ad;
+    --kid: #e8590c;
+    --kid-soft: #fff0e6;
+    --kid-ink: #2b2118;
+    --kid-bg: #fffaf3;
+    --ok: #2b8a3e;
+    --bad: #d6453d;
+    --line: #f0d9c4;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: var(--kid-bg); }
+  body {
+    font-family: -apple-system, "SF Pro Text", "PingFang SC", "Noto Sans SC", sans-serif;
+    color: var(--kid-ink);
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 16px 16px 48px;
+  }
+
+  .kid-top { display: flex; align-items: center; justify-content: space-between; margin: 4px 2px 14px; }
+  .kid-top .k-title { font-size: 17px; font-weight: 700; }
+  .kid-top .k-quit { font-size: 13px; color: var(--ink-3); background: none; border: none; cursor: pointer; font-family: inherit; }
+
+  .progress-track { height: 10px; border-radius: 999px; background: #f1e4d4; overflow: hidden; margin-bottom: 6px; }
+  .progress-fill { height: 100%; border-radius: 999px; background: var(--kid); transition: width .4s ease; }
+  .progress-num { text-align: center; font-size: 16px; font-weight: 700; color: var(--kid); margin-bottom: 18px; }
+
+  .word-card {
+    background: #fff; border-radius: 22px; padding: 28px 20px 24px; text-align: center;
+    box-shadow: 0 8px 24px -12px rgba(232,89,12,.25); margin-bottom: 16px;
+    border: 2px solid #ffe1c9;
+  }
+  .word-card .w-label { font-size: 13px; color: var(--ink-3); margin-bottom: 10px; }
+  .word-card .w-word { font-size: 44px; font-weight: 800; letter-spacing: .1em; margin-bottom: 8px; }
+  .word-card .w-word.hidden-word { letter-spacing: .3em; color: #cfc4b4; font-size: 20px; font-weight: 600; }
+  .word-card .w-tip { font-size: 13px; color: var(--ink-2); min-height: 22px; }
+
+  .speak-btn {
+    display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%;
+    border: none; background: var(--kid); color: #fff; font-size: 18px; font-weight: 700;
+    padding: 16px; border-radius: 16px; cursor: pointer; font-family: inherit; margin-bottom: 10px;
+  }
+  .speak-btn:active { transform: scale(.98); }
+  .speak-btn svg { width: 22px; height: 22px; }
+  .kid-sec-row { display: flex; gap: 10px; margin-bottom: 16px; }
+  .ghost-btn {
+    flex: 1; border: 1.5px solid var(--line); background: #fff; color: var(--kid); font-size: 15px;
+    padding: 12px; border-radius: 14px; cursor: pointer; font-family: inherit; font-weight: 600;
+  }
+  .answer-input {
+    width: 100%; border: 2px solid var(--line); border-radius: 14px; padding: 16px; font-size: 22px;
+    text-align: center; font-family: inherit; color: var(--kid-ink); background: #fff; outline: none;
+    margin-bottom: 12px; letter-spacing: .1em;
+  }
+  .answer-input:focus { border-color: var(--kid); }
+  .answer-input.ok { border-color: var(--ok); background: #f0f9f1; }
+  .answer-input.bad { border-color: var(--bad); background: #fdf1f0; }
+  .submit-btn {
+    width: 100%; border: none; background: var(--kid-ink); color: #fff; font-size: 16px; font-weight: 700;
+    padding: 14px; border-radius: 14px; cursor: pointer; font-family: inherit;
+  }
+  .submit-btn:active { transform: scale(.98); }
+  .feedback { text-align: center; font-size: 15px; font-weight: 700; min-height: 26px; margin-top: 10px; }
+  .feedback.ok { color: var(--ok); }
+  .feedback.bad { color: var(--bad); }
+  .ctrl-row { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 14px; font-size: 13px; color: var(--ink-2); }
+  .mini-btn { border: none; background: none; color: #0f766e; font-size: 13px; cursor: pointer; font-family: inherit; font-weight: 600; }
+
+  /* ---------- 开始面板 ---------- */
+  .start-card {
+    background: #fff; border: 2px solid #ffe1c9; border-radius: 22px; padding: 26px 20px;
+    text-align: center; margin-bottom: 16px;
+  }
+  .start-card .s-hello { font-size: 22px; font-weight: 800; margin-bottom: 6px; }
+  .start-card .s-desc { font-size: 14px; color: var(--ink-2); margin-bottom: 18px; }
+  .start-card .s-meta { font-size: 13px; color: var(--ink-3); margin-top: 12px; }
+
+  /* ---------- 结果面板 ---------- */
+  .score-ring { text-align: center; margin: 14px 0 6px; }
+  .score-ring .s-num { font-size: 56px; font-weight: 800; color: var(--kid); }
+  .score-ring .s-label { font-size: 14px; color: var(--ink-2); margin-bottom: 14px; }
+  .result-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+  .r-item {
+    display: flex; justify-content: space-between; align-items: center; background: #fff;
+    border-radius: 12px; padding: 10px 14px; font-size: 15px; border: 1.5px solid #f3e8db;
+  }
+  .r-item .r-word { font-weight: 700; }
+  .r-item .r-ans { font-size: 13px; }
+  .r-item.good .r-ans { color: var(--ok); }
+  .r-item.wrong { border-color: #f5c6c2; }
+  .r-item.wrong .r-ans { color: var(--bad); }
+  .r-item .r-ans .strike { text-decoration: line-through; margin-right: 8px; color: var(--ink-3); }
+
+  .tts-warn {
+    display: none; background: #fdf1f0; color: var(--bad); border: 1px solid #f5c6c2;
+    border-radius: 12px; padding: 10px 14px; font-size: 13px; margin-bottom: 16px;
+  }
+  .tts-warn.show { display: block; }
+
+  .view { display: none; }
+  .view.show { display: block; }
+</style>
+</head>
+<body data-screen-label="kid-dictation">
+
+<!-- ============ 开始 / 恢复 ============ -->
+<div class="view" id="viewStart">
+  <div class="kid-top">
+    <span class="k-title">听写</span>
+    <a class="k-quit" href="parent.html" style="text-decoration:none">家长设置 ›</a>
+  </div>
+  <div class="tts-warn" id="ttsWarn">当前浏览器不支持语音播报，请换 Safari / Chrome 打开。</div>
+
+  <div class="start-card" id="resumeCard" style="display:none">
+    <div class="s-hello">上次还没默完</div>
+    <div class="s-desc" id="resumeDesc"></div>
+    <button class="speak-btn" id="resumeBtn" data-screen-label="resume-session">继续听写</button>
+    <div class="kid-sec-row" style="margin:0">
+      <button class="ghost-btn" id="resumeRestartBtn">从头开始</button>
+      <button class="ghost-btn" id="resumeDropBtn">清除进度</button>
+    </div>
+  </div>
+
+  <div class="start-card">
+    <div class="s-hello" id="helloTitle">准备好了就开始</div>
+    <div class="s-desc">在线默写：听到词打字提交，自动判分；纸笔默写：手机只报词，孩子写在纸上</div>
+    <button class="speak-btn" id="beginBtn" data-screen-label="begin-session">在线默写</button>
+    <button class="ghost-btn" style="width:100%" id="paperBeginBtn" data-screen-label="begin-paper">纸笔默写 · 只播报</button>
+    <div class="s-meta" id="startMeta"></div>
+  </div>
+</div>
+
+<!-- ============ 纸笔默写（只播报） ============ -->
+<div class="view" id="viewPaper">
+  <div class="kid-top">
+    <span class="k-title">纸笔听写</span>
+    <button class="k-quit" id="paperQuitBtn">退出</button>
+  </div>
+  <div class="progress-track"><div class="progress-fill" id="paperFill" style="width:0%"></div></div>
+  <div class="progress-num" id="paperNum">第 1 / 20 词</div>
+
+  <div class="word-card">
+    <div class="w-label">认真听，把词写在纸上</div>
+    <div class="w-word hidden-word">？ ？</div>
+    <div class="w-tip" id="paperTip">即将开始播报…</div>
+  </div>
+
+  <button class="speak-btn" id="paperAgainBtn">再听一遍</button>
+  <div class="kid-sec-row">
+    <button class="ghost-btn" id="paperSlowBtn">慢一点读</button>
+    <button class="ghost-btn" id="paperPauseBtn">暂停</button>
+  </div>
+  <div class="feedback" id="paperStatus"></div>
+</div>
+
+<!-- ============ 纸笔默写结束 / 家长对答案 ============ -->
+<div class="view" id="viewPaperEnd">
+  <div class="kid-top">
+    <span class="k-title">播报完成</span>
+    <button class="k-quit" id="paperEndHome">完成</button>
+  </div>
+  <div class="score-ring">
+    <div class="s-num" id="paperCount">0</div>
+    <div class="s-label">个词已播完，请家长对照批改</div>
+  </div>
+  <button class="speak-btn" id="paperCheckBtn" data-screen-label="paper-reveal">家长对答案（显示词列表）</button>
+  <div class="result-list" id="paperList" style="display:none"></div>
+  <button class="ghost-btn" style="width:100%" id="paperReplayBtn">再播一遍</button>
+</div>
+
+<!-- ============ 听写流程 ============ -->
+<div class="view" id="viewFlow">
+  <div class="kid-top">
+    <span class="k-title" id="flowTitle">语文听写</span>
+    <button class="k-quit" id="saveQuitBtn">保存退出</button>
+  </div>
+  <div class="progress-track"><div class="progress-fill" id="progFill" style="width:0%"></div></div>
+  <div class="progress-num" id="progNum">第 1 / 20 词</div>
+
+  <div class="word-card">
+    <div class="w-label">仔细听，写出你听到的词</div>
+    <div class="w-word hidden-word" id="wordDisplay">？ ？</div>
+    <div class="w-tip" id="wordTip">点下方按钮开始播报</div>
+  </div>
+
+  <button class="speak-btn" id="speakBtn" data-screen-label="speak-word">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"></polygon><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg>
+    <span id="speakLabel">听这个词</span>
+  </button>
+  <div class="kid-sec-row">
+    <button class="ghost-btn" id="againBtn">再听一遍</button>
+    <button class="ghost-btn" id="slowBtn">慢一点读</button>
+  </div>
+
+  <input class="answer-input" id="answerInput" placeholder="写在这里" autocomplete="off">
+  <button class="submit-btn" id="submitBtn" data-screen-label="submit-answer">写好了，下一个</button>
+  <div class="feedback" id="feedback"></div>
+
+  <div class="ctrl-row">
+    <button class="mini-btn" id="pauseBtn">暂停</button>
+    <span>·</span>
+    <button class="mini-btn" id="quitBtn">结束本次</button>
+  </div>
+</div>
+
+<!-- ============ 成绩单 ============ -->
+<div class="view" id="viewResult">
+  <div class="kid-top">
+    <span class="k-title">本次成绩</span>
+    <button class="k-quit" id="backHome">完成</button>
+  </div>
+  <div class="score-ring">
+    <div class="s-num" id="scoreNum">0</div>
+    <div class="s-label" id="scoreLabel"></div>
+  </div>
+  <div class="result-list" id="resultList"></div>
+  <button class="speak-btn" id="retryWrongBtn" data-screen-label="retry-wrong">重默错词</button>
+  <button class="ghost-btn" style="width:100%" id="restartBtn">再默一遍全部</button>
+</div>
+
+<script src="js/store.js"></script>
+<script src="js/tts.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var $ = function (id) { return document.getElementById(id); };
+  var cfg = Store.config.get();
+  var session = null;      // 当前会话（内存态，实时同步 Store.session）
+  var lastSession = null;  // 刚结束的会话，供成绩单上的重默/再默
+  var paused = false;
+  var advanceTimer = null;
+
+  /* ---------- 视图切换 ---------- */
+
+  function show(id) {
+    ["viewStart", "viewFlow", "viewResult", "viewPaper", "viewPaperEnd"].forEach(function (v) {
+      $(v).classList.toggle("show", v === id);
+    });
+    window.scrollTo(0, 0);
+  }
+
+  /* ---------- 开始面板 ---------- */
+
+  // 可续默的会话：有词、没默完、且至少默过 1 词（0 词的不提示"上次还没默完"）
+  function validSession(s) {
+    return s && Array.isArray(s.words) && s.words.length &&
+           Array.isArray(s.results) && s.results.length > 0 && s.results.length < s.words.length;
+  }
+  // 可进入的会话（含刚由家长页发起、还没开始默的 0 词会话）
+  function freshSession(s) {
+    return s && Array.isArray(s.words) && s.words.length &&
+           Array.isArray(s.results) && s.results.length < s.words.length;
+  }
+
+  function renderStart() {
+    var s = Store.session.get();
+    // 清理脏会话：无词或已默完的残留
+    if (s && (!Array.isArray(s.words) || !s.words.length ||
+              (Array.isArray(s.results) && s.results.length >= s.words.length))) {
+      Store.session.clear();
+      s = null;
+    }
+    var hasResume = validSession(s);
+    $("resumeCard").style.display = hasResume ? "block" : "none";
+    if (hasResume) {
+      $("resumeDesc").textContent =
+        (s.unitName || "") + " · 已默 " + s.results.length + " / " + s.words.length + " 词";
+    }
+
+    // 新会话预告：家长选过的单元，或词库第一个单元
+    Store.banks.load().then(function () {
+      function metaOf(p) {
+        return (p.subject.id === "english" ? "英语" : "语文") +
+               " · " + p.grade.name + (p.grade.semester ? "（" + p.grade.semester + "）" : "") +
+               " · " + p.version.name + " · " + p.unit.name;
+      }
+      var meta = "", count = 0;
+      var sel = Store.selection.get();
+      var p = sel
+        ? Store.banks.pick(sel.versionId, sel.gradeId, sel.subjectId, sel.unitId)
+        : Store.banks.pick(null, null, null, null);
+      meta = metaOf(p);
+      count = p.words.length;
+      $("startMeta").textContent = meta + " · 共 " + count + " 词";
+      $("helloTitle").textContent = hasResume ? "或者重新来一次" : "准备好了就开始";
+    });
+  }
+
+  function beginSession(words, source, subject, unitName) {
+    session = {
+      words: words, index: 0, results: [],
+      startedAt: Date.now(), source: source, subject: subject, unitName: unitName
+    };
+    saveSession();
+    enterFlow(false);
+    // 首词播报前留 2 秒准备时间（需求：孩子拿起纸笔再开始）
+    $("wordTip").textContent = "准备…";
+    setTimeout(function () { if (session) announce(false); }, 2000);
+  }
+
+  // 进入听写流程；autoSpeak=true 时尝试立即播报（依赖调用方处于用户手势中）
+  function enterFlow(autoSpeak) {
+    paused = false;
+    $("pauseBtn").textContent = "暂停";
+    $("flowTitle").textContent = session.subject === "english" ? "英语听写" : "语文听写";
+    show("viewFlow");
+    renderCurrent();
+    if (autoSpeak) announce(false);
+  }
+
+  function buildFromSelection() {
+    var sel = Store.selection.get();
+    var p = sel
+      ? Store.banks.pick(sel.versionId, sel.gradeId, sel.subjectId, sel.unitId)
+      : Store.banks.pick(null, null, null, null);
+    return { words: p.words, subject: p.subject.id, unitName: p.unit.name };
+  }
+
+  $("beginBtn").addEventListener("click", function () {
+    Store.banks.load().then(function () {
+      var b = buildFromSelection();
+      beginSession(b.words, "unit", b.subject, b.unitName);
+    });
+  });
+  $("resumeBtn").addEventListener("click", function () {
+    var s = Store.session.get();
+    if (!freshSession(s)) { renderStart(); return; }
+    session = s;
+    enterFlow(false);
+  });
+  $("resumeRestartBtn").addEventListener("click", function () {
+    var s = Store.session.get();
+    if (s) beginSession(s.words, s.source, s.subject, s.unitName);
+  });
+  $("resumeDropBtn").addEventListener("click", function () {
+    Store.session.clear();
+    renderStart();
+  });
+
+  /* ---------- 听写流程 ---------- */
+
+  function saveSession() {
+    session.index = session.results.length;
+    Store.session.set(session);
+  }
+
+  function curWord() { return session.words[session.results.length]; }
+
+  function renderCurrent() {
+    var total = session.words.length;
+    var done = session.results.length;
+    $("progNum").textContent = "第 " + (done + 1) + " / " + total + " 词";
+    $("progFill").style.width = ((done + 1) / total * 100) + "%";
+    $("wordDisplay").textContent = "？ ？";
+    $("wordDisplay").classList.add("hidden-word");
+    $("wordTip").textContent = "点下方按钮开始播报";
+    var input = $("answerInput");
+    input.value = "";
+    input.className = "answer-input";
+    input.disabled = false;
+    $("feedback").textContent = "";
+    $("feedback").className = "feedback";
+    $("speakLabel").textContent = "听这个词";
+  }
+
+  function isAsciiWord(word) { return /^[\x21-\x7e]+$/.test(word); }
+
+  function announce(slow) {
+    if (paused || !session) return;
+    var w = curWord();
+    if (!w) return;
+    TTS.stop();
+    $("speakLabel").textContent = "播报中…";
+    $("wordTip").textContent = "正在播放，注意听…";
+    // 自建词库按词条识别语言：英文词用 en-US 播报，中文词用 zh-CN
+    var perWordLang = session.source === "custom"
+      ? (isAsciiWord(w.word) ? "en-US" : "zh-CN")
+      : (session.subject === "english" ? "en-US" : "zh-CN");
+    var items = [{ text: w.word, lang: perWordLang }];
+    if (session.subject === "english" && cfg.withMeaning && w.meaning) {
+      items.push({ text: w.meaning, lang: "zh-CN" });
+    }
+    var hintLen = perWordLang === "en-US"
+      ? "（听到的是：" + w.word.length + " 个字母）"
+      : "（听到的是：" + w.word.length + " 个字）";
+    var finished = false;
+    function done() {
+      if (finished) return;
+      finished = true;
+      $("speakLabel").textContent = "听这个词";
+      $("wordTip").textContent = hintLen;
+      $("answerInput").focus();
+    }
+    if (!TTS.supported()) {
+      $("wordTip").textContent = "当前浏览器不支持语音播报";
+      $("speakLabel").textContent = "听这个词";
+      return;
+    }
+    TTS.speakSequence(items, { rate: slow ? 0.6 : cfg.speed, repeat: cfg.repeat, gapSec: 0, onEnd: done });
+    setTimeout(done, Math.max(6, w.word.length) * (slow ? 2.2 : 1.4) * 1000 / (cfg.speed || 0.9) * cfg.repeat + 1500); // 兜底：事件不触发也能继续
+  }
+
+  $("speakBtn").addEventListener("click", function () { announce(false); });
+  $("againBtn").addEventListener("click", function () { announce(false); });
+  $("slowBtn").addEventListener("click", function () { announce(true); });
+
+  $("submitBtn").addEventListener("click", function () {
+    if (!session) return;
+    var w = curWord();
+    if (!w) return;
+    var ans = $("answerInput").value.trim();
+    if (!ans) {
+      $("feedback").textContent = "先写一写，再提交哦";
+      $("feedback").className = "feedback bad";
+      return;
+    }
+    TTS.stop();
+    // 自建词库词条语言不一：判分不传 subject，走词条自动识别（英文忽略大小写，中文严格）
+    var ok = Store.judge.equals(ans, w.word, session.source === "custom" ? undefined : session.subject);
+    session.results.push({ word: w.word, ok: ok, ans: ok ? undefined : ans });
+    saveSession();
+    $("answerInput").className = "answer-input " + (ok ? "ok" : "bad");
+    $("answerInput").disabled = true;
+    var quoteWord = session.subject === "english" || (session.source === "custom" && isAsciiWord(w.word));
+    $("feedback").textContent = ok ? "答对了，真棒！" :
+      (quoteWord ? "正确写法是 " + w.word : "正确写法是「" + w.word + "」");
+    $("feedback").className = "feedback " + (ok ? "ok" : "bad");
+
+    clearTimeout(advanceTimer);
+    if (session.results.length >= session.words.length) {
+      advanceTimer = setTimeout(finish, 900);
+    } else {
+      advanceTimer = setTimeout(function () {
+        renderCurrent();
+        announce(false); // 自动播下一个词（若被浏览器拦截，孩子可点「听这个词」）
+      }, 1200);
+    }
+  });
+
+  $("answerInput").addEventListener("keydown", function (e) {
+    if (e.key === "Enter") $("submitBtn").click();
+  });
+
+  $("pauseBtn").addEventListener("click", function () {
+    paused = !paused;
+    this.textContent = paused ? "继续" : "暂停";
+    if (paused) { TTS.stop(); clearTimeout(advanceTimer); }
+  });
+
+  $("saveQuitBtn").addEventListener("click", function () {
+    TTS.stop();
+    clearTimeout(advanceTimer);
+    saveSession();
+    session = null;
+    renderStart();
+    show("viewStart");
+  });
+
+  $("quitBtn").addEventListener("click", function () {
+    TTS.stop();
+    clearTimeout(advanceTimer);
+    if (session && session.results.length) finish();
+    else { Store.session.clear(); session = null; renderStart(); show("viewStart"); }
+  });
+
+  /* ---------- 成绩单 ---------- */
+
+  function finish() {
+    lastSession = session;
+    // 错词自动入本
+    lastSession.results.forEach(function (r) {
+      if (r.ok) return;
+      var entry = lastSession.words.find(function (w) { return w.word === r.word; }) || { word: r.word };
+      Store.wrongbook.add(entry, lastSession.subject);
+    });
+    Store.session.clear();
+    session = null;
+    renderResult();
+    show("viewResult");
+  }
+
+  function renderResult() {
+    var results = lastSession.results;
+    var wrong = results.filter(function (r) { return !r.ok; });
+    var score = results.length ? Math.round((results.length - wrong.length) / results.length * 100) : 0;
+    $("scoreNum").textContent = score;
+    $("scoreLabel").textContent = results.length + " 词 · 错 " + wrong.length + " 词已加入错词本";
+    var list = $("resultList");
+    list.textContent = "";
+    results.forEach(function (r) {
+      var div = document.createElement("div");
+      div.className = "r-item " + (r.ok ? "good" : "wrong");
+      var word = document.createElement("span");
+      word.className = "r-word";
+      word.textContent = (lastSession.subject === "english" && !r.ok) ? r.word : r.word;
+      var ans = document.createElement("span");
+      ans.className = "r-ans";
+      if (r.ok) {
+        ans.textContent = "✓ 正确";
+      } else {
+        var strike = document.createElement("span");
+        strike.className = "strike";
+        strike.textContent = r.ans || "";
+        ans.appendChild(strike);
+        ans.appendChild(document.createTextNode(r.word));
+      }
+      div.appendChild(word);
+      div.appendChild(ans);
+      list.appendChild(div);
+    });
+    $("retryWrongBtn").textContent = "重默错词（" + wrong.length + "）";
+    $("retryWrongBtn").style.display = wrong.length ? "flex" : "none";
+  }
+
+  $("retryWrongBtn").addEventListener("click", function () {
+    var wrong = lastSession.results.filter(function (r) { return !r.ok; });
+    if (!wrong.length) return;
+    var words = wrong.map(function (r) {
+      return lastSession.words.find(function (w) { return w.word === r.word; }) || { word: r.word };
+    });
+    beginSession(words, "wrongbook", lastSession.subject, "错词本");
+  });
+
+  $("restartBtn").addEventListener("click", function () {
+    if (!lastSession) return;
+    beginSession(lastSession.words, lastSession.source, lastSession.subject, lastSession.unitName);
+  });
+
+  $("backHome").addEventListener("click", function () {
+    TTS.stop();
+    renderStart();
+    show("viewStart");
+  });
+
+  /* ---------- 纸笔默写（只播报，不输入） ---------- */
+
+  var paper = null; // { words, subject, i, paused, timer }
+
+  function paperStart(words, subject) {
+    TTS.stop();
+    paper = { words: words, subject: subject, i: 0, paused: false, timer: null };
+    $("paperPauseBtn").textContent = "暂停";
+    show("viewPaper");
+    paperRender();
+    // 首词播报前留 2 秒准备时间
+    $("paperTip").textContent = "准备…";
+    setTimeout(function () { if (paper) paperSpeak(false); }, 2000);
+  }
+
+  function paperRender() {
+    var total = paper.words.length;
+    $("paperNum").textContent = "第 " + (paper.i + 1) + " / " + total + " 词";
+    $("paperFill").style.width = ((paper.i + 1) / total * 100) + "%";
+  }
+
+  function paperSpeak(slow) {
+    if (!paper || paper.paused) return;
+    var w = paper.words[paper.i];
+    if (!w) return;
+    TTS.stop();
+    clearTimeout(paper.timer);
+    $("paperTip").textContent = "播报中…";
+    $("paperStatus").textContent = "";
+    var lang = paper.subject === "english"
+      ? "en-US" : "zh-CN";
+    var items = [{ text: w.word, lang: lang }];
+    if (paper.subject === "english" && cfg.withMeaning && w.meaning) {
+      items.push({ text: w.meaning, lang: "zh-CN" });
+    }
+    var finished = false;
+    function done() {
+      if (finished || !paper) return;
+      finished = true;
+      if (paper.paused) return;
+      $("paperTip").textContent = "写完就等下一个…";
+      paper.timer = setTimeout(paperNext, (cfg.gapSec || 3) * 1000);
+    }
+    if (!TTS.supported()) {
+      $("paperTip").textContent = "当前浏览器不支持语音播报";
+      return;
+    }
+    TTS.speakSequence(items, { rate: slow ? 0.6 : cfg.speed, repeat: cfg.repeat, gapSec: 0, onEnd: done });
+    setTimeout(done, Math.max(6, w.word.length) * (slow ? 2.2 : 1.4) * 1000 / (cfg.speed || 0.9) * cfg.repeat + 1500);
+  }
+
+  function paperNext() {
+    if (!paper) return;
+    paper.i++;
+    if (paper.i >= paper.words.length) { paperFinish(); return; }
+    paperRender();
+    paperSpeak(false);
+  }
+
+  function paperFinish() {
+    TTS.stop();
+    clearTimeout(paper.timer);
+    $("paperCount").textContent = paper.words.length;
+    $("paperList").style.display = "none";
+    $("paperCheckBtn").style.display = "flex";
+    show("viewPaperEnd");
+  }
+
+  $("paperBeginBtn").addEventListener("click", function () {
+    Store.banks.load().then(function () {
+      var b = buildFromSelection();
+      paperStart(b.words, b.subject);
+    });
+  });
+  $("paperAgainBtn").addEventListener("click", function () { paperSpeak(false); });
+  $("paperSlowBtn").addEventListener("click", function () { paperSpeak(true); });
+  $("paperPauseBtn").addEventListener("click", function () {
+    if (!paper) return;
+    paper.paused = !paper.paused;
+    this.textContent = paper.paused ? "继续" : "暂停";
+    if (paper.paused) {
+      TTS.stop();
+      clearTimeout(paper.timer);
+      $("paperTip").textContent = "已暂停";
+      $("paperStatus").textContent = "";
+    } else {
+      $("paperTip").textContent = "继续听…";
+      paperSpeak(false);
+    }
+  });
+  $("paperQuitBtn").addEventListener("click", function () {
+    TTS.stop();
+    clearTimeout(paper.timer);
+    paper = null;
+    renderStart();
+    show("viewStart");
+  });
+  $("paperCheckBtn").addEventListener("click", function () {
+    // 家长对答案：此时才显示词列表
+    var list = $("paperList");
+    list.textContent = "";
+    paper.words.forEach(function (w, idx) {
+      var div = document.createElement("div");
+      div.className = "r-item good";
+      var num = document.createElement("span");
+      num.className = "r-ans";
+      num.style.color = "#98a1ad";
+      num.textContent = (idx + 1) + ".";
+      var word = document.createElement("span");
+      word.className = "r-word";
+      word.textContent = w.word;
+      div.appendChild(num);
+      div.appendChild(word);
+      list.appendChild(div);
+    });
+    list.style.display = "flex";
+    this.style.display = "none";
+  });
+  $("paperReplayBtn").addEventListener("click", function () {
+    if (paper) paperStart(paper.words, paper.subject);
+  });
+  $("paperEndHome").addEventListener("click", function () {
+    TTS.stop();
+    paper = null;
+    renderStart();
+    show("viewStart");
+  });
+
+  /* ---------- 初始化 ---------- */
+
+  if (!TTS.supported()) $("ttsWarn").classList.add("show");
+
+  // 家长页「开始听写」跳转：?go=1&mode=online|paper，带会话直达对应模式
+  var params = new URLSearchParams(location.search);
+  if (params.get("go") === "1") {
+    history.replaceState(null, "", location.pathname);
+    if (params.get("mode") === "paper") {
+      var p = Store.session.get();
+      if (freshSession(p)) {
+        paperStart(p.words, p.subject);
+      } else {
+        Store.banks.load().then(function () {
+          var b = buildFromSelection();
+          paperStart(b.words, b.subject);
+        });
+      }
+    } else {
+      var pending = Store.session.get();
+      if (freshSession(pending)) {
+        session = pending;
+        if (pending.results.length === 0) {
+          // 新一轮：首词前留 2 秒准备
+          enterFlow(false);
+          $("wordTip").textContent = "准备…";
+          setTimeout(function () { if (session) announce(false); }, 2000);
+        } else {
+          enterFlow(true); // 续默：直接播当前词
+        }
+      } else {
+        renderStart();
+        show("viewStart");
+      }
+    }
+  } else {
+    renderStart();
+    show("viewStart");
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>给孩子布置默写 · 默写小工具</title>
+<style>
+  :root {
+    --ink: #1f2328;
+    --ink-2: #5c6470;
+    --ink-3: #98a1ad;
+    --paper: #f6f4ef;
+    --card: #ffffff;
+    --line: #e7e3da;
+    --accent: #0f766e;
+    --accent-soft: #e6f2f0;
+    --bad: #d6453d;
+    --radius: 14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: var(--paper); }
+  body {
+    font-family: -apple-system, "SF Pro Text", "PingFang SC", "Noto Sans SC", sans-serif;
+    color: var(--ink);
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 16px 16px 48px;
+  }
+  .top-bar { display: flex; justify-content: space-between; align-items: center; margin: 2px 2px 14px; }
+  .top-bar .home { font-size: 13px; color: var(--ink-3); text-decoration: none; }
+  .p-title { font-size: 21px; font-weight: 700; margin: 6px 2px 2px; }
+  .p-sub { font-size: 13px; color: var(--ink-2); margin: 0 2px 18px; }
+
+  .sec { margin-bottom: 20px; }
+  .sec-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .sec-num {
+    width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: #fff;
+    font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex: none;
+  }
+  .sec-head h3 { font-size: 15px; }
+  .sec-empty { font-size: 13px; color: var(--ink-3); padding: 4px 2px; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    padding: 7px 14px; border-radius: 999px; border: 1.5px solid var(--line);
+    background: #fff; font-size: 14px; color: var(--ink-2); cursor: pointer; user-select: none;
+    transition: all .15s; font-family: inherit;
+  }
+  .chip.on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+  .chip:disabled { opacity: .4; cursor: not-allowed; }
+
+  .unit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .unit {
+    border: 1.5px solid var(--line); border-radius: var(--radius); padding: 10px 12px;
+    cursor: pointer; background: #fff; transition: all .15s;
+  }
+  .unit.on { border-color: var(--accent); background: var(--accent-soft); }
+  .unit .u-name { font-size: 14px; font-weight: 600; }
+  .unit .u-meta { font-size: 12px; color: var(--ink-3); }
+
+  .seg { display: flex; background: #f0eee8; border-radius: 12px; padding: 3px; gap: 3px; }
+  .seg button {
+    flex: 1; border: none; background: transparent; padding: 8px 4px; border-radius: 9px;
+    font-size: 14px; color: var(--ink-2); cursor: pointer; font-family: inherit; white-space: nowrap;
+  }
+  .seg button.on { background: #fff; color: var(--ink); font-weight: 600; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+  .seg button:disabled { opacity: .4; cursor: not-allowed; }
+
+  .row-line { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line); gap: 10px; }
+  .row-line:last-child { border-bottom: none; }
+  .row-line .r-label { font-size: 14px; }
+  .row-line .r-hint { font-size: 12px; color: var(--ink-3); }
+
+  .counter { display: flex; align-items: center; gap: 12px; }
+  .counter button {
+    width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid var(--line); background: #fff;
+    font-size: 16px; color: var(--accent); cursor: pointer; line-height: 1; font-family: inherit;
+  }
+  .counter span { font-size: 15px; font-weight: 600; min-width: 18px; text-align: center; }
+
+  .switch { width: 46px; height: 27px; border-radius: 999px; background: #d8d4cb; position: relative; cursor: pointer; transition: background .2s; flex: none; }
+  .switch::after {
+    content: ""; position: absolute; top: 2.5px; left: 3px; width: 22px; height: 22px;
+    border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.2); transition: left .2s;
+  }
+  .switch.on { background: var(--accent); }
+  .switch.on::after { left: 21px; }
+
+  .notice {
+    display: none; background: #fff8e6; border: 1px solid #f0e0b0; color: #8a6d1a;
+    border-radius: 12px; padding: 8px 12px; font-size: 13px; margin-bottom: 12px;
+  }
+  .notice.show { display: block; }
+
+  /* 开始听写 · 模式选择弹层 */
+  .sheet-mask {
+    position: fixed; inset: 0; background: rgba(31,35,40,.4); display: none; z-index: 50;
+  }
+  .sheet-mask.show { display: block; }
+  .action-sheet {
+    position: fixed; left: 0; right: 0; bottom: 0; background: #fff;
+    border-radius: 20px 20px 0 0; padding: 18px 16px 28px; z-index: 51;
+    transform: translateY(105%); transition: transform .2s ease;
+    max-width: 480px; margin: 0 auto;
+  }
+  .sheet-mask.show .action-sheet { transform: translateY(0); }
+  .action-sheet h4 { font-size: 15px; color: var(--ink-2); text-align: center; margin-bottom: 14px; font-weight: 600; }
+  .sheet-btn {
+    display: block; width: 100%; border: none; border-radius: 14px; padding: 14px;
+    font-size: 16px; font-weight: 700; font-family: inherit; cursor: pointer; margin-bottom: 10px;
+    letter-spacing: .02em;
+  }
+  .sheet-btn small { display: block; font-size: 12px; font-weight: 400; opacity: .85; margin-top: 2px; }
+  .sheet-btn.primary { background: var(--accent); color: #fff; }
+  .sheet-btn.soft { background: var(--accent-soft); color: var(--accent); }
+  .sheet-cancel {
+    display: block; width: 100%; border: none; background: none; color: var(--ink-3);
+    font-size: 14px; padding: 8px; font-family: inherit; cursor: pointer;
+  }
+
+  .summary {
+    background: var(--accent-soft); border-radius: var(--radius); padding: 14px 16px;
+    font-size: 13px; color: var(--accent); margin-bottom: 14px;
+  }
+  .summary b { font-size: 15px; }
+
+  .cta {
+    display: block; width: 100%; border: none; background: var(--accent); color: #fff;
+    font-size: 17px; font-weight: 700; padding: 15px; border-radius: 16px; cursor: pointer;
+    font-family: inherit; letter-spacing: 0.05em;
+  }
+  .cta:active { transform: scale(.98); }
+  .cta-sub { text-align: center; font-size: 12px; color: var(--ink-3); margin-top: 10px; }
+
+  .tts-warn {
+    display: none; background: #fdf1f0; color: var(--bad); border: 1px solid #f5c6c2;
+    border-radius: 12px; padding: 10px 14px; font-size: 13px; margin-bottom: 16px;
+  }
+  .tts-warn.show { display: block; }
+
+  /* 范围词预览：词语 + 括号释义，样式区分 */
+  .range-preview {
+    margin-top: 10px; background: #fff; border: 1.5px solid var(--line);
+    border-radius: var(--radius); padding: 10px 12px;
+  }
+  .range-preview .rp-head { font-size: 12px; color: var(--ink-3); margin-bottom: 4px; }
+  .range-preview .rp-words { font-size: 16px; line-height: 2.1; color: var(--ink); }
+  .range-preview .rp-w { display: inline-block; margin: 0 14px 2px 0; }
+  .range-preview .rp-word { font-weight: 600; }
+  .range-preview .rp-def { font-size: 12px; color: var(--ink-3); margin-left: 2px; }
+  .range-preview .rp-badge {
+    font-size: 11px; color: var(--bad); background: #fdf1f0; border-radius: 999px;
+    padding: 0 6px; margin-left: 4px; vertical-align: 1px;
+  }
+  .range-preview .rp-more {
+    display: block; margin-top: 4px; border: none; background: none; color: var(--accent);
+    font-size: 13px; cursor: pointer; font-family: inherit; font-weight: 600; padding: 0;
+  }
+  .range-preview .rp-empty { font-size: 13px; color: var(--ink-3); }
+
+  /* 自建词库 */
+  .text-input {
+    width: 100%; border: 1.5px solid var(--line); border-radius: 12px; padding: 10px 12px;
+    font-size: 14px; font-family: inherit; color: var(--ink); background: #fff; outline: none;
+    margin-bottom: 8px; resize: vertical;
+  }
+  .text-input:focus { border-color: var(--accent); }
+  .ghost-cta {
+    width: 100%; border: 1.5px solid var(--accent); background: #fff; color: var(--accent);
+    font-size: 14px; font-weight: 600; padding: 10px; border-radius: 12px; cursor: pointer;
+    font-family: inherit; margin-bottom: 10px;
+  }
+  .form-err { display: none; font-size: 12px; color: var(--bad); margin: -2px 0 8px; }
+  .form-err.show { display: block; }
+  .bank-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+  .bank-chip {
+    display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border-radius: 999px;
+    border: 1.5px solid var(--line); background: #fff; font-size: 14px; color: var(--ink-2);
+  }
+  .bank-chip .b-n { font-weight: 600; color: var(--ink); }
+  .bank-chip .b-del { border: none; background: none; color: var(--ink-3); cursor: pointer; font-size: 13px; font-family: inherit; padding: 0; }
+
+  /* 错词本管理 */
+  .wb-item {
+    display: flex; justify-content: space-between; align-items: center; background: #fff;
+    border: 1.5px solid var(--line); border-radius: 12px; padding: 9px 12px; margin-bottom: 8px;
+  }
+  .wb-item .w-word { font-size: 15px; font-weight: 600; }
+  .wb-item .w-meta { font-size: 12px; color: var(--ink-3); }
+  .wb-item .w-del { border: none; background: none; color: var(--ink-3); font-size: 13px; cursor: pointer; font-family: inherit; }
+  .wb-empty { font-size: 13px; color: var(--ink-3); padding: 2px; }
+</style>
+</head>
+<body data-screen-label="parent-settings">
+
+<div class="top-bar">
+  <a class="home" href="index.html">‹ 返回首页</a>
+  <a class="home" href="kid.html" data-screen-label="link-kid">学生入口 ›</a>
+</div>
+
+<div class="p-title">给孩子布置默写</div>
+<p class="p-sub">选一套词库，设置好播报，就可以交给孩子了</p>
+
+<div class="tts-warn" id="ttsWarn">当前浏览器不支持语音播报，孩子端将无法听词，建议换 Safari / Chrome 打开。</div>
+
+<div class="sec">
+  <div class="sec-head"><span class="sec-num">1</span><h3>学科</h3></div>
+  <div class="chips" id="subjects"></div>
+</div>
+
+<div class="sec">
+  <div class="sec-head"><span class="sec-num">2</span><h3>年级</h3></div>
+  <div class="chips" id="grades"></div>
+</div>
+
+<div class="sec">
+  <div class="sec-head"><span class="sec-num">3</span><h3>教材版本</h3></div>
+  <div class="chips" id="versions"></div>
+</div>
+
+<div class="sec">
+  <div class="sec-head"><span class="sec-num">4</span><h3>选择单元词库</h3></div>
+  <div class="unit-grid" id="units"></div>
+  <div class="sec-empty" id="unitsEmpty" style="display:none">该学科暂无词库</div>
+</div>
+
+<div class="sec">
+  <div class="sec-head"><span class="sec-num">5</span><h3>播报设置</h3></div>
+  <div class="row-line">
+    <div><div class="r-label">语速</div></div>
+    <div class="seg" style="width:190px" id="speedSeg">
+      <button data-v="0.6">偏慢</button>
+      <button data-v="0.9">标准</button>
+      <button data-v="1.2">偏快</button>
+    </div>
+  </div>
+  <div class="row-line">
+    <div><div class="r-label">每个词读几遍</div></div>
+    <div class="counter"><button id="repMinus">−</button><span id="repNum">2</span><button id="repPlus">＋</button></div>
+  </div>
+  <div class="row-line">
+    <div><div class="r-label">词与词间隔</div><div class="r-hint">给孩子留书写时间</div></div>
+    <div class="seg" style="width:190px" id="gapSeg">
+      <button data-v="3">3秒</button>
+      <button data-v="5">5秒</button>
+      <button data-v="8">8秒</button>
+    </div>
+  </div>
+  <div class="row-line" id="meaningRow" style="display:none">
+    <div><div class="r-label">英语附中文释义</div></div>
+    <div class="switch" id="swMeaning"></div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-head"><span class="sec-num">6</span><h3>默写范围</h3></div>
+  <div class="seg" id="rangeSeg">
+    <button data-v="all" class="on">全部</button>
+    <button data-v="wrong">仅错词本</button>
+    <button data-v="custom">前 N 个</button>
+    <button data-v="bank">自建词库</button>
+  </div>
+  <div class="row-line" id="customRow" style="display:none">
+    <div><div class="r-label">只默前 N 个词</div></div>
+    <div class="counter"><button id="nMinus">−</button><span id="customN">10</span><button id="nPlus">＋</button></div>
+  </div>
+  <div id="bankPickRow" style="display:none; margin-top:10px">
+    <div class="bank-row" id="bankPick"></div>
+  </div>
+  <div id="rangePreview" class="range-preview"></div>
+</div>
+
+<div class="sec">
+  <div class="sec-head"><span class="sec-num">7</span><h3>自建词库</h3></div>
+  <input class="text-input" id="bankName" placeholder="词库名称，如：三上易错词" maxlength="20">
+  <textarea class="text-input" id="bankWords" rows="4" placeholder="一行一个词，例如：&#10;早晨&#10;鲜艳&#10;hello"></textarea>
+  <div class="form-err" id="bankErr"></div>
+  <button class="ghost-cta" id="saveBankBtn">保存词库</button>
+  <div id="bankList"></div>
+</div>
+
+<div class="sec">
+  <div class="sec-head"><span class="sec-num">8</span><h3>错词本</h3></div>
+  <div id="wrongbookList"></div>
+</div>
+
+<div class="notice" id="fallbackNotice"></div>
+<div class="summary" id="summary"></div>
+<button class="cta" id="startBtn" data-screen-label="start-dictation">开始听写 →</button>
+<p class="cta-sub">选择听写方式后本机直接进入；也可以把本页收藏后发到孩子设备</p>
+
+<!-- 模式选择弹层 -->
+<div class="sheet-mask" id="modeSheet">
+  <div class="action-sheet">
+    <h4>选择听写方式</h4>
+    <button class="sheet-btn primary" id="modeOnlineBtn" data-screen-label="mode-online">在线默写<small>屏幕上写答案，自动判分出成绩</small></button>
+    <button class="sheet-btn soft" id="modePaperBtn" data-screen-label="mode-paper">纸笔默写 · 只播报<small>屏幕不显示词，孩子写在纸上，播完家长对答案</small></button>
+    <button class="sheet-cancel" id="modeCancelBtn">取消</button>
+  </div>
+</div>
+
+<script src="js/store.js"></script>
+<script src="js/tts.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var SPEEDS = [{ v: 0.6, label: "偏慢" }, { v: 0.9, label: "标准" }, { v: 1.2, label: "偏快" }];
+
+  var sel = { versionId: null, gradeId: null, subjectId: null, unitId: null };
+  var cfg = Store.config.get();
+  var range = "all";
+  var customN = 10;
+  var bankId = null; // 默写范围 = 某个自建词库
+  var previewExpanded = false;
+  var previewKey = "";
+
+  var $ = function (id) { return document.getElementById(id); };
+
+  // 版本按学科锁定：语文→人教版，英语→译林版（数据缺失时回退该学科第一个可用版本）
+  var DEFAULT_VERSION = { chinese: "pep", english: "yilin" };
+
+  function bank() { return Store.banks.list(); }
+
+  // 全部版本里出现过的学科（语文在前）
+  function allSubjects() {
+    var seen = {}, list = [];
+    bank().versions.forEach(function (v) {
+      v.grades.forEach(function (g) {
+        g.subjects.forEach(function (s) {
+          if (!seen[s.id]) {
+            seen[s.id] = true;
+            list.push({ id: s.id, label: s.id === "english" ? "英语 · 单词" : "语文 · 词语" });
+          }
+        });
+      });
+    });
+    return list.sort(function (a, b) { return a.id === "chinese" ? -1 : 1; });
+  }
+
+  // 某学科下可选的年级（跨版本并集）
+  function gradesFor(subjectId) {
+    var seen = {}, list = [];
+    bank().versions.forEach(function (v) {
+      v.grades.forEach(function (g) {
+        if (!g.subjects.some(function (s) { return s.id === subjectId; })) return;
+        if (!seen[g.id]) {
+          seen[g.id] = true;
+          list.push({ id: g.id, label: g.name + (g.semester ? "·" + g.semester : "") });
+        }
+      });
+    });
+    return list;
+  }
+
+  // 某年级+学科下可用的版本
+  function versionsFor(gradeId, subjectId) {
+    return bank().versions.filter(function (v) {
+      var g = v.grades.find(function (g) { return g.id === gradeId; });
+      return g && g.subjects.some(function (s) { return s.id === subjectId; });
+    });
+  }
+
+  function autoVersionId(gradeId, subjectId) {
+    var vs = versionsFor(gradeId, subjectId);
+    var pref = DEFAULT_VERSION[subjectId];
+    var hit = vs.find(function (v) { return v.id === pref; });
+    return ((hit || vs[0]) || {}).id || null;
+  }
+
+  // 当前链路：版本限定在 年级+学科 的可用集合内，失效逐级回退
+  function curVersion() {
+    var vs = versionsFor(sel.gradeId, sel.subjectId);
+    return vs.find(function (v) { return v.id === sel.versionId; }) || vs[0] || null;
+  }
+  function curSubject() {
+    var v = curVersion();
+    if (!v) return null;
+    var g = v.grades.find(function (g) { return g.id === sel.gradeId; });
+    return g && g.subjects.find(function (s) { return s.id === sel.subjectId; });
+  }
+  function curGrade() {
+    var v = curVersion();
+    return v && v.grades.find(function (g) { return g.id === sel.gradeId; });
+  }
+  function curUnit() {
+    var s = curSubject();
+    return s && s.units.find(function (u) { return u.id === sel.unitId; });
+  }
+
+  // 每次渲染前校正选择链路（数据变化/旧缓存导致失效时逐级回退）
+  function normalizeSelection() {
+    var subs = allSubjects();
+    if (!subs.some(function (s) { return s.id === sel.subjectId; })) sel.subjectId = subs[0].id;
+    var grades = gradesFor(sel.subjectId);
+    if (!grades.some(function (g) { return g.id === sel.gradeId; })) sel.gradeId = grades[0].id;
+    var vs = versionsFor(sel.gradeId, sel.subjectId);
+    if (!vs.some(function (v) { return v.id === sel.versionId; })) sel.versionId = autoVersionId(sel.gradeId, sel.subjectId);
+    var s = curSubject();
+    if (s && !s.units.some(function (u) { return u.id === sel.unitId; })) sel.unitId = s.units[0].id;
+  }
+
+  function persistSelection() { Store.selection.set(Object.assign({}, sel)); }
+
+  /* ---------- 渲染 ---------- */
+
+  function renderChips(el, items, activeId, onPick) {
+    el.textContent = "";
+    items.forEach(function (it) {
+      var c = document.createElement("button");
+      c.type = "button";
+      c.className = "chip" + (it.id === activeId ? " on" : "");
+      c.textContent = it.label;
+      c.addEventListener("click", function () { onPick(it.id); });
+      el.appendChild(c);
+    });
+  }
+
+  function renderAll() {
+    normalizeSelection();
+
+    // 1 学科
+    renderChips($("subjects"), allSubjects(), sel.subjectId, function (id) {
+      sel.subjectId = id;
+      // 年级若不含该学科则回退到第一个可用年级
+      var grades = gradesFor(id);
+      if (!grades.some(function (g) { return g.id === sel.gradeId; })) sel.gradeId = grades[0].id;
+      sel.versionId = autoVersionId(sel.gradeId, id); // 语文→人教版，英语→译林版
+      sel.unitId = curSubject().units[0].id;
+      persistSelection(); renderAll();
+    });
+
+    // 2 年级（该学科下可选）
+    renderChips($("grades"), gradesFor(sel.subjectId), sel.gradeId, function (id) {
+      sel.gradeId = id;
+      sel.versionId = autoVersionId(id, sel.subjectId);
+      sel.unitId = curSubject().units[0].id;
+      persistSelection(); renderAll();
+    });
+
+    // 3 教材版本（该年级+学科下可用，可手动切换）
+    var vs = versionsFor(sel.gradeId, sel.subjectId);
+    renderChips($("versions"), vs.map(function (v) { return { id: v.id, label: v.name }; }),
+      curVersion() && curVersion().id, function (id) {
+        sel.versionId = id;
+        sel.unitId = curSubject().units[0].id;
+        persistSelection(); renderAll();
+      });
+
+    // 4 单元
+    var s = curSubject();
+    var unitBox = $("units");
+    unitBox.textContent = "";
+    s.units.forEach(function (u) {
+      var d = document.createElement("div");
+      d.className = "unit" + (u.id === sel.unitId ? " on" : "");
+      var name = document.createElement("div"); name.className = "u-name"; name.textContent = u.name;
+      var meta = document.createElement("div"); meta.className = "u-meta"; meta.textContent = u.words.length + " 词";
+      d.appendChild(name); d.appendChild(meta);
+      d.addEventListener("click", function () { sel.unitId = u.id; persistSelection(); renderAll(); });
+      unitBox.appendChild(d);
+    });
+    $("unitsEmpty").style.display = s.units.length ? "none" : "block";
+
+    // 英语学科才显示"附中文释义"
+    $("meaningRow").style.display = sel.subjectId === "english" ? "flex" : "none";
+
+    renderRange();
+    renderBanks();
+    renderWrongbook();
+    updateSummary();
+  }
+
+  function unitWords() { var u = curUnit(); return u ? u.words : []; }
+  function wrongCount() { return Store.wrongbook.list(sel.subjectId).length; }
+
+  function renderRange() {
+    var total = unitWords().length;
+    var wc = wrongCount();
+    var banks = Store.custom.list();
+    var seg = $("rangeSeg");
+    var btns = seg.querySelectorAll("button");
+    btns[0].textContent = "全部 " + total + " 词";
+    btns[1].textContent = "仅错词本（" + wc + "）";
+    btns[1].disabled = wc === 0;
+    btns[3].disabled = banks.length === 0;
+    if (range === "wrong" && wc === 0) range = "all";
+    if (range === "bank") {
+      if (!banks.length) range = "all";
+      else if (!banks.some(function (b) { return b.id === bankId; })) bankId = banks[0].id;
+    }
+    btns.forEach(function (b) { b.classList.toggle("on", b.dataset.v === range); });
+    customN = Math.min(Math.max(1, customN), Math.max(1, total));
+    $("customN").textContent = customN;
+    $("customRow").style.display = range === "custom" ? "flex" : "none";
+
+    // 自建词库选择行
+    var pick = $("bankPick");
+    pick.textContent = "";
+    if (range === "bank") {
+      banks.forEach(function (b) {
+        var c = document.createElement("button");
+        c.type = "button";
+        c.className = "chip" + (b.id === bankId ? " on" : "");
+        c.textContent = b.name + "（" + b.words.length + "）";
+        c.addEventListener("click", function () { bankId = b.id; renderRange(); updateSummary(); });
+        pick.appendChild(c);
+      });
+    }
+    $("bankPickRow").style.display = range === "bank" ? "block" : "none";
+    renderPreview();
+  }
+
+  function renderBanks() {
+    var box = $("bankList");
+    box.textContent = "";
+    var banks = Store.custom.list();
+    if (!banks.length) {
+      var p = document.createElement("div");
+      p.className = "sec-empty";
+      p.textContent = "还没有自建词库。在上面输入名称和词语，一行一个词，保存后即可作为默写范围。";
+      box.appendChild(p);
+      return;
+    }
+    banks.forEach(function (b) {
+      var d = document.createElement("div");
+      d.className = "wb-item";
+      var left = document.createElement("div");
+      var w = document.createElement("div"); w.className = "w-word"; w.textContent = b.name;
+      var meta = document.createElement("div"); meta.className = "w-meta";
+      meta.textContent = b.words.length + " 词 · " + b.words.slice(0, 4).join("、") + (b.words.length > 4 ? "…" : "");
+      left.appendChild(w); left.appendChild(meta);
+      var del = document.createElement("button");
+      del.className = "w-del"; del.textContent = "删除";
+      del.addEventListener("click", function () {
+        Store.custom.remove(b.id);
+        renderAll();
+      });
+      d.appendChild(left); d.appendChild(del);
+      box.appendChild(d);
+    });
+  }
+
+  function renderWrongbook() {
+    var box = $("wrongbookList");
+    box.textContent = "";
+    var list = Store.wrongbook.list();
+    if (!list.length) {
+      var p = document.createElement("div");
+      p.className = "wb-empty";
+      p.textContent = "还没有错词，孩子默写后会自动收集到这里。";
+      box.appendChild(p);
+      return;
+    }
+    list.forEach(function (e) {
+      var d = document.createElement("div");
+      d.className = "wb-item";
+      var left = document.createElement("div");
+      var w = document.createElement("div"); w.className = "w-word"; w.textContent = e.word;
+      var meta = document.createElement("div"); meta.className = "w-meta";
+      meta.textContent = (e.subject === "english" ? "英语" : "语文") + " · 错 " + e.wrongCount + " 次";
+      left.appendChild(w); left.appendChild(meta);
+      var del = document.createElement("button");
+      del.className = "w-del"; del.textContent = "移除";
+      del.addEventListener("click", function () {
+        Store.wrongbook.remove(Store.wordKey(e.subject, e.word));
+        renderAll();
+      });
+      d.appendChild(left); d.appendChild(del);
+      box.appendChild(d);
+    });
+  }
+
+  function speedLabel() {
+    var hit = SPEEDS.find(function (s) { return s.v === cfg.speed; });
+    return hit ? hit.label : "标准";
+  }
+
+  function rangeSize() {
+    if (range === "wrong") return wrongCount();
+    if (range === "custom") return Math.min(customN, unitWords().length);
+    if (range === "bank") {
+      var b = Store.custom.get(bankId);
+      return b ? b.words.length : 0;
+    }
+    return unitWords().length;
+  }
+
+  /* ---------- 范围词预览 ---------- */
+
+  // 当前默写范围实际会默的词条
+  function currentRangeWords() {
+    if (range === "wrong") return Store.wrongbook.list(sel.subjectId);
+    if (range === "bank") {
+      var b = Store.custom.get(bankId);
+      return b ? b.words.map(function (w) { return { word: w }; }) : [];
+    }
+    var words = unitWords().slice();
+    if (range === "custom") words = words.slice(0, customN);
+    return words;
+  }
+
+  var PREVIEW_COLLAPSE = 8;
+
+  function renderPreview() {
+    var box = $("rangePreview");
+    box.textContent = "";
+    var words = currentRangeWords();
+    // 范围/单元/N 变化时重置折叠态
+    var key = [range, sel.subjectId, sel.gradeId, sel.versionId, sel.unitId, customN, bankId, words.length].join("|");
+    if (key !== previewKey) { previewKey = key; previewExpanded = false; }
+
+    var head = document.createElement("div");
+    head.className = "rp-head";
+    head.textContent = "本范围共 " + words.length + " 词";
+    box.appendChild(head);
+
+    if (!words.length) {
+      var empty = document.createElement("div");
+      empty.className = "rp-empty";
+      empty.textContent = range === "wrong" ? "错词本还是空的" : "暂无可默写的词";
+      box.appendChild(empty);
+      return;
+    }
+
+    var show = previewExpanded ? words : words.slice(0, PREVIEW_COLLAPSE);
+    var wordsBox = document.createElement("div");
+    wordsBox.className = "rp-words";
+    show.forEach(function (w) {
+      var item = document.createElement("span");
+      item.className = "rp-w";
+      var word = document.createElement("span");
+      word.className = "rp-word";
+      word.textContent = w.word;
+      item.appendChild(word);
+      var mean = w.tip || w.meaning || "";
+      if (mean) {
+        var d = document.createElement("span");
+        d.className = "rp-def";
+        d.textContent = "（" + mean + "）";
+        item.appendChild(d);
+      }
+      if (range === "wrong" && w.wrongCount) {
+        var badge = document.createElement("span");
+        badge.className = "rp-badge";
+        badge.textContent = "错 " + w.wrongCount + " 次";
+        item.appendChild(badge);
+      }
+      wordsBox.appendChild(item);
+    });
+    box.appendChild(wordsBox);
+
+    if (words.length > PREVIEW_COLLAPSE) {
+      var more = document.createElement("button");
+      more.type = "button";
+      more.className = "rp-more";
+      more.textContent = previewExpanded ? "收起" : "展开全部 " + words.length + " 词";
+      more.addEventListener("click", function () {
+        previewExpanded = !previewExpanded;
+        renderPreview();
+      });
+      box.appendChild(more);
+    }
+  }
+
+  function updateSummary() {
+    var v = curVersion(), g = curGrade(), s = curSubject(), u = curUnit();
+    var line1 = (s.id === "english" ? "英语" : "语文") +
+                " · " + g.name + (g.semester ? "（" + g.semester + "）" : "") +
+                " · " + v.name + " · " + (u ? u.name : "");
+    var line2;
+    if (range === "bank") {
+      var bk = Store.custom.get(bankId);
+      line1 = "自建词库 · " + (bk ? bk.name : "");
+    }
+    if (range === "wrong") {
+      line2 = "错词本 " + wrongCount() + " 词 · " + speedLabel() + "语速 · 每词 " + cfg.repeat + " 遍";
+    } else if (range === "bank") {
+      line2 = (bk ? bk.name : "自建词库") + " " + rangeSize() + " 词 · " + speedLabel() +
+              "语速 · 每词 " + cfg.repeat + " 遍";
+    } else {
+      line2 = "共 " + rangeSize() + " 词 · " + speedLabel() + "语速 · 每词 " + cfg.repeat +
+              " 遍 · 间隔 " + cfg.gapSec + " 秒";
+    }
+    var box = $("summary");
+    box.textContent = "";
+    var b = document.createElement("b"); b.textContent = line1;
+    box.appendChild(b);
+    box.appendChild(document.createElement("br"));
+    box.appendChild(document.createTextNode(line2));
+  }
+
+  /* ---------- 自建词库 ---------- */
+
+  function detectSubject(wordObjs) {
+    var ascii = wordObjs.filter(function (w) { return /^[\x21-\x7e]+$/.test(w.word); }).length;
+    return ascii * 2 > wordObjs.length ? "english" : "chinese";
+  }
+
+  $("saveBankBtn").addEventListener("click", function () {
+    var name = $("bankName").value.trim();
+    var words = $("bankWords").value.split("\n").map(function (s) { return s.trim(); }).filter(Boolean);
+    var err = $("bankErr");
+    if (!name) { err.textContent = "给词库起个名字"; err.classList.add("show"); return; }
+    if (!words.length) { err.textContent = "至少输入一个词（一行一个）"; err.classList.add("show"); return; }
+    if (words.length > 200) { err.textContent = "一次最多 200 个词"; err.classList.add("show"); return; }
+    err.classList.remove("show");
+    var bank = Store.custom.add(name, words);
+    $("bankName").value = "";
+    $("bankWords").value = "";
+    range = "bank";
+    bankId = bank.id;
+    renderAll();
+  });
+
+  /* ---------- 事件 ---------- */
+
+  function segWire(id, onChange) {
+    var seg = $(id);
+    seg.addEventListener("click", function (e) {
+      var b = e.target.closest("button");
+      if (!b || b.disabled) return;
+      seg.querySelectorAll("button").forEach(function (x) { x.classList.remove("on"); });
+      b.classList.add("on");
+      onChange(b.dataset.v);
+    });
+  }
+
+  function initSeg(id, activeVal, onChange) {
+    segWire(id, onChange);
+    markSeg(id, activeVal);
+  }
+  function markSeg(id, val) {
+    $(id).querySelectorAll("button").forEach(function (b) {
+      b.classList.toggle("on", b.dataset.v === String(val));
+    });
+  }
+
+  segWire("speedSeg", function (v) { cfg = Store.config.set({ speed: Number(v) }); updateSummary(); });
+  segWire("gapSeg", function (v) { cfg = Store.config.set({ gapSec: Number(v) }); updateSummary(); });
+  segWire("rangeSeg", function (v) { range = v; renderRange(); updateSummary(); });
+
+  function counterWire(minusId, plusId, numId, get, set) {
+    $(minusId).addEventListener("click", function () { set(get() - 1); $(numId).textContent = get(); updateSummary(); });
+    $(plusId).addEventListener("click", function () { set(get() + 1); $(numId).textContent = get(); updateSummary(); });
+  }
+  counterWire("repMinus", "repPlus", "repNum",
+    function () { return cfg.repeat; },
+    function (n) { cfg = Store.config.set({ repeat: Math.min(3, Math.max(1, n)) }); renderRange(); });
+  counterWire("nMinus", "nPlus", "customN",
+    function () { return customN; },
+    function (n) { customN = Math.min(Math.max(1, n), unitWords().length || 1); renderRange(); });
+
+  $("swMeaning").addEventListener("click", function () {
+    this.classList.toggle("on");
+    cfg = Store.config.set({ withMeaning: this.classList.contains("on") });
+  });
+
+  /* ---------- 开始听写 ---------- */
+
+  // 组装当前范围/单元的词表（在线与纸笔两种模式共用）
+  function currentSessionWords() {
+    var words;
+    var source;
+    var subject = sel.subjectId;
+    var unitName;
+    if (range === "wrong") {
+      var entries = Store.wrongbook.list(sel.subjectId);
+      words = entries.map(function (e) {
+        var w = { word: e.word };
+        if (e.tip) w.tip = e.tip;
+        if (e.meaning) w.meaning = e.meaning;
+        return w;
+      });
+      source = "wrongbook";
+      unitName = "错词本";
+    } else if (range === "bank") {
+      var bank = Store.custom.get(bankId);
+      if (!bank) return null;
+      words = bank.words.map(function (w) { return { word: w }; });
+      source = "custom";
+      unitName = bank.name;
+      subject = detectSubject(words); // 自建词库无学科字段，按词面自动判断
+    } else {
+      words = unitWords().slice();
+      if (range === "custom") words = words.slice(0, customN);
+      source = "unit";
+      unitName = curUnit() ? curUnit().name : "";
+    }
+    if (!words.length) return null;
+    return { words: words, source: source, subject: subject, unitName: unitName };
+  }
+
+  /* ---------- 开始听写：模式选择弹层 ---------- */
+
+  $("startBtn").addEventListener("click", function () {
+    $("modeSheet").classList.add("show");
+  });
+  $("modeCancelBtn").addEventListener("click", function () {
+    $("modeSheet").classList.remove("show");
+  });
+  $("modeSheet").addEventListener("click", function (e) {
+    if (e.target === this) this.classList.remove("show"); // 点遮罩取消
+  });
+
+  function launch(mode) {
+    var s = currentSessionWords();
+    $("modeSheet").classList.remove("show");
+    if (!s) return;
+    // 两种模式都建会话：在线模式判分用，纸笔模式取词表播报用（支持错词本/自建库范围）
+    Store.session.set({
+      words: s.words,
+      index: 0,
+      results: [],
+      startedAt: Date.now(),
+      source: s.source,
+      subject: s.subject,
+      unitName: s.unitName
+    });
+    location.href = "kid.html?go=1&mode=" + mode;
+  }
+
+  $("modeOnlineBtn").addEventListener("click", function () { launch("online"); });
+  $("modePaperBtn").addEventListener("click", function () { launch("paper"); });
+
+  /* ---------- 初始化 ---------- */
+
+  Store.banks.load().then(function () {
+    // 恢复上次选择；链路失效由 normalizeSelection 逐级回退
+    var saved = Store.selection.get();
+    var s0 = allSubjects()[0].id;
+    var g0 = gradesFor(s0)[0].id;
+    sel = { subjectId: s0, gradeId: g0, versionId: autoVersionId(g0, s0), unitId: null };
+    if (saved) sel = Object.assign(sel, saved);
+    normalizeSelection();
+    var v0 = curVersion();
+    var s = curSubject();
+    sel.unitId = (v0 && s && s.units.find(function (u) { return u.id === sel.unitId; }))
+      ? sel.unitId : (s ? s.units[0].id : null);
+
+    // 存储迁移：旧版选择（失效年级/版本 id 等）校正后写回，避免脏值残留
+    if (saved && JSON.stringify(saved) !== JSON.stringify(sel)) persistSelection();
+
+    // 组合不可用的回退提示（如保存的是"一年级+英语"，已静默切到三年级）：让用户有感知
+    if (saved && saved.gradeId && saved.gradeId !== sel.gradeId) {
+      var oldG = null;
+      bank().versions.forEach(function (v) {
+        v.grades.forEach(function (g) {
+          if (g.id === saved.gradeId) oldG = g.name + (g.semester ? "·" + g.semester : "");
+        });
+      });
+      var newG = gradesFor(sel.subjectId).find(function (g) { return g.id === sel.gradeId; });
+      if (oldG && newG) {
+        var n = $("fallbackNotice");
+        n.textContent = "「" + oldG + "」暂无" + (sel.subjectId === "english" ? "英语" : "语文") +
+                        "词库，已为你切换到「" + newG.label + "」";
+        n.classList.add("show");
+      }
+    }
+
+    $("repNum").textContent = cfg.repeat;
+    markSeg("speedSeg", cfg.speed);
+    markSeg("gapSeg", cfg.gapSec);
+    if (cfg.withMeaning) $("swMeaning").classList.add("on");
+    if (!TTS.supported()) $("ttsWarn").classList.add("show");
+
+    renderAll();
+  });
+})();
+</script>
+</body>
+</html>

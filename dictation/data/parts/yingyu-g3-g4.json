@@ -1,0 +1,506 @@
+{
+  "grades": [
+    {
+      "id": "g3-up",
+      "name": "三年级",
+      "semester": "上册",
+      "subjects": [
+        {
+          "id": "english",
+          "name": "英语",
+          "units": [
+            {
+              "id": "u1",
+              "name": "Unit 1 · Hello",
+              "words": [
+                { "word": "hello", "meaning": "你好" },
+                { "word": "hi", "meaning": "嗨" },
+                { "word": "good", "meaning": "好的" },
+                { "word": "morning", "meaning": "早晨" },
+                { "word": "afternoon", "meaning": "下午" },
+                { "word": "miss", "meaning": "小姐" },
+                { "word": "class", "meaning": "同学们；班级" },
+                { "word": "i", "meaning": "我" }
+              ]
+            },
+            {
+              "id": "u2",
+              "name": "Unit 2 · I'm Liu Tao",
+              "words": [
+                { "word": "are", "meaning": "是" },
+                { "word": "am", "meaning": "是" },
+                { "word": "you", "meaning": "你；你们" },
+                { "word": "yes", "meaning": "是；对" },
+                { "word": "no", "meaning": "不；不是" },
+                { "word": "not", "meaning": "不；没有" },
+                { "word": "goodbye", "meaning": "再见" },
+                { "word": "too", "meaning": "也" }
+              ]
+            },
+            {
+              "id": "u3",
+              "name": "Unit 3 · My friends",
+              "words": [
+                { "word": "my", "meaning": "我的" },
+                { "word": "friend", "meaning": "朋友" },
+                { "word": "he", "meaning": "他" },
+                { "word": "she", "meaning": "她" },
+                { "word": "is", "meaning": "是" },
+                { "word": "this", "meaning": "这；这个" },
+                { "word": "sister", "meaning": "姐姐；妹妹" },
+                { "word": "name", "meaning": "名字" }
+              ]
+            },
+            {
+              "id": "u4",
+              "name": "Unit 4 · My family",
+              "words": [
+                { "word": "family", "meaning": "家庭；家人" },
+                { "word": "father", "meaning": "父亲" },
+                { "word": "mother", "meaning": "母亲" },
+                { "word": "brother", "meaning": "哥哥；弟弟" },
+                { "word": "sister", "meaning": "姐姐；妹妹" },
+                { "word": "grandpa", "meaning": "爷爷；外公" },
+                { "word": "grandma", "meaning": "奶奶；外婆" },
+                { "word": "me", "meaning": "我" }
+              ]
+            },
+            {
+              "id": "u5",
+              "name": "Unit 5 · Look at me!",
+              "words": [
+                { "word": "look", "meaning": "看" },
+                { "word": "skirt", "meaning": "裙子" },
+                { "word": "cap", "meaning": "帽子" },
+                { "word": "jacket", "meaning": "夹克衫" },
+                { "word": "nice", "meaning": "好看的；好的" },
+                { "word": "great", "meaning": "好极了" },
+                { "word": "new", "meaning": "新的" },
+                { "word": "red", "meaning": "红色的" }
+              ]
+            },
+            {
+              "id": "u6",
+              "name": "Unit 6 · Colours",
+              "words": [
+                { "word": "colour", "meaning": "颜色" },
+                { "word": "yellow", "meaning": "黄色的" },
+                { "word": "blue", "meaning": "蓝色的" },
+                { "word": "green", "meaning": "绿色的" },
+                { "word": "orange", "meaning": "橙色的；橙子" },
+                { "word": "white", "meaning": "白色的" },
+                { "word": "black", "meaning": "黑色的" },
+                { "word": "brown", "meaning": "棕色的" }
+              ]
+            },
+            {
+              "id": "u7",
+              "name": "Unit 7 · Would you like a pie?",
+              "words": [
+                { "word": "pie", "meaning": "馅饼" },
+                { "word": "cake", "meaning": "蛋糕" },
+                { "word": "sweet", "meaning": "糖果；甜的" },
+                { "word": "egg", "meaning": "鸡蛋" },
+                { "word": "ice", "meaning": "冰" },
+                { "word": "hot", "meaning": "热的" },
+                { "word": "no", "meaning": "不；不要" },
+                { "word": "please", "meaning": "请" }
+              ]
+            },
+            {
+              "id": "u8",
+              "name": "Unit 8 · Happy New Year!",
+              "words": [
+                { "word": "happy", "meaning": "快乐的" },
+                { "word": "new", "meaning": "新的" },
+                { "word": "year", "meaning": "年" },
+                { "word": "toy", "meaning": "玩具" },
+                { "word": "doll", "meaning": "玩偶；娃娃" },
+                { "word": "ball", "meaning": "球" },
+                { "word": "car", "meaning": "小汽车" },
+                { "word": "gift", "meaning": "礼物" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g3-down",
+      "name": "三年级",
+      "semester": "下册",
+      "subjects": [
+        {
+          "id": "english",
+          "name": "英语",
+          "units": [
+            {
+              "id": "u1",
+              "name": "Unit 1 · In class",
+              "words": [
+                { "word": "in", "meaning": "在……里面" },
+                { "word": "book", "meaning": "书" },
+                { "word": "pen", "meaning": "钢笔" },
+                { "word": "pencil", "meaning": "铅笔" },
+                { "word": "ruler", "meaning": "尺子" },
+                { "word": "rubber", "meaning": "橡皮" },
+                { "word": "schoolbag", "meaning": "书包" },
+                { "word": "open", "meaning": "打开" },
+                { "word": "close", "meaning": "关闭" }
+              ]
+            },
+            {
+              "id": "u2",
+              "name": "Unit 2 · In the library",
+              "words": [
+                { "word": "library", "meaning": "图书馆" },
+                { "word": "run", "meaning": "跑" },
+                { "word": "talk", "meaning": "说话；交谈" },
+                { "word": "eat", "meaning": "吃" },
+                { "word": "sleep", "meaning": "睡觉" },
+                { "word": "drink", "meaning": "喝" },
+                { "word": "milk", "meaning": "牛奶" },
+                { "word": "shh", "meaning": "嘘（安静）" }
+              ]
+            },
+            {
+              "id": "u3",
+              "name": "Unit 3 · Is this your pencil?",
+              "words": [
+                { "word": "pencil", "meaning": "铅笔" },
+                { "word": "crayon", "meaning": "蜡笔" },
+                { "word": "schoolbag", "meaning": "书包" },
+                { "word": "this", "meaning": "这；这个" },
+                { "word": "that", "meaning": "那；那个" },
+                { "word": "your", "meaning": "你的；你们的" },
+                { "word": "my", "meaning": "我的" },
+                { "word": "lost", "meaning": "丢失的" }
+              ]
+            },
+            {
+              "id": "u4",
+              "name": "Unit 4 · Where's the bird?",
+              "words": [
+                { "word": "where", "meaning": "在哪里" },
+                { "word": "bird", "meaning": "鸟" },
+                { "word": "desk", "meaning": "课桌" },
+                { "word": "chair", "meaning": "椅子" },
+                { "word": "on", "meaning": "在……上面" },
+                { "word": "under", "meaning": "在……下面" },
+                { "word": "behind", "meaning": "在……后面" },
+                { "word": "tree", "meaning": "树" }
+              ]
+            },
+            {
+              "id": "u5",
+              "name": "Unit 5 · How old are you?",
+              "words": [
+                { "word": "old", "meaning": "老的；……岁的" },
+                { "word": "four", "meaning": "四" },
+                { "word": "five", "meaning": "五" },
+                { "word": "six", "meaning": "六" },
+                { "word": "seven", "meaning": "七" },
+                { "word": "eight", "meaning": "八" },
+                { "word": "nine", "meaning": "九" },
+                { "word": "ten", "meaning": "十" }
+              ]
+            },
+            {
+              "id": "u6",
+              "name": "Unit 6 · What time is it?",
+              "words": [
+                { "word": "time", "meaning": "时间" },
+                { "word": "breakfast", "meaning": "早饭" },
+                { "word": "lunch", "meaning": "午饭" },
+                { "word": "dinner", "meaning": "晚饭" },
+                { "word": "eleven", "meaning": "十一" },
+                { "word": "twelve", "meaning": "十二" },
+                { "word": "o'clock", "meaning": "……点钟" },
+                { "word": "bed", "meaning": "床" }
+              ]
+            },
+            {
+              "id": "u7",
+              "name": "Unit 7 · On the farm",
+              "words": [
+                { "word": "farm", "meaning": "农场" },
+                { "word": "pig", "meaning": "猪" },
+                { "word": "cow", "meaning": "奶牛" },
+                { "word": "duck", "meaning": "鸭子" },
+                { "word": "chicken", "meaning": "鸡" },
+                { "word": "pear", "meaning": "梨" },
+                { "word": "apple", "meaning": "苹果" },
+                { "word": "orange", "meaning": "橙子" }
+              ]
+            },
+            {
+              "id": "u8",
+              "name": "Unit 8 · We're twins!",
+              "words": [
+                { "word": "we", "meaning": "我们" },
+                { "word": "twin", "meaning": "双胞胎之一" },
+                { "word": "boy", "meaning": "男孩" },
+                { "word": "girl", "meaning": "女孩" },
+                { "word": "man", "meaning": "男人" },
+                { "word": "woman", "meaning": "女人" },
+                { "word": "baby", "meaning": "婴儿" },
+                { "word": "cousin", "meaning": "表（堂）兄弟姐妹" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g4-up",
+      "name": "四年级",
+      "semester": "上册",
+      "subjects": [
+        {
+          "id": "english",
+          "name": "英语",
+          "units": [
+            {
+              "id": "u1",
+              "name": "Unit 1 · I like dogs",
+              "words": [
+                { "word": "like", "meaning": "喜欢" },
+                { "word": "dog", "meaning": "狗" },
+                { "word": "cat", "meaning": "猫" },
+                { "word": "panda", "meaning": "熊猫" },
+                { "word": "tiger", "meaning": "老虎" },
+                { "word": "horse", "meaning": "马" },
+                { "word": "animal", "meaning": "动物" },
+                { "word": "cute", "meaning": "可爱的" }
+              ]
+            },
+            {
+              "id": "u2",
+              "name": "Unit 2 · Let's make a fruit salad",
+              "words": [
+                { "word": "make", "meaning": "制作" },
+                { "word": "fruit", "meaning": "水果" },
+                { "word": "salad", "meaning": "沙拉" },
+                { "word": "banana", "meaning": "香蕉" },
+                { "word": "grape", "meaning": "葡萄" },
+                { "word": "mango", "meaning": "芒果" },
+                { "word": "pineapple", "meaning": "菠萝" },
+                { "word": "some", "meaning": "一些" }
+              ]
+            },
+            {
+              "id": "u3",
+              "name": "Unit 3 · How many?",
+              "words": [
+                { "word": "how", "meaning": "怎样；多少" },
+                { "word": "many", "meaning": "许多" },
+                { "word": "sticker", "meaning": "贴纸" },
+                { "word": "thirteen", "meaning": "十三" },
+                { "word": "fourteen", "meaning": "十四" },
+                { "word": "fifteen", "meaning": "十五" },
+                { "word": "sixteen", "meaning": "十六" },
+                { "word": "eighteen", "meaning": "十八" }
+              ]
+            },
+            {
+              "id": "u4",
+              "name": "Unit 4 · I can play basketball",
+              "words": [
+                { "word": "can", "meaning": "能；会" },
+                { "word": "play", "meaning": "玩；打（球）" },
+                { "word": "basketball", "meaning": "篮球" },
+                { "word": "football", "meaning": "足球" },
+                { "word": "jump", "meaning": "跳" },
+                { "word": "swim", "meaning": "游泳" },
+                { "word": "skate", "meaning": "滑冰" },
+                { "word": "well", "meaning": "好" }
+              ]
+            },
+            {
+              "id": "u5",
+              "name": "Unit 5 · Our new home",
+              "words": [
+                { "word": "home", "meaning": "家" },
+                { "word": "sofa", "meaning": "沙发" },
+                { "word": "table", "meaning": "桌子" },
+                { "word": "fridge", "meaning": "冰箱" },
+                { "word": "kitchen", "meaning": "厨房" },
+                { "word": "bathroom", "meaning": "浴室" },
+                { "word": "room", "meaning": "房间" },
+                { "word": "new", "meaning": "新的" }
+              ]
+            },
+            {
+              "id": "u6",
+              "name": "Unit 6 · At the snack bar",
+              "words": [
+                { "word": "snack", "meaning": "点心；小吃" },
+                { "word": "hamburger", "meaning": "汉堡包" },
+                { "word": "sandwich", "meaning": "三明治" },
+                { "word": "noodles", "meaning": "面条" },
+                { "word": "rice", "meaning": "米饭" },
+                { "word": "fish", "meaning": "鱼" },
+                { "word": "juice", "meaning": "果汁" },
+                { "word": "coffee", "meaning": "咖啡" }
+              ]
+            },
+            {
+              "id": "u7",
+              "name": "Unit 7 · How much?",
+              "words": [
+                { "word": "much", "meaning": "许多（用于不可数）" },
+                { "word": "yuan", "meaning": "元" },
+                { "word": "umbrella", "meaning": "伞" },
+                { "word": "only", "meaning": "仅仅；只" },
+                { "word": "fan", "meaning": "扇子" },
+                { "word": "twenty", "meaning": "二十" },
+                { "word": "thirty", "meaning": "三十" },
+                { "word": "forty", "meaning": "四十" }
+              ]
+            },
+            {
+              "id": "u8",
+              "name": "Unit 8 · Dolls",
+              "words": [
+                { "word": "doll", "meaning": "玩偶；娃娃" },
+                { "word": "hair", "meaning": "头发" },
+                { "word": "long", "meaning": "长的" },
+                { "word": "short", "meaning": "短的" },
+                { "word": "nose", "meaning": "鼻子" },
+                { "word": "eye", "meaning": "眼睛" },
+                { "word": "ear", "meaning": "耳朵" },
+                { "word": "mouth", "meaning": "嘴" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g4-down",
+      "name": "四年级",
+      "semester": "下册",
+      "subjects": [
+        {
+          "id": "english",
+          "name": "英语",
+          "units": [
+            {
+              "id": "u1",
+              "name": "Unit 1 · Our school subjects",
+              "words": [
+                { "word": "school", "meaning": "学校" },
+                { "word": "subject", "meaning": "学科；科目" },
+                { "word": "chinese", "meaning": "语文；汉语" },
+                { "word": "maths", "meaning": "数学" },
+                { "word": "art", "meaning": "美术" },
+                { "word": "music", "meaning": "音乐" },
+                { "word": "science", "meaning": "科学" },
+                { "word": "lesson", "meaning": "课；功课" }
+              ]
+            },
+            {
+              "id": "u2",
+              "name": "Unit 2 · After school",
+              "words": [
+                { "word": "after", "meaning": "在……之后" },
+                { "word": "go", "meaning": "去" },
+                { "word": "today", "meaning": "今天" },
+                { "word": "match", "meaning": "比赛" },
+                { "word": "watch", "meaning": "观看" },
+                { "word": "day", "meaning": "天；日子" },
+                { "word": "play", "meaning": "玩；打球" },
+                { "word": "all", "meaning": "全部；都" }
+              ]
+            },
+            {
+              "id": "u3",
+              "name": "Unit 3 · My day",
+              "words": [
+                { "word": "usually", "meaning": "通常" },
+                { "word": "morning", "meaning": "早晨" },
+                { "word": "evening", "meaning": "傍晚；晚上" },
+                { "word": "night", "meaning": "夜晚" },
+                { "word": "get", "meaning": "得到；到达" },
+                { "word": "up", "meaning": "向上" },
+                { "word": "homework", "meaning": "家庭作业" },
+                { "word": "dinner", "meaning": "晚饭" }
+              ]
+            },
+            {
+              "id": "u4",
+              "name": "Unit 4 · Drawing in the park",
+              "words": [
+                { "word": "draw", "meaning": "画" },
+                { "word": "park", "meaning": "公园" },
+                { "word": "lake", "meaning": "湖" },
+                { "word": "flower", "meaning": "花" },
+                { "word": "boat", "meaning": "小船" },
+                { "word": "river", "meaning": "河" },
+                { "word": "picture", "meaning": "图画" },
+                { "word": "easy", "meaning": "容易的" }
+              ]
+            },
+            {
+              "id": "u5",
+              "name": "Unit 5 · Seasons",
+              "words": [
+                { "word": "season", "meaning": "季节" },
+                { "word": "spring", "meaning": "春天" },
+                { "word": "summer", "meaning": "夏天" },
+                { "word": "autumn", "meaning": "秋天" },
+                { "word": "winter", "meaning": "冬天" },
+                { "word": "warm", "meaning": "温暖的" },
+                { "word": "hot", "meaning": "热的" },
+                { "word": "cool", "meaning": "凉爽的" },
+                { "word": "cold", "meaning": "寒冷的" }
+              ]
+            },
+            {
+              "id": "u6",
+              "name": "Unit 6 · Whose dress is this?",
+              "words": [
+                { "word": "whose", "meaning": "谁的" },
+                { "word": "dress", "meaning": "连衣裙" },
+                { "word": "coat", "meaning": "外套" },
+                { "word": "shirt", "meaning": "衬衫" },
+                { "word": "sweater", "meaning": "毛衣" },
+                { "word": "glove", "meaning": "手套" },
+                { "word": "trousers", "meaning": "裤子" },
+                { "word": "jeans", "meaning": "牛仔裤" }
+              ]
+            },
+            {
+              "id": "u7",
+              "name": "Unit 7 · What's the matter?",
+              "words": [
+                { "word": "matter", "meaning": "问题；事情" },
+                { "word": "cold", "meaning": "冷的；感冒" },
+                { "word": "fever", "meaning": "发烧" },
+                { "word": "headache", "meaning": "头痛" },
+                { "word": "tired", "meaning": "累的" },
+                { "word": "hungry", "meaning": "饿的" },
+                { "word": "thirsty", "meaning": "渴的" },
+                { "word": "ill", "meaning": "生病的" }
+              ]
+            },
+            {
+              "id": "u8",
+              "name": "Unit 8 · How are you?",
+              "words": [
+                { "word": "fine", "meaning": "好的；健康的" },
+                { "word": "dear", "meaning": "亲爱的" },
+                { "word": "feel", "meaning": "感觉" },
+                { "word": "sorry", "meaning": "难过的；抱歉的" },
+                { "word": "thank", "meaning": "感谢" },
+                { "word": "well", "meaning": "好；健康" },
+                { "word": "soon", "meaning": "不久；很快" },
+                { "word": "better", "meaning": "更好的" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

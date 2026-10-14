@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>默写小工具 · 设计稿 v1</title>
+<style>
+  :root {
+    --ink: #1f2328;
+    --ink-2: #5c6470;
+    --ink-3: #98a1ad;
+    --paper: #f6f4ef;
+    --card: #ffffff;
+    --line: #e7e3da;
+    --accent: #0f766e;      /* 深青：家长端主色 */
+    --accent-soft: #e6f2f0;
+    --kid: #e8590c;         /* 暖橙：学生端主色 */
+    --kid-soft: #fff0e6;
+    --kid-ink: #2b2118;
+    --kid-bg: #fffaf3;
+    --ok: #2b8a3e;
+    --bad: #d6453d;
+    --radius: 14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: var(--paper); }
+  body {
+    font-family: -apple-system, "SF Pro Text", "PingFang SC", "Noto Sans SC", sans-serif;
+    color: var(--ink);
+    line-height: 1.7;
+    padding: 48px 24px 80px;
+  }
+  .page-head { max-width: 1180px; margin: 0 auto 36px; display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .page-head h1 { font-size: 24px; letter-spacing: 0.02em; }
+  .page-head p { color: var(--ink-2); font-size: 14px; }
+  .page-head .tag {
+    font-size: 12px; background: var(--accent-soft); color: var(--accent);
+    padding: 2px 10px; border-radius: 999px; font-weight: 600;
+  }
+  .stage {
+    max-width: 1180px; margin: 0 auto;
+    display: flex; gap: 48px; flex-wrap: wrap; justify-content: center; align-items: flex-start;
+  }
+  .frame-wrap { display: flex; flex-direction: column; gap: 12px; }
+  .frame-label { font-size: 13px; color: var(--ink-2); display: flex; align-items: center; gap: 8px; }
+  .frame-label b { color: var(--ink); font-size: 14px; }
+  .frame-label .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .dot-parent { background: var(--accent); }
+  .dot-kid { background: var(--kid); }
+
+  /* ---------- 手机框 ---------- */
+  .phone {
+    width: 390px; height: 780px; background: var(--card);
+    border-radius: 44px; border: 1px solid var(--line);
+    box-shadow: 0 24px 60px -24px rgba(31,35,40,.25);
+    overflow: hidden; position: relative;
+    display: flex; flex-direction: column;
+  }
+  .phone .notch {
+    position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
+    width: 120px; height: 28px; background: #111; border-radius: 999px; z-index: 10;
+  }
+  .phone .statusbar {
+    height: 52px; flex: none; display: flex; justify-content: space-between; align-items: flex-end;
+    padding: 0 28px 6px; font-size: 13px; font-weight: 600; color: var(--ink);
+  }
+  .phone .screen { flex: 1; overflow-y: auto; padding: 12px 20px 24px; }
+  .phone .screen::-webkit-scrollbar { display: none; }
+
+  /* ---------- 家长端 ---------- */
+  .p-title { font-size: 20px; font-weight: 700; margin: 6px 2px 2px; }
+  .p-sub { font-size: 13px; color: var(--ink-2); margin: 0 2px 18px; }
+  .sec { margin-bottom: 20px; }
+  .sec-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .sec-num {
+    width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: #fff;
+    font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex: none;
+  }
+  .sec-head h3 { font-size: 15px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    padding: 7px 14px; border-radius: 999px; border: 1.5px solid var(--line);
+    background: #fff; font-size: 14px; color: var(--ink-2); cursor: pointer; user-select: none;
+    transition: all .15s;
+  }
+  .chip.on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+  .unit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .unit {
+    border: 1.5px solid var(--line); border-radius: var(--radius); padding: 10px 12px;
+    cursor: pointer; background: #fff; transition: all .15s;
+  }
+  .unit.on { border-color: var(--accent); background: var(--accent-soft); }
+  .unit .u-name { font-size: 14px; font-weight: 600; }
+  .unit .u-meta { font-size: 12px; color: var(--ink-3); }
+  .seg { display: flex; background: #f0eee8; border-radius: 12px; padding: 3px; gap: 3px; }
+  .seg button {
+    flex: 1; border: none; background: transparent; padding: 8px 4px; border-radius: 9px;
+    font-size: 14px; color: var(--ink-2); cursor: pointer; font-family: inherit;
+  }
+  .seg button.on { background: #fff; color: var(--ink); font-weight: 600; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+  .row-line { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .row-line:last-child { border-bottom: none; }
+  .row-line .r-label { font-size: 14px; }
+  .row-line .r-hint { font-size: 12px; color: var(--ink-3); }
+  .counter { display: flex; align-items: center; gap: 12px; }
+  .counter button {
+    width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid var(--line); background: #fff;
+    font-size: 16px; color: var(--accent); cursor: pointer; line-height: 1;
+  }
+  .counter span { font-size: 15px; font-weight: 600; min-width: 18px; text-align: center; }
+  .switch { width: 46px; height: 27px; border-radius: 999px; background: #d8d4cb; position: relative; cursor: pointer; transition: background .2s; flex: none; }
+  .switch::after {
+    content: ""; position: absolute; top: 2.5px; left: 3px; width: 22px; height: 22px;
+    border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.2); transition: left .2s;
+  }
+  .switch.on { background: var(--accent); }
+  .switch.on::after { left: 21px; }
+  .summary {
+    background: var(--accent-soft); border-radius: var(--radius); padding: 14px 16px;
+    font-size: 13px; color: var(--accent); margin-bottom: 14px;
+  }
+  .summary b { font-size: 15px; }
+  .cta {
+    display: block; width: 100%; border: none; background: var(--accent); color: #fff;
+    font-size: 17px; font-weight: 700; padding: 15px; border-radius: 16px; cursor: pointer;
+    font-family: inherit; letter-spacing: 0.05em;
+  }
+  .cta-sub { text-align: center; font-size: 12px; color: var(--ink-3); margin-top: 10px; }
+
+  /* ---------- 学生端 ---------- */
+  .kid-screen { background: var(--kid-bg); }
+  .kid-top { display: flex; align-items: center; justify-content: space-between; margin: 4px 2px 14px; }
+  .kid-top .k-title { font-size: 16px; font-weight: 700; color: var(--kid-ink); }
+  .kid-top .k-quit { font-size: 13px; color: var(--ink-3); background: none; border: none; cursor: pointer; font-family: inherit; }
+  .progress-track { height: 10px; border-radius: 999px; background: #f1e4d4; overflow: hidden; margin-bottom: 6px; }
+  .progress-fill { height: 100%; border-radius: 999px; background: var(--kid); transition: width .4s ease; }
+  .progress-num { text-align: center; font-size: 15px; font-weight: 700; color: var(--kid); margin-bottom: 18px; }
+  .word-card {
+    background: #fff; border-radius: 22px; padding: 30px 20px 26px; text-align: center;
+    box-shadow: 0 8px 24px -12px rgba(232,89,12,.25); margin-bottom: 16px;
+    border: 2px solid #ffe1c9;
+  }
+  .word-card .w-label { font-size: 13px; color: var(--ink-3); margin-bottom: 10px; }
+  .word-card .w-word { font-size: 44px; font-weight: 800; color: var(--kid-ink); letter-spacing: .1em; margin-bottom: 8px; }
+  .word-card .w-word.hidden-word { letter-spacing: .3em; color: #cfc4b4; font-size: 20px; font-weight: 600; }
+  .word-card .w-tip { font-size: 13px; color: var(--ink-2); }
+  .speak-btn {
+    display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%;
+    border: none; background: var(--kid); color: #fff; font-size: 18px; font-weight: 700;
+    padding: 16px; border-radius: 16px; cursor: pointer; font-family: inherit; margin-bottom: 10px;
+  }
+  .speak-btn:active { transform: scale(.98); }
+  .speak-btn svg { width: 22px; height: 22px; }
+  .kid-sec-row { display: flex; gap: 10px; margin-bottom: 16px; }
+  .ghost-btn {
+    flex: 1; border: 1.5px solid #f0d9c4; background: #fff; color: var(--kid); font-size: 15px;
+    padding: 12px; border-radius: 14px; cursor: pointer; font-family: inherit; font-weight: 600;
+  }
+  .answer-input {
+    width: 100%; border: 2px solid #f0d9c4; border-radius: 14px; padding: 16px; font-size: 22px;
+    text-align: center; font-family: inherit; color: var(--kid-ink); background: #fff; outline: none;
+    margin-bottom: 12px; letter-spacing: .1em;
+  }
+  .answer-input:focus { border-color: var(--kid); }
+  .answer-input.ok { border-color: var(--ok); background: #f0f9f1; }
+  .answer-input.bad { border-color: var(--bad); background: #fdf1f0; }
+  .submit-btn {
+    width: 100%; border: none; background: var(--kid-ink); color: #fff; font-size: 16px; font-weight: 700;
+    padding: 14px; border-radius: 14px; cursor: pointer; font-family: inherit;
+  }
+  .feedback { text-align: center; font-size: 15px; font-weight: 700; min-height: 26px; margin-top: 10px; }
+  .feedback.ok { color: var(--ok); }
+  .feedback.bad { color: var(--bad); }
+  .ctrl-row { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 14px; font-size: 13px; color: var(--ink-2); }
+  .mini-btn { border: none; background: none; color: var(--accent); font-size: 13px; cursor: pointer; font-family: inherit; font-weight: 600; }
+
+  /* 结果面板 */
+  .result { display: none; }
+  .result.show { display: block; }
+  .result.hide-flow .flow { display: none; }
+  .score-ring { text-align: center; margin: 14px 0 20px; }
+  .score-ring .s-num { font-size: 56px; font-weight: 800; color: var(--kid); }
+  .score-ring .s-label { font-size: 14px; color: var(--ink-2); }
+  .result-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+  .r-item {
+    display: flex; justify-content: space-between; align-items: center; background: #fff;
+    border-radius: 12px; padding: 10px 14px; font-size: 15px; border: 1.5px solid #f3e8db;
+  }
+  .r-item .r-word { font-weight: 700; color: var(--kid-ink); }
+  .r-item .r-ans { font-size: 13px; }
+  .r-item.good .r-ans { color: var(--ok); }
+  .r-item.wrong { border-color: #f5c6c2; }
+  .r-item.wrong .r-ans { color: var(--bad); }
+  .r-item .r-ans .strike { text-decoration: line-through; margin-right: 8px; color: var(--ink-3); }
+
+  .note {
+    max-width: 1180px; margin: 40px auto 0; font-size: 13px; color: var(--ink-2);
+    border-top: 1px solid var(--line); padding-top: 16px;
+  }
+  .note li { margin: 4px 0 4px 18px; }
+</style>
+</head>
+<body data-screen-label="design-overview">
+
+<div class="page-head" data-screen-label="overview-header">
+  <h1>默写小工具 · 设计稿 v1</h1>
+  <span class="tag">高保真原型 · 语音真实可播</span>
+  <p>家长设置页 / 学生默写页，浏览器 TTS（speechSynthesis）中文播报</p>
+</div>
+
+<div class="stage">
+
+  <!-- ============ 家长设置页 ============ -->
+  <div class="frame-wrap">
+    <div class="frame-label"><span class="dot dot-parent"></span><b>家长设置页</b> · 配置词库与播报</div>
+    <div class="phone" data-screen-label="parent-settings">
+      <div class="notch"></div>
+      <div class="statusbar"><span>9:41</span><span>●●●</span></div>
+      <div class="screen">
+        <div class="p-title">给孩子布置默写</div>
+        <p class="p-sub">选一套词库，设置好播报，就可以交给孩子了</p>
+
+        <div class="sec">
+          <div class="sec-head"><span class="sec-num">1</span><h3>教材版本</h3></div>
+          <div class="chips" id="versions">
+            <span class="chip on">人教版</span>
+            <span class="chip">部编版</span>
+            <span class="chip">北师大版</span>
+            <span class="chip">苏教版</span>
+            <span class="chip">外研版（英语）</span>
+          </div>
+        </div>
+
+        <div class="sec">
+          <div class="sec-head"><span class="sec-num">2</span><h3>年级</h3></div>
+          <div class="chips" id="grades">
+            <span class="chip">一年级</span><span class="chip">二年级</span><span class="chip on">三年级</span>
+            <span class="chip">四年级</span><span class="chip">五年级</span><span class="chip">六年级</span>
+            <span class="chip">初一</span><span class="chip">初二</span><span class="chip">初三</span>
+          </div>
+        </div>
+
+        <div class="sec">
+          <div class="sec-head"><span class="sec-num">3</span><h3>学科</h3></div>
+          <div class="chips" id="subjects">
+            <span class="chip on">语文 · 词语</span>
+            <span class="chip">英语 · 单词</span>
+          </div>
+        </div>
+
+        <div class="sec">
+          <div class="sec-head"><span class="sec-num">4</span><h3>选择单元词库</h3></div>
+          <div class="unit-grid" id="units">
+            <div class="unit"><div class="u-name">第1单元</div><div class="u-meta">词语表 · 16词</div></div>
+            <div class="unit"><div class="u-name">第2单元</div><div class="u-meta">词语表 · 18词</div></div>
+            <div class="unit on"><div class="u-name">第3单元</div><div class="u-meta">词语表 · 20词</div></div>
+            <div class="unit"><div class="u-name">第4单元</div><div class="u-meta">词语表 · 15词</div></div>
+            <div class="unit"><div class="u-name">第5单元</div><div class="u-meta">词语表 · 17词</div></div>
+            <div class="unit"><div class="u-name">第6单元</div><div class="u-meta">词语表 · 19词</div></div>
+          </div>
+        </div>
+
+        <div class="sec">
+          <div class="sec-head"><span class="sec-num">5</span><h3>播报设置</h3></div>
+          <div class="row-line">
+            <div><div class="r-label">语速</div></div>
+            <div class="seg" style="width:190px" id="speedSeg">
+              <button>偏慢</button><button class="on">标准</button><button>偏快</button>
+            </div>
+          </div>
+          <div class="row-line">
+            <div><div class="r-label">每个词读几遍</div></div>
+            <div class="counter"><button id="repMinus">−</button><span id="repNum">2</span><button id="repPlus">＋</button></div>
+          </div>
+          <div class="row-line">
+            <div><div class="r-label">词与词间隔</div><div class="r-hint">给孩子留书写时间</div></div>
+            <div class="seg" style="width:190px" id="gapSeg">
+              <button>3秒</button><button class="on">5秒</button><button>8秒</button>
+            </div>
+          </div>
+          <div class="row-line">
+            <div><div class="r-label">英语附中文释义</div></div>
+            <div class="switch" id="swMeaning"></div>
+          </div>
+        </div>
+
+        <div class="sec">
+          <div class="sec-head"><span class="sec-num">6</span><h3>默写范围</h3></div>
+          <div class="seg" id="rangeSeg">
+            <button class="on">全部 20 词</button>
+            <button>仅错词本（3）</button>
+            <button>自定义</button>
+          </div>
+        </div>
+
+        <div class="summary" id="summary">
+          <b>人教版 · 三年级 · 语文词语 · 第3单元</b><br>
+          共 20 词 · 标准语速 · 每词 2 遍 · 间隔 5 秒
+        </div>
+        <button class="cta" id="startBtn">开始听写 →</button>
+        <p class="cta-sub">生成学生入口，本机直接进入或分享给另一台设备</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 学生默写页 ============ -->
+  <div class="frame-wrap">
+    <div class="frame-label"><span class="dot dot-kid"></span><b>学生默写页</b> · 语音播报听写（可实际操作）</div>
+    <div class="phone" data-screen-label="student-dictation">
+      <div class="notch"></div>
+      <div class="statusbar"><span>9:41</span><span>●●●</span></div>
+      <div class="screen kid-screen">
+        <div class="flow" id="kidFlow">
+          <div class="kid-top">
+            <span class="k-title">语文听写</span>
+            <button class="k-quit">保存退出</button>
+          </div>
+          <div class="progress-track"><div class="progress-fill" id="progFill" style="width:5%"></div></div>
+          <div class="progress-num" id="progNum">第 1 / 20 词</div>
+
+          <div class="word-card">
+            <div class="w-label">仔细听，写出你听到的词</div>
+            <div class="w-word hidden-word" id="wordDisplay">？ ？</div>
+            <div class="w-tip" id="wordTip">点下方按钮开始播报</div>
+          </div>
+
+          <button class="speak-btn" id="speakBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"></polygon><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg>
+            <span id="speakLabel">听这个词</span>
+          </button>
+          <div class="kid-sec-row">
+            <button class="ghost-btn" id="againBtn">再听一遍</button>
+            <button class="ghost-btn" id="slowBtn">慢一点读</button>
+          </div>
+
+          <input class="answer-input" id="answerInput" placeholder="写在这里" autocomplete="off">
+          <button class="submit-btn" id="submitBtn">写好了，下一个</button>
+          <div class="feedback" id="feedback"></div>
+
+          <div class="ctrl-row">
+            <button class="mini-btn" id="pauseBtn">暂停</button>
+            <span>·</span>
+            <button class="mini-btn" id="quitBtn">结束本次</button>
+          </div>
+        </div>
+
+        <!-- 结果面板 -->
+        <div class="result" id="resultPanel">
+          <div class="kid-top">
+            <span class="k-title">本次成绩</span>
+            <button class="k-quit" id="backHome">完成</button>
+          </div>
+          <div class="score-ring">
+            <div class="s-num" id="scoreNum">90</div>
+            <div class="s-label">分 · 错 2 词已加入错词本</div>
+          </div>
+          <div class="result-list" id="resultList"></div>
+          <button class="speak-btn" id="retryWrongBtn">重默错词（2）</button>
+          <button class="ghost-btn" style="width:100%" id="restartBtn">再默一遍全部</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="note">
+  <ul>
+    <li>学生端为真实可交互 Demo：点「听这个词」会用浏览器语音播报（首次需点击页面允许发声），写答案提交即判分。</li>
+    <li>设计意图：家长端是"任务配置"心智（步骤化 + 汇总条），学生端是"大按钮 + 大字号"独立操作心智，两个角色两种视觉温度。</li>
+    <li>词库为示意数据；正式词库需架构后端提供 版本/年级/学科/单元 四级结构。</li>
+  </ul>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ================= 家长端交互 ================= */
+  function chipGroup(id) {
+    var box = document.getElementById(id);
+    box.addEventListener("click", function (e) {
+      var chip = e.target.closest(".chip");
+      if (!chip) return;
+      box.querySelectorAll(".chip").forEach(function (c) { c.classList.remove("on"); });
+      chip.classList.add("on");
+      updateSummary();
+    });
+  }
+  ["versions", "grades", "subjects"].forEach(chipGroup);
+
+  document.getElementById("units").addEventListener("click", function (e) {
+    var u = e.target.closest(".unit");
+    if (!u) return;
+    document.querySelectorAll("#units .unit").forEach(function (x) { x.classList.remove("on"); });
+    u.classList.add("on");
+    updateSummary();
+  });
+
+  function segGroup(id, cb) {
+    var seg = document.getElementById(id);
+    seg.addEventListener("click", function (e) {
+      var b = e.target.closest("button");
+      if (!b) return;
+      seg.querySelectorAll("button").forEach(function (x) { x.classList.remove("on"); });
+      b.classList.add("on");
+      if (cb) cb();
+      updateSummary();
+    });
+  }
+  segGroup("speedSeg");
+  segGroup("gapSeg");
+  segGroup("rangeSeg");
+
+  var repNum = 2;
+  var repEl = document.getElementById("repNum");
+  document.getElementById("repMinus").addEventListener("click", function () {
+    if (repNum > 1) { repNum--; repEl.textContent = repNum; updateSummary(); }
+  });
+  document.getElementById("repPlus").addEventListener("click", function () {
+    if (repNum < 3) { repNum++; repEl.textContent = repNum; updateSummary(); }
+  });
+
+  document.getElementById("swMeaning").addEventListener("click", function () {
+    this.classList.toggle("on");
+  });
+
+  function selText(id) {
+    var on = document.querySelector("#" + id + " .on");
+    return on ? on.textContent.trim() : "";
+  }
+  function updateSummary() {
+    var unit = document.querySelector("#units .unit.on .u-name");
+    var unitText = unit ? unit.textContent : "";
+    document.getElementById("summary").innerHTML =
+      "<b>" + selText("versions") + " · " + selText("grades") + " · " + selText("subjects") + " · " + unitText + "</b><br>" +
+      "共 20 词 · " + selText("speedSeg") + "语速 · 每词 " + repNum + " 遍 · 间隔 " + selText("gapSeg");
+  }
+  updateSummary();
+
+  /* ================= 学生端听写逻辑 ================= */
+  // 演示词库：人教版语文三年级上册第3单元（示意）
+  var WORDS = [
+    { word: "颜料", tip: "绘画用的色彩材料" },
+    { word: "邮票", tip: "寄信贴的凭证" },
+    { word: "飘舞", tip: "随风飞舞" },
+    { word: "紧张", tip: "精神处于紧绷状态" },
+    { word: "争取", tip: "努力获得" },
+    { word: "粗壮", tip: "粗大而结实" },
+    { word: "排列", tip: "按顺序摆放" },
+    { word: "规则", tip: "共同遵守的章程" }
+  ];
+  // 预置前 6 个"已完成"，模拟进行中的第 7 词
+  var idx = 6;
+  var results = [
+    { word: "颜料", ok: true }, { word: "邮票", ok: true }, { word: "飘舞", ok: false, ans: "漂舞" },
+    { word: "紧张", ok: true }, { word: "争取", ok: true }, { word: "粗壮", ok: false, ans: "祖壮" }
+  ];
+  var paused = false;
+
+  var total = 20;
+  var progFill = document.getElementById("progFill");
+  var progNum = document.getElementById("progNum");
+  var wordDisplay = document.getElementById("wordDisplay");
+  var wordTip = document.getElementById("wordTip");
+  var answerInput = document.getElementById("answerInput");
+  var feedback = document.getElementById("feedback");
+  var speakLabel = document.getElementById("speakLabel");
+
+  function cur() { return WORDS[Math.min(idx, WORDS.length - 1)]; }
+
+  function render() {
+    var shown = Math.min(idx + 1, total);
+    progNum.textContent = "第 " + shown + " / " + total + " 词";
+    progFill.style.width = (shown / total * 100) + "%";
+    wordDisplay.textContent = "？ ？";
+    wordDisplay.classList.add("hidden-word");
+    wordTip.textContent = "点下方按钮开始播报";
+    answerInput.value = "";
+    answerInput.className = "answer-input";
+    answerInput.disabled = false;
+    feedback.textContent = "";
+    feedback.className = "feedback";
+    speakLabel.textContent = "听这个词";
+  }
+
+  function speak(text, rate, onend) {
+    if (!("speechSynthesis" in window)) {
+      wordTip.textContent = "当前浏览器不支持语音播报";
+      if (onend) onend();
+      return;
+    }
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.lang = "zh-CN";
+    u.rate = rate || 0.9;
+    u.pitch = 1.05;
+    var voices = window.speechSynthesis.getVoices();
+    var zh = voices.find(function (v) { return /zh|中文|Chinese/i.test(v.lang + v.name); });
+    if (zh) u.voice = zh;
+    if (onend) u.onend = onend;
+    window.speechSynthesis.speak(u);
+  }
+
+  function announce(slow) {
+    if (paused) return;
+    var w = cur();
+    speakLabel.textContent = "播报中…";
+    speak(w.word, slow ? 0.6 : 0.9, function () {
+      speakLabel.textContent = "听这个词";
+      wordDisplay.textContent = "？ ？";
+      wordDisplay.classList.add("hidden-word");
+      wordTip.textContent = "（听到的是：" + w.word.length + " 个字）";
+      answerInput.focus();
+    });
+  }
+
+  document.getElementById("speakBtn").addEventListener("click", function () { announce(false); });
+  document.getElementById("againBtn").addEventListener("click", function () { announce(false); });
+  document.getElementById("slowBtn").addEventListener("click", function () { announce(true); });
+
+  document.getElementById("submitBtn").addEventListener("click", function () {
+    var w = cur();
+    var ans = answerInput.value.trim();
+    if (!ans) { feedback.textContent = "先写一写，再提交哦"; feedback.className = "feedback bad"; return; }
+    var ok = ans === w.word;
+    results.push({ word: w.word, ok: ok, ans: ok ? undefined : ans });
+    answerInput.className = "answer-input " + (ok ? "ok" : "bad");
+    feedback.textContent = ok ? "答对了，真棒！" : "正确写法是「" + w.word + "」";
+    feedback.className = "feedback " + (ok ? "ok" : "bad");
+    answerInput.disabled = true;
+    if (idx >= WORDS.length - 1) {
+      setTimeout(showResult, 900);
+      return;
+    }
+    idx++;
+    setTimeout(render, 1100);
+  });
+
+  document.getElementById("pauseBtn").addEventListener("click", function () {
+    paused = !paused;
+    this.textContent = paused ? "继续" : "暂停";
+    if (paused) window.speechSynthesis.cancel();
+  });
+
+  function showResult() {
+    document.getElementById("kidFlow").style.display = "none";
+    var panel = document.getElementById("resultPanel");
+    panel.classList.add("show");
+    var wrong = results.filter(function (r) { return !r.ok; });
+    var score = Math.round((results.length - wrong.length) / Math.max(results.length, 1) * 100);
+    document.getElementById("scoreNum").textContent = score;
+    var list = document.getElementById("resultList");
+    list.innerHTML = "";
+    results.forEach(function (r) {
+      var div = document.createElement("div");
+      div.className = "r-item " + (r.ok ? "good" : "wrong");
+      div.innerHTML = '<span class="r-word">' + r.word + "</span>" +
+        (r.ok ? '<span class="r-ans">✓ 正确</span>'
+              : '<span class="r-ans"><span class="strike">' + (r.ans || "") + "</span>" + r.word + "</span>");
+      list.appendChild(div);
+    });
+    document.getElementById("retryWrongBtn").textContent = "重默错词（" + wrong.length + "）";
+  }
+
+  document.getElementById("restartBtn").addEventListener("click", function () {
+    idx = 0;
+    results = [];
+    document.getElementById("resultPanel").classList.remove("show");
+    document.getElementById("kidFlow").style.display = "";
+    render();
+  });
+  document.getElementById("retryWrongBtn").addEventListener("click", function () {
+    var wrong = results.filter(function (r) { return !r.ok; });
+    if (!wrong.length) return;
+    idx = 0;
+    results = [];
+    document.getElementById("resultPanel").classList.remove("show");
+    document.getElementById("kidFlow").style.display = "";
+    render();
+  });
+  document.getElementById("quitBtn").addEventListener("click", showResult);
+  document.getElementById("backHome").addEventListener("click", function () {
+    document.getElementById("resultPanel").classList.remove("show");
+    document.getElementById("kidFlow").style.display = "";
+  });
+
+  // 家长端「开始听写」→ 提示并滚动到学生屏
+  document.getElementById("startBtn").addEventListener("click", function () {
+    var kid = document.querySelector('[data-screen-label="student-dictation"]');
+    kid.style.boxShadow = "0 0 0 4px rgba(232,89,12,.45), 0 24px 60px -24px rgba(31,35,40,.25)";
+    kid.scrollIntoView({ behavior: "smooth", block: "center" });
+    setTimeout(function () {
+      kid.style.boxShadow = "";
+    }, 1800);
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

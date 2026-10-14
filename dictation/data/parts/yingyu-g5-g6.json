@@ -1,0 +1,559 @@
+{
+  "grades": [
+    {
+      "id": "g5-up",
+      "name": "五年级",
+      "semester": "上册",
+      "subjects": [
+        {
+          "id": "english",
+          "name": "英语",
+          "units": [
+            {
+              "id": "u1",
+              "name": "Unit 1 · Goldilocks",
+              "words": [
+                { "word": "forest", "meaning": "森林" },
+                { "word": "bear", "meaning": "熊" },
+                { "word": "soup", "meaning": "汤" },
+                { "word": "hard", "meaning": "硬的" },
+                { "word": "soft", "meaning": "柔软的" },
+                { "word": "afraid", "meaning": "害怕的" },
+                { "word": "really", "meaning": "真的" },
+                { "word": "between", "meaning": "在……之间" },
+                { "word": "find", "meaning": "找到" },
+                { "word": "room", "meaning": "房间" }
+              ]
+            },
+            {
+              "id": "u2",
+              "name": "Unit 2 · A new student",
+              "words": [
+                { "word": "student", "meaning": "学生" },
+                { "word": "show", "meaning": "带……参观" },
+                { "word": "around", "meaning": "四处" },
+                { "word": "classroom", "meaning": "教室" },
+                { "word": "second", "meaning": "第二" },
+                { "word": "floor", "meaning": "楼层" },
+                { "word": "computer", "meaning": "电脑" },
+                { "word": "swing", "meaning": "秋千" },
+                { "word": "push", "meaning": "推" },
+                { "word": "heavy", "meaning": "重的" }
+              ]
+            },
+            {
+              "id": "u3",
+              "name": "Unit 3 · Our animal friends",
+              "words": [
+                { "word": "animal", "meaning": "动物" },
+                { "word": "leg", "meaning": "腿" },
+                { "word": "body", "meaning": "身体" },
+                { "word": "wing", "meaning": "翅膀" },
+                { "word": "arm", "meaning": "手臂" },
+                { "word": "foot", "meaning": "脚" },
+                { "word": "rabbit", "meaning": "兔子" },
+                { "word": "tail", "meaning": "尾巴" },
+                { "word": "give", "meaning": "给" },
+                { "word": "friend", "meaning": "朋友" }
+              ]
+            },
+            {
+              "id": "u4",
+              "name": "Unit 4 · Hobbies",
+              "words": [
+                { "word": "hobby", "meaning": "爱好" },
+                { "word": "read", "meaning": "读" },
+                { "word": "story", "meaning": "故事" },
+                { "word": "play", "meaning": "玩；打（球）" },
+                { "word": "well", "meaning": "好" },
+                { "word": "idea", "meaning": "主意" },
+                { "word": "paint", "meaning": "画画" },
+                { "word": "also", "meaning": "也" },
+                { "word": "watch", "meaning": "观看" }
+              ]
+            },
+            {
+              "id": "u5",
+              "name": "Unit 5 · What do they do?",
+              "words": [
+                { "word": "teacher", "meaning": "老师" },
+                { "word": "doctor", "meaning": "医生" },
+                { "word": "nurse", "meaning": "护士" },
+                { "word": "worker", "meaning": "工人" },
+                { "word": "driver", "meaning": "司机" },
+                { "word": "farmer", "meaning": "农民" },
+                { "word": "teach", "meaning": "教" },
+                { "word": "writer", "meaning": "作家" },
+                { "word": "help", "meaning": "帮助" },
+                { "word": "sick", "meaning": "生病的" }
+              ]
+            },
+            {
+              "id": "u6",
+              "name": "Unit 6 · My e-friend",
+              "words": [
+                { "word": "e-friend", "meaning": "网友" },
+                { "word": "email", "meaning": "电子邮件" },
+                { "word": "wait", "meaning": "等待" },
+                { "word": "send", "meaning": "发送" },
+                { "word": "country", "meaning": "国家" },
+                { "word": "after", "meaning": "在……之后" },
+                { "word": "tomorrow", "meaning": "明天" },
+                { "word": "stay", "meaning": "停留" },
+                { "word": "answer", "meaning": "回答" }
+              ]
+            },
+            {
+              "id": "u7",
+              "name": "Unit 7 · At weekends",
+              "words": [
+                { "word": "weekend", "meaning": "周末" },
+                { "word": "always", "meaning": "总是" },
+                { "word": "usually", "meaning": "通常" },
+                { "word": "often", "meaning": "经常" },
+                { "word": "sometimes", "meaning": "有时" },
+                { "word": "visit", "meaning": "拜访" },
+                { "word": "grandparent", "meaning": "祖父母" },
+                { "word": "play", "meaning": "玩" },
+                { "word": "chat", "meaning": "聊天" },
+                { "word": "internet", "meaning": "互联网" }
+              ]
+            },
+            {
+              "id": "u8",
+              "name": "Unit 8 · At Christmas",
+              "words": [
+                { "word": "christmas", "meaning": "圣诞节" },
+                { "word": "present", "meaning": "礼物" },
+                { "word": "christmas tree", "meaning": "圣诞树" },
+                { "word": "father christmas", "meaning": "圣诞老人" },
+                { "word": "pretty", "meaning": "漂亮的" },
+                { "word": "thing", "meaning": "东西" },
+                { "word": "put", "meaning": "放" },
+                { "word": "wait for", "meaning": "等待" },
+                { "word": "turkey", "meaning": "火鸡" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g5-down",
+      "name": "五年级",
+      "semester": "下册",
+      "subjects": [
+        {
+          "id": "english",
+          "name": "英语",
+          "units": [
+            {
+              "id": "u1",
+              "name": "Unit 1 · Cinderella",
+              "words": [
+                { "word": "prince", "meaning": "王子" },
+                { "word": "fairy", "meaning": "仙女" },
+                { "word": "why", "meaning": "为什么" },
+                { "word": "because", "meaning": "因为" },
+                { "word": "put on", "meaning": "穿上" },
+                { "word": "take off", "meaning": "脱下" },
+                { "word": "before", "meaning": "在……以前" },
+                { "word": "late", "meaning": "迟的" },
+                { "word": "party", "meaning": "聚会" },
+                { "word": "have a good time", "meaning": "玩得开心" }
+              ]
+            },
+            {
+              "id": "u2",
+              "name": "Unit 2 · How do you come to school?",
+              "words": [
+                { "word": "come to school", "meaning": "来上学" },
+                { "word": "metro", "meaning": "地铁" },
+                { "word": "bus", "meaning": "公共汽车" },
+                { "word": "on foot", "meaning": "步行" },
+                { "word": "taxi", "meaning": "出租车" },
+                { "word": "plane", "meaning": "飞机" },
+                { "word": "ship", "meaning": "轮船" },
+                { "word": "train", "meaning": "火车" },
+                { "word": "near", "meaning": "近的" },
+                { "word": "far", "meaning": "远的" }
+              ]
+            },
+            {
+              "id": "u3",
+              "name": "Unit 3 · Asking the way",
+              "words": [
+                { "word": "way", "meaning": "路；方法" },
+                { "word": "get to", "meaning": "到达" },
+                { "word": "take", "meaning": "乘（车）" },
+                { "word": "station", "meaning": "车站" },
+                { "word": "street", "meaning": "街道" },
+                { "word": "turn", "meaning": "转弯" },
+                { "word": "left", "meaning": "左边" },
+                { "word": "right", "meaning": "右边" },
+                { "word": "straight", "meaning": "笔直地" },
+                { "word": "ask", "meaning": "问" }
+              ]
+            },
+            {
+              "id": "u4",
+              "name": "Unit 4 · Seeing the doctor",
+              "words": [
+                { "word": "doctor", "meaning": "医生" },
+                { "word": "feel", "meaning": "感觉" },
+                { "word": "should", "meaning": "应该" },
+                { "word": "have a rest", "meaning": "休息" },
+                { "word": "toothache", "meaning": "牙疼" },
+                { "word": "fever", "meaning": "发烧" },
+                { "word": "cold", "meaning": "感冒" },
+                { "word": "medicine", "meaning": "药" },
+                { "word": "check", "meaning": "检查" },
+                { "word": "wrong", "meaning": "不舒服的" }
+              ]
+            },
+            {
+              "id": "u5",
+              "name": "Unit 5 · Helping our parents",
+              "words": [
+                { "word": "help", "meaning": "帮助" },
+                { "word": "parent", "meaning": "父母" },
+                { "word": "clean", "meaning": "打扫" },
+                { "word": "wash", "meaning": "洗" },
+                { "word": "cook", "meaning": "做饭" },
+                { "word": "busy", "meaning": "忙的" },
+                { "word": "sweep", "meaning": "扫" },
+                { "word": "rubbish", "meaning": "垃圾" },
+                { "word": "water", "meaning": "浇水" },
+                { "word": "work", "meaning": "工作" }
+              ]
+            },
+            {
+              "id": "u6",
+              "name": "Unit 6 · In the kitchen",
+              "words": [
+                { "word": "kitchen", "meaning": "厨房" },
+                { "word": "tomato", "meaning": "西红柿" },
+                { "word": "potato", "meaning": "土豆" },
+                { "word": "soup", "meaning": "汤" },
+                { "word": "meat", "meaning": "肉" },
+                { "word": "vegetable", "meaning": "蔬菜" },
+                { "word": "smell", "meaning": "闻起来" },
+                { "word": "hungry", "meaning": "饿的" },
+                { "word": "cook", "meaning": "做饭" }
+              ]
+            },
+            {
+              "id": "u7",
+              "name": "Unit 7 · Chinese festivals",
+              "words": [
+                { "word": "festival", "meaning": "节日" },
+                { "word": "spring festival", "meaning": "春节" },
+                { "word": "lantern", "meaning": "灯笼" },
+                { "word": "dumpling", "meaning": "饺子" },
+                { "word": "rice dumpling", "meaning": "粽子" },
+                { "word": "mid-autumn festival", "meaning": "中秋节" },
+                { "word": "moon cake", "meaning": "月饼" },
+                { "word": "dragon boat festival", "meaning": "端午节" },
+                { "word": "january", "meaning": "一月" },
+                { "word": "february", "meaning": "二月" }
+              ]
+            },
+            {
+              "id": "u8",
+              "name": "Unit 8 · Birthdays",
+              "words": [
+                { "word": "birthday", "meaning": "生日" },
+                { "word": "date", "meaning": "日期" },
+                { "word": "when", "meaning": "什么时候" },
+                { "word": "april", "meaning": "四月" },
+                { "word": "may", "meaning": "五月" },
+                { "word": "present", "meaning": "礼物" },
+                { "word": "cake", "meaning": "蛋糕" },
+                { "word": "party", "meaning": "聚会" },
+                { "word": "first", "meaning": "第一" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g6-up",
+      "name": "六年级",
+      "semester": "上册",
+      "subjects": [
+        {
+          "id": "english",
+          "name": "英语",
+          "units": [
+            {
+              "id": "u1",
+              "name": "Unit 1 · The king's new clothes",
+              "words": [
+                { "word": "clever", "meaning": "聪明的" },
+                { "word": "foolish", "meaning": "愚蠢的" },
+                { "word": "laugh", "meaning": "笑" },
+                { "word": "shout", "meaning": "喊叫" },
+                { "word": "clothes", "meaning": "衣服" },
+                { "word": "king", "meaning": "国王" },
+                { "word": "wear", "meaning": "穿" },
+                { "word": "tell", "meaning": "讲；告诉" },
+                { "word": "long long ago", "meaning": "很久以前" },
+                { "word": "look at", "meaning": "看" }
+              ]
+            },
+            {
+              "id": "u2",
+              "name": "Unit 2 · What a day!",
+              "words": [
+                { "word": "weather", "meaning": "天气" },
+                { "word": "sunny", "meaning": "晴朗的" },
+                { "word": "windy", "meaning": "有风的" },
+                { "word": "cloudy", "meaning": "多云的" },
+                { "word": "rain", "meaning": "下雨" },
+                { "word": "rainy", "meaning": "多雨的" },
+                { "word": "bring", "meaning": "带来" },
+                { "word": "fly", "meaning": "放飞（风筝）" },
+                { "word": "high", "meaning": "高地" },
+                { "word": "sky", "meaning": "天空" }
+              ]
+            },
+            {
+              "id": "u3",
+              "name": "Unit 3 · Holiday fun",
+              "words": [
+                { "word": "holiday", "meaning": "假期" },
+                { "word": "fun", "meaning": "乐趣" },
+                { "word": "national day", "meaning": "国庆节" },
+                { "word": "call", "meaning": "打电话" },
+                { "word": "bund", "meaning": "（上海）外滩" },
+                { "word": "shanghai museum", "meaning": "上海博物馆" },
+                { "word": "great wall", "meaning": "长城" },
+                { "word": "palace museum", "meaning": "故宫" },
+                { "word": "summer palace", "meaning": "颐和园" },
+                { "word": "tian'anmen square", "meaning": "天安门广场" }
+              ]
+            },
+            {
+              "id": "u4",
+              "name": "Unit 4 · Then and now",
+              "words": [
+                { "word": "then", "meaning": "那时" },
+                { "word": "now", "meaning": "现在" },
+                { "word": "ago", "meaning": "以前" },
+                { "word": "use", "meaning": "使用" },
+                { "word": "telephone", "meaning": "电话" },
+                { "word": "mobile phone", "meaning": "手机" },
+                { "word": "internet", "meaning": "互联网" },
+                { "word": "write", "meaning": "写" },
+                { "word": "newspaper", "meaning": "报纸" },
+                { "word": "make friends", "meaning": "交朋友" }
+              ]
+            },
+            {
+              "id": "u5",
+              "name": "Unit 5 · Signs",
+              "words": [
+                { "word": "sign", "meaning": "标识" },
+                { "word": "mean", "meaning": "意思是" },
+                { "word": "no eating", "meaning": "禁止饮食" },
+                { "word": "no parking", "meaning": "禁止停车" },
+                { "word": "no smoking", "meaning": "禁止吸烟" },
+                { "word": "danger", "meaning": "危险" },
+                { "word": "litter", "meaning": "乱扔垃圾" },
+                { "word": "smoke", "meaning": "吸烟" },
+                { "word": "careful", "meaning": "小心的" }
+              ]
+            },
+            {
+              "id": "u6",
+              "name": "Unit 6 · Keep our city clean",
+              "words": [
+                { "word": "city", "meaning": "城市" },
+                { "word": "dirty", "meaning": "脏的" },
+                { "word": "clean", "meaning": "干净的" },
+                { "word": "rubbish", "meaning": "垃圾" },
+                { "word": "smoke", "meaning": "烟雾" },
+                { "word": "move", "meaning": "搬走" },
+                { "word": "dead", "meaning": "死的" },
+                { "word": "plant", "meaning": "种植" },
+                { "word": "more", "meaning": "更多的" },
+                { "word": "keep", "meaning": "保持" }
+              ]
+            },
+            {
+              "id": "u7",
+              "name": "Unit 7 · Protect the Earth",
+              "words": [
+                { "word": "protect", "meaning": "保护" },
+                { "word": "earth", "meaning": "地球" },
+                { "word": "save", "meaning": "节约；拯救" },
+                { "word": "energy", "meaning": "能源" },
+                { "word": "useful", "meaning": "有用的" },
+                { "word": "waste", "meaning": "浪费" },
+                { "word": "reuse", "meaning": "再利用" },
+                { "word": "plastic", "meaning": "塑料" },
+                { "word": "wood", "meaning": "木头" },
+                { "word": "water", "meaning": "水" }
+              ]
+            },
+            {
+              "id": "u8",
+              "name": "Unit 8 · Chinese New Year",
+              "words": [
+                { "word": "chinese new year", "meaning": "农历新年" },
+                { "word": "get together", "meaning": "团聚" },
+                { "word": "dumpling", "meaning": "饺子" },
+                { "word": "red packet", "meaning": "红包" },
+                { "word": "fireworks", "meaning": "烟花" },
+                { "word": "firecracker", "meaning": "鞭炮" },
+                { "word": "watch a lion dance", "meaning": "看舞狮" },
+                { "word": "buy new clothes", "meaning": "买新衣服" },
+                { "word": "excited", "meaning": "兴奋的" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g6-down",
+      "name": "六年级",
+      "semester": "下册",
+      "subjects": [
+        {
+          "id": "english",
+          "name": "英语",
+          "units": [
+            {
+              "id": "u1",
+              "name": "Unit 1 · The lion and the mouse",
+              "words": [
+                { "word": "lion", "meaning": "狮子" },
+                { "word": "mouse", "meaning": "老鼠" },
+                { "word": "large", "meaning": "大的" },
+                { "word": "strong", "meaning": "强壮的" },
+                { "word": "weak", "meaning": "弱的" },
+                { "word": "net", "meaning": "网" },
+                { "word": "bite", "meaning": "咬" },
+                { "word": "sharp", "meaning": "锋利的" },
+                { "word": "teeth", "meaning": "牙齿" },
+                { "word": "soon", "meaning": "很快" }
+              ]
+            },
+            {
+              "id": "u2",
+              "name": "Unit 2 · Good habits",
+              "words": [
+                { "word": "habit", "meaning": "习惯" },
+                { "word": "good habits", "meaning": "好习惯" },
+                { "word": "bad habits", "meaning": "坏习惯" },
+                { "word": "put in order", "meaning": "整理" },
+                { "word": "messy", "meaning": "杂乱的" },
+                { "word": "fast", "meaning": "快地" },
+                { "word": "sleepy", "meaning": "困倦的" },
+                { "word": "last", "meaning": "持续" },
+                { "word": "never", "meaning": "从不" },
+                { "word": "late", "meaning": "迟的" }
+              ]
+            },
+            {
+              "id": "u3",
+              "name": "Unit 3 · A healthy diet",
+              "words": [
+                { "word": "healthy", "meaning": "健康的" },
+                { "word": "diet", "meaning": "饮食" },
+                { "word": "a little", "meaning": "一点" },
+                { "word": "a few", "meaning": "一些" },
+                { "word": "at a time", "meaning": "一次" },
+                { "word": "cola", "meaning": "可乐" },
+                { "word": "sweet", "meaning": "甜的" },
+                { "word": "meat", "meaning": "肉" },
+                { "word": "rice", "meaning": "米饭" },
+                { "word": "breakfast", "meaning": "早饭" }
+              ]
+            },
+            {
+              "id": "u4",
+              "name": "Unit 4 · Road safety",
+              "words": [
+                { "word": "road", "meaning": "马路" },
+                { "word": "must", "meaning": "必须" },
+                { "word": "safety", "meaning": "安全" },
+                { "word": "zebra crossing", "meaning": "斑马线" },
+                { "word": "look out for", "meaning": "当心" },
+                { "word": "follow", "meaning": "遵守" },
+                { "word": "rule", "meaning": "规则" },
+                { "word": "safe", "meaning": "安全的" },
+                { "word": "stay", "meaning": "停留" }
+              ]
+            },
+            {
+              "id": "u5",
+              "name": "Unit 5 · A party",
+              "words": [
+                { "word": "party", "meaning": "聚会" },
+                { "word": "have a party", "meaning": "举行聚会" },
+                { "word": "bring", "meaning": "带来" },
+                { "word": "snack", "meaning": "点心" },
+                { "word": "drink", "meaning": "饮料" },
+                { "word": "balloon", "meaning": "气球" },
+                { "word": "gift", "meaning": "礼物" },
+                { "word": "game", "meaning": "游戏" },
+                { "word": "clown", "meaning": "小丑" }
+              ]
+            },
+            {
+              "id": "u6",
+              "name": "Unit 6 · An interesting country",
+              "words": [
+                { "word": "country", "meaning": "国家" },
+                { "word": "australia", "meaning": "澳大利亚" },
+                { "word": "interesting", "meaning": "有趣的" },
+                { "word": "kangaroo", "meaning": "袋鼠" },
+                { "word": "koala", "meaning": "考拉" },
+                { "word": "canberra", "meaning": "堪培拉" },
+                { "word": "capital", "meaning": "首都" },
+                { "word": "flag", "meaning": "国旗" },
+                { "word": "north", "meaning": "北方" },
+                { "word": "sport-lover", "meaning": "运动爱好者" }
+              ]
+            },
+            {
+              "id": "u7",
+              "name": "Unit 7 · Summer holiday plans",
+              "words": [
+                { "word": "summer holiday", "meaning": "暑假" },
+                { "word": "plan", "meaning": "计划" },
+                { "word": "stay", "meaning": "停留" },
+                { "word": "visit", "meaning": "参观；拜访" },
+                { "word": "travel", "meaning": "旅行" },
+                { "word": "go back", "meaning": "回去" },
+                { "word": "how long", "meaning": "多久" },
+                { "word": "disneyland", "meaning": "迪士尼乐园" },
+                { "word": "taipei", "meaning": "台北" },
+                { "word": "hong kong", "meaning": "香港" }
+              ]
+            },
+            {
+              "id": "u8",
+              "name": "Unit 8 · Our dreams",
+              "words": [
+                { "word": "dream", "meaning": "梦想" },
+                { "word": "in the future", "meaning": "将来" },
+                { "word": "astronaut", "meaning": "宇航员" },
+                { "word": "dancer", "meaning": "舞蹈家" },
+                { "word": "pianist", "meaning": "钢琴家" },
+                { "word": "scientist", "meaning": "科学家" },
+                { "word": "football player", "meaning": "足球运动员" },
+                { "word": "writer", "meaning": "作家" },
+                { "word": "want to be", "meaning": "想成为" },
+                { "word": "hard", "meaning": "努力地" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
