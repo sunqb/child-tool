@@ -228,6 +228,13 @@
 <div class="sec">
   <div class="sec-head"><span class="sec-num">5</span><h3>播报设置</h3></div>
   <div class="row-line">
+    <div><div class="r-label">语音来源</div><div class="r-hint">在线语音更自然，需联网；不可用时自动改用浏览器内置语音</div></div>
+    <div class="seg" style="width:190px" id="engineSeg">
+      <button data-v="api">在线语音</button>
+      <button data-v="browser">浏览器内置</button>
+    </div>
+  </div>
+  <div class="row-line">
     <div><div class="r-label">语速</div></div>
     <div class="seg" style="width:190px" id="speedSeg">
       <button data-v="0.6">偏慢</button>
@@ -576,6 +583,7 @@
     var hit = SPEEDS.find(function (s) { return s.v === cfg.speed; });
     return hit ? hit.label : "标准";
   }
+  function ttsLabel() { return cfg.ttsEngine === "browser" ? "浏览器语音" : "在线语音"; }
 
   function rangeSize() {
     if (range === "wrong") return wrongCount();
@@ -675,12 +683,12 @@
       line1 = "自建词库 · " + (bk ? bk.name : "");
     }
     if (range === "wrong") {
-      line2 = "错词本 " + wrongCount() + " 词 · " + speedLabel() + "语速 · 每词 " + cfg.repeat + " 遍";
+      line2 = "错词本 " + wrongCount() + " 词 · " + ttsLabel() + " · " + speedLabel() + "语速 · 每词 " + cfg.repeat + " 遍";
     } else if (range === "bank") {
-      line2 = (bk ? bk.name : "自建词库") + " " + rangeSize() + " 词 · " + speedLabel() +
+      line2 = (bk ? bk.name : "自建词库") + " " + rangeSize() + " 词 · " + ttsLabel() + " · " + speedLabel() +
               "语速 · 每词 " + cfg.repeat + " 遍";
     } else {
-      line2 = "共 " + rangeSize() + " 词 · " + speedLabel() + "语速 · 每词 " + cfg.repeat +
+      line2 = "共 " + rangeSize() + " 词 · " + ttsLabel() + " · " + speedLabel() + "语速 · 每词 " + cfg.repeat +
               " 遍 · 间隔 " + cfg.gapSec + " 秒";
     }
     var box = $("summary");
@@ -737,6 +745,7 @@
     });
   }
 
+  segWire("engineSeg", function (v) { cfg = Store.config.set({ ttsEngine: v }); updateSummary(); });
   segWire("speedSeg", function (v) { cfg = Store.config.set({ speed: Number(v) }); updateSummary(); });
   segWire("gapSeg", function (v) { cfg = Store.config.set({ gapSec: Number(v) }); updateSummary(); });
   segWire("rangeSeg", function (v) { range = v; renderRange(); updateSummary(); });
@@ -860,6 +869,7 @@
     }
 
     $("repNum").textContent = cfg.repeat;
+    markSeg("engineSeg", cfg.ttsEngine);
     markSeg("speedSeg", cfg.speed);
     markSeg("gapSeg", cfg.gapSec);
     if (cfg.withMeaning) $("swMeaning").classList.add("on");

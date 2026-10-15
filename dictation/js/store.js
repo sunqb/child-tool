@@ -117,7 +117,7 @@
 
   /* ---------- 家长配置 ---------- */
 
-  var DEFAULT_CONFIG = { speed: 0.9, repeat: 2, gapSec: 5, withMeaning: false };
+  var DEFAULT_CONFIG = { speed: 0.9, repeat: 2, gapSec: 5, withMeaning: false, ttsEngine: "api" };
 
   var config = {
     get: function () {
