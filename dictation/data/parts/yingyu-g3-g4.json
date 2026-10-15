@@ -262,7 +262,7 @@
           "units": [
             {
               "id": "u1",
-              "name": "Unit 1 · Our school subject",
+              "name": "Unit 1 · Our school subjects",
               "words": [
                 { "word": "subject", "meaning": "学科，科目" },
                 { "word": "Chinese", "meaning": "语文（课）；中国的" },
@@ -330,7 +330,6 @@
                 { "word": "every", "meaning": "每一个，每个" },
                 { "word": "at", "meaning": "在（某时间）" },
                 { "word": "up", "meaning": "起床" },
-                { "word": "early", "meaning": "提早，提前" },
                 { "word": "today", "meaning": "在今天" },
                 { "word": "cinema", "meaning": "电影院" },
                 { "word": "after school", "meaning": "放学后" },
@@ -398,7 +397,6 @@
                 { "word": "warm", "meaning": "温暖的，暖和的" },
                 { "word": "money", "meaning": "钱" },
                 { "word": "park", "meaning": "公园" },
-                { "word": "meet", "meaning": "（与……）会面，集合" },
                 { "word": "fly a kite", "meaning": "放风筝" },
                 { "word": "worry", "meaning": "担心，担忧" },
                 { "word": "umbrella", "meaning": "伞，雨伞" },

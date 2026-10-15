@@ -5967,7 +5967,7 @@
               "units": [
                 {
                   "id": "u1",
-                  "name": "Unit 1 · Our school subject",
+                  "name": "Unit 1 · Our school subjects",
                   "words": [
                     {
                       "word": "subject",
@@ -6198,10 +6198,6 @@
                       "meaning": "起床"
                     },
                     {
-                      "word": "early",
-                      "meaning": "提早，提前"
-                    },
-                    {
                       "word": "today",
                       "meaning": "在今天"
                     },
@@ -6414,10 +6410,6 @@
                     {
                       "word": "park",
                       "meaning": "公园"
-                    },
-                    {
-                      "word": "meet",
-                      "meaning": "（与……）会面，集合"
                     },
                     {
                       "word": "fly a kite",
