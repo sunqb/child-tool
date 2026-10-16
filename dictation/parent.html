@@ -157,6 +157,10 @@
     display: block; margin-top: 4px; border: none; background: none; color: var(--accent);
     font-size: 13px; cursor: pointer; font-family: inherit; font-weight: 600; padding: 0;
   }
+  .range-preview .rp-reshuffle {
+    border: none; background: none; color: var(--accent); font-size: 12px;
+    cursor: pointer; font-family: inherit; font-weight: 600; padding: 0; margin-left: 8px;
+  }
   .range-preview .rp-empty { font-size: 13px; color: var(--ink-3); }
 
   /* 自建词库 */
@@ -267,6 +271,10 @@
     <button data-v="wrong">仅错词本</button>
     <button data-v="custom">前 N 个</button>
     <button data-v="bank">自建词库</button>
+  </div>
+  <div class="row-line">
+    <div><div class="r-label">打乱顺序</div><div class="r-hint">开启后下方预览即实际听写顺序，可点「换一批」重排</div></div>
+    <div class="switch" id="swShuffle"></div>
   </div>
   <div class="row-line" id="customRow" style="display:none">
     <div><div class="r-label">只默前 N 个词</div></div>
@@ -609,19 +617,59 @@
     return words;
   }
 
+  /* ---------- 打乱顺序（开启时预览即实际听写顺序） ---------- */
+
+  // 打乱结果缓存：范围内容不变则顺序保持不变，家长看到的就是孩子听到的
+  var shuffleCache = { key: null, words: null };
+
+  function shuffledCopy(arr) { // Fisher-Yates
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  function orderedRangeWords() {
+    var words = currentRangeWords();
+    if (!cfg.shuffle) { shuffleCache.key = null; shuffleCache.words = null; return words; }
+    // key 含全部词面，错词本增删、换单元、调 N 都会触发重排
+    var key = [range, sel.subjectId, sel.gradeId, sel.versionId, sel.unitId, customN, bankId,
+               words.map(function (w) { return w.word; }).join("")].join("|");
+    if (shuffleCache.key !== key || !shuffleCache.words) {
+      shuffleCache = { key: key, words: shuffledCopy(words) };
+    }
+    return shuffleCache.words;
+  }
+
+  function reshuffle() { // 「换一批」：作废缓存，下一次取词重排
+    shuffleCache.key = null;
+    shuffleCache.words = null;
+    renderPreview();
+  }
+
   var PREVIEW_COLLAPSE = 8;
 
   function renderPreview() {
     var box = $("rangePreview");
     box.textContent = "";
-    var words = currentRangeWords();
+    var words = orderedRangeWords();
     // 范围/单元/N 变化时重置折叠态
     var key = [range, sel.subjectId, sel.gradeId, sel.versionId, sel.unitId, customN, bankId, words.length].join("|");
     if (key !== previewKey) { previewKey = key; previewExpanded = false; }
 
     var head = document.createElement("div");
     head.className = "rp-head";
-    head.textContent = "本范围共 " + words.length + " 词";
+    head.textContent = "本范围共 " + words.length + " 词" + (cfg.shuffle && words.length > 1 ? " · 已打乱" : "");
+    if (cfg.shuffle && words.length > 1) {
+      var re = document.createElement("button");
+      re.type = "button";
+      re.className = "rp-reshuffle";
+      re.textContent = "↻ 换一批";
+      re.addEventListener("click", reshuffle);
+      head.appendChild(re);
+    }
     box.appendChild(head);
 
     if (!words.length) {
@@ -691,6 +739,7 @@
       line2 = "共 " + rangeSize() + " 词 · " + ttsLabel() + " · " + speedLabel() + "语速 · 每词 " + cfg.repeat +
               " 遍 · 间隔 " + cfg.gapSec + " 秒";
     }
+    if (cfg.shuffle && rangeSize() > 1) line2 += " · 打乱顺序";
     var box = $("summary");
     box.textContent = "";
     var b = document.createElement("b"); b.textContent = line1;
@@ -766,17 +815,23 @@
     cfg = Store.config.set({ withMeaning: this.classList.contains("on") });
   });
 
+  $("swShuffle").addEventListener("click", function () {
+    this.classList.toggle("on");
+    cfg = Store.config.set({ shuffle: this.classList.contains("on") });
+    renderPreview(); // 开关即重排/复原，预览立刻反映实际顺序
+    updateSummary();
+  });
+
   /* ---------- 开始听写 ---------- */
 
-  // 组装当前范围/单元的词表（在线与纸笔两种模式共用）
+  // 组装当前范围/单元的词表（在线与纸笔两种模式共用）；开启打乱时取预览同款顺序
   function currentSessionWords() {
-    var words;
-    var source;
     var subject = sel.subjectId;
+    var source;
     var unitName;
+    var words = orderedRangeWords();
     if (range === "wrong") {
-      var entries = Store.wrongbook.list(sel.subjectId);
-      words = entries.map(function (e) {
+      words = words.map(function (e) {
         var w = { word: e.word };
         if (e.tip) w.tip = e.tip;
         if (e.meaning) w.meaning = e.meaning;
@@ -787,13 +842,10 @@
     } else if (range === "bank") {
       var bank = Store.custom.get(bankId);
       if (!bank) return null;
-      words = bank.words.map(function (w) { return { word: w }; });
       source = "custom";
       unitName = bank.name;
       subject = detectSubject(words); // 自建词库无学科字段，按词面自动判断
     } else {
-      words = unitWords().slice();
-      if (range === "custom") words = words.slice(0, customN);
       source = "unit";
       unitName = curUnit() ? curUnit().name : "";
     }
@@ -873,6 +925,7 @@
     markSeg("speedSeg", cfg.speed);
     markSeg("gapSeg", cfg.gapSec);
     if (cfg.withMeaning) $("swMeaning").classList.add("on");
+    if (cfg.shuffle) $("swShuffle").classList.add("on");
     if (!TTS.supported()) $("ttsWarn").classList.add("show");
 
     renderAll();
