@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>录入错题 · 错题本</title>
+<style>
+  :root {
+    --ink: #1f2328;
+    --ink-2: #5c6470;
+    --ink-3: #98a1ad;
+    --paper: #f6f4ef;
+    --card: #ffffff;
+    --line: #e7e3da;
+    --teal: #0f766e;
+    --teal-soft: #e6f2f0;
+    --orange: #e8590c;
+    --orange-soft: #fff0e6;
+    --bad: #d6453d;
+    --radius: 14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: var(--paper); }
+  body {
+    font-family: -apple-system, "SF Pro Text", "PingFang SC", "Noto Sans SC", sans-serif;
+    color: var(--ink);
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 16px 16px 48px;
+  }
+
+  .degrade-bar {
+    display: none;
+    background: #fff8e6; border: 1px solid #f0e0b0; color: #8a6d1a;
+    border-radius: 12px; padding: 10px 14px; font-size: 13px; margin-bottom: 12px;
+  }
+  .degrade-bar.show { display: block; }
+
+  .top-bar { display: flex; justify-content: space-between; align-items: center; margin: 2px 2px 14px; }
+  .top-bar .back { font-size: 13px; color: var(--ink-3); text-decoration: none; }
+  .p-title { font-size: 21px; font-weight: 700; margin: 6px 2px 2px; }
+  .p-sub { font-size: 13px; color: var(--ink-2); margin: 0 2px 14px; }
+
+  .card { background: var(--card); border: 1.5px solid var(--line); border-radius: var(--radius); }
+  .sec { margin-bottom: 16px; }
+  .sec-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .sec-num {
+    width: 22px; height: 22px; border-radius: 50%; background: var(--teal); color: #fff;
+    font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex: none;
+  }
+  .sec-head h3 { font-size: 15px; }
+  .sec-hint { font-size: 12px; color: var(--ink-3); margin: -4px 0 10px; }
+
+  .btn {
+    border: 1.5px solid var(--line); background: #fff; color: var(--ink);
+    border-radius: 12px; padding: 9px 12px; font-size: 14px; cursor: pointer; font-family: inherit;
+    min-height: 44px;
+  }
+  .btn:active { transform: scale(.97); }
+  .btn.primary { background: var(--teal); border-color: var(--teal); color: #fff; font-weight: 600; }
+  .btn.soft { background: var(--teal-soft); border-color: var(--teal-soft); color: var(--teal); font-weight: 600; }
+  .btn:disabled { opacity: .45; cursor: not-allowed; }
+
+  .pick-card { padding: 28px 16px; text-align: center; }
+  .pick-card .pick-icon { font-size: 40px; margin-bottom: 8px; }
+  .pick-card p { font-size: 13px; color: var(--ink-3); margin: 6px 0 14px; }
+
+  #canvas-wrap { display: none; position: relative; }
+  #sel-canvas {
+    width: 100%; display: block; border-radius: 10px; background: #f0eee8;
+    touch-action: none; cursor: crosshair;
+  }
+  #crop-preview { display: none; width: 100%; border-radius: 10px; background: #f0eee8; }
+  .canvas-actions { display: flex; gap: 8px; margin-top: 10px; }
+  .canvas-actions .btn { flex: 1; font-size: 13px; }
+
+  .f-field { margin-bottom: 12px; }
+  .f-field label { display: block; font-size: 13px; color: var(--ink-2); margin-bottom: 4px; }
+  .f-field input, .f-field select, .f-field textarea {
+    width: 100%; border: 1.5px solid var(--line); border-radius: 10px;
+    padding: 10px 12px; font-size: 15px; font-family: inherit; background: #fff; color: var(--ink);
+  }
+  .f-field textarea { resize: vertical; min-height: 56px; }
+  .f-row { display: flex; gap: 10px; }
+  .f-row .f-field { flex: 1; min-width: 0; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    padding: 7px 12px; border-radius: 999px; border: 1.5px solid var(--line);
+    background: #fff; font-size: 14px; color: var(--ink-2); font-family: inherit;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .chip .chip-x { color: var(--ink-3); font-size: 13px; padding: 0 2px; cursor: pointer; }
+  .add-row { display: flex; gap: 8px; margin-top: 8px; }
+  .add-row input {
+    flex: 1; border: 1.5px solid var(--line); border-radius: 10px;
+    padding: 10px 12px; font-size: 15px; font-family: inherit;
+  }
+
+  .form-card { padding: 14px; }
+
+  .cta {
+    display: block; width: 100%; border: none; background: var(--teal); color: #fff;
+    font-size: 17px; font-weight: 700; padding: 15px; border-radius: 16px; cursor: pointer;
+    font-family: inherit; letter-spacing: .05em; margin-bottom: 10px; min-height: 52px;
+  }
+  .cta:active { transform: scale(.98); }
+  .cta-sub { text-align: center; font-size: 12px; color: var(--ink-3); margin-top: 10px; }
+  .done-row { display: flex; gap: 10px; margin-bottom: 10px; }
+  .done-row .btn { flex: 1; }
+
+  .toast {
+    position: fixed; left: 50%; bottom: 40px; transform: translateX(-50%) translateY(20px);
+    background: rgba(31,35,40,.92); color: #fff; font-size: 14px; padding: 10px 18px;
+    border-radius: 999px; opacity: 0; pointer-events: none; transition: all .2s; z-index: 90;
+    max-width: 86vw; text-align: center;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  .err-box {
+    display: none; background: #fdf1f0; color: var(--bad); border: 1px solid #f5c6c2;
+    border-radius: 12px; padding: 10px 14px; font-size: 13px; margin-bottom: 12px;
+  }
+  .err-box.show { display: block; }
+</style>
+</head>
+<body>
+
+<div id="degrade-bar" class="degrade-bar">本地存储不可用，数据关闭页面后将丢失，请及时导出备份</div>
+
+<div class="top-bar">
+  <a class="back" href="index.html">← 错题本</a>
+</div>
+
+<h1 class="p-title">录入错题</h1>
+<p class="p-sub">拍一张试卷，用手指框选每道错题</p>
+
+<div id="err-box" class="err-box"></div>
+
+<!-- 第 1 步：拍照 / 选图 -->
+<div class="sec" id="sec-pick">
+  <div class="sec-head"><span class="sec-num">1</span><h3>拍照或选图</h3></div>
+  <div class="card pick-card">
+    <div class="pick-icon">📷</div>
+    <p>手机将调起相机，电脑端为选择图片<br>整份试卷原图不会保存，框选后仅保留裁片</p>
+    <button class="btn primary" id="btn-pick">拍照 / 选择试卷照片</button>
+    <input type="file" id="file-input" accept="image/*" capture="environment" hidden>
+  </div>
+</div>
+
+<!-- 第 2 步：框选 -->
+<div class="sec" id="sec-crop" hidden>
+  <div class="sec-head"><span class="sec-num">2</span><h3>框选错题</h3></div>
+  <p class="sec-hint">在图片上按住拖动，框出一道错题；可重复框选调整</p>
+  <div id="canvas-wrap">
+    <canvas id="sel-canvas"></canvas>
+    <div class="canvas-actions">
+      <button class="btn" id="btn-recrop">重新框选</button>
+      <button class="btn" id="btn-repick">换一张照片</button>
+    </div>
+  </div>
+  <div id="crop-box" hidden style="margin-top:12px;">
+    <p class="sec-hint">裁剪预览</p>
+    <img id="crop-preview" alt="裁剪预览">
+  </div>
+</div>
+
+<!-- 第 3 步：填写信息 -->
+<div class="sec" id="sec-form" hidden>
+  <div class="sec-head"><span class="sec-num">3</span><h3>题目信息</h3></div>
+  <div class="card form-card">
+    <div class="f-row">
+      <div class="f-field">
+        <label>学科</label>
+        <select id="f-subject"></select>
+      </div>
+      <div class="f-field">
+        <label>日期</label>
+        <input type="date" id="f-date">
+      </div>
+    </div>
+    <div class="f-field">
+      <label>所属测验 / 试卷</label>
+      <input id="f-exam" list="exam-list" placeholder="如：四年级上册 第3单元测验">
+      <datalist id="exam-list"></datalist>
+    </div>
+    <div class="f-field">
+      <label>标签</label>
+      <div class="chips" id="f-tags"></div>
+      <div class="add-row">
+        <input id="f-tag-input" list="tag-list" placeholder="如：计算错误，回车添加">
+        <datalist id="tag-list"></datalist>
+        <button class="btn" id="f-tag-add">添加</button>
+      </div>
+    </div>
+    <div class="f-field">
+      <label>备注（可选）</label>
+      <textarea id="f-note" placeholder="如：错因分析、相关页码"></textarea>
+    </div>
+  </div>
+</div>
+
+<!-- 底部操作 -->
+<div id="save-row" hidden>
+  <button class="cta" id="btn-save">保存这道错题</button>
+  <div class="done-row">
+    <button class="btn" id="btn-finish" disabled>完成，返回列表</button>
+  </div>
+  <p class="cta-sub">保存后停留本页，可继续框选下一道</p>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/store.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var els = {
+    degradeBar: document.getElementById("degrade-bar"),
+    errBox: document.getElementById("err-box"),
+    secPick: document.getElementById("sec-pick"),
+    secCrop: document.getElementById("sec-crop"),
+    secForm: document.getElementById("sec-form"),
+    saveRow: document.getElementById("save-row"),
+    btnPick: document.getElementById("btn-pick"),
+    fileInput: document.getElementById("file-input"),
+    canvasWrap: document.getElementById("canvas-wrap"),
+    canvas: document.getElementById("sel-canvas"),
+    btnRecrop: document.getElementById("btn-recrop"),
+    btnRepick: document.getElementById("btn-repick"),
+    cropBox: document.getElementById("crop-box"),
+    cropPreview: document.getElementById("crop-preview"),
+    fSubject: document.getElementById("f-subject"),
+    fDate: document.getElementById("f-date"),
+    fExam: document.getElementById("f-exam"),
+    fTags: document.getElementById("f-tags"),
+    fTagInput: document.getElementById("f-tag-input"),
+    fTagAdd: document.getElementById("f-tag-add"),
+    fNote: document.getElementById("f-note"),
+    btnSave: document.getElementById("btn-save"),
+    btnFinish: document.getElementById("btn-finish"),
+    toast: document.getElementById("toast")
+  };
+
+  var state = {
+    bitmap: null,        // ImageBitmap 或 HTMLImageElement（原图，显示后即弃）
+    bmpWidth: 0,
+    bmpHeight: 0,
+    dispW: 0,            // 画布 CSS 显示宽度
+    dispH: 0,
+    selecting: false,
+    selStart: null,      // {x, y} CSS 像素（相对画布）
+    selCur: null,
+    selRect: null,       // 最终选区 {x, y, w, h}（原图像素坐标）
+    crop: null,          // { blob, width, height }
+    tags: [],
+    saving: false,
+    savedAny: false
+  };
+
+  function toast(msg) {
+    els.toast.textContent = msg;
+    els.toast.classList.add("show");
+    clearTimeout(toast._t);
+    toast._t = setTimeout(function () { els.toast.classList.remove("show"); }, 2200);
+  }
+
+  function showErr(msg) {
+    els.errBox.textContent = msg;
+    els.errBox.classList.add("show");
+    setTimeout(function () { els.errBox.classList.remove("show"); }, 4000);
+  }
+
+  function showDegrade() { els.degradeBar.classList.add("show"); }
+  if (Store.storage.degraded()) showDegrade();
+  Store.storage.onDegrade(showDegrade);
+
+  /* ---------- 表单初始化 ---------- */
+
+  function todayStr() {
+    var d = new Date();
+    var pad = function (x) { return (x < 10 ? "0" : "") + x; };
+    return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
+  }
+
+  function fillSubjectSelect() {
+    els.fSubject.textContent = "";
+    Store.subjects.get().forEach(function (s) {
+      var o = document.createElement("option");
+      o.value = s;
+      o.textContent = s;
+      els.fSubject.appendChild(o);
+    });
+  }
+
+  function fillDatalist(id, list) {
+    var dl = document.getElementById(id);
+    dl.textContent = "";
+    list.forEach(function (v) {
+      var o = document.createElement("option");
+      o.value = v;
+      dl.appendChild(o);
+    });
+  }
+
+  function renderTags() {
+    els.fTags.textContent = "";
+    state.tags.forEach(function (t, i) {
+      var chip = document.createElement("span");
+      chip.className = "chip";
+      var name = document.createElement("span");
+      name.textContent = t;
+      var x = document.createElement("span");
+      x.className = "chip-x";
+      x.textContent = "×";
+      x.addEventListener("click", function () {
+        state.tags.splice(i, 1);
+        renderTags();
+      });
+      chip.appendChild(name);
+      chip.appendChild(x);
+      els.fTags.appendChild(chip);
+    });
+  }
+
+  function addTag() {
+    var v = els.fTagInput.value.trim();
+    if (!v) return;
+    if (state.tags.indexOf(v) < 0) state.tags.push(v);
+    els.fTagInput.value = "";
+    renderTags();
+  }
+
+  els.fTagAdd.addEventListener("click", addTag);
+  els.fTagInput.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") { e.preventDefault(); addTag(); }
+  });
+
+  /* ---------- 图片加载（修正 EXIF 方向） ---------- */
+
+  function loadImage(file) {
+    if (globalThis.createImageBitmap) {
+      return createImageBitmap(file, { imageOrientation: "from-image" }).catch(function () {
+        return loadImageViaImg(file);
+      });
+    }
+    return loadImageViaImg(file);
+  }
+
+  function loadImageViaImg(file) {
+    return new Promise(function (resolve, reject) {
+      var url = URL.createObjectURL(file);
+      var img = new Image();
+      img.onload = function () {
+        URL.revokeObjectURL(url);
+        resolve(img);
+      };
+      img.onerror = function () {
+        URL.revokeObjectURL(url);
+        reject(new Error("图片加载失败"));
+      };
+      img.src = url;
+    });
+  }
+
+  function imageSize(img) {
+    return { w: img.width || img.naturalWidth, h: img.height || img.naturalHeight };
+  }
+
+  /* ---------- 画布与框选 ---------- */
+
+  var ctx = els.canvas.getContext("2d");
+
+  function setupCanvas() {
+    var size = imageSize(state.bitmap);
+    state.bmpWidth = size.w;
+    state.bmpHeight = size.h;
+    var maxW = Math.min(document.documentElement.clientWidth - 32, 448);
+    state.dispW = maxW;
+    state.dispH = Math.round(maxW * size.h / size.w);
+    var dpr = globalThis.devicePixelRatio || 1;
+    els.canvas.width = Math.round(state.dispW * dpr);
+    els.canvas.height = Math.round(state.dispH * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    clearSelection();
+    draw();
+  }
+
+  function draw() {
+    if (!state.bitmap) return;
+    ctx.clearRect(0, 0, state.dispW, state.dispH);
+    ctx.drawImage(state.bitmap, 0, 0, state.dispW, state.dispH);
+
+    var rect = state.selecting ? currentRect() : state.selRect;
+    if (rect) {
+      // 选区外压暗
+      ctx.fillStyle = "rgba(31, 35, 40, .35)";
+      ctx.fillRect(0, 0, state.dispW, state.dispH);
+      ctx.clearRect(rect.x, rect.y, rect.w, rect.h);
+      // 重新把选区内容画回来（clearRect 会把底图也擦掉）
+      var sx = rect.x / state.dispW * state.bmpWidth;
+      var sy = rect.y / state.dispH * state.bmpHeight;
+      var sw = rect.w / state.dispW * state.bmpWidth;
+      var sh = rect.h / state.dispH * state.bmpHeight;
+      ctx.drawImage(state.bitmap, sx, sy, sw, sh, rect.x, rect.y, rect.w, rect.h);
+      // 边框
+      ctx.strokeStyle = "#0f766e";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(rect.x + 1, rect.y + 1, rect.w - 2, rect.h - 2);
+    }
+  }
+
+  function currentRect() {
+    if (!state.selStart || !state.selCur) return null;
+    var x = Math.min(state.selStart.x, state.selCur.x);
+    var y = Math.min(state.selStart.y, state.selCur.y);
+    var w = Math.abs(state.selCur.x - state.selStart.x);
+    var h = Math.abs(state.selCur.y - state.selStart.y);
+    if (w < 8 || h < 8) return null;
+    return { x: x, y: y, w: w, h: h };
+  }
+
+  function canvasPoint(e) {
+    var r = els.canvas.getBoundingClientRect();
+    return {
+      x: Math.max(0, Math.min(state.dispW, e.clientX - r.left)),
+      y: Math.max(0, Math.min(state.dispH, e.clientY - r.top))
+    };
+  }
+
+  els.canvas.addEventListener("pointerdown", function (e) {
+    if (!state.bitmap) return;
+    e.preventDefault();
+    try { els.canvas.setPointerCapture(e.pointerId); } catch (err) {}
+    state.selecting = true;
+    state.selStart = canvasPoint(e);
+    state.selCur = state.selStart;
+    draw();
+  });
+
+  els.canvas.addEventListener("pointermove", function (e) {
+    if (!state.selecting) return;
+    e.preventDefault();
+    state.selCur = canvasPoint(e);
+    draw();
+  });
+
+  function endSelect() {
+    if (!state.selecting) return;
+    state.selecting = false;
+    var rect = currentRect();
+    state.selStart = null;
+    state.selCur = null;
+    if (!rect) { state.selRect = null; draw(); return; }
+    state.selRect = rect;
+    draw();
+    doCrop(rect);
+  }
+
+  els.canvas.addEventListener("pointerup", endSelect);
+  els.canvas.addEventListener("pointercancel", function () {
+    state.selecting = false;
+    state.selStart = null;
+    state.selCur = null;
+    draw();
+  });
+
+  /* ---------- 裁剪与压缩（保存前执行，PRD §4） ---------- */
+
+  function doCrop(rect) {
+    var sx = rect.x / state.dispW * state.bmpWidth;
+    var sy = rect.y / state.dispH * state.bmpHeight;
+    var sw = rect.w / state.dispW * state.bmpWidth;
+    var sh = rect.h / state.dispH * state.bmpHeight;
+
+    // 长边 ≤1600px，等比缩放
+    var MAX = 1600;
+    var scale = Math.min(1, MAX / Math.max(sw, sh));
+    var dw = Math.max(1, Math.round(sw * scale));
+    var dh = Math.max(1, Math.round(sh * scale));
+
+    var off = document.createElement("canvas");
+    off.width = dw;
+    off.height = dh;
+    off.getContext("2d").drawImage(state.bitmap, sx, sy, sw, sh, 0, 0, dw, dh);
+
+    if (state.crop && state.crop.url) URL.revokeObjectURL(state.crop.url);
+    off.toBlob(function (blob) {
+      if (!blob) { showErr("裁剪失败，请重新框选"); return; }
+      var url = URL.createObjectURL(blob);
+      state.crop = { blob: blob, width: dw, height: dh, url: url };
+      els.cropPreview.src = url;
+      els.cropBox.hidden = false;
+      els.cropPreview.style.display = "block";
+      els.secForm.hidden = false;
+      els.saveRow.hidden = false;
+    }, "image/jpeg", 0.85);
+  }
+
+  function clearSelection() {
+    state.selRect = null;
+    state.selecting = false;
+    state.selStart = null;
+    state.selCur = null;
+    if (state.crop && state.crop.url) URL.revokeObjectURL(state.crop.url);
+    state.crop = null;
+    els.cropPreview.removeAttribute("src");
+    els.cropBox.hidden = true;
+  }
+
+  els.btnRecrop.addEventListener("click", function () {
+    clearSelection();
+    draw();
+  });
+
+  /* ---------- 拍照 / 选图 ---------- */
+
+  function startPick() { els.fileInput.click(); }
+
+  els.btnPick.addEventListener("click", startPick);
+  els.btnRepick.addEventListener("click", startPick);
+
+  els.fileInput.addEventListener("change", function () {
+    var f = els.fileInput.files && els.fileInput.files[0];
+    els.fileInput.value = "";
+    if (!f) return;
+    loadImage(f).then(function (img) {
+      state.bitmap = img;
+      els.secPick.hidden = true;
+      els.secCrop.hidden = false;
+      els.canvasWrap.style.display = "block";
+      setupCanvas();
+      els.secForm.hidden = true;
+      els.saveRow.hidden = true;
+      toast("照片已载入，请框选错题");
+    }).catch(function () {
+      showErr("照片读取失败，请换一张试试");
+    });
+  });
+
+  /* ---------- 保存 ---------- */
+
+  function resetForNext() {
+    clearSelection();
+    draw();
+    els.fExam.value = "";
+    els.fNote.value = "";
+    state.tags = [];
+    renderTags();
+    els.fDate.value = todayStr();
+    els.secForm.hidden = true;
+    els.saveRow.hidden = true;
+  }
+
+  els.btnSave.addEventListener("click", function () {
+    if (state.saving) return;
+    if (!state.crop) { showErr("请先在照片上框选出这道错题"); return; }
+    var subject = els.fSubject.value;
+    if (!subject) { showErr("请选择学科"); return; }
+    state.saving = true;
+    els.btnSave.disabled = true;
+    els.btnSave.textContent = "保存中…";
+
+    var exam = els.fExam.value.trim();
+    var tags = state.tags.slice();
+    Store.questions.add({
+      subject: subject,
+      exam: exam,
+      tags: tags,
+      date: els.fDate.value || todayStr(),
+      note: els.fNote.value.trim(),
+      imageBlob: state.crop.blob,
+      width: state.crop.width,
+      height: state.crop.height
+    }).then(function (r) {
+      state.saving = false;
+      els.btnSave.disabled = false;
+      els.btnSave.textContent = "保存这道错题";
+      if (!r.ok) { showErr("保存失败：" + (r.error || "未知错误") + "，请重试"); return; }
+      if (exam) Store.hints.addExam(exam);
+      if (tags.length) Store.hints.addTags(tags);
+      state.savedAny = true;
+      els.btnFinish.disabled = false;
+      resetForNext();
+      toast("已保存，可继续框选下一题");
+    });
+  });
+
+  els.btnFinish.addEventListener("click", function () {
+    window.location.href = "index.html";
+  });
+
+  /* ---------- 启动 ---------- */
+
+  fillSubjectSelect();
+  els.fDate.value = todayStr();
+  fillDatalist("exam-list", Store.hints.exams());
+  fillDatalist("tag-list", Store.hints.tags());
+  renderTags();
+})();
+</script>
+</body>
+</html>
