@@ -1,0 +1,8 @@
+# 部署到 Cloudflare 时排除的内容（不从仓库删除，仅不作为静态资产上传）
+.git
+.gitignore
+# 开发期产物：构建脚本 / 文档 / 词库源分片（运行时只用 wordbank.json）/ 本地部署脚本
+dictation/tools/
+dictation/docs/
+dictation/data/parts/
+dictation/deploy.sh
