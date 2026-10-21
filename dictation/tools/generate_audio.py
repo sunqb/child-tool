@@ -95,14 +95,24 @@ def main():
 
     used = {}  # 文件名冲突登记（按 lang 目录隔离）
     manifest, todo, failures = {}, [], []
+    # 真实文件名集合：macOS 文件系统大小写不敏感，os.path.exists 会把
+    # Australia/australia 误判为已存在而跳过，必须以目录列表的精确大小写为准
+    real_files = set()
+    for lang in ("zh", "en"):
+        d = os.path.join(OUT_DIR, lang)
+        real_files.update("%s/%s" % (lang, fn) for fn in os.listdir(d))
+    # 大小写变体索引：Miss/miss 这类同词不同大小写共用同一音频文件
+    # （发音完全一致；若各自生成，macOS 大小写不敏感 FS 上会落成同一文件导致索引悬空）
+    lower_to_real = {r.lower(): r for r in real_files}
     for text, lang in items:
         name = safe_name(text, used.setdefault(lang, {}))
         rel = "%s/%s.mp3" % (lang, name)
+        if rel not in real_files and rel.lower() in lower_to_real:
+            rel = lower_to_real[rel.lower()]
         manifest["%s:%s" % (lang, text)] = rel
-        path = os.path.join(OUT_DIR, rel)
-        if os.path.exists(path) and os.path.getsize(path) >= MIN_BYTES:
+        if rel in real_files and os.path.getsize(os.path.join(OUT_DIR, rel)) >= MIN_BYTES:
             continue  # 增量跳过
-        todo.append((text, lang, path))
+        todo.append((text, lang, os.path.join(OUT_DIR, rel)))
 
     print("共 %d 条，待生成 %d 条（%d 条已存在跳过）"
           % (len(items), len(todo), len(items) - len(todo)))

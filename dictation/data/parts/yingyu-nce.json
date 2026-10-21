@@ -1,0 +1,1442 @@
+{
+  "grades": [
+    {
+      "id": "nce-1",
+      "name": "第一册",
+      "subjects": [
+        {
+          "id": "english",
+          "name": "英语",
+          "units": [
+            {
+              "id": "l001-002",
+              "name": "Lesson 1-2 · Excuse me!",
+              "words": [
+                { "word": "excuse", "meaning": "原谅；宽恕" },
+                { "word": "handbag", "meaning": "手提包；女士手提袋" },
+                { "word": "pardon", "meaning": "请再说一遍；抱歉" },
+                { "word": "very", "meaning": "非常；很" },
+                { "word": "thank", "meaning": "感谢；谢谢" },
+                { "word": "your", "meaning": "你的；你们的" },
+                { "word": "this", "meaning": "这；这个" },
+                { "word": "is", "meaning": "是" },
+                { "word": "yes", "meaning": "是的；好的" },
+                { "word": "it", "meaning": "它" }
+              ]
+            },
+            {
+              "id": "l003-004",
+              "name": "Lesson 3-4 · Sorry, sir.",
+              "words": [
+                { "word": "umbrella", "meaning": "雨伞；伞" },
+                { "word": "coat", "meaning": "外套；大衣" },
+                { "word": "ticket", "meaning": "票；入场券" },
+                { "word": "sorry", "meaning": "对不起；抱歉" },
+                { "word": "please", "meaning": "请" },
+                { "word": "here", "meaning": "这里；在这里" },
+                { "word": "number", "meaning": "数字；号码" },
+                { "word": "very", "meaning": "非常；很" },
+                { "word": "much", "meaning": "非常；十分" },
+                { "word": "back", "meaning": "回来；返回" },
+                { "word": "get", "meaning": "得到；获得" },
+                { "word": "listen", "meaning": "听" },
+                { "word": "question", "meaning": "问题" }
+              ]
+            },
+            {
+              "id": "l005-006",
+              "name": "Lesson 5-6 · Nice to meet you.",
+              "words": [
+                { "word": "student", "meaning": "学生" },
+                { "word": "French", "meaning": "法国的；法国人" },
+                { "word": "German", "meaning": "德国的；德国人" },
+                { "word": "Japanese", "meaning": "日本的；日本人" },
+                { "word": "Korean", "meaning": "韩国的；韩国人" },
+                { "word": "Chinese", "meaning": "中国的；中国人" },
+                { "word": "nice", "meaning": "令人愉快的；友好的" },
+                { "word": "meet", "meaning": "遇见；结识" },
+                { "word": "morning", "meaning": "早晨；上午" },
+                { "word": "Miss", "meaning": "小姐；女士" },
+                { "word": "Mr.", "meaning": "先生" },
+                { "word": "too", "meaning": "也；同样" }
+              ]
+            },
+            {
+              "id": "l007-008",
+              "name": "Lesson 7-8 · Are you a teacher?",
+              "words": [
+                { "word": "student", "meaning": "学生" },
+                { "word": "name", "meaning": "名字；名称" },
+                { "word": "nationality", "meaning": "国籍；民族" },
+                { "word": "Italian", "meaning": "意大利的；意大利人/意大利语" },
+                { "word": "French", "meaning": "法国的；法国人/法语" },
+                { "word": "teacher", "meaning": "教师；老师" },
+                { "word": "job", "meaning": "工作；职业" },
+                { "word": "keyboard", "meaning": "键盘" },
+                { "word": "operator", "meaning": "操作员" },
+                { "word": "engineer", "meaning": "工程师" },
+                { "word": "nice", "meaning": "好的；令人愉快的" },
+                { "word": "meet", "meaning": "遇见；见面" },
+                { "word": "what", "meaning": "什么" }
+              ]
+            },
+            {
+              "id": "l009-010",
+              "name": "Lesson 9-10 · How are you today?",
+              "words": [
+                { "word": "today", "meaning": "今天" },
+                { "word": "well", "meaning": "健康的；身体好的" },
+                { "word": "thanks", "meaning": "谢谢；感谢" },
+                { "word": "goodbye", "meaning": "再见" },
+                { "word": "see", "meaning": "看见；看到" },
+                { "word": "fine", "meaning": "很好的；健康的" },
+                { "word": "too", "meaning": "也；同样" },
+                { "word": "how", "meaning": "怎样；如何" },
+                { "word": "hello", "meaning": "你好；喂" },
+                { "word": "nice", "meaning": "美好的；令人愉快的" },
+                { "word": "very", "meaning": "非常；很" },
+                { "word": "and", "meaning": "和；而且" }
+              ]
+            },
+            {
+              "id": "l011-012",
+              "name": "Lesson 11-12 · Is this your shirt?",
+              "words": [
+                { "word": "shirt", "meaning": "衬衫" },
+                { "word": "whose", "meaning": "谁的" },
+                { "word": "perhaps", "meaning": "可能，或许" },
+                { "word": "white", "meaning": "白色的" },
+                { "word": "blue", "meaning": "蓝色的" },
+                { "word": "catch", "meaning": "接住，抓住" },
+                { "word": "sir", "meaning": "先生" },
+                { "word": "Tim", "meaning": "蒂姆（人名）" },
+                { "word": "Dave", "meaning": "戴夫（人名）" },
+                { "word": "here", "meaning": "这里，这里来" }
+              ]
+            },
+            {
+              "id": "l013-014",
+              "name": "Lesson 13-14 · A new dress",
+              "words": [
+                { "word": "dress", "meaning": "连衣裙；裙子" },
+                { "word": "colour", "meaning": "颜色" },
+                { "word": "green", "meaning": "绿色的" },
+                { "word": "upstairs", "meaning": "往楼上；在楼上" },
+                { "word": "nice", "meaning": "好的；漂亮的；令人愉快的" },
+                { "word": "smart", "meaning": "漂亮的；时髦的；聪明的" },
+                { "word": "hat", "meaning": "帽子（有檐的）" },
+                { "word": "same", "meaning": "相同的；一样的" },
+                { "word": "lovely", "meaning": "可爱的；美丽的" },
+                { "word": "look", "meaning": "看；瞧" }
+              ]
+            },
+            {
+              "id": "l015-016",
+              "name": "Lesson 15-16 · Your passports, please.",
+              "words": [
+                { "word": "passport", "meaning": "护照" },
+                { "word": "customs", "meaning": "海关" },
+                { "word": "officer", "meaning": "官员；军官" },
+                { "word": "tourist", "meaning": "游客；旅行者" },
+                { "word": "brown", "meaning": "棕色的；褐色的" },
+                { "word": "Danish", "meaning": "丹麦的；丹麦人/语" },
+                { "word": "Swedish", "meaning": "瑞典的；瑞典人/语" },
+                { "word": "Norwegian", "meaning": "挪威的；挪威人/语" },
+                { "word": "friend", "meaning": "朋友" },
+                { "word": "case", "meaning": "箱子；盒子" },
+                { "word": "here", "meaning": "这里；在这里" },
+                { "word": "our", "meaning": "我们的" }
+              ]
+            },
+            {
+              "id": "l017-018",
+              "name": "Lesson 17-18 · How do you do?",
+              "words": [
+                { "word": "employee", "meaning": "雇员，员工" },
+                { "word": "hard-working", "meaning": "勤勉的，工作努力的" },
+                { "word": "keyboard", "meaning": "键盘" },
+                { "word": "operator", "meaning": "操作员" },
+                { "word": "sales", "meaning": "销售" },
+                { "word": "representative", "meaning": "代表" },
+                { "word": "lazy", "meaning": "懒惰的" },
+                { "word": "young", "meaning": "年轻的" },
+                { "word": "assistant", "meaning": "助手，助理" },
+                { "word": "office", "meaning": "办公室" },
+                { "word": "meet", "meaning": "遇见，见到" },
+                { "word": "busy", "meaning": "忙碌的" },
+                { "word": "woman", "meaning": "女人" },
+                { "word": "man", "meaning": "男人" },
+                { "word": "very", "meaning": "非常，很" }
+              ]
+            },
+            {
+              "id": "l019-020",
+              "name": "Lesson 19-20 · Tired and thirsty",
+              "words": [
+                { "word": "tired", "meaning": "疲倦的；困乏的" },
+                { "word": "thirsty", "meaning": "口渴的；渴的" },
+                { "word": "matter", "meaning": "事情；问题" },
+                { "word": "ice cream", "meaning": "冰淇淋" },
+                { "word": "children", "meaning": "孩子们（child的复数）" },
+                { "word": "sit down", "meaning": "坐下" },
+                { "word": "right", "meaning": "好的；正确的" },
+                { "word": "look", "meaning": "看；瞧" },
+                { "word": "there", "meaning": "那里；那儿" },
+                { "word": "thanks", "meaning": "谢谢" },
+                { "word": "nice", "meaning": "好的；美味的" },
+                { "word": "please", "meaning": "请" },
+                { "word": "here", "meaning": "这里；这儿" },
+                { "word": "mum", "meaning": "妈妈（非正式）" }
+              ]
+            },
+            {
+              "id": "l021-022",
+              "name": "Lesson 21-22 · Which book?",
+              "words": [
+                { "word": "book", "meaning": "书；书籍" },
+                { "word": "which", "meaning": "哪一个；哪一些" },
+                { "word": "red", "meaning": "红色的" },
+                { "word": "give", "meaning": "给；给予" },
+                { "word": "please", "meaning": "请（用于礼貌请求）" },
+                { "word": "one", "meaning": "一个；一个人；一件事" },
+                { "word": "this", "meaning": "这；这个" },
+                { "word": "that", "meaning": "那；那个" },
+                { "word": "want", "meaning": "想要；需要" },
+                { "word": "here", "meaning": "这里；在这里" }
+              ]
+            },
+            {
+              "id": "l023-024",
+              "name": "Lesson 23-24 · Which glasses?",
+              "words": [
+                { "word": "glasses", "meaning": "玻璃杯；杯子" },
+                { "word": "shelf", "meaning": "架子；搁板" },
+                { "word": "give", "meaning": "给；给予" },
+                { "word": "these", "meaning": "这些" },
+                { "word": "those", "meaning": "那些" },
+                { "word": "please", "meaning": "请" },
+                { "word": "thanks", "meaning": "谢谢；感谢" },
+                { "word": "here", "meaning": "这里；在这里" },
+                { "word": "ones", "meaning": "（代指前文提到的复数名词）" },
+                { "word": "which", "meaning": "哪个；哪些" },
+                { "word": "man", "meaning": "男人；人" },
+                { "word": "want", "meaning": "想要；需要" }
+              ]
+            },
+            {
+              "id": "l025-026",
+              "name": "Lesson 25-26 · Mrs. Smith's kitchen",
+              "words": [
+                { "word": "kitchen", "meaning": "厨房" },
+                { "word": "small", "meaning": "小的" },
+                { "word": "refrigerator", "meaning": "冰箱" },
+                { "word": "white", "meaning": "白色的" },
+                { "word": "electric", "meaning": "电动的" },
+                { "word": "cooker", "meaning": "炉灶" },
+                { "word": "blue", "meaning": "蓝色的" },
+                { "word": "table", "meaning": "桌子" },
+                { "word": "middle", "meaning": "中间" },
+                { "word": "bottle", "meaning": "瓶子" },
+                { "word": "empty", "meaning": "空的" },
+                { "word": "cup", "meaning": "杯子" },
+                { "word": "clean", "meaning": "干净的" },
+                { "word": "left", "meaning": "左边" },
+                { "word": "right", "meaning": "右边" }
+              ]
+            },
+            {
+              "id": "l027-028",
+              "name": "Lesson 27-28 · Mrs. Smith's living room",
+              "words": [
+                { "word": "living room", "meaning": "客厅，起居室" },
+                { "word": "large", "meaning": "大的，宽敞的" },
+                { "word": "television", "meaning": "电视，电视机" },
+                { "word": "near", "meaning": "在...附近，靠近" },
+                { "word": "window", "meaning": "窗户" },
+                { "word": "magazine", "meaning": "杂志，期刊" },
+                { "word": "table", "meaning": "桌子" },
+                { "word": "newspaper", "meaning": "报纸" },
+                { "word": "armchair", "meaning": "扶手椅" },
+                { "word": "stereo", "meaning": "立体声音响" },
+                { "word": "door", "meaning": "门" },
+                { "word": "book", "meaning": "书，书籍" },
+                { "word": "picture", "meaning": "图片，画，照片" },
+                { "word": "wall", "meaning": "墙，墙壁" }
+              ]
+            },
+            {
+              "id": "l029-030",
+              "name": "Lesson 29-30 · Come in, Amy.",
+              "words": [
+                { "word": "bedroom", "meaning": "卧室" },
+                { "word": "untidy", "meaning": "不整洁的，凌乱的" },
+                { "word": "wardrobe", "meaning": "衣柜，衣橱" },
+                { "word": "clothes", "meaning": "衣服，服装" },
+                { "word": "must", "meaning": "必须，应当" },
+                { "word": "air", "meaning": "通风，晾干" },
+                { "word": "dust", "meaning": "拂去灰尘" },
+                { "word": "sweep", "meaning": "扫地，扫除" },
+                { "word": "dressing table", "meaning": "梳妆台" },
+                { "word": "floor", "meaning": "地板，地面" },
+                { "word": "window", "meaning": "窗户" },
+                { "word": "door", "meaning": "门" }
+              ]
+            },
+            {
+              "id": "l031-032",
+              "name": "Lesson 31-32 · Where's Sally?",
+              "words": [
+                { "word": "garden", "meaning": "花园，庭院" },
+                { "word": "tree", "meaning": "树，树木" },
+                { "word": "climb", "meaning": "爬，攀爬" },
+                { "word": "grass", "meaning": "草，草地" },
+                { "word": "run", "meaning": "跑，奔跑" },
+                { "word": "after", "meaning": "在...之后；追逐" },
+                { "word": "cat", "meaning": "猫" },
+                { "word": "dog", "meaning": "狗" },
+                { "word": "pardon", "meaning": "请再说一遍；对不起" },
+                { "word": "under", "meaning": "在...下面" },
+                { "word": "sit", "meaning": "坐，坐下" },
+                { "word": "across", "meaning": "穿过，横穿" },
+                { "word": "too", "meaning": "也，同样" }
+              ]
+            },
+            {
+              "id": "l033-034",
+              "name": "Lesson 33-34 · A fine day",
+              "words": [
+                { "word": "fine", "meaning": "好的；晴朗的" },
+                { "word": "cloud", "meaning": "云" },
+                { "word": "sky", "meaning": "天空" },
+                { "word": "sun", "meaning": "太阳" },
+                { "word": "shine", "meaning": "照耀" },
+                { "word": "bridge", "meaning": "桥" },
+                { "word": "boat", "meaning": "小船" },
+                { "word": "river", "meaning": "河" },
+                { "word": "ship", "meaning": "轮船" },
+                { "word": "aeroplane", "meaning": "飞机" },
+                { "word": "family", "meaning": "家庭" }
+              ]
+            },
+            {
+              "id": "l035-036",
+              "name": "Lesson 35-36 · Our village",
+              "words": [
+                { "word": "village", "meaning": "村庄；乡村" },
+                { "word": "valley", "meaning": "山谷；峡谷" },
+                { "word": "hill", "meaning": "小山；丘陵" },
+                { "word": "river", "meaning": "河流；江" },
+                { "word": "bank", "meaning": "河岸；堤岸" },
+                { "word": "photograph", "meaning": "照片；相片" },
+                { "word": "beside", "meaning": "在...旁边；在...附近" },
+                { "word": "between", "meaning": "在...之间" },
+                { "word": "across", "meaning": "横过；穿过" },
+                { "word": "building", "meaning": "建筑物；楼房" },
+                { "word": "park", "meaning": "公园" },
+                { "word": "swim", "meaning": "游泳；游过" },
+                { "word": "along", "meaning": "沿着；顺着" },
+                { "word": "left", "meaning": "左边；左侧的" },
+                { "word": "right", "meaning": "右边；右侧的" }
+              ]
+            },
+            {
+              "id": "l037-038",
+              "name": "Lesson 37-38 · Making a bookcase",
+              "words": [
+                { "word": "bookcase", "meaning": "书架，书柜" },
+                { "word": "hammer", "meaning": "锤子，榔头" },
+                { "word": "paint", "meaning": "给...上油漆，粉刷" },
+                { "word": "pink", "meaning": "粉红色，粉色的" },
+                { "word": "daughter", "meaning": "女儿" },
+                { "word": "favourite", "meaning": "最喜欢的" },
+                { "word": "colour", "meaning": "颜色" },
+                { "word": "hard", "meaning": "努力地，辛勤地" },
+                { "word": "big", "meaning": "大的" },
+                { "word": "make", "meaning": "制作，制造" }
+              ]
+            },
+            {
+              "id": "l039-040",
+              "name": "Lesson 39-40 · Don't drop it!",
+              "words": [
+                { "word": "drop", "meaning": "掉落；使落下" },
+                { "word": "vase", "meaning": "花瓶" },
+                { "word": "careful", "meaning": "小心的；仔细的" },
+                { "word": "lovely", "meaning": "可爱的；美丽的" },
+                { "word": "flower", "meaning": "花；花朵" },
+                { "word": "table", "meaning": "桌子" },
+                { "word": "window", "meaning": "窗户" },
+                { "word": "shelf", "meaning": "架子；搁板" },
+                { "word": "front", "meaning": "前面；正面" },
+                { "word": "behind", "meaning": "在...后面" },
+                { "word": "put", "meaning": "放置；放" },
+                { "word": "there", "meaning": "那儿（用于引起注意或确认）" }
+              ]
+            },
+            {
+              "id": "l041-042",
+              "name": "Lesson 41-42 · Penny's bag",
+              "words": [
+                { "word": "bag", "meaning": "包，袋子" },
+                { "word": "heavy", "meaning": "重的，沉的" },
+                { "word": "cheese", "meaning": "奶酪，芝士" },
+                { "word": "loaf", "meaning": "一条（面包）" },
+                { "word": "soap", "meaning": "肥皂" },
+                { "word": "chocolate", "meaning": "巧克力" },
+                { "word": "bottle", "meaning": "瓶子" },
+                { "word": "pound", "meaning": "磅（重量单位）" },
+                { "word": "sugar", "meaning": "糖" },
+                { "word": "coffee", "meaning": "咖啡" },
+                { "word": "quarter", "meaning": "四分之一" },
+                { "word": "tin", "meaning": "罐头，锡罐" },
+                { "word": "tobacco", "meaning": "烟草，烟丝" },
+                { "word": "certainly", "meaning": "当然，肯定" },
+                { "word": "piece", "meaning": "片，块，段" }
+              ]
+            },
+            {
+              "id": "l043-044",
+              "name": "Lesson 43-44 · Hurry up!",
+              "words": [
+                { "word": "hurry", "meaning": "匆忙，赶紧" },
+                { "word": "kettle", "meaning": "水壶，锅炉" },
+                { "word": "teapot", "meaning": "茶壶" },
+                { "word": "cupboard", "meaning": "碗柜，橱柜" },
+                { "word": "behind", "meaning": "在...后面" },
+                { "word": "in front of", "meaning": "在...前面" },
+                { "word": "boil", "meaning": "沸腾，烧开" },
+                { "word": "find", "meaning": "找到，发现" },
+                { "word": "over there", "meaning": "在那边" },
+                { "word": "some", "meaning": "一些" },
+                { "word": "any", "meaning": "一些，任何" },
+                { "word": "there", "meaning": "在那里，那边" },
+                { "word": "make", "meaning": "制作，做" },
+                { "word": "of course", "meaning": "当然" },
+                { "word": "water", "meaning": "水" }
+              ]
+            },
+            {
+              "id": "l045-046",
+              "name": "Lesson 45-46 · The boss's letter",
+              "words": [
+                { "word": "boss", "meaning": "老板，上司" },
+                { "word": "letter", "meaning": "信，函件" },
+                { "word": "type", "meaning": "打字，用打字机输入" },
+                { "word": "handwriting", "meaning": "笔迹，书写" },
+                { "word": "terrible", "meaning": "糟糕的，可怕的" },
+                { "word": "minute", "meaning": "分钟，一会儿" },
+                { "word": "office", "meaning": "办公室，事务所" },
+                { "word": "next door", "meaning": "隔壁，邻室" },
+                { "word": "matter", "meaning": "事情，问题" },
+                { "word": "read", "meaning": "阅读，看懂" },
+                { "word": "ask", "meaning": "询问，请求" },
+                { "word": "yes", "meaning": "是的，好" },
+                { "word": "sir", "meaning": "先生，阁下" },
+                { "word": "of course", "meaning": "当然" }
+              ]
+            },
+            {
+              "id": "l047-048",
+              "name": "Lesson 47-48 · A cup of coffee",
+              "words": [
+                { "word": "coffee", "meaning": "咖啡" },
+                { "word": "cup", "meaning": "杯子；茶杯" },
+                { "word": "sugar", "meaning": "糖" },
+                { "word": "milk", "meaning": "牛奶" },
+                { "word": "biscuit", "meaning": "饼干" },
+                { "word": "like", "meaning": "喜欢" },
+                { "word": "want", "meaning": "想要" },
+                { "word": "any", "meaning": "一些；任何" },
+                { "word": "black", "meaning": "黑色的；不加牛奶的" },
+                { "word": "please", "meaning": "请" },
+                { "word": "thank", "meaning": "感谢" }
+              ]
+            },
+            {
+              "id": "l049-050",
+              "name": "Lesson 49-50 · At the butcher's",
+              "words": [
+                { "word": "butcher", "meaning": "肉贩，屠夫" },
+                { "word": "meat", "meaning": "肉（统称）" },
+                { "word": "beef", "meaning": "牛肉" },
+                { "word": "lamb", "meaning": "羊肉；羔羊" },
+                { "word": "steak", "meaning": "牛排；肉片" },
+                { "word": "mince", "meaning": "肉馅，肉末" },
+                { "word": "chicken", "meaning": "鸡肉；鸡" },
+                { "word": "pound", "meaning": "磅（重量单位）" },
+                { "word": "piece", "meaning": "块，片，件" },
+                { "word": "husband", "meaning": "丈夫" },
+                { "word": "truth", "meaning": "真相，事实" },
+                { "word": "nice", "meaning": "好的；漂亮的" },
+                { "word": "either", "meaning": "也（用于否定句）" },
+                { "word": "like", "meaning": "喜欢" },
+                { "word": "tell", "meaning": "告诉；讲述" }
+              ]
+            },
+            {
+              "id": "l051-052",
+              "name": "Lesson 51-52 · A pleasant climate",
+              "words": [
+                { "word": "climate", "meaning": "气候" },
+                { "word": "weather", "meaning": "天气" },
+                { "word": "pleasant", "meaning": "宜人的；舒适的" },
+                { "word": "spring", "meaning": "春天；春季" },
+                { "word": "summer", "meaning": "夏天；夏季" },
+                { "word": "autumn", "meaning": "秋天；秋季" },
+                { "word": "winter", "meaning": "冬天；冬季" },
+                { "word": "windy", "meaning": "有风的；多风的" },
+                { "word": "warm", "meaning": "温暖的；暖和的" },
+                { "word": "hot", "meaning": "热的；炎热的" },
+                { "word": "cold", "meaning": "冷的；寒冷的" },
+                { "word": "rain", "meaning": "下雨；雨水" },
+                { "word": "snow", "meaning": "下雪；雪" },
+                { "word": "shine", "meaning": "照耀；发光" },
+                { "word": "sometimes", "meaning": "有时；偶尔" }
+              ]
+            },
+            {
+              "id": "l053-054",
+              "name": "Lesson 53-54 · An interesting climate",
+              "words": [
+                { "word": "climate", "meaning": "气候" },
+                { "word": "mild", "meaning": "温和的；温暖的" },
+                { "word": "pleasant", "meaning": "令人愉快的；舒适的" },
+                { "word": "weather", "meaning": "天气" },
+                { "word": "wet", "meaning": "潮湿的；下雨的" },
+                { "word": "windy", "meaning": "有风的；多风的" },
+                { "word": "season", "meaning": "季节" },
+                { "word": "favourite", "meaning": "最喜爱的" },
+                { "word": "subject", "meaning": "话题；主题" },
+                { "word": "conversation", "meaning": "对话；交谈" },
+                { "word": "rise", "meaning": "升起；上升" },
+                { "word": "set", "meaning": "落下；下沉" },
+                { "word": "interesting", "meaning": "有趣的" },
+                { "word": "certainly", "meaning": "当然；确定地" },
+                { "word": "early", "meaning": "早；早期" }
+              ]
+            },
+            {
+              "id": "l055-056",
+              "name": "Lesson 55-56 · The Sawyer family",
+              "words": [
+                { "word": "family", "meaning": "家庭；家人" },
+                { "word": "stay", "meaning": "停留；留下" },
+                { "word": "housework", "meaning": "家务；家务活" },
+                { "word": "noon", "meaning": "中午；正午" },
+                { "word": "afternoon", "meaning": "下午" },
+                { "word": "evening", "meaning": "傍晚；晚上" },
+                { "word": "arrive", "meaning": "到达；抵达" },
+                { "word": "newspaper", "meaning": "报纸" },
+                { "word": "television", "meaning": "电视；电视机" },
+                { "word": "homework", "meaning": "家庭作业" },
+                { "word": "together", "meaning": "一起；同时" },
+                { "word": "usually", "meaning": "通常；经常" },
+                { "word": "always", "meaning": "总是；永远" },
+                { "word": "sometimes", "meaning": "有时；偶尔" },
+                { "word": "every day", "meaning": "每天" }
+              ]
+            },
+            {
+              "id": "l057-058",
+              "name": "Lesson 57-58 · An unusual day",
+              "words": [
+                { "word": "unusual", "meaning": "不寻常的，异常的" },
+                { "word": "children", "meaning": "孩子们" },
+                { "word": "school", "meaning": "学校" },
+                { "word": "foot", "meaning": "脚；英尺" },
+                { "word": "morning", "meaning": "早晨，上午" },
+                { "word": "shop", "meaning": "商店" },
+                { "word": "afternoon", "meaning": "下午" },
+                { "word": "living room", "meaning": "客厅，起居室" },
+                { "word": "garden", "meaning": "花园，庭院" },
+                { "word": "evening", "meaning": "傍晚，晚上" },
+                { "word": "homework", "meaning": "家庭作业" },
+                { "word": "moment", "meaning": "时刻，瞬间" },
+                { "word": "newspaper", "meaning": "报纸" },
+                { "word": "interesting", "meaning": "有趣的，有吸引力的" },
+                { "word": "tonight", "meaning": "今晚，今夜" }
+              ]
+            },
+            {
+              "id": "l059-060",
+              "name": "Lesson 59-60 · Is that all?",
+              "words": [
+                { "word": "envelope", "meaning": "信封" },
+                { "word": "size", "meaning": "尺寸，大小" },
+                { "word": "large", "meaning": "大的，大的尺码" },
+                { "word": "small", "meaning": "小的，小的尺码" },
+                { "word": "writing paper", "meaning": "书写纸，信纸" },
+                { "word": "pad", "meaning": "拍纸簿，便笺本" },
+                { "word": "glue", "meaning": "胶水" },
+                { "word": "bottle", "meaning": "瓶子" },
+                { "word": "chalk", "meaning": "粉笔" },
+                { "word": "box", "meaning": "盒子，箱子" },
+                { "word": "change", "meaning": "零钱，找的零钱" },
+                { "word": "else", "meaning": "其他的，别的" }
+              ]
+            },
+            {
+              "id": "l061-062",
+              "name": "Lesson 61-62 · A bad cold",
+              "words": [
+                { "word": "cold", "meaning": "感冒；着凉" },
+                { "word": "ill", "meaning": "生病的；不健康的" },
+                { "word": "doctor", "meaning": "医生；大夫" },
+                { "word": "telephone", "meaning": "电话；电话机" },
+                { "word": "mouth", "meaning": "嘴；口腔" },
+                { "word": "tongue", "meaning": "舌头" },
+                { "word": "week", "meaning": "星期；周" },
+                { "word": "news", "meaning": "消息；新闻" },
+                { "word": "bed", "meaning": "床" },
+                { "word": "school", "meaning": "学校" },
+                { "word": "remember", "meaning": "记得；记住" },
+                { "word": "matter", "meaning": "事情；问题" },
+                { "word": "show", "meaning": "展示；显示" },
+                { "word": "because", "meaning": "因为" },
+                { "word": "stay", "meaning": "停留；待；保持" }
+              ]
+            },
+            {
+              "id": "l063-064",
+              "name": "Lesson 63-64 · Thank you, doctor.",
+              "words": [
+                { "word": "doctor", "meaning": "医生" },
+                { "word": "better", "meaning": "更好的；好转的" },
+                { "word": "certainly", "meaning": "当然；肯定" },
+                { "word": "upstairs", "meaning": "在楼上；往楼上" },
+                { "word": "remain", "meaning": "停留；保持" },
+                { "word": "temperature", "meaning": "体温；温度" },
+                { "word": "rich", "meaning": "油腻的；丰富的" },
+                { "word": "cold", "meaning": "感冒；寒冷" },
+                { "word": "warm", "meaning": "温暖的；暖和的" },
+                { "word": "evening", "meaning": "傍晚；晚上" },
+                { "word": "school", "meaning": "学校" },
+                { "word": "keep", "meaning": "保持；保留" },
+                { "word": "bed", "meaning": "床" },
+                { "word": "well", "meaning": "健康的；良好的" },
+                { "word": "mustn't", "meaning": "不可以；禁止" }
+              ]
+            },
+            {
+              "id": "l065-066",
+              "name": "Lesson 65-66 · Not a baby",
+              "words": [
+                { "word": "quarter", "meaning": "一刻钟；四分之一" },
+                { "word": "enjoy", "meaning": "享受...的乐趣；愉快地做" },
+                { "word": "meet", "meaning": "遇见；碰面" },
+                { "word": "friend", "meaning": "朋友" },
+                { "word": "late", "meaning": "晚的；迟到的" },
+                { "word": "key", "meaning": "钥匙" },
+                { "word": "front", "meaning": "前面；正面" },
+                { "word": "door", "meaning": "门" },
+                { "word": "baby", "meaning": "婴儿；小孩" },
+                { "word": "always", "meaning": "总是；一直" },
+                { "word": "half", "meaning": "半；一半" },
+                { "word": "year", "meaning": "年；岁" },
+                { "word": "must", "meaning": "必须；应当" },
+                { "word": "hear", "meaning": "听见；听到" }
+              ]
+            },
+            {
+              "id": "l067-068",
+              "name": "Lesson 67-68 · The weekend",
+              "words": [
+                { "word": "butcher", "meaning": "肉店；屠夫" },
+                { "word": "greengrocer", "meaning": "蔬菜水果商；蔬果店" },
+                { "word": "weekend", "meaning": "周末" },
+                { "word": "absent", "meaning": "缺席的；不在的" },
+                { "word": "spend", "meaning": "度过（时间）；花费" },
+                { "word": "country", "meaning": "乡村；农村" },
+                { "word": "stay", "meaning": "停留；暂住" },
+                { "word": "lucky", "meaning": "幸运的" },
+                { "word": "keeping", "meaning": "状况；保持" },
+                { "word": "mother", "meaning": "母亲" },
+                { "word": "Friday", "meaning": "星期五" },
+                { "word": "Saturday", "meaning": "星期六" },
+                { "word": "Sunday", "meaning": "星期日" },
+                { "word": "yesterday", "meaning": "昨天" },
+                { "word": "three", "meaning": "三" }
+              ]
+            },
+            {
+              "id": "l069-070",
+              "name": "Lesson 69-70 · The car race",
+              "words": [
+                { "word": "race", "meaning": "比赛，竞赛" },
+                { "word": "crowd", "meaning": "人群" },
+                { "word": "exciting", "meaning": "令人兴奋的，激动人心的" },
+                { "word": "finish", "meaning": "终点，结束" },
+                { "word": "winner", "meaning": "获胜者，冠军" },
+                { "word": "behind", "meaning": "在...后面" },
+                { "word": "quickly", "meaning": "快速地，迅速地" },
+                { "word": "drive", "meaning": "驾驶，开车" },
+                { "word": "hundreds of", "meaning": "数百的，许多的" },
+                { "word": "standing", "meaning": "站立（stand的现在分词）" },
+                { "word": "left", "meaning": "左边，左侧" },
+                { "word": "Japanese", "meaning": "日本的，日本人的" },
+                { "word": "German", "meaning": "德国的，德国人的" },
+                { "word": "French", "meaning": "法国的，法国人的" },
+                { "word": "American", "meaning": "美国的，美国人的" }
+              ]
+            },
+            {
+              "id": "l071-072",
+              "name": "Lesson 71-72 · He's awful!",
+              "words": [
+                { "word": "awful", "meaning": "可怕的；极坏的" },
+                { "word": "telephone", "meaning": "打电话" },
+                { "word": "yesterday", "meaning": "昨天" },
+                { "word": "office", "meaning": "办公室" },
+                { "word": "boss", "meaning": "老板；上司" },
+                { "word": "type", "meaning": "打字" },
+                { "word": "letter", "meaning": "信件；信" },
+                { "word": "arrive", "meaning": "到达" },
+                { "word": "evening", "meaning": "傍晚；晚上" },
+                { "word": "again", "meaning": "再一次；又" },
+                { "word": "mother", "meaning": "母亲；妈妈" },
+                { "word": "daughter", "meaning": "女儿" },
+                { "word": "time", "meaning": "次数；时间" },
+                { "word": "answer", "meaning": "回答；接（电话）" },
+                { "word": "say", "meaning": "说；讲" }
+              ]
+            },
+            {
+              "id": "l073-074",
+              "name": "Lesson 73-74 · The way to King Street",
+              "words": [
+                { "word": "lost", "meaning": "迷路；失去" },
+                { "word": "suddenly", "meaning": "突然地" },
+                { "word": "phrasebook", "meaning": "短语手册；常用语手册" },
+                { "word": "tourist", "meaning": "游客；旅行者" },
+                { "word": "pocket", "meaning": "口袋" },
+                { "word": "German", "meaning": "德语；德国的" },
+                { "word": "pleasantly", "meaning": "愉快地；亲切地" },
+                { "word": "slowly", "meaning": "缓慢地；慢慢地" },
+                { "word": "bus stop", "meaning": "公共汽车站" },
+                { "word": "ask", "meaning": "问；请求" },
+                { "word": "tell", "meaning": "告诉；讲述" },
+                { "word": "hand", "meaning": "手" },
+                { "word": "smile", "meaning": "微笑" },
+                { "word": "open", "meaning": "打开" },
+                { "word": "find", "meaning": "找到；发现" }
+              ]
+            },
+            {
+              "id": "l075-076",
+              "name": "Lesson 75-76 · Uncomfortable shoes",
+              "words": [
+                { "word": "uncomfortable", "meaning": "不舒服的" },
+                { "word": "fashionable", "meaning": "流行的，时兴的" },
+                { "word": "fashion", "meaning": "时尚，流行款式" },
+                { "word": "size", "meaning": "尺码，尺寸" },
+                { "word": "pair", "meaning": "一双，一对" },
+                { "word": "colour", "meaning": "颜色" },
+                { "word": "wear", "meaning": "穿，戴" },
+                { "word": "buy", "meaning": "买" },
+                { "word": "get", "meaning": "获得，买到" },
+                { "word": "last", "meaning": "上一个的" },
+                { "word": "look", "meaning": "看起来" },
+                { "word": "always", "meaning": "总是，一直" }
+              ]
+            },
+            {
+              "id": "l077-078",
+              "name": "Lesson 77-78 · Terrible toothache",
+              "words": [
+                { "word": "terrible", "meaning": "可怕的；严重的" },
+                { "word": "toothache", "meaning": "牙痛" },
+                { "word": "dentist", "meaning": "牙医" },
+                { "word": "appointment", "meaning": "预约；约定" },
+                { "word": "urgent", "meaning": "紧急的；急迫的" },
+                { "word": "awful", "meaning": "糟糕的；难受的" },
+                { "word": "busy", "meaning": "忙碌的" },
+                { "word": "moment", "meaning": "时刻；瞬间" },
+                { "word": "patient", "meaning": "耐心的" },
+                { "word": "afternoon", "meaning": "下午" }
+              ]
+            },
+            {
+              "id": "l079-080",
+              "name": "Lesson 79-80 · Carol's shopping list",
+              "words": [
+                { "word": "shopping list", "meaning": "购物清单" },
+                { "word": "grocer's", "meaning": "杂货店；食品店" },
+                { "word": "greengrocer's", "meaning": "蔬菜水果店" },
+                { "word": "butcher's", "meaning": "肉店；屠夫店" },
+                { "word": "sugar", "meaning": "糖" },
+                { "word": "jam", "meaning": "果酱" },
+                { "word": "vegetable", "meaning": "蔬菜" },
+                { "word": "tomato", "meaning": "番茄；西红柿" },
+                { "word": "potato", "meaning": "土豆；马铃薯" },
+                { "word": "meat", "meaning": "肉" },
+                { "word": "beer", "meaning": "啤酒" },
+                { "word": "wine", "meaning": "葡萄酒；酒" },
+                { "word": "money", "meaning": "钱；金钱" },
+                { "word": "need", "meaning": "需要；必须" },
+                { "word": "a lot of", "meaning": "许多；大量" }
+              ]
+            },
+            {
+              "id": "l081-082",
+              "name": "Lesson 81-82 · Roast beef and potatoes",
+              "words": [
+                { "word": "roast", "meaning": "烤，烘；烤制的" },
+                { "word": "beef", "meaning": "牛肉" },
+                { "word": "potato", "meaning": "土豆，马铃薯" },
+                { "word": "upstairs", "meaning": "在楼上；往楼上" },
+                { "word": "bath", "meaning": "洗澡；浴缸" },
+                { "word": "nearly", "meaning": "几乎，差不多" },
+                { "word": "dinner", "meaning": "正餐，晚餐" },
+                { "word": "cigarette", "meaning": "香烟，纸烟" },
+                { "word": "whisky", "meaning": "威士忌酒" },
+                { "word": "matter", "meaning": "事情，问题" },
+                { "word": "restaurant", "meaning": "餐馆，饭店" },
+                { "word": "ready", "meaning": "准备好的" },
+                { "word": "together", "meaning": "一起，共同" }
+              ]
+            },
+            {
+              "id": "l083-084",
+              "name": "Lesson 83-84 · Going on holiday",
+              "words": [
+                { "word": "holiday", "meaning": "假期；假日" },
+                { "word": "lunch", "meaning": "午餐；午饭" },
+                { "word": "coffee", "meaning": "咖啡；咖啡饮料" },
+                { "word": "living room", "meaning": "客厅；起居室" },
+                { "word": "mess", "meaning": "杂乱；凌乱" },
+                { "word": "untidy", "meaning": "不整洁的；凌乱的" },
+                { "word": "pack", "meaning": "收拾行李；包装" },
+                { "word": "suitcase", "meaning": "手提箱；行李箱" },
+                { "word": "leave", "meaning": "离开；出发" },
+                { "word": "lucky", "meaning": "幸运的" },
+                { "word": "already", "meaning": "已经" },
+                { "word": "home", "meaning": "家；在家" },
+                { "word": "stay", "meaning": "停留；待" },
+                { "word": "just", "meaning": "刚刚；刚才" }
+              ]
+            },
+            {
+              "id": "l085-086",
+              "name": "Lesson 85-86 · Paris in the spring",
+              "words": [
+                { "word": "cinema", "meaning": "电影院" },
+                { "word": "spring", "meaning": "春天；春季" },
+                { "word": "beautiful", "meaning": "美丽的；漂亮的" },
+                { "word": "city", "meaning": "城市" },
+                { "word": "awful", "meaning": "糟糕的；可怕的" },
+                { "word": "rain", "meaning": "下雨；雨" },
+                { "word": "visit", "meaning": "参观；访问；拜访" },
+                { "word": "film", "meaning": "电影" },
+                { "word": "television", "meaning": "电视；电视机" },
+                { "word": "already", "meaning": "已经" },
+                { "word": "never", "meaning": "从未；从来不" },
+                { "word": "weather", "meaning": "天气" },
+                { "word": "time", "meaning": "时间；次；时候" },
+                { "word": "Paris", "meaning": "巴黎（法国首都）" }
+              ]
+            },
+            {
+              "id": "l087-088",
+              "name": "Lesson 87-88 · A car crash",
+              "words": [
+                { "word": "crash", "meaning": "碰撞；撞车事故" },
+                { "word": "garage", "meaning": "车库；修车厂" },
+                { "word": "mechanic", "meaning": "机械师；修理工" },
+                { "word": "repair", "meaning": "修理；修复" },
+                { "word": "lamp-post", "meaning": "灯柱；路灯杆" },
+                { "word": "drive", "meaning": "驾驶；开车" },
+                { "word": "bring", "meaning": "带来；拿来" },
+                { "word": "remember", "meaning": "记得；想起" },
+                { "word": "finish", "meaning": "完成；结束" },
+                { "word": "still", "meaning": "仍然；还" },
+                { "word": "ready", "meaning": "准备好的；完成的" },
+                { "word": "number", "meaning": "号码；数字" },
+                { "word": "truth", "meaning": "真相；事实" },
+                { "word": "look", "meaning": "看；瞧" },
+                { "word": "into", "meaning": "进入；到...里面" }
+              ]
+            },
+            {
+              "id": "l089-090",
+              "name": "Lesson 89-90 · For sale",
+              "words": [
+                { "word": "sale", "meaning": "出售；卖" },
+                { "word": "retire", "meaning": "退休；退职" },
+                { "word": "worth", "meaning": "值...的；值得的" },
+                { "word": "penny", "meaning": "便士（英国货币单位）" },
+                { "word": "decide", "meaning": "决定；下决心" },
+                { "word": "wife", "meaning": "妻子" },
+                { "word": "women", "meaning": "女人（复数）" },
+                { "word": "country", "meaning": "乡下；农村" },
+                { "word": "cost", "meaning": "花费（金钱）；价值为" },
+                { "word": "look", "meaning": "看；瞧" },
+                { "word": "money", "meaning": "钱；金钱" },
+                { "word": "every", "meaning": "每一的；每个的" },
+                { "word": "must", "meaning": "必须；一定" },
+                { "word": "yet", "meaning": "还；仍然" },
+                { "word": "word", "meaning": "话；言语" }
+              ]
+            },
+            {
+              "id": "l091-092",
+              "name": "Lesson 91-92 · Poor Ian!",
+              "words": [
+                { "word": "poor", "meaning": "可怜的；贫穷的" },
+                { "word": "sell", "meaning": "卖；销售" },
+                { "word": "move", "meaning": "搬家；移动" },
+                { "word": "miss", "meaning": "想念；错过" },
+                { "word": "neighbour", "meaning": "邻居" },
+                { "word": "person", "meaning": "人" },
+                { "word": "tomorrow", "meaning": "明天" },
+                { "word": "morning", "meaning": "早晨；上午" },
+                { "word": "afternoon", "meaning": "下午" },
+                { "word": "regards", "meaning": "问候；致意" },
+                { "word": "leave", "meaning": "离开；离去" },
+                { "word": "wife", "meaning": "妻子" },
+                { "word": "always", "meaning": "总是；一直" },
+                { "word": "yet", "meaning": "还；已经" },
+                { "word": "want", "meaning": "想要；希望" }
+              ]
+            },
+            {
+              "id": "l093-094",
+              "name": "Lesson 93-94 · Our new neighbour",
+              "words": [
+                { "word": "neighbour", "meaning": "邻居" },
+                { "word": "pilot", "meaning": "飞行员" },
+                { "word": "fly", "meaning": "飞；飞翔" },
+                { "word": "return", "meaning": "返回；回来" },
+                { "word": "already", "meaning": "已经" },
+                { "word": "nearly", "meaning": "几乎；差不多" },
+                { "word": "lucky", "meaning": "幸运的" },
+                { "word": "wife", "meaning": "妻子" },
+                { "word": "usually", "meaning": "通常" },
+                { "word": "country", "meaning": "国家" },
+                { "word": "world", "meaning": "世界" },
+                { "word": "stay", "meaning": "停留；待" },
+                { "word": "moment", "meaning": "时刻；瞬间" },
+                { "word": "years old", "meaning": "岁；...岁大" },
+                { "word": "Royal Air Force", "meaning": "英国皇家空军" }
+              ]
+            },
+            {
+              "id": "l095-096",
+              "name": "Lesson 95-96 · Tickets, please.",
+              "words": [
+                { "word": "ticket", "meaning": "票；入场券" },
+                { "word": "return", "meaning": "往返的；回程的" },
+                { "word": "platform", "meaning": "站台；月台" },
+                { "word": "bridge", "meaning": "桥；桥梁" },
+                { "word": "plenty", "meaning": "大量；充足" },
+                { "word": "miss", "meaning": "错过；未赶上" },
+                { "word": "catch", "meaning": "赶上；捉住" },
+                { "word": "station", "meaning": "车站；站" },
+                { "word": "bar", "meaning": "酒吧；吧台" },
+                { "word": "leave", "meaning": "离开；出发" },
+                { "word": "drink", "meaning": "饮料；酒" },
+                { "word": "slow", "meaning": "慢的；缓慢的" },
+                { "word": "hour", "meaning": "小时；钟头" },
+                { "word": "sorry", "meaning": "抱歉的；遗憾的" },
+                { "word": "next", "meaning": "下一个的；其次的" }
+              ]
+            },
+            {
+              "id": "l097-098",
+              "name": "Lesson 97-98 · A small blue case",
+              "words": [
+                { "word": "suitcase", "meaning": "手提箱；行李箱" },
+                { "word": "describe", "meaning": "描述；描写" },
+                { "word": "case", "meaning": "箱子；盒子" },
+                { "word": "zip", "meaning": "拉链；拉锁" },
+                { "word": "label", "meaning": "标签；标记" },
+                { "word": "handle", "meaning": "把手；手柄" },
+                { "word": "address", "meaning": "地址；住址" },
+                { "word": "belong", "meaning": "属于" },
+                { "word": "wrong", "meaning": "错误的；不对的" },
+                { "word": "matter", "meaning": "事情；问题" },
+                { "word": "pound", "meaning": "英镑（英国货币单位）" },
+                { "word": "pence", "meaning": "便士（英镑的百分之一）" },
+                { "word": "train", "meaning": "火车；列车" },
+                { "word": "left", "meaning": "留下；遗忘" },
+                { "word": "given", "meaning": "给；给予" }
+              ]
+            },
+            {
+              "id": "l099-100",
+              "name": "Lesson 99-100 · Owl!",
+              "words": [
+                { "word": "slip", "meaning": "滑倒；滑落" },
+                { "word": "fall", "meaning": "摔倒；落下" },
+                { "word": "downstairs", "meaning": "在楼下；往楼下" },
+                { "word": "hurt", "meaning": "使受伤；疼痛" },
+                { "word": "back", "meaning": "背部；后背" },
+                { "word": "stand up", "meaning": "站起来；起立" },
+                { "word": "get up", "meaning": "起来；起床" },
+                { "word": "afraid", "meaning": "害怕的；担心的" },
+                { "word": "doctor", "meaning": "医生；大夫" },
+                { "word": "phone", "meaning": "打电话" },
+                { "word": "X-ray", "meaning": "X光；X射线" },
+                { "word": "matter", "meaning": "事情；问题" },
+                { "word": "help", "meaning": "帮助；帮忙" },
+                { "word": "at once", "meaning": "立刻；马上" },
+                { "word": "sure", "meaning": "确定的；确信的" }
+              ]
+            },
+            {
+              "id": "l101-102",
+              "name": "Lesson 101-102 · A card from Jimmy",
+              "words": [
+                { "word": "card", "meaning": "卡片；明信片" },
+                { "word": "arrive", "meaning": "到达；抵达" },
+                { "word": "Scotland", "meaning": "苏格兰" },
+                { "word": "Youth Hostel", "meaning": "青年旅舍" },
+                { "word": "member", "meaning": "成员；会员" },
+                { "word": "association", "meaning": "协会；社团" },
+                { "word": "letter", "meaning": "信；信件" },
+                { "word": "soon", "meaning": "很快；不久" },
+                { "word": "well", "meaning": "健康的；身体好的" },
+                { "word": "speak up", "meaning": "大声说；提高音量" },
+                { "word": "afraid", "meaning": "恐怕；担心" },
+                { "word": "hear", "meaning": "听见；听到" },
+                { "word": "love", "meaning": "爱；关爱（用于信末结束语）" },
+                { "word": "stay", "meaning": "停留；暂住" },
+                { "word": "just", "meaning": "刚刚；刚才" }
+              ]
+            },
+            {
+              "id": "l103-104",
+              "name": "Lesson 103-104 · The French test",
+              "words": [
+                { "word": "exam", "meaning": "考试" },
+                { "word": "test", "meaning": "测试，测验" },
+                { "word": "pass", "meaning": "通过（考试）" },
+                { "word": "fail", "meaning": "不及格，未通过" },
+                { "word": "mathematics", "meaning": "数学" },
+                { "word": "question", "meaning": "问题，疑问" },
+                { "word": "paper", "meaning": "试卷，纸张" },
+                { "word": "easy", "meaning": "容易的，简单的" },
+                { "word": "difficult", "meaning": "困难的，难的" },
+                { "word": "awful", "meaning": "糟糕的，可怕的" },
+                { "word": "perhaps", "meaning": "也许，可能" },
+                { "word": "cheer", "meaning": "使振作，使高兴" },
+                { "word": "mark", "meaning": "分数，标记" },
+                { "word": "enough", "meaning": "足够的（地）" },
+                { "word": "rest", "meaning": "其余的，剩下的" }
+              ]
+            },
+            {
+              "id": "l105-106",
+              "name": "Lesson 105-106 · Full of mistakes",
+              "words": [
+                { "word": "intelligent", "meaning": "聪明的；智能的" },
+                { "word": "mistake", "meaning": "错误；失误" },
+                { "word": "present", "meaning": "礼物；赠品" },
+                { "word": "spell", "meaning": "拼写；用字母拼" },
+                { "word": "type", "meaning": "打字；用打字机输入" },
+                { "word": "office", "meaning": "办公室；办事处" },
+                { "word": "dictionary", "meaning": "字典；词典" },
+                { "word": "letter", "meaning": "信；信件" },
+                { "word": "hope", "meaning": "希望；期望" },
+                { "word": "full", "meaning": "满的；充满的" },
+                { "word": "at once", "meaning": "立即；马上" },
+                { "word": "only", "meaning": "只；仅仅" },
+                { "word": "right", "meaning": "正确的；对的" },
+                { "word": "sorry", "meaning": "抱歉的；遗憾的" },
+                { "word": "again", "meaning": "再；又" }
+              ]
+            },
+            {
+              "id": "l107-108",
+              "name": "Lesson 107-108 · It's too small.",
+              "words": [
+                { "word": "madam", "meaning": "夫人；女士（对妇女的尊称）" },
+                { "word": "dress", "meaning": "连衣裙；套裙" },
+                { "word": "lovely", "meaning": "可爱的；漂亮的" },
+                { "word": "smart", "meaning": "时髦的；漂亮的；聪明的" },
+                { "word": "fashion", "meaning": "时尚；流行款式" },
+                { "word": "skirt", "meaning": "裙子" },
+                { "word": "colour", "meaning": "颜色" },
+                { "word": "suit", "meaning": "适合；相配" },
+                { "word": "pretty", "meaning": "漂亮的；可爱的" },
+                { "word": "size", "meaning": "尺码；尺寸" },
+                { "word": "larger", "meaning": "更大的（large的比较级）" },
+                { "word": "largest", "meaning": "最大的（large的最高级）" },
+                { "word": "show", "meaning": "展示；给...看" },
+                { "word": "try", "meaning": "试穿；尝试" },
+                { "word": "either", "meaning": "也（不）" }
+              ]
+            },
+            {
+              "id": "l109-110",
+              "name": "Lesson 109-110 · A good idea",
+              "words": [
+                { "word": "idea", "meaning": "主意；想法；念头" },
+                { "word": "ready", "meaning": "准备好的；完成的" },
+                { "word": "sugar", "meaning": "糖；食糖" },
+                { "word": "teaspoonful", "meaning": "一茶匙的量" },
+                { "word": "cigarette", "meaning": "香烟；纸烟" },
+                { "word": "empty", "meaning": "空的；空洞的" },
+                { "word": "pity", "meaning": "遗憾；可惜；怜悯" },
+                { "word": "biscuit", "meaning": "饼干；软烤小圆饼" },
+                { "word": "advice", "meaning": "建议；劝告；意见" },
+                { "word": "enough", "meaning": "足够的；充足的" },
+                { "word": "instead", "meaning": "代替；反而；相反地" },
+                { "word": "smoke", "meaning": "吸烟；冒烟/烟；香烟" },
+                { "word": "afraid", "meaning": "害怕的；担心的；恐怕" }
+              ]
+            },
+            {
+              "id": "l111-112",
+              "name": "Lesson 111-112 · The most expensive model",
+              "words": [
+                { "word": "expensive", "meaning": "昂贵的" },
+                { "word": "model", "meaning": "型号；模型" },
+                { "word": "afford", "meaning": "负担得起" },
+                { "word": "instalment", "meaning": "分期付款" },
+                { "word": "deposit", "meaning": "订金；首付" },
+                { "word": "pound", "meaning": "英镑" },
+                { "word": "worth", "meaning": "值得的" },
+                { "word": "millionaire", "meaning": "百万富翁" },
+                { "word": "television", "meaning": "电视机" },
+                { "word": "buy", "meaning": "购买" },
+                { "word": "pay", "meaning": "支付" },
+                { "word": "month", "meaning": "月份" }
+              ]
+            },
+            {
+              "id": "l113-114",
+              "name": "Lesson 113-114 · Small change",
+              "words": [
+                { "word": "fare", "meaning": "车费，票价" },
+                { "word": "change", "meaning": "零钱，找头" },
+                { "word": "passenger", "meaning": "乘客，旅客" },
+                { "word": "note", "meaning": "纸币，钞票" },
+                { "word": "pound", "meaning": "英镑（英国货币单位）" },
+                { "word": "millionaire", "meaning": "百万富翁" },
+                { "word": "either", "meaning": "也（不）" },
+                { "word": "neither", "meaning": "也不" },
+                { "word": "afraid", "meaning": "恐怕，害怕" },
+                { "word": "except", "meaning": "除...之外" },
+                { "word": "must", "meaning": "必须，应当" },
+                { "word": "get off", "meaning": "下车" },
+                { "word": "ask", "meaning": "问，请求" },
+                { "word": "none", "meaning": "没有任何东西/一个也没有" },
+                { "word": "all", "meaning": "全部，所有" }
+              ]
+            },
+            {
+              "id": "l115-116",
+              "name": "Lesson 115-116 · Knock, knock!",
+              "words": [
+                { "word": "knock", "meaning": "敲；打；撞击" },
+                { "word": "quiet", "meaning": "安静的；寂静的" },
+                { "word": "impossible", "meaning": "不可能的" },
+                { "word": "invite", "meaning": "邀请" },
+                { "word": "garden", "meaning": "花园；庭院" },
+                { "word": "lemonade", "meaning": "柠檬水；柠檬饮料" },
+                { "word": "joke", "meaning": "开玩笑" },
+                { "word": "left", "meaning": "剩余的；剩下的" },
+                { "word": "glass", "meaning": "玻璃杯；玻璃" },
+                { "word": "beer", "meaning": "啤酒" },
+                { "word": "sure", "meaning": "确信的；肯定的" },
+                { "word": "warm", "meaning": "温暖的；暖和的" },
+                { "word": "anything", "meaning": "任何事；任何东西" },
+                { "word": "nothing", "meaning": "没有什么；无物" },
+                { "word": "everybody", "meaning": "每个人；所有人" }
+              ]
+            },
+            {
+              "id": "l117-118",
+              "name": "Lesson 117-118 · Tommy's breakfast",
+              "words": [
+                { "word": "coin", "meaning": "硬币" },
+                { "word": "dining room", "meaning": "餐厅" },
+                { "word": "swallow", "meaning": "吞下；咽下" },
+                { "word": "toilet", "meaning": "厕所；马桶" },
+                { "word": "change", "meaning": "零钱；找零" },
+                { "word": "office", "meaning": "办公室" },
+                { "word": "housework", "meaning": "家务；家务活" },
+                { "word": "floor", "meaning": "地板；地面" },
+                { "word": "everywhere", "meaning": "到处；各处" },
+                { "word": "mouth", "meaning": "嘴；口腔" },
+                { "word": "late", "meaning": "迟的；晚的" },
+                { "word": "phone", "meaning": "打电话" },
+                { "word": "breakfast", "meaning": "早餐" },
+                { "word": "drop", "meaning": "掉落；使落下" },
+                { "word": "both", "meaning": "两者；两个都" }
+              ]
+            },
+            {
+              "id": "l119-120",
+              "name": "Lesson 119-120 · A true story",
+              "words": [
+                { "word": "story", "meaning": "故事；传说" },
+                { "word": "happen", "meaning": "发生" },
+                { "word": "thief", "meaning": "贼；小偷" },
+                { "word": "climb", "meaning": "爬；攀登" },
+                { "word": "kitchen", "meaning": "厨房" },
+                { "word": "enter", "meaning": "进入" },
+                { "word": "dark", "meaning": "黑暗的" },
+                { "word": "torch", "meaning": "手电筒" },
+                { "word": "suddenly", "meaning": "突然地" },
+                { "word": "voice", "meaning": "声音" },
+                { "word": "drop", "meaning": "投下；扔下" },
+                { "word": "noise", "meaning": "噪音；声响" },
+                { "word": "parrot", "meaning": "鹦鹉" },
+                { "word": "downstairs", "meaning": "在楼下；往楼下" },
+                { "word": "quickly", "meaning": "快地；迅速地" }
+              ]
+            },
+            {
+              "id": "l121-122",
+              "name": "Lesson 121-122 · The man in a hat",
+              "words": [
+                { "word": "expensive", "meaning": "昂贵的" },
+                { "word": "dictionary", "meaning": "词典，字典" },
+                { "word": "counter", "meaning": "柜台" },
+                { "word": "serve", "meaning": "服务，接待" },
+                { "word": "recognize", "meaning": "认出，辨认" },
+                { "word": "customer", "meaning": "顾客，客户" },
+                { "word": "bought", "meaning": "买（buy的过去式）" },
+                { "word": "forgot", "meaning": "忘记（forget的过去式）" },
+                { "word": "wear", "meaning": "穿，戴" },
+                { "word": "hat", "meaning": "帽子" },
+                { "word": "gentleman", "meaning": "绅士，先生" },
+                { "word": "standing", "meaning": "站着的" },
+                { "word": "behind", "meaning": "在...后面" },
+                { "word": "straight", "meaning": "直接地，立刻" }
+              ]
+            },
+            {
+              "id": "l123-124",
+              "name": "Lesson 123-124 · A trip to Australia",
+              "words": [
+                { "word": "photograph", "meaning": "照片；相片" },
+                { "word": "trip", "meaning": "旅行；旅程" },
+                { "word": "beard", "meaning": "胡须；胡子" },
+                { "word": "ship", "meaning": "轮船；船只" },
+                { "word": "grow", "meaning": "生长；留（头发）" },
+                { "word": "shave", "meaning": "剃；刮" },
+                { "word": "offer", "meaning": "提供；给予" },
+                { "word": "guess", "meaning": "猜；猜测" },
+                { "word": "meet", "meaning": "遇见；相逢" },
+                { "word": "during", "meaning": "在...期间" },
+                { "word": "remember", "meaning": "记得；记住" },
+                { "word": "beautiful", "meaning": "美丽的；漂亮的" },
+                { "word": "Australia", "meaning": "澳大利亚" },
+                { "word": "wife", "meaning": "妻子" }
+              ]
+            },
+            {
+              "id": "l125-126",
+              "name": "Lesson 125-126 · Tea for two",
+              "words": [
+                { "word": "terribly", "meaning": "非常，极其" },
+                { "word": "dry", "meaning": "干燥的，干旱的" },
+                { "word": "nuisance", "meaning": "令人讨厌的人或事" },
+                { "word": "water", "meaning": "给...浇水，灌溉" },
+                { "word": "remember", "meaning": "记得，记起" },
+                { "word": "means", "meaning": "意味着，意思是" },
+                { "word": "pleasant", "meaning": "令人愉快的，舒适的" },
+                { "word": "surprise", "meaning": "惊讶，意外" },
+                { "word": "instead", "meaning": "代替，反而" },
+                { "word": "finish", "meaning": "完成，结束" },
+                { "word": "rain", "meaning": "下雨" },
+                { "word": "summer", "meaning": "夏天，夏季" },
+                { "word": "already", "meaning": "已经，早已" },
+                { "word": "look out of", "meaning": "向...外看" },
+                { "word": "every day", "meaning": "每天" }
+              ]
+            },
+            {
+              "id": "l127-128",
+              "name": "Lesson 127-128 · A famous actress",
+              "words": [
+                { "word": "actress", "meaning": "女演员" },
+                { "word": "recognize", "meaning": "认出；认识" },
+                { "word": "famous", "meaning": "著名的；出名的" },
+                { "word": "beside", "meaning": "在...旁边" },
+                { "word": "actor", "meaning": "男演员" },
+                { "word": "husband", "meaning": "丈夫" },
+                { "word": "third", "meaning": "第三的；三号" },
+                { "word": "fourth", "meaning": "第四的；四号" },
+                { "word": "fifth", "meaning": "第五的；五号" },
+                { "word": "old", "meaning": "老的；旧的" },
+                { "word": "least", "meaning": "最小的；最少地" },
+                { "word": "sure", "meaning": "确信的；肯定的" },
+                { "word": "still", "meaning": "仍然；还" },
+                { "word": "read", "meaning": "读到；阅读" },
+                { "word": "myself", "meaning": "我自己" }
+              ]
+            },
+            {
+              "id": "l129-130",
+              "name": "Lesson 129-130 · Seventy miles an hour",
+              "words": [
+                { "word": "wave", "meaning": "挥手；招手" },
+                { "word": "policeman", "meaning": "警察" },
+                { "word": "race track", "meaning": "赛车跑道；赛道" },
+                { "word": "speed", "meaning": "速度" },
+                { "word": "limit", "meaning": "限制；限度" },
+                { "word": "dream", "meaning": "做梦；梦想" },
+                { "word": "driving licence", "meaning": "驾驶执照" },
+                { "word": "charge", "meaning": "收费；指控" },
+                { "word": "overtake", "meaning": "超过；超越" },
+                { "word": "certainly", "meaning": "当然；确定地" },
+                { "word": "advice", "meaning": "建议；劝告" },
+                { "word": "sign", "meaning": "标志；标识牌" },
+                { "word": "officer", "meaning": "官员；警官" },
+                { "word": "darling", "meaning": "亲爱的；宝贝" },
+                { "word": "overtook", "meaning": "超过（overtake的过去式）" }
+              ]
+            },
+            {
+              "id": "l131-132",
+              "name": "Lesson 131-132 · Don't be so sure!",
+              "words": [
+                { "word": "abroad", "meaning": "在国外；到国外" },
+                { "word": "Egypt", "meaning": "埃及" },
+                { "word": "mind", "meaning": "头脑；主意；想法" },
+                { "word": "travel", "meaning": "旅行；长途行走" },
+                { "word": "cheaper", "meaning": "更便宜的（cheap的比较级）" },
+                { "word": "enjoy", "meaning": "享受；喜爱；玩得开心" },
+                { "word": "worry", "meaning": "担心；担忧；烦恼" },
+                { "word": "look after", "meaning": "照顾；照看；照料" },
+                { "word": "garden", "meaning": "花园；菜园；庭园" },
+                { "word": "decide", "meaning": "决定；选定" },
+                { "word": "holiday", "meaning": "假期；假日；节日" },
+                { "word": "sea", "meaning": "海；海洋" },
+                { "word": "sure", "meaning": "确信的；肯定的；一定的" },
+                { "word": "house", "meaning": "房子；住宅" },
+                { "word": "anywhere", "meaning": "任何地方；什么地方" }
+              ]
+            },
+            {
+              "id": "l133-134",
+              "name": "Lesson 133-134 · Sensational news!",
+              "words": [
+                { "word": "sensational", "meaning": "耸人听闻的，轰动的" },
+                { "word": "retire", "meaning": "退休；退役" },
+                { "word": "reporter", "meaning": "记者" },
+                { "word": "mink", "meaning": "貂；貂皮" },
+                { "word": "arrived", "meaning": "到达" },
+                { "word": "wonder", "meaning": "想知道；感到疑惑" },
+                { "word": "tired", "meaning": "累的；疲倦的" },
+                { "word": "another", "meaning": "另一个；再一个" },
+                { "word": "newspaper", "meaning": "报纸" },
+                { "word": "film", "meaning": "电影" },
+                { "word": "airport", "meaning": "机场" },
+                { "word": "wearing", "meaning": "穿着" },
+                { "word": "By our reporter", "meaning": "本報記者" },
+                { "word": "long time", "meaning": "很长时间" },
+                { "word": "very", "meaning": "非常；很" }
+              ]
+            },
+            {
+              "id": "l135-136",
+              "name": "Lesson 135-136 · The latest report",
+              "words": [
+                { "word": "report", "meaning": "报告；报道" },
+                { "word": "retire", "meaning": "退休；退役" },
+                { "word": "future", "meaning": "未来的；将来的" },
+                { "word": "husband", "meaning": "丈夫" },
+                { "word": "film", "meaning": "电影；影片" },
+                { "word": "sensational", "meaning": "轰动的；耸人听闻的" },
+                { "word": "hotel", "meaning": "酒店；旅馆" },
+                { "word": "introduce", "meaning": "介绍；引见" },
+                { "word": "marry", "meaning": "结婚；嫁；娶" },
+                { "word": "mind", "meaning": "头脑；想法；主意" },
+                { "word": "latest", "meaning": "最新的；最近的" },
+                { "word": "reporter", "meaning": "记者；新闻报道者" },
+                { "word": "sixth", "meaning": "第六的" },
+                { "word": "certainly", "meaning": "当然；肯定地" }
+              ]
+            },
+            {
+              "id": "l137-138",
+              "name": "Lesson 137-138 · A pleasant dream",
+              "words": [
+                { "word": "football pools", "meaning": "足球赌注；足球博彩" },
+                { "word": "pleasant", "meaning": "令人愉快的；舒适的" },
+                { "word": "dream", "meaning": "梦；梦想" },
+                { "word": "nearly", "meaning": "几乎；差不多" },
+                { "word": "travel", "meaning": "旅行；游历" },
+                { "word": "hotel", "meaning": "旅馆；酒店" },
+                { "word": "return", "meaning": "返回；回来" },
+                { "word": "country", "meaning": "乡村；农村" },
+                { "word": "garden", "meaning": "花园；菜园" },
+                { "word": "spend", "meaning": "花费（钱）；度过（时间）" },
+                { "word": "poor", "meaning": "贫穷的；贫困的" },
+                { "word": "depend", "meaning": "依靠；依赖；取决于" },
+                { "word": "mink", "meaning": "貂；貂皮" },
+                { "word": "coat", "meaning": "外套；大衣" },
+                { "word": "world", "meaning": "世界；地球" }
+              ]
+            },
+            {
+              "id": "l139-140",
+              "name": "Lesson 139-140 · Is that you, John?",
+              "words": [
+                { "word": "speaking", "meaning": "说话中（电话用语）" },
+                { "word": "engineer", "meaning": "工程师" },
+                { "word": "overseas", "meaning": "海外的；在海外" },
+                { "word": "engineering", "meaning": "工程；工程学" },
+                { "word": "telephone", "meaning": "电话；打电话" },
+                { "word": "repair", "meaning": "修理；修复" },
+                { "word": "invite", "meaning": "邀请" },
+                { "word": "extra", "meaning": "额外的；附加的" },
+                { "word": "office", "meaning": "办公室；办公楼" },
+                { "word": "wife", "meaning": "妻子" },
+                { "word": "dinner", "meaning": "晚餐；正餐" },
+                { "word": "help", "meaning": "帮助；援助" },
+                { "word": "understand", "meaning": "理解；明白" },
+                { "word": "late", "meaning": "迟到的；晚的" },
+                { "word": "line", "meaning": "线路；线条" }
+              ]
+            },
+            {
+              "id": "l141-142",
+              "name": "Lesson 141-142 · Sally's first train ride",
+              "words": [
+                { "word": "excited", "meaning": "兴奋的，激动的" },
+                { "word": "travel", "meaning": "旅行，出行" },
+                { "word": "middle-aged", "meaning": "中年的" },
+                { "word": "powder compact", "meaning": "粉盒，化妆盒" },
+                { "word": "embarrassed", "meaning": "尴尬的，难堪的" },
+                { "word": "amused", "meaning": "觉得好笑的，被逗乐的" },
+                { "word": "handbag", "meaning": "手提包" },
+                { "word": "funny", "meaning": "滑稽的，可笑的" },
+                { "word": "invite", "meaning": "邀请" },
+                { "word": "station", "meaning": "车站" },
+                { "word": "opposite", "meaning": "在...对面" },
+                { "word": "curiously", "meaning": "好奇地" },
+                { "word": "ugly", "meaning": "丑陋的，难看的" }
+              ]
+            },
+            {
+              "id": "l143-144",
+              "name": "Lesson 143-144 · A walk through the woods",
+              "words": [
+                { "word": "surround", "meaning": "环绕；包围" },
+                { "word": "beauty spot", "meaning": "风景点；名胜" },
+                { "word": "litter", "meaning": "垃圾；废弃物" },
+                { "word": "rubbish", "meaning": "垃圾；废物" },
+                { "word": "prosecute", "meaning": "起诉；控告" },
+                { "word": "refrigerator", "meaning": "冰箱；冷藏室" },
+                { "word": "rusty", "meaning": "生锈的" },
+                { "word": "tin", "meaning": "罐头；铁罐" },
+                { "word": "among", "meaning": "在...之中（三者以上）" },
+                { "word": "tidy", "meaning": "整洁的；整齐的" },
+                { "word": "cover", "meaning": "覆盖；遮盖" },
+                { "word": "empty", "meaning": "空的" },
+                { "word": "basket", "meaning": "篮子；筐" },
+                { "word": "cigarette", "meaning": "香烟；纸烟" },
+                { "word": "count", "meaning": "数；计算" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
