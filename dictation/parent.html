@@ -214,13 +214,13 @@
 </div>
 
 <div class="sec">
-  <div class="sec-head"><span class="sec-num">2</span><h3>年级</h3></div>
-  <div class="chips" id="grades"></div>
+  <div class="sec-head"><span class="sec-num">2</span><h3>教材版本</h3></div>
+  <div class="chips" id="versions"></div>
 </div>
 
 <div class="sec">
-  <div class="sec-head"><span class="sec-num">3</span><h3>教材版本</h3></div>
-  <div class="chips" id="versions"></div>
+  <div class="sec-head"><span class="sec-num">3</span><h3>年级</h3></div>
+  <div class="chips" id="grades"></div>
 </div>
 
 <div class="sec">
@@ -354,7 +354,27 @@
     return list.sort(function (a, b) { return a.id === "chinese" ? -1 : 1; });
   }
 
-  // 某学科下可选的年级（跨版本并集）
+  // 某学科下的全部版本（如 英语 → 译林版 + 新概念英语，并列可选）
+  function versionsForSubject(subjectId) {
+    return bank().versions.filter(function (v) {
+      return v.grades.some(function (g) {
+        return g.subjects.some(function (s) { return s.id === subjectId; });
+      });
+    });
+  }
+
+  // 指定版本+学科下的年级/册（如 新概念英语 → 第一册）
+  function gradesIn(versionId, subjectId) {
+    var v = bank().versions.find(function (v) { return v.id === versionId; });
+    if (!v) return [];
+    return v.grades.filter(function (g) {
+      return g.subjects.some(function (s) { return s.id === subjectId; });
+    }).map(function (g) {
+      return { id: g.id, label: g.name + (g.semester ? "·" + g.semester : "") };
+    });
+  }
+
+  // 某学科下可选的年级（跨版本并集；仅回退提示用）
   function gradesFor(subjectId) {
     var seen = {}, list = [];
     bank().versions.forEach(function (v) {
@@ -369,24 +389,16 @@
     return list;
   }
 
-  // 某年级+学科下可用的版本
-  function versionsFor(gradeId, subjectId) {
-    return bank().versions.filter(function (v) {
-      var g = v.grades.find(function (g) { return g.id === gradeId; });
-      return g && g.subjects.some(function (s) { return s.id === subjectId; });
-    });
-  }
-
-  function autoVersionId(gradeId, subjectId) {
-    var vs = versionsFor(gradeId, subjectId);
+  function autoVersionId(subjectId) {
+    var vs = versionsForSubject(subjectId);
     var pref = DEFAULT_VERSION[subjectId];
     var hit = vs.find(function (v) { return v.id === pref; });
     return ((hit || vs[0]) || {}).id || null;
   }
 
-  // 当前链路：版本限定在 年级+学科 的可用集合内，失效逐级回退
+  // 当前链路：学科 → 版本 → 年级 → 单元，失效逐级回退
   function curVersion() {
-    var vs = versionsFor(sel.gradeId, sel.subjectId);
+    var vs = versionsForSubject(sel.subjectId);
     return vs.find(function (v) { return v.id === sel.versionId; }) || vs[0] || null;
   }
   function curSubject() {
@@ -408,10 +420,14 @@
   function normalizeSelection() {
     var subs = allSubjects();
     if (!subs.some(function (s) { return s.id === sel.subjectId; })) sel.subjectId = subs[0].id;
-    var grades = gradesFor(sel.subjectId);
+    var vs = versionsForSubject(sel.subjectId);
+    if (!vs.some(function (v) { return v.id === sel.versionId; })) sel.versionId = autoVersionId(sel.subjectId);
+    var grades = gradesIn(sel.versionId, sel.subjectId);
+    if (!grades.length) { // 该版本暂无此学科数据：退回学科默认版本
+      sel.versionId = autoVersionId(sel.subjectId);
+      grades = gradesIn(sel.versionId, sel.subjectId);
+    }
     if (!grades.some(function (g) { return g.id === sel.gradeId; })) sel.gradeId = grades[0].id;
-    var vs = versionsFor(sel.gradeId, sel.subjectId);
-    if (!vs.some(function (v) { return v.id === sel.versionId; })) sel.versionId = autoVersionId(sel.gradeId, sel.subjectId);
     var s = curSubject();
     if (s && !s.units.some(function (u) { return u.id === sel.unitId; })) sel.unitId = s.units[0].id;
   }
@@ -438,30 +454,30 @@
     // 1 学科
     renderChips($("subjects"), allSubjects(), sel.subjectId, function (id) {
       sel.subjectId = id;
-      // 年级若不含该学科则回退到第一个可用年级
-      var grades = gradesFor(id);
-      if (!grades.some(function (g) { return g.id === sel.gradeId; })) sel.gradeId = grades[0].id;
-      sel.versionId = autoVersionId(sel.gradeId, id); // 语文→人教版，英语→译林版
+      sel.versionId = autoVersionId(id); // 语文→人教版，英语→译林版
+      sel.gradeId = gradesIn(sel.versionId, id)[0].id;
       sel.unitId = curSubject().units[0].id;
       persistSelection(); renderAll();
     });
 
-    // 2 年级（该学科下可选）
-    renderChips($("grades"), gradesFor(sel.subjectId), sel.gradeId, function (id) {
-      sel.gradeId = id;
-      sel.versionId = autoVersionId(id, sel.subjectId);
-      sel.unitId = curSubject().units[0].id;
-      persistSelection(); renderAll();
-    });
-
-    // 3 教材版本（该年级+学科下可用，可手动切换）
-    var vs = versionsFor(sel.gradeId, sel.subjectId);
+    // 2 教材版本（该学科下全部版本并列，如 英语：译林版 / 新概念英语）
+    var vs = versionsForSubject(sel.subjectId);
     renderChips($("versions"), vs.map(function (v) { return { id: v.id, label: v.name }; }),
       curVersion() && curVersion().id, function (id) {
         sel.versionId = id;
+        // 换版本后年级集合不同（如 新概念只有册），回退到该版本第一个年级
+        var grades = gradesIn(id, sel.subjectId);
+        if (!grades.some(function (g) { return g.id === sel.gradeId; })) sel.gradeId = grades[0].id;
         sel.unitId = curSubject().units[0].id;
         persistSelection(); renderAll();
       });
+
+    // 3 年级（当前版本+学科内可选）
+    renderChips($("grades"), gradesIn(sel.versionId, sel.subjectId), sel.gradeId, function (id) {
+      sel.gradeId = id;
+      sel.unitId = curSubject().units[0].id;
+      persistSelection(); renderAll();
+    });
 
     // 4 单元
     var s = curSubject();
@@ -891,8 +907,9 @@
     // 恢复上次选择；链路失效由 normalizeSelection 逐级回退
     var saved = Store.selection.get();
     var s0 = allSubjects()[0].id;
-    var g0 = gradesFor(s0)[0].id;
-    sel = { subjectId: s0, gradeId: g0, versionId: autoVersionId(g0, s0), unitId: null };
+    var v0 = autoVersionId(s0);
+    var g0 = gradesIn(v0, s0)[0].id;
+    sel = { subjectId: s0, gradeId: g0, versionId: v0, unitId: null };
     if (saved) sel = Object.assign(sel, saved);
     normalizeSelection();
     var v0 = curVersion();
