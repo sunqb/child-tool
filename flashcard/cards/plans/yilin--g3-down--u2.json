@@ -1,0 +1,91 @@
+{
+ "version": "yilin",
+ "grade": "g3-down",
+ "gradeName": "三年级下册",
+ "unit": "u2",
+ "unitName": "Unit 2 · In the library",
+ "cards": [
+  {
+   "scene_title_cn": "图书馆里",
+   "scene_title_en": "In the Library",
+   "card_type": "Action",
+   "scene_brief": "图书馆里，一个男孩奔跑，两个小朋友交谈，管理员竖手指做安静手势，周围有书架。",
+   "targets": [
+    {
+     "word": "library",
+     "visual_target": "摆满绘本的图书馆书架区",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈlaɪbreri/",
+     "meaning": "图书馆"
+    },
+    {
+     "word": "run",
+     "visual_target": "男孩迈步奔跑的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/rʌn/",
+     "meaning": "跑"
+    },
+    {
+     "word": "talk",
+     "visual_target": "两个小朋友面对面说话",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/tɔːk/",
+     "meaning": "说话；交谈"
+    },
+    {
+     "word": "shh",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ʃ/",
+     "meaning": "嘘（安静）"
+    }
+   ],
+   "card_id": "YL-G3DOWN-U2-C01"
+  },
+  {
+   "scene_title_cn": "家中一天",
+   "scene_title_en": "A Day at Home",
+   "card_type": "Timeline",
+   "scene_brief": "家中一天：孩子在餐桌旁吃面包、喝牛奶，随后躺到小床上睡觉。",
+   "targets": [
+    {
+     "word": "eat",
+     "visual_target": "孩子把面包送到嘴边的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ɪt/",
+     "meaning": "吃"
+    },
+    {
+     "word": "drink",
+     "visual_target": "孩子举起杯子喝的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/drɪŋk/",
+     "meaning": "喝"
+    },
+    {
+     "word": "milk",
+     "visual_target": "玻璃杯里的白色牛奶",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/mɪlk/",
+     "meaning": "牛奶"
+    },
+    {
+     "word": "sleep",
+     "visual_target": "孩子闭眼躺在小床上盖着被子",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/slɪp/",
+     "meaning": "睡觉"
+    }
+   ],
+   "card_id": "YL-G3DOWN-U2-C02"
+  }
+ ]
+}

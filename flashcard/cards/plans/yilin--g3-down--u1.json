@@ -1,0 +1,99 @@
+{
+ "version": "yilin",
+ "grade": "g3-down",
+ "gradeName": "三年级下册",
+ "unit": "u1",
+ "unitName": "Unit 1 · In class",
+ "cards": [
+  {
+   "scene_title_cn": "书包里的文具",
+   "scene_title_en": "Stationery in the Schoolbag",
+   "card_type": "Spatial/Cutaway",
+   "scene_brief": "男孩把书包敞开放桌上，里面露出钢笔、铅笔、尺子和橡皮。",
+   "targets": [
+    {
+     "word": "in",
+     "visual_target": "钢笔、铅笔、尺子和橡皮位于书包内部的位置关系",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/ɪn/",
+     "meaning": "在……里面"
+    },
+    {
+     "word": "schoolbag",
+     "visual_target": "敞开的蓝色双肩书包",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈskuːlbæɡ/",
+     "meaning": "书包"
+    },
+    {
+     "word": "pen",
+     "visual_target": "带笔帽的钢笔",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/pen/",
+     "meaning": "钢笔"
+    },
+    {
+     "word": "pencil",
+     "visual_target": "黄色木杆铅笔",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈpensəl/",
+     "meaning": "铅笔"
+    },
+    {
+     "word": "ruler",
+     "visual_target": "透明直尺",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈruːlə/",
+     "meaning": "尺子"
+    },
+    {
+     "word": "rubber",
+     "visual_target": "方形橡皮",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈrʌbə/",
+     "meaning": "橡皮"
+    }
+   ],
+   "card_id": "YL-G3DOWN-U1-C01"
+  },
+  {
+   "scene_title_cn": "打开和合上绘本",
+   "scene_title_en": "Open and Close the Book",
+   "card_type": "Choice/Contrast",
+   "scene_brief": "男孩坐在书桌前，一只手掀开绘本，另一侧双手把绘本合上。",
+   "targets": [
+    {
+     "word": "book",
+     "visual_target": "无文字的儿童图画书",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/bʊk/",
+     "meaning": "书"
+    },
+    {
+     "word": "open",
+     "visual_target": "男孩掀开书页的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈəʊpən/",
+     "meaning": "打开"
+    },
+    {
+     "word": "close",
+     "visual_target": "男孩合上书页的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/kləʊz/",
+     "meaning": "关闭"
+    }
+   ],
+   "card_id": "YL-G3DOWN-U1-C02"
+  }
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "version": "yilin",
+ "grade": "g3-up",
+ "gradeName": "三年级上册",
+ "unit": "u4",
+ "unitName": "Unit 4 · My family",
+ "cards": [
+  {
+   "scene_title_cn": "家庭客厅",
+   "scene_title_en": "Family at Home",
+   "card_type": "Relation",
+   "scene_brief": "客厅沙发上，爸爸、妈妈和我紧挨着坐在一起，三人构成一家人。",
+   "targets": [
+    {
+     "word": "family",
+     "visual_target": "爸爸、妈妈和我三人紧挨着坐在一起的群像",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈfæməli/",
+     "meaning": "家庭；家人"
+    },
+    {
+     "word": "father",
+     "visual_target": "画面左侧的爸爸",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈfɑːðə/",
+     "meaning": "父亲"
+    },
+    {
+     "word": "mother",
+     "visual_target": "画面右侧的妈妈",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈmʌðə/",
+     "meaning": "母亲"
+    },
+    {
+     "word": "me",
+     "visual_target": "坐在父母中间的小孩（我）",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/mi/",
+     "meaning": "我"
+    }
+   ],
+   "card_id": "YL-G3UP-U4-C01"
+  },
+  {
+   "scene_title_cn": "祖孙游戏角",
+   "scene_title_en": "Grandparents and Siblings",
+   "card_type": "Action",
+   "scene_brief": "地毯上，爷爷和奶奶搭积木，哥哥递积木，妹妹在旁拍手笑。",
+   "targets": [
+    {
+     "word": "grandpa",
+     "visual_target": "坐在地毯左侧搭积木的爷爷",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈɡrændpɑː/",
+     "meaning": "爷爷；外公"
+    },
+    {
+     "word": "grandma",
+     "visual_target": "坐在地毯右侧搭积木的奶奶",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈɡrændmɑː/",
+     "meaning": "奶奶；外婆"
+    },
+    {
+     "word": "brother",
+     "visual_target": "递积木给爷爷奶奶的男孩（哥哥）",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈbrʌðə/",
+     "meaning": "哥哥；弟弟"
+    },
+    {
+     "word": "sister",
+     "visual_target": "在旁边拍手笑的女孩（妹妹）",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈsɪstə/",
+     "meaning": "姐姐；妹妹"
+    }
+   ],
+   "card_id": "YL-G3UP-U4-C02"
+  }
+ ]
+}

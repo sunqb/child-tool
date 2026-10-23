@@ -1,0 +1,91 @@
+{
+ "version": "yilin",
+ "grade": "g3-down",
+ "gradeName": "三年级下册",
+ "unit": "u5",
+ "unitName": "Unit 5 · How old are you?",
+ "cards": [
+  {
+   "scene_title_cn": "爷爷的生日",
+   "scene_title_en": "Grandpa's Birthday",
+   "card_type": "Narrative",
+   "scene_brief": "生日派对上，白发老爷爷坐在桌旁，桌上有四块蛋糕、五份礼物和六根蜡烛。",
+   "targets": [
+    {
+     "word": "old",
+     "visual_target": "白发老爷爷",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/əʊld/",
+     "meaning": "老的；……岁的"
+    },
+    {
+     "word": "four",
+     "visual_target": "四块蛋糕",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/fɔː/",
+     "meaning": "四"
+    },
+    {
+     "word": "five",
+     "visual_target": "五份礼物",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/faɪv/",
+     "meaning": "五"
+    },
+    {
+     "word": "six",
+     "visual_target": "六根蜡烛",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/sɪks/",
+     "meaning": "六"
+    }
+   ],
+   "card_id": "YL-G3DOWN-U5-C01"
+  },
+  {
+   "scene_title_cn": "公园数一数",
+   "scene_title_en": "Park Counting",
+   "card_type": "Object/Place",
+   "scene_brief": "公园里，孩子们放七只风筝，池塘有八只小鸭，草地有九朵花，手边有十个气球。",
+   "targets": [
+    {
+     "word": "seven",
+     "visual_target": "天空中七只风筝",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/ˈsevən/",
+     "meaning": "七"
+    },
+    {
+     "word": "eight",
+     "visual_target": "池塘里八只小鸭",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/eɪt/",
+     "meaning": "八"
+    },
+    {
+     "word": "nine",
+     "visual_target": "草地上九朵花",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/naɪn/",
+     "meaning": "九"
+    },
+    {
+     "word": "ten",
+     "visual_target": "孩子手中十个气球",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/ten/",
+     "meaning": "十"
+    }
+   ],
+   "card_id": "YL-G3DOWN-U5-C02"
+  }
+ ]
+}

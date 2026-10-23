@@ -1,0 +1,100 @@
+{
+ "version": "yilin",
+ "grade": "g3-up",
+ "gradeName": "三年级上册",
+ "unit": "u7",
+ "unitName": "Unit 7 · Would you like a pie?",
+ "cards": [
+  {
+   "scene_title_cn": "野餐甜品",
+   "scene_title_en": "Picnic Treats",
+   "card_type": "Object/Place",
+   "scene_brief": "草地上铺着野餐垫，摆着馅饼、蛋糕、彩色糖果和鸡蛋，孩子们围坐。",
+   "targets": [
+    {
+     "word": "pie",
+     "visual_target": "野餐垫上的馅饼",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/paɪ/",
+     "meaning": "馅饼"
+    },
+    {
+     "word": "cake",
+     "visual_target": "奶油蛋糕",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/keɪk/",
+     "meaning": "蛋糕"
+    },
+    {
+     "word": "sweet",
+     "visual_target": "彩色糖果",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/swɪt/",
+     "meaning": "糖果；甜的"
+    },
+    {
+     "word": "egg",
+     "visual_target": "白煮鸡蛋",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/eɡ/",
+     "meaning": "鸡蛋"
+    }
+   ],
+   "card_id": "YL-G3UP-U7-C01"
+  },
+  {
+   "scene_title_cn": "冷热对比",
+   "scene_title_en": "Hot and Cold",
+   "card_type": "Choice/Contrast",
+   "scene_brief": "餐桌旁，孩子一手拿冰块，一手对热汤吹气。",
+   "targets": [
+    {
+     "word": "ice",
+     "visual_target": "透明杯里的冰块",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/aɪs/",
+     "meaning": "冰"
+    },
+    {
+     "word": "hot",
+     "visual_target": "孩子对热汤吹气的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/hɒt/",
+     "meaning": "热的"
+    }
+   ],
+   "card_id": "YL-G3UP-U7-C02"
+  },
+  {
+   "scene_title_cn": "餐桌表达",
+   "scene_title_en": "At the Table",
+   "card_type": "Dialogue/Expression",
+   "scene_brief": "餐桌旁，孩子先对青菜摆手，后合手向妈妈请求蛋糕。",
+   "targets": [
+    {
+     "word": "no",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/nəʊ/",
+     "meaning": "不；不要"
+    },
+    {
+     "word": "please",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/plɪz/",
+     "meaning": "请"
+    }
+   ],
+   "card_id": "YL-G3UP-U7-C03"
+  }
+ ]
+}

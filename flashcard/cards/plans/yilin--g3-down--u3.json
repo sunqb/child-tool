@@ -1,0 +1,91 @@
+{
+ "version": "yilin",
+ "grade": "g3-down",
+ "gradeName": "三年级下册",
+ "unit": "u3",
+ "unitName": "Unit 3 · Is this your pencil?",
+ "cards": [
+  {
+   "scene_title_cn": "找丢失的文具",
+   "scene_title_en": "Lost Stationery",
+   "card_type": "Narrative",
+   "scene_brief": "男孩蹲在课桌旁翻找敞开的空书包，桌上放着铅笔和散落的蜡笔。",
+   "targets": [
+    {
+     "word": "pencil",
+     "visual_target": "桌上的一支黄色铅笔",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈpensəl/",
+     "meaning": "铅笔"
+    },
+    {
+     "word": "crayon",
+     "visual_target": "桌边散落的红色蜡笔",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/kreɪɒn/",
+     "meaning": "蜡笔"
+    },
+    {
+     "word": "schoolbag",
+     "visual_target": "男孩面前敞开的蓝色书包",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈskuːlbæɡ/",
+     "meaning": "书包"
+    },
+    {
+     "word": "lost",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/lɒst/",
+     "meaning": "丢失的"
+    }
+   ],
+   "card_id": "YL-G3DOWN-U3-C01"
+  },
+  {
+   "scene_title_cn": "近处与远处",
+   "scene_title_en": "This and That",
+   "card_type": "Choice/Contrast",
+   "scene_brief": "女孩指近处红球，男孩指远处风筝；女孩紧抱布熊，男孩指向布熊。",
+   "targets": [
+    {
+     "word": "this",
+     "visual_target": "女孩手指近处红球",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/ðɪs/",
+     "meaning": "这；这个"
+    },
+    {
+     "word": "that",
+     "visual_target": "男孩手指远处风筝",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/ðæt/",
+     "meaning": "那；那个"
+    },
+    {
+     "word": "my",
+     "visual_target": "女孩把布熊紧抱在胸前的所属动作",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/maɪ/",
+     "meaning": "我的"
+    },
+    {
+     "word": "your",
+     "visual_target": "男孩伸手指向女孩怀里布熊的所属指向",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/jɔː/",
+     "meaning": "你的；你们的"
+    }
+   ],
+   "card_id": "YL-G3DOWN-U3-C02"
+  }
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "version": "yilin",
+ "grade": "g3-down",
+ "gradeName": "三年级下册",
+ "unit": "u7",
+ "unitName": "Unit 7 · On the farm",
+ "cards": [
+  {
+   "scene_title_cn": "农场动物",
+   "scene_title_en": "Farm Animals",
+   "card_type": "Object/Place",
+   "scene_brief": "农场里粉色小猪、黑白奶牛、黄色鸭子和棕色母鸡围绕红色谷仓与栅栏活动。",
+   "targets": [
+    {
+     "word": "farm",
+     "visual_target": "带红色谷仓、栅栏和草地的农场全景",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/fɑːm/",
+     "meaning": "农场"
+    },
+    {
+     "word": "pig",
+     "visual_target": "泥坑旁的粉色小猪",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/pɪɡ/",
+     "meaning": "猪"
+    },
+    {
+     "word": "cow",
+     "visual_target": "栅栏边的黑白奶牛",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/kaʊ/",
+     "meaning": "奶牛"
+    },
+    {
+     "word": "duck",
+     "visual_target": "小池塘里的黄色鸭子",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/dʌk/",
+     "meaning": "鸭子"
+    },
+    {
+     "word": "chicken",
+     "visual_target": "谷仓前的棕色母鸡",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈtʃɪkən/",
+     "meaning": "鸡"
+    }
+   ],
+   "card_id": "YL-G3DOWN-U7-C01"
+  },
+  {
+   "scene_title_cn": "水果篮",
+   "scene_title_en": "Fruit Basket",
+   "card_type": "Object/Place",
+   "scene_brief": "户外野餐垫上的水果篮里放着青梨、红苹果和橙子，旁边有绿草和树荫。",
+   "targets": [
+    {
+     "word": "pear",
+     "visual_target": "水果篮里的青梨",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/peə/",
+     "meaning": "梨"
+    },
+    {
+     "word": "apple",
+     "visual_target": "水果篮里的红苹果",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈæpəl/",
+     "meaning": "苹果"
+    },
+    {
+     "word": "orange",
+     "visual_target": "水果篮里的橙色橙子",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈɒrɪnʤ/",
+     "meaning": "橙子"
+    }
+   ],
+   "card_id": "YL-G3DOWN-U7-C02"
+  }
+ ]
+}

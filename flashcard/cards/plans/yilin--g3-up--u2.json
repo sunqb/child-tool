@@ -1,0 +1,100 @@
+{
+ "version": "yilin",
+ "grade": "g3-up",
+ "gradeName": "三年级上册",
+ "unit": "u2",
+ "unitName": "Unit 2 · I'm Liu Tao",
+ "cards": [
+  {
+   "scene_title_cn": "初次见面",
+   "scene_title_en": "Meeting Friends",
+   "card_type": "Dialogue/Expression",
+   "scene_brief": "公园里，两个孩子初次见面，男孩指向对方，女孩指向自己，微笑问候。",
+   "targets": [
+    {
+     "word": "are",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ɑː/",
+     "meaning": "是"
+    },
+    {
+     "word": "you",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/juː/",
+     "meaning": "你；你们"
+    },
+    {
+     "word": "am",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/æm/",
+     "meaning": "是"
+    }
+   ],
+   "card_id": "YL-G3UP-U2-C01"
+  },
+  {
+   "scene_title_cn": "点头与摇头",
+   "scene_title_en": "Yes or No",
+   "card_type": "Choice/Contrast",
+   "scene_brief": "玩具箱前，一个孩子点头拿球，另一个孩子摇头摆手拒绝。",
+   "targets": [
+    {
+     "word": "yes",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/jes/",
+     "meaning": "是；对"
+    },
+    {
+     "word": "no",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/nəʊ/",
+     "meaning": "不；不是"
+    },
+    {
+     "word": "not",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/nɒt/",
+     "meaning": "不；没有"
+    }
+   ],
+   "card_id": "YL-G3UP-U2-C02"
+  },
+  {
+   "scene_title_cn": "校门口告别",
+   "scene_title_en": "Saying Goodbye",
+   "card_type": "Dialogue/Expression",
+   "scene_brief": "校门口，两个孩子挥手告别，旁边第三个孩子也挥手回应。",
+   "targets": [
+    {
+     "word": "goodbye",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ɡʊdˈbaɪ/",
+     "meaning": "再见"
+    },
+    {
+     "word": "too",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/tuː/",
+     "meaning": "也"
+    }
+   ],
+   "card_id": "YL-G3UP-U2-C03"
+  }
+ ]
+}

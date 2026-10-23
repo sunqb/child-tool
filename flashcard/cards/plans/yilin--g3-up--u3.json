@@ -1,0 +1,91 @@
+{
+ "version": "yilin",
+ "grade": "g3-up",
+ "gradeName": "三年级上册",
+ "unit": "u3",
+ "unitName": "Unit 3 · My friends",
+ "cards": [
+  {
+   "scene_title_cn": "认识新朋友",
+   "scene_title_en": "Meeting a Friend",
+   "card_type": "Relation",
+   "scene_brief": "操场边，女孩按胸伸手，指向身旁新同学，两个同伴微笑看。",
+   "targets": [
+    {
+     "word": "my",
+     "visual_target": "女孩按在自己胸前的右手",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/maɪ/",
+     "meaning": "我的"
+    },
+    {
+     "word": "friend",
+     "visual_target": "女孩身旁的新同学",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/frend/",
+     "meaning": "朋友"
+    },
+    {
+     "word": "this",
+     "visual_target": "女孩伸向新同学的手",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/ðɪs/",
+     "meaning": "这；这个"
+    },
+    {
+     "word": "is",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ɪz/",
+     "meaning": "是"
+    }
+   ],
+   "card_id": "YL-G3UP-U3-C01"
+  },
+  {
+   "scene_title_cn": "客厅介绍",
+   "scene_title_en": "Family Introduction",
+   "card_type": "Relation",
+   "scene_brief": "客厅里，男孩和妹妹并肩站，妹妹手指爸爸，大家微笑。",
+   "targets": [
+    {
+     "word": "he",
+     "visual_target": "穿蓝衣的男孩",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/hi/",
+     "meaning": "他"
+    },
+    {
+     "word": "she",
+     "visual_target": "扎辫子的妹妹",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ʃi/",
+     "meaning": "她"
+    },
+    {
+     "word": "sister",
+     "visual_target": "男孩身旁并肩站立的妹妹",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/ˈsɪstə/",
+     "meaning": "姐姐；妹妹"
+    },
+    {
+     "word": "name",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/neɪm/",
+     "meaning": "名字"
+    }
+   ],
+   "card_id": "YL-G3UP-U3-C02"
+  }
+ ]
+}

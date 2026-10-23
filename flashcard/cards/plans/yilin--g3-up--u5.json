@@ -1,0 +1,91 @@
+{
+ "version": "yilin",
+ "grade": "g3-up",
+ "gradeName": "三年级上册",
+ "unit": "u5",
+ "unitName": "Unit 5 · Look at me!",
+ "cards": [
+  {
+   "scene_title_cn": "衣物摆放角",
+   "scene_title_en": "Clothes Corner",
+   "card_type": "Object/Place",
+   "scene_brief": "儿童房床上摆着红色裙子、帽子和夹克，衣物崭新平整。",
+   "targets": [
+    {
+     "word": "skirt",
+     "visual_target": "床上的裙子",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/skɜːt/",
+     "meaning": "裙子"
+    },
+    {
+     "word": "cap",
+     "visual_target": "床上的帽子",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/kæp/",
+     "meaning": "帽子"
+    },
+    {
+     "word": "jacket",
+     "visual_target": "床上的夹克",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈdʒækɪt/",
+     "meaning": "夹克衫"
+    },
+    {
+     "word": "red",
+     "visual_target": "裙子的红色",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/red/",
+     "meaning": "红色的"
+    },
+    {
+     "word": "new",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/nuː/",
+     "meaning": "新的"
+    }
+   ],
+   "card_id": "YL-G3UP-U5-C01"
+  },
+  {
+   "scene_title_cn": "照镜子",
+   "scene_title_en": "Looking in the Mirror",
+   "card_type": "Dialogue/Expression",
+   "scene_brief": "孩子站在镜前转头看镜中的自己，妈妈微笑竖拇指。",
+   "targets": [
+    {
+     "word": "look",
+     "visual_target": "孩子转头看镜中自己的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/lʊk/",
+     "meaning": "看"
+    },
+    {
+     "word": "nice",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/nɪs/",
+     "meaning": "好看的；好的"
+    },
+    {
+     "word": "great",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ɡreɪt/",
+     "meaning": "好极了"
+    }
+   ],
+   "card_id": "YL-G3UP-U5-C02"
+  }
+ ]
+}

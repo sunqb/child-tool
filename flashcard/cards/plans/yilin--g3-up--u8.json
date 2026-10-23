@@ -1,0 +1,91 @@
+{
+ "version": "yilin",
+ "grade": "g3-up",
+ "gradeName": "三年级上册",
+ "unit": "u8",
+ "unitName": "Unit 8 · Happy New Year!",
+ "cards": [
+  {
+   "scene_title_cn": "玩具角",
+   "scene_title_en": "Toy Corner",
+   "card_type": "Action",
+   "scene_brief": "快乐的男孩坐在地毯上玩玩具箱旁的布娃娃、红球和小汽车。",
+   "targets": [
+    {
+     "word": "happy",
+     "visual_target": "男孩灿烂的笑脸",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈhæpi/",
+     "meaning": "快乐的"
+    },
+    {
+     "word": "toy",
+     "visual_target": "装满积木和玩具的玩具箱",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/tɒɪ/",
+     "meaning": "玩具"
+    },
+    {
+     "word": "doll",
+     "visual_target": "布娃娃",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/dɒl/",
+     "meaning": "玩偶；娃娃"
+    },
+    {
+     "word": "ball",
+     "visual_target": "红色皮球",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/bɔːl/",
+     "meaning": "球"
+    },
+    {
+     "word": "car",
+     "visual_target": "玩具小汽车",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/kɑː/",
+     "meaning": "小汽车"
+    }
+   ],
+   "card_id": "YL-G3UP-U8-C01"
+  },
+  {
+   "scene_title_cn": "跨年礼物",
+   "scene_title_en": "New Year Gift",
+   "card_type": "Timeline",
+   "scene_brief": "跨年夜，孩子抱着崭新的礼物盒，窗外烟花绽放。",
+   "targets": [
+    {
+     "word": "new",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/nuː/",
+     "meaning": "新的"
+    },
+    {
+     "word": "year",
+     "visual_target": "窗外跨年烟花与新年彩带",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/jɪə/",
+     "meaning": "年"
+    },
+    {
+     "word": "gift",
+     "visual_target": "系蝴蝶结的礼物盒",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ɡɪft/",
+     "meaning": "礼物"
+    }
+   ],
+   "card_id": "YL-G3UP-U8-C02"
+  }
+ ]
+}

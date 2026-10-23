@@ -1,0 +1,91 @@
+{
+ "version": "yilin",
+ "grade": "g3-up",
+ "gradeName": "三年级上册",
+ "unit": "u1",
+ "unitName": "Unit 1 · Hello",
+ "cards": [
+  {
+   "scene_title_cn": "早晨问候",
+   "scene_title_en": "Morning Greetings",
+   "card_type": "Dialogue/Expression",
+   "scene_brief": "清晨校门口，两名孩子向女老师挥手问好，朝阳照亮校园。",
+   "targets": [
+    {
+     "word": "hello",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/heˈləʊ/",
+     "meaning": "你好"
+    },
+    {
+     "word": "hi",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/haɪ/",
+     "meaning": "嗨"
+    },
+    {
+     "word": "good",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ɡʊd/",
+     "meaning": "好的"
+    },
+    {
+     "word": "morning",
+     "visual_target": "初升的太阳与清晨光影",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ˈmɔːnɪŋ/",
+     "meaning": "早晨"
+    }
+   ],
+   "card_id": "YL-G3UP-U1-C01"
+  },
+  {
+   "scene_title_cn": "下午课堂",
+   "scene_title_en": "Afternoon Class",
+   "card_type": "Relation",
+   "scene_brief": "下午教室里，女老师站在讲台旁，学生们坐好，一名男孩指着自己。",
+   "targets": [
+    {
+     "word": "afternoon",
+     "visual_target": "窗外偏西的太阳和斜长影子",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ˌɑːftəˈnuːn/",
+     "meaning": "下午"
+    },
+    {
+     "word": "miss",
+     "visual_target": "站在讲台边的女老师",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/mɪs/",
+     "meaning": "小姐"
+    },
+    {
+     "word": "class",
+     "visual_target": "坐在座位上的一群学生",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/klɑːs/",
+     "meaning": "同学们；班级"
+    },
+    {
+     "word": "i",
+     "visual_target": "男孩用手指着自己的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/aɪ/",
+     "meaning": "我"
+    }
+   ],
+   "card_id": "YL-G3UP-U1-C02"
+  }
+ ]
+}

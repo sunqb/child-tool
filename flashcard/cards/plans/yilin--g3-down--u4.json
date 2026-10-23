@@ -1,0 +1,91 @@
+{
+ "version": "yilin",
+ "grade": "g3-down",
+ "gradeName": "三年级下册",
+ "unit": "u4",
+ "unitName": "Unit 4 · Where's the bird?",
+ "cards": [
+  {
+   "scene_title_cn": "教室方位",
+   "scene_title_en": "In the Classroom",
+   "card_type": "Relation",
+   "scene_brief": "教室里，男孩看见一本书在课桌上，皮球在椅子下面。",
+   "targets": [
+    {
+     "word": "desk",
+     "visual_target": "教室里的课桌",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/desk/",
+     "meaning": "课桌"
+    },
+    {
+     "word": "chair",
+     "visual_target": "教室里的椅子",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/tʃeə/",
+     "meaning": "椅子"
+    },
+    {
+     "word": "on",
+     "visual_target": "书本在课桌上面的接触关系",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/ɒn/",
+     "meaning": "在……上面"
+    },
+    {
+     "word": "under",
+     "visual_target": "皮球在椅子下方的空间关系",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/ˈʌndə/",
+     "meaning": "在……下面"
+    }
+   ],
+   "card_id": "YL-G3DOWN-U4-C01"
+  },
+  {
+   "scene_title_cn": "树后找鸟",
+   "scene_title_en": "Where Is the Bird?",
+   "card_type": "Dialogue/Expression",
+   "scene_brief": "公园里，男孩望向大树，鸟躲在树干后面，他疑惑寻找。",
+   "targets": [
+    {
+     "word": "where",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/weə/",
+     "meaning": "在哪里"
+    },
+    {
+     "word": "bird",
+     "visual_target": "躲在树干后的小鸟",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/bɜːd/",
+     "meaning": "鸟"
+    },
+    {
+     "word": "tree",
+     "visual_target": "公园里的大树",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/tri/",
+     "meaning": "树"
+    },
+    {
+     "word": "behind",
+     "visual_target": "鸟在树干后面的遮挡关系",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/bɪˈhaɪnd/",
+     "meaning": "在……后面"
+    }
+   ],
+   "card_id": "YL-G3DOWN-U4-C02"
+  }
+ ]
+}

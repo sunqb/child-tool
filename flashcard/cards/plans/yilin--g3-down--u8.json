@@ -1,0 +1,91 @@
+{
+ "version": "yilin",
+ "grade": "g3-down",
+ "gradeName": "三年级下册",
+ "unit": "u8",
+ "unitName": "Unit 8 · We're twins!",
+ "cards": [
+  {
+   "scene_title_cn": "公园里的孩子们",
+   "scene_title_en": "Children in the Park",
+   "card_type": "Narrative",
+   "scene_brief": "阳光公园里，男孩和女孩玩球，婴儿坐在垫子上，一对双胞胎并排站立。",
+   "targets": [
+    {
+     "word": "boy",
+     "visual_target": "穿蓝色短袖玩球的男孩",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/bɒɪ/",
+     "meaning": "男孩"
+    },
+    {
+     "word": "girl",
+     "visual_target": "扎双马尾抱球的女孩",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ɡɜːl/",
+     "meaning": "女孩"
+    },
+    {
+     "word": "baby",
+     "visual_target": "坐在野餐垫上的婴儿",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈbeɪbi/",
+     "meaning": "婴儿"
+    },
+    {
+     "word": "twin",
+     "visual_target": "穿同款黄色条纹上衣并排站立的两个孩子",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/twɪn/",
+     "meaning": "双胞胎之一"
+    }
+   ],
+   "card_id": "YL-G3DOWN-U8-C01"
+  },
+  {
+   "scene_title_cn": "家庭野餐",
+   "scene_title_en": "Family Picnic",
+   "card_type": "Relation",
+   "scene_brief": "树下野餐垫旁，男人和女人坐着，表亲牵着孩子的手，一家人面对镜头。",
+   "targets": [
+    {
+     "word": "man",
+     "visual_target": "戴眼镜的成年男子",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/mæn/",
+     "meaning": "男人"
+    },
+    {
+     "word": "woman",
+     "visual_target": "短发成年女子",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈwʊmən/",
+     "meaning": "女人"
+    },
+    {
+     "word": "cousin",
+     "visual_target": "与男孩手牵手的亲戚家同龄孩子",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/ˈkʌzən/",
+     "meaning": "表（堂）兄弟姐妹"
+    },
+    {
+     "word": "we",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/wi/",
+     "meaning": "我们"
+    }
+   ],
+   "card_id": "YL-G3DOWN-U8-C02"
+  }
+ ]
+}

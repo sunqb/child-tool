@@ -1,0 +1,91 @@
+{
+ "version": "yilin",
+ "grade": "g3-up",
+ "gradeName": "三年级上册",
+ "unit": "u6",
+ "unitName": "Unit 6 · Colours",
+ "cards": [
+  {
+   "scene_title_cn": "花园色彩",
+   "scene_title_en": "Garden Colours",
+   "card_type": "Object/Place",
+   "scene_brief": "花园里，蓝鸟停在绿草地上，橙子挂在树旁，黄花在阳光下盛开。",
+   "targets": [
+    {
+     "word": "yellow",
+     "visual_target": "黄色向日葵",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈjeləʊ/",
+     "meaning": "黄色的"
+    },
+    {
+     "word": "blue",
+     "visual_target": "蓝色小鸟",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/bluː/",
+     "meaning": "蓝色的"
+    },
+    {
+     "word": "green",
+     "visual_target": "绿色草地",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ɡrɪn/",
+     "meaning": "绿色的"
+    },
+    {
+     "word": "orange",
+     "visual_target": "橙色橙子",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈɒrɪnʤ/",
+     "meaning": "橙色的；橙子"
+    }
+   ],
+   "card_id": "YL-G3UP-U6-C01"
+  },
+  {
+   "scene_title_cn": "美术角",
+   "scene_title_en": "Art Corner",
+   "card_type": "Dialogue/Expression",
+   "scene_brief": "美术桌旁，孩子指着调色盘询问，桌上有白纸、黑颜料和棕画笔。",
+   "targets": [
+    {
+     "word": "white",
+     "visual_target": "白色画纸",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/waɪt/",
+     "meaning": "白色的"
+    },
+    {
+     "word": "black",
+     "visual_target": "黑色颜料块",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/blæk/",
+     "meaning": "黑色的"
+    },
+    {
+     "word": "brown",
+     "visual_target": "棕色画笔",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/braʊn/",
+     "meaning": "棕色的"
+    },
+    {
+     "word": "colour",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ˈkʌlə/",
+     "meaning": "颜色"
+    }
+   ],
+   "card_id": "YL-G3UP-U6-C02"
+  }
+ ]
+}
