@@ -1,0 +1,116 @@
+{
+ "version": "yilin",
+ "grade": "g6-down",
+ "gradeName": "六年级下册",
+ "unit": "u7",
+ "unitName": "Unit 7 · Summer holiday plans",
+ "cards": [
+  {
+   "scene_title_cn": "暑假计划",
+   "scene_title_en": "Summer Holiday Plan",
+   "card_type": "Dialogue/Expression",
+   "scene_brief": "一家人围看地图，桌边放着行李箱，窗外有夏日太阳。",
+   "targets": [
+    {
+     "word": "summer holiday",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ˈsʌmə ˈhɒlɪdeɪ/",
+     "meaning": "暑假"
+    },
+    {
+     "word": "plan",
+     "visual_target": "爸爸手指沿着地图路线移动",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/plæn/",
+     "meaning": "计划"
+    },
+    {
+     "word": "how long",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/haʊ lɒŋ/",
+     "meaning": "多久"
+    }
+   ],
+   "card_id": "YL-G6DOWN-U7-C01"
+  },
+  {
+   "scene_title_cn": "迪士尼之旅",
+   "scene_title_en": "Disneyland Trip",
+   "card_type": "Timeline",
+   "scene_brief": "三格画面：酒店床边放行李、走进迪士尼城堡、汽车返家。",
+   "targets": [
+    {
+     "word": "stay",
+     "visual_target": "一家人坐在酒店床边休息",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/steɪ/",
+     "meaning": "停留"
+    },
+    {
+     "word": "visit",
+     "visual_target": "一家人走进乐园大门",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈvɪzɪt/",
+     "meaning": "参观；拜访"
+    },
+    {
+     "word": "disneyland",
+     "visual_target": "童话城堡尖塔",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈdɪznɪlænd/",
+     "meaning": "迪士尼乐园"
+    },
+    {
+     "word": "go back",
+     "visual_target": "汽车驶回有院子的家",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ɡəʊ bæk/",
+     "meaning": "回去"
+    }
+   ],
+   "card_id": "YL-G6DOWN-U7-C02"
+  },
+  {
+   "scene_title_cn": "旅行目的地",
+   "scene_title_en": "Travel Choices",
+   "card_type": "Choice/Contrast",
+   "scene_brief": "孩子拖着行李箱，面对两张风景照片：台北101和香港天际线。",
+   "targets": [
+    {
+     "word": "travel",
+     "visual_target": "孩子拖着行李箱准备出发",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈtrævəl/",
+     "meaning": "旅行"
+    },
+    {
+     "word": "taipei",
+     "visual_target": "台北101高楼",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈtaɪpeɪ/",
+     "meaning": "台北"
+    },
+    {
+     "word": "hong kong",
+     "visual_target": "香港天际线与天星小轮",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/hɒŋ kɒŋɡ/",
+     "meaning": "香港"
+    }
+   ],
+   "card_id": "YL-G6DOWN-U7-C03"
+  }
+ ]
+}

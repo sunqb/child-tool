@@ -1,0 +1,116 @@
+{
+ "version": "yilin",
+ "grade": "g5-up",
+ "gradeName": "五年级上册",
+ "unit": "u3",
+ "unitName": "Unit 3 · Our animal friends",
+ "cards": [
+  {
+   "scene_title_cn": "动物观察角",
+   "scene_title_en": "Animal Corner",
+   "card_type": "Object/Place",
+   "scene_brief": "公园动物角里，白兔吃草、小鸟展翅、仓鼠跑动，孩子们围观。",
+   "targets": [
+    {
+     "word": "animal",
+     "visual_target": "白兔、小鸟和仓鼠组成的动物群",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈænəməl/",
+     "meaning": "动物"
+    },
+    {
+     "word": "rabbit",
+     "visual_target": "低头吃草的白兔",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈræbɪt/",
+     "meaning": "兔子"
+    },
+    {
+     "word": "wing",
+     "visual_target": "小鸟展开的翅膀",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/wɪŋ/",
+     "meaning": "翅膀"
+    },
+    {
+     "word": "tail",
+     "visual_target": "白兔翘起的短尾巴",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/teɪl/",
+     "meaning": "尾巴"
+    }
+   ],
+   "card_id": "YL-G5UP-U3-C01"
+  },
+  {
+   "scene_title_cn": "草地伸展操",
+   "scene_title_en": "Stretch on the Grass",
+   "card_type": "Action",
+   "scene_brief": "草地上，小男孩抬腿伸臂做伸展，身体和脚清晰可见。",
+   "targets": [
+    {
+     "word": "body",
+     "visual_target": "男孩伸展开的整个身体",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈbɒdi/",
+     "meaning": "身体"
+    },
+    {
+     "word": "leg",
+     "visual_target": "男孩抬起的腿",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/leɡ/",
+     "meaning": "腿"
+    },
+    {
+     "word": "arm",
+     "visual_target": "男孩伸展开的手臂",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ɑːm/",
+     "meaning": "手臂"
+    },
+    {
+     "word": "foot",
+     "visual_target": "男孩踩在草地上的脚",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/fʊt/",
+     "meaning": "脚"
+    }
+   ],
+   "card_id": "YL-G5UP-U3-C02"
+  },
+  {
+   "scene_title_cn": "分享玩具",
+   "scene_title_en": "Sharing a Toy",
+   "card_type": "Relation",
+   "scene_brief": "两个小朋友在院子里，男孩把玩具熊递给女孩，两人微笑对视。",
+   "targets": [
+    {
+     "word": "give",
+     "visual_target": "男孩双手把玩具熊递给女孩的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ɡɪv/",
+     "meaning": "给"
+    },
+    {
+     "word": "friend",
+     "visual_target": "两个小朋友并肩微笑、相互信任的关系",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/frend/",
+     "meaning": "朋友"
+    }
+   ],
+   "card_id": "YL-G5UP-U3-C03"
+  }
+ ]
+}

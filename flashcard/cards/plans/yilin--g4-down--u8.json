@@ -1,0 +1,91 @@
+{
+ "version": "yilin",
+ "grade": "g4-down",
+ "gradeName": "四年级下册",
+ "unit": "u8",
+ "unitName": "Unit 8 · How are you?",
+ "cards": [
+  {
+   "scene_title_cn": "摔倒后的安慰",
+   "scene_title_en": "After a Fall",
+   "card_type": "Dialogue/Expression",
+   "scene_brief": "公园长椅旁，女孩摔倒后摸膝盖皱眉，妈妈蹲下安慰并拥抱她。",
+   "targets": [
+    {
+     "word": "feel",
+     "visual_target": "女孩摸膝盖皱眉的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/fɪl/",
+     "meaning": "感觉"
+    },
+    {
+     "word": "sorry",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ˈsɒri/",
+     "meaning": "难过的；抱歉的"
+    },
+    {
+     "word": "thank",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/θæŋk/",
+     "meaning": "感谢"
+    },
+    {
+     "word": "dear",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/dɪə/",
+     "meaning": "亲爱的"
+    }
+   ],
+   "card_id": "YL-G4DOWN-U8-C01"
+  },
+  {
+   "scene_title_cn": "病后恢复",
+   "scene_title_en": "Getting Better",
+   "card_type": "Timeline",
+   "scene_brief": "卧室里，病童从躺床皱眉到坐起喝水竖拇指，窗外太阳移动。",
+   "targets": [
+    {
+     "word": "better",
+     "visual_target": "左侧卧床皱眉与右侧坐起微笑的对比",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/ˈbetə/",
+     "meaning": "更好的"
+    },
+    {
+     "word": "soon",
+     "visual_target": "窗外太阳从高到低移动的短暂时段",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/suːn/",
+     "meaning": "不久；很快"
+    },
+    {
+     "word": "fine",
+     "visual_target": "孩子坐起竖大拇指微笑的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/faɪn/",
+     "meaning": "好的；健康的"
+    },
+    {
+     "word": "well",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/wel/",
+     "meaning": "好；健康"
+    }
+   ],
+   "card_id": "YL-G4DOWN-U8-C02"
+  }
+ ]
+}

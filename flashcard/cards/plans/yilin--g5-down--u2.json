@@ -1,0 +1,116 @@
+{
+ "version": "yilin",
+ "grade": "g5-down",
+ "gradeName": "五年级下册",
+ "unit": "u2",
+ "unitName": "Unit 2 · How do you come to school?",
+ "cards": [
+  {
+   "scene_title_cn": "上学路上",
+   "scene_title_en": "On the Way to School",
+   "card_type": "Narrative",
+   "scene_brief": "清晨，孩子们沿街道走向学校，路边有公交车、出租车和地铁入口。",
+   "targets": [
+    {
+     "word": "come to school",
+     "visual_target": "孩子背书包走向校门的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/kʌm tə skuːl/",
+     "meaning": "来上学"
+    },
+    {
+     "word": "metro",
+     "visual_target": "地下通道入口与轨道列车",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈmetrəʊ/",
+     "meaning": "地铁"
+    },
+    {
+     "word": "bus",
+     "visual_target": "黄色公共汽车",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/bʌs/",
+     "meaning": "公共汽车"
+    },
+    {
+     "word": "on foot",
+     "visual_target": "孩子走路迈步的双腿和步态",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ɒn fʊt/",
+     "meaning": "步行"
+    },
+    {
+     "word": "taxi",
+     "visual_target": "带车顶灯的出租车",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈtæksi/",
+     "meaning": "出租车"
+    }
+   ],
+   "card_id": "YL-G5DOWN-U2-C01"
+  },
+  {
+   "scene_title_cn": "海陆空交通",
+   "scene_title_en": "Transport",
+   "card_type": "Object/Place",
+   "scene_brief": "海边城市全景：海面有轮船，铁轨上有火车，远处机场有飞机。",
+   "targets": [
+    {
+     "word": "plane",
+     "visual_target": "远处跑道上的白色飞机",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/pleɪn/",
+     "meaning": "飞机"
+    },
+    {
+     "word": "ship",
+     "visual_target": "海面上的大轮船",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ʃɪp/",
+     "meaning": "轮船"
+    },
+    {
+     "word": "train",
+     "visual_target": "铁轨上的火车",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/treɪn/",
+     "meaning": "火车"
+    }
+   ],
+   "card_id": "YL-G5DOWN-U2-C02"
+  },
+  {
+   "scene_title_cn": "近与远",
+   "scene_title_en": "Near and Far",
+   "card_type": "Choice/Contrast",
+   "scene_brief": "公园草地上，近处大树和滑梯清晰，远处小山和校舍变小。",
+   "targets": [
+    {
+     "word": "near",
+     "visual_target": "画面近处清晰的大树和滑梯",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/nɪə/",
+     "meaning": "近的"
+    },
+    {
+     "word": "far",
+     "visual_target": "画面远处的小山和校舍",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/fɑː/",
+     "meaning": "远的"
+    }
+   ],
+   "card_id": "YL-G5DOWN-U2-C03"
+  }
+ ]
+}

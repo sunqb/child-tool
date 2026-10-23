@@ -1,0 +1,116 @@
+{
+ "version": "yilin",
+ "grade": "g5-down",
+ "gradeName": "五年级下册",
+ "unit": "u1",
+ "unitName": "Unit 1 · Cinderella",
+ "cards": [
+  {
+   "scene_title_cn": "城堡更衣",
+   "scene_title_en": "Dressing at the Castle",
+   "card_type": "Action",
+   "scene_brief": "城堡更衣室里，王子穿上红斗篷，仙女帮他脱下旧靴子。",
+   "targets": [
+    {
+     "word": "prince",
+     "visual_target": "穿红斗篷的王子",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/prɪns/",
+     "meaning": "王子"
+    },
+    {
+     "word": "fairy",
+     "visual_target": "拿魔法棒的仙女",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈferi/",
+     "meaning": "仙女"
+    },
+    {
+     "word": "put on",
+     "visual_target": "王子披上红斗篷的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/pʊt ɒn/",
+     "meaning": "穿上"
+    },
+    {
+     "word": "take off",
+     "visual_target": "仙女拉下旧靴子的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/teɪk ɒf/",
+     "meaning": "脱下"
+    }
+   ],
+   "card_id": "YL-G5DOWN-U1-C01"
+  },
+  {
+   "scene_title_cn": "派对前后",
+   "scene_title_en": "Before and During the Party",
+   "card_type": "Timeline",
+   "scene_brief": "画面分左右：左边孩子挂彩旗布置空会场，右边派对中大家牵手跳舞大笑。",
+   "targets": [
+    {
+     "word": "before",
+     "visual_target": "左侧尚未布置完的空会场和正在挂彩旗的准备画面",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/bɪˈfɔː/",
+     "meaning": "在……以前"
+    },
+    {
+     "word": "party",
+     "visual_target": "摆着蛋糕、彩旗和气球的派对会场",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈpɑːti/",
+     "meaning": "聚会"
+    },
+    {
+     "word": "have a good time",
+     "visual_target": "孩子们牵手跳舞大笑的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/hæv ə ɡʊd taɪm/",
+     "meaning": "玩得开心"
+    }
+   ],
+   "card_id": "YL-G5DOWN-U1-C02"
+  },
+  {
+   "scene_title_cn": "为什么迟到",
+   "scene_title_en": "Why So Late",
+   "card_type": "Dialogue/Expression",
+   "scene_brief": "派对门口，一个孩子喘气跑进来，另一个孩子摊手询问，旁边有倒地的自行车和停摆的钟。",
+   "targets": [
+    {
+     "word": "why",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/waɪ/",
+     "meaning": "为什么"
+    },
+    {
+     "word": "because",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/bɪˈkɒz/",
+     "meaning": "因为"
+    },
+    {
+     "word": "late",
+     "visual_target": "孩子喘气推门进来的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/leɪt/",
+     "meaning": "迟的"
+    }
+   ],
+   "card_id": "YL-G5DOWN-U1-C03"
+  }
+ ]
+}

@@ -1,0 +1,107 @@
+{
+ "version": "yilin",
+ "grade": "g6-down",
+ "gradeName": "六年级下册",
+ "unit": "u2",
+ "unitName": "Unit 2 · Good habits",
+ "cards": [
+  {
+   "scene_title_cn": "整理房间大对比",
+   "scene_title_en": "Tidy or Messy",
+   "card_type": "Choice/Contrast",
+   "scene_brief": "左右对比儿童房：左边满地玩具衣物，右边男孩把积木放回箱子，房间整洁。",
+   "targets": [
+    {
+     "word": "habit",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ˈhæbət/",
+     "meaning": "习惯"
+    },
+    {
+     "word": "good habits",
+     "visual_target": "右侧整洁归位的房间状态",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/ɡʊd ˈhæbəts/",
+     "meaning": "好习惯"
+    },
+    {
+     "word": "bad habits",
+     "visual_target": "左侧乱丢玩具衣物的房间状态",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/bæd ˈhæbəts/",
+     "meaning": "坏习惯"
+    },
+    {
+     "word": "put in order",
+     "visual_target": "男孩把积木放回收纳箱的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/pʊt ɪn ˈɔːdə/",
+     "meaning": "整理"
+    },
+    {
+     "word": "messy",
+     "visual_target": "地上散落的玩具和衣物",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈmesi/",
+     "meaning": "杂乱的"
+    }
+   ],
+   "card_id": "YL-G6DOWN-U2-C01"
+  },
+  {
+   "scene_title_cn": "早晨匆忙时间线",
+   "scene_title_en": "Morning Rush",
+   "card_type": "Timeline",
+   "scene_brief": "早晨男孩揉眼打哈欠，见太阳很高忙穿衣，快速跑向门口，桌上沙漏在漏。",
+   "targets": [
+    {
+     "word": "sleepy",
+     "visual_target": "男孩揉眼打哈欠的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/sˈliːpi/",
+     "meaning": "困倦的"
+    },
+    {
+     "word": "late",
+     "visual_target": "男孩慌张看向窗外高太阳后匆忙穿衣的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/leɪt/",
+     "meaning": "迟的"
+    },
+    {
+     "word": "fast",
+     "visual_target": "男孩快步跑向门口的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/fɑːst/",
+     "meaning": "快地"
+    },
+    {
+     "word": "last",
+     "visual_target": "桌上沙漏中持续下落的沙子",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/lɑːst/",
+     "meaning": "持续"
+    },
+    {
+     "word": "never",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ˈnevə/",
+     "meaning": "从不"
+    }
+   ],
+   "card_id": "YL-G6DOWN-U2-C02"
+  }
+ ]
+}

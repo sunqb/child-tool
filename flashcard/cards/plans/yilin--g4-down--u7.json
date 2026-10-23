@@ -1,0 +1,91 @@
+{
+ "version": "yilin",
+ "grade": "g4-down",
+ "gradeName": "四年级下册",
+ "unit": "u7",
+ "unitName": "Unit 7 · What's the matter?",
+ "cards": [
+  {
+   "scene_title_cn": "生病在家",
+   "scene_title_en": "Sick at Home",
+   "card_type": "Narrative",
+   "scene_brief": "卧室床前，妈妈摸孩子额头，孩子盖毯，床头柜有体温计、纸巾和毛巾。",
+   "targets": [
+    {
+     "word": "matter",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ˈmætə/",
+     "meaning": "问题；事情"
+    },
+    {
+     "word": "cold",
+     "visual_target": "孩子打喷嚏并裹紧毯子",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/kəʊld/",
+     "meaning": "冷的；感冒"
+    },
+    {
+     "word": "fever",
+     "visual_target": "床头柜上的体温计",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈfiːvə/",
+     "meaning": "发烧"
+    },
+    {
+     "word": "headache",
+     "visual_target": "孩子手扶额头皱眉",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈhedeɪk/",
+     "meaning": "头痛"
+    },
+    {
+     "word": "ill",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ɪl/",
+     "meaning": "生病的"
+    }
+   ],
+   "card_id": "YL-G4DOWN-U7-C01"
+  },
+  {
+   "scene_title_cn": "放学后的餐桌",
+   "scene_title_en": "After School at the Table",
+   "card_type": "Action",
+   "scene_brief": "餐桌旁，男孩瘫坐打哈欠，一手捂肚子，一手举着空水杯。",
+   "targets": [
+    {
+     "word": "tired",
+     "visual_target": "男孩打哈欠、肩膀耷拉",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/taɪəd/",
+     "meaning": "累的"
+    },
+    {
+     "word": "hungry",
+     "visual_target": "男孩手捂肚子望向餐桌",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈhʌŋɡri/",
+     "meaning": "饿的"
+    },
+    {
+     "word": "thirsty",
+     "visual_target": "男孩举起空水杯凑近嘴边",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈθɜːsti/",
+     "meaning": "渴的"
+    }
+   ],
+   "card_id": "YL-G4DOWN-U7-C02"
+  }
+ ]
+}

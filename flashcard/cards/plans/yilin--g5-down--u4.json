@@ -1,0 +1,107 @@
+{
+ "version": "yilin",
+ "grade": "g5-down",
+ "gradeName": "五年级下册",
+ "unit": "u4",
+ "unitName": "Unit 4 · Seeing the doctor",
+ "cards": [
+  {
+   "scene_title_cn": "牙科诊室",
+   "scene_title_en": "Dental Clinic",
+   "card_type": "Narrative",
+   "scene_brief": "牙科诊室里，医生用口镜检查男孩牙齿，男孩捂脸，诊台放着无标签药瓶。",
+   "targets": [
+    {
+     "word": "doctor",
+     "visual_target": "穿白大褂戴额镜的医生",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈdɒktə/",
+     "meaning": "医生"
+    },
+    {
+     "word": "check",
+     "visual_target": "医生用口镜查看男孩口腔的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/tʃek/",
+     "meaning": "检查"
+    },
+    {
+     "word": "toothache",
+     "visual_target": "男孩捂住脸颊、皱眉的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈtuːθeɪk/",
+     "meaning": "牙疼"
+    },
+    {
+     "word": "medicine",
+     "visual_target": "诊台上的无标签药瓶和量杯",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈmedəsən/",
+     "meaning": "药"
+    },
+    {
+     "word": "wrong",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/rɒŋ/",
+     "meaning": "不舒服的"
+    }
+   ],
+   "card_id": "YL-G5DOWN-U4-C01"
+  },
+  {
+   "scene_title_cn": "感冒休息",
+   "scene_title_en": "Rest with a Cold",
+   "card_type": "Action",
+   "scene_brief": "卧室里，男孩打喷嚏、摸额头，贴退热贴，妈妈示意他躺下休息。",
+   "targets": [
+    {
+     "word": "feel",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/fɪl/",
+     "meaning": "感觉"
+    },
+    {
+     "word": "fever",
+     "visual_target": "男孩额头上的退热贴",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈfiːvə/",
+     "meaning": "发烧"
+    },
+    {
+     "word": "cold",
+     "visual_target": "男孩打喷嚏并用纸巾擦鼻子的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/kəʊld/",
+     "meaning": "感冒"
+    },
+    {
+     "word": "have a rest",
+     "visual_target": "男孩躺下盖被闭眼休息的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/hæv ə rest/",
+     "meaning": "休息"
+    },
+    {
+     "word": "should",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ʃʊd/",
+     "meaning": "应该"
+    }
+   ],
+   "card_id": "YL-G5DOWN-U4-C02"
+  }
+ ]
+}

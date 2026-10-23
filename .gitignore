@@ -4,3 +4,13 @@
 # 测试与部署过程生成的截图产物
 dictation/test-artifacts/
 dictation/deploy-artifacts/
+
+# 闪卡管线：密钥与本地虚拟环境
+flashcard/tools/.env
+flashcard/tools/.venv/
+
+# 闪卡底图与锚点缓存：体量大且可由 plan + API 重新生成，不进库
+flashcard/cards/base/
+
+# Python 字节码缓存
+__pycache__/

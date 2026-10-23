@@ -1,0 +1,116 @@
+{
+ "version": "yilin",
+ "grade": "g6-up",
+ "gradeName": "六年级上册",
+ "unit": "u3",
+ "unitName": "Unit 3 · Holiday fun",
+ "cards": [
+  {
+   "scene_title_cn": "国庆假期计划",
+   "scene_title_en": "National Day Holiday Plan",
+   "card_type": "Timeline",
+   "scene_brief": "国庆清晨，男孩在行李箱旁打电话，窗外红旗与烟花，笑容满面。",
+   "targets": [
+    {
+     "word": "national day",
+     "visual_target": "窗外红旗与烟花（节日清晨）",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ˈnæʃənəl deɪ/",
+     "meaning": "国庆节"
+    },
+    {
+     "word": "holiday",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ˈhɒlɪdeɪ/",
+     "meaning": "假期"
+    },
+    {
+     "word": "call",
+     "visual_target": "男孩把手机贴在耳边",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/kɔːl/",
+     "meaning": "打电话"
+    }
+   ],
+   "card_id": "YL-G6UP-U3-C01"
+  },
+  {
+   "scene_title_cn": "上海地标",
+   "scene_title_en": "Shanghai Landmarks",
+   "card_type": "Spatial/Cutaway",
+   "scene_brief": "上海城市全景中，孩子在外滩江边追泡泡笑，旁有圆形屋顶博物馆。",
+   "targets": [
+    {
+     "word": "bund",
+     "visual_target": "黄浦江边栏杆与对岸高楼",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/bʌnd/",
+     "meaning": "（上海）外滩"
+    },
+    {
+     "word": "shanghai museum",
+     "visual_target": "圆形屋顶博物馆建筑",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈʃæŋˈhaɪ mˈjuːzɪəm/",
+     "meaning": "上海博物馆"
+    },
+    {
+     "word": "fun",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/fʌn/",
+     "meaning": "乐趣"
+    }
+   ],
+   "card_id": "YL-G6UP-U3-C02"
+  },
+  {
+   "scene_title_cn": "北京地标",
+   "scene_title_en": "Beijing Landmarks",
+   "card_type": "Spatial/Cutaway",
+   "scene_brief": "北京城市全景中，孩子拿望远镜看山脊长城、红墙宫殿、湖上亭桥和城楼广场。",
+   "targets": [
+    {
+     "word": "great wall",
+     "visual_target": "山脊上的蜿蜒城墙",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ɡreɪt wɔːl/",
+     "meaning": "长城"
+    },
+    {
+     "word": "palace museum",
+     "visual_target": "红墙金瓦宫殿群",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈpæləs mˈjuːzɪəm/",
+     "meaning": "故宫"
+    },
+    {
+     "word": "summer palace",
+     "visual_target": "湖面石桥与山坡亭阁",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈsʌmə ˈpæləs/",
+     "meaning": "颐和园"
+    },
+    {
+     "word": "tian'anmen square",
+     "visual_target": "城楼与开阔广场",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/tjænˈænmən skweə/",
+     "meaning": "天安门广场"
+    }
+   ],
+   "card_id": "YL-G6UP-U3-C03"
+  }
+ ]
+}

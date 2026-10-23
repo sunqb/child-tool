@@ -1,0 +1,116 @@
+{
+ "version": "yilin",
+ "grade": "g6-down",
+ "gradeName": "六年级下册",
+ "unit": "u1",
+ "unitName": "Unit 1 · The lion and the mouse",
+ "cards": [
+  {
+   "scene_title_cn": "草原上的雄狮",
+   "scene_title_en": "The Big Lion",
+   "card_type": "Object/Place",
+   "scene_brief": "阳光草原上，一只雄狮站在岩石上挺胸吼叫，旁边有矮树丛。",
+   "targets": [
+    {
+     "word": "lion",
+     "visual_target": "站在岩石上的雄狮",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/laɪən/",
+     "meaning": "狮子"
+    },
+    {
+     "word": "large",
+     "visual_target": "雄狮与脚边矮树丛的体积对比区域",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/lɑːdʒ/",
+     "meaning": "大的"
+    },
+    {
+     "word": "strong",
+     "visual_target": "雄狮挺胸抬起前爪吼叫的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/strɒŋ/",
+     "meaning": "强壮的"
+    }
+   ],
+   "card_id": "YL-G6DOWN-U1-C01"
+  },
+  {
+   "scene_title_cn": "虚弱的小老鼠",
+   "scene_title_en": "The Weak Mouse",
+   "card_type": "Timeline",
+   "scene_brief": "小老鼠先四肢发软趴在草地，随后沿动态线快速跑向远方。",
+   "targets": [
+    {
+     "word": "mouse",
+     "visual_target": "灰褐色小老鼠",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/maʊs/",
+     "meaning": "老鼠"
+    },
+    {
+     "word": "weak",
+     "visual_target": "小老鼠四肢发软趴伏在地",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/wɪk/",
+     "meaning": "弱的"
+    },
+    {
+     "word": "soon",
+     "visual_target": "小老鼠从趴伏到快速跑开的连续动态画面",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/suːn/",
+     "meaning": "很快"
+    }
+   ],
+   "card_id": "YL-G6DOWN-U1-C02"
+  },
+  {
+   "scene_title_cn": "老鼠咬网救狮子",
+   "scene_title_en": "Mouse Bites the Net",
+   "card_type": "Action",
+   "scene_brief": "狮子被粗绳网缠住，小老鼠凑近网绳，用尖牙不断啃咬。",
+   "targets": [
+    {
+     "word": "net",
+     "visual_target": "缠绕在狮子身上的粗绳网",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/net/",
+     "meaning": "网"
+    },
+    {
+     "word": "bite",
+     "visual_target": "小老鼠用牙齿啃咬绳网的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/baɪt/",
+     "meaning": "咬"
+    },
+    {
+     "word": "sharp",
+     "visual_target": "小老鼠露出的尖利门牙",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ʃɑːp/",
+     "meaning": "锋利的"
+    },
+    {
+     "word": "teeth",
+     "visual_target": "小老鼠口中露出的牙齿",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/tɪθ/",
+     "meaning": "牙齿"
+    }
+   ],
+   "card_id": "YL-G6DOWN-U1-C03"
+  }
+ ]
+}

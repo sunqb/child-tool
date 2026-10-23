@@ -1,0 +1,206 @@
+{
+ "version": "yilin",
+ "grade": "g4-up",
+ "gradeName": "四年级上册",
+ "unit": "u7",
+ "unitName": "Unit 7 · Seasons",
+ "cards": [
+  {
+   "scene_title_cn": "春日湖边",
+   "scene_title_en": "Spring by the Lake",
+   "card_type": "Action",
+   "scene_brief": "春日公园湖边，一家划船，岸边孩子种树，小鸟飞过。",
+   "targets": [
+    {
+     "word": "spring",
+     "visual_target": "开满花的湖岸和嫩绿草地",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/spɜːɪŋ/",
+     "meaning": "春天，春季"
+    },
+    {
+     "word": "go boating",
+     "visual_target": "一家人在湖面划小船",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ɡəʊ ˈbəʊtɪŋ/",
+     "meaning": "去划船"
+    },
+    {
+     "word": "bird",
+     "visual_target": "飞过湖面的小鸟",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/bɜːd/",
+     "meaning": "鸟"
+    },
+    {
+     "word": "plant",
+     "visual_target": "孩子把小树苗放进土坑",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/plɑːnt/",
+     "meaning": "栽种，种植"
+    }
+   ],
+   "card_id": "YL-G4UP-U7-C01"
+  },
+  {
+   "scene_title_cn": "夏日海滩",
+   "scene_title_en": "Summer Beach",
+   "card_type": "Action",
+   "scene_brief": "夏天海滩，孩子在海里游泳，坐在伞下吃冰激凌。",
+   "targets": [
+    {
+     "word": "summer",
+     "visual_target": "烈日下的金色沙滩和海浪",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ˈsʌmə/",
+     "meaning": "夏天，夏季"
+    },
+    {
+     "word": "go swimming",
+     "visual_target": "孩子在浅海里游泳",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ɡəʊ ˈswɪmɪŋ/",
+     "meaning": "去游泳"
+    },
+    {
+     "word": "ice cream",
+     "visual_target": "孩子手里的彩色冰激凌",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/aɪs krɪm/",
+     "meaning": "冰激凌"
+    }
+   ],
+   "card_id": "YL-G4UP-U7-C02"
+  },
+  {
+   "scene_title_cn": "秋日山坡",
+   "scene_title_en": "Autumn Hill",
+   "card_type": "Action",
+   "scene_brief": "秋日山坡，孩子沿坡向上爬，伸手摘树上红果。",
+   "targets": [
+    {
+     "word": "autumn",
+     "visual_target": "山坡上橙黄落叶和红果",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ˈɔːtəm/",
+     "meaning": "秋天，秋季"
+    },
+    {
+     "word": "go climbing",
+     "visual_target": "孩子沿山坡向上爬",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ɡəʊ ˈklaɪmɪŋ/",
+     "meaning": "去爬山"
+    },
+    {
+     "word": "pick",
+     "visual_target": "孩子伸手摘红果",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/pɪk/",
+     "meaning": "采，摘"
+    }
+   ],
+   "card_id": "YL-G4UP-U7-C03"
+  },
+  {
+   "scene_title_cn": "冬日冰湖",
+   "scene_title_en": "Winter Ice Lake",
+   "card_type": "Action",
+   "scene_brief": "冬日雪地，孩子在冰面滑行，搓手哈白气，树上积雪。",
+   "targets": [
+    {
+     "word": "winter",
+     "visual_target": "结冰的湖面和光秃树枝",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ˈwɪntə/",
+     "meaning": "冬天，冬季"
+    },
+    {
+     "word": "go skating",
+     "visual_target": "孩子在冰面滑行",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ɡəʊ ˈskeɪtɪŋ/",
+     "meaning": "去溜冰，去滑冰"
+    },
+    {
+     "word": "snow",
+     "visual_target": "树枝和地面的积雪",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/snəʊ/",
+     "meaning": "雪，积雪"
+    },
+    {
+     "word": "cold",
+     "visual_target": "孩子缩肩搓手并哈白气",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/kəʊld/",
+     "meaning": "寒冷的，冷的"
+    }
+   ],
+   "card_id": "YL-G4UP-U7-C04"
+  },
+  {
+   "scene_title_cn": "整理书架",
+   "scene_title_en": "Putting the Book Back",
+   "card_type": "Narrative",
+   "scene_brief": "儿童房里，孩子把一本封面空白的新绘本放回书架，窗边有四季树和年轮，妈妈说话。",
+   "targets": [
+    {
+     "word": "season",
+     "visual_target": "窗边树上春芽、夏叶、秋果、冬雪组成的连续小景",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ˈsiːzən/",
+     "meaning": "季节"
+    },
+    {
+     "word": "new",
+     "visual_target": "一本封面空白的崭新绘本",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/nuː/",
+     "meaning": "新的"
+    },
+    {
+     "word": "back",
+     "visual_target": "孩子把绘本放回书架的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/bæk/",
+     "meaning": "回原处"
+    },
+    {
+     "word": "in",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ɪn/",
+     "meaning": "在（某段时间）内"
+    },
+    {
+     "word": "year",
+     "visual_target": "窗边树桩上的一圈圈年轮",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/jɪə/",
+     "meaning": "年"
+    }
+   ],
+   "card_id": "YL-G4UP-U7-C05"
+  }
+ ]
+}

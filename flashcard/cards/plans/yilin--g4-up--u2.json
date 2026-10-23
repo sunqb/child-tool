@@ -1,0 +1,222 @@
+{
+ "version": "yilin",
+ "grade": "g4-up",
+ "gradeName": "四年级上册",
+ "unit": "u2",
+ "unitName": "Unit 2 · My day",
+ "cards": [
+  {
+   "scene_title_cn": "晨起洗漱",
+   "scene_title_en": "Morning Routine",
+   "card_type": "Action",
+   "scene_brief": "清晨卧室，男孩起床后洗脸，窗外晨光微亮，床头闹钟指向七点整。",
+   "targets": [
+    {
+     "word": "get up",
+     "visual_target": "男孩掀开被子从床上坐起",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ɡɪt ʌp/",
+     "meaning": "起床"
+    },
+    {
+     "word": "wash",
+     "visual_target": "男孩在洗手池前用毛巾洗脸",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/wɒʃ/",
+     "meaning": "洗"
+    },
+    {
+     "word": "face",
+     "visual_target": "男孩的面部",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/feɪs/",
+     "meaning": "脸，面孔"
+    },
+    {
+     "word": "early",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ˈɜːli/",
+     "meaning": "早的，早"
+    },
+    {
+     "word": "o'clock",
+     "visual_target": "无数字刻度闹钟，分针指12、时针指7",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/əˈklɒk/",
+     "meaning": "（表示整点）……点钟"
+    }
+   ],
+   "card_id": "YL-G4UP-U2-C01"
+  },
+  {
+   "scene_title_cn": "一日三餐",
+   "scene_title_en": "Meals of the Day",
+   "card_type": "Timeline",
+   "scene_brief": "同一餐桌分早中晚：牛奶麦片、米饭蔬菜、汤和烤鸡，孩子拿勺吃饭。",
+   "targets": [
+    {
+     "word": "have",
+     "visual_target": "孩子拿勺子吃饭的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/hæv/",
+     "meaning": "吃，喝"
+    },
+    {
+     "word": "breakfast",
+     "visual_target": "早餐桌上的牛奶麦片",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈbrekfəst/",
+     "meaning": "早餐，早饭"
+    },
+    {
+     "word": "lunch",
+     "visual_target": "午餐桌上的米饭蔬菜",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/lʌntʃ/",
+     "meaning": "午餐，午饭"
+    },
+    {
+     "word": "dinner",
+     "visual_target": "晚餐桌上的汤和烤鸡",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈdɪnə/",
+     "meaning": "正餐（常指晚餐）"
+    }
+   ],
+   "card_id": "YL-G4UP-U2-C02"
+  },
+  {
+   "scene_title_cn": "上课时间",
+   "scene_title_en": "School Time",
+   "card_type": "Action",
+   "scene_brief": "教室内，老师站黑板前上课，学生坐好，一个男孩跑向第一排，老师招手催快点。",
+   "targets": [
+    {
+     "word": "have lessons",
+     "visual_target": "老师指黑板讲解、学生坐课桌旁听讲",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/hæv ˈlesənz/",
+     "meaning": "上课"
+    },
+    {
+     "word": "class",
+     "visual_target": "有课桌和黑板的教室",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/klɑːs/",
+     "meaning": "课，上课"
+    },
+    {
+     "word": "first",
+     "visual_target": "离黑板最近的第一排座位",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/fɜːst/",
+     "meaning": "首先，第一"
+    },
+    {
+     "word": "hurry up",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ˈhɜːi ʌp/",
+     "meaning": "快点"
+    }
+   ],
+   "card_id": "YL-G4UP-U2-C03"
+  },
+  {
+   "scene_title_cn": "体育器材角",
+   "scene_title_en": "Sports Equipment",
+   "card_type": "Object/Place",
+   "scene_brief": "操场器材区，十五根跳绳、二十个球、三十个标志锥、十一件背心分组摆放。",
+   "targets": [
+    {
+     "word": "sport",
+     "visual_target": "足球和跳绳",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/spɔːt/",
+     "meaning": "体育运动"
+    },
+    {
+     "word": "fifteen",
+     "visual_target": "十五根跳绳",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈfɪfˈtiːn/",
+     "meaning": "十五"
+    },
+    {
+     "word": "twenty",
+     "visual_target": "二十个足球",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/tˈwenti/",
+     "meaning": "二十"
+    },
+    {
+     "word": "thirty",
+     "visual_target": "三十个标志锥",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈθɜːdi/",
+     "meaning": "三十"
+    },
+    {
+     "word": "eleven",
+     "visual_target": "十一件运动背心",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈiːlevən/",
+     "meaning": "十一"
+    }
+   ],
+   "card_id": "YL-G4UP-U2-C04"
+  },
+  {
+   "scene_title_cn": "白天到夜晚",
+   "scene_title_en": "Day to Bedtime",
+   "card_type": "Timeline",
+   "scene_brief": "左右时间线：左侧白天户外阳光，右侧夜晚卧室孩子走向小床。",
+   "targets": [
+    {
+     "word": "day",
+     "visual_target": "左侧太阳高照的白天户外",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/deɪ/",
+     "meaning": "一天，一日"
+    },
+    {
+     "word": "go to bed",
+     "visual_target": "右侧孩子走向小床并掀被子的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ɡəʊ tuː bed/",
+     "meaning": "上床睡觉"
+    },
+    {
+     "word": "bed",
+     "visual_target": "卧室小床",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/bed/",
+     "meaning": "床"
+    }
+   ],
+   "card_id": "YL-G4UP-U2-C05"
+  }
+ ]
+}

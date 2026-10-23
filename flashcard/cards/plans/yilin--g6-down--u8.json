@@ -1,0 +1,116 @@
+{
+ "version": "yilin",
+ "grade": "g6-down",
+ "gradeName": "六年级下册",
+ "unit": "u8",
+ "unitName": "Unit 8 · Our dreams",
+ "cards": [
+  {
+   "scene_title_cn": "职业体验馆",
+   "scene_title_en": "Career Dress-Up",
+   "card_type": "Object/Place",
+   "scene_brief": "儿童职业体验馆里，孩子穿宇航服、跳芭蕾、弹钢琴。",
+   "targets": [
+    {
+     "word": "astronaut",
+     "visual_target": "穿白色宇航服戴头盔的孩子",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈæstrənɒt/",
+     "meaning": "宇航员"
+    },
+    {
+     "word": "dancer",
+     "visual_target": "穿芭蕾舞裙踮脚旋转的孩子",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈdænsə/",
+     "meaning": "舞蹈家"
+    },
+    {
+     "word": "pianist",
+     "visual_target": "坐在三角钢琴前弹琴的孩子",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈpiːənɪst/",
+     "meaning": "钢琴家"
+    }
+   ],
+   "card_id": "YL-G6DOWN-U8-C01"
+  },
+  {
+   "scene_title_cn": "学校社团日",
+   "scene_title_en": "School Clubs",
+   "card_type": "Object/Place",
+   "scene_brief": "学校社团活动室里，一个孩子做实验，一个练习射门，一个伏案写故事。",
+   "targets": [
+    {
+     "word": "scientist",
+     "visual_target": "拿烧杯和放大镜观察的孩子",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈsaɪəntɪst/",
+     "meaning": "科学家"
+    },
+    {
+     "word": "football player",
+     "visual_target": "带球射向迷你球门的孩子",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈfʊtbɒl pleɪə/",
+     "meaning": "足球运动员"
+    },
+    {
+     "word": "writer",
+     "visual_target": "伏案握笔写故事的孩子",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈraɪtə/",
+     "meaning": "作家"
+    },
+    {
+     "word": "hard",
+     "visual_target": "孩子流汗反复练习射门的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/hɑːd/",
+     "meaning": "努力地"
+    }
+   ],
+   "card_id": "YL-G6DOWN-U8-C02"
+  },
+  {
+   "scene_title_cn": "梦想时刻",
+   "scene_title_en": "Dream Time",
+   "card_type": "Timeline",
+   "scene_brief": "夜晚窗前，孩子手放胸口仰望星空，旁有从练习到登台的两格分镜。",
+   "targets": [
+    {
+     "word": "dream",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/drɪm/",
+     "meaning": "梦想"
+    },
+    {
+     "word": "in the future",
+     "visual_target": "从孩子练习到长大登台的两格分镜",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ɪn ðə fˈjuːtʃə/",
+     "meaning": "将来"
+    },
+    {
+     "word": "want to be",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/wɒnt tuː bi/",
+     "meaning": "想成为"
+    }
+   ],
+   "card_id": "YL-G6DOWN-U8-C03"
+  }
+ ]
+}

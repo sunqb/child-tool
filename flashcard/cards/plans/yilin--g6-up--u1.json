@@ -1,0 +1,107 @@
+{
+ "version": "yilin",
+ "grade": "g6-up",
+ "gradeName": "六年级上册",
+ "unit": "u1",
+ "unitName": "Unit 1 · The king's new clothes",
+ "cards": [
+  {
+   "scene_title_cn": "古老宫殿试衣",
+   "scene_title_en": "Trying on Clothes in the Old Palace",
+   "card_type": "Timeline",
+   "scene_brief": "古老宫殿里，国王站在镜前穿新衣，旁边衣架挂着华丽外袍。",
+   "targets": [
+    {
+     "word": "long long ago",
+     "visual_target": "古堡石墙、烛台和晨雾中的古老宫殿",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/lɒŋ lɒŋ əˈɡəʊ/",
+     "meaning": "很久以前"
+    },
+    {
+     "word": "king",
+     "visual_target": "戴王冠、披红斗篷的国王",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/kɪŋ/",
+     "meaning": "国王"
+    },
+    {
+     "word": "clothes",
+     "visual_target": "衣架上挂着的华丽外袍",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/kləʊðz/",
+     "meaning": "衣服"
+    },
+    {
+     "word": "wear",
+     "visual_target": "国王张开双臂套上外袍的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/weə/",
+     "meaning": "穿"
+    },
+    {
+     "word": "look at",
+     "visual_target": "国王照镜端详自己的目光",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/lʊk æt/",
+     "meaning": "看"
+    }
+   ],
+   "card_id": "YL-G6UP-U1-C01"
+  },
+  {
+   "scene_title_cn": "空织布机前",
+   "scene_title_en": "At the Empty Loom",
+   "card_type": "Choice/Contrast",
+   "scene_brief": "空织布机旁，骗子比划讲解，围观者反应不一，孩子笑、卫兵喊。",
+   "targets": [
+    {
+     "word": "clever",
+     "visual_target": "点头微笑、眼神笃定的大臣",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/ˈklevə/",
+     "meaning": "聪明的"
+    },
+    {
+     "word": "foolish",
+     "visual_target": "挠头皱眉、张嘴发愣的大臣",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/ˈfuːlɪʃ/",
+     "meaning": "愚蠢的"
+    },
+    {
+     "word": "tell",
+     "visual_target": "骗子伸手指向空织布机讲话的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/tel/",
+     "meaning": "讲；告诉"
+    },
+    {
+     "word": "laugh",
+     "visual_target": "男孩捂嘴大笑",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/lɑːf/",
+     "meaning": "笑"
+    },
+    {
+     "word": "shout",
+     "visual_target": "卫兵双手拢嘴高喊",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ʃaʊt/",
+     "meaning": "喊叫"
+    }
+   ],
+   "card_id": "YL-G6UP-U1-C02"
+  }
+ ]
+}

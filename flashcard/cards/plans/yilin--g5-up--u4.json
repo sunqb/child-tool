@@ -1,0 +1,108 @@
+{
+ "version": "yilin",
+ "grade": "g5-up",
+ "gradeName": "五年级上册",
+ "unit": "u4",
+ "unitName": "Unit 4 · Hobbies",
+ "cards": [
+  {
+   "scene_title_cn": "爱好时间",
+   "scene_title_en": "Hobby Time",
+   "card_type": "Action",
+   "scene_brief": "女孩坐在桌前翻看图画故事书，又拿起画笔给画纸涂色。",
+   "targets": [
+    {
+     "word": "hobby",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ˈhɒbi/",
+     "meaning": "爱好"
+    },
+    {
+     "word": "read",
+     "visual_target": "女孩双手翻看图画故事书的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/red/",
+     "meaning": "读"
+    },
+    {
+     "word": "story",
+     "visual_target": "摊开的图画故事书（页面只有彩色插图，无文字）",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈstɔːri/",
+     "meaning": "故事"
+    },
+    {
+     "word": "paint",
+     "visual_target": "女孩握画笔在画纸上涂色的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/peɪnt/",
+     "meaning": "画画"
+    }
+   ],
+   "card_id": "YL-G5UP-U4-C01"
+  },
+  {
+   "scene_title_cn": "篮球场边",
+   "scene_title_en": "At the Basketball Court",
+   "card_type": "Action",
+   "scene_brief": "男孩在篮球场跳投，篮球入筐，女孩站在场边观看并拍手。",
+   "targets": [
+    {
+     "word": "play",
+     "visual_target": "男孩运球后起跳投篮的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/pleɪ/",
+     "meaning": "玩；打（球）"
+    },
+    {
+     "word": "well",
+     "visual_target": "篮球空心入筐时男孩稳稳落地的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/wel/",
+     "meaning": "好"
+    },
+    {
+     "word": "watch",
+     "visual_target": "女孩站在场边注视篮球并拍手的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/wɒtʃ/",
+     "meaning": "观看"
+    }
+   ],
+   "card_id": "YL-G5UP-U4-C02"
+  },
+  {
+   "scene_title_cn": "教室里的主意",
+   "scene_title_en": "Ideas in Class",
+   "card_type": "Dialogue/Expression",
+   "scene_brief": "两个小朋友在教室里，一个举手想到主意，另一个也兴奋地跟着举手。",
+   "targets": [
+    {
+     "word": "idea",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/aɪˈdiːə/",
+     "meaning": "主意"
+    },
+    {
+     "word": "also",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ˈɒlsəʊ/",
+     "meaning": "也"
+    }
+   ],
+   "card_id": "YL-G5UP-U4-C03"
+  }
+ ]
+}

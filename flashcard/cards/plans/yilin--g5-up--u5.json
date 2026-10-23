@@ -1,0 +1,116 @@
+{
+ "version": "yilin",
+ "grade": "g5-up",
+ "gradeName": "五年级上册",
+ "unit": "u5",
+ "unitName": "Unit 5 · What do they do?",
+ "cards": [
+  {
+   "scene_title_cn": "医院帮助角",
+   "scene_title_en": "Hospital Help",
+   "card_type": "Narrative",
+   "scene_brief": "医院病房里，医生给卧床小孩听诊，护士帮忙递水，小孩额头贴着退热贴。",
+   "targets": [
+    {
+     "word": "doctor",
+     "visual_target": "穿白大褂、挂听诊器的医生",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈdɒktə/",
+     "meaning": "医生"
+    },
+    {
+     "word": "nurse",
+     "visual_target": "穿护士服、拿体温计的护士",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/nɜːs/",
+     "meaning": "护士"
+    },
+    {
+     "word": "help",
+     "visual_target": "护士递水并扶住孩子的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/help/",
+     "meaning": "帮助"
+    },
+    {
+     "word": "sick",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/sɪk/",
+     "meaning": "生病的"
+    }
+   ],
+   "card_id": "YL-G5UP-U5-C01"
+  },
+  {
+   "scene_title_cn": "教室故事时间",
+   "scene_title_en": "Classroom Story Time",
+   "card_type": "Narrative",
+   "scene_brief": "教室阅读角，老师用几何积木教孩子，作家拿空白绘本和笔坐在旁边。",
+   "targets": [
+    {
+     "word": "teacher",
+     "visual_target": "站在孩子面前的女老师",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈtiːtʃə/",
+     "meaning": "老师"
+    },
+    {
+     "word": "teach",
+     "visual_target": "老师举起几何积木示范的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/tɪtʃ/",
+     "meaning": "教"
+    },
+    {
+     "word": "writer",
+     "visual_target": "拿笔和空白稿纸的作家",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈraɪtə/",
+     "meaning": "作家"
+    }
+   ],
+   "card_id": "YL-G5UP-U5-C02"
+  },
+  {
+   "scene_title_cn": "忙碌农场",
+   "scene_title_en": "Busy Farm",
+   "card_type": "Object/Place",
+   "scene_brief": "农场里，农民喂鸡，司机开卡车运南瓜，工人修木栅栏。",
+   "targets": [
+    {
+     "word": "farmer",
+     "visual_target": "戴草帽喂鸡的农民",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈfɑːmə/",
+     "meaning": "农民"
+    },
+    {
+     "word": "driver",
+     "visual_target": "开卡车的司机",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈdraɪvə/",
+     "meaning": "司机"
+    },
+    {
+     "word": "worker",
+     "visual_target": "搬木板修栅栏的工人",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈwɜːkə/",
+     "meaning": "工人"
+    }
+   ],
+   "card_id": "YL-G5UP-U5-C03"
+  }
+ ]
+}

@@ -1,0 +1,107 @@
+{
+ "version": "yilin",
+ "grade": "g6-up",
+ "gradeName": "六年级上册",
+ "unit": "u4",
+ "unitName": "Unit 4 · Then and now",
+ "cards": [
+  {
+   "scene_title_cn": "旧时光通讯角",
+   "scene_title_en": "Old Times",
+   "card_type": "Timeline",
+   "scene_brief": "奶奶坐在旧木桌前，手写空白信纸，旁边有转盘电话、折叠报纸和泛黄相框。",
+   "targets": [
+    {
+     "word": "then",
+     "visual_target": "旧木桌与转盘电话构成的旧日角落",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ðen/",
+     "meaning": "那时"
+    },
+    {
+     "word": "ago",
+     "visual_target": "桌角泛黄的旧相框",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/əˈɡəʊ/",
+     "meaning": "以前"
+    },
+    {
+     "word": "telephone",
+     "visual_target": "旧式转盘电话",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈteləfəʊn/",
+     "meaning": "电话"
+    },
+    {
+     "word": "write",
+     "visual_target": "奶奶拿铅笔在空白信纸上写字的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/raɪt/",
+     "meaning": "写"
+    },
+    {
+     "word": "newspaper",
+     "visual_target": "折叠的空白报纸",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈnuːzpeɪpə/",
+     "meaning": "报纸"
+    }
+   ],
+   "card_id": "YL-G6UP-U4-C01"
+  },
+  {
+   "scene_title_cn": "现代客厅视频角",
+   "scene_title_en": "Now",
+   "card_type": "Action",
+   "scene_brief": "男孩在明亮客厅沙发上用手机视频，屏幕里和小朋友挥手，旁边路由器亮着信号灯。",
+   "targets": [
+    {
+     "word": "now",
+     "visual_target": "窗外明亮日光和现代客厅的沙发",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/naʊ/",
+     "meaning": "现在"
+    },
+    {
+     "word": "use",
+     "visual_target": "男孩滑动手机屏幕的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/juːz/",
+     "meaning": "使用"
+    },
+    {
+     "word": "mobile phone",
+     "visual_target": "男孩手中的智能手机",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈməʊbəl fəʊn/",
+     "meaning": "手机"
+    },
+    {
+     "word": "internet",
+     "visual_target": "发光的无线路由器和信号波纹",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈɪntənet/",
+     "meaning": "互联网"
+    },
+    {
+     "word": "make friends",
+     "visual_target": "手机屏幕里两个小朋友互相挥手微笑",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/meɪk frendz/",
+     "meaning": "交朋友"
+    }
+   ],
+   "card_id": "YL-G6UP-U4-C02"
+  }
+ ]
+}

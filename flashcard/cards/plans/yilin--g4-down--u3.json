@@ -1,0 +1,100 @@
+{
+ "version": "yilin",
+ "grade": "g4-down",
+ "gradeName": "四年级下册",
+ "unit": "u3",
+ "unitName": "Unit 3 · My day",
+ "cards": [
+  {
+   "scene_title_cn": "早晨起床",
+   "scene_title_en": "Morning Wake-Up",
+   "card_type": "Action",
+   "scene_brief": "清晨阳光照进卧室，男孩掀开被子从床上站起，伸手去拿书包。",
+   "targets": [
+    {
+     "word": "morning",
+     "visual_target": "窗外升起的太阳与晨光",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈmɔːnɪŋ/",
+     "meaning": "早晨"
+    },
+    {
+     "word": "get",
+     "visual_target": "男孩掀开被子准备起身的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ɡɪt/",
+     "meaning": "得到；到达"
+    },
+    {
+     "word": "up",
+     "visual_target": "男孩站直身体的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ʌp/",
+     "meaning": "向上"
+    }
+   ],
+   "card_id": "YL-G4DOWN-U3-C01"
+  },
+  {
+   "scene_title_cn": "傍晚的作业与晚餐",
+   "scene_title_en": "Evening Homework and Dinner",
+   "card_type": "Object/Place",
+   "scene_brief": "傍晚餐桌旁，女孩摊开练习本写作业，桌上摆着热腾腾的晚饭。",
+   "targets": [
+    {
+     "word": "evening",
+     "visual_target": "窗外橙色晚霞和亮起的台灯",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈiːvnɪŋ/",
+     "meaning": "傍晚；晚上"
+    },
+    {
+     "word": "homework",
+     "visual_target": "餐桌上摊开的练习本与铅笔",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈhəʊmwɜːk/",
+     "meaning": "家庭作业"
+    },
+    {
+     "word": "dinner",
+     "visual_target": "桌上的汤碗、盘子和饭菜",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈdɪnə/",
+     "meaning": "晚饭"
+    }
+   ],
+   "card_id": "YL-G4DOWN-U3-C02"
+  },
+  {
+   "scene_title_cn": "睡前谈话",
+   "scene_title_en": "Bedtime Talk",
+   "card_type": "Dialogue/Expression",
+   "scene_brief": "夜晚卧室里，妈妈坐在床边和孩子聊平时睡前要做的事，窗外有月亮和星星。",
+   "targets": [
+    {
+     "word": "night",
+     "visual_target": "窗外的月亮与星空",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/naɪt/",
+     "meaning": "夜晚"
+    },
+    {
+     "word": "usually",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ˈjuːʒəwəli/",
+     "meaning": "通常"
+    }
+   ],
+   "card_id": "YL-G4DOWN-U3-C03"
+  }
+ ]
+}

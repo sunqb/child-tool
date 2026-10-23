@@ -1,0 +1,99 @@
+{
+ "version": "yilin",
+ "grade": "g5-down",
+ "gradeName": "五年级下册",
+ "unit": "u8",
+ "unitName": "Unit 8 · Birthdays",
+ "cards": [
+  {
+   "scene_title_cn": "生日派对",
+   "scene_title_en": "Birthday Party",
+   "card_type": "Object/Place",
+   "scene_brief": "孩子们在客厅长桌旁过生日，桌上有蛋糕和礼物，墙上挂彩旗气球。",
+   "targets": [
+    {
+     "word": "birthday",
+     "visual_target": "戴生日帽的小寿星",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈbɜːθdeɪ/",
+     "meaning": "生日"
+    },
+    {
+     "word": "present",
+     "visual_target": "系丝带的礼物盒",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈprezənt/",
+     "meaning": "礼物"
+    },
+    {
+     "word": "cake",
+     "visual_target": "插蜡烛的奶油蛋糕",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/keɪk/",
+     "meaning": "蛋糕"
+    },
+    {
+     "word": "party",
+     "visual_target": "挂彩旗气球、围坐孩子的客厅聚会区",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈpɑːti/",
+     "meaning": "聚会"
+    }
+   ],
+   "card_id": "YL-G5DOWN-U8-C01"
+  },
+  {
+   "scene_title_cn": "生日月份对比",
+   "scene_title_en": "Birthday Months",
+   "card_type": "Timeline",
+   "scene_brief": "窗边两个孩子摊手询问，左窗外樱花春雨，右窗外花丛暖阳，桌上三根蜡烛，手指第一根。",
+   "targets": [
+    {
+     "word": "date",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/deɪt/",
+     "meaning": "日期"
+    },
+    {
+     "word": "when",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/wɪn/",
+     "meaning": "什么时候"
+    },
+    {
+     "word": "april",
+     "visual_target": "左窗外樱花春雨的月份区",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/ˈeɪprəl/",
+     "meaning": "四月"
+    },
+    {
+     "word": "may",
+     "visual_target": "右窗外花丛暖阳的月份区",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/meɪ/",
+     "meaning": "五月"
+    },
+    {
+     "word": "first",
+     "visual_target": "手指向排列第一的蜡烛",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/fɜːst/",
+     "meaning": "第一"
+    }
+   ],
+   "card_id": "YL-G5DOWN-U8-C02"
+  }
+ ]
+}

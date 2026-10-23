@@ -7,6 +7,9 @@
   "use strict";
 
   var PREFIX = "dict.";
+  // 词库地址：默认同目录 data/，其他工具页（如 flashcard/）可在加载本脚本前
+  // 设 window.STORE_WORDBANK_URL 指向 ../dictation/data/wordbank.json 复用同一份词库
+  var WORDBANK_URL = global.STORE_WORDBANK_URL || "data/wordbank.json";
   var mem = {}; // localStorage 不可用（隐私模式等）时的内存兜底
 
   function readRaw(key) {
@@ -84,7 +87,7 @@
     // 加载词库（静态 JSON，内存缓存）；失败自动降级内置兜底单元
     load: function () {
       if (bankCache) return Promise.resolve(bankCache);
-      return fetch("data/wordbank.json", { cache: "no-cache" })
+      return fetch(WORDBANK_URL, { cache: "no-cache" })
         .then(function (res) {
           if (!res.ok) throw new Error("wordbank http " + res.status);
           return res.json();

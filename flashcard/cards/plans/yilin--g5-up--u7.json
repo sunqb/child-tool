@@ -1,0 +1,116 @@
+{
+ "version": "yilin",
+ "grade": "g5-up",
+ "gradeName": "五年级上册",
+ "unit": "u7",
+ "unitName": "Unit 7 · At weekends",
+ "cards": [
+  {
+   "scene_title_cn": "周末拜访祖父母",
+   "scene_title_en": "Weekend Visit",
+   "card_type": "Narrative",
+   "scene_brief": "周末早晨，孩子和父母提着礼物来到祖父母家门口，爷爷开门，奶奶笑着迎接。",
+   "targets": [
+    {
+     "word": "weekend",
+     "visual_target": "阳光明媚的早晨，门口放着风筝和野餐篮",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ˈwiːkɪnd/",
+     "meaning": "周末"
+    },
+    {
+     "word": "visit",
+     "visual_target": "孩子按门铃、父母提礼物走向门口",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈvɪzɪt/",
+     "meaning": "拜访"
+    },
+    {
+     "word": "grandparent",
+     "visual_target": "白发爷爷开门、奶奶张开双臂迎接",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈɡrændperənt/",
+     "meaning": "祖父母"
+    }
+   ],
+   "card_id": "YL-G5UP-U7-C01"
+  },
+  {
+   "scene_title_cn": "边玩边视频聊天",
+   "scene_title_en": "Video Chat and Play",
+   "card_type": "Action",
+   "scene_brief": "孩子在客厅地毯上搭积木，用平板和屏幕里的爷爷奶奶视频聊天，旁边路由器亮着信号灯。",
+   "targets": [
+    {
+     "word": "play",
+     "visual_target": "孩子在地毯上搭彩色积木",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/pleɪ/",
+     "meaning": "玩"
+    },
+    {
+     "word": "chat",
+     "visual_target": "孩子对平板屏幕挥手、张嘴说话",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/tʃæt/",
+     "meaning": "聊天"
+    },
+    {
+     "word": "internet",
+     "visual_target": "亮着信号灯的无线路由器",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈɪntənet/",
+     "meaning": "互联网"
+    }
+   ],
+   "card_id": "YL-G5UP-U7-C02"
+  },
+  {
+   "scene_title_cn": "聊日常习惯",
+   "scene_title_en": "Talking About Habits",
+   "card_type": "Dialogue/Expression",
+   "scene_brief": "餐桌边，孩子挥动勺子和父母聊天，父母微笑倾听，桌上有牛奶和面包。",
+   "targets": [
+    {
+     "word": "always",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ˈɔːlweɪz/",
+     "meaning": "总是"
+    },
+    {
+     "word": "usually",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ˈjuːʒəwəli/",
+     "meaning": "通常"
+    },
+    {
+     "word": "often",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ˈɒfən/",
+     "meaning": "经常"
+    },
+    {
+     "word": "sometimes",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ˈsʌmtaɪmz/",
+     "meaning": "有时"
+    }
+   ],
+   "card_id": "YL-G5UP-U7-C03"
+  }
+ ]
+}

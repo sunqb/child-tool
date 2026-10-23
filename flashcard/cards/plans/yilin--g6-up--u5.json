@@ -1,0 +1,108 @@
+{
+ "version": "yilin",
+ "grade": "g6-up",
+ "gradeName": "六年级上册",
+ "unit": "u5",
+ "unitName": "Unit 5 · Signs",
+ "cards": [
+  {
+   "scene_title_cn": "公园入口问标识",
+   "scene_title_en": "At the Park Entrance",
+   "card_type": "Dialogue/Expression",
+   "scene_brief": "公园入口，男孩指着路边圆形图示牌，爸爸蹲下讲解，旁边停着一辆汽车。",
+   "targets": [
+    {
+     "word": "sign",
+     "visual_target": "路边立着的圆形图示牌",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/saɪn/",
+     "meaning": "标识"
+    },
+    {
+     "word": "no parking",
+     "visual_target": "红圈斜杠覆盖汽车图形的圆形图标",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/nəʊ ˈpɑːkɪŋ/",
+     "meaning": "禁止停车"
+    },
+    {
+     "word": "mean",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/mɪn/",
+     "meaning": "意思是"
+    }
+   ],
+   "card_id": "YL-G6UP-U5-C01"
+  },
+  {
+   "scene_title_cn": "餐厅门口",
+   "scene_title_en": "At the Restaurant Entrance",
+   "card_type": "Object/Place",
+   "scene_brief": "餐厅门口，妈妈指向红圈斜杠餐盘图示，旁边男子叼着烟，墙上有红圈斜杠香烟图示。",
+   "targets": [
+    {
+     "word": "no eating",
+     "visual_target": "红圈斜杠覆盖餐盘图形的圆形图标",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/nəʊ ˈiːtɪŋ/",
+     "meaning": "禁止饮食"
+    },
+    {
+     "word": "no smoking",
+     "visual_target": "红圈斜杠覆盖香烟图形的圆形图标",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/nəʊ sˈməʊkɪŋ/",
+     "meaning": "禁止吸烟"
+    },
+    {
+     "word": "smoke",
+     "visual_target": "男子叼着冒烟香烟的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/sməʊk/",
+     "meaning": "吸烟"
+    }
+   ],
+   "card_id": "YL-G6UP-U5-C02"
+  },
+  {
+   "scene_title_cn": "公园危险小路",
+   "scene_title_en": "A Dangerous Path",
+   "card_type": "Narrative",
+   "scene_brief": "公园小路上，男孩把纸团丢向地面，妈妈伸手拦住他，前方路面破损塌陷。",
+   "targets": [
+    {
+     "word": "danger",
+     "visual_target": "前方破损塌陷的路面",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈdeɪndʒə/",
+     "meaning": "危险"
+    },
+    {
+     "word": "careful",
+     "visual_target": "妈妈伸手拦住男孩的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈkeəfəl/",
+     "meaning": "小心的"
+    },
+    {
+     "word": "litter",
+     "visual_target": "男孩把纸团丢向地面的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈlɪtə/",
+     "meaning": "乱扔垃圾"
+    }
+   ],
+   "card_id": "YL-G6UP-U5-C03"
+  }
+ ]
+}

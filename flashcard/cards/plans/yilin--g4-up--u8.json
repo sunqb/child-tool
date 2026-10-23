@@ -1,0 +1,173 @@
+{
+ "version": "yilin",
+ "grade": "g4-up",
+ "gradeName": "四年级上册",
+ "unit": "u8",
+ "unitName": "Unit 8 · What we wear",
+ "cards": [
+  {
+   "scene_title_cn": "出门穿衣",
+   "scene_title_en": "Getting Dressed",
+   "card_type": "Action",
+   "scene_brief": "玄关处，男孩已穿上外套、戴上棒球帽，正从衣架取衣服。",
+   "targets": [
+    {
+     "word": "wear",
+     "visual_target": "男孩穿戴外套和棒球帽的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/weə/",
+     "meaning": "穿，戴"
+    },
+    {
+     "word": "cap",
+     "visual_target": "男孩头上的红色棒球帽",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/kæp/",
+     "meaning": "（尤指有帽舌的）便帽"
+    },
+    {
+     "word": "coat",
+     "visual_target": "男孩身上的蓝色外套",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/kəʊt/",
+     "meaning": "外套，外衣"
+    },
+    {
+     "word": "clothes",
+     "visual_target": "衣架上挂着的几件衣服",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/kləʊðz/",
+     "meaning": "衣服"
+    }
+   ],
+   "card_id": "YL-G4UP-U8-C01"
+  },
+  {
+   "scene_title_cn": "衣物整理",
+   "scene_title_en": "Clothes Display",
+   "card_type": "Object/Place",
+   "scene_brief": "儿童房里，衣柜门打开，床上摆着裙子、裤子、连衣裙、衬衫和短裤。",
+   "targets": [
+    {
+     "word": "skirt",
+     "visual_target": "床上折叠的格子半身裙",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/skɜːt/",
+     "meaning": "半身裙"
+    },
+    {
+     "word": "trousers",
+     "visual_target": "床上平放的蓝色长裤",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈtraʊzəz/",
+     "meaning": "裤子"
+    },
+    {
+     "word": "dress",
+     "visual_target": "床上铺开的碎花连衣裙",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/dres/",
+     "meaning": "连衣裙"
+    },
+    {
+     "word": "shirt",
+     "visual_target": "床上叠好的白色衬衫",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ʃɜːt/",
+     "meaning": "（男式）衬衫"
+    },
+    {
+     "word": "shorts",
+     "visual_target": "床上放着的黄色短裤",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ʃɔːts/",
+     "meaning": "短裤"
+    }
+   ],
+   "card_id": "YL-G4UP-U8-C02"
+  },
+  {
+   "scene_title_cn": "夏日庭院",
+   "scene_title_en": "Sunny Courtyard",
+   "card_type": "Narrative",
+   "scene_brief": "夏日庭院里，阳光明亮，孩子戴着太阳镜穿着轻便夏装奔跑。",
+   "targets": [
+    {
+     "word": "sunglasses",
+     "visual_target": "孩子脸上的黑框太阳镜",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈsʌnɡlɑːsɪz/",
+     "meaning": "太阳镜，墨镜"
+    },
+    {
+     "word": "in",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ɪn/",
+     "meaning": "穿着，戴着"
+    },
+    {
+     "word": "bright",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/braɪt/",
+     "meaning": "聪明的；明亮的"
+    }
+   ],
+   "card_id": "YL-G4UP-U8-C03"
+  },
+  {
+   "scene_title_cn": "衣物归属对话",
+   "scene_title_en": "Whose Clothes?",
+   "card_type": "Dialogue/Expression",
+   "scene_brief": "衣架前，两个孩子指着一件衣物询问归属，一个摊手疑惑，另一个微笑解释。",
+   "targets": [
+    {
+     "word": "whose",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/huːz/",
+     "meaning": "谁的"
+    },
+    {
+     "word": "look",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/lʊk/",
+     "meaning": "看来好像，显得"
+    },
+    {
+     "word": "why",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/waɪ/",
+     "meaning": "为什么"
+    },
+    {
+     "word": "because",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/bɪˈkɒz/",
+     "meaning": "因为"
+    }
+   ],
+   "card_id": "YL-G4UP-U8-C04"
+  }
+ ]
+}

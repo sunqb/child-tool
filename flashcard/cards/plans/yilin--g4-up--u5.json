@@ -1,0 +1,205 @@
+{
+ "version": "yilin",
+ "grade": "g4-up",
+ "gradeName": "四年级上册",
+ "unit": "u5",
+ "unitName": "Unit 5 · Different toys, same fun",
+ "cards": [
+  {
+   "scene_title_cn": "照镜子认五官",
+   "scene_title_en": "Mirror Faces",
+   "card_type": "Object/Place",
+   "scene_brief": "镜子前，两个小朋友指着自己的头发、眼睛、耳朵、鼻子和嘴巴。",
+   "targets": [
+    {
+     "word": "hair",
+     "visual_target": "女孩头顶的棕色头发",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/heə/",
+     "meaning": "头发"
+    },
+    {
+     "word": "eye",
+     "visual_target": "男孩睁大的眼睛",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/aɪ/",
+     "meaning": "眼睛"
+    },
+    {
+     "word": "ear",
+     "visual_target": "女孩的耳朵",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ɪə/",
+     "meaning": "耳朵"
+    },
+    {
+     "word": "nose",
+     "visual_target": "男孩的鼻子",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/nəʊz/",
+     "meaning": "鼻子"
+    },
+    {
+     "word": "mouth",
+     "visual_target": "女孩微笑的嘴巴",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/maʊθ/",
+     "meaning": "嘴，口"
+    }
+   ],
+   "card_id": "YL-G4UP-U5-C01"
+  },
+  {
+   "scene_title_cn": "操场比身高",
+   "scene_title_en": "Comparing Heights",
+   "card_type": "Choice/Contrast",
+   "scene_brief": "操场并排比身高：高个男孩长腿，矮个女孩穿短裤短袖，两人白鞋相同。",
+   "targets": [
+    {
+     "word": "different",
+     "visual_target": "两人明显不同的身高差",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/ˈdɪfəənt/",
+     "meaning": "不同的，有区别的"
+    },
+    {
+     "word": "same",
+     "visual_target": "两人脚上相同的白鞋",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/seɪm/",
+     "meaning": "相同的，同一的"
+    },
+    {
+     "word": "arm",
+     "visual_target": "女孩伸出的手臂",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ɑːm/",
+     "meaning": "手臂"
+    },
+    {
+     "word": "leg",
+     "visual_target": "男孩长长的腿",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/leɡ/",
+     "meaning": "腿"
+    },
+    {
+     "word": "tall",
+     "visual_target": "画面左侧高个男孩",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/tɔːl/",
+     "meaning": "高的"
+    },
+    {
+     "word": "short",
+     "visual_target": "女孩身上短短的裤腿",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/ʃɔːt/",
+     "meaning": "短的"
+    }
+   ],
+   "card_id": "YL-G4UP-U5-C02"
+  },
+  {
+   "scene_title_cn": "班级演出准备",
+   "scene_title_en": "Putting on a Show",
+   "card_type": "Action",
+   "scene_brief": "礼堂里，孩子们搬来成堆彩色道具，在舞台上布置并表演节目。",
+   "targets": [
+    {
+     "word": "bring",
+     "visual_target": "孩子抱着道具箱走向舞台",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/brɪŋ/",
+     "meaning": "带来"
+    },
+    {
+     "word": "lots of",
+     "visual_target": "舞台边成堆的彩色气球和道具",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/lɒts əv/",
+     "meaning": "大量，许多"
+    },
+    {
+     "word": "have",
+     "visual_target": "孩子们在舞台上拉幕布布置演出",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/hæv/",
+     "meaning": "组织，举办"
+    },
+    {
+     "word": "show",
+     "visual_target": "女孩在舞台中央跳舞表演",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ʃəʊ/",
+     "meaning": "表演，演出"
+    }
+   ],
+   "card_id": "YL-G4UP-U5-C03"
+  },
+  {
+   "scene_title_cn": "展示自己的玩具",
+   "scene_title_en": "My Toys",
+   "card_type": "Relation",
+   "scene_brief": "客厅地毯上，男孩抱着他的机器人，女孩搂着她的小玩具娃娃。",
+   "targets": [
+    {
+     "word": "robot",
+     "visual_target": "男孩手里的蓝色机器人",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈrəʊbət/",
+     "meaning": "机器人"
+    },
+    {
+     "word": "his",
+     "visual_target": "男孩紧握机器人这一所属关系",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/hɪz/",
+     "meaning": "他的"
+    },
+    {
+     "word": "doll",
+     "visual_target": "女孩怀里的布娃娃",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/dɒl/",
+     "meaning": "玩具娃娃"
+    },
+    {
+     "word": "her",
+     "visual_target": "女孩搂着娃娃这一所属关系",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/hɜː/",
+     "meaning": "她的"
+    },
+    {
+     "word": "small",
+     "visual_target": "女孩怀里小号的布娃娃",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/smɔːl/",
+     "meaning": "小的"
+    }
+   ],
+   "card_id": "YL-G4UP-U5-C04"
+  }
+ ]
+}

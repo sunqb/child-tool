@@ -6,3 +6,7 @@ dictation/tools/
 dictation/docs/
 dictation/data/parts/
 dictation/deploy.sh
+# 闪卡生产管线：脚本 / 卡方案与底图等中间产物（运行时只用 cards/manifest.json 与成品 jpg）
+flashcard/tools/
+flashcard/cards/plans/
+flashcard/cards/base/

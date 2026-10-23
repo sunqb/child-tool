@@ -1,0 +1,116 @@
+{
+ "version": "yilin",
+ "grade": "g5-up",
+ "gradeName": "五年级上册",
+ "unit": "u2",
+ "unitName": "Unit 2 · A new student",
+ "cards": [
+  {
+   "scene_title_cn": "参观教室",
+   "scene_title_en": "Visiting the Classroom",
+   "card_type": "Action",
+   "scene_brief": "一名小学生伸手指引访客参观教室，访客转头环顾四周。",
+   "targets": [
+    {
+     "word": "student",
+     "visual_target": "背书包的小学生",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈstuːdənt/",
+     "meaning": "学生"
+    },
+    {
+     "word": "show",
+     "visual_target": "小学生伸手向访客介绍教室的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ʃəʊ/",
+     "meaning": "带……参观"
+    },
+    {
+     "word": "around",
+     "visual_target": "访客转头环顾教室四周的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/əaʊnd/",
+     "meaning": "四处"
+    },
+    {
+     "word": "classroom",
+     "visual_target": "摆着课桌的教室内部",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈklɑːsruːm/",
+     "meaning": "教室"
+    }
+   ],
+   "card_id": "YL-G5UP-U2-C01"
+  },
+  {
+   "scene_title_cn": "二楼电脑角",
+   "scene_title_en": "Computer on the Second Floor",
+   "card_type": "Spatial/Cutaway",
+   "scene_brief": "楼梯通向二楼，走廊尽头的桌上放着一台电脑。",
+   "targets": [
+    {
+     "word": "computer",
+     "visual_target": "走廊桌上的一台电脑",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/kəmˈpjuːtə/",
+     "meaning": "电脑"
+    },
+    {
+     "word": "second",
+     "visual_target": "楼梯从下往上数的第二层平台",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/ˈsekənd/",
+     "meaning": "第二"
+    },
+    {
+     "word": "floor",
+     "visual_target": "二楼走廊地面和楼梯平台",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/flɔː/",
+     "meaning": "楼层"
+    }
+   ],
+   "card_id": "YL-G5UP-U2-C02"
+  },
+  {
+   "scene_title_cn": "秋千与重沙袋",
+   "scene_title_en": "Swing and Heavy Sandbag",
+   "card_type": "Action",
+   "scene_brief": "操场上男孩用力推秋千，秋千座上放着沉甸甸的沙袋。",
+   "targets": [
+    {
+     "word": "swing",
+     "visual_target": "挂着绳子的秋千",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/swɪŋ/",
+     "meaning": "秋千"
+    },
+    {
+     "word": "push",
+     "visual_target": "男孩双手用力推秋千的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/pʊʃ/",
+     "meaning": "推"
+    },
+    {
+     "word": "heavy",
+     "visual_target": "沉甸甸的沙袋把秋千座压得低低的",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ˈhevi/",
+     "meaning": "重的"
+    }
+   ],
+   "card_id": "YL-G5UP-U2-C03"
+  }
+ ]
+}

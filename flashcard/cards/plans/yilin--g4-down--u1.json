@@ -1,0 +1,91 @@
+{
+ "version": "yilin",
+ "grade": "g4-down",
+ "gradeName": "四年级下册",
+ "unit": "u1",
+ "unitName": "Unit 1 · Our school subjects",
+ "cards": [
+  {
+   "scene_title_cn": "校园语文课",
+   "scene_title_en": "Chinese Lesson at School",
+   "card_type": "Object/Place",
+   "scene_brief": "校园里，教室中老师手持空白课本准备上语文课，桌上有毛笔和空白宣纸。",
+   "targets": [
+    {
+     "word": "school",
+     "visual_target": "红色教学楼和操场",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/skuːl/",
+     "meaning": "学校"
+    },
+    {
+     "word": "lesson",
+     "visual_target": "老师手持空白课本准备上课的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈlesən/",
+     "meaning": "课；功课"
+    },
+    {
+     "word": "chinese",
+     "visual_target": "毛笔和空白宣纸",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/tʃaɪˈniːz/",
+     "meaning": "语文；汉语"
+    }
+   ],
+   "card_id": "YL-G4DOWN-U1-C01"
+  },
+  {
+   "scene_title_cn": "综合活动教室",
+   "scene_title_en": "Activity Classroom",
+   "card_type": "Relation",
+   "scene_brief": "孩子们在综合活动教室，课桌分区摆着算盘尺、画具、小提琴、烧杯和放大镜。",
+   "targets": [
+    {
+     "word": "subject",
+     "visual_target": "课桌上四类学科物品分区的归类布局",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/ˈsʌbdʒɪkt/",
+     "meaning": "学科；科目"
+    },
+    {
+     "word": "maths",
+     "visual_target": "算盘和几何尺",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/mæθs/",
+     "meaning": "数学"
+    },
+    {
+     "word": "art",
+     "visual_target": "调色盘和画笔",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ɑːt/",
+     "meaning": "美术"
+    },
+    {
+     "word": "music",
+     "visual_target": "小提琴",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/mˈjuːzɪk/",
+     "meaning": "音乐"
+    },
+    {
+     "word": "science",
+     "visual_target": "烧杯和放大镜",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/saɪəns/",
+     "meaning": "科学"
+    }
+   ],
+   "card_id": "YL-G4DOWN-U1-C02"
+  }
+ ]
+}

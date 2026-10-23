@@ -1,0 +1,116 @@
+{
+ "version": "yilin",
+ "grade": "g5-down",
+ "gradeName": "五年级下册",
+ "unit": "u5",
+ "unitName": "Unit 5 · Helping our parents",
+ "cards": [
+  {
+   "scene_title_cn": "客厅大扫除",
+   "scene_title_en": "Living Room Cleanup",
+   "card_type": "Action",
+   "scene_brief": "客厅里，父母和孩子一起打扫，妈妈擦桌，孩子扫地，垃圾装进垃圾袋。",
+   "targets": [
+    {
+     "word": "parent",
+     "visual_target": "画面中的成年父母",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈperənt/",
+     "meaning": "父母"
+    },
+    {
+     "word": "clean",
+     "visual_target": "妈妈用抹布擦桌面的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/klɪn/",
+     "meaning": "打扫"
+    },
+    {
+     "word": "sweep",
+     "visual_target": "孩子双手握扫帚扫地的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/swɪp/",
+     "meaning": "扫"
+    },
+    {
+     "word": "rubbish",
+     "visual_target": "装满果皮纸屑的垃圾袋",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈrʌbɪʃ/",
+     "meaning": "垃圾"
+    }
+   ],
+   "card_id": "YL-G5DOWN-U5-C01"
+  },
+  {
+   "scene_title_cn": "忙碌的厨房",
+   "scene_title_en": "Busy Kitchen",
+   "card_type": "Action",
+   "scene_brief": "厨房里，爸爸在灶台炒菜，孩子在水槽洗菜，台面摆满碗盘。",
+   "targets": [
+    {
+     "word": "cook",
+     "visual_target": "爸爸在灶台前翻炒锅中菜的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/kʊk/",
+     "meaning": "做饭"
+    },
+    {
+     "word": "wash",
+     "visual_target": "孩子在水槽里冲洗蔬菜的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/wɒʃ/",
+     "meaning": "洗"
+    },
+    {
+     "word": "busy",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ˈbɪzi/",
+     "meaning": "忙的"
+    }
+   ],
+   "card_id": "YL-G5DOWN-U5-C02"
+  },
+  {
+   "scene_title_cn": "花园帮忙",
+   "scene_title_en": "Helping in the Garden",
+   "card_type": "Action",
+   "scene_brief": "花园里，爸爸修剪树篱，一个孩子用水壶浇花，另一个递上小铲子。",
+   "targets": [
+    {
+     "word": "water",
+     "visual_target": "孩子用水壶向花盆浇水的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈwɔːtə/",
+     "meaning": "浇水"
+    },
+    {
+     "word": "work",
+     "visual_target": "爸爸弯腰修剪树篱的劳动动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/wɜːk/",
+     "meaning": "工作"
+    },
+    {
+     "word": "help",
+     "visual_target": "孩子把铲子递给爸爸的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/help/",
+     "meaning": "帮助"
+    }
+   ],
+   "card_id": "YL-G5DOWN-U5-C03"
+  }
+ ]
+}

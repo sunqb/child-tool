@@ -1,0 +1,99 @@
+{
+ "version": "yilin",
+ "grade": "g5-down",
+ "gradeName": "五年级下册",
+ "unit": "u6",
+ "unitName": "Unit 6 · In the kitchen",
+ "cards": [
+  {
+   "scene_title_cn": "厨房备菜",
+   "scene_title_en": "Kitchen Prep",
+   "card_type": "Object/Place",
+   "scene_brief": "妈妈在厨房台面旁整理西红柿、土豆、蔬菜篮和肉。",
+   "targets": [
+    {
+     "word": "kitchen",
+     "visual_target": "有灶台、水槽和台面的厨房",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈkɪtʃən/",
+     "meaning": "厨房"
+    },
+    {
+     "word": "tomato",
+     "visual_target": "台面上红色的西红柿",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/təˈmɑːtəʊ/",
+     "meaning": "西红柿"
+    },
+    {
+     "word": "potato",
+     "visual_target": "台面上带芽眼的土豆",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/pəˈteɪtəʊ/",
+     "meaning": "土豆"
+    },
+    {
+     "word": "vegetable",
+     "visual_target": "装满青菜、胡萝卜的蔬菜篮",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈvedʒtəbəl/",
+     "meaning": "蔬菜"
+    },
+    {
+     "word": "meat",
+     "visual_target": "案板上的生肉块",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/mɪt/",
+     "meaning": "肉"
+    }
+   ],
+   "card_id": "YL-G5DOWN-U6-C01"
+  },
+  {
+   "scene_title_cn": "煮汤闻香",
+   "scene_title_en": "Cooking Soup",
+   "card_type": "Action",
+   "scene_brief": "妈妈在灶台前煮汤，男孩捂着肚子凑近闻香味。",
+   "targets": [
+    {
+     "word": "cook",
+     "visual_target": "妈妈拿木勺搅拌汤锅的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/kʊk/",
+     "meaning": "做饭"
+    },
+    {
+     "word": "soup",
+     "visual_target": "炉灶上冒热气的汤锅",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/suːp/",
+     "meaning": "汤"
+    },
+    {
+     "word": "smell",
+     "visual_target": "男孩凑近汤锅闻到香味的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/smel/",
+     "meaning": "闻起来"
+    },
+    {
+     "word": "hungry",
+     "visual_target": "男孩捂着肚子、眼巴巴望着汤锅的状态",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ˈhʌŋɡri/",
+     "meaning": "饿的"
+    }
+   ],
+   "card_id": "YL-G5DOWN-U6-C02"
+  }
+ ]
+}

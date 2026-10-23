@@ -1,0 +1,99 @@
+{
+ "version": "yilin",
+ "grade": "g6-down",
+ "gradeName": "六年级下册",
+ "unit": "u5",
+ "unitName": "Unit 5 · A party",
+ "cards": [
+  {
+   "scene_title_cn": "生日派对现场",
+   "scene_title_en": "Birthday Party",
+   "card_type": "Object/Place",
+   "scene_brief": "孩子们围桌庆祝，小丑表演，彩色气球和礼物在旁，地上摆着套圈游戏。",
+   "targets": [
+    {
+     "word": "party",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ˈpɑːti/",
+     "meaning": "聚会"
+    },
+    {
+     "word": "have a party",
+     "visual_target": "孩子们围桌拍手庆祝的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/hæv ə ˈpɑːti/",
+     "meaning": "举行聚会"
+    },
+    {
+     "word": "balloon",
+     "visual_target": "彩色气球",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/bəˈluːn/",
+     "meaning": "气球"
+    },
+    {
+     "word": "gift",
+     "visual_target": "扎丝带的礼物盒",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ɡɪft/",
+     "meaning": "礼物"
+    },
+    {
+     "word": "clown",
+     "visual_target": "红鼻子小丑",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/klaʊn/",
+     "meaning": "小丑"
+    },
+    {
+     "word": "game",
+     "visual_target": "地上的套圈游戏道具（圈和木瓶）",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ɡeɪm/",
+     "meaning": "游戏"
+    }
+   ],
+   "card_id": "YL-G6DOWN-U5-C01"
+  },
+  {
+   "scene_title_cn": "准备派对食物",
+   "scene_title_en": "Party Food",
+   "card_type": "Action",
+   "scene_brief": "女孩双手端着点心盒走向派对桌，桌上摆着饼干和果汁饮料。",
+   "targets": [
+    {
+     "word": "bring",
+     "visual_target": "女孩双手端着点心盒走来的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/brɪŋ/",
+     "meaning": "带来"
+    },
+    {
+     "word": "snack",
+     "visual_target": "盘中的饼干和薯片",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/snæk/",
+     "meaning": "点心"
+    },
+    {
+     "word": "drink",
+     "visual_target": "桌上的果汁杯和玻璃水杯",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/drɪŋk/",
+     "meaning": "饮料"
+    }
+   ],
+   "card_id": "YL-G6DOWN-U5-C02"
+  }
+ ]
+}

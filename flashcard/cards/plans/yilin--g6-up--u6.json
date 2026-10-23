@@ -1,0 +1,116 @@
+{
+ "version": "yilin",
+ "grade": "g6-up",
+ "gradeName": "六年级上册",
+ "unit": "u6",
+ "unitName": "Unit 6 · Keep our city clean",
+ "cards": [
+  {
+   "scene_title_cn": "城市公园的脏与净",
+   "scene_title_en": "Dirty and Clean Park",
+   "card_type": "Choice/Contrast",
+   "scene_brief": "城市公园一角，左侧草地干净，右侧堆满垃圾，孩子们在清理。",
+   "targets": [
+    {
+     "word": "city",
+     "visual_target": "远处的高楼和街道轮廓",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈsɪti/",
+     "meaning": "城市"
+    },
+    {
+     "word": "dirty",
+     "visual_target": "堆满污渍和杂物的脏乱角落",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/ˈdɜːti/",
+     "meaning": "脏的"
+    },
+    {
+     "word": "clean",
+     "visual_target": "整洁的草地和干净长椅",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/klɪn/",
+     "meaning": "干净的"
+    },
+    {
+     "word": "rubbish",
+     "visual_target": "散落的香蕉皮、塑料瓶和纸团",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈrʌbɪʃ/",
+     "meaning": "垃圾"
+    }
+   ],
+   "card_id": "YL-G6UP-U6-C01"
+  },
+  {
+   "scene_title_cn": "换掉枯树，种下更多",
+   "scene_title_en": "Replant the Garden",
+   "card_type": "Narrative",
+   "scene_brief": "社区花园里，孩子们搬走枯死小树，在空地上种下一排更多的小树苗。",
+   "targets": [
+    {
+     "word": "move",
+     "visual_target": "两个孩子抬起枯死的盆栽往外搬",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/muːv/",
+     "meaning": "搬走"
+    },
+    {
+     "word": "dead",
+     "visual_target": "枝叶枯黄干瘪的小树",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ded/",
+     "meaning": "死的"
+    },
+    {
+     "word": "plant",
+     "visual_target": "女孩蹲下把小树苗放进土坑",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/plɑːnt/",
+     "meaning": "种植"
+    },
+    {
+     "word": "more",
+     "visual_target": "已经栽好的一整排小树苗，明显多于旁边单独一棵",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/mɔː/",
+     "meaning": "更多的"
+    }
+   ],
+   "card_id": "YL-G6UP-U6-C02"
+  },
+  {
+   "scene_title_cn": "远离烟雾",
+   "scene_title_en": "Keep Away from Smoke",
+   "card_type": "Dialogue/Expression",
+   "scene_brief": "公园边，工厂烟囱冒出灰烟，妈妈伸手示意孩子退后远离。",
+   "targets": [
+    {
+     "word": "smoke",
+     "visual_target": "工厂烟囱冒出的灰烟",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/sməʊk/",
+     "meaning": "烟雾"
+    },
+    {
+     "word": "keep",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/kɪp/",
+     "meaning": "保持"
+    }
+   ],
+   "card_id": "YL-G6UP-U6-C03"
+  }
+ ]
+}

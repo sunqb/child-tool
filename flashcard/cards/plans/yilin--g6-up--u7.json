@@ -1,0 +1,107 @@
+{
+ "version": "yilin",
+ "grade": "g6-up",
+ "gradeName": "六年级上册",
+ "unit": "u7",
+ "unitName": "Unit 7 · Protect the Earth",
+ "cards": [
+  {
+   "scene_title_cn": "环保小屋",
+   "scene_title_en": "Green Room",
+   "card_type": "Action",
+   "scene_brief": "教室里，孩子关水龙头和电灯，另一人双手护住地球仪。",
+   "targets": [
+    {
+     "word": "earth",
+     "visual_target": "桌上的地球仪",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ɜːθ/",
+     "meaning": "地球"
+    },
+    {
+     "word": "protect",
+     "visual_target": "孩子双手护住地球仪的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/prəˈtekt/",
+     "meaning": "保护"
+    },
+    {
+     "word": "save",
+     "visual_target": "孩子拧紧水龙头的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/seɪv/",
+     "meaning": "节约；拯救"
+    },
+    {
+     "word": "water",
+     "visual_target": "水龙头流出的水",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈwɔːtə/",
+     "meaning": "水"
+    },
+    {
+     "word": "energy",
+     "visual_target": "亮着的灯泡和插座",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈenədʒi/",
+     "meaning": "能源"
+    }
+   ],
+   "card_id": "YL-G6UP-U7-C01"
+  },
+  {
+   "scene_title_cn": "手工回收角",
+   "scene_title_en": "Recycling Craft Corner",
+   "card_type": "Action",
+   "scene_brief": "桌上有塑料瓶和木块，女孩把塑料瓶改成笔筒并举起，男孩把木块丢进垃圾桶。",
+   "targets": [
+    {
+     "word": "plastic",
+     "visual_target": "透明塑料瓶",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈplæstɪk/",
+     "meaning": "塑料"
+    },
+    {
+     "word": "wood",
+     "visual_target": "小木块",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/wʊd/",
+     "meaning": "木头"
+    },
+    {
+     "word": "reuse",
+     "visual_target": "女孩把塑料瓶剪成笔筒的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/rɪˈjuːz/",
+     "meaning": "再利用"
+    },
+    {
+     "word": "waste",
+     "visual_target": "男孩把木块丢进垃圾桶的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/weɪst/",
+     "meaning": "浪费"
+    },
+    {
+     "word": "useful",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ˈjuːsfəl/",
+     "meaning": "有用的"
+    }
+   ],
+   "card_id": "YL-G6UP-U7-C02"
+  }
+ ]
+}

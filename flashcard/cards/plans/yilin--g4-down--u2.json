@@ -1,0 +1,91 @@
+{
+ "version": "yilin",
+ "grade": "g4-down",
+ "gradeName": "四年级下册",
+ "unit": "u2",
+ "unitName": "Unit 2 · After school",
+ "cards": [
+  {
+   "scene_title_cn": "操场看球",
+   "scene_title_en": "At the Match",
+   "card_type": "Action",
+   "scene_brief": "孩子们背着书包走向操场，看台上观看足球比赛，场上一名孩子正在踢球。",
+   "targets": [
+    {
+     "word": "go",
+     "visual_target": "孩子们背书包走向操场的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ɡəʊ/",
+     "meaning": "去"
+    },
+    {
+     "word": "match",
+     "visual_target": "操场上的足球比赛场景（球门和球员）",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/mætʃ/",
+     "meaning": "比赛"
+    },
+    {
+     "word": "watch",
+     "visual_target": "孩子们坐在看台上观看比赛的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/wɒtʃ/",
+     "meaning": "观看"
+    },
+    {
+     "word": "play",
+     "visual_target": "球场上孩子踢球的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/pleɪ/",
+     "meaning": "玩；打球"
+    }
+   ],
+   "card_id": "YL-G4DOWN-U2-C01"
+  },
+  {
+   "scene_title_cn": "一天的时间线",
+   "scene_title_en": "A Day",
+   "card_type": "Timeline",
+   "scene_brief": "从日出到日落的今天，孩子们先搭积木，之后把所有积木收进箱子。",
+   "targets": [
+    {
+     "word": "today",
+     "visual_target": "画面中央从日出到日落的整天时间线",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/təˈdeɪ/",
+     "meaning": "今天"
+    },
+    {
+     "word": "after",
+     "visual_target": "搭积木之后指向收积木的箭头段",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ˈɑːftə/",
+     "meaning": "在……之后"
+    },
+    {
+     "word": "day",
+     "visual_target": "太阳从升起到落下的完整轨迹",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/deɪ/",
+     "meaning": "天；日子"
+    },
+    {
+     "word": "all",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ɔːl/",
+     "meaning": "全部；都"
+    }
+   ],
+   "card_id": "YL-G4DOWN-U2-C02"
+  }
+ ]
+}

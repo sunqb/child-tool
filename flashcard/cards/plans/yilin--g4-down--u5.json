@@ -1,0 +1,99 @@
+{
+ "version": "yilin",
+ "grade": "g4-down",
+ "gradeName": "四年级下册",
+ "unit": "u5",
+ "unitName": "Unit 5 · Seasons",
+ "cards": [
+  {
+   "scene_title_cn": "四季变化",
+   "scene_title_en": "Four Seasons",
+   "card_type": "Timeline",
+   "scene_brief": "绘本页分成春夏秋冬四格，孩子在四季景物中玩耍。",
+   "targets": [
+    {
+     "word": "season",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ˈsiːzən/",
+     "meaning": "季节"
+    },
+    {
+     "word": "spring",
+     "visual_target": "嫩芽、花朵和蝴蝶",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/spɜːɪŋ/",
+     "meaning": "春天"
+    },
+    {
+     "word": "summer",
+     "visual_target": "太阳、泳池和西瓜",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈsʌmə/",
+     "meaning": "夏天"
+    },
+    {
+     "word": "autumn",
+     "visual_target": "落叶、南瓜和稻草人",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈɔːtəm/",
+     "meaning": "秋天"
+    },
+    {
+     "word": "winter",
+     "visual_target": "雪人、雪花和围巾",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈwɪntə/",
+     "meaning": "冬天"
+    }
+   ],
+   "card_id": "YL-G4DOWN-U5-C01"
+  },
+  {
+   "scene_title_cn": "温度对比",
+   "scene_title_en": "Warm and Cold",
+   "card_type": "Choice/Contrast",
+   "scene_brief": "同一画面并置四个温度区域，孩子通过穿着和动作表现冷暖差异。",
+   "targets": [
+    {
+     "word": "warm",
+     "visual_target": "春日暖阳下孩子脱外套微笑的区域",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/wɔːm/",
+     "meaning": "温暖的"
+    },
+    {
+     "word": "hot",
+     "visual_target": "夏日烈日下孩子扇扇子流汗的区域",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/hɒt/",
+     "meaning": "热的"
+    },
+    {
+     "word": "cool",
+     "visual_target": "秋日凉风里孩子穿薄外套的区域",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/kuːl/",
+     "meaning": "凉爽的"
+    },
+    {
+     "word": "cold",
+     "visual_target": "冬日寒风中孩子裹围巾发抖的区域",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/kəʊld/",
+     "meaning": "寒冷的"
+    }
+   ],
+   "card_id": "YL-G4DOWN-U5-C02"
+  }
+ ]
+}

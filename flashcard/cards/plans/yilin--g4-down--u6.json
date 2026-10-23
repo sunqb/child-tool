@@ -1,0 +1,91 @@
+{
+ "version": "yilin",
+ "grade": "g4-down",
+ "gradeName": "四年级下册",
+ "unit": "u6",
+ "unitName": "Unit 6 · Whose dress is this?",
+ "cards": [
+  {
+   "scene_title_cn": "衣帽架",
+   "scene_title_en": "Clothes Rack",
+   "card_type": "Object/Place",
+   "scene_brief": "儿童房里，衣架挂着连衣裙、外套、衬衫和毛衣。",
+   "targets": [
+    {
+     "word": "dress",
+     "visual_target": "衣架上的连衣裙",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/dres/",
+     "meaning": "连衣裙"
+    },
+    {
+     "word": "coat",
+     "visual_target": "衣架上的外套",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/kəʊt/",
+     "meaning": "外套"
+    },
+    {
+     "word": "shirt",
+     "visual_target": "衣架上的衬衫",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ʃɜːt/",
+     "meaning": "衬衫"
+    },
+    {
+     "word": "sweater",
+     "visual_target": "衣架上的毛衣",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/sˈwetə/",
+     "meaning": "毛衣"
+    }
+   ],
+   "card_id": "YL-G4DOWN-U6-C01"
+  },
+  {
+   "scene_title_cn": "洗衣篮旁",
+   "scene_title_en": "By the Laundry Basket",
+   "card_type": "Dialogue/Expression",
+   "scene_brief": "洗衣篮旁，女孩拎起一只手套，露出疑问表情，脚边有裤子和牛仔裤。",
+   "targets": [
+    {
+     "word": "glove",
+     "visual_target": "女孩拎起的一只手套",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ɡləv/",
+     "meaning": "手套"
+    },
+    {
+     "word": "trousers",
+     "visual_target": "洗衣篮旁的裤子",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈtraʊzəz/",
+     "meaning": "裤子"
+    },
+    {
+     "word": "jeans",
+     "visual_target": "地板上的蓝色牛仔裤",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/dʒɪnz/",
+     "meaning": "牛仔裤"
+    },
+    {
+     "word": "whose",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/huːz/",
+     "meaning": "谁的"
+    }
+   ],
+   "card_id": "YL-G4DOWN-U6-C02"
+  }
+ ]
+}

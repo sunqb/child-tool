@@ -1,0 +1,108 @@
+{
+ "version": "yilin",
+ "grade": "g6-up",
+ "gradeName": "六年级上册",
+ "unit": "u8",
+ "unitName": "Unit 8 · Chinese New Year",
+ "cards": [
+  {
+   "scene_title_cn": "春节买新衣",
+   "scene_title_en": "New Clothes for Spring Festival",
+   "card_type": "Action",
+   "scene_brief": "春节商场里，女孩抱着新衣袋跳起来笑，周围挂着红灯笼和中国结。",
+   "targets": [
+    {
+     "word": "chinese new year",
+     "visual_target": "红灯笼与中国结",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/tʃaɪˈniːz nuː jɪə/",
+     "meaning": "农历新年"
+    },
+    {
+     "word": "buy new clothes",
+     "visual_target": "女孩抱着新衣购物袋",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/baɪ nuː kləʊðz/",
+     "meaning": "买新衣服"
+    },
+    {
+     "word": "excited",
+     "visual_target": "女孩跳起来笑",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ɪkˈsaɪtɪd/",
+     "meaning": "兴奋的"
+    }
+   ],
+   "card_id": "YL-G6UP-U8-C01"
+  },
+  {
+   "scene_title_cn": "团圆饭",
+   "scene_title_en": "Reunion Dinner",
+   "card_type": "Narrative",
+   "scene_brief": "家里圆桌旁，一家人围坐吃饺子，爷爷笑着递红包给孩子。",
+   "targets": [
+    {
+     "word": "get together",
+     "visual_target": "一家人围坐餐桌",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ɡɪt təˈɡeðə/",
+     "meaning": "团聚"
+    },
+    {
+     "word": "dumpling",
+     "visual_target": "一盘饺子",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈdʌmplɪŋ/",
+     "meaning": "饺子"
+    },
+    {
+     "word": "red packet",
+     "visual_target": "爷爷手中的红包",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/red ˈpækɪt/",
+     "meaning": "红包"
+    }
+   ],
+   "card_id": "YL-G6UP-U8-C02"
+  },
+  {
+   "scene_title_cn": "夜晚看舞狮",
+   "scene_title_en": "Lion Dance Night",
+   "card_type": "Action",
+   "scene_brief": "夜晚广场上，孩子看舞狮队，天空烟花绽放，地上红鞭炮。",
+   "targets": [
+    {
+     "word": "fireworks",
+     "visual_target": "天空绽放的烟花",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈfaɪəwɜːks/",
+     "meaning": "烟花"
+    },
+    {
+     "word": "firecracker",
+     "visual_target": "地上成串红鞭炮",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈfaɪəkrækə/",
+     "meaning": "鞭炮"
+    },
+    {
+     "word": "watch a lion dance",
+     "visual_target": "孩子指向舞狮队",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/wɒtʃ ə laɪən dɑːns/",
+     "meaning": "看舞狮"
+    }
+   ],
+   "card_id": "YL-G6UP-U8-C03"
+  }
+ ]
+}

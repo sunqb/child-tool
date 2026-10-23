@@ -1,0 +1,222 @@
+{
+ "version": "yilin",
+ "grade": "g4-up",
+ "gradeName": "四年级上册",
+ "unit": "u1",
+ "unitName": "Unit 1 · Our school subjects",
+ "cards": [
+  {
+   "scene_title_cn": "学科用品角",
+   "scene_title_en": "School Subject Corner",
+   "card_type": "Object/Place",
+   "scene_brief": "教室里四张课桌分别摆着毛笔、无字图画书、算盘和调色盘等学科用品。",
+   "targets": [
+    {
+     "word": "subject",
+     "visual_target": "四组学科用品围绕同一张课桌的关系",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/ˈsʌbdʒɪkt/",
+     "meaning": "学科，科目"
+    },
+    {
+     "word": "Chinese",
+     "visual_target": "毛笔、宣纸与中国结",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/tʃaɪˈniːz/",
+     "meaning": "语文（课）；中国的"
+    },
+    {
+     "word": "English",
+     "visual_target": "米字旗与无字图画书",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈɪŋlɪʃ/",
+     "meaning": "英语（课）；英语的"
+    },
+    {
+     "word": "Maths",
+     "visual_target": "算盘和几何尺",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/mæθs/",
+     "meaning": "数学（课）"
+    },
+    {
+     "word": "Art",
+     "visual_target": "调色盘和画笔",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ɑːt/",
+     "meaning": "美术（课）"
+    }
+   ],
+   "card_id": "YL-G4UP-U1-C01"
+  },
+  {
+   "scene_title_cn": "科学信息角",
+   "scene_title_en": "Science and IT Corner",
+   "card_type": "Narrative",
+   "scene_brief": "计算机角里，男孩用鼠标查看屏幕上的叶片放大图，桌上有烧杯和放大镜。",
+   "targets": [
+    {
+     "word": "Science",
+     "visual_target": "烧杯和放大镜",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/saɪəns/",
+     "meaning": "科学（课）"
+    },
+    {
+     "word": "IT",
+     "visual_target": "电脑主机、键盘和屏幕",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ɪt/",
+     "meaning": "信息科技（课）"
+    },
+    {
+     "word": "mouse",
+     "visual_target": "男孩手下的电脑鼠标",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/maʊs/",
+     "meaning": "鼠标；老鼠"
+    },
+    {
+     "word": "interesting",
+     "visual_target": "男孩凑近屏幕、眼睛发亮的惊喜表情",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈɪntərestɪŋ/",
+     "meaning": "有趣的，有吸引力的"
+    },
+    {
+     "word": "learn about",
+     "visual_target": "男孩用鼠标点开叶片放大图并观察",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/lɜːn əˈbaʊt/",
+     "meaning": "学习"
+    }
+   ],
+   "card_id": "YL-G4UP-U1-C02"
+  },
+  {
+   "scene_title_cn": "操场上",
+   "scene_title_en": "On the Sports Ground",
+   "card_type": "Action",
+   "scene_brief": "操场上，女孩熟练跳绳，男孩站在最高领奖台，其他孩子沿跑道跑步。",
+   "targets": [
+    {
+     "word": "PE",
+     "visual_target": "跳绳和跑道",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˌpiːˈiː/",
+     "meaning": "体育（课）"
+    },
+    {
+     "word": "sports ground",
+     "visual_target": "绿色操场和红色跑道",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/spɔːts ɡraʊnd/",
+     "meaning": "操场，运动场"
+    },
+    {
+     "word": "be good at",
+     "visual_target": "女孩连续熟练跳绳的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/bi ɡʊd æt/",
+     "meaning": "擅长"
+    },
+    {
+     "word": "best",
+     "visual_target": "领奖台的最高一层",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/best/",
+     "meaning": "最，最高程度地"
+    },
+    {
+     "word": "also",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ˈɒlsəʊ/",
+     "meaning": "也"
+    }
+   ],
+   "card_id": "YL-G4UP-U1-C03"
+  },
+  {
+   "scene_title_cn": "校园文化节",
+   "scene_title_en": "School Culture Festival",
+   "card_type": "Narrative",
+   "scene_brief": "校园文化节上，孩子拉小提琴，另一群孩子拿扫帚打扫并挂中国结。",
+   "targets": [
+    {
+     "word": "Music",
+     "visual_target": "孩子手中的小提琴",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/mˈjuːzɪk/",
+     "meaning": "音乐（课）"
+    },
+    {
+     "word": "Labour",
+     "visual_target": "孩子拿扫帚和抹布打扫的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈleɪbə/",
+     "meaning": "劳动（课）"
+    },
+    {
+     "word": "culture",
+     "visual_target": "红色中国结和民族纹样挂饰",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈkʌltʃə/",
+     "meaning": "文化，文明"
+    }
+   ],
+   "card_id": "YL-G4UP-U1-C04"
+  },
+  {
+   "scene_title_cn": "睡前阅读",
+   "scene_title_en": "Bedtime Reading",
+   "card_type": "Narrative",
+   "scene_brief": "床边，孩子翻开无字图画故事书阅读，所有毛绒玩具都围在旁边听。",
+   "targets": [
+    {
+     "word": "read",
+     "visual_target": "孩子翻开无字图画书阅读的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/red/",
+     "meaning": "阅读"
+    },
+    {
+     "word": "story",
+     "visual_target": "一本无字图画故事书",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈstɔːri/",
+     "meaning": "故事"
+    },
+    {
+     "word": "all",
+     "visual_target": "围在床边的全部毛绒玩具",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ɔːl/",
+     "meaning": "全部，都"
+    }
+   ],
+   "card_id": "YL-G4UP-U1-C05"
+  }
+ ]
+}

@@ -1,0 +1,116 @@
+{
+ "version": "yilin",
+ "grade": "g6-up",
+ "gradeName": "六年级上册",
+ "unit": "u2",
+ "unitName": "Unit 2 · What a day!",
+ "cards": [
+  {
+   "scene_title_cn": "天气对比",
+   "scene_title_en": "Weather Contrast",
+   "card_type": "Choice/Contrast",
+   "scene_brief": "草地上，孩子们分别站在阳光、云层和风吹弯树的对比区域。",
+   "targets": [
+    {
+     "word": "weather",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ˈweðə/",
+     "meaning": "天气"
+    },
+    {
+     "word": "sunny",
+     "visual_target": "左侧区域明亮的太阳和阳光",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/ˈsʌni/",
+     "meaning": "晴朗的"
+    },
+    {
+     "word": "cloudy",
+     "visual_target": "中间区域成片的灰白云朵",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/ˈklaʊdi/",
+     "meaning": "多云的"
+    },
+    {
+     "word": "windy",
+     "visual_target": "右侧区域被风吹弯的小树和飘叶",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/ˈwɪndi/",
+     "meaning": "有风的"
+    }
+   ],
+   "card_id": "YL-G6UP-U2-C01"
+  },
+  {
+   "scene_title_cn": "雨天出门",
+   "scene_title_en": "Rainy Day Out",
+   "card_type": "Narrative",
+   "scene_brief": "雨天门口，男孩提着雨伞，空中落雨，地面有水洼。",
+   "targets": [
+    {
+     "word": "rain",
+     "visual_target": "空中落下的雨滴和地上的水洼",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/reɪn/",
+     "meaning": "下雨"
+    },
+    {
+     "word": "rainy",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ˈreɪni/",
+     "meaning": "多雨的"
+    },
+    {
+     "word": "bring",
+     "visual_target": "男孩手提雨伞走向门口的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/brɪŋ/",
+     "meaning": "带来"
+    }
+   ],
+   "card_id": "YL-G6UP-U2-C02"
+  },
+  {
+   "scene_title_cn": "放风筝",
+   "scene_title_en": "Flying a Kite",
+   "card_type": "Action",
+   "scene_brief": "草地上，男孩放飞风筝，风筝高飞在蓝色天空中。",
+   "targets": [
+    {
+     "word": "fly",
+     "visual_target": "男孩牵引风筝线放飞风筝的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/flaɪ/",
+     "meaning": "放飞（风筝）"
+    },
+    {
+     "word": "high",
+     "visual_target": "风筝位于画面上方高处、与地面形成高低关系",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/haɪ/",
+     "meaning": "高地"
+    },
+    {
+     "word": "sky",
+     "visual_target": "画面上方蓝色天空区域",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/skaɪ/",
+     "meaning": "天空"
+    }
+   ],
+   "card_id": "YL-G6UP-U2-C03"
+  }
+ ]
+}

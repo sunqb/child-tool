@@ -1,0 +1,222 @@
+{
+ "version": "yilin",
+ "grade": "g4-up",
+ "gradeName": "四年级上册",
+ "unit": "u3",
+ "unitName": "Unit 3 · My week",
+ "cards": [
+  {
+   "scene_title_cn": "一周前三天",
+   "scene_title_en": "First Days of the Week",
+   "card_type": "Timeline",
+   "scene_brief": "横向三格时间线：男孩周一背书包、周二踢球、周三看书，背景是七格连续时间带。",
+   "targets": [
+    {
+     "word": "week",
+     "visual_target": "横跨画面的七格连续时间带",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/wɪk/",
+     "meaning": "周，星期"
+    },
+    {
+     "word": "Monday",
+     "visual_target": "第一格男孩背书包走向校车",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ˈmʌndeɪ/",
+     "meaning": "星期一"
+    },
+    {
+     "word": "Tuesday",
+     "visual_target": "第二格男孩在操场踢足球",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ˈtuːzdeɪ/",
+     "meaning": "星期二"
+    },
+    {
+     "word": "Wednesday",
+     "visual_target": "第三格男孩在图书馆翻绘本",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ˈwenzdeɪ/",
+     "meaning": "星期三"
+    }
+   ],
+   "card_id": "YL-G4UP-U3-C01"
+  },
+  {
+   "scene_title_cn": "放学后的舞蹈课",
+   "scene_title_en": "After-School Dance Lesson",
+   "card_type": "Timeline",
+   "scene_brief": "两格时间线：周四夕阳下男孩背书包离校，周五女孩在舞蹈教室跟老师练舞，旁边有把杆。",
+   "targets": [
+    {
+     "word": "Thursday",
+     "visual_target": "左侧格内男孩背书包走出校门，天边有夕阳",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ˈθɜːzdeɪ/",
+     "meaning": "星期四"
+    },
+    {
+     "word": "Friday",
+     "visual_target": "右侧格内女孩在舞蹈教室练舞",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ˈfraɪdeɪ/",
+     "meaning": "星期五"
+    },
+    {
+     "word": "after school",
+     "visual_target": "左侧格内校门、夕阳和男孩背书包离开的身影",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ˈɑːftə skuːl/",
+     "meaning": "放学后"
+    },
+    {
+     "word": "lesson",
+     "visual_target": "舞蹈教室中老师带学生排队上课的整体场景",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ˈlesən/",
+     "meaning": "一节课，一课时"
+    },
+    {
+     "word": "dancing",
+     "visual_target": "女孩抬臂旋转的舞蹈动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈdænsɪŋ/",
+     "meaning": "跳舞，舞蹈"
+    }
+   ],
+   "card_id": "YL-G4UP-U3-C02"
+  },
+  {
+   "scene_title_cn": "周末公园遛狗",
+   "scene_title_en": "Weekend Park Walk",
+   "card_type": "Timeline",
+   "scene_brief": "左右两格周末时间线：周六男孩牵金毛犬在公园走，周日他躺在草坪吊床上休息。",
+   "targets": [
+    {
+     "word": "Saturday",
+     "visual_target": "左侧格内男孩牵着狗在公园小路散步",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ˈsætɪdeɪ/",
+     "meaning": "星期六"
+    },
+    {
+     "word": "Sunday",
+     "visual_target": "右侧格内男孩在草坪吊床上休息",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ˈsʌndeɪ/",
+     "meaning": "星期天"
+    },
+    {
+     "word": "walk",
+     "visual_target": "男孩手握狗绳向前牵狗走的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/wɔːk/",
+     "meaning": "牵着（动物）走，遛"
+    },
+    {
+     "word": "dog",
+     "visual_target": "金毛犬",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/dɒɡ/",
+     "meaning": "狗"
+    }
+   ],
+   "card_id": "YL-G4UP-U3-C03"
+  },
+  {
+   "scene_title_cn": "早晨起床",
+   "scene_title_en": "Morning Wake-Up",
+   "card_type": "Dialogue/Expression",
+   "scene_brief": "卧室清晨，妈妈在门口摊手询问，男孩从床上坐起伸懒腰，床头闹钟响着。",
+   "targets": [
+    {
+     "word": "up",
+     "visual_target": "男孩从床上坐起伸懒腰",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ʌp/",
+     "meaning": "起床"
+    },
+    {
+     "word": "when",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/wɪn/",
+     "meaning": "什么时候"
+    },
+    {
+     "word": "every",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ˈevəi/",
+     "meaning": "每一个，每个"
+    },
+    {
+     "word": "at",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/æt/",
+     "meaning": "在（某时间）"
+    },
+    {
+     "word": "today",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/təˈdeɪ/",
+     "meaning": "在今天"
+    }
+   ],
+   "card_id": "YL-G4UP-U3-C04"
+  },
+  {
+   "scene_title_cn": "明天去电影院",
+   "scene_title_en": "Cinema Tomorrow",
+   "card_type": "Narrative",
+   "scene_brief": "男孩在客厅沙发放松，右侧柔光映出明天电影院的大银幕、座椅和爆米花。",
+   "targets": [
+    {
+     "word": "free",
+     "visual_target": "男孩躺沙发放松的整体状态",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/fri/",
+     "meaning": "空闲的"
+    },
+    {
+     "word": "cinema",
+     "visual_target": "电影院大银幕、成排座椅和爆米花",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈsɪnəmə/",
+     "meaning": "电影院"
+    },
+    {
+     "word": "tomorrow",
+     "visual_target": "右侧柔光中的次日电影院场景",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/təˈmɒrəʊ/",
+     "meaning": "明天，在明天"
+    }
+   ],
+   "card_id": "YL-G4UP-U3-C05"
+  }
+ ]
+}

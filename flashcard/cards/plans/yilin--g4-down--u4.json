@@ -1,0 +1,91 @@
+{
+ "version": "yilin",
+ "grade": "g4-down",
+ "gradeName": "四年级下册",
+ "unit": "u4",
+ "unitName": "Unit 4 · Drawing in the park",
+ "cards": [
+  {
+   "scene_title_cn": "公园湖畔",
+   "scene_title_en": "By the Lake",
+   "card_type": "Object/Place",
+   "scene_brief": "公园里，湖面有一艘小船，岸边开着花，小河从草地旁流入湖中。",
+   "targets": [
+    {
+     "word": "park",
+     "visual_target": "有草地、长椅和树的公园",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/pɑːk/",
+     "meaning": "公园"
+    },
+    {
+     "word": "lake",
+     "visual_target": "波光粼粼的湖面",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/leɪk/",
+     "meaning": "湖"
+    },
+    {
+     "word": "flower",
+     "visual_target": "岸边一丛盛开的花",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/flaʊə/",
+     "meaning": "花"
+    },
+    {
+     "word": "boat",
+     "visual_target": "湖面上的小船",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/bəʊt/",
+     "meaning": "小船"
+    },
+    {
+     "word": "river",
+     "visual_target": "流入湖中的小河",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈrɪvə/",
+     "meaning": "河"
+    }
+   ],
+   "card_id": "YL-G4DOWN-U4-C01"
+  },
+  {
+   "scene_title_cn": "轻松画画",
+   "scene_title_en": "Drawing Easily",
+   "card_type": "Action",
+   "scene_brief": "男孩坐在桌边，手握画笔轻松地画一幅简单的画，脸上带笑。",
+   "targets": [
+    {
+     "word": "draw",
+     "visual_target": "男孩握笔在纸上画画的手臂动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/drɔː/",
+     "meaning": "画"
+    },
+    {
+     "word": "picture",
+     "visual_target": "桌上画纸上未完成的儿童画",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈpɪktʃə/",
+     "meaning": "图画"
+    },
+    {
+     "word": "easy",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ˈiːzi/",
+     "meaning": "容易的"
+    }
+   ],
+   "card_id": "YL-G4DOWN-U4-C02"
+  }
+ ]
+}

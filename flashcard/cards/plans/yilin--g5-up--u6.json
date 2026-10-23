@@ -1,0 +1,99 @@
+{
+ "version": "yilin",
+ "grade": "g5-up",
+ "gradeName": "五年级上册",
+ "unit": "u6",
+ "unitName": "Unit 6 · My e-friend",
+ "cards": [
+  {
+   "scene_title_cn": "电脑前回网友",
+   "scene_title_en": "Emailing a Friend",
+   "card_type": "Action",
+   "scene_brief": "男孩在书桌前给网友发邮件，屏幕有信封图标和头像，他托腮等待后打字回复。",
+   "targets": [
+    {
+     "word": "e-friend",
+     "visual_target": "电脑屏幕上的卡通网友头像",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈiːfrend/",
+     "meaning": "网友"
+    },
+    {
+     "word": "email",
+     "visual_target": "电脑屏幕上的信封图标",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ɪˈmeɪl/",
+     "meaning": "电子邮件"
+    },
+    {
+     "word": "send",
+     "visual_target": "男孩点击纸飞机图标按键的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/send/",
+     "meaning": "发送"
+    },
+    {
+     "word": "wait",
+     "visual_target": "男孩托腮盯着屏幕等待的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/weɪt/",
+     "meaning": "等待"
+    },
+    {
+     "word": "answer",
+     "visual_target": "男孩双手在键盘上打字回复的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈɑːnsə/",
+     "meaning": "回答"
+    }
+   ],
+   "card_id": "YL-G5UP-U6-C01"
+  },
+  {
+   "scene_title_cn": "异国民宿停留",
+   "scene_title_en": "Staying in Another Country",
+   "card_type": "Timeline",
+   "scene_brief": "孩子在异国民宿放下行李箱，窗外地标剪影旁有夕阳到次日晨光的时间线。",
+   "targets": [
+    {
+     "word": "country",
+     "visual_target": "窗外埃菲尔铁塔地标剪影",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈkʌntri/",
+     "meaning": "国家"
+    },
+    {
+     "word": "stay",
+     "visual_target": "孩子把行李箱放在床边并脱下背包的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/steɪ/",
+     "meaning": "停留"
+    },
+    {
+     "word": "after",
+     "visual_target": "夕阳落山后月亮升起的弧形时间线片段",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ˈɑːftə/",
+     "meaning": "在……之后"
+    },
+    {
+     "word": "tomorrow",
+     "visual_target": "弧形时间线末端次日清晨的太阳和闹钟",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/təˈmɒrəʊ/",
+     "meaning": "明天"
+    }
+   ],
+   "card_id": "YL-G5UP-U6-C02"
+  }
+ ]
+}

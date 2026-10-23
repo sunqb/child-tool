@@ -1,0 +1,148 @@
+{
+ "version": "yilin",
+ "grade": "g4-up",
+ "gradeName": "四年级上册",
+ "unit": "u6",
+ "unitName": "Unit 6 · Weather",
+ "cards": [
+  {
+   "scene_title_cn": "天气四格",
+   "scene_title_en": "Weather Panels",
+   "card_type": "Choice/Contrast",
+   "scene_brief": "同一草地四格天空：太阳、乌云、雨滴、风吹弯树",
+   "targets": [
+    {
+     "word": "weather",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ˈweðə/",
+     "meaning": "天气，气象"
+    },
+    {
+     "word": "cloudy",
+     "visual_target": "灰色乌云遮住太阳",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈklaʊdi/",
+     "meaning": "多云的，阴天的"
+    },
+    {
+     "word": "sunny",
+     "visual_target": "明亮太阳和阳光",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈsʌni/",
+     "meaning": "晴朗的"
+    },
+    {
+     "word": "rainy",
+     "visual_target": "蓝色雨滴和地面积水",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈreɪni/",
+     "meaning": "阴雨的，多雨的"
+    },
+    {
+     "word": "windy",
+     "visual_target": "风吹弯小树和飘起落叶",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈwɪndi/",
+     "meaning": "多风的，风大的"
+    }
+   ],
+   "card_id": "YL-G4UP-U6-C01"
+  },
+  {
+   "scene_title_cn": "温度对比角",
+   "scene_title_en": "Hot, Cool, Warm",
+   "card_type": "Choice/Contrast",
+   "scene_brief": "同一公园三处：烈日下擦汗、树荫里抱臂、阳光下穿薄外套",
+   "targets": [
+    {
+     "word": "hot",
+     "visual_target": "男孩在烈日下擦汗",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/hɒt/",
+     "meaning": "温度高的，热的"
+    },
+    {
+     "word": "cool",
+     "visual_target": "树荫里抱臂的女孩",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/kuːl/",
+     "meaning": "凉的，凉爽的"
+    },
+    {
+     "word": "warm",
+     "visual_target": "阳光下穿薄外套微笑的女孩",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/wɔːm/",
+     "meaning": "温暖的，暖和的"
+    }
+   ],
+   "card_id": "YL-G4UP-U6-C02"
+  },
+  {
+   "scene_title_cn": "公园风筝事件",
+   "scene_title_en": "Park Kite Story",
+   "card_type": "Narrative",
+   "scene_brief": "公园里男孩放风筝，风吹钱到伞边，女孩担心地指向那里",
+   "targets": [
+    {
+     "word": "park",
+     "visual_target": "草地、滑梯和树木的公园",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/pɑːk/",
+     "meaning": "公园"
+    },
+    {
+     "word": "fly a kite",
+     "visual_target": "男孩拉线奔跑并放起风筝",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/flaɪ ə kaɪt/",
+     "meaning": "放风筝"
+    },
+    {
+     "word": "worry",
+     "visual_target": "女孩皱眉抓衣角",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈwʌri/",
+     "meaning": "担心，担忧"
+    },
+    {
+     "word": "there",
+     "visual_target": "女孩手指远处伞边的钱",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/ðeə/",
+     "meaning": "到那里，在那里"
+    },
+    {
+     "word": "money",
+     "visual_target": "伞边散落的硬币和纸币",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈmʌni/",
+     "meaning": "钱"
+    },
+    {
+     "word": "umbrella",
+     "visual_target": "长椅旁的彩色雨伞",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ʌmˈbrelə/",
+     "meaning": "伞，雨伞"
+    }
+   ],
+   "card_id": "YL-G4UP-U6-C03"
+  }
+ ]
+}

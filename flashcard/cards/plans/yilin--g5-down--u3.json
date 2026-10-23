@@ -1,0 +1,107 @@
+{
+ "version": "yilin",
+ "grade": "g5-down",
+ "gradeName": "五年级下册",
+ "unit": "u3",
+ "unitName": "Unit 3 · Asking the way",
+ "cards": [
+  {
+   "scene_title_cn": "问路去车站",
+   "scene_title_en": "Asking the Way to the Station",
+   "card_type": "Narrative",
+   "scene_brief": "男孩沿街道走到公交站台，向警察询问继续前行的路线。",
+   "targets": [
+    {
+     "word": "way",
+     "visual_target": "通向站台的弯曲路线",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/weɪ/",
+     "meaning": "路；方法"
+    },
+    {
+     "word": "get to",
+     "visual_target": "男孩抵达站台并停下的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ɡɪt tuː/",
+     "meaning": "到达"
+    },
+    {
+     "word": "station",
+     "visual_target": "带顶棚和长椅的公交站台",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈsteɪʃən/",
+     "meaning": "车站"
+    },
+    {
+     "word": "street",
+     "visual_target": "铺砖的街道",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/strɪt/",
+     "meaning": "街道"
+    },
+    {
+     "word": "ask",
+     "visual_target": "男孩面向警察抬手发问的口型和手势",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ɑːsk/",
+     "meaning": "问"
+    }
+   ],
+   "card_id": "YL-G5DOWN-U3-C01"
+  },
+  {
+   "scene_title_cn": "路口乘车",
+   "scene_title_en": "Taking the Bus at the Crossing",
+   "card_type": "Spatial/Cutaway",
+   "scene_brief": "男孩坐在公交车上，公交车在十字路口左转，右侧有商店，前方道路笔直。",
+   "targets": [
+    {
+     "word": "take",
+     "visual_target": "男孩坐在公交车座位上的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/teɪk/",
+     "meaning": "乘（车）"
+    },
+    {
+     "word": "turn",
+     "visual_target": "公交车沿路口转弯的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/tɜːn/",
+     "meaning": "转弯"
+    },
+    {
+     "word": "left",
+     "visual_target": "公交车转向画面左侧的道路",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/left/",
+     "meaning": "左边"
+    },
+    {
+     "word": "right",
+     "visual_target": "画面右侧的商店和长椅",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/raɪt/",
+     "meaning": "右边"
+    },
+    {
+     "word": "straight",
+     "visual_target": "正前方笔直延伸的大道",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/streɪt/",
+     "meaning": "笔直地"
+    }
+   ],
+   "card_id": "YL-G5DOWN-U3-C02"
+  }
+ ]
+}

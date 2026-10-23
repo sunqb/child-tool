@@ -1,0 +1,116 @@
+{
+ "version": "yilin",
+ "grade": "g6-down",
+ "gradeName": "六年级下册",
+ "unit": "u6",
+ "unitName": "Unit 6 · An interesting country",
+ "cards": [
+  {
+   "scene_title_cn": "澳大利亚动物角",
+   "scene_title_en": "Australian Animals",
+   "card_type": "Object/Place",
+   "scene_brief": "两名孩子蹲在草地围栏旁看袋鼠和树杈上的考拉，脚边铺着澳大利亚轮廓地垫。",
+   "targets": [
+    {
+     "word": "australia",
+     "visual_target": "澳大利亚大陆轮廓的软地垫",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ɔːˈstreɪljə/",
+     "meaning": "澳大利亚"
+    },
+    {
+     "word": "kangaroo",
+     "visual_target": "草地围栏内的袋鼠",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/kæŋɡəˈuː/",
+     "meaning": "袋鼠"
+    },
+    {
+     "word": "koala",
+     "visual_target": "桉树杈上抱树的考拉",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/kəʊˈɒlə/",
+     "meaning": "考拉"
+    }
+   ],
+   "card_id": "YL-G6DOWN-U6-C01"
+  },
+  {
+   "scene_title_cn": "首都地图桌",
+   "scene_title_en": "Capital Map Table",
+   "card_type": "Object/Place",
+   "scene_brief": "孩子在地图桌前把星星标记放在国会大厦模型旁，桌角立着国旗和指南针。",
+   "targets": [
+    {
+     "word": "canberra",
+     "visual_target": "有柱廊的国会大厦模型",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/kænˈberə/",
+     "meaning": "堪培拉"
+    },
+    {
+     "word": "capital",
+     "visual_target": "星星标记与国会大厦模型相连的城市位置",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/ˈkæpɪtəl/",
+     "meaning": "首都"
+    },
+    {
+     "word": "flag",
+     "visual_target": "澳大利亚国旗",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/flæɡ/",
+     "meaning": "国旗"
+    },
+    {
+     "word": "north",
+     "visual_target": "指南针指向画面上方的红色箭头",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/nɔːθ/",
+     "meaning": "北方"
+    }
+   ],
+   "card_id": "YL-G6DOWN-U6-C02"
+  },
+  {
+   "scene_title_cn": "小球迷看地球仪",
+   "scene_title_en": "Little Sports Fan at the Globe",
+   "card_type": "Dialogue/Expression",
+   "scene_brief": "穿运动衫的孩子抱球站在地球仪前，睁大眼睛惊喜地看着一块大陆。",
+   "targets": [
+    {
+     "word": "country",
+     "visual_target": "地球仪上一块边缘清晰的国土地块",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈkʌntri/",
+     "meaning": "国家"
+    },
+    {
+     "word": "sport-lover",
+     "visual_target": "穿运动衫抱球、笑着看地球仪的孩子",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/spɔːt ˈlʌvə/",
+     "meaning": "运动爱好者"
+    },
+    {
+     "word": "interesting",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ˈɪntərestɪŋ/",
+     "meaning": "有趣的"
+    }
+   ],
+   "card_id": "YL-G6DOWN-U6-C03"
+  }
+ ]
+}

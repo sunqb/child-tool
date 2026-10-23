@@ -16,6 +16,8 @@
     --teal-soft: #e6f2f0;
     --orange: #e8590c;
     --orange-soft: #fff0e6;
+    --blue: #2563eb;
+    --blue-soft: #e8f0fe;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { background: var(--paper); }
@@ -88,6 +90,7 @@
   /* 各工具的主题色 */
   .tool.dictation .t-icon { background: var(--teal-soft); }
   .tool.wrongbook .t-icon { background: var(--orange-soft); }
+  .tool.flashcard .t-icon { background: var(--blue-soft); }
 
   .foot {
     text-align: center;
@@ -121,6 +124,13 @@
       <div class="t-icon">📒</div>
       <div class="t-name">错题本</div>
       <div class="t-desc">拍照框选错题，按学科、测验、标签整理，一键排版打印成 A4 重做卷</div>
+    </a>
+
+    <a class="tool flashcard" href="./flashcard/index.html">
+      <span class="t-arrow">→</span>
+      <div class="t-icon">📇</div>
+      <div class="t-name">单词闪卡</div>
+      <div class="t-desc">看 AI 场景图卡记单词，点图上的单词就能发音，词库与默写小工具同源</div>
     </a>
 
   </div>

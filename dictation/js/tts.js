@@ -15,7 +15,9 @@
   var API_PATH = "/api/tts";
   var VOICE_ZH = "zh-CN-XiaoxiaoNeural";
   var VOICE_EN = "en-US-JennyNeural";
-  var AUDIO_BASE = "audio/";           // 预生成音频目录（tools/generate_audio.py 产物）
+  // 预生成音频目录（tools/generate_audio.py 产物）；其他目录的页面（如 flashcard/）
+  // 可在加载本脚本前设 window.TTS_AUDIO_BASE = "../dictation/audio/" 复用同一套音频
+  var AUDIO_BASE = global.TTS_AUDIO_BASE || "audio/";
   var MANIFEST_URL = AUDIO_BASE + "manifest.json";
   var FETCH_TIMEOUT_MS = 15000;        // 单次合成超时
   var API_RETRY_COOLDOWN_MS = 60000;   // 在线合成失败后的冷却期，期间直接走浏览器引擎

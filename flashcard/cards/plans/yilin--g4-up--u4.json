@@ -1,0 +1,37 @@
+{
+ "version": "yilin",
+ "grade": "g4-up",
+ "gradeName": "四年级上册",
+ "unit": "u4",
+ "unitName": "Unit 4 · I like sport",
+ "cards": [
+  {
+   "card_id": "YL-G4UP-U4-C01",
+   "scene_title_cn": "快乐运动场",
+   "scene_title_en": "Sports Ground",
+   "card_type": "Object/Place",
+   "scene_brief": "阳光下的社区运动场：左侧草坪两个男孩追逐踢足球，中间篮球架下篮球弹起，右侧乒乓球台上放着球拍和乒乓球",
+   "targets": [
+    {"word": "play", "visual_target": "草坪上奔跑踢球的男孩们", "mapping_mode": "action_anchor", "connector": "optional", "ipa": "/pleɪ/", "meaning": "打（球），踢（球）"},
+    {"word": "football", "visual_target": "草坪上的足球", "mapping_mode": "direct_anchor", "connector": "required", "ipa": "/ˈfʊtbɒl/", "meaning": "足球运动；足球"},
+    {"word": "basketball", "visual_target": "篮球架下弹起的篮球", "mapping_mode": "direct_anchor", "connector": "required", "ipa": "/ˈbæskətbɔːl/", "meaning": "篮球运动；篮球"},
+    {"word": "ping-pong", "visual_target": "球台上的乒乓球拍和乒乓球", "mapping_mode": "direct_anchor", "connector": "required", "ipa": "/ˈpɪŋpɒŋ/", "meaning": "乒乓球运动"}
+   ]
+  },
+  {
+   "card_id": "YL-G4UP-U4-C02",
+   "scene_title_cn": "游泳馆里真棒",
+   "scene_title_en": "At the Pool",
+   "card_type": "Narrative",
+   "scene_brief": "明亮的室内游泳馆：女孩在泳道里奋力游泳，男孩在池边弯腰准备第一次跳水，水面溅起浪花",
+   "targets": [
+    {"word": "swimming", "visual_target": "泳道里游泳的女孩", "mapping_mode": "action_anchor", "connector": "optional", "ipa": "/ˈswɪmɪŋ/", "meaning": "游泳；游泳运动"},
+    {"word": "try", "visual_target": "池边弯腰准备跳水的男孩", "mapping_mode": "action_anchor", "connector": "optional", "ipa": "/traɪ/", "meaning": "试"},
+    {"word": "hard", "visual_target": "女孩奋力划水的姿态", "mapping_mode": "scene_state", "connector": "none", "ipa": "/hɑːd/", "meaning": "难做的，不易的"},
+    {"word": "well", "visual_target": "（功能词，无挂靠）", "mapping_mode": "dialogue_phrase", "connector": "none", "ipa": "/wel/", "meaning": "好"},
+    {"word": "great", "visual_target": "（功能词，无挂靠）", "mapping_mode": "dialogue_phrase", "connector": "none", "ipa": "/ɡreɪt/", "meaning": "非常的"},
+    {"word": "so", "visual_target": "（功能词，无挂靠）", "mapping_mode": "dialogue_phrase", "connector": "none", "ipa": "/səʊ/", "meaning": "（表示程度）这么，那么"}
+   ]
+  }
+ ]
+}

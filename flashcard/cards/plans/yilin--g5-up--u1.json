@@ -1,0 +1,116 @@
+{
+ "version": "yilin",
+ "grade": "g5-up",
+ "gradeName": "五年级上册",
+ "unit": "u1",
+ "unitName": "Unit 1 · Goldilocks",
+ "cards": [
+  {
+   "scene_title_cn": "森林遇熊",
+   "scene_title_en": "Bear in the Forest",
+   "card_type": "Narrative",
+   "scene_brief": "森林里，一只棕熊走近，孩子躲在树后缩肩发抖，表情害怕。",
+   "targets": [
+    {
+     "word": "forest",
+     "visual_target": "高大的树木和灌木丛",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈfɒrɪst/",
+     "meaning": "森林"
+    },
+    {
+     "word": "bear",
+     "visual_target": "走近的棕熊",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/beə/",
+     "meaning": "熊"
+    },
+    {
+     "word": "afraid",
+     "visual_target": "孩子躲在树后缩肩发抖的表情",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/əˈfreɪd/",
+     "meaning": "害怕的"
+    }
+   ],
+   "card_id": "YL-G5UP-U1-C01"
+  },
+  {
+   "scene_title_cn": "汤和面包",
+   "scene_title_en": "Soup and Bread",
+   "card_type": "Choice/Contrast",
+   "scene_brief": "餐桌上有一碗热汤，盘里放着干硬面包和松软面包，孩子尝汤后眼睛发亮。",
+   "targets": [
+    {
+     "word": "soup",
+     "visual_target": "餐桌上冒着热气的汤碗",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/suːp/",
+     "meaning": "汤"
+    },
+    {
+     "word": "hard",
+     "visual_target": "烤得干硬的面包",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/hɑːd/",
+     "meaning": "硬的"
+    },
+    {
+     "word": "soft",
+     "visual_target": "松软的蒸面包",
+     "mapping_mode": "comparison_zone",
+     "connector": "none",
+     "ipa": "/sɒft/",
+     "meaning": "柔软的"
+    },
+    {
+     "word": "really",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ˈrɪli/",
+     "meaning": "真的"
+    }
+   ],
+   "card_id": "YL-G5UP-U1-C02"
+  },
+  {
+   "scene_title_cn": "卧室找玩具",
+   "scene_title_en": "Finding a Toy",
+   "card_type": "Action",
+   "scene_brief": "儿童卧室里，孩子从床和玩具箱之间找到一个皮球。",
+   "targets": [
+    {
+     "word": "room",
+     "visual_target": "儿童卧室的床、玩具箱和地毯",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ruːm/",
+     "meaning": "房间"
+    },
+    {
+     "word": "between",
+     "visual_target": "床和玩具箱之间的空隙，皮球在其中",
+     "mapping_mode": "relation_anchor",
+     "connector": "optional",
+     "ipa": "/bɪtˈwiːn/",
+     "meaning": "在……之间"
+    },
+    {
+     "word": "find",
+     "visual_target": "孩子蹲下从床与玩具箱之间拿出皮球的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/faɪnd/",
+     "meaning": "找到"
+    }
+   ],
+   "card_id": "YL-G5UP-U1-C03"
+  }
+ ]
+}

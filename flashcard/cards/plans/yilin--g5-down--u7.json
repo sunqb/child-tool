@@ -1,0 +1,107 @@
+{
+ "version": "yilin",
+ "grade": "g5-down",
+ "gradeName": "五年级下册",
+ "unit": "u7",
+ "unitName": "Unit 7 · Chinese festivals",
+ "cards": [
+  {
+   "scene_title_cn": "冬末春节时间线",
+   "scene_title_en": "Late Winter and Spring Festival",
+   "card_type": "Timeline",
+   "scene_brief": "时间轴两格：左格雪人厚棉衣，右格融雪冒芽；旁边屋里挂红灯笼、摆饺子。",
+   "targets": [
+    {
+     "word": "spring festival",
+     "visual_target": "红窗花和团圆饭桌",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/spɜːɪŋ ˈfestɪvəl/",
+     "meaning": "春节"
+    },
+    {
+     "word": "lantern",
+     "visual_target": "屋檐下红灯笼",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈlæntən/",
+     "meaning": "灯笼"
+    },
+    {
+     "word": "dumpling",
+     "visual_target": "盘中饺子",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈdʌmplɪŋ/",
+     "meaning": "饺子"
+    },
+    {
+     "word": "january",
+     "visual_target": "时间轴左格的雪人、厚棉衣和光秃树枝",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ˈdʒænjuːeri/",
+     "meaning": "一月"
+    },
+    {
+     "word": "february",
+     "visual_target": "时间轴右格的融雪和树枝嫩芽",
+     "mapping_mode": "timeline_segment",
+     "connector": "none",
+     "ipa": "/ˈfebruːeri/",
+     "meaning": "二月"
+    }
+   ],
+   "card_id": "YL-G5DOWN-U7-C01"
+  },
+  {
+   "scene_title_cn": "节日对比",
+   "scene_title_en": "Festival Comparison",
+   "card_type": "Choice/Contrast",
+   "scene_brief": "左右对比：左边圆月下摆月饼，右边河上龙舟旁放粽子，周围节日装饰。",
+   "targets": [
+    {
+     "word": "festival",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ˈfestɪvəl/",
+     "meaning": "节日"
+    },
+    {
+     "word": "mid-autumn festival",
+     "visual_target": "夜空圆月和庭院赏月桌",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/mɪd ˈɔːtəm ˈfestɪvl/",
+     "meaning": "中秋节"
+    },
+    {
+     "word": "moon cake",
+     "visual_target": "盘中月饼",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/muːn keɪk/",
+     "meaning": "月饼"
+    },
+    {
+     "word": "dragon boat festival",
+     "visual_target": "河面龙舟和击鼓手",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈdræɡən bəʊt ˈfestɪvəl/",
+     "meaning": "端午节"
+    },
+    {
+     "word": "rice dumpling",
+     "visual_target": "叶包裹的粽子",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/raɪs ˈdʌmplɪŋ/",
+     "meaning": "粽子"
+    }
+   ],
+   "card_id": "YL-G5DOWN-U7-C02"
+  }
+ ]
+}

@@ -1,0 +1,9091 @@
+{
+ "cards": [
+  {
+   "id": "YL-G4DOWN-U1-C01",
+   "unitKey": "yilin/g4-down/u1",
+   "unitName": "Unit 1 · Our school subjects",
+   "sceneTitle": "校园语文课",
+   "image": "cards/yilin--g4-down--u1/YL-G4DOWN-U1-C01.jpg",
+   "words": [
+    {
+     "word": "school",
+     "ipa": "/skuːl/",
+     "meaning": "学校",
+     "label": [
+      0.0546,
+      0.2154,
+      0.1908,
+      0.1196
+     ],
+     "anchor": [
+      0.15,
+      0.38
+     ]
+    },
+    {
+     "word": "lesson",
+     "ipa": "/ˈlesən/",
+     "meaning": "课；功课",
+     "label": [
+      0.4408,
+      0.47,
+      0.1884,
+      0.1196
+     ],
+     "anchor": [
+      0.535,
+      0.425
+     ]
+    },
+    {
+     "word": "chinese",
+     "ipa": "/tʃaɪˈniːz/",
+     "meaning": "语文；汉语",
+     "label": [
+      0.4235,
+      0.78,
+      0.213,
+      0.1196
+     ],
+     "anchor": [
+      0.53,
+      0.735
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4DOWN-U1-C02",
+   "unitKey": "yilin/g4-down/u1",
+   "unitName": "Unit 1 · Our school subjects",
+   "sceneTitle": "综合活动教室",
+   "image": "cards/yilin--g4-down--u1/YL-G4DOWN-U1-C02.jpg",
+   "words": [
+    {
+     "word": "subject",
+     "ipa": "/ˈsʌbdʒɪkt/",
+     "meaning": "学科；科目",
+     "label": [
+      0.3984,
+      0.5004,
+      0.2031,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.665
+     ]
+    },
+    {
+     "word": "maths",
+     "ipa": "/mæθs/",
+     "meaning": "数学",
+     "label": [
+      0.2007,
+      0.2754,
+      0.1786,
+      0.1196
+     ],
+     "anchor": [
+      0.29,
+      0.44
+     ]
+    },
+    {
+     "word": "art",
+     "ipa": "/ɑːt/",
+     "meaning": "美术",
+     "label": [
+      0.78,
+      0.4202,
+      0.1048,
+      0.1196
+     ],
+     "anchor": [
+      0.72,
+      0.48
+     ]
+    },
+    {
+     "word": "music",
+     "ipa": "/mˈjuːzɪk/",
+     "meaning": "音乐",
+     "label": [
+      0.2419,
+      0.71,
+      0.1761,
+      0.1196
+     ],
+     "anchor": [
+      0.33,
+      0.665
+     ]
+    },
+    {
+     "word": "science",
+     "ipa": "/saɪəns/",
+     "meaning": "科学",
+     "label": [
+      0.5947,
+      0.775,
+      0.2106,
+      0.1196
+     ],
+     "anchor": [
+      0.7,
+      0.73
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4DOWN-U2-C01",
+   "unitKey": "yilin/g4-down/u2",
+   "unitName": "Unit 2 · After school",
+   "sceneTitle": "操场看球",
+   "image": "cards/yilin--g4-down--u2/YL-G4DOWN-U2-C01.jpg",
+   "words": [
+    {
+     "word": "go",
+     "ipa": "/ɡəʊ/",
+     "meaning": "去",
+     "label": [
+      0.2825,
+      0.6102,
+      0.1031,
+      0.1196
+     ],
+     "anchor": [
+      0.2225,
+      0.67
+     ]
+    },
+    {
+     "word": "match",
+     "ipa": "/mætʃ/",
+     "meaning": "比赛",
+     "label": [
+      0.4607,
+      0.3554,
+      0.1786,
+      0.1196
+     ],
+     "anchor": [
+      0.55,
+      0.52
+     ]
+    },
+    {
+     "word": "watch",
+     "ipa": "/wɒtʃ/",
+     "meaning": "观看",
+     "label": [
+      0.7732,
+      0.3334,
+      0.1736,
+      0.1196
+     ],
+     "anchor": [
+      0.86,
+      0.498
+     ]
+    },
+    {
+     "word": "play",
+     "ipa": "/pleɪ/",
+     "meaning": "玩；打球",
+     "label": [
+      0.4654,
+      0.5802,
+      0.1471,
+      0.1196
+     ],
+     "anchor": [
+      0.6725,
+      0.64
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4DOWN-U2-C02",
+   "unitKey": "yilin/g4-down/u2",
+   "unitName": "Unit 2 · After school",
+   "sceneTitle": "一天的时间线",
+   "image": "cards/yilin--g4-down--u2/YL-G4DOWN-U2-C02.jpg",
+   "words": [
+    {
+     "word": "today",
+     "ipa": "/təˈdeɪ/",
+     "meaning": "今天",
+     "label": [
+      0.0969,
+      0.185,
+      0.1662,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "after",
+     "ipa": "/ˈɑːftə/",
+     "meaning": "在……之后",
+     "label": [
+      0.3074,
+      0.185,
+      0.1719,
+      0.1196
+     ],
+     "anchor": [
+      0.3933,
+      0.14
+     ]
+    },
+    {
+     "word": "day",
+     "ipa": "/deɪ/",
+     "meaning": "天；日子",
+     "label": [
+      0.5331,
+      0.185,
+      0.1471,
+      0.1196
+     ],
+     "anchor": [
+      0.6067,
+      0.14
+     ]
+    },
+    {
+     "word": "all",
+     "ipa": "/ɔːl/",
+     "meaning": "全部；都",
+     "label": [
+      0.7464,
+      0.185,
+      0.1471,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4DOWN-U3-C01",
+   "unitKey": "yilin/g4-down/u3",
+   "unitName": "Unit 3 · My day",
+   "sceneTitle": "早晨起床",
+   "image": "cards/yilin--g4-down--u3/YL-G4DOWN-U3-C01.jpg",
+   "words": [
+    {
+     "word": "morning",
+     "ipa": "/ˈmɔːnɪŋ/",
+     "meaning": "早晨",
+     "label": [
+      0.2024,
+      0.32,
+      0.2252,
+      0.1196
+     ],
+     "anchor": [
+      0.315,
+      0.275
+     ]
+    },
+    {
+     "word": "get",
+     "ipa": "/ɡɪt/",
+     "meaning": "得到；到达",
+     "label": [
+      0.3866,
+      0.62,
+      0.1719,
+      0.1196
+     ],
+     "anchor": [
+      0.4725,
+      0.575
+     ]
+    },
+    {
+     "word": "up",
+     "ipa": "/ʌp/",
+     "meaning": "向上",
+     "label": [
+      0.5825,
+      0.5127,
+      0.1023,
+      0.1196
+     ],
+     "anchor": [
+      0.5225,
+      0.5725
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4DOWN-U3-C02",
+   "unitKey": "yilin/g4-down/u3",
+   "unitName": "Unit 3 · My day",
+   "sceneTitle": "傍晚的作业与晚餐",
+   "image": "cards/yilin--g4-down--u3/YL-G4DOWN-U3-C02.jpg",
+   "words": [
+    {
+     "word": "evening",
+     "ipa": "/ˈiːvnɪŋ/",
+     "meaning": "傍晚；晚上",
+     "label": [
+      0.1473,
+      0.2454,
+      0.2154,
+      0.1196
+     ],
+     "anchor": [
+      0.255,
+      0.41
+     ]
+    },
+    {
+     "word": "homework",
+     "ipa": "/ˈhəʊmwɜːk/",
+     "meaning": "家庭作业",
+     "label": [
+      0.3327,
+      0.5429,
+      0.2696,
+      0.1196
+     ],
+     "anchor": [
+      0.4675,
+      0.7075
+     ]
+    },
+    {
+     "word": "dinner",
+     "ipa": "/ˈdɪnə/",
+     "meaning": "晚饭",
+     "label": [
+      0.7258,
+      0.5679,
+      0.1834,
+      0.1196
+     ],
+     "anchor": [
+      0.8175,
+      0.7325
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4DOWN-U3-C03",
+   "unitKey": "yilin/g4-down/u3",
+   "unitName": "Unit 3 · My day",
+   "sceneTitle": "睡前谈话",
+   "image": "cards/yilin--g4-down--u3/YL-G4DOWN-U3-C03.jpg",
+   "words": [
+    {
+     "word": "night",
+     "ipa": "/naɪt/",
+     "meaning": "夜晚",
+     "label": [
+      0.3515,
+      0.2412,
+      0.1563,
+      0.1196
+     ],
+     "anchor": [
+      0.2915,
+      0.301
+     ]
+    },
+    {
+     "word": "usually",
+     "ipa": "/ˈjuːʒəwəli/",
+     "meaning": "通常",
+     "label": [
+      0.2393,
+      0.0802,
+      0.2007,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4DOWN-U4-C01",
+   "unitKey": "yilin/g4-down/u4",
+   "unitName": "Unit 4 · Drawing in the park",
+   "sceneTitle": "公园湖畔",
+   "image": "cards/yilin--g4-down--u4/YL-G4DOWN-U4-C01.jpg",
+   "words": [
+    {
+     "word": "park",
+     "ipa": "/pɑːk/",
+     "meaning": "公园",
+     "label": [
+      0.2983,
+      0.4902,
+      0.1417,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.55
+     ]
+    },
+    {
+     "word": "lake",
+     "ipa": "/leɪk/",
+     "meaning": "湖",
+     "label": [
+      0.3978,
+      0.3154,
+      0.1343,
+      0.1196
+     ],
+     "anchor": [
+      0.465,
+      0.48
+     ]
+    },
+    {
+     "word": "flower",
+     "ipa": "/flaʊə/",
+     "meaning": "花",
+     "label": [
+      0.3107,
+      0.6404,
+      0.1785,
+      0.1196
+     ],
+     "anchor": [
+      0.4,
+      0.805
+     ]
+    },
+    {
+     "word": "boat",
+     "ipa": "/bəʊt/",
+     "meaning": "小船",
+     "label": [
+      0.2388,
+      0.3054,
+      0.1416,
+      0.1196
+     ],
+     "anchor": [
+      0.405,
+      0.47
+     ]
+    },
+    {
+     "word": "river",
+     "ipa": "/ˈrɪvə/",
+     "meaning": "河",
+     "label": [
+      0.675,
+      0.7152,
+      0.1442,
+      0.1196
+     ],
+     "anchor": [
+      0.615,
+      0.775
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4DOWN-U4-C02",
+   "unitKey": "yilin/g4-down/u4",
+   "unitName": "Unit 4 · Drawing in the park",
+   "sceneTitle": "轻松画画",
+   "image": "cards/yilin--g4-down--u4/YL-G4DOWN-U4-C02.jpg",
+   "words": [
+    {
+     "word": "draw",
+     "ipa": "/drɔː/",
+     "meaning": "画",
+     "label": [
+      0.42,
+      0.5852,
+      0.1515,
+      0.1196
+     ],
+     "anchor": [
+      0.36,
+      0.645
+     ]
+    },
+    {
+     "word": "picture",
+     "ipa": "/ˈpɪktʃə/",
+     "meaning": "图画",
+     "label": [
+      0.4021,
+      0.8569,
+      0.1958,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.8125
+     ]
+    },
+    {
+     "word": "easy",
+     "ipa": "/ˈiːzi/",
+     "meaning": "容易的",
+     "label": [
+      0.4267,
+      0.185,
+      0.1466,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4DOWN-U5-C01",
+   "unitKey": "yilin/g4-down/u5",
+   "unitName": "Unit 5 · Seasons",
+   "sceneTitle": "四季变化",
+   "image": "cards/yilin--g4-down--u5/YL-G4DOWN-U5-C01.jpg",
+   "words": [
+    {
+     "word": "season",
+     "ipa": "/ˈsiːzən/",
+     "meaning": "季节",
+     "label": [
+      0.3996,
+      0.185,
+      0.2007,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    },
+    {
+     "word": "spring",
+     "ipa": "/spɜːɪŋ/",
+     "meaning": "春天",
+     "label": [
+      0.1788,
+      0.3165,
+      0.1834,
+      0.1196
+     ],
+     "anchor": [
+      0.2705,
+      0.2715
+     ]
+    },
+    {
+     "word": "summer",
+     "ipa": "/ˈsʌmə/",
+     "meaning": "夏天",
+     "label": [
+      0.6343,
+      0.3165,
+      0.2204,
+      0.1196
+     ],
+     "anchor": [
+      0.7445,
+      0.2715
+     ]
+    },
+    {
+     "word": "autumn",
+     "ipa": "/ˈɔːtəm/",
+     "meaning": "秋天",
+     "label": [
+      0.1665,
+      0.5914,
+      0.208,
+      0.1196
+     ],
+     "anchor": [
+      0.2705,
+      0.756
+     ]
+    },
+    {
+     "word": "winter",
+     "ipa": "/ˈwɪntə/",
+     "meaning": "冬天",
+     "label": [
+      0.6552,
+      0.5914,
+      0.1785,
+      0.1196
+     ],
+     "anchor": [
+      0.7445,
+      0.756
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4DOWN-U5-C02",
+   "unitKey": "yilin/g4-down/u5",
+   "unitName": "Unit 5 · Seasons",
+   "sceneTitle": "温度对比",
+   "image": "cards/yilin--g4-down--u5/YL-G4DOWN-U5-C02.jpg",
+   "words": [
+    {
+     "word": "warm",
+     "ipa": "/wɔːm/",
+     "meaning": "温暖的",
+     "label": [
+      0.365,
+      0.2452,
+      0.1638,
+      0.1196
+     ],
+     "anchor": [
+      0.305,
+      0.305
+     ]
+    },
+    {
+     "word": "hot",
+     "ipa": "/hɒt/",
+     "meaning": "热的",
+     "label": [
+      0.75,
+      0.2552,
+      0.117,
+      0.1196
+     ],
+     "anchor": [
+      0.69,
+      0.315
+     ]
+    },
+    {
+     "word": "cool",
+     "ipa": "/kuːl/",
+     "meaning": "凉爽的",
+     "label": [
+      0.35,
+      0.6602,
+      0.1392,
+      0.1196
+     ],
+     "anchor": [
+      0.29,
+      0.72
+     ]
+    },
+    {
+     "word": "cold",
+     "ipa": "/kəʊld/",
+     "meaning": "寒冷的",
+     "label": [
+      0.5058,
+      0.6652,
+      0.1392,
+      0.1196
+     ],
+     "anchor": [
+      0.705,
+      0.725
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4DOWN-U6-C01",
+   "unitKey": "yilin/g4-down/u6",
+   "unitName": "Unit 6 · Whose dress is this?",
+   "sceneTitle": "衣帽架",
+   "image": "cards/yilin--g4-down--u6/YL-G4DOWN-U6-C01.jpg",
+   "words": [
+    {
+     "word": "dress",
+     "ipa": "/dres/",
+     "meaning": "连衣裙",
+     "label": [
+      0.371,
+      0.4777,
+      0.1663,
+      0.1196
+     ],
+     "anchor": [
+      0.311,
+      0.5375
+     ]
+    },
+    {
+     "word": "coat",
+     "ipa": "/kəʊt/",
+     "meaning": "外套",
+     "label": [
+      0.3809,
+      0.3479,
+      0.1392,
+      0.1196
+     ],
+     "anchor": [
+      0.4505,
+      0.5125
+     ]
+    },
+    {
+     "word": "shirt",
+     "ipa": "/ʃɜːt/",
+     "meaning": "衬衫",
+     "label": [
+      0.6805,
+      0.4567,
+      0.1441,
+      0.1196
+     ],
+     "anchor": [
+      0.6205,
+      0.5165
+     ]
+    },
+    {
+     "word": "sweater",
+     "ipa": "/sˈwetə/",
+     "meaning": "毛衣",
+     "label": [
+      0.6328,
+      0.3242,
+      0.2131,
+      0.1196
+     ],
+     "anchor": [
+      0.7385,
+      0.5155
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4DOWN-U6-C02",
+   "unitKey": "yilin/g4-down/u6",
+   "unitName": "Unit 6 · Whose dress is this?",
+   "sceneTitle": "洗衣篮旁",
+   "image": "cards/yilin--g4-down--u6/YL-G4DOWN-U6-C02.jpg",
+   "words": [
+    {
+     "word": "glove",
+     "ipa": "/ɡləv/",
+     "meaning": "手套",
+     "label": [
+      0.3571,
+      0.3169,
+      0.1638,
+      0.1196
+     ],
+     "anchor": [
+      0.439,
+      0.4815
+     ]
+    },
+    {
+     "word": "trousers",
+     "ipa": "/ˈtraʊzəz/",
+     "meaning": "裤子",
+     "label": [
+      0.4863,
+      0.6665,
+      0.2253,
+      0.1196
+     ],
+     "anchor": [
+      0.599,
+      0.6215
+     ]
+    },
+    {
+     "word": "jeans",
+     "ipa": "/dʒɪnz/",
+     "meaning": "牛仔裤",
+     "label": [
+      0.2906,
+      0.7672,
+      0.1614,
+      0.1196
+     ],
+     "anchor": [
+      0.512,
+      0.827
+     ]
+    },
+    {
+     "word": "whose",
+     "ipa": "/huːz/",
+     "meaning": "谁的",
+     "label": [
+      0.407,
+      0.185,
+      0.1859,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4DOWN-U7-C01",
+   "unitKey": "yilin/g4-down/u7",
+   "unitName": "Unit 7 · What's the matter?",
+   "sceneTitle": "生病在家",
+   "image": "cards/yilin--g4-down--u7/YL-G4DOWN-U7-C01.jpg",
+   "words": [
+    {
+     "word": "matter",
+     "ipa": "/ˈmætə/",
+     "meaning": "问题；事情",
+     "label": [
+      0.0883,
+      0.185,
+      0.1835,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "cold",
+     "ipa": "/kəʊld/",
+     "meaning": "冷的；感冒",
+     "label": [
+      0.4281,
+      0.4902,
+      0.1719,
+      0.1196
+     ],
+     "anchor": [
+      0.66,
+      0.55
+     ]
+    },
+    {
+     "word": "fever",
+     "ipa": "/ˈfiːvə/",
+     "meaning": "发烧",
+     "label": [
+      0.517,
+      0.7627,
+      0.154,
+      0.1196
+     ],
+     "anchor": [
+      0.731,
+      0.8225
+     ]
+    },
+    {
+     "word": "headache",
+     "ipa": "/ˈhedeɪk/",
+     "meaning": "头痛",
+     "label": [
+      0.5438,
+      0.3554,
+      0.2524,
+      0.1196
+     ],
+     "anchor": [
+      0.67,
+      0.52
+     ]
+    },
+    {
+     "word": "ill",
+     "ipa": "/ɪl/",
+     "meaning": "生病的",
+     "label": [
+      0.6376,
+      0.0802,
+      0.1224,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4DOWN-U7-C02",
+   "unitKey": "yilin/g4-down/u7",
+   "unitName": "Unit 7 · What's the matter?",
+   "sceneTitle": "放学后的餐桌",
+   "image": "cards/yilin--g4-down--u7/YL-G4DOWN-U7-C02.jpg",
+   "words": [
+    {
+     "word": "tired",
+     "ipa": "/taɪəd/",
+     "meaning": "累的",
+     "label": [
+      0.535,
+      0.3152,
+      0.1441,
+      0.1196
+     ],
+     "anchor": [
+      0.475,
+      0.375
+     ]
+    },
+    {
+     "word": "hungry",
+     "ipa": "/ˈhʌŋɡri/",
+     "meaning": "饿的",
+     "label": [
+      0.3759,
+      0.49,
+      0.1982,
+      0.1196
+     ],
+     "anchor": [
+      0.475,
+      0.445
+     ]
+    },
+    {
+     "word": "thirsty",
+     "ipa": "/ˈθɜːsti/",
+     "meaning": "渴的",
+     "label": [
+      0.5827,
+      0.4746,
+      0.1835,
+      0.1196
+     ],
+     "anchor": [
+      0.57,
+      0.435
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4DOWN-U8-C01",
+   "unitKey": "yilin/g4-down/u8",
+   "unitName": "Unit 8 · How are you?",
+   "sceneTitle": "摔倒后的安慰",
+   "image": "cards/yilin--g4-down--u8/YL-G4DOWN-U8-C01.jpg",
+   "words": [
+    {
+     "word": "feel",
+     "ipa": "/fɪl/",
+     "meaning": "感觉",
+     "label": [
+      0.465,
+      0.4702,
+      0.1245,
+      0.1196
+     ],
+     "anchor": [
+      0.405,
+      0.53
+     ]
+    },
+    {
+     "word": "sorry",
+     "ipa": "/ˈsɒri/",
+     "meaning": "难过的；抱歉的",
+     "label": [
+      0.0693,
+      0.185,
+      0.2214,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "thank",
+     "ipa": "/θæŋk/",
+     "meaning": "感谢",
+     "label": [
+      0.4169,
+      0.185,
+      0.1662,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    },
+    {
+     "word": "dear",
+     "ipa": "/dɪə/",
+     "meaning": "亲爱的",
+     "label": [
+      0.6183,
+      0.0802,
+      0.1417,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4DOWN-U8-C02",
+   "unitKey": "yilin/g4-down/u8",
+   "unitName": "Unit 8 · How are you?",
+   "sceneTitle": "病后恢复",
+   "image": "cards/yilin--g4-down--u8/YL-G4DOWN-U8-C02.jpg",
+   "words": [
+    {
+     "word": "better",
+     "ipa": "/ˈbetə/",
+     "meaning": "更好的",
+     "label": [
+      0.3994,
+      0.4604,
+      0.1712,
+      0.1196
+     ],
+     "anchor": [
+      0.485,
+      0.625
+     ]
+    },
+    {
+     "word": "soon",
+     "ipa": "/suːn/",
+     "meaning": "不久；很快",
+     "label": [
+      0.4491,
+      0.2054,
+      0.1719,
+      0.1196
+     ],
+     "anchor": [
+      0.535,
+      0.37
+     ]
+    },
+    {
+     "word": "fine",
+     "ipa": "/faɪn/",
+     "meaning": "好的；健康的",
+     "label": [
+      0.6667,
+      0.4454,
+      0.1966,
+      0.1196
+     ],
+     "anchor": [
+      0.765,
+      0.61
+     ]
+    },
+    {
+     "word": "well",
+     "ipa": "/wel/",
+     "meaning": "好；健康",
+     "label": [
+      0.2929,
+      0.0802,
+      0.1471,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U1-C01",
+   "unitKey": "yilin/g4-up/u1",
+   "unitName": "Unit 1 · Our school subjects",
+   "sceneTitle": "学科用品角",
+   "image": "cards/yilin--g4-up--u1/YL-G4UP-U1-C01.jpg",
+   "words": [
+    {
+     "word": "subject",
+     "ipa": "/ˈsʌbdʒɪkt/",
+     "meaning": "学科，科目",
+     "label": [
+      0.4034,
+      0.4429,
+      0.2031,
+      0.1196
+     ],
+     "anchor": [
+      0.505,
+      0.6075
+     ]
+    },
+    {
+     "word": "Chinese",
+     "ipa": "/tʃaɪˈniːz/",
+     "meaning": "语文（课）；中国的",
+     "label": [
+      0.1936,
+      0.2689,
+      0.2708,
+      0.1196
+     ],
+     "anchor": [
+      0.329,
+      0.4335
+     ]
+    },
+    {
+     "word": "English",
+     "ipa": "/ˈɪŋlɪʃ/",
+     "meaning": "英语（课）；英语的",
+     "label": [
+      0.1476,
+      0.5679,
+      0.2708,
+      0.1196
+     ],
+     "anchor": [
+      0.283,
+      0.7325
+     ]
+    },
+    {
+     "word": "Maths",
+     "ipa": "/mæθs/",
+     "meaning": "数学（课）",
+     "label": [
+      0.6805,
+      0.6189,
+      0.1761,
+      0.1196
+     ],
+     "anchor": [
+      0.7685,
+      0.7835
+     ]
+    },
+    {
+     "word": "Art",
+     "ipa": "/ɑːt/",
+     "meaning": "美术（课）",
+     "label": [
+      0.6616,
+      0.2379,
+      0.1719,
+      0.1196
+     ],
+     "anchor": [
+      0.7475,
+      0.4025
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U1-C02",
+   "unitKey": "yilin/g4-up/u1",
+   "unitName": "Unit 1 · Our school subjects",
+   "sceneTitle": "科学信息角",
+   "image": "cards/yilin--g4-up--u1/YL-G4UP-U1-C02.jpg",
+   "words": [
+    {
+     "word": "Science",
+     "ipa": "/saɪəns/",
+     "meaning": "科学（课）",
+     "label": [
+      0.4622,
+      0.5804,
+      0.2155,
+      0.1196
+     ],
+     "anchor": [
+      0.57,
+      0.745
+     ]
+    },
+    {
+     "word": "IT",
+     "ipa": "/ɪt/",
+     "meaning": "信息科技（课）",
+     "label": [
+      0.2293,
+      0.3454,
+      0.2214,
+      0.1196
+     ],
+     "anchor": [
+      0.34,
+      0.51
+     ]
+    },
+    {
+     "word": "mouse",
+     "ipa": "/maʊs/",
+     "meaning": "鼠标；老鼠",
+     "label": [
+      0.2691,
+      0.5852,
+      0.1909,
+      0.1196
+     ],
+     "anchor": [
+      0.52,
+      0.645
+     ]
+    },
+    {
+     "word": "interesting",
+     "ipa": "/ˈɪntərestɪŋ/",
+     "meaning": "有趣的，有吸引力的",
+     "label": [
+      0.4728,
+      0.2704,
+      0.2745,
+      0.1196
+     ],
+     "anchor": [
+      0.61,
+      0.435
+     ]
+    },
+    {
+     "word": "learn about",
+     "ipa": "/lɜːn əˈbaʊt/",
+     "meaning": "学习",
+     "label": [
+      0.1816,
+      0.2114,
+      0.2868,
+      0.1196
+     ],
+     "anchor": [
+      0.435,
+      0.51
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U1-C03",
+   "unitKey": "yilin/g4-up/u1",
+   "unitName": "Unit 1 · Our school subjects",
+   "sceneTitle": "操场上",
+   "image": "cards/yilin--g4-up--u1/YL-G4UP-U1-C03.jpg",
+   "words": [
+    {
+     "word": "PE",
+     "ipa": "/ˌpiːˈiː/",
+     "meaning": "体育（课）",
+     "label": [
+      0.1941,
+      0.5504,
+      0.1719,
+      0.1196
+     ],
+     "anchor": [
+      0.28,
+      0.715
+     ]
+    },
+    {
+     "word": "sports ground",
+     "ipa": "/spɔːts ɡraʊnd/",
+     "meaning": "操场，运动场",
+     "label": [
+      0.3259,
+      0.755,
+      0.3482,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.71
+     ]
+    },
+    {
+     "word": "be good at",
+     "ipa": "/bi ɡʊd æt/",
+     "meaning": "擅长",
+     "label": [
+      0.154,
+      0.3854,
+      0.2719,
+      0.1196
+     ],
+     "anchor": [
+      0.29,
+      0.55
+     ]
+    },
+    {
+     "word": "best",
+     "ipa": "/best/",
+     "meaning": "最，最高程度地",
+     "label": [
+      0.4793,
+      0.4754,
+      0.2214,
+      0.1196
+     ],
+     "anchor": [
+      0.59,
+      0.64
+     ]
+    },
+    {
+     "word": "also",
+     "ipa": "/ˈɒlsəʊ/",
+     "meaning": "也",
+     "label": [
+      0.3033,
+      0.0802,
+      0.1367,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U1-C04",
+   "unitKey": "yilin/g4-up/u1",
+   "unitName": "Unit 1 · Our school subjects",
+   "sceneTitle": "校园文化节",
+   "image": "cards/yilin--g4-up--u1/YL-G4UP-U1-C04.jpg",
+   "words": [
+    {
+     "word": "Music",
+     "ipa": "/mˈjuːzɪk/",
+     "meaning": "音乐（课）",
+     "label": [
+      0.345,
+      0.4602,
+      0.1736,
+      0.1196
+     ],
+     "anchor": [
+      0.285,
+      0.52
+     ]
+    },
+    {
+     "word": "Labour",
+     "ipa": "/ˈleɪbə/",
+     "meaning": "劳动（课）",
+     "label": [
+      0.5109,
+      0.745,
+      0.1982,
+      0.1196
+     ],
+     "anchor": [
+      0.61,
+      0.7
+     ]
+    },
+    {
+     "word": "culture",
+     "ipa": "/ˈkʌltʃə/",
+     "meaning": "文化，文明",
+     "label": [
+      0.4021,
+      0.1854,
+      0.1958,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.35
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U1-C05",
+   "unitKey": "yilin/g4-up/u1",
+   "unitName": "Unit 1 · Our school subjects",
+   "sceneTitle": "睡前阅读",
+   "image": "cards/yilin--g4-up--u1/YL-G4UP-U1-C05.jpg",
+   "words": [
+    {
+     "word": "read",
+     "ipa": "/red/",
+     "meaning": "阅读",
+     "label": [
+      0.3533,
+      0.4952,
+      0.1417,
+      0.1196
+     ],
+     "anchor": [
+      0.555,
+      0.555
+     ]
+    },
+    {
+     "word": "story",
+     "ipa": "/ˈstɔːri/",
+     "meaning": "故事",
+     "label": [
+      0.4418,
+      0.675,
+      0.1564,
+      0.1196
+     ],
+     "anchor": [
+      0.52,
+      0.63
+     ]
+    },
+    {
+     "word": "all",
+     "ipa": "/ɔːl/",
+     "meaning": "全部，都",
+     "label": [
+      0.2929,
+      0.6552,
+      0.1471,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.715
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U2-C01",
+   "unitKey": "yilin/g4-up/u2",
+   "unitName": "Unit 2 · My day",
+   "sceneTitle": "晨起洗漱",
+   "image": "cards/yilin--g4-up--u2/YL-G4UP-U2-C01.jpg",
+   "words": [
+    {
+     "word": "get up",
+     "ipa": "/ɡɪt ʌp/",
+     "meaning": "起床",
+     "label": [
+      0.227,
+      0.4104,
+      0.1809,
+      0.1196
+     ],
+     "anchor": [
+      0.3175,
+      0.575
+     ]
+    },
+    {
+     "word": "wash",
+     "ipa": "/wɒʃ/",
+     "meaning": "洗",
+     "label": [
+      0.5311,
+      0.5112,
+      0.1589,
+      0.1196
+     ],
+     "anchor": [
+      0.75,
+      0.571
+     ]
+    },
+    {
+     "word": "face",
+     "ipa": "/feɪs/",
+     "meaning": "脸，面孔",
+     "label": [
+      0.6289,
+      0.2954,
+      0.1471,
+      0.1196
+     ],
+     "anchor": [
+      0.7025,
+      0.46
+     ]
+    },
+    {
+     "word": "early",
+     "ipa": "/ˈɜːli/",
+     "meaning": "早的，早",
+     "label": [
+      0.4242,
+      0.185,
+      0.1516,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    },
+    {
+     "word": "o'clock",
+     "ipa": "/əˈklɒk/",
+     "meaning": "（表示整点）……点钟",
+     "label": [
+      0.2318,
+      0.625,
+      0.2956,
+      0.1196
+     ],
+     "anchor": [
+      0.429,
+      0.583
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U2-C02",
+   "unitKey": "yilin/g4-up/u2",
+   "unitName": "Unit 2 · My day",
+   "sceneTitle": "一日三餐",
+   "image": "cards/yilin--g4-up--u2/YL-G4UP-U2-C02.jpg",
+   "words": [
+    {
+     "word": "have",
+     "ipa": "/hæv/",
+     "meaning": "吃，喝",
+     "label": [
+      0.433,
+      0.3504,
+      0.1491,
+      0.1196
+     ],
+     "anchor": [
+      0.5075,
+      0.515
+     ]
+    },
+    {
+     "word": "breakfast",
+     "ipa": "/ˈbrekfəst/",
+     "meaning": "早餐，早饭",
+     "label": [
+      0.035,
+      0.5829,
+      0.245,
+      0.1196
+     ],
+     "anchor": [
+      0.1575,
+      0.7475
+     ]
+    },
+    {
+     "word": "lunch",
+     "ipa": "/lʌntʃ/",
+     "meaning": "午餐，午饭",
+     "label": [
+      0.4141,
+      0.6254,
+      0.1719,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.79
+     ]
+    },
+    {
+     "word": "dinner",
+     "ipa": "/ˈdɪnə/",
+     "meaning": "正餐（常指晚餐）",
+     "label": [
+      0.7145,
+      0.6379,
+      0.2461,
+      0.1196
+     ],
+     "anchor": [
+      0.8375,
+      0.8025
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U2-C03",
+   "unitKey": "yilin/g4-up/u2",
+   "unitName": "Unit 2 · My day",
+   "sceneTitle": "上课时间",
+   "image": "cards/yilin--g4-up--u2/YL-G4UP-U2-C03.jpg",
+   "words": [
+    {
+     "word": "have lessons",
+     "ipa": "/hæv ˈlesənz/",
+     "meaning": "上课",
+     "label": [
+      0.3419,
+      0.3154,
+      0.3262,
+      0.1196
+     ],
+     "anchor": [
+      0.505,
+      0.48
+     ]
+    },
+    {
+     "word": "class",
+     "ipa": "/klɑːs/",
+     "meaning": "课，上课",
+     "label": [
+      0.4205,
+      0.545,
+      0.1589,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.5
+     ]
+    },
+    {
+     "word": "first",
+     "ipa": "/fɜːst/",
+     "meaning": "首先，第一",
+     "label": [
+      0.4091,
+      0.74,
+      0.1719,
+      0.1196
+     ],
+     "anchor": [
+      0.495,
+      0.695
+     ]
+    },
+    {
+     "word": "hurry up",
+     "ipa": "/ˈhɜːi ʌp/",
+     "meaning": "快点",
+     "label": [
+      0.3861,
+      0.185,
+      0.2277,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U2-C04",
+   "unitKey": "yilin/g4-up/u2",
+   "unitName": "Unit 2 · My day",
+   "sceneTitle": "体育器材角",
+   "image": "cards/yilin--g4-up--u2/YL-G4UP-U2-C04.jpg",
+   "words": [
+    {
+     "word": "sport",
+     "ipa": "/spɔːt/",
+     "meaning": "体育运动",
+     "label": [
+      0.4275,
+      0.3902,
+      0.1588,
+      0.1196
+     ],
+     "anchor": [
+      0.3675,
+      0.45
+     ]
+    },
+    {
+     "word": "fifteen",
+     "ipa": "/ˈfɪfˈtiːn/",
+     "meaning": "十五",
+     "label": [
+      0.087,
+      0.3004,
+      0.181,
+      0.1196
+     ],
+     "anchor": [
+      0.1775,
+      0.465
+     ]
+    },
+    {
+     "word": "twenty",
+     "ipa": "/tˈwenti/",
+     "meaning": "二十",
+     "label": [
+      0.4323,
+      0.5122,
+      0.1884,
+      0.1196
+     ],
+     "anchor": [
+      0.5025,
+      0.4425
+     ]
+    },
+    {
+     "word": "thirty",
+     "ipa": "/ˈθɜːdi/",
+     "meaning": "三十",
+     "label": [
+      0.7281,
+      0.2879,
+      0.1588,
+      0.1196
+     ],
+     "anchor": [
+      0.8075,
+      0.4525
+     ]
+    },
+    {
+     "word": "eleven",
+     "ipa": "/ˈiːlevən/",
+     "meaning": "十一",
+     "label": [
+      0.377,
+      0.735,
+      0.186,
+      0.1196
+     ],
+     "anchor": [
+      0.47,
+      0.69
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U2-C05",
+   "unitKey": "yilin/g4-up/u2",
+   "unitName": "Unit 2 · My day",
+   "sceneTitle": "白天到夜晚",
+   "image": "cards/yilin--g4-up--u2/YL-G4UP-U2-C05.jpg",
+   "words": [
+    {
+     "word": "day",
+     "ipa": "/deɪ/",
+     "meaning": "一天，一日",
+     "label": [
+      0.31,
+      0.3502,
+      0.1719,
+      0.1196
+     ],
+     "anchor": [
+      0.25,
+      0.41
+     ]
+    },
+    {
+     "word": "go to bed",
+     "ipa": "/ɡəʊ tuː bed/",
+     "meaning": "上床睡觉",
+     "label": [
+      0.5663,
+      0.3604,
+      0.2473,
+      0.1196
+     ],
+     "anchor": [
+      0.69,
+      0.525
+     ]
+    },
+    {
+     "word": "bed",
+     "ipa": "/bed/",
+     "meaning": "床",
+     "label": [
+      0.7516,
+      0.625,
+      0.1269,
+      0.1196
+     ],
+     "anchor": [
+      0.815,
+      0.58
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U3-C01",
+   "unitKey": "yilin/g4-up/u3",
+   "unitName": "Unit 3 · My week",
+   "sceneTitle": "一周前三天",
+   "image": "cards/yilin--g4-up--u3/YL-G4UP-U3-C01.jpg",
+   "words": [
+    {
+     "word": "week",
+     "ipa": "/wɪk/",
+     "meaning": "周，星期",
+     "label": [
+      0.24,
+      0.0802,
+      0.1565,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "Monday",
+     "ipa": "/ˈmʌndeɪ/",
+     "meaning": "星期一",
+     "label": [
+      0.4533,
+      0.0802,
+      0.2154,
+      0.1196
+     ],
+     "anchor": [
+      0.3933,
+      0.14
+     ]
+    },
+    {
+     "word": "Tuesday",
+     "ipa": "/ˈtuːzdeɪ/",
+     "meaning": "星期二",
+     "label": [
+      0.4824,
+      0.2114,
+      0.2245,
+      0.1196
+     ],
+     "anchor": [
+      0.6067,
+      0.14
+     ]
+    },
+    {
+     "word": "Wednesday",
+     "ipa": "/ˈwenzdeɪ/",
+     "meaning": "星期三",
+     "label": [
+      0.6328,
+      0.3618,
+      0.2934,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U3-C02",
+   "unitKey": "yilin/g4-up/u3",
+   "unitName": "Unit 3 · My week",
+   "sceneTitle": "放学后的舞蹈课",
+   "image": "cards/yilin--g4-up--u3/YL-G4UP-U3-C02.jpg",
+   "words": [
+    {
+     "word": "Thursday",
+     "ipa": "/ˈθɜːzdeɪ/",
+     "meaning": "星期四",
+     "label": [
+      0.3763,
+      0.2875,
+      0.2474,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.2425
+     ]
+    },
+    {
+     "word": "Friday",
+     "ipa": "/ˈfraɪdeɪ/",
+     "meaning": "星期五",
+     "label": [
+      0.4145,
+      0.5604,
+      0.181,
+      0.1196
+     ],
+     "anchor": [
+      0.505,
+      0.725
+     ]
+    },
+    {
+     "word": "after school",
+     "ipa": "/ˈɑːftə skuːl/",
+     "meaning": "放学后",
+     "label": [
+      0.3505,
+      0.0779,
+      0.2991,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.2425
+     ]
+    },
+    {
+     "word": "lesson",
+     "ipa": "/ˈlesən/",
+     "meaning": "一节课，一课时",
+     "label": [
+      0.3943,
+      0.77,
+      0.2214,
+      0.1196
+     ],
+     "anchor": [
+      0.505,
+      0.725
+     ]
+    },
+    {
+     "word": "dancing",
+     "ipa": "/ˈdænsɪŋ/",
+     "meaning": "跳舞，舞蹈",
+     "label": [
+      0.6328,
+      0.6626,
+      0.2179,
+      0.1196
+     ],
+     "anchor": [
+      0.5285,
+      0.739
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U3-C03",
+   "unitKey": "yilin/g4-up/u3",
+   "unitName": "Unit 3 · My week",
+   "sceneTitle": "周末公园遛狗",
+   "image": "cards/yilin--g4-up--u3/YL-G4UP-U3-C03.jpg",
+   "words": [
+    {
+     "word": "Saturday",
+     "ipa": "/ˈsætɪdeɪ/",
+     "meaning": "星期六",
+     "label": [
+      0.0612,
+      0.185,
+      0.2376,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "Sunday",
+     "ipa": "/ˈsʌndeɪ/",
+     "meaning": "星期天",
+     "label": [
+      0.716,
+      0.185,
+      0.2081,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    },
+    {
+     "word": "walk",
+     "ipa": "/wɔːk/",
+     "meaning": "牵着（动物）走，遛",
+     "label": [
+      0.1596,
+      0.3554,
+      0.2708,
+      0.1196
+     ],
+     "anchor": [
+      0.295,
+      0.52
+     ]
+    },
+    {
+     "word": "dog",
+     "ipa": "/dɒɡ/",
+     "meaning": "狗",
+     "label": [
+      0.41,
+      0.5352,
+      0.1293,
+      0.1196
+     ],
+     "anchor": [
+      0.35,
+      0.595
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U3-C04",
+   "unitKey": "yilin/g4-up/u3",
+   "unitName": "Unit 3 · My week",
+   "sceneTitle": "早晨起床",
+   "image": "cards/yilin--g4-up--u3/YL-G4UP-U3-C04.jpg",
+   "words": [
+    {
+     "word": "up",
+     "ipa": "/ʌp/",
+     "meaning": "起床",
+     "label": [
+      0.6227,
+      0.5152,
+      0.1023,
+      0.1196
+     ],
+     "anchor": [
+      0.785,
+      0.575
+     ]
+    },
+    {
+     "word": "when",
+     "ipa": "/wɪn/",
+     "meaning": "什么时候",
+     "label": [
+      0.0993,
+      0.185,
+      0.1613,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "every",
+     "ipa": "/ˈevəi/",
+     "meaning": "每一个，每个",
+     "label": [
+      0.295,
+      0.185,
+      0.1966,
+      0.1196
+     ],
+     "anchor": [
+      0.3933,
+      0.14
+     ]
+    },
+    {
+     "word": "at",
+     "ipa": "/æt/",
+     "meaning": "在（某时间）",
+     "label": [
+      0.5084,
+      0.185,
+      0.1966,
+      0.1196
+     ],
+     "anchor": [
+      0.6067,
+      0.14
+     ]
+    },
+    {
+     "word": "today",
+     "ipa": "/təˈdeɪ/",
+     "meaning": "在今天",
+     "label": [
+      0.7369,
+      0.185,
+      0.1662,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U3-C05",
+   "unitKey": "yilin/g4-up/u3",
+   "unitName": "Unit 3 · My week",
+   "sceneTitle": "明天去电影院",
+   "image": "cards/yilin--g4-up--u3/YL-G4UP-U3-C05.jpg",
+   "words": [
+    {
+     "word": "free",
+     "ipa": "/fri/",
+     "meaning": "空闲的",
+     "label": [
+      0.24,
+      0.0802,
+      0.1294,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "cinema",
+     "ipa": "/ˈsɪnəmə/",
+     "meaning": "电影院",
+     "label": [
+      0.5646,
+      0.3454,
+      0.2007,
+      0.1196
+     ],
+     "anchor": [
+      0.665,
+      0.51
+     ]
+    },
+    {
+     "word": "tomorrow",
+     "ipa": "/təˈmɒrəʊ/",
+     "meaning": "明天，在明天",
+     "label": [
+      0.6939,
+      0.185,
+      0.2523,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U4-C01",
+   "unitKey": "yilin/g4-up/u4",
+   "unitName": "Unit 4 · I like sport",
+   "sceneTitle": "快乐运动场",
+   "image": "cards/yilin--g4-up--u4/YL-G4UP-U4-C01.jpg",
+   "words": [
+    {
+     "word": "play",
+     "ipa": "/pleɪ/",
+     "meaning": "打（球），踢（球）",
+     "label": [
+      0.0646,
+      0.4154,
+      0.2708,
+      0.1196
+     ],
+     "anchor": [
+      0.2,
+      0.58
+     ]
+    },
+    {
+     "word": "football",
+     "ipa": "/ˈfʊtbɒl/",
+     "meaning": "足球运动；足球",
+     "label": [
+      0.1493,
+      0.745,
+      0.2214,
+      0.1196
+     ],
+     "anchor": [
+      0.26,
+      0.7
+     ]
+    },
+    {
+     "word": "basketball",
+     "ipa": "/ˈbæskətbɔːl/",
+     "meaning": "篮球运动；篮球",
+     "label": [
+      0.3677,
+      0.3554,
+      0.2647,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.52
+     ]
+    },
+    {
+     "word": "ping-pong",
+     "ipa": "/ˈpɪŋpɒŋ/",
+     "meaning": "乒乓球运动",
+     "label": [
+      0.7043,
+      0.4554,
+      0.2645,
+      0.1196
+     ],
+     "anchor": [
+      0.85,
+      0.62
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U4-C02",
+   "unitKey": "yilin/g4-up/u4",
+   "unitName": "Unit 4 · I like sport",
+   "sceneTitle": "游泳馆里真棒",
+   "image": "cards/yilin--g4-up--u4/YL-G4UP-U4-C02.jpg",
+   "words": [
+    {
+     "word": "swimming",
+     "ipa": "/ˈswɪmɪŋ/",
+     "meaning": "游泳；游泳运动",
+     "label": [
+      0.1477,
+      0.3854,
+      0.2646,
+      0.1196
+     ],
+     "anchor": [
+      0.28,
+      0.55
+     ]
+    },
+    {
+     "word": "try",
+     "ipa": "/traɪ/",
+     "meaning": "试",
+     "label": [
+      0.6152,
+      0.3802,
+      0.1048,
+      0.1196
+     ],
+     "anchor": [
+      0.78,
+      0.44
+     ]
+    },
+    {
+     "word": "hard",
+     "ipa": "/hɑːd/",
+     "meaning": "难做的，不易的",
+     "label": [
+      0.0693,
+      0.185,
+      0.2214,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "well",
+     "ipa": "/wel/",
+     "meaning": "好",
+     "label": [
+      0.4533,
+      0.0802,
+      0.1318,
+      0.1196
+     ],
+     "anchor": [
+      0.3933,
+      0.14
+     ]
+    },
+    {
+     "word": "great",
+     "ipa": "/ɡreɪt/",
+     "meaning": "非常的",
+     "label": [
+      0.6667,
+      0.0802,
+      0.1564,
+      0.1196
+     ],
+     "anchor": [
+      0.6067,
+      0.14
+     ]
+    },
+    {
+     "word": "so",
+     "ipa": "/səʊ/",
+     "meaning": "（表示程度）这么，那么",
+     "label": [
+      0.6328,
+      0.2114,
+      0.3203,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U5-C01",
+   "unitKey": "yilin/g4-up/u5",
+   "unitName": "Unit 5 · Different toys, same fun",
+   "sceneTitle": "照镜子认五官",
+   "image": "cards/yilin--g4-up--u5/YL-G4UP-U5-C01.jpg",
+   "words": [
+    {
+     "word": "hair",
+     "ipa": "/heə/",
+     "meaning": "头发",
+     "label": [
+      0.34,
+      0.4472,
+      0.1294,
+      0.1196
+     ],
+     "anchor": [
+      0.28,
+      0.507
+     ]
+    },
+    {
+     "word": "eye",
+     "ipa": "/aɪ/",
+     "meaning": "眼睛",
+     "label": [
+      0.471,
+      0.4232,
+      0.122,
+      0.1196
+     ],
+     "anchor": [
+      0.653,
+      0.483
+     ]
+    },
+    {
+     "word": "ear",
+     "ipa": "/ɪə/",
+     "meaning": "耳朵",
+     "label": [
+      0.1227,
+      0.581,
+      0.1146,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.536
+     ]
+    },
+    {
+     "word": "nose",
+     "ipa": "/nəʊz/",
+     "meaning": "鼻子",
+     "label": [
+      0.6338,
+      0.55,
+      0.1515,
+      0.1196
+     ],
+     "anchor": [
+      0.7095,
+      0.505
+     ]
+    },
+    {
+     "word": "mouth",
+     "ipa": "/maʊθ/",
+     "meaning": "嘴，口",
+     "label": [
+      0.2688,
+      0.6155,
+      0.1834,
+      0.1196
+     ],
+     "anchor": [
+      0.3605,
+      0.5705
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U5-C02",
+   "unitKey": "yilin/g4-up/u5",
+   "unitName": "Unit 5 · Different toys, same fun",
+   "sceneTitle": "操场比身高",
+   "image": "cards/yilin--g4-up--u5/YL-G4UP-U5-C02.jpg",
+   "words": [
+    {
+     "word": "different",
+     "ipa": "/ˈdɪfəənt/",
+     "meaning": "不同的，有区别的",
+     "label": [
+      0.057,
+      0.185,
+      0.2461,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "same",
+     "ipa": "/seɪm/",
+     "meaning": "相同的，同一的",
+     "label": [
+      0.4533,
+      0.0802,
+      0.2214,
+      0.1196
+     ],
+     "anchor": [
+      0.3933,
+      0.14
+     ]
+    },
+    {
+     "word": "arm",
+     "ipa": "/ɑːm/",
+     "meaning": "手臂",
+     "label": [
+      0.548,
+      0.4147,
+      0.1294,
+      0.1196
+     ],
+     "anchor": [
+      0.488,
+      0.4745
+     ]
+    },
+    {
+     "word": "leg",
+     "ipa": "/leɡ/",
+     "meaning": "腿",
+     "label": [
+      0.5029,
+      0.6587,
+      0.1121,
+      0.1196
+     ],
+     "anchor": [
+      0.675,
+      0.7185
+     ]
+    },
+    {
+     "word": "tall",
+     "ipa": "/tɔːl/",
+     "meaning": "高的",
+     "label": [
+      0.6829,
+      0.0986,
+      0.1121,
+      0.1196
+     ],
+     "anchor": [
+      0.6067,
+      0.14
+     ]
+    },
+    {
+     "word": "short",
+     "ipa": "/ʃɔːt/",
+     "meaning": "短的",
+     "label": [
+      0.7331,
+      0.249,
+      0.1588,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U5-C03",
+   "unitKey": "yilin/g4-up/u5",
+   "unitName": "Unit 5 · Different toys, same fun",
+   "sceneTitle": "班级演出准备",
+   "image": "cards/yilin--g4-up--u5/YL-G4UP-U5-C03.jpg",
+   "words": [
+    {
+     "word": "bring",
+     "ipa": "/brɪŋ/",
+     "meaning": "带来",
+     "label": [
+      0.26,
+      0.6852,
+      0.1588,
+      0.1196
+     ],
+     "anchor": [
+      0.2,
+      0.745
+     ]
+    },
+    {
+     "word": "lots of",
+     "ipa": "/lɒts əv/",
+     "meaning": "大量，许多",
+     "label": [
+      0.0795,
+      0.485,
+      0.1809,
+      0.1196
+     ],
+     "anchor": [
+      0.17,
+      0.44
+     ]
+    },
+    {
+     "word": "have",
+     "ipa": "/hæv/",
+     "meaning": "组织，举办",
+     "label": [
+      0.5481,
+      0.3902,
+      0.1719,
+      0.1196
+     ],
+     "anchor": [
+      0.78,
+      0.45
+     ]
+    },
+    {
+     "word": "show",
+     "ipa": "/ʃəʊ/",
+     "meaning": "表演，演出",
+     "label": [
+      0.2881,
+      0.3802,
+      0.1719,
+      0.1196
+     ],
+     "anchor": [
+      0.52,
+      0.44
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U5-C04",
+   "unitKey": "yilin/g4-up/u5",
+   "unitName": "Unit 5 · Different toys, same fun",
+   "sceneTitle": "展示自己的玩具",
+   "image": "cards/yilin--g4-up--u5/YL-G4UP-U5-C04.jpg",
+   "words": [
+    {
+     "word": "robot",
+     "ipa": "/ˈrəʊbət/",
+     "meaning": "机器人",
+     "label": [
+      0.4535,
+      0.5262,
+      0.1613,
+      0.1196
+     ],
+     "anchor": [
+      0.3935,
+      0.586
+     ]
+    },
+    {
+     "word": "his",
+     "ipa": "/hɪz/",
+     "meaning": "他的",
+     "label": [
+      0.2114,
+      0.5417,
+      0.1121,
+      0.1196
+     ],
+     "anchor": [
+      0.3835,
+      0.6015
+     ]
+    },
+    {
+     "word": "doll",
+     "ipa": "/dɒl/",
+     "meaning": "玩具娃娃",
+     "label": [
+      0.5919,
+      0.665,
+      0.1471,
+      0.1196
+     ],
+     "anchor": [
+      0.6655,
+      0.62
+     ]
+    },
+    {
+     "word": "her",
+     "ipa": "/hɜː/",
+     "meaning": "她的",
+     "label": [
+      0.6902,
+      0.4539,
+      0.1171,
+      0.1196
+     ],
+     "anchor": [
+      0.6595,
+      0.6185
+     ]
+    },
+    {
+     "word": "small",
+     "ipa": "/smɔːl/",
+     "meaning": "小的",
+     "label": [
+      0.7832,
+      0.5874,
+      0.1614,
+      0.1196
+     ],
+     "anchor": [
+      0.676,
+      0.6185
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U6-C01",
+   "unitKey": "yilin/g4-up/u6",
+   "unitName": "Unit 6 · Weather",
+   "sceneTitle": "天气四格",
+   "image": "cards/yilin--g4-up--u6/YL-G4UP-U6-C01.jpg",
+   "words": [
+    {
+     "word": "weather",
+     "ipa": "/ˈweðə/",
+     "meaning": "天气，气象",
+     "label": [
+      0.3923,
+      0.185,
+      0.2155,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    },
+    {
+     "word": "cloudy",
+     "ipa": "/ˈklaʊdi/",
+     "meaning": "多云的，阴天的",
+     "label": [
+      0.0543,
+      0.2854,
+      0.2214,
+      0.1196
+     ],
+     "anchor": [
+      0.165,
+      0.45
+     ]
+    },
+    {
+     "word": "sunny",
+     "ipa": "/ˈsʌni/",
+     "meaning": "晴朗的",
+     "label": [
+      0.2957,
+      0.475,
+      0.1785,
+      0.1196
+     ],
+     "anchor": [
+      0.385,
+      0.43
+     ]
+    },
+    {
+     "word": "rainy",
+     "ipa": "/ˈreɪni/",
+     "meaning": "阴雨的，多雨的",
+     "label": [
+      0.5243,
+      0.3454,
+      0.2214,
+      0.1196
+     ],
+     "anchor": [
+      0.635,
+      0.51
+     ]
+    },
+    {
+     "word": "windy",
+     "ipa": "/ˈwɪndi/",
+     "meaning": "多风的，风大的",
+     "label": [
+      0.7293,
+      0.525,
+      0.2214,
+      0.1196
+     ],
+     "anchor": [
+      0.84,
+      0.48
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U6-C02",
+   "unitKey": "yilin/g4-up/u6",
+   "unitName": "Unit 6 · Weather",
+   "sceneTitle": "温度对比角",
+   "image": "cards/yilin--g4-up--u6/YL-G4UP-U6-C02.jpg",
+   "words": [
+    {
+     "word": "hot",
+     "ipa": "/hɒt/",
+     "meaning": "温度高的，热的",
+     "label": [
+      0.0633,
+      0.4104,
+      0.2214,
+      0.1196
+     ],
+     "anchor": [
+      0.174,
+      0.575
+     ]
+    },
+    {
+     "word": "cool",
+     "ipa": "/kuːl/",
+     "meaning": "凉的，凉爽的",
+     "label": [
+      0.3882,
+      0.4154,
+      0.1966,
+      0.1196
+     ],
+     "anchor": [
+      0.4865,
+      0.58
+     ]
+    },
+    {
+     "word": "warm",
+     "ipa": "/wɔːm/",
+     "meaning": "温暖的，暖和的",
+     "label": [
+      0.6928,
+      0.4094,
+      0.2214,
+      0.1196
+     ],
+     "anchor": [
+      0.8035,
+      0.574
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U6-C03",
+   "unitKey": "yilin/g4-up/u6",
+   "unitName": "Unit 6 · Weather",
+   "sceneTitle": "公园风筝事件",
+   "image": "cards/yilin--g4-up--u6/YL-G4UP-U6-C03.jpg",
+   "words": [
+    {
+     "word": "park",
+     "ipa": "/pɑːk/",
+     "meaning": "公园",
+     "label": [
+      0.2983,
+      0.5002,
+      0.1417,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.56
+     ]
+    },
+    {
+     "word": "fly a kite",
+     "ipa": "/flaɪ ə kaɪt/",
+     "meaning": "放风筝",
+     "label": [
+      0.3723,
+      0.3204,
+      0.2253,
+      0.1196
+     ],
+     "anchor": [
+      0.485,
+      0.485
+     ]
+    },
+    {
+     "word": "worry",
+     "ipa": "/ˈwʌri/",
+     "meaning": "担心，担忧",
+     "label": [
+      0.5241,
+      0.68,
+      0.1719,
+      0.1196
+     ],
+     "anchor": [
+      0.61,
+      0.635
+     ]
+    },
+    {
+     "word": "there",
+     "ipa": "/ðeə/",
+     "meaning": "到那里，在那里",
+     "label": [
+      0.735,
+      0.5902,
+      0.2214,
+      0.1196
+     ],
+     "anchor": [
+      0.675,
+      0.65
+     ]
+    },
+    {
+     "word": "money",
+     "ipa": "/ˈmʌni/",
+     "meaning": "钱",
+     "label": [
+      0.5996,
+      0.825,
+      0.1909,
+      0.1196
+     ],
+     "anchor": [
+      0.695,
+      0.78
+     ]
+    },
+    {
+     "word": "umbrella",
+     "ipa": "/ʌmˈbrelə/",
+     "meaning": "伞，雨伞",
+     "label": [
+      0.7331,
+      0.437,
+      0.2327,
+      0.1196
+     ],
+     "anchor": [
+      0.83,
+      0.695
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U7-C01",
+   "unitKey": "yilin/g4-up/u7",
+   "unitName": "Unit 7 · Seasons",
+   "sceneTitle": "春日湖边",
+   "image": "cards/yilin--g4-up--u7/YL-G4UP-U7-C01.jpg",
+   "words": [
+    {
+     "word": "spring",
+     "ipa": "/spɜːɪŋ/",
+     "meaning": "春天，春季",
+     "label": [
+      0.4033,
+      0.6904,
+      0.1834,
+      0.1196
+     ],
+     "anchor": [
+      0.495,
+      0.855
+     ]
+    },
+    {
+     "word": "go boating",
+     "ipa": "/ɡəʊ ˈbəʊtɪŋ/",
+     "meaning": "去划船",
+     "label": [
+      0.4428,
+      0.5004,
+      0.2744,
+      0.1196
+     ],
+     "anchor": [
+      0.58,
+      0.665
+     ]
+    },
+    {
+     "word": "bird",
+     "ipa": "/bɜːd/",
+     "meaning": "鸟",
+     "label": [
+      0.32,
+      0.2052,
+      0.1318,
+      0.1196
+     ],
+     "anchor": [
+      0.26,
+      0.265
+     ]
+    },
+    {
+     "word": "plant",
+     "ipa": "/plɑːnt/",
+     "meaning": "栽种，种植",
+     "label": [
+      0.1291,
+      0.3454,
+      0.1719,
+      0.1196
+     ],
+     "anchor": [
+      0.215,
+      0.51
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U7-C02",
+   "unitKey": "yilin/g4-up/u7",
+   "unitName": "Unit 7 · Seasons",
+   "sceneTitle": "夏日海滩",
+   "image": "cards/yilin--g4-up--u7/YL-G4UP-U7-C02.jpg",
+   "words": [
+    {
+     "word": "summer",
+     "ipa": "/ˈsʌmə/",
+     "meaning": "夏天，夏季",
+     "label": [
+      0.3898,
+      0.185,
+      0.2204,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    },
+    {
+     "word": "go swimming",
+     "ipa": "/ɡəʊ ˈswɪmɪŋ/",
+     "meaning": "去游泳",
+     "label": [
+      0.1495,
+      0.3979,
+      0.331,
+      0.1196
+     ],
+     "anchor": [
+      0.315,
+      0.5625
+     ]
+    },
+    {
+     "word": "ice cream",
+     "ipa": "/aɪs krɪm/",
+     "meaning": "冰激凌",
+     "label": [
+      0.5013,
+      0.4004,
+      0.2525,
+      0.1196
+     ],
+     "anchor": [
+      0.6275,
+      0.565
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U7-C03",
+   "unitKey": "yilin/g4-up/u7",
+   "unitName": "Unit 7 · Seasons",
+   "sceneTitle": "秋日山坡",
+   "image": "cards/yilin--g4-up--u7/YL-G4UP-U7-C03.jpg",
+   "words": [
+    {
+     "word": "autumn",
+     "ipa": "/ˈɔːtəm/",
+     "meaning": "秋天，秋季",
+     "label": [
+      0.396,
+      0.185,
+      0.208,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    },
+    {
+     "word": "go climbing",
+     "ipa": "/ɡəʊ ˈklaɪmɪŋ/",
+     "meaning": "去爬山",
+     "label": [
+      0.3517,
+      0.4754,
+      0.2965,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.64
+     ]
+    },
+    {
+     "word": "pick",
+     "ipa": "/pɪk/",
+     "meaning": "采，摘",
+     "label": [
+      0.65,
+      0.5002,
+      0.1367,
+      0.1196
+     ],
+     "anchor": [
+      0.59,
+      0.56
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U7-C04",
+   "unitKey": "yilin/g4-up/u7",
+   "unitName": "Unit 7 · Seasons",
+   "sceneTitle": "冬日冰湖",
+   "image": "cards/yilin--g4-up--u7/YL-G4UP-U7-C04.jpg",
+   "words": [
+    {
+     "word": "winter",
+     "ipa": "/ˈwɪntə/",
+     "meaning": "冬天，冬季",
+     "label": [
+      0.3807,
+      0.4204,
+      0.1785,
+      0.1196
+     ],
+     "anchor": [
+      0.47,
+      0.585
+     ]
+    },
+    {
+     "word": "go skating",
+     "ipa": "/ɡəʊ ˈskeɪtɪŋ/",
+     "meaning": "去溜冰，去滑冰",
+     "label": [
+      0.5052,
+      0.675,
+      0.2695,
+      0.1196
+     ],
+     "anchor": [
+      0.64,
+      0.63
+     ]
+    },
+    {
+     "word": "snow",
+     "ipa": "/snəʊ/",
+     "meaning": "雪，积雪",
+     "label": [
+      0.1943,
+      0.4554,
+      0.1613,
+      0.1196
+     ],
+     "anchor": [
+      0.275,
+      0.62
+     ]
+    },
+    {
+     "word": "cold",
+     "ipa": "/kəʊld/",
+     "meaning": "寒冷的，冷的",
+     "label": [
+      0.6008,
+      0.4154,
+      0.1966,
+      0.1196
+     ],
+     "anchor": [
+      0.59,
+      0.58
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U7-C05",
+   "unitKey": "yilin/g4-up/u7",
+   "unitName": "Unit 7 · Seasons",
+   "sceneTitle": "整理书架",
+   "image": "cards/yilin--g4-up--u7/YL-G4UP-U7-C05.jpg",
+   "words": [
+    {
+     "word": "season",
+     "ipa": "/ˈsiːzən/",
+     "meaning": "季节",
+     "label": [
+      0.768,
+      0.1754,
+      0.2007,
+      0.1196
+     ],
+     "anchor": [
+      0.9125,
+      0.34
+     ]
+    },
+    {
+     "word": "new",
+     "ipa": "/nuː/",
+     "meaning": "新的",
+     "label": [
+      0.407,
+      0.4137,
+      0.1343,
+      0.1196
+     ],
+     "anchor": [
+      0.347,
+      0.4735
+     ]
+    },
+    {
+     "word": "back",
+     "ipa": "/bæk/",
+     "meaning": "回原处",
+     "label": [
+      0.5125,
+      0.5512,
+      0.1491,
+      0.1196
+     ],
+     "anchor": [
+      0.4525,
+      0.611
+     ]
+    },
+    {
+     "word": "in",
+     "ipa": "/ɪn/",
+     "meaning": "在（某段时间）内",
+     "label": [
+      0.377,
+      0.185,
+      0.2461,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    },
+    {
+     "word": "year",
+     "ipa": "/jɪə/",
+     "meaning": "年",
+     "label": [
+      0.7367,
+      0.4657,
+      0.1393,
+      0.1196
+     ],
+     "anchor": [
+      0.936,
+      0.5255
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U8-C01",
+   "unitKey": "yilin/g4-up/u8",
+   "unitName": "Unit 8 · What we wear",
+   "sceneTitle": "出门穿衣",
+   "image": "cards/yilin--g4-up--u8/YL-G4UP-U8-C01.jpg",
+   "words": [
+    {
+     "word": "wear",
+     "ipa": "/weə/",
+     "meaning": "穿，戴",
+     "label": [
+      0.515,
+      0.5152,
+      0.1491,
+      0.1196
+     ],
+     "anchor": [
+      0.455,
+      0.575
+     ]
+    },
+    {
+     "word": "cap",
+     "ipa": "/kæp/",
+     "meaning": "（尤指有帽舌的）便帽",
+     "label": [
+      0.2372,
+      0.1804,
+      0.2956,
+      0.1196
+     ],
+     "anchor": [
+      0.385,
+      0.345
+     ]
+    },
+    {
+     "word": "coat",
+     "ipa": "/kəʊt/",
+     "meaning": "外套，外衣",
+     "label": [
+      0.2131,
+      0.5052,
+      0.1719,
+      0.1196
+     ],
+     "anchor": [
+      0.445,
+      0.565
+     ]
+    },
+    {
+     "word": "clothes",
+     "ipa": "/kləʊðz/",
+     "meaning": "衣服",
+     "label": [
+      0.6334,
+      0.2954,
+      0.2031,
+      0.1196
+     ],
+     "anchor": [
+      0.735,
+      0.46
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U8-C02",
+   "unitKey": "yilin/g4-up/u8",
+   "unitName": "Unit 8 · What we wear",
+   "sceneTitle": "衣物整理",
+   "image": "cards/yilin--g4-up--u8/YL-G4UP-U8-C02.jpg",
+   "words": [
+    {
+     "word": "skirt",
+     "ipa": "/skɜːt/",
+     "meaning": "半身裙",
+     "label": [
+      0.273,
+      0.6272,
+      0.1417,
+      0.1196
+     ],
+     "anchor": [
+      0.213,
+      0.687
+     ]
+    },
+    {
+     "word": "trousers",
+     "ipa": "/ˈtraʊzəz/",
+     "meaning": "裤子",
+     "label": [
+      0.3688,
+      0.7885,
+      0.2253,
+      0.1196
+     ],
+     "anchor": [
+      0.4815,
+      0.7435
+     ]
+    },
+    {
+     "word": "dress",
+     "ipa": "/dres/",
+     "meaning": "连衣裙",
+     "label": [
+      0.3368,
+      0.4169,
+      0.1663,
+      0.1196
+     ],
+     "anchor": [
+      0.42,
+      0.5815
+     ]
+    },
+    {
+     "word": "shirt",
+     "ipa": "/ʃɜːt/",
+     "meaning": "（男式）衬衫",
+     "label": [
+      0.5737,
+      0.4554,
+      0.1966,
+      0.1196
+     ],
+     "anchor": [
+      0.672,
+      0.62
+     ]
+    },
+    {
+     "word": "shorts",
+     "ipa": "/ʃɔːts/",
+     "meaning": "短裤",
+     "label": [
+      0.7453,
+      0.725,
+      0.1835,
+      0.1196
+     ],
+     "anchor": [
+      0.837,
+      0.68
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U8-C03",
+   "unitKey": "yilin/g4-up/u8",
+   "unitName": "Unit 8 · What we wear",
+   "sceneTitle": "夏日庭院",
+   "image": "cards/yilin--g4-up--u8/YL-G4UP-U8-C03.jpg",
+   "words": [
+    {
+     "word": "sunglasses",
+     "ipa": "/ˈsʌnɡlɑːsɪz/",
+     "meaning": "太阳镜，墨镜",
+     "label": [
+      0.3699,
+      0.3985,
+      0.2893,
+      0.1196
+     ],
+     "anchor": [
+      0.5145,
+      0.3535
+     ]
+    },
+    {
+     "word": "in",
+     "ipa": "/ɪn/",
+     "meaning": "穿着，戴着",
+     "label": [
+      0.0941,
+      0.185,
+      0.1719,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "bright",
+     "ipa": "/braɪt/",
+     "meaning": "聪明的；明亮的",
+     "label": [
+      0.7093,
+      0.185,
+      0.2214,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G4UP-U8-C04",
+   "unitKey": "yilin/g4-up/u8",
+   "unitName": "Unit 8 · What we wear",
+   "sceneTitle": "衣物归属对话",
+   "image": "cards/yilin--g4-up--u8/YL-G4UP-U8-C04.jpg",
+   "words": [
+    {
+     "word": "whose",
+     "ipa": "/huːz/",
+     "meaning": "谁的",
+     "label": [
+      0.087,
+      0.185,
+      0.1859,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "look",
+     "ipa": "/lʊk/",
+     "meaning": "看来好像，显得",
+     "label": [
+      0.2827,
+      0.185,
+      0.2214,
+      0.1196
+     ],
+     "anchor": [
+      0.3933,
+      0.14
+     ]
+    },
+    {
+     "word": "why",
+     "ipa": "/waɪ/",
+     "meaning": "为什么",
+     "label": [
+      0.6667,
+      0.0802,
+      0.1343,
+      0.1196
+     ],
+     "anchor": [
+      0.6067,
+      0.14
+     ]
+    },
+    {
+     "word": "because",
+     "ipa": "/bɪˈkɒz/",
+     "meaning": "因为",
+     "label": [
+      0.6829,
+      0.2114,
+      0.2253,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5DOWN-U1-C01",
+   "unitKey": "yilin/g5-down/u1",
+   "unitName": "Unit 1 · Cinderella",
+   "sceneTitle": "城堡更衣",
+   "image": "cards/yilin--g5-down--u1/YL-G5DOWN-U1-C01.jpg",
+   "words": [
+    {
+     "word": "prince",
+     "ipa": "/prɪns/",
+     "meaning": "王子",
+     "label": [
+      0.2395,
+      0.3404,
+      0.181,
+      0.1196
+     ],
+     "anchor": [
+      0.33,
+      0.505
+     ]
+    },
+    {
+     "word": "fairy",
+     "ipa": "/ˈferi/",
+     "meaning": "仙女",
+     "label": [
+      0.5318,
+      0.5562,
+      0.1417,
+      0.1196
+     ],
+     "anchor": [
+      0.7335,
+      0.616
+     ]
+    },
+    {
+     "word": "put on",
+     "ipa": "/pʊt ɒn/",
+     "meaning": "穿上",
+     "label": [
+      0.2958,
+      0.1504,
+      0.1834,
+      0.1196
+     ],
+     "anchor": [
+      0.3875,
+      0.315
+     ]
+    },
+    {
+     "word": "take off",
+     "ipa": "/teɪk ɒf/",
+     "meaning": "脱下",
+     "label": [
+      0.4972,
+      0.7675,
+      0.2056,
+      0.1196
+     ],
+     "anchor": [
+      0.6,
+      0.7225
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5DOWN-U1-C02",
+   "unitKey": "yilin/g5-down/u1",
+   "unitName": "Unit 1 · Cinderella",
+   "sceneTitle": "派对前后",
+   "image": "cards/yilin--g5-down--u1/YL-G5DOWN-U1-C02.jpg",
+   "words": [
+    {
+     "word": "before",
+     "ipa": "/bɪˈfɔː/",
+     "meaning": "在……以前",
+     "label": [
+      0.1683,
+      0.3354,
+      0.1835,
+      0.1196
+     ],
+     "anchor": [
+      0.26,
+      0.5
+     ]
+    },
+    {
+     "word": "party",
+     "ipa": "/ˈpɑːti/",
+     "meaning": "聚会",
+     "label": [
+      0.5236,
+      0.4452,
+      0.1564,
+      0.1196
+     ],
+     "anchor": [
+      0.74,
+      0.505
+     ]
+    },
+    {
+     "word": "have a good time",
+     "ipa": "/hæv ə ɡʊd taɪm/",
+     "meaning": "玩得开心",
+     "label": [
+      0.5261,
+      0.6,
+      0.3779,
+      0.1162
+     ],
+     "anchor": [
+      0.715,
+      0.555
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5DOWN-U1-C03",
+   "unitKey": "yilin/g5-down/u1",
+   "unitName": "Unit 1 · Cinderella",
+   "sceneTitle": "为什么迟到",
+   "image": "cards/yilin--g5-down--u1/YL-G5DOWN-U1-C03.jpg",
+   "words": [
+    {
+     "word": "why",
+     "ipa": "/waɪ/",
+     "meaning": "为什么",
+     "label": [
+      0.24,
+      0.0802,
+      0.1343,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "because",
+     "ipa": "/bɪˈkɒz/",
+     "meaning": "因为",
+     "label": [
+      0.7073,
+      0.185,
+      0.2253,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    },
+    {
+     "word": "late",
+     "ipa": "/leɪt/",
+     "meaning": "迟的",
+     "label": [
+      0.429,
+      0.4807,
+      0.1245,
+      0.1196
+     ],
+     "anchor": [
+      0.369,
+      0.5405
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5DOWN-U2-C01",
+   "unitKey": "yilin/g5-down/u2",
+   "unitName": "Unit 2 · How do you come to school?",
+   "sceneTitle": "上学路上",
+   "image": "cards/yilin--g5-down--u2/YL-G5DOWN-U2-C01.jpg",
+   "words": [
+    {
+     "word": "come to school",
+     "ipa": "/kʌm tə skuːl/",
+     "meaning": "来上学",
+     "label": [
+      0.2786,
+      0.4154,
+      0.3728,
+      0.1196
+     ],
+     "anchor": [
+      0.465,
+      0.58
+     ]
+    },
+    {
+     "word": "metro",
+     "ipa": "/ˈmetrəʊ/",
+     "meaning": "地铁",
+     "label": [
+      0.7394,
+      0.6654,
+      0.1712,
+      0.1196
+     ],
+     "anchor": [
+      0.825,
+      0.83
+     ]
+    },
+    {
+     "word": "bus",
+     "ipa": "/bʌs/",
+     "meaning": "公共汽车",
+     "label": [
+      0.0914,
+      0.3329,
+      0.1471,
+      0.1196
+     ],
+     "anchor": [
+      0.165,
+      0.4975
+     ]
+    },
+    {
+     "word": "on foot",
+     "ipa": "/ɒn fʊt/",
+     "meaning": "步行",
+     "label": [
+      0.3809,
+      0.675,
+      0.1981,
+      0.1196
+     ],
+     "anchor": [
+      0.48,
+      0.63
+     ]
+    },
+    {
+     "word": "taxi",
+     "ipa": "/ˈtæksi/",
+     "meaning": "出租车",
+     "label": [
+      0.0312,
+      0.7227,
+      0.1258,
+      0.1196
+     ],
+     "anchor": [
+      0.2075,
+      0.7825
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5DOWN-U2-C02",
+   "unitKey": "yilin/g5-down/u2",
+   "unitName": "Unit 2 · How do you come to school?",
+   "sceneTitle": "海陆空交通",
+   "image": "cards/yilin--g5-down--u2/YL-G5DOWN-U2-C02.jpg",
+   "words": [
+    {
+     "word": "plane",
+     "ipa": "/pleɪn/",
+     "meaning": "飞机",
+     "label": [
+      0.299,
+      0.3862,
+      0.1638,
+      0.1196
+     ],
+     "anchor": [
+      0.239,
+      0.446
+     ]
+    },
+    {
+     "word": "ship",
+     "ipa": "/ʃɪp/",
+     "meaning": "轮船",
+     "label": [
+      0.5328,
+      0.4462,
+      0.1392,
+      0.1196
+     ],
+     "anchor": [
+      0.732,
+      0.506
+     ]
+    },
+    {
+     "word": "train",
+     "ipa": "/treɪn/",
+     "meaning": "火车",
+     "label": [
+      0.312,
+      0.5802,
+      0.1441,
+      0.1196
+     ],
+     "anchor": [
+      0.252,
+      0.64
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5DOWN-U2-C03",
+   "unitKey": "yilin/g5-down/u2",
+   "unitName": "Unit 2 · How do you come to school?",
+   "sceneTitle": "近与远",
+   "image": "cards/yilin--g5-down--u2/YL-G5DOWN-U2-C03.jpg",
+   "words": [
+    {
+     "word": "near",
+     "ipa": "/nɪə/",
+     "meaning": "近的",
+     "label": [
+      0.525,
+      0.4052,
+      0.1417,
+      0.1196
+     ],
+     "anchor": [
+      0.465,
+      0.465
+     ]
+    },
+    {
+     "word": "far",
+     "ipa": "/fɑː/",
+     "meaning": "远的",
+     "label": [
+      0.5026,
+      0.57,
+      0.1048,
+      0.1196
+     ],
+     "anchor": [
+      0.555,
+      0.525
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5DOWN-U3-C01",
+   "unitKey": "yilin/g5-down/u3",
+   "unitName": "Unit 3 · Asking the way",
+   "sceneTitle": "问路去车站",
+   "image": "cards/yilin--g5-down--u3/YL-G5DOWN-U3-C01.jpg",
+   "words": [
+    {
+     "word": "way",
+     "ipa": "/weɪ/",
+     "meaning": "路；方法",
+     "label": [
+      0.4979,
+      0.4902,
+      0.1471,
+      0.1196
+     ],
+     "anchor": [
+      0.705,
+      0.55
+     ]
+    },
+    {
+     "word": "get to",
+     "ipa": "/ɡɪt tuː/",
+     "meaning": "到达",
+     "label": [
+      0.2307,
+      0.3754,
+      0.1687,
+      0.1196
+     ],
+     "anchor": [
+      0.315,
+      0.54
+     ]
+    },
+    {
+     "word": "station",
+     "ipa": "/ˈsteɪʃən/",
+     "meaning": "车站",
+     "label": [
+      0.6434,
+      0.3004,
+      0.1933,
+      0.1196
+     ],
+     "anchor": [
+      0.74,
+      0.465
+     ]
+    },
+    {
+     "word": "street",
+     "ipa": "/strɪt/",
+     "meaning": "街道",
+     "label": [
+      0.4406,
+      0.6204,
+      0.1687,
+      0.1196
+     ],
+     "anchor": [
+      0.525,
+      0.785
+     ]
+    },
+    {
+     "word": "ask",
+     "ipa": "/ɑːsk/",
+     "meaning": "问",
+     "label": [
+      0.0814,
+      0.3994,
+      0.122,
+      0.1196
+     ],
+     "anchor": [
+      0.32,
+      0.455
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5DOWN-U3-C02",
+   "unitKey": "yilin/g5-down/u3",
+   "unitName": "Unit 3 · Asking the way",
+   "sceneTitle": "路口乘车",
+   "image": "cards/yilin--g5-down--u3/YL-G5DOWN-U3-C02.jpg",
+   "words": [
+    {
+     "word": "take",
+     "ipa": "/teɪk/",
+     "meaning": "乘（车）",
+     "label": [
+      0.3279,
+      0.4252,
+      0.1471,
+      0.1196
+     ],
+     "anchor": [
+      0.535,
+      0.485
+     ]
+    },
+    {
+     "word": "turn",
+     "ipa": "/tɜːn/",
+     "meaning": "转弯",
+     "label": [
+      0.3854,
+      0.555,
+      0.1342,
+      0.1196
+     ],
+     "anchor": [
+      0.4525,
+      0.51
+     ]
+    },
+    {
+     "word": "left",
+     "ipa": "/left/",
+     "meaning": "左边",
+     "label": [
+      0.0312,
+      0.4502,
+      0.1146,
+      0.1196
+     ],
+     "anchor": [
+      0.2,
+      0.51
+     ]
+    },
+    {
+     "word": "right",
+     "ipa": "/raɪt/",
+     "meaning": "右边",
+     "label": [
+      0.6685,
+      0.3702,
+      0.1465,
+      0.1196
+     ],
+     "anchor": [
+      0.875,
+      0.43
+     ]
+    },
+    {
+     "word": "straight",
+     "ipa": "/streɪt/",
+     "meaning": "笔直地",
+     "label": [
+      0.0647,
+      0.3004,
+      0.2105,
+      0.1196
+     ],
+     "anchor": [
+      0.17,
+      0.465
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5DOWN-U4-C01",
+   "unitKey": "yilin/g5-down/u4",
+   "unitName": "Unit 4 · Seeing the doctor",
+   "sceneTitle": "牙科诊室",
+   "image": "cards/yilin--g5-down--u4/YL-G5DOWN-U4-C01.jpg",
+   "words": [
+    {
+     "word": "doctor",
+     "ipa": "/ˈdɒktə/",
+     "meaning": "医生",
+     "label": [
+      0.6321,
+      0.3304,
+      0.1859,
+      0.1196
+     ],
+     "anchor": [
+      0.725,
+      0.495
+     ]
+    },
+    {
+     "word": "check",
+     "ipa": "/tʃek/",
+     "meaning": "检查",
+     "label": [
+      0.4332,
+      0.3404,
+      0.1737,
+      0.1196
+     ],
+     "anchor": [
+      0.52,
+      0.505
+     ]
+    },
+    {
+     "word": "toothache",
+     "ipa": "/ˈtuːθeɪk/",
+     "meaning": "牙疼",
+     "label": [
+      0.1802,
+      0.485,
+      0.2597,
+      0.1196
+     ],
+     "anchor": [
+      0.31,
+      0.44
+     ]
+    },
+    {
+     "word": "medicine",
+     "ipa": "/ˈmedəsən/",
+     "meaning": "药",
+     "label": [
+      0.595,
+      0.6004,
+      0.2401,
+      0.1196
+     ],
+     "anchor": [
+      0.715,
+      0.765
+     ]
+    },
+    {
+     "word": "wrong",
+     "ipa": "/rɒŋ/",
+     "meaning": "不舒服的",
+     "label": [
+      0.4095,
+      0.185,
+      0.181,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5DOWN-U4-C02",
+   "unitKey": "yilin/g5-down/u4",
+   "unitName": "Unit 4 · Seeing the doctor",
+   "sceneTitle": "感冒休息",
+   "image": "cards/yilin--g5-down--u4/YL-G5DOWN-U4-C02.jpg",
+   "words": [
+    {
+     "word": "feel",
+     "ipa": "/fɪl/",
+     "meaning": "感觉",
+     "label": [
+      0.24,
+      0.0802,
+      0.1245,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "fever",
+     "ipa": "/ˈfiːvə/",
+     "meaning": "发烧",
+     "label": [
+      0.465,
+      0.6352,
+      0.154,
+      0.1196
+     ],
+     "anchor": [
+      0.405,
+      0.695
+     ]
+    },
+    {
+     "word": "cold",
+     "ipa": "/kəʊld/",
+     "meaning": "感冒",
+     "label": [
+      0.425,
+      0.2352,
+      0.1392,
+      0.1196
+     ],
+     "anchor": [
+      0.365,
+      0.295
+     ]
+    },
+    {
+     "word": "have a rest",
+     "ipa": "/hæv ə rest/",
+     "meaning": "休息",
+     "label": [
+      0.2953,
+      0.765,
+      0.2795,
+      0.1196
+     ],
+     "anchor": [
+      0.435,
+      0.72
+     ]
+    },
+    {
+     "word": "should",
+     "ipa": "/ʃʊd/",
+     "meaning": "应该",
+     "label": [
+      0.7234,
+      0.185,
+      0.1932,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5DOWN-U5-C01",
+   "unitKey": "yilin/g5-down/u5",
+   "unitName": "Unit 5 · Helping our parents",
+   "sceneTitle": "客厅大扫除",
+   "image": "cards/yilin--g5-down--u5/YL-G5DOWN-U5-C01.jpg",
+   "words": [
+    {
+     "word": "parent",
+     "ipa": "/ˈperənt/",
+     "meaning": "父母",
+     "label": [
+      0.2583,
+      0.2704,
+      0.1835,
+      0.1196
+     ],
+     "anchor": [
+      0.35,
+      0.435
+     ]
+    },
+    {
+     "word": "clean",
+     "ipa": "/klɪn/",
+     "meaning": "打扫",
+     "label": [
+      0.535,
+      0.3052,
+      0.1614,
+      0.1196
+     ],
+     "anchor": [
+      0.475,
+      0.365
+     ]
+    },
+    {
+     "word": "sweep",
+     "ipa": "/swɪp/",
+     "meaning": "扫",
+     "label": [
+      0.5282,
+      0.605,
+      0.1835,
+      0.1196
+     ],
+     "anchor": [
+      0.62,
+      0.56
+     ]
+    },
+    {
+     "word": "rubbish",
+     "ipa": "/ˈrʌbɪʃ/",
+     "meaning": "垃圾",
+     "label": [
+      0.6998,
+      0.825,
+      0.2105,
+      0.1196
+     ],
+     "anchor": [
+      0.805,
+      0.78
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5DOWN-U5-C02",
+   "unitKey": "yilin/g5-down/u5",
+   "unitName": "Unit 5 · Helping our parents",
+   "sceneTitle": "忙碌的厨房",
+   "image": "cards/yilin--g5-down--u5/YL-G5DOWN-U5-C02.jpg",
+   "words": [
+    {
+     "word": "cook",
+     "ipa": "/kʊk/",
+     "meaning": "做饭",
+     "label": [
+      0.395,
+      0.3702,
+      0.1515,
+      0.1196
+     ],
+     "anchor": [
+      0.335,
+      0.43
+     ]
+    },
+    {
+     "word": "wash",
+     "ipa": "/wɒʃ/",
+     "meaning": "洗",
+     "label": [
+      0.6756,
+      0.3704,
+      0.1589,
+      0.1196
+     ],
+     "anchor": [
+      0.755,
+      0.535
+     ]
+    },
+    {
+     "word": "busy",
+     "ipa": "/ˈbɪzi/",
+     "meaning": "忙的",
+     "label": [
+      0.4243,
+      0.185,
+      0.1515,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5DOWN-U5-C03",
+   "unitKey": "yilin/g5-down/u5",
+   "unitName": "Unit 5 · Helping our parents",
+   "sceneTitle": "花园帮忙",
+   "image": "cards/yilin--g5-down--u5/YL-G5DOWN-U5-C03.jpg",
+   "words": [
+    {
+     "word": "water",
+     "ipa": "/ˈwɔːtə/",
+     "meaning": "浇水",
+     "label": [
+      0.4131,
+      0.5304,
+      0.1638,
+      0.1196
+     ],
+     "anchor": [
+      0.495,
+      0.695
+     ]
+    },
+    {
+     "word": "work",
+     "ipa": "/wɜːk/",
+     "meaning": "工作",
+     "label": [
+      0.395,
+      0.3952,
+      0.1515,
+      0.1196
+     ],
+     "anchor": [
+      0.335,
+      0.455
+     ]
+    },
+    {
+     "word": "help",
+     "ipa": "/help/",
+     "meaning": "帮助",
+     "label": [
+      0.79,
+      0.5402,
+      0.1392,
+      0.1196
+     ],
+     "anchor": [
+      0.73,
+      0.6
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5DOWN-U6-C01",
+   "unitKey": "yilin/g5-down/u6",
+   "unitName": "Unit 6 · In the kitchen",
+   "sceneTitle": "厨房备菜",
+   "image": "cards/yilin--g5-down--u6/YL-G5DOWN-U6-C01.jpg",
+   "words": [
+    {
+     "word": "kitchen",
+     "ipa": "/ˈkɪtʃən/",
+     "meaning": "厨房",
+     "label": [
+      0.3984,
+      0.3404,
+      0.2031,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.505
+     ]
+    },
+    {
+     "word": "tomato",
+     "ipa": "/təˈmɑːtəʊ/",
+     "meaning": "西红柿",
+     "label": [
+      0.0991,
+      0.4034,
+      0.1957,
+      0.1196
+     ],
+     "anchor": [
+      0.197,
+      0.568
+     ]
+    },
+    {
+     "word": "potato",
+     "ipa": "/pəˈteɪtəʊ/",
+     "meaning": "土豆",
+     "label": [
+      0.2608,
+      0.6565,
+      0.1834,
+      0.1196
+     ],
+     "anchor": [
+      0.3525,
+      0.6115
+     ]
+    },
+    {
+     "word": "vegetable",
+     "ipa": "/ˈvedʒtəbəl/",
+     "meaning": "蔬菜",
+     "label": [
+      0.4824,
+      0.5498,
+      0.2524,
+      0.1196
+     ],
+     "anchor": [
+      0.422,
+      0.488
+     ]
+    },
+    {
+     "word": "meat",
+     "ipa": "/mɪt/",
+     "meaning": "肉",
+     "label": [
+      0.6651,
+      0.4219,
+      0.1515,
+      0.1196
+     ],
+     "anchor": [
+      0.643,
+      0.5865
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5DOWN-U6-C02",
+   "unitKey": "yilin/g5-down/u6",
+   "unitName": "Unit 6 · In the kitchen",
+   "sceneTitle": "煮汤闻香",
+   "image": "cards/yilin--g5-down--u6/YL-G5DOWN-U6-C02.jpg",
+   "words": [
+    {
+     "word": "cook",
+     "ipa": "/kʊk/",
+     "meaning": "做饭",
+     "label": [
+      0.39,
+      0.3902,
+      0.1515,
+      0.1196
+     ],
+     "anchor": [
+      0.33,
+      0.45
+     ]
+    },
+    {
+     "word": "soup",
+     "ipa": "/suːp/",
+     "meaning": "汤",
+     "label": [
+      0.423,
+      0.5954,
+      0.1539,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.76
+     ]
+    },
+    {
+     "word": "smell",
+     "ipa": "/smel/",
+     "meaning": "闻起来",
+     "label": [
+      0.6593,
+      0.4154,
+      0.1614,
+      0.1196
+     ],
+     "anchor": [
+      0.74,
+      0.58
+     ]
+    },
+    {
+     "word": "hungry",
+     "ipa": "/ˈhʌŋɡri/",
+     "meaning": "饿的",
+     "label": [
+      0.6659,
+      0.7,
+      0.1982,
+      0.1196
+     ],
+     "anchor": [
+      0.765,
+      0.655
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5DOWN-U7-C01",
+   "unitKey": "yilin/g5-down/u7",
+   "unitName": "Unit 7 · Chinese festivals",
+   "sceneTitle": "冬末春节时间线",
+   "image": "cards/yilin--g5-down--u7/YL-G5DOWN-U7-C01.jpg",
+   "words": [
+    {
+     "word": "spring festival",
+     "ipa": "/spɜːɪŋ ˈfestɪvəl/",
+     "meaning": "春节",
+     "label": [
+      0.6059,
+      0.4354,
+      0.3483,
+      0.1196
+     ],
+     "anchor": [
+      0.78,
+      0.6
+     ]
+    },
+    {
+     "word": "lantern",
+     "ipa": "/ˈlæntən/",
+     "meaning": "灯笼",
+     "label": [
+      0.1371,
+      0.2254,
+      0.1958,
+      0.1196
+     ],
+     "anchor": [
+      0.235,
+      0.39
+     ]
+    },
+    {
+     "word": "dumpling",
+     "ipa": "/ˈdʌmplɪŋ/",
+     "meaning": "饺子",
+     "label": [
+      0.6963,
+      0.78,
+      0.2473,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.735
+     ]
+    },
+    {
+     "word": "january",
+     "ipa": "/ˈdʒænjuːeri/",
+     "meaning": "一月",
+     "label": [
+      0.0872,
+      0.625,
+      0.2056,
+      0.1196
+     ],
+     "anchor": [
+      0.19,
+      0.58
+     ]
+    },
+    {
+     "word": "february",
+     "ipa": "/ˈfebruːeri/",
+     "meaning": "二月",
+     "label": [
+      0.45,
+      0.6302,
+      0.2253,
+      0.1196
+     ],
+     "anchor": [
+      0.39,
+      0.69
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5DOWN-U7-C02",
+   "unitKey": "yilin/g5-down/u7",
+   "unitName": "Unit 7 · Chinese festivals",
+   "sceneTitle": "节日对比",
+   "image": "cards/yilin--g5-down--u7/YL-G5DOWN-U7-C02.jpg",
+   "words": [
+    {
+     "word": "festival",
+     "ipa": "/ˈfestɪvəl/",
+     "meaning": "节日",
+     "label": [
+      0.3996,
+      0.185,
+      0.2007,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    },
+    {
+     "word": "mid-autumn festival",
+     "ipa": "/mɪd ˈɔːtəm ˈfestɪvl/",
+     "meaning": "中秋节",
+     "label": [
+      0.0849,
+      0.3137,
+      0.3802,
+      0.1113
+     ],
+     "anchor": [
+      0.275,
+      0.47
+     ]
+    },
+    {
+     "word": "moon cake",
+     "ipa": "/muːn keɪk/",
+     "meaning": "月饼",
+     "label": [
+      0.1478,
+      0.6615,
+      0.2794,
+      0.1196
+     ],
+     "anchor": [
+      0.2875,
+      0.6165
+     ]
+    },
+    {
+     "word": "dragon boat festival",
+     "ipa": "/ˈdræɡən bəʊt ˈfestɪvəl/",
+     "meaning": "端午节",
+     "label": [
+      0.5189,
+      0.3837,
+      0.3822,
+      0.1113
+     ],
+     "anchor": [
+      0.71,
+      0.54
+     ]
+    },
+    {
+     "word": "rice dumpling",
+     "ipa": "/raɪs ˈdʌmplɪŋ/",
+     "meaning": "粽子",
+     "label": [
+      0.5758,
+      0.6304,
+      0.3384,
+      0.1196
+     ],
+     "anchor": [
+      0.745,
+      0.795
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5DOWN-U8-C01",
+   "unitKey": "yilin/g5-down/u8",
+   "unitName": "Unit 8 · Birthdays",
+   "sceneTitle": "生日派对",
+   "image": "cards/yilin--g5-down--u8/YL-G5DOWN-U8-C01.jpg",
+   "words": [
+    {
+     "word": "birthday",
+     "ipa": "/ˈbɜːθdeɪ/",
+     "meaning": "生日",
+     "label": [
+      0.3936,
+      0.3504,
+      0.2228,
+      0.1196
+     ],
+     "anchor": [
+      0.505,
+      0.515
+     ]
+    },
+    {
+     "word": "present",
+     "ipa": "/ˈprezənt/",
+     "meaning": "礼物",
+     "label": [
+      0.166,
+      0.5029,
+      0.2081,
+      0.1196
+     ],
+     "anchor": [
+      0.27,
+      0.6675
+     ]
+    },
+    {
+     "word": "cake",
+     "ipa": "/keɪk/",
+     "meaning": "蛋糕",
+     "label": [
+      0.5675,
+      0.5752,
+      0.1466,
+      0.1196
+     ],
+     "anchor": [
+      0.5075,
+      0.635
+     ]
+    },
+    {
+     "word": "party",
+     "ipa": "/ˈpɑːti/",
+     "meaning": "聚会",
+     "label": [
+      0.6328,
+      0.3994,
+      0.1564,
+      0.1196
+     ],
+     "anchor": [
+      0.515,
+      0.47
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5DOWN-U8-C02",
+   "unitKey": "yilin/g5-down/u8",
+   "unitName": "Unit 8 · Birthdays",
+   "sceneTitle": "生日月份对比",
+   "image": "cards/yilin--g5-down--u8/YL-G5DOWN-U8-C02.jpg",
+   "words": [
+    {
+     "word": "date",
+     "ipa": "/deɪt/",
+     "meaning": "日期",
+     "label": [
+      0.24,
+      0.0802,
+      0.1392,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "when",
+     "ipa": "/wɪn/",
+     "meaning": "什么时候",
+     "label": [
+      0.7393,
+      0.185,
+      0.1613,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    },
+    {
+     "word": "april",
+     "ipa": "/ˈeɪprəl/",
+     "meaning": "四月",
+     "label": [
+      0.37,
+      0.3277,
+      0.1417,
+      0.1196
+     ],
+     "anchor": [
+      0.31,
+      0.3875
+     ]
+    },
+    {
+     "word": "may",
+     "ipa": "/meɪ/",
+     "meaning": "五月",
+     "label": [
+      0.7225,
+      0.3277,
+      0.1368,
+      0.1196
+     ],
+     "anchor": [
+      0.6625,
+      0.3875
+     ]
+    },
+    {
+     "word": "first",
+     "ipa": "/fɜːst/",
+     "meaning": "第一",
+     "label": [
+      0.2267,
+      0.7552,
+      0.1318,
+      0.1196
+     ],
+     "anchor": [
+      0.4185,
+      0.815
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U1-C01",
+   "unitKey": "yilin/g5-up/u1",
+   "unitName": "Unit 1 · Goldilocks",
+   "sceneTitle": "森林遇熊",
+   "image": "cards/yilin--g5-up--u1/YL-G5UP-U1-C01.jpg",
+   "words": [
+    {
+     "word": "forest",
+     "ipa": "/ˈfɒrɪst/",
+     "meaning": "森林",
+     "label": [
+      0.4144,
+      0.3354,
+      0.1712,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.5
+     ]
+    },
+    {
+     "word": "bear",
+     "ipa": "/beə/",
+     "meaning": "熊",
+     "label": [
+      0.385,
+      0.5452,
+      0.1417,
+      0.1196
+     ],
+     "anchor": [
+      0.325,
+      0.605
+     ]
+    },
+    {
+     "word": "afraid",
+     "ipa": "/əˈfreɪd/",
+     "meaning": "害怕的",
+     "label": [
+      0.6363,
+      0.5702,
+      0.1687,
+      0.1196
+     ],
+     "anchor": [
+      0.865,
+      0.63
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U1-C02",
+   "unitKey": "yilin/g5-up/u1",
+   "unitName": "Unit 1 · Goldilocks",
+   "sceneTitle": "汤和面包",
+   "image": "cards/yilin--g5-up--u1/YL-G5UP-U1-C02.jpg",
+   "words": [
+    {
+     "word": "soup",
+     "ipa": "/suːp/",
+     "meaning": "汤",
+     "label": [
+      0.455,
+      0.5602,
+      0.1539,
+      0.1196
+     ],
+     "anchor": [
+      0.395,
+      0.62
+     ]
+    },
+    {
+     "word": "hard",
+     "ipa": "/hɑːd/",
+     "meaning": "硬的",
+     "label": [
+      0.245,
+      0.7302,
+      0.1441,
+      0.1196
+     ],
+     "anchor": [
+      0.185,
+      0.79
+     ]
+    },
+    {
+     "word": "soft",
+     "ipa": "/sɒft/",
+     "meaning": "柔软的",
+     "label": [
+      0.425,
+      0.7652,
+      0.1293,
+      0.1196
+     ],
+     "anchor": [
+      0.365,
+      0.825
+     ]
+    },
+    {
+     "word": "really",
+     "ipa": "/ˈrɪli/",
+     "meaning": "真的",
+     "label": [
+      0.4181,
+      0.185,
+      0.1639,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U1-C03",
+   "unitKey": "yilin/g5-up/u1",
+   "unitName": "Unit 1 · Goldilocks",
+   "sceneTitle": "卧室找玩具",
+   "image": "cards/yilin--g5-up--u1/YL-G5UP-U1-C03.jpg",
+   "words": [
+    {
+     "word": "room",
+     "ipa": "/ruːm/",
+     "meaning": "房间",
+     "label": [
+      0.4206,
+      0.4354,
+      0.1589,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.6
+     ]
+    },
+    {
+     "word": "between",
+     "ipa": "/bɪtˈwiːn/",
+     "meaning": "在……之间",
+     "label": [
+      0.4974,
+      0.73,
+      0.2253,
+      0.1196
+     ],
+     "anchor": [
+      0.61,
+      0.685
+     ]
+    },
+    {
+     "word": "find",
+     "ipa": "/faɪnd/",
+     "meaning": "找到",
+     "label": [
+      0.66,
+      0.5052,
+      0.1293,
+      0.1196
+     ],
+     "anchor": [
+      0.6,
+      0.565
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U2-C01",
+   "unitKey": "yilin/g5-up/u2",
+   "unitName": "Unit 2 · A new student",
+   "sceneTitle": "参观教室",
+   "image": "cards/yilin--g5-up--u2/YL-G5UP-U2-C01.jpg",
+   "words": [
+    {
+     "word": "student",
+     "ipa": "/ˈstuːdənt/",
+     "meaning": "学生",
+     "label": [
+      0.2535,
+      0.4654,
+      0.208,
+      0.1196
+     ],
+     "anchor": [
+      0.3575,
+      0.63
+     ]
+    },
+    {
+     "word": "show",
+     "ipa": "/ʃəʊ/",
+     "meaning": "带……参观",
+     "label": [
+      0.3041,
+      0.3104,
+      0.1719,
+      0.1196
+     ],
+     "anchor": [
+      0.39,
+      0.475
+     ]
+    },
+    {
+     "word": "around",
+     "ipa": "/əaʊnd/",
+     "meaning": "四处",
+     "label": [
+      0.5984,
+      0.3375,
+      0.1982,
+      0.1196
+     ],
+     "anchor": [
+      0.6975,
+      0.2925
+     ]
+    },
+    {
+     "word": "classroom",
+     "ipa": "/ˈklɑːsruːm/",
+     "meaning": "教室",
+     "label": [
+      0.4824,
+      0.5498,
+      0.2696,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.5
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U2-C02",
+   "unitKey": "yilin/g5-up/u2",
+   "unitName": "Unit 2 · A new student",
+   "sceneTitle": "二楼电脑角",
+   "image": "cards/yilin--g5-up--u2/YL-G5UP-U2-C02.jpg",
+   "words": [
+    {
+     "word": "computer",
+     "ipa": "/kəmˈpjuːtə/",
+     "meaning": "电脑",
+     "label": [
+      0.4646,
+      0.3104,
+      0.2499,
+      0.1196
+     ],
+     "anchor": [
+      0.5895,
+      0.475
+     ]
+    },
+    {
+     "word": "second",
+     "ipa": "/ˈsekənd/",
+     "meaning": "第二",
+     "label": [
+      0.3584,
+      0.65,
+      0.2031,
+      0.1196
+     ],
+     "anchor": [
+      0.46,
+      0.605
+     ]
+    },
+    {
+     "word": "floor",
+     "ipa": "/flɔː/",
+     "meaning": "楼层",
+     "label": [
+      0.675,
+      0.6952,
+      0.1465,
+      0.1196
+     ],
+     "anchor": [
+      0.615,
+      0.755
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U2-C03",
+   "unitKey": "yilin/g5-up/u2",
+   "unitName": "Unit 2 · A new student",
+   "sceneTitle": "秋千与重沙袋",
+   "image": "cards/yilin--g5-up--u2/YL-G5UP-U2-C03.jpg",
+   "words": [
+    {
+     "word": "swing",
+     "ipa": "/swɪŋ/",
+     "meaning": "秋千",
+     "label": [
+      0.4132,
+      0.505,
+      0.1736,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.46
+     ]
+    },
+    {
+     "word": "push",
+     "ipa": "/pʊʃ/",
+     "meaning": "推",
+     "label": [
+      0.558,
+      0.685,
+      0.1539,
+      0.1196
+     ],
+     "anchor": [
+      0.635,
+      0.64
+     ]
+    },
+    {
+     "word": "heavy",
+     "ipa": "/ˈhevi/",
+     "meaning": "重的",
+     "label": [
+      0.3032,
+      0.65,
+      0.1737,
+      0.1196
+     ],
+     "anchor": [
+      0.39,
+      0.605
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U3-C01",
+   "unitKey": "yilin/g5-up/u3",
+   "unitName": "Unit 3 · Our animal friends",
+   "sceneTitle": "动物观察角",
+   "image": "cards/yilin--g5-up--u3/YL-G5UP-U3-C01.jpg",
+   "words": [
+    {
+     "word": "animal",
+     "ipa": "/ˈænəməl/",
+     "meaning": "动物",
+     "label": [
+      0.3958,
+      0.3454,
+      0.1884,
+      0.1196
+     ],
+     "anchor": [
+      0.49,
+      0.51
+     ]
+    },
+    {
+     "word": "rabbit",
+     "ipa": "/ˈræbɪt/",
+     "meaning": "兔子",
+     "label": [
+      0.3174,
+      0.6385,
+      0.1711,
+      0.1196
+     ],
+     "anchor": [
+      0.403,
+      0.5935
+     ]
+    },
+    {
+     "word": "wing",
+     "ipa": "/wɪŋ/",
+     "meaning": "翅膀",
+     "label": [
+      0.212,
+      0.3002,
+      0.149,
+      0.1196
+     ],
+     "anchor": [
+      0.152,
+      0.36
+     ]
+    },
+    {
+     "word": "tail",
+     "ipa": "/teɪl/",
+     "meaning": "尾巴",
+     "label": [
+      0.6275,
+      0.5352,
+      0.1121,
+      0.1196
+     ],
+     "anchor": [
+      0.5675,
+      0.595
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U3-C02",
+   "unitKey": "yilin/g5-up/u3",
+   "unitName": "Unit 3 · Our animal friends",
+   "sceneTitle": "草地伸展操",
+   "image": "cards/yilin--g5-up--u3/YL-G5UP-U3-C02.jpg",
+   "words": [
+    {
+     "word": "body",
+     "ipa": "/ˈbɒdi/",
+     "meaning": "身体",
+     "label": [
+      0.428,
+      0.3804,
+      0.1539,
+      0.1196
+     ],
+     "anchor": [
+      0.505,
+      0.545
+     ]
+    },
+    {
+     "word": "leg",
+     "ipa": "/leɡ/",
+     "meaning": "腿",
+     "label": [
+      0.81,
+      0.4152,
+      0.1121,
+      0.1196
+     ],
+     "anchor": [
+      0.75,
+      0.475
+     ]
+    },
+    {
+     "word": "arm",
+     "ipa": "/ɑːm/",
+     "meaning": "手臂",
+     "label": [
+      0.0506,
+      0.3452,
+      0.1294,
+      0.1196
+     ],
+     "anchor": [
+      0.24,
+      0.405
+     ]
+    },
+    {
+     "word": "foot",
+     "ipa": "/fʊt/",
+     "meaning": "脚",
+     "label": [
+      0.2833,
+      0.7752,
+      0.1317,
+      0.1196
+     ],
+     "anchor": [
+      0.475,
+      0.835
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U3-C03",
+   "unitKey": "yilin/g5-up/u3",
+   "unitName": "Unit 3 · Our animal friends",
+   "sceneTitle": "分享玩具",
+   "image": "cards/yilin--g5-up--u3/YL-G5UP-U3-C03.jpg",
+   "words": [
+    {
+     "word": "give",
+     "ipa": "/ɡɪv/",
+     "meaning": "给",
+     "label": [
+      0.5165,
+      0.5217,
+      0.1367,
+      0.1196
+     ],
+     "anchor": [
+      0.4565,
+      0.5815
+     ]
+    },
+    {
+     "word": "friend",
+     "ipa": "/frend/",
+     "meaning": "朋友",
+     "label": [
+      0.4449,
+      0.3929,
+      0.1711,
+      0.1196
+     ],
+     "anchor": [
+      0.5305,
+      0.5575
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U4-C01",
+   "unitKey": "yilin/g5-up/u4",
+   "unitName": "Unit 4 · Hobbies",
+   "sceneTitle": "爱好时间",
+   "image": "cards/yilin--g5-up--u4/YL-G5UP-U4-C01.jpg",
+   "words": [
+    {
+     "word": "hobby",
+     "ipa": "/ˈhɒbi/",
+     "meaning": "爱好",
+     "label": [
+      0.4095,
+      0.185,
+      0.1809,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    },
+    {
+     "word": "read",
+     "ipa": "/red/",
+     "meaning": "读",
+     "label": [
+      0.435,
+      0.6402,
+      0.1417,
+      0.1196
+     ],
+     "anchor": [
+      0.375,
+      0.7
+     ]
+    },
+    {
+     "word": "story",
+     "ipa": "/ˈstɔːri/",
+     "meaning": "故事",
+     "label": [
+      0.1568,
+      0.5404,
+      0.1564,
+      0.1196
+     ],
+     "anchor": [
+      0.235,
+      0.705
+     ]
+    },
+    {
+     "word": "paint",
+     "ipa": "/peɪnt/",
+     "meaning": "画画",
+     "label": [
+      0.5711,
+      0.5202,
+      0.1539,
+      0.1196
+     ],
+     "anchor": [
+      0.785,
+      0.58
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U4-C02",
+   "unitKey": "yilin/g5-up/u4",
+   "unitName": "Unit 4 · Hobbies",
+   "sceneTitle": "篮球场边",
+   "image": "cards/yilin--g5-up--u4/YL-G5UP-U4-C02.jpg",
+   "words": [
+    {
+     "word": "play",
+     "ipa": "/pleɪ/",
+     "meaning": "玩；打（球）",
+     "label": [
+      0.2192,
+      0.4479,
+      0.1966,
+      0.1196
+     ],
+     "anchor": [
+      0.3175,
+      0.6125
+     ]
+    },
+    {
+     "word": "well",
+     "ipa": "/wel/",
+     "meaning": "好",
+     "label": [
+      0.37,
+      0.5802,
+      0.1318,
+      0.1196
+     ],
+     "anchor": [
+      0.31,
+      0.64
+     ]
+    },
+    {
+     "word": "watch",
+     "ipa": "/wɒtʃ/",
+     "meaning": "观看",
+     "label": [
+      0.6397,
+      0.5934,
+      0.1736,
+      0.1196
+     ],
+     "anchor": [
+      0.7265,
+      0.758
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U4-C03",
+   "unitKey": "yilin/g5-up/u4",
+   "unitName": "Unit 4 · Hobbies",
+   "sceneTitle": "教室里的主意",
+   "image": "cards/yilin--g5-up--u4/YL-G5UP-U4-C03.jpg",
+   "words": [
+    {
+     "word": "idea",
+     "ipa": "/aɪˈdiːə/",
+     "meaning": "主意",
+     "label": [
+      0.24,
+      0.0802,
+      0.1367,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "also",
+     "ipa": "/ˈɒlsəʊ/",
+     "meaning": "也",
+     "label": [
+      0.6233,
+      0.0802,
+      0.1367,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U5-C01",
+   "unitKey": "yilin/g5-up/u5",
+   "unitName": "Unit 5 · What do they do?",
+   "sceneTitle": "医院帮助角",
+   "image": "cards/yilin--g5-up--u5/YL-G5UP-U5-C01.jpg",
+   "words": [
+    {
+     "word": "doctor",
+     "ipa": "/ˈdɒktə/",
+     "meaning": "医生",
+     "label": [
+      0.1951,
+      0.2784,
+      0.1859,
+      0.1196
+     ],
+     "anchor": [
+      0.288,
+      0.443
+     ]
+    },
+    {
+     "word": "nurse",
+     "ipa": "/nɜːs/",
+     "meaning": "护士",
+     "label": [
+      0.5018,
+      0.5002,
+      0.1687,
+      0.1196
+     ],
+     "anchor": [
+      0.7305,
+      0.56
+     ]
+    },
+    {
+     "word": "help",
+     "ipa": "/help/",
+     "meaning": "帮助",
+     "label": [
+      0.4999,
+      0.636,
+      0.1392,
+      0.1196
+     ],
+     "anchor": [
+      0.5695,
+      0.591
+     ]
+    },
+    {
+     "word": "sick",
+     "ipa": "/sɪk/",
+     "meaning": "生病的",
+     "label": [
+      0.3057,
+      0.0802,
+      0.1343,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U5-C02",
+   "unitKey": "yilin/g5-up/u5",
+   "unitName": "Unit 5 · What do they do?",
+   "sceneTitle": "教室故事时间",
+   "image": "cards/yilin--g5-up--u5/YL-G5UP-U5-C02.jpg",
+   "words": [
+    {
+     "word": "teacher",
+     "ipa": "/ˈtiːtʃə/",
+     "meaning": "老师",
+     "label": [
+      0.2422,
+      0.3919,
+      0.2057,
+      0.1196
+     ],
+     "anchor": [
+      0.345,
+      0.5565
+     ]
+    },
+    {
+     "word": "teach",
+     "ipa": "/tɪtʃ/",
+     "meaning": "教",
+     "label": [
+      0.2318,
+      0.249,
+      0.1638,
+      0.1196
+     ],
+     "anchor": [
+      0.335,
+      0.4675
+     ]
+    },
+    {
+     "word": "writer",
+     "ipa": "/ˈraɪtə/",
+     "meaning": "作家",
+     "label": [
+      0.4973,
+      0.5347,
+      0.1687,
+      0.1196
+     ],
+     "anchor": [
+      0.726,
+      0.5945
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U5-C03",
+   "unitKey": "yilin/g5-up/u5",
+   "unitName": "Unit 5 · What do they do?",
+   "sceneTitle": "忙碌农场",
+   "image": "cards/yilin--g5-up--u5/YL-G5UP-U5-C03.jpg",
+   "words": [
+    {
+     "word": "farmer",
+     "ipa": "/ˈfɑːmə/",
+     "meaning": "农民",
+     "label": [
+      0.117,
+      0.3054,
+      0.186,
+      0.1196
+     ],
+     "anchor": [
+      0.21,
+      0.47
+     ]
+    },
+    {
+     "word": "driver",
+     "ipa": "/ˈdraɪvə/",
+     "meaning": "司机",
+     "label": [
+      0.4088,
+      0.3202,
+      0.1712,
+      0.1196
+     ],
+     "anchor": [
+      0.64,
+      0.38
+     ]
+    },
+    {
+     "word": "worker",
+     "ipa": "/ˈwɜːkə/",
+     "meaning": "工人",
+     "label": [
+      0.5983,
+      0.5754,
+      0.1933,
+      0.1196
+     ],
+     "anchor": [
+      0.695,
+      0.74
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U6-C01",
+   "unitKey": "yilin/g5-up/u6",
+   "unitName": "Unit 6 · My e-friend",
+   "sceneTitle": "电脑前回网友",
+   "image": "cards/yilin--g5-up--u6/YL-G5UP-U6-C01.jpg",
+   "words": [
+    {
+     "word": "e-friend",
+     "ipa": "/ˈiːfrend/",
+     "meaning": "网友",
+     "label": [
+      0.5877,
+      0.2395,
+      0.2105,
+      0.1196
+     ],
+     "anchor": [
+      0.693,
+      0.1945
+     ]
+    },
+    {
+     "word": "email",
+     "ipa": "/ɪˈmeɪl/",
+     "meaning": "电子邮件",
+     "label": [
+      0.6328,
+      0.3618,
+      0.1614,
+      0.1196
+     ],
+     "anchor": [
+      0.698,
+      0.2645
+     ]
+    },
+    {
+     "word": "send",
+     "ipa": "/send/",
+     "meaning": "发送",
+     "label": [
+      0.6688,
+      0.5745,
+      0.1515,
+      0.1196
+     ],
+     "anchor": [
+      0.7445,
+      0.5295
+     ]
+    },
+    {
+     "word": "wait",
+     "ipa": "/weɪt/",
+     "meaning": "等待",
+     "label": [
+      0.3075,
+      0.1932,
+      0.1343,
+      0.1196
+     ],
+     "anchor": [
+      0.2475,
+      0.253
+     ]
+    },
+    {
+     "word": "answer",
+     "ipa": "/ˈɑːnsə/",
+     "meaning": "回答",
+     "label": [
+      0.2121,
+      0.6079,
+      0.2007,
+      0.1196
+     ],
+     "anchor": [
+      0.3125,
+      0.7725
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U6-C02",
+   "unitKey": "yilin/g5-up/u6",
+   "unitName": "Unit 6 · My e-friend",
+   "sceneTitle": "异国民宿停留",
+   "image": "cards/yilin--g5-up--u6/YL-G5UP-U6-C02.jpg",
+   "words": [
+    {
+     "word": "country",
+     "ipa": "/ˈkʌntri/",
+     "meaning": "国家",
+     "label": [
+      0.1247,
+      0.2204,
+      0.2105,
+      0.1196
+     ],
+     "anchor": [
+      0.23,
+      0.385
+     ]
+    },
+    {
+     "word": "stay",
+     "ipa": "/steɪ/",
+     "meaning": "停留",
+     "label": [
+      0.54,
+      0.5902,
+      0.1368,
+      0.1196
+     ],
+     "anchor": [
+      0.48,
+      0.65
+     ]
+    },
+    {
+     "word": "after",
+     "ipa": "/ˈɑːftə/",
+     "meaning": "在……之后",
+     "label": [
+      0.24,
+      0.0802,
+      0.1719,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "tomorrow",
+     "ipa": "/təˈmɒrəʊ/",
+     "meaning": "明天",
+     "label": [
+      0.6939,
+      0.185,
+      0.2523,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U7-C01",
+   "unitKey": "yilin/g5-up/u7",
+   "unitName": "Unit 7 · At weekends",
+   "sceneTitle": "周末拜访祖父母",
+   "image": "cards/yilin--g5-up--u7/YL-G5UP-U7-C01.jpg",
+   "words": [
+    {
+     "word": "weekend",
+     "ipa": "/ˈwiːkɪnd/",
+     "meaning": "周末",
+     "label": [
+      0.3824,
+      0.185,
+      0.2352,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    },
+    {
+     "word": "visit",
+     "ipa": "/ˈvɪzɪt/",
+     "meaning": "拜访",
+     "label": [
+      0.3275,
+      0.5077,
+      0.1367,
+      0.1196
+     ],
+     "anchor": [
+      0.2675,
+      0.5675
+     ]
+    },
+    {
+     "word": "grandparent",
+     "ipa": "/ˈɡrændperənt/",
+     "meaning": "祖父母",
+     "label": [
+      0.5668,
+      0.3154,
+      0.3064,
+      0.1196
+     ],
+     "anchor": [
+      0.72,
+      0.48
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U7-C02",
+   "unitKey": "yilin/g5-up/u7",
+   "unitName": "Unit 7 · At weekends",
+   "sceneTitle": "边玩边视频聊天",
+   "image": "cards/yilin--g5-up--u7/YL-G5UP-U7-C02.jpg",
+   "words": [
+    {
+     "word": "play",
+     "ipa": "/pleɪ/",
+     "meaning": "玩",
+     "label": [
+      0.445,
+      0.5102,
+      0.1367,
+      0.1196
+     ],
+     "anchor": [
+      0.385,
+      0.57
+     ]
+    },
+    {
+     "word": "chat",
+     "ipa": "/tʃæt/",
+     "meaning": "聊天",
+     "label": [
+      0.61,
+      0.5052,
+      0.1392,
+      0.1196
+     ],
+     "anchor": [
+      0.55,
+      0.565
+     ]
+    },
+    {
+     "word": "internet",
+     "ipa": "/ˈɪntənet/",
+     "meaning": "互联网",
+     "label": [
+      0.0382,
+      0.5369,
+      0.2105,
+      0.1196
+     ],
+     "anchor": [
+      0.1435,
+      0.7015
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U7-C03",
+   "unitKey": "yilin/g5-up/u7",
+   "unitName": "Unit 7 · At weekends",
+   "sceneTitle": "聊日常习惯",
+   "image": "cards/yilin--g5-up--u7/YL-G5UP-U7-C03.jpg",
+   "words": [
+    {
+     "word": "always",
+     "ipa": "/ˈɔːlweɪz/",
+     "meaning": "总是",
+     "label": [
+      0.0833,
+      0.185,
+      0.1934,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "usually",
+     "ipa": "/ˈjuːʒəwəli/",
+     "meaning": "通常",
+     "label": [
+      0.293,
+      0.185,
+      0.2007,
+      0.1196
+     ],
+     "anchor": [
+      0.3933,
+      0.14
+     ]
+    },
+    {
+     "word": "often",
+     "ipa": "/ˈɒfən/",
+     "meaning": "经常",
+     "label": [
+      0.5285,
+      0.185,
+      0.1564,
+      0.1196
+     ],
+     "anchor": [
+      0.6067,
+      0.14
+     ]
+    },
+    {
+     "word": "sometimes",
+     "ipa": "/ˈsʌmtaɪmz/",
+     "meaning": "有时",
+     "label": [
+      0.6829,
+      0.3242,
+      0.2795,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U8-C01",
+   "unitKey": "yilin/g5-up/u8",
+   "unitName": "Unit 8 · At Christmas",
+   "sceneTitle": "圣诞客厅",
+   "image": "cards/yilin--g5-up--u8/YL-G5UP-U8-C01.jpg",
+   "words": [
+    {
+     "word": "christmas",
+     "ipa": "/ˈkrɪsməs/",
+     "meaning": "圣诞节",
+     "label": [
+      0.0513,
+      0.2054,
+      0.2573,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.37
+     ]
+    },
+    {
+     "word": "christmas tree",
+     "ipa": "/ˈkrɪsməs tri/",
+     "meaning": "圣诞树",
+     "label": [
+      0.3946,
+      0.2654,
+      0.3508,
+      0.1196
+     ],
+     "anchor": [
+      0.57,
+      0.43
+     ]
+    },
+    {
+     "word": "present",
+     "ipa": "/ˈprezənt/",
+     "meaning": "礼物",
+     "label": [
+      0.331,
+      0.5654,
+      0.2081,
+      0.1196
+     ],
+     "anchor": [
+      0.435,
+      0.73
+     ]
+    },
+    {
+     "word": "father christmas",
+     "ipa": "/ˈfɑːðə ˈkrɪsməs/",
+     "meaning": "圣诞老人",
+     "label": [
+      0.5827,
+      0.6626,
+      0.3825,
+      0.1182
+     ],
+     "anchor": [
+      0.7,
+      0.61
+     ]
+    },
+    {
+     "word": "thing",
+     "ipa": "/θɪŋ/",
+     "meaning": "东西",
+     "label": [
+      0.7068,
+      0.85,
+      0.1563,
+      0.1196
+     ],
+     "anchor": [
+      0.785,
+      0.805
+     ]
+    },
+    {
+     "word": "pretty",
+     "ipa": "/ˈprɪti/",
+     "meaning": "漂亮的",
+     "label": [
+      0.2688,
+      0.0802,
+      0.1712,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G5UP-U8-C02",
+   "unitKey": "yilin/g5-up/u8",
+   "unitName": "Unit 8 · At Christmas",
+   "sceneTitle": "厨房晚餐",
+   "image": "cards/yilin--g5-up--u8/YL-G5UP-U8-C02.jpg",
+   "words": [
+    {
+     "word": "turkey",
+     "ipa": "/ˈtɜːki/",
+     "meaning": "火鸡",
+     "label": [
+      0.4525,
+      0.4119,
+      0.181,
+      0.1196
+     ],
+     "anchor": [
+      0.543,
+      0.5765
+     ]
+    },
+    {
+     "word": "put",
+     "ipa": "/pʊt/",
+     "meaning": "放",
+     "label": [
+      0.332,
+      0.5122,
+      0.117,
+      0.1196
+     ],
+     "anchor": [
+      0.5375,
+      0.565
+     ]
+    },
+    {
+     "word": "wait for",
+     "ipa": "/weɪt fɜː/",
+     "meaning": "等待",
+     "label": [
+      0.3922,
+      0.685,
+      0.2056,
+      0.1196
+     ],
+     "anchor": [
+      0.495,
+      0.64
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6DOWN-U1-C01",
+   "unitKey": "yilin/g6-down/u1",
+   "unitName": "Unit 1 · The lion and the mouse",
+   "sceneTitle": "草原上的雄狮",
+   "image": "cards/yilin--g6-down--u1/YL-G6DOWN-U1-C01.jpg",
+   "words": [
+    {
+     "word": "lion",
+     "ipa": "/laɪən/",
+     "meaning": "狮子",
+     "label": [
+      0.495,
+      0.4152,
+      0.1269,
+      0.1196
+     ],
+     "anchor": [
+      0.435,
+      0.475
+     ]
+    },
+    {
+     "word": "large",
+     "ipa": "/lɑːdʒ/",
+     "meaning": "大的",
+     "label": [
+      0.458,
+      0.585,
+      0.154,
+      0.1196
+     ],
+     "anchor": [
+      0.535,
+      0.54
+     ]
+    },
+    {
+     "word": "strong",
+     "ipa": "/strɒŋ/",
+     "meaning": "强壮的",
+     "label": [
+      0.4921,
+      0.2504,
+      0.1859,
+      0.1196
+     ],
+     "anchor": [
+      0.585,
+      0.415
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6DOWN-U1-C02",
+   "unitKey": "yilin/g6-down/u1",
+   "unitName": "Unit 1 · The lion and the mouse",
+   "sceneTitle": "虚弱的小老鼠",
+   "image": "cards/yilin--g6-down--u1/YL-G6DOWN-U1-C02.jpg",
+   "words": [
+    {
+     "word": "mouse",
+     "ipa": "/maʊs/",
+     "meaning": "老鼠",
+     "label": [
+      0.6196,
+      0.3404,
+      0.1909,
+      0.1196
+     ],
+     "anchor": [
+      0.715,
+      0.505
+     ]
+    },
+    {
+     "word": "weak",
+     "ipa": "/wɪk/",
+     "meaning": "弱的",
+     "label": [
+      0.31,
+      0.4652,
+      0.1565,
+      0.1196
+     ],
+     "anchor": [
+      0.25,
+      0.525
+     ]
+    },
+    {
+     "word": "soon",
+     "ipa": "/suːn/",
+     "meaning": "很快",
+     "label": [
+      0.408,
+      0.3454,
+      0.1539,
+      0.1196
+     ],
+     "anchor": [
+      0.485,
+      0.51
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6DOWN-U1-C03",
+   "unitKey": "yilin/g6-down/u1",
+   "unitName": "Unit 1 · The lion and the mouse",
+   "sceneTitle": "老鼠咬网救狮子",
+   "image": "cards/yilin--g6-down--u1/YL-G6DOWN-U1-C03.jpg",
+   "words": [
+    {
+     "word": "net",
+     "ipa": "/net/",
+     "meaning": "网",
+     "label": [
+      0.4245,
+      0.5042,
+      0.1146,
+      0.1196
+     ],
+     "anchor": [
+      0.3645,
+      0.564
+     ]
+    },
+    {
+     "word": "bite",
+     "ipa": "/baɪt/",
+     "meaning": "咬",
+     "label": [
+      0.735,
+      0.5312,
+      0.1269,
+      0.1196
+     ],
+     "anchor": [
+      0.675,
+      0.591
+     ]
+    },
+    {
+     "word": "sharp",
+     "ipa": "/ʃɑːp/",
+     "meaning": "锋利的",
+     "label": [
+      0.5827,
+      0.3994,
+      0.1687,
+      0.1196
+     ],
+     "anchor": [
+      0.673,
+      0.5775
+     ]
+    },
+    {
+     "word": "teeth",
+     "ipa": "/tɪθ/",
+     "meaning": "牙齿",
+     "label": [
+      0.5827,
+      0.6626,
+      0.1539,
+      0.1196
+     ],
+     "anchor": [
+      0.673,
+      0.578
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6DOWN-U2-C01",
+   "unitKey": "yilin/g6-down/u2",
+   "unitName": "Unit 2 · Good habits",
+   "sceneTitle": "整理房间大对比",
+   "image": "cards/yilin--g6-down--u2/YL-G6DOWN-U2-C01.jpg",
+   "words": [
+    {
+     "word": "habit",
+     "ipa": "/ˈhæbət/",
+     "meaning": "习惯",
+     "label": [
+      0.423,
+      0.185,
+      0.1539,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    },
+    {
+     "word": "good habits",
+     "ipa": "/ɡʊd ˈhæbəts/",
+     "meaning": "好习惯",
+     "label": [
+      0.6005,
+      0.3604,
+      0.299,
+      0.1196
+     ],
+     "anchor": [
+      0.75,
+      0.525
+     ]
+    },
+    {
+     "word": "bad habits",
+     "ipa": "/bæd ˈhæbəts/",
+     "meaning": "坏习惯",
+     "label": [
+      0.1152,
+      0.3604,
+      0.2695,
+      0.1196
+     ],
+     "anchor": [
+      0.25,
+      0.525
+     ]
+    },
+    {
+     "word": "put in order",
+     "ipa": "/pʊt ɪn ˈɔːdə/",
+     "meaning": "整理",
+     "label": [
+      0.518,
+      0.5704,
+      0.2941,
+      0.1196
+     ],
+     "anchor": [
+      0.665,
+      0.735
+     ]
+    },
+    {
+     "word": "messy",
+     "ipa": "/ˈmesi/",
+     "meaning": "杂乱的",
+     "label": [
+      0.1545,
+      0.6054,
+      0.186,
+      0.1196
+     ],
+     "anchor": [
+      0.2475,
+      0.77
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6DOWN-U2-C02",
+   "unitKey": "yilin/g6-down/u2",
+   "unitName": "Unit 2 · Good habits",
+   "sceneTitle": "早晨匆忙时间线",
+   "image": "cards/yilin--g6-down--u2/YL-G6DOWN-U2-C02.jpg",
+   "words": [
+    {
+     "word": "sleepy",
+     "ipa": "/sˈliːpi/",
+     "meaning": "困倦的",
+     "label": [
+      0.107,
+      0.3904,
+      0.186,
+      0.1196
+     ],
+     "anchor": [
+      0.2,
+      0.555
+     ]
+    },
+    {
+     "word": "late",
+     "ipa": "/leɪt/",
+     "meaning": "迟的",
+     "label": [
+      0.535,
+      0.4252,
+      0.1245,
+      0.1196
+     ],
+     "anchor": [
+      0.475,
+      0.485
+     ]
+    },
+    {
+     "word": "fast",
+     "ipa": "/fɑːst/",
+     "meaning": "快地",
+     "label": [
+      0.8,
+      0.5202,
+      0.1269,
+      0.1196
+     ],
+     "anchor": [
+      0.74,
+      0.58
+     ]
+    },
+    {
+     "word": "last",
+     "ipa": "/lɑːst/",
+     "meaning": "持续",
+     "label": [
+      0.24,
+      0.0802,
+      0.1245,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "never",
+     "ipa": "/ˈnevə/",
+     "meaning": "从不",
+     "label": [
+      0.7368,
+      0.185,
+      0.1663,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6DOWN-U3-C01",
+   "unitKey": "yilin/g6-down/u3",
+   "unitName": "Unit 3 · A healthy diet",
+   "sceneTitle": "早餐桌",
+   "image": "cards/yilin--g6-down--u3/YL-G6DOWN-U3-C01.jpg",
+   "words": [
+    {
+     "word": "breakfast",
+     "ipa": "/ˈbrekfəst/",
+     "meaning": "早饭",
+     "label": [
+      0.4575,
+      0.5654,
+      0.245,
+      0.1196
+     ],
+     "anchor": [
+      0.58,
+      0.73
+     ]
+    },
+    {
+     "word": "rice",
+     "ipa": "/raɪs/",
+     "meaning": "米饭",
+     "label": [
+      0.24,
+      0.6452,
+      0.1269,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.705
+     ]
+    },
+    {
+     "word": "meat",
+     "ipa": "/mɪt/",
+     "meaning": "肉",
+     "label": [
+      0.3342,
+      0.795,
+      0.1515,
+      0.1196
+     ],
+     "anchor": [
+      0.41,
+      0.75
+     ]
+    },
+    {
+     "word": "healthy",
+     "ipa": "/ˈhelθi/",
+     "meaning": "健康的",
+     "label": [
+      0.0784,
+      0.185,
+      0.2031,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "diet",
+     "ipa": "/daɪət/",
+     "meaning": "饮食",
+     "label": [
+      0.6331,
+      0.0802,
+      0.1269,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6DOWN-U3-C02",
+   "unitKey": "yilin/g6-down/u3",
+   "unitName": "Unit 3 · A healthy diet",
+   "sceneTitle": "野餐零食角",
+   "image": "cards/yilin--g6-down--u3/YL-G6DOWN-U3-C02.jpg",
+   "words": [
+    {
+     "word": "cola",
+     "ipa": "/ˈkəʊlə/",
+     "meaning": "可乐",
+     "label": [
+      0.5983,
+      0.5952,
+      0.1367,
+      0.1196
+     ],
+     "anchor": [
+      0.795,
+      0.655
+     ]
+    },
+    {
+     "word": "sweet",
+     "ipa": "/swɪt/",
+     "meaning": "甜的",
+     "label": [
+      0.3069,
+      0.43,
+      0.1712,
+      0.1196
+     ],
+     "anchor": [
+      0.3925,
+      0.385
+     ]
+    },
+    {
+     "word": "a little",
+     "ipa": "/ə ˈlɪtəl/",
+     "meaning": "一点",
+     "label": [
+      0.092,
+      0.185,
+      0.1761,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "a few",
+     "ipa": "/ə fjuː/",
+     "meaning": "一些",
+     "label": [
+      0.4206,
+      0.185,
+      0.1589,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    },
+    {
+     "word": "at a time",
+     "ipa": "/æt ə taɪm/",
+     "meaning": "一次",
+     "label": [
+      0.7061,
+      0.185,
+      0.2278,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6DOWN-U4-C01",
+   "unitKey": "yilin/g6-down/u4",
+   "unitName": "Unit 4 · Road safety",
+   "sceneTitle": "斑马线前",
+   "image": "cards/yilin--g6-down--u4/YL-G6DOWN-U4-C01.jpg",
+   "words": [
+    {
+     "word": "road",
+     "ipa": "/rəʊd/",
+     "meaning": "马路",
+     "label": [
+      0.2959,
+      0.7302,
+      0.1441,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.79
+     ]
+    },
+    {
+     "word": "zebra crossing",
+     "ipa": "/ˈziːbrə ˈkrɒsɪŋ/",
+     "meaning": "斑马线",
+     "label": [
+      0.3122,
+      0.5779,
+      0.3606,
+      0.1196
+     ],
+     "anchor": [
+      0.4925,
+      0.7425
+     ]
+    },
+    {
+     "word": "look out for",
+     "ipa": "/lʊk aʊt fɜː/",
+     "meaning": "当心",
+     "label": [
+      0.1842,
+      0.4254,
+      0.2916,
+      0.1196
+     ],
+     "anchor": [
+      0.33,
+      0.59
+     ]
+    },
+    {
+     "word": "must",
+     "ipa": "/mʌst/",
+     "meaning": "必须",
+     "label": [
+      0.423,
+      0.185,
+      0.1539,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6DOWN-U4-C02",
+   "unitKey": "yilin/g6-down/u4",
+   "unitName": "Unit 4 · Road safety",
+   "sceneTitle": "跟着妈妈等待",
+   "image": "cards/yilin--g6-down--u4/YL-G6DOWN-U4-C02.jpg",
+   "words": [
+    {
+     "word": "follow",
+     "ipa": "/ˈfɒləʊ/",
+     "meaning": "遵守",
+     "label": [
+      0.3435,
+      0.3954,
+      0.176,
+      0.1196
+     ],
+     "anchor": [
+      0.4315,
+      0.56
+     ]
+    },
+    {
+     "word": "stay",
+     "ipa": "/steɪ/",
+     "meaning": "停留",
+     "label": [
+      0.56,
+      0.4902,
+      0.1368,
+      0.1196
+     ],
+     "anchor": null
+    },
+    {
+     "word": "rule",
+     "ipa": "/ruːl/",
+     "meaning": "规则",
+     "label": [
+      0.24,
+      0.0802,
+      0.1294,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "safe",
+     "ipa": "/seɪf/",
+     "meaning": "安全的",
+     "label": [
+      0.56,
+      0.0802,
+      0.1368,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    },
+    {
+     "word": "safety",
+     "ipa": "/ˈseɪfti/",
+     "meaning": "安全",
+     "label": [
+      0.7319,
+      0.185,
+      0.1761,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6DOWN-U5-C01",
+   "unitKey": "yilin/g6-down/u5",
+   "unitName": "Unit 5 · A party",
+   "sceneTitle": "生日派对现场",
+   "image": "cards/yilin--g6-down--u5/YL-G6DOWN-U5-C01.jpg",
+   "words": [
+    {
+     "word": "party",
+     "ipa": "/ˈpɑːti/",
+     "meaning": "聚会",
+     "label": [
+      0.4218,
+      0.185,
+      0.1564,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    },
+    {
+     "word": "have a party",
+     "ipa": "/hæv ə ˈpɑːti/",
+     "meaning": "举行聚会",
+     "label": [
+      0.3817,
+      0.4204,
+      0.3065,
+      0.1196
+     ],
+     "anchor": [
+      0.535,
+      0.585
+     ]
+    },
+    {
+     "word": "balloon",
+     "ipa": "/bəˈluːn/",
+     "meaning": "气球",
+     "label": [
+      0.0522,
+      0.1604,
+      0.2055,
+      0.1196
+     ],
+     "anchor": [
+      0.155,
+      0.325
+     ]
+    },
+    {
+     "word": "gift",
+     "ipa": "/ɡɪft/",
+     "meaning": "礼物",
+     "label": [
+      0.245,
+      0.6602,
+      0.117,
+      0.1196
+     ],
+     "anchor": [
+      0.185,
+      0.72
+     ]
+    },
+    {
+     "word": "clown",
+     "ipa": "/klaʊn/",
+     "meaning": "小丑",
+     "label": [
+      0.72,
+      0.3852,
+      0.1736,
+      0.1196
+     ],
+     "anchor": [
+      0.66,
+      0.445
+     ]
+    },
+    {
+     "word": "game",
+     "ipa": "/ɡeɪm/",
+     "meaning": "游戏",
+     "label": [
+      0.6831,
+      0.6654,
+      0.1638,
+      0.1196
+     ],
+     "anchor": [
+      0.765,
+      0.83
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6DOWN-U5-C02",
+   "unitKey": "yilin/g6-down/u5",
+   "unitName": "Unit 5 · A party",
+   "sceneTitle": "准备派对食物",
+   "image": "cards/yilin--g6-down--u5/YL-G6DOWN-U5-C02.jpg",
+   "words": [
+    {
+     "word": "bring",
+     "ipa": "/brɪŋ/",
+     "meaning": "带来",
+     "label": [
+      0.395,
+      0.4852,
+      0.1588,
+      0.1196
+     ],
+     "anchor": [
+      0.335,
+      0.545
+     ]
+    },
+    {
+     "word": "snack",
+     "ipa": "/snæk/",
+     "meaning": "点心",
+     "label": [
+      0.6482,
+      0.4254,
+      0.1737,
+      0.1196
+     ],
+     "anchor": [
+      0.735,
+      0.59
+     ]
+    },
+    {
+     "word": "drink",
+     "ipa": "/drɪŋk/",
+     "meaning": "饮料",
+     "label": [
+      0.6829,
+      0.2866,
+      0.1564,
+      0.1196
+     ],
+     "anchor": [
+      0.78,
+      0.53
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6DOWN-U6-C01",
+   "unitKey": "yilin/g6-down/u6",
+   "unitName": "Unit 6 · An interesting country",
+   "sceneTitle": "澳大利亚动物角",
+   "image": "cards/yilin--g6-down--u6/YL-G6DOWN-U6-C01.jpg",
+   "words": [
+    {
+     "word": "australia",
+     "ipa": "/ɔːˈstreɪljə/",
+     "meaning": "澳大利亚",
+     "label": [
+      0.3749,
+      0.6304,
+      0.2303,
+      0.1196
+     ],
+     "anchor": [
+      0.49,
+      0.795
+     ]
+    },
+    {
+     "word": "kangaroo",
+     "ipa": "/kæŋɡəˈuː/",
+     "meaning": "袋鼠",
+     "label": [
+      0.6013,
+      0.3754,
+      0.2474,
+      0.1196
+     ],
+     "anchor": [
+      0.725,
+      0.54
+     ]
+    },
+    {
+     "word": "koala",
+     "ipa": "/kəʊˈɒlə/",
+     "meaning": "考拉",
+     "label": [
+      0.5461,
+      0.1802,
+      0.1614,
+      0.1196
+     ],
+     "anchor": [
+      0.7675,
+      0.24
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6DOWN-U6-C02",
+   "unitKey": "yilin/g6-down/u6",
+   "unitName": "Unit 6 · An interesting country",
+   "sceneTitle": "首都地图桌",
+   "image": "cards/yilin--g6-down--u6/YL-G6DOWN-U6-C02.jpg",
+   "words": [
+    {
+     "word": "canberra",
+     "ipa": "/kænˈberə/",
+     "meaning": "堪培拉",
+     "label": [
+      0.6124,
+      0.3504,
+      0.2352,
+      0.1196
+     ],
+     "anchor": [
+      0.73,
+      0.515
+     ]
+    },
+    {
+     "word": "capital",
+     "ipa": "/ˈkæpɪtəl/",
+     "meaning": "首都",
+     "label": [
+      0.4308,
+      0.66,
+      0.1884,
+      0.1196
+     ],
+     "anchor": [
+      0.525,
+      0.615
+     ]
+    },
+    {
+     "word": "flag",
+     "ipa": "/flæɡ/",
+     "meaning": "国旗",
+     "label": [
+      0.3,
+      0.4952,
+      0.1269,
+      0.1196
+     ],
+     "anchor": [
+      0.24,
+      0.555
+     ]
+    },
+    {
+     "word": "north",
+     "ipa": "/nɔːθ/",
+     "meaning": "北方",
+     "label": [
+      0.6237,
+      0.6302,
+      0.1613,
+      0.1196
+     ],
+     "anchor": [
+      0.845,
+      0.69
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6DOWN-U6-C03",
+   "unitKey": "yilin/g6-down/u6",
+   "unitName": "Unit 6 · An interesting country",
+   "sceneTitle": "小球迷看地球仪",
+   "image": "cards/yilin--g6-down--u6/YL-G6DOWN-U6-C03.jpg",
+   "words": [
+    {
+     "word": "country",
+     "ipa": "/ˈkʌntri/",
+     "meaning": "国家",
+     "label": [
+      0.5597,
+      0.5254,
+      0.2105,
+      0.1196
+     ],
+     "anchor": [
+      0.665,
+      0.69
+     ]
+    },
+    {
+     "word": "sport-lover",
+     "ipa": "/spɔːt ˈlʌvə/",
+     "meaning": "运动爱好者",
+     "label": [
+      0.1853,
+      0.4504,
+      0.2794,
+      0.1196
+     ],
+     "anchor": [
+      0.325,
+      0.615
+     ]
+    },
+    {
+     "word": "interesting",
+     "ipa": "/ˈɪntərestɪŋ/",
+     "meaning": "有趣的",
+     "label": [
+      0.3628,
+      0.185,
+      0.2745,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6DOWN-U7-C01",
+   "unitKey": "yilin/g6-down/u7",
+   "unitName": "Unit 7 · Summer holiday plans",
+   "sceneTitle": "暑假计划",
+   "image": "cards/yilin--g6-down--u7/YL-G6DOWN-U7-C01.jpg",
+   "words": [
+    {
+     "word": "summer holiday",
+     "ipa": "/ˈsʌmə ˈhɒlɪdeɪ/",
+     "meaning": "暑假",
+     "label": [
+      0.0312,
+      0.185,
+      0.3877,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "plan",
+     "ipa": "/plæn/",
+     "meaning": "计划",
+     "label": [
+      0.3058,
+      0.5552,
+      0.1392,
+      0.1196
+     ],
+     "anchor": [
+      0.505,
+      0.615
+     ]
+    },
+    {
+     "word": "how long",
+     "ipa": "/haʊ lɒŋ/",
+     "meaning": "多久",
+     "label": [
+      0.6988,
+      0.185,
+      0.2424,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6DOWN-U7-C02",
+   "unitKey": "yilin/g6-down/u7",
+   "unitName": "Unit 7 · Summer holiday plans",
+   "sceneTitle": "迪士尼之旅",
+   "image": "cards/yilin--g6-down--u7/YL-G6DOWN-U7-C02.jpg",
+   "words": [
+    {
+     "word": "stay",
+     "ipa": "/steɪ/",
+     "meaning": "停留",
+     "label": [
+      0.2425,
+      0.4652,
+      0.1368,
+      0.1196
+     ],
+     "anchor": [
+      0.1825,
+      0.525
+     ]
+    },
+    {
+     "word": "visit",
+     "ipa": "/ˈvɪzɪt/",
+     "meaning": "参观；拜访",
+     "label": [
+      0.4141,
+      0.4204,
+      0.1719,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.585
+     ]
+    },
+    {
+     "word": "disneyland",
+     "ipa": "/ˈdɪznɪlænd/",
+     "meaning": "迪士尼乐园",
+     "label": [
+      0.3453,
+      0.285,
+      0.2794,
+      0.1196
+     ],
+     "anchor": [
+      0.485,
+      0.24
+     ]
+    },
+    {
+     "word": "go back",
+     "ipa": "/ɡəʊ bæk/",
+     "meaning": "回去",
+     "label": [
+      0.7298,
+      0.3679,
+      0.2154,
+      0.1196
+     ],
+     "anchor": [
+      0.8375,
+      0.5325
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6DOWN-U7-C03",
+   "unitKey": "yilin/g6-down/u7",
+   "unitName": "Unit 7 · Summer holiday plans",
+   "sceneTitle": "旅行目的地",
+   "image": "cards/yilin--g6-down--u7/YL-G6DOWN-U7-C03.jpg",
+   "words": [
+    {
+     "word": "travel",
+     "ipa": "/ˈtrævəl/",
+     "meaning": "旅行",
+     "label": [
+      0.255,
+      0.5202,
+      0.1663,
+      0.1196
+     ],
+     "anchor": [
+      0.195,
+      0.58
+     ]
+    },
+    {
+     "word": "taipei",
+     "ipa": "/ˈtaɪpeɪ/",
+     "meaning": "台北",
+     "label": [
+      0.3931,
+      0.3154,
+      0.1638,
+      0.1196
+     ],
+     "anchor": [
+      0.475,
+      0.48
+     ]
+    },
+    {
+     "word": "hong kong",
+     "ipa": "/hɒŋ kɒŋɡ/",
+     "meaning": "香港",
+     "label": [
+      0.6378,
+      0.3204,
+      0.2744,
+      0.1196
+     ],
+     "anchor": [
+      0.775,
+      0.485
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6DOWN-U8-C01",
+   "unitKey": "yilin/g6-down/u8",
+   "unitName": "Unit 8 · Our dreams",
+   "sceneTitle": "职业体验馆",
+   "image": "cards/yilin--g6-down--u8/YL-G6DOWN-U8-C01.jpg",
+   "words": [
+    {
+     "word": "astronaut",
+     "ipa": "/ˈæstrənɒt/",
+     "meaning": "宇航员",
+     "label": [
+      0.0701,
+      0.3854,
+      0.2499,
+      0.1196
+     ],
+     "anchor": [
+      0.195,
+      0.55
+     ]
+    },
+    {
+     "word": "dancer",
+     "ipa": "/ˈdænsə/",
+     "meaning": "舞蹈家",
+     "label": [
+      0.3783,
+      0.3754,
+      0.1933,
+      0.1196
+     ],
+     "anchor": [
+      0.475,
+      0.54
+     ]
+    },
+    {
+     "word": "pianist",
+     "ipa": "/ˈpiːənɪst/",
+     "meaning": "钢琴家",
+     "label": [
+      0.6096,
+      0.4004,
+      0.1908,
+      0.1196
+     ],
+     "anchor": [
+      0.705,
+      0.565
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6DOWN-U8-C02",
+   "unitKey": "yilin/g6-down/u8",
+   "unitName": "Unit 8 · Our dreams",
+   "sceneTitle": "学校社团日",
+   "image": "cards/yilin--g6-down--u8/YL-G6DOWN-U8-C02.jpg",
+   "words": [
+    {
+     "word": "scientist",
+     "ipa": "/ˈsaɪəntɪst/",
+     "meaning": "科学家",
+     "label": [
+      0.1361,
+      0.3054,
+      0.2278,
+      0.1196
+     ],
+     "anchor": [
+      0.25,
+      0.47
+     ]
+    },
+    {
+     "word": "football player",
+     "ipa": "/ˈfʊtbɒl pleɪə/",
+     "meaning": "足球运动员",
+     "label": [
+      0.4646,
+      0.3404,
+      0.3507,
+      0.1196
+     ],
+     "anchor": [
+      0.64,
+      0.505
+     ]
+    },
+    {
+     "word": "writer",
+     "ipa": "/ˈraɪtə/",
+     "meaning": "作家",
+     "label": [
+      0.405,
+      0.6152,
+      0.1687,
+      0.1196
+     ],
+     "anchor": [
+      0.345,
+      0.675
+     ]
+    },
+    {
+     "word": "hard",
+     "ipa": "/hɑːd/",
+     "meaning": "努力地",
+     "label": [
+      0.5827,
+      0.5498,
+      0.1441,
+      0.1196
+     ],
+     "anchor": [
+      0.645,
+      0.505
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6DOWN-U8-C03",
+   "unitKey": "yilin/g6-down/u8",
+   "unitName": "Unit 8 · Our dreams",
+   "sceneTitle": "梦想时刻",
+   "image": "cards/yilin--g6-down--u8/YL-G6DOWN-U8-C03.jpg",
+   "words": [
+    {
+     "word": "dream",
+     "ipa": "/drɪm/",
+     "meaning": "梦想",
+     "label": [
+      0.0895,
+      0.185,
+      0.1811,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "in the future",
+     "ipa": "/ɪn ðə fˈjuːtʃə/",
+     "meaning": "将来",
+     "label": [
+      0.0915,
+      0.4129,
+      0.3039,
+      0.1196
+     ],
+     "anchor": [
+      0.2435,
+      0.5775
+     ]
+    },
+    {
+     "word": "want to be",
+     "ipa": "/wɒnt tuː bi/",
+     "meaning": "想成为",
+     "label": [
+      0.6865,
+      0.185,
+      0.267,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U1-C01",
+   "unitKey": "yilin/g6-up/u1",
+   "unitName": "Unit 1 · The king's new clothes",
+   "sceneTitle": "古老宫殿试衣",
+   "image": "cards/yilin--g6-up--u1/YL-G6UP-U1-C01.jpg",
+   "words": [
+    {
+     "word": "long long ago",
+     "ipa": "/lɒŋ lɒŋ əˈɡəʊ/",
+     "meaning": "很久以前",
+     "label": [
+      0.3109,
+      0.295,
+      0.3383,
+      0.1196
+     ],
+     "anchor": [
+      0.48,
+      0.25
+     ]
+    },
+    {
+     "word": "king",
+     "ipa": "/kɪŋ/",
+     "meaning": "国王",
+     "label": [
+      0.425,
+      0.5502,
+      0.1392,
+      0.1196
+     ],
+     "anchor": [
+      0.365,
+      0.61
+     ]
+    },
+    {
+     "word": "clothes",
+     "ipa": "/kləʊðz/",
+     "meaning": "衣服",
+     "label": [
+      0.0784,
+      0.3704,
+      0.2031,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.535
+     ]
+    },
+    {
+     "word": "wear",
+     "ipa": "/weə/",
+     "meaning": "穿",
+     "label": [
+      0.3805,
+      0.4304,
+      0.1491,
+      0.1196
+     ],
+     "anchor": [
+      0.455,
+      0.595
+     ]
+    },
+    {
+     "word": "look at",
+     "ipa": "/lʊk æt/",
+     "meaning": "看",
+     "label": [
+      0.665,
+      0.3302,
+      0.1908,
+      0.1196
+     ],
+     "anchor": [
+      0.605,
+      0.39
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U1-C02",
+   "unitKey": "yilin/g6-up/u1",
+   "unitName": "Unit 1 · The king's new clothes",
+   "sceneTitle": "空织布机前",
+   "image": "cards/yilin--g6-up--u1/YL-G6UP-U1-C02.jpg",
+   "words": [
+    {
+     "word": "clever",
+     "ipa": "/ˈklevə/",
+     "meaning": "聪明的",
+     "label": [
+      0.0919,
+      0.185,
+      0.1762,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "foolish",
+     "ipa": "/ˈfuːlɪʃ/",
+     "meaning": "愚蠢的",
+     "label": [
+      0.7234,
+      0.185,
+      0.1932,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    },
+    {
+     "word": "tell",
+     "ipa": "/tel/",
+     "meaning": "讲；告诉",
+     "label": [
+      0.315,
+      0.5202,
+      0.1471,
+      0.1196
+     ],
+     "anchor": [
+      0.255,
+      0.58
+     ]
+    },
+    {
+     "word": "laugh",
+     "ipa": "/lɑːf/",
+     "meaning": "笑",
+     "label": [
+      0.5338,
+      0.5702,
+      0.1662,
+      0.1196
+     ],
+     "anchor": [
+      0.76,
+      0.63
+     ]
+    },
+    {
+     "word": "shout",
+     "ipa": "/ʃaʊt/",
+     "meaning": "喊叫",
+     "label": [
+      0.7807,
+      0.3554,
+      0.1687,
+      0.1196
+     ],
+     "anchor": [
+      0.865,
+      0.52
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U2-C01",
+   "unitKey": "yilin/g6-up/u2",
+   "unitName": "Unit 2 · What a day!",
+   "sceneTitle": "天气对比",
+   "image": "cards/yilin--g6-up--u2/YL-G6UP-U2-C01.jpg",
+   "words": [
+    {
+     "word": "weather",
+     "ipa": "/ˈweðə/",
+     "meaning": "天气",
+     "label": [
+      0.3923,
+      0.185,
+      0.2155,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    },
+    {
+     "word": "sunny",
+     "ipa": "/ˈsʌni/",
+     "meaning": "晴朗的",
+     "label": [
+      0.1857,
+      0.3004,
+      0.1785,
+      0.1196
+     ],
+     "anchor": [
+      0.275,
+      0.465
+     ]
+    },
+    {
+     "word": "cloudy",
+     "ipa": "/ˈklaʊdi/",
+     "meaning": "多云的",
+     "label": [
+      0.3796,
+      0.43,
+      0.1908,
+      0.1196
+     ],
+     "anchor": [
+      0.475,
+      0.385
+     ]
+    },
+    {
+     "word": "windy",
+     "ipa": "/ˈwɪndi/",
+     "meaning": "有风的",
+     "label": [
+      0.5864,
+      0.4252,
+      0.1736,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.485
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U2-C02",
+   "unitKey": "yilin/g6-up/u2",
+   "unitName": "Unit 2 · What a day!",
+   "sceneTitle": "雨天出门",
+   "image": "cards/yilin--g6-up--u2/YL-G6UP-U2-C02.jpg",
+   "words": [
+    {
+     "word": "rain",
+     "ipa": "/reɪn/",
+     "meaning": "下雨",
+     "label": [
+      0.3106,
+      0.4302,
+      0.1294,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.49
+     ]
+    },
+    {
+     "word": "rainy",
+     "ipa": "/ˈreɪni/",
+     "meaning": "多雨的",
+     "label": [
+      0.423,
+      0.185,
+      0.154,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    },
+    {
+     "word": "bring",
+     "ipa": "/brɪŋ/",
+     "meaning": "带来",
+     "label": [
+      0.5156,
+      0.575,
+      0.1588,
+      0.1196
+     ],
+     "anchor": [
+      0.595,
+      0.53
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U2-C03",
+   "unitKey": "yilin/g6-up/u2",
+   "unitName": "Unit 2 · What a day!",
+   "sceneTitle": "放风筝",
+   "image": "cards/yilin--g6-up--u2/YL-G6UP-U2-C03.jpg",
+   "words": [
+    {
+     "word": "fly",
+     "ipa": "/flaɪ/",
+     "meaning": "放飞（风筝）",
+     "label": [
+      0.4342,
+      0.5554,
+      0.1966,
+      0.1196
+     ],
+     "anchor": [
+      0.5325,
+      0.72
+     ]
+    },
+    {
+     "word": "high",
+     "ipa": "/haɪ/",
+     "meaning": "高地",
+     "label": [
+      0.4559,
+      0.1062,
+      0.1416,
+      0.1196
+     ],
+     "anchor": [
+      0.6575,
+      0.166
+     ]
+    },
+    {
+     "word": "sky",
+     "ipa": "/skaɪ/",
+     "meaning": "天空",
+     "label": [
+      0.318,
+      0.3202,
+      0.122,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.38
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U3-C01",
+   "unitKey": "yilin/g6-up/u3",
+   "unitName": "Unit 3 · Holiday fun",
+   "sceneTitle": "国庆假期计划",
+   "image": "cards/yilin--g6-up--u3/YL-G6UP-U3-C01.jpg",
+   "words": [
+    {
+     "word": "national day",
+     "ipa": "/ˈnæʃənəl deɪ/",
+     "meaning": "国庆节",
+     "label": [
+      0.0312,
+      0.185,
+      0.3064,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.14
+     ]
+    },
+    {
+     "word": "holiday",
+     "ipa": "/ˈhɒlɪdeɪ/",
+     "meaning": "假期",
+     "label": [
+      0.7184,
+      0.185,
+      0.2031,
+      0.1196
+     ],
+     "anchor": [
+      0.82,
+      0.14
+     ]
+    },
+    {
+     "word": "call",
+     "ipa": "/kɔːl/",
+     "meaning": "打电话",
+     "label": [
+      0.5276,
+      0.5302,
+      0.1224,
+      0.1196
+     ],
+     "anchor": [
+      0.71,
+      0.59
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U3-C02",
+   "unitKey": "yilin/g6-up/u3",
+   "unitName": "Unit 3 · Holiday fun",
+   "sceneTitle": "上海地标",
+   "image": "cards/yilin--g6-up--u3/YL-G6UP-U3-C02.jpg",
+   "words": [
+    {
+     "word": "bund",
+     "ipa": "/bʌnd/",
+     "meaning": "（上海）外滩",
+     "label": [
+      0.4017,
+      0.465,
+      0.1966,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.42
+     ]
+    },
+    {
+     "word": "shanghai museum",
+     "ipa": "/ˈʃæŋˈhaɪ mˈjuːzɪəm/",
+     "meaning": "上海博物馆",
+     "label": [
+      0.0312,
+      0.2952,
+      0.3797,
+      0.1133
+     ],
+     "anchor": [
+      0.305,
+      0.4535
+     ]
+    },
+    {
+     "word": "fun",
+     "ipa": "/fʌn/",
+     "meaning": "乐趣",
+     "label": [
+      0.323,
+      0.0802,
+      0.117,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U3-C03",
+   "unitKey": "yilin/g6-up/u3",
+   "unitName": "Unit 3 · Holiday fun",
+   "sceneTitle": "北京地标",
+   "image": "cards/yilin--g6-up--u3/YL-G6UP-U3-C03.jpg",
+   "words": [
+    {
+     "word": "great wall",
+     "ipa": "/ɡreɪt wɔːl/",
+     "meaning": "长城",
+     "label": [
+      0.6488,
+      0.1954,
+      0.2524,
+      0.1196
+     ],
+     "anchor": [
+      0.775,
+      0.36
+     ]
+    },
+    {
+     "word": "palace museum",
+     "ipa": "/ˈpæləs mˈjuːzɪəm/",
+     "meaning": "故宫",
+     "label": [
+      0.1998,
+      0.3004,
+      0.3803,
+      0.1196
+     ],
+     "anchor": [
+      0.39,
+      0.465
+     ]
+    },
+    {
+     "word": "summer palace",
+     "ipa": "/ˈsʌmə ˈpæləs/",
+     "meaning": "颐和园",
+     "label": [
+      0.5647,
+      0.615,
+      0.3705,
+      0.1196
+     ],
+     "anchor": [
+      0.75,
+      0.57
+     ]
+    },
+    {
+     "word": "tian'anmen square",
+     "ipa": "/tjænˈænmən skweə/",
+     "meaning": "天安门广场",
+     "label": [
+      0.0312,
+      0.5217,
+      0.3803,
+      0.1133
+     ],
+     "anchor": [
+      0.22,
+      0.68
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U4-C01",
+   "unitKey": "yilin/g6-up/u4",
+   "unitName": "Unit 4 · Then and now",
+   "sceneTitle": "旧时光通讯角",
+   "image": "cards/yilin--g6-up--u4/YL-G6UP-U4-C01.jpg",
+   "words": [
+    {
+     "word": "then",
+     "ipa": "/ðen/",
+     "meaning": "那时",
+     "label": [
+      0.3134,
+      0.6102,
+      0.1416,
+      0.1196
+     ],
+     "anchor": [
+      0.515,
+      0.67
+     ]
+    },
+    {
+     "word": "ago",
+     "ipa": "/əˈɡəʊ/",
+     "meaning": "以前",
+     "label": [
+      0.5731,
+      0.2302,
+      0.1269,
+      0.1196
+     ],
+     "anchor": [
+      0.76,
+      0.29
+     ]
+    },
+    {
+     "word": "telephone",
+     "ipa": "/ˈteləfəʊn/",
+     "meaning": "电话",
+     "label": [
+      0.6764,
+      0.4304,
+      0.2572,
+      0.1196
+     ],
+     "anchor": [
+      0.805,
+      0.595
+     ]
+    },
+    {
+     "word": "write",
+     "ipa": "/raɪt/",
+     "meaning": "写",
+     "label": [
+      0.3893,
+      0.4304,
+      0.1515,
+      0.1196
+     ],
+     "anchor": [
+      0.465,
+      0.595
+     ]
+    },
+    {
+     "word": "newspaper",
+     "ipa": "/ˈnuːzpeɪpə/",
+     "meaning": "报纸",
+     "label": [
+      0.0312,
+      0.5054,
+      0.2794,
+      0.1196
+     ],
+     "anchor": [
+      0.22,
+      0.67
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U4-C02",
+   "unitKey": "yilin/g6-up/u4",
+   "unitName": "Unit 4 · Then and now",
+   "sceneTitle": "现代客厅视频角",
+   "image": "cards/yilin--g6-up--u4/YL-G6UP-U4-C02.jpg",
+   "words": [
+    {
+     "word": "now",
+     "ipa": "/naʊ/",
+     "meaning": "现在",
+     "label": [
+      0.3033,
+      0.0802,
+      0.1367,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    },
+    {
+     "word": "use",
+     "ipa": "/juːz/",
+     "meaning": "使用",
+     "label": [
+      0.3555,
+      0.5052,
+      0.1245,
+      0.1196
+     ],
+     "anchor": [
+      0.54,
+      0.565
+     ]
+    },
+    {
+     "word": "mobile phone",
+     "ipa": "/ˈməʊbəl fəʊn/",
+     "meaning": "手机",
+     "label": [
+      0.447,
+      0.3454,
+      0.3359,
+      0.1196
+     ],
+     "anchor": [
+      0.615,
+      0.51
+     ]
+    },
+    {
+     "word": "internet",
+     "ipa": "/ˈɪntənet/",
+     "meaning": "互联网",
+     "label": [
+      0.6447,
+      0.685,
+      0.2105,
+      0.1196
+     ],
+     "anchor": [
+      0.75,
+      0.64
+     ]
+    },
+    {
+     "word": "make friends",
+     "ipa": "/meɪk frendz/",
+     "meaning": "交朋友",
+     "label": [
+      0.2819,
+      0.625,
+      0.3213,
+      0.1196
+     ],
+     "anchor": [
+      0.61,
+      0.525
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U5-C01",
+   "unitKey": "yilin/g6-up/u5",
+   "unitName": "Unit 5 · Signs",
+   "sceneTitle": "公园入口问标识",
+   "image": "cards/yilin--g6-up--u5/YL-G6UP-U5-C01.jpg",
+   "words": [
+    {
+     "word": "sign",
+     "ipa": "/saɪn/",
+     "meaning": "标识",
+     "label": [
+      0.4105,
+      0.4712,
+      0.1392,
+      0.1196
+     ],
+     "anchor": [
+      0.3505,
+      0.531
+     ]
+    },
+    {
+     "word": "no parking",
+     "ipa": "/nəʊ ˈpɑːkɪŋ/",
+     "meaning": "禁止停车",
+     "label": [
+      0.2133,
+      0.1909,
+      0.2744,
+      0.1196
+     ],
+     "anchor": [
+      0.3505,
+      0.3555
+     ]
+    },
+    {
+     "word": "mean",
+     "ipa": "/mɪn/",
+     "meaning": "意思是",
+     "label": [
+      0.56,
+      0.0802,
+      0.1638,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U5-C02",
+   "unitKey": "yilin/g6-up/u5",
+   "unitName": "Unit 5 · Signs",
+   "sceneTitle": "餐厅门口",
+   "image": "cards/yilin--g6-up--u5/YL-G6UP-U5-C02.jpg",
+   "words": [
+    {
+     "word": "no eating",
+     "ipa": "/nəʊ ˈiːtɪŋ/",
+     "meaning": "禁止饮食",
+     "label": [
+      0.0475,
+      0.2134,
+      0.2449,
+      0.1196
+     ],
+     "anchor": [
+      0.17,
+      0.378
+     ]
+    },
+    {
+     "word": "no smoking",
+     "ipa": "/nəʊ sˈməʊkɪŋ/",
+     "meaning": "禁止吸烟",
+     "label": [
+      0.6722,
+      0.1309,
+      0.2966,
+      0.1196
+     ],
+     "anchor": [
+      0.8385,
+      0.2955
+     ]
+    },
+    {
+     "word": "smoke",
+     "ipa": "/sməʊk/",
+     "meaning": "吸烟",
+     "label": [
+      0.6133,
+      0.4,
+      0.1884,
+      0.1196
+     ],
+     "anchor": [
+      0.7075,
+      0.355
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U5-C03",
+   "unitKey": "yilin/g6-up/u5",
+   "unitName": "Unit 5 · Signs",
+   "sceneTitle": "公园危险小路",
+   "image": "cards/yilin--g6-up--u5/YL-G6UP-U5-C03.jpg",
+   "words": [
+    {
+     "word": "danger",
+     "ipa": "/ˈdeɪndʒə/",
+     "meaning": "危险",
+     "label": [
+      0.4821,
+      0.6254,
+      0.1958,
+      0.1196
+     ],
+     "anchor": [
+      0.58,
+      0.79
+     ]
+    },
+    {
+     "word": "careful",
+     "ipa": "/ˈkeəfəl/",
+     "meaning": "小心的",
+     "label": [
+      0.5333,
+      0.41,
+      0.1933,
+      0.1196
+     ],
+     "anchor": [
+      0.63,
+      0.365
+     ]
+    },
+    {
+     "word": "litter",
+     "ipa": "/ˈlɪtə/",
+     "meaning": "乱扔垃圾",
+     "label": [
+      0.3564,
+      0.3604,
+      0.1471,
+      0.1196
+     ],
+     "anchor": [
+      0.43,
+      0.525
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U6-C01",
+   "unitKey": "yilin/g6-up/u6",
+   "unitName": "Unit 6 · Keep our city clean",
+   "sceneTitle": "城市公园的脏与净",
+   "image": "cards/yilin--g6-up--u6/YL-G6UP-U6-C01.jpg",
+   "words": [
+    {
+     "word": "city",
+     "ipa": "/ˈsɪti/",
+     "meaning": "城市",
+     "label": [
+      0.2505,
+      0.1802,
+      0.1245,
+      0.1196
+     ],
+     "anchor": [
+      0.435,
+      0.24
+     ]
+    },
+    {
+     "word": "dirty",
+     "ipa": "/ˈdɜːti/",
+     "meaning": "脏的",
+     "label": [
+      0.3209,
+      0.6502,
+      0.1441,
+      0.1196
+     ],
+     "anchor": [
+      0.525,
+      0.71
+     ]
+    },
+    {
+     "word": "clean",
+     "ipa": "/klɪn/",
+     "meaning": "干净的",
+     "label": [
+      0.4936,
+      0.3302,
+      0.1614,
+      0.1196
+     ],
+     "anchor": [
+      0.715,
+      0.39
+     ]
+    },
+    {
+     "word": "rubbish",
+     "ipa": "/ˈrʌbɪʃ/",
+     "meaning": "垃圾",
+     "label": [
+      0.4098,
+      0.5204,
+      0.2105,
+      0.1196
+     ],
+     "anchor": [
+      0.515,
+      0.685
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U6-C02",
+   "unitKey": "yilin/g6-up/u6",
+   "unitName": "Unit 6 · Keep our city clean",
+   "sceneTitle": "换掉枯树，种下更多",
+   "image": "cards/yilin--g6-up--u6/YL-G6UP-U6-C02.jpg",
+   "words": [
+    {
+     "word": "move",
+     "ipa": "/muːv/",
+     "meaning": "搬走",
+     "label": [
+      0.315,
+      0.4202,
+      0.1638,
+      0.1196
+     ],
+     "anchor": [
+      0.255,
+      0.48
+     ]
+    },
+    {
+     "word": "dead",
+     "ipa": "/ded/",
+     "meaning": "死的",
+     "label": [
+      0.2193,
+      0.2204,
+      0.1515,
+      0.1196
+     ],
+     "anchor": [
+      0.295,
+      0.385
+     ]
+    },
+    {
+     "word": "plant",
+     "ipa": "/plɑːnt/",
+     "meaning": "种植",
+     "label": [
+      0.4211,
+      0.5752,
+      0.1539,
+      0.1196
+     ],
+     "anchor": [
+      0.635,
+      0.635
+     ]
+    },
+    {
+     "word": "more",
+     "ipa": "/mɔː/",
+     "meaning": "更多的",
+     "label": [
+      0.7818,
+      0.4204,
+      0.1564,
+      0.1196
+     ],
+     "anchor": [
+      0.86,
+      0.585
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U6-C03",
+   "unitKey": "yilin/g6-up/u6",
+   "unitName": "Unit 6 · Keep our city clean",
+   "sceneTitle": "远离烟雾",
+   "image": "cards/yilin--g6-up--u6/YL-G6UP-U6-C03.jpg",
+   "words": [
+    {
+     "word": "smoke",
+     "ipa": "/sməʊk/",
+     "meaning": "烟雾",
+     "label": [
+      0.3208,
+      0.235,
+      0.1884,
+      0.1196
+     ],
+     "anchor": [
+      0.415,
+      0.19
+     ]
+    },
+    {
+     "word": "keep",
+     "ipa": "/kɪp/",
+     "meaning": "保持",
+     "label": [
+      0.56,
+      0.0802,
+      0.1491,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U7-C01",
+   "unitKey": "yilin/g6-up/u7",
+   "unitName": "Unit 7 · Protect the Earth",
+   "sceneTitle": "环保小屋",
+   "image": "cards/yilin--g6-up--u7/YL-G6UP-U7-C01.jpg",
+   "words": [
+    {
+     "word": "earth",
+     "ipa": "/ɜːθ/",
+     "meaning": "地球",
+     "label": [
+      0.3733,
+      0.4354,
+      0.1564,
+      0.1196
+     ],
+     "anchor": [
+      0.4515,
+      0.6
+     ]
+    },
+    {
+     "word": "protect",
+     "ipa": "/prəˈtekt/",
+     "meaning": "保护",
+     "label": [
+      0.4209,
+      0.64,
+      0.1982,
+      0.1196
+     ],
+     "anchor": [
+      0.52,
+      0.595
+     ]
+    },
+    {
+     "word": "save",
+     "ipa": "/seɪv/",
+     "meaning": "节约；拯救",
+     "label": [
+      0.2416,
+      0.2185,
+      0.1719,
+      0.1196
+     ],
+     "anchor": [
+      0.3275,
+      0.1735
+     ]
+    },
+    {
+     "word": "water",
+     "ipa": "/ˈwɔːtə/",
+     "meaning": "水",
+     "label": [
+      0.4155,
+      0.2177,
+      0.1638,
+      0.1196
+     ],
+     "anchor": [
+      0.3555,
+      0.2775
+     ]
+    },
+    {
+     "word": "energy",
+     "ipa": "/ˈenədʒi/",
+     "meaning": "能源",
+     "label": [
+      0.6658,
+      0.2775,
+      0.1933,
+      0.1196
+     ],
+     "anchor": [
+      0.7625,
+      0.2325
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U7-C02",
+   "unitKey": "yilin/g6-up/u7",
+   "unitName": "Unit 7 · Protect the Earth",
+   "sceneTitle": "手工回收角",
+   "image": "cards/yilin--g6-up--u7/YL-G6UP-U7-C02.jpg",
+   "words": [
+    {
+     "word": "plastic",
+     "ipa": "/ˈplæstɪk/",
+     "meaning": "塑料",
+     "label": [
+      0.0858,
+      0.4854,
+      0.1884,
+      0.1196
+     ],
+     "anchor": [
+      0.18,
+      0.65
+     ]
+    },
+    {
+     "word": "wood",
+     "ipa": "/wʊd/",
+     "meaning": "木头",
+     "label": [
+      0.2881,
+      0.5854,
+      0.1637,
+      0.1196
+     ],
+     "anchor": [
+      0.37,
+      0.75
+     ]
+    },
+    {
+     "word": "reuse",
+     "ipa": "/rɪˈjuːz/",
+     "meaning": "再利用",
+     "label": [
+      0.415,
+      0.3652,
+      0.1663,
+      0.1196
+     ],
+     "anchor": [
+      0.355,
+      0.425
+     ]
+    },
+    {
+     "word": "waste",
+     "ipa": "/weɪst/",
+     "meaning": "浪费",
+     "label": [
+      0.5894,
+      0.4304,
+      0.1712,
+      0.1196
+     ],
+     "anchor": [
+      0.675,
+      0.595
+     ]
+    },
+    {
+     "word": "useful",
+     "ipa": "/ˈjuːsfəl/",
+     "meaning": "有用的",
+     "label": [
+      0.4107,
+      0.185,
+      0.1785,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.14
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U8-C01",
+   "unitKey": "yilin/g6-up/u8",
+   "unitName": "Unit 8 · Chinese New Year",
+   "sceneTitle": "春节买新衣",
+   "image": "cards/yilin--g6-up--u8/YL-G6UP-U8-C01.jpg",
+   "words": [
+    {
+     "word": "chinese new year",
+     "ipa": "/tʃaɪˈniːz nuː jɪə/",
+     "meaning": "农历新年",
+     "label": [
+      0.3063,
+      0.231,
+      0.3825,
+      0.1162
+     ],
+     "anchor": [
+      0.4975,
+      0.186
+     ]
+    },
+    {
+     "word": "buy new clothes",
+     "ipa": "/baɪ nuː kləʊðz/",
+     "meaning": "买新衣服",
+     "label": [
+      0.2863,
+      0.4618,
+      0.3824,
+      0.1182
+     ],
+     "anchor": [
+      0.4775,
+      0.625
+     ]
+    },
+    {
+     "word": "excited",
+     "ipa": "/ɪkˈsaɪtɪd/",
+     "meaning": "兴奋的",
+     "label": [
+      0.4671,
+      0.67,
+      0.2007,
+      0.1196
+     ],
+     "anchor": [
+      0.5675,
+      0.625
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U8-C02",
+   "unitKey": "yilin/g6-up/u8",
+   "unitName": "Unit 8 · Chinese New Year",
+   "sceneTitle": "团圆饭",
+   "image": "cards/yilin--g6-up--u8/YL-G6UP-U8-C02.jpg",
+   "words": [
+    {
+     "word": "get together",
+     "ipa": "/ɡɪt təˈɡeðə/",
+     "meaning": "团聚",
+     "label": [
+      0.338,
+      0.4304,
+      0.3039,
+      0.1196
+     ],
+     "anchor": [
+      0.49,
+      0.595
+     ]
+    },
+    {
+     "word": "dumpling",
+     "ipa": "/ˈdʌmplɪŋ/",
+     "meaning": "饺子",
+     "label": [
+      0.3813,
+      0.75,
+      0.2473,
+      0.1196
+     ],
+     "anchor": [
+      0.505,
+      0.705
+     ]
+    },
+    {
+     "word": "red packet",
+     "ipa": "/red ˈpækɪt/",
+     "meaning": "红包",
+     "label": [
+      0.1315,
+      0.5874,
+      0.2696,
+      0.1196
+     ],
+     "anchor": [
+      0.49,
+      0.545
+     ]
+    }
+   ],
+   "qa": []
+  },
+  {
+   "id": "YL-G6UP-U8-C03",
+   "unitKey": "yilin/g6-up/u8",
+   "unitName": "Unit 8 · Chinese New Year",
+   "sceneTitle": "夜晚看舞狮",
+   "image": "cards/yilin--g6-up--u8/YL-G6UP-U8-C03.jpg",
+   "words": [
+    {
+     "word": "fireworks",
+     "ipa": "/ˈfaɪəwɜːks/",
+     "meaning": "烟花",
+     "label": [
+      0.1675,
+      0.28,
+      0.245,
+      0.1196
+     ],
+     "anchor": [
+      0.29,
+      0.235
+     ]
+    },
+    {
+     "word": "firecracker",
+     "ipa": "/ˈfaɪəkrækə/",
+     "meaning": "鞭炮",
+     "label": [
+      0.3627,
+      0.7254,
+      0.2746,
+      0.1196
+     ],
+     "anchor": [
+      0.5,
+      0.89
+     ]
+    },
+    {
+     "word": "watch a lion dance",
+     "ipa": "/wɒtʃ ə laɪən dɑːns/",
+     "meaning": "看舞狮",
+     "label": [
+      0.3381,
+      0.4367,
+      0.3838,
+      0.1133
+     ],
+     "anchor": [
+      0.53,
+      0.595
+     ]
+    }
+   ],
+   "qa": []
+  }
+ ]
+}

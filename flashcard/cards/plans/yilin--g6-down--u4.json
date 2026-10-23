@@ -1,0 +1,99 @@
+{
+ "version": "yilin",
+ "grade": "g6-down",
+ "gradeName": "六年级下册",
+ "unit": "u4",
+ "unitName": "Unit 4 · Road safety",
+ "cards": [
+  {
+   "scene_title_cn": "斑马线前",
+   "scene_title_en": "At the Zebra Crossing",
+   "card_type": "Object/Place",
+   "scene_brief": "男孩和妈妈站在马路边的斑马线前，男孩左右张望，妈妈伸手示意停下。",
+   "targets": [
+    {
+     "word": "road",
+     "visual_target": "灰色柏油马路",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/rəʊd/",
+     "meaning": "马路"
+    },
+    {
+     "word": "zebra crossing",
+     "visual_target": "黑白条纹斑马线",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈziːbrə ˈkrɒsɪŋ/",
+     "meaning": "斑马线"
+    },
+    {
+     "word": "look out for",
+     "visual_target": "男孩转头左右张望的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/lʊk aʊt fɜː/",
+     "meaning": "当心"
+    },
+    {
+     "word": "must",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/mʌst/",
+     "meaning": "必须"
+    }
+   ],
+   "card_id": "YL-G6DOWN-U4-C01"
+  },
+  {
+   "scene_title_cn": "跟着妈妈等待",
+   "scene_title_en": "Follow and Wait",
+   "card_type": "Action",
+   "scene_brief": "妈妈牵着男孩沿护栏走到等候区，男孩跟在身后并停步等待。",
+   "targets": [
+    {
+     "word": "follow",
+     "visual_target": "男孩牵手跟在妈妈身后的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/ˈfɒləʊ/",
+     "meaning": "遵守"
+    },
+    {
+     "word": "stay",
+     "visual_target": "男孩在路沿停步等待的动作",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/steɪ/",
+     "meaning": "停留"
+    },
+    {
+     "word": "rule",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ruːl/",
+     "meaning": "规则"
+    },
+    {
+     "word": "safe",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/seɪf/",
+     "meaning": "安全的"
+    },
+    {
+     "word": "safety",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ˈseɪfti/",
+     "meaning": "安全"
+    }
+   ],
+   "card_id": "YL-G6DOWN-U4-C02"
+  }
+ ]
+}

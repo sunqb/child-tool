@@ -1,0 +1,107 @@
+{
+ "version": "yilin",
+ "grade": "g6-down",
+ "gradeName": "六年级下册",
+ "unit": "u3",
+ "unitName": "Unit 3 · A healthy diet",
+ "cards": [
+  {
+   "scene_title_cn": "早餐桌",
+   "scene_title_en": "Breakfast Table",
+   "card_type": "Object/Place",
+   "scene_brief": "清晨男孩在餐桌前吃米饭、肉和蔬菜，餐盘搭配均衡",
+   "targets": [
+    {
+     "word": "breakfast",
+     "visual_target": "晨光中的早餐餐盘和牛奶杯",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈbrekfəst/",
+     "meaning": "早饭"
+    },
+    {
+     "word": "rice",
+     "visual_target": "白米饭碗",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/raɪs/",
+     "meaning": "米饭"
+    },
+    {
+     "word": "meat",
+     "visual_target": "盘中的肉片",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/mɪt/",
+     "meaning": "肉"
+    },
+    {
+     "word": "healthy",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/ˈhelθi/",
+     "meaning": "健康的"
+    },
+    {
+     "word": "diet",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "scene_state",
+     "connector": "none",
+     "ipa": "/daɪət/",
+     "meaning": "饮食"
+    }
+   ],
+   "card_id": "YL-G6DOWN-U3-C01"
+  },
+  {
+   "scene_title_cn": "野餐零食角",
+   "scene_title_en": "Picnic Snacks",
+   "card_type": "Action",
+   "scene_brief": "野餐垫上有一小杯可乐和几颗糖，女孩一次拿一颗糖尝",
+   "targets": [
+    {
+     "word": "cola",
+     "visual_target": "可乐瓶和半杯可乐",
+     "mapping_mode": "direct_anchor",
+     "connector": "required",
+     "ipa": "/ˈkəʊlə/",
+     "meaning": "可乐"
+    },
+    {
+     "word": "sweet",
+     "visual_target": "女孩舔糖后眯眼笑的表情",
+     "mapping_mode": "action_anchor",
+     "connector": "optional",
+     "ipa": "/swɪt/",
+     "meaning": "甜的"
+    },
+    {
+     "word": "a little",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ə ˈlɪtəl/",
+     "meaning": "一点"
+    },
+    {
+     "word": "a few",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/ə fjuː/",
+     "meaning": "一些"
+    },
+    {
+     "word": "at a time",
+     "visual_target": "（无挂靠）",
+     "mapping_mode": "dialogue_phrase",
+     "connector": "none",
+     "ipa": "/æt ə taɪm/",
+     "meaning": "一次"
+    }
+   ],
+   "card_id": "YL-G6DOWN-U3-C02"
+  }
+ ]
+}
