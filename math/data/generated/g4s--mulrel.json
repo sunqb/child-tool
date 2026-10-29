@@ -1,0 +1,1287 @@
+{
+ "gradeId": "g4s",
+ "unitId": "mulrel",
+ "templates": [
+  {
+   "id": "NEW",
+   "unit": "mulrel",
+   "chapter": "mr-speed",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation"
+   ],
+   "level": 1,
+   "story": "汽车每小时行 {n1} 千米，从甲地到乙地行了 {n2} 小时。",
+   "question": "甲乙两地相距多少千米？",
+   "params": {
+    "n1": [
+     40,
+     90,
+     10
+    ],
+    "n2": [
+     2,
+     8,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1} * {n2}"
+   },
+   "constraints": [
+    "{total} >= 80"
+   ],
+   "segments": [
+    {
+     "t": "汽车每小时行 {n1} 千米，",
+     "type": "condition"
+    },
+    {
+     "t": "从甲地到乙地行了 {n2} 小时。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "每小时行",
+    "行了"
+   ],
+   "table": {
+    "known": [
+     "每小时行 {n1} 千米",
+     "行了 {n2} 小时"
+    ],
+    "ask": "两地相距 ？ 千米"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × {n2} = {total}（千米）"
+   ],
+   "answer": "{total} 千米",
+   "tip": "速度×时间=路程，先找准每小时行的路程和行驶时间。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mulrel",
+   "chapter": "mr-speed",
+   "type": "standard",
+   "skill": [
+    "relation",
+    "unit"
+   ],
+   "level": 1,
+   "story": "火车每小时行 {n2} 千米，从甲站到乙站的路程是 {n1} 千米。",
+   "question": "这列火车从甲站到乙站需要多少小时？",
+   "params": {
+    "n1": [
+     200,
+     900,
+     100
+    ],
+    "n2": [
+     100,
+     100,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "div({n1}, {n2})"
+   },
+   "constraints": [
+    "{ans} >= 2"
+   ],
+   "segments": [
+    {
+     "t": "火车每小时行 {n2} 千米，",
+     "type": "condition"
+    },
+    {
+     "t": "从甲站到乙站的路程是 {n1} 千米。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "每小时行",
+    "路程"
+   ],
+   "table": {
+    "known": [
+     "每小时行 {n2} 千米",
+     "路程是 {n1} 千米"
+    ],
+    "ask": "需要 ？ 小时"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} ÷ {n2} = {ans}（小时）"
+   ],
+   "answer": "{ans} 小时",
+   "tip": "路程÷速度=时间，单位要与速度单位对应。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mulrel",
+   "chapter": "mr-speed",
+   "type": "distractor",
+   "skill": [
+    "condition",
+    "distractor"
+   ],
+   "level": 2,
+   "story": "小明步行每分钟走 {n1} 米，从家到学校走了 {n2} 分钟。路上经过早餐店，买早餐用了 {n0} 分钟。",
+   "question": "小明家到学校有多少米？",
+   "params": {
+    "n1": [
+     50,
+     80,
+     10
+    ],
+    "n2": [
+     8,
+     20,
+     1
+    ],
+    "n0": [
+     3,
+     10,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1} * {n2}"
+   },
+   "constraints": [
+    "{n0} != {n1}",
+    "{n0} != {n2}",
+    "{total} >= 400"
+   ],
+   "segments": [
+    {
+     "t": "小明步行每分钟走 {n1} 米，",
+     "type": "condition"
+    },
+    {
+     "t": "从家到学校走了 {n2} 分钟。",
+     "type": "condition"
+    },
+    {
+     "t": "路上经过早餐店，买早餐用了 {n0} 分钟。",
+     "type": "distractor"
+    }
+   ],
+   "relations": [
+    "每分钟走",
+    "走了"
+   ],
+   "table": {
+    "known": [
+     "每分钟走 {n1} 米",
+     "走了 {n2} 分钟",
+     "买早餐用了 {n0} 分钟"
+    ],
+    "ask": "家到学校 ？ 米"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × {n2} = {total}（米）"
+   ],
+   "answer": "{total} 米",
+   "tip": "买早餐用是多余条件，求路程只用速度和行走时间。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mulrel",
+   "chapter": "mr-speed",
+   "type": "standard",
+   "skill": [
+    "relation",
+    "unit"
+   ],
+   "level": 2,
+   "story": "小华在操场跑步，每秒跑 {n2} 米，一共跑了 {n1} 米。",
+   "question": "他跑了多少秒？",
+   "params": {
+    "n1": [
+     100,
+     500,
+     5
+    ],
+    "n2": [
+     5,
+     5,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "div({n1}, {n2})"
+   },
+   "constraints": [
+    "{ans} >= 20"
+   ],
+   "segments": [
+    {
+     "t": "小华在操场跑步，",
+     "type": "plain"
+    },
+    {
+     "t": "每秒跑 {n2} 米，",
+     "type": "condition"
+    },
+    {
+     "t": "一共跑了 {n1} 米。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "每秒跑",
+    "一共跑了"
+   ],
+   "table": {
+    "known": [
+     "每秒跑 {n2} 米",
+     "一共跑了 {n1} 米"
+    ],
+    "ask": "跑了 ？ 秒"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} ÷ {n2} = {ans}（秒）"
+   ],
+   "answer": "{ans} 秒",
+   "tip": "路程÷速度=时间，注意这里速度单位是米/秒。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mulrel",
+   "chapter": "mr-speed",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "condition"
+   ],
+   "level": 3,
+   "story": "小军骑自行车去公园，平均每分钟行 {n2} 米。",
+   "question": "他从家到公园行了多少米？",
+   "params": {
+    "n2": [
+     100,
+     300,
+     20
+    ],
+    "n0": [
+     5,
+     20,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n2} * {n0}"
+   },
+   "constraints": [
+    "{total} >= 500",
+    "{n0} != {n2}"
+   ],
+   "segments": [
+    {
+     "t": "小军骑自行车去公园，",
+     "type": "plain"
+    },
+    {
+     "t": "平均每分钟行 {n2} 米。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "平均每分钟行"
+   ],
+   "table": {
+    "known": [
+     "平均每分钟行 {n2} 米"
+    ],
+    "ask": "家到公园 ？ 米",
+    "supplyRow": "（补上“骑了 {n0} 分钟”）"
+   },
+   "bridge": null,
+   "steps": [
+    "{n2} × {n0} = {total}（米）"
+   ],
+   "answer": "{total} 米",
+   "tip": "求路程还缺时间，补上“骑了几分钟”才能计算。",
+   "supply": {
+    "choices": [
+     "他骑了 {n0} 分钟",
+     "他骑了 {n0} 千米",
+     "他步行了 {n0} 分钟"
+    ],
+    "answer": 0,
+    "why": "求路程需要速度和时间，题中只有速度，缺少时间。"
+   }
+  },
+  {
+   "id": "NEW",
+   "unit": "mulrel",
+   "chapter": "mr-speed",
+   "type": "standard",
+   "skill": [
+    "steps",
+    "relation"
+   ],
+   "level": 3,
+   "story": "轮船每小时行 {n1} 千米，已经行了 {n2} 小时，离港口还有 {n0} 千米。",
+   "question": "这艘轮船从出发地到港口全程是多少千米？",
+   "params": {
+    "n1": [
+     30,
+     60,
+     10
+    ],
+    "n2": [
+     2,
+     6,
+     1
+    ],
+    "n0": [
+     80,
+     300,
+     20
+    ]
+   },
+   "calc": {
+    "used": "{n1} * {n2}",
+    "total": "{used} + {n0}"
+   },
+   "constraints": [
+    "{total} >= 200"
+   ],
+   "segments": [
+    {
+     "t": "轮船每小时行 {n1} 千米，",
+     "type": "condition"
+    },
+    {
+     "t": "已经行了 {n2} 小时，",
+     "type": "condition"
+    },
+    {
+     "t": "离港口还有 {n0} 千米。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "每小时行",
+    "已经行了",
+    "还有"
+   ],
+   "table": {
+    "known": [
+     "每小时行 {n1} 千米",
+     "已经行了 {n2} 小时",
+     "还有 {n0} 千米"
+    ],
+    "ask": "全程 ？ 千米"
+   },
+   "bridge": {
+    "ask": "要求全程，先要算出",
+    "choices": [
+     "已经行了多少千米",
+     "离港口还有多少千米",
+     "每小时行多少千米"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {used}（千米）",
+    "{used} + {n0} = {total}（千米）"
+   ],
+   "answer": "{total} 千米",
+   "tip": "全程=已行路程+剩余路程，先求已行路程。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mulrel",
+   "chapter": "mr-price",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation"
+   ],
+   "level": 1,
+   "story": "钢笔每支 {n1} 元，买 {n2} 支。",
+   "question": "一共要多少元？",
+   "params": {
+    "n1": [
+     3,
+     15,
+     1
+    ],
+    "n2": [
+     2,
+     9,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1} * {n2}"
+   },
+   "constraints": [
+    "{total} >= 10"
+   ],
+   "segments": [
+    {
+     "t": "钢笔每支 {n1} 元，",
+     "type": "condition"
+    },
+    {
+     "t": "买 {n2} 支。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "每支",
+    "买"
+   ],
+   "table": {
+    "known": [
+     "每支 {n1} 元",
+     "买 {n2} 支"
+    ],
+    "ask": "一共 ？ 元"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × {n2} = {total}（元）"
+   ],
+   "answer": "{total} 元",
+   "tip": "单价×数量=总价，先找每支的价钱和买的支数。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mulrel",
+   "chapter": "mr-price",
+   "type": "standard",
+   "skill": [
+    "relation",
+    "unit"
+   ],
+   "level": 1,
+   "story": "妈妈买 {n2} 千克苹果，一共花了 {n1} 元。",
+   "question": "每千克苹果多少元？",
+   "params": {
+    "n1": [
+     20,
+     80,
+     4
+    ],
+    "n2": [
+     4,
+     4,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "div({n1}, {n2})"
+   },
+   "constraints": [
+    "{ans} >= 5"
+   ],
+   "segments": [
+    {
+     "t": "妈妈买 {n2} 千克苹果，",
+     "type": "condition"
+    },
+    {
+     "t": "一共花了 {n1} 元。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "每千克",
+    "一共花了"
+   ],
+   "table": {
+    "known": [
+     "买了 {n2} 千克",
+     "一共花了 {n1} 元"
+    ],
+    "ask": "每千克 ？ 元"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} ÷ {n2} = {ans}（元）"
+   ],
+   "answer": "{ans} 元",
+   "tip": "总价÷数量=单价，别把千克数当成总价。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mulrel",
+   "chapter": "mr-price",
+   "type": "distractor",
+   "skill": [
+    "condition",
+    "distractor"
+   ],
+   "level": 2,
+   "story": "一盒彩笔 {n1} 元，班级团购了 {n2} 盒，另外还买了 {n0} 本笔记本。",
+   "question": "买彩笔一共花了多少元？",
+   "params": {
+    "n1": [
+     8,
+     20,
+     1
+    ],
+    "n2": [
+     5,
+     15,
+     1
+    ],
+    "n0": [
+     3,
+     12,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1} * {n2}"
+   },
+   "constraints": [
+    "{n0} != {n1}",
+    "{n0} != {n2}",
+    "{total} >= 50"
+   ],
+   "segments": [
+    {
+     "t": "一盒彩笔 {n1} 元，",
+     "type": "condition"
+    },
+    {
+     "t": "班级团购了 {n2} 盒，",
+     "type": "condition"
+    },
+    {
+     "t": "另外还买了 {n0} 本笔记本。",
+     "type": "distractor"
+    }
+   ],
+   "relations": [
+    "一盒",
+    "团购了"
+   ],
+   "table": {
+    "known": [
+     "一盒 {n1} 元",
+     "团购 {n2} 盒",
+     "另买 {n0} 本笔记本"
+    ],
+    "ask": "买彩笔一共 ？ 元"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × {n2} = {total}（元）"
+   ],
+   "answer": "{total} 元",
+   "tip": "问的是彩笔总价，笔记本的数量是多余条件。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mulrel",
+   "chapter": "mr-price",
+   "type": "standard",
+   "skill": [
+    "relation",
+    "unit"
+   ],
+   "level": 2,
+   "story": "故事书每本 {n2} 元，小明有 {n1} 元。",
+   "question": "如果全部买这种故事书，可以买多少本？",
+   "params": {
+    "n1": [
+     40,
+     120,
+     8
+    ],
+    "n2": [
+     8,
+     8,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "div({n1}, {n2})"
+   },
+   "constraints": [
+    "{ans} >= 5"
+   ],
+   "segments": [
+    {
+     "t": "故事书每本 {n2} 元，",
+     "type": "condition"
+    },
+    {
+     "t": "小明有 {n1} 元。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "每本",
+    "全部买"
+   ],
+   "table": {
+    "known": [
+     "每本 {n2} 元",
+     "有 {n1} 元"
+    ],
+    "ask": "可以买 ？ 本"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} ÷ {n2} = {ans}（本）"
+   ],
+   "answer": "{ans} 本",
+   "tip": "总价÷单价=数量，先分清哪个是总钱数。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mulrel",
+   "chapter": "mr-price",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "condition"
+   ],
+   "level": 3,
+   "story": "学校买跳绳，每根 {n1} 元。",
+   "question": "买跳绳一共花了多少元？",
+   "params": {
+    "n1": [
+     5,
+     15,
+     1
+    ],
+    "n0": [
+     10,
+     30,
+     2
+    ]
+   },
+   "calc": {
+    "total": "{n1} * {n0}"
+   },
+   "constraints": [
+    "{total} >= 50",
+    "{n0} != {n1}"
+   ],
+   "segments": [
+    {
+     "t": "学校买跳绳，",
+     "type": "plain"
+    },
+    {
+     "t": "每根 {n1} 元。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "每根"
+   ],
+   "table": {
+    "known": [
+     "每根 {n1} 元"
+    ],
+    "ask": "一共 ？ 元",
+    "supplyRow": "（补上“买了 {n0} 根”）"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × {n0} = {total}（元）"
+   ],
+   "answer": "{total} 元",
+   "tip": "求总价缺数量，补上“买了几根”才能算。",
+   "supply": {
+    "choices": [
+     "买了 {n0} 根",
+     "买了 {n0} 盒",
+     "每根 {n0} 元"
+    ],
+    "answer": 0,
+    "why": "已知单价，求总价还需要数量。"
+   }
+  },
+  {
+   "id": "NEW",
+   "unit": "mulrel",
+   "chapter": "mr-price",
+   "type": "standard",
+   "skill": [
+    "steps",
+    "relation"
+   ],
+   "level": 3,
+   "story": "每箱饮料 {n1} 元，买 {n2} 箱，付给收银员 {n0} 元。",
+   "question": "应找回多少元？",
+   "params": {
+    "n1": [
+     5,
+     12,
+     1
+    ],
+    "n2": [
+     2,
+     6,
+     1
+    ],
+    "n0": [
+     100,
+     200,
+     10
+    ]
+   },
+   "calc": {
+    "total": "{n1} * {n2}",
+    "change": "{n0} - {total}"
+   },
+   "constraints": [
+    "{change} >= 10"
+   ],
+   "segments": [
+    {
+     "t": "每箱饮料 {n1} 元，",
+     "type": "condition"
+    },
+    {
+     "t": "买 {n2} 箱，",
+     "type": "condition"
+    },
+    {
+     "t": "付给收银员 {n0} 元。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "每箱",
+    "买",
+    "付给",
+    "找回"
+   ],
+   "table": {
+    "known": [
+     "每箱 {n1} 元",
+     "买 {n2} 箱",
+     "付了 {n0} 元"
+    ],
+    "ask": "找回 ？ 元"
+   },
+   "bridge": {
+    "ask": "要求找回多少元，先要算出",
+    "choices": [
+     "买饮料一共花了多少元",
+     "每箱饮料多少元",
+     "买了多少箱"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {total}（元）",
+    "{n0} - {total} = {change}（元）"
+   ],
+   "answer": "{change} 元",
+   "tip": "找回的钱=付出的钱-总价，要先求总价。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mulrel",
+   "chapter": "mr-norm",
+   "type": "standard",
+   "skill": [
+    "steps",
+    "relation"
+   ],
+   "level": 1,
+   "story": "照这样计算，买 {n2} 个同样的笔记本用 {n1} 元，买 {n3} 个这样的笔记本。",
+   "question": "需要多少元？",
+   "params": {
+    "n1": [
+     10,
+     50,
+     5
+    ],
+    "n2": [
+     5,
+     5,
+     1
+    ],
+    "n3": [
+     8,
+     20,
+     1
+    ]
+   },
+   "calc": {
+    "unit": "div({n1}, {n2})",
+    "total": "{unit} * {n3}"
+   },
+   "constraints": [
+    "{total} >= 20"
+   ],
+   "segments": [
+    {
+     "t": "照这样计算，",
+     "type": "plain"
+    },
+    {
+     "t": "买 {n2} 个同样的笔记本用 {n1} 元，",
+     "type": "condition"
+    },
+    {
+     "t": "买 {n3} 个这样的笔记本。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "照这样计算",
+    "同样的",
+    "买"
+   ],
+   "table": {
+    "known": [
+     "{n2} 个用 {n1} 元",
+     "要买 {n3} 个"
+    ],
+    "ask": "需要 ？ 元"
+   },
+   "bridge": {
+    "ask": "要求买 {n3} 个需要多少元，先要算出",
+    "choices": [
+     "每个笔记本多少元",
+     "买 {n2} 个用了多少元",
+     "还剩多少元"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} ÷ {n2} = {unit}（元）",
+    "{unit} × {n3} = {total}（元）"
+   ],
+   "answer": "{total} 元",
+   "tip": "先求一份量：每个笔记本多少元，再乘要买的个数。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mulrel",
+   "chapter": "mr-norm",
+   "type": "standard",
+   "skill": [
+    "steps",
+    "relation"
+   ],
+   "level": 1,
+   "story": "{n0} 辆同样的货车每次运 {n1} 吨，照这样计算，{n2} 辆这样的货车。",
+   "question": "每次运多少吨？",
+   "params": {
+    "n0": [
+     3,
+     3,
+     1
+    ],
+    "n1": [
+     6,
+     30,
+     3
+    ],
+    "n2": [
+     5,
+     12,
+     1
+    ]
+   },
+   "calc": {
+    "unit": "div({n1}, {n0})",
+    "total": "{unit} * {n2}"
+   },
+   "constraints": [
+    "{total} >= 15"
+   ],
+   "segments": [
+    {
+     "t": "{n0} 辆同样的货车每次运 {n1} 吨，",
+     "type": "condition"
+    },
+    {
+     "t": "照这样计算，",
+     "type": "plain"
+    },
+    {
+     "t": "{n2} 辆这样的货车。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "同样的",
+    "照这样计算",
+    "每次运"
+   ],
+   "table": {
+    "known": [
+     "{n0} 辆运 {n1} 吨",
+     "求 {n2} 辆"
+    ],
+    "ask": "每次运 ？ 吨"
+   },
+   "bridge": {
+    "ask": "要求 {n2} 辆每次运多少吨，先要算出",
+    "choices": [
+     "每辆货车每次运多少吨",
+     "一共有多少辆货车",
+     "每次运多少小时"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} ÷ {n0} = {unit}（吨）",
+    "{unit} × {n2} = {total}（吨）"
+   ],
+   "answer": "{total} 吨",
+   "tip": "先求一辆车一次运多少吨，再乘车辆数。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mulrel",
+   "chapter": "mr-norm",
+   "type": "distractor",
+   "skill": [
+    "steps",
+    "distractor"
+   ],
+   "level": 2,
+   "story": "{n2} 盒同样重的饼干共重 {n1} 克，另有一箱重 {n0} 克。照这样计算，{n3} 盒饼干。",
+   "question": "重多少克？",
+   "params": {
+    "n2": [
+     4,
+     4,
+     1
+    ],
+    "n1": [
+     200,
+     800,
+     40
+    ],
+    "n3": [
+     6,
+     12,
+     1
+    ],
+    "n0": [
+     50,
+     500,
+     10
+    ]
+   },
+   "calc": {
+    "per": "div({n1}, {n2})",
+    "total": "{per} * {n3}"
+   },
+   "constraints": [
+    "{n0} != {n1}",
+    "{n0} != {n2}",
+    "{n0} != {n3}",
+    "{total} >= 300"
+   ],
+   "segments": [
+    {
+     "t": "{n2} 盒同样重的饼干共重 {n1} 克，",
+     "type": "condition"
+    },
+    {
+     "t": "另有一箱重 {n0} 克。",
+     "type": "distractor"
+    },
+    {
+     "t": "照这样计算，",
+     "type": "plain"
+    },
+    {
+     "t": "{n3} 盒饼干。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "同样重",
+    "照这样计算"
+   ],
+   "table": {
+    "known": [
+     "{n2} 盒重 {n1} 克",
+     "另有一箱 {n0} 克",
+     "求 {n3} 盒"
+    ],
+    "ask": "重 ？ 克"
+   },
+   "bridge": {
+    "ask": "要求 {n3} 盒饼干重多少克，先要算出",
+    "choices": [
+     "每盒饼干重多少克",
+     "一箱饼干重多少克",
+     "一共有多少盒"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} ÷ {n2} = {per}（克）",
+    "{per} × {n3} = {total}（克）"
+   ],
+   "answer": "{total} 克",
+   "tip": "“另有一箱”是多余条件，先求每盒饼干的质量。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mulrel",
+   "chapter": "mr-norm",
+   "type": "standard",
+   "skill": [
+    "steps",
+    "relation"
+   ],
+   "level": 2,
+   "story": "{n2} 分钟印 {n1} 张纸，照这样计算，{n3} 分钟。",
+   "question": "可以印多少张纸？",
+   "params": {
+    "n2": [
+     5,
+     5,
+     1
+    ],
+    "n1": [
+     50,
+     200,
+     5
+    ],
+    "n3": [
+     8,
+     20,
+     1
+    ]
+   },
+   "calc": {
+    "per": "div({n1}, {n2})",
+    "total": "{per} * {n3}"
+   },
+   "constraints": [
+    "{total} >= 100"
+   ],
+   "segments": [
+    {
+     "t": "{n2} 分钟印 {n1} 张纸，",
+     "type": "condition"
+    },
+    {
+     "t": "照这样计算，",
+     "type": "plain"
+    },
+    {
+     "t": "{n3} 分钟。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "照这样计算",
+    "分钟印"
+   ],
+   "table": {
+    "known": [
+     "{n2} 分钟印 {n1} 张",
+     "求 {n3} 分钟"
+    ],
+    "ask": "印 ？ 张"
+   },
+   "bridge": {
+    "ask": "要求 {n3} 分钟印多少张，先要算出",
+    "choices": [
+     "每分钟印多少张",
+     "一共印了多少分钟",
+     "还剩多少张"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} ÷ {n2} = {per}（张）",
+    "{per} × {n3} = {total}（张）"
+   ],
+   "answer": "{total} 张",
+   "tip": "先求每分钟印多少张，再乘印刷时间。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mulrel",
+   "chapter": "mr-norm",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "steps"
+   ],
+   "level": 3,
+   "story": "照这样计算，{n2} 箱同样的苹果共重 {n1} 千克。",
+   "question": "买一些这样的苹果重多少千克？",
+   "params": {
+    "n2": [
+     5,
+     5,
+     1
+    ],
+    "n1": [
+     100,
+     300,
+     20
+    ],
+    "n0": [
+     6,
+     15,
+     1
+    ]
+   },
+   "calc": {
+    "per": "div({n1}, {n2})",
+    "total": "{per} * {n0}"
+   },
+   "constraints": [
+    "{n0} != {n1}",
+    "{n0} != {n2}",
+    "{total} >= 100"
+   ],
+   "segments": [
+    {
+     "t": "照这样计算，",
+     "type": "plain"
+    },
+    {
+     "t": "{n2} 箱同样的苹果共重 {n1} 千克。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "照这样计算",
+    "同样的"
+   ],
+   "table": {
+    "known": [
+     "{n2} 箱共重 {n1} 千克"
+    ],
+    "ask": "一些苹果 ？ 千克",
+    "supplyRow": "（补上“买 {n0} 箱”）"
+   },
+   "bridge": {
+    "ask": "要求 {n0} 箱苹果重多少千克，先要算出",
+    "choices": [
+     "每箱苹果重多少千克",
+     "一共买了多少箱",
+     "还剩多少千克"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} ÷ {n2} = {per}（千克）",
+    "{per} × {n0} = {total}（千克）"
+   ],
+   "answer": "{total} 千克",
+   "tip": "补上箱数后，先求每箱苹果重多少千克。",
+   "supply": {
+    "choices": [
+     "买 {n0} 箱",
+     "买 {n0} 千克",
+     "每箱 {n0} 千克"
+    ],
+    "answer": 0,
+    "why": "求总质量需要知道每箱质量和买的箱数，题中缺少箱数。"
+   }
+  },
+  {
+   "id": "NEW",
+   "unit": "mulrel",
+   "chapter": "mr-norm",
+   "type": "standard",
+   "skill": [
+    "steps",
+    "bridge"
+   ],
+   "level": 3,
+   "story": "{n4} 个小组 {n1} 小时植树 {n0} 棵，照这样计算，{n2} 个小组 {n3} 小时。",
+   "question": "可以植树多少棵？",
+   "params": {
+    "n4": [
+     4,
+     4,
+     1
+    ],
+    "n1": [
+     5,
+     5,
+     1
+    ],
+    "n0": [
+     100,
+     300,
+     20
+    ],
+    "n2": [
+     6,
+     10,
+     1
+    ],
+    "n3": [
+     8,
+     8,
+     1
+    ]
+   },
+   "calc": {
+    "denom": "{n4} * {n1}",
+    "per": "div({n0}, {denom})",
+    "total": "{per} * {n2} * {n3}"
+   },
+   "constraints": [
+    "{total} >= 200"
+   ],
+   "segments": [
+    {
+     "t": "{n4} 个小组 {n1} 小时植树 {n0} 棵，",
+     "type": "condition"
+    },
+    {
+     "t": "照这样计算，",
+     "type": "plain"
+    },
+    {
+     "t": "{n2} 个小组 {n3} 小时。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "照这样计算",
+    "小组",
+    "小时"
+   ],
+   "table": {
+    "known": [
+     "{n4} 个小组 {n1} 小时植 {n0} 棵",
+     "求 {n2} 个小组 {n3} 小时"
+    ],
+    "ask": "植树 ？ 棵"
+   },
+   "bridge": {
+    "ask": "要求 {n2} 个小组 {n3} 小时植树多少棵，先要算出",
+    "choices": [
+     "平均每个小组每小时植树多少棵",
+     "一共有多少个小组",
+     "一共植树多少小时"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n0} ÷ {n4} ÷ {n1} = {per}（棵）",
+    "{per} × {n2} × {n3} = {total}（棵）"
+   ],
+   "answer": "{total} 棵",
+   "tip": "双归一：先求每个小组每小时植树多少棵，再乘小组数和时间。"
+  }
+ ]
+}

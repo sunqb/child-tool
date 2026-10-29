@@ -1,0 +1,1133 @@
+{
+ "gradeId": "g4s",
+ "unitId": "bignum",
+ "templates": [
+  {
+   "id": "NEW",
+   "unit": "bignum",
+   "chapter": "bn-num",
+   "type": "standard",
+   "skill": [
+    "unit",
+    "steps"
+   ],
+   "level": 1,
+   "story": "某市人口有{n1}万。",
+   "question": "这个数写作多少？",
+   "params": {
+    "n1": [
+     12,
+     98,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n1} * 10000"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "某市人口有{n1}万。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "万",
+    "写作"
+   ],
+   "table": {
+    "known": [
+     "人口 {n1} 万"
+    ],
+    "ask": "写作 ？ 人"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × 10000 = {ans}（人）"
+   ],
+   "answer": "{ans}人",
+   "tip": "把“万”改写成“个”，要在末尾添4个0。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bignum",
+   "chapter": "bn-num",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "steps"
+   ],
+   "level": 1,
+   "story": "A地面积是{n1}公顷，B地面积是{n2}公顷。",
+   "question": "B地比A地大多少公顷？",
+   "params": {
+    "n1": [
+     120000,
+     450000,
+     10000
+    ],
+    "n2": [
+     500000,
+     980000,
+     10000
+    ]
+   },
+   "calc": {
+    "diff": "{n2} - {n1}"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "A地面积是{n1}公顷，",
+     "type": "condition"
+    },
+    {
+     "t": "B地面积是{n2}公顷。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "比",
+    "大多少"
+   ],
+   "table": {
+    "known": [
+     "A地 {n1} 公顷",
+     "B地 {n2} 公顷"
+    ],
+    "ask": "B比A多 ？ 公顷"
+   },
+   "bridge": null,
+   "steps": [
+    "{n2} - {n1} = {diff}（公顷）"
+   ],
+   "answer": "{diff}公顷",
+   "tip": "求两个面积相差多少，用较大的数减较小的数。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bignum",
+   "chapter": "bn-num",
+   "type": "standard",
+   "skill": [
+    "relation",
+    "bridge",
+    "steps"
+   ],
+   "level": 3,
+   "story": "地球到月球的平均距离约{n1}万千米，地球到火星的最近距离约{n2}万千米，地球到太阳的平均距离约{n3}万千米。",
+   "question": "把这三个距离按从大到小排列，最大距离比最小距离多多少万千米？",
+   "params": {
+    "n1": [
+     30,
+     50,
+     1
+    ],
+    "n2": [
+     60,
+     90,
+     1
+    ],
+    "n3": [
+     100,
+     150,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n3} - {n1}"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "地球到月球的平均距离约{n1}万千米，",
+     "type": "condition"
+    },
+    {
+     "t": "地球到火星的最近距离约{n2}万千米，",
+     "type": "condition"
+    },
+    {
+     "t": "地球到太阳的平均距离约{n3}万千米。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "从大到小",
+    "最大",
+    "最小"
+   ],
+   "table": {
+    "known": [
+     "月球距离 {n1} 万千米",
+     "火星距离 {n2} 万千米",
+     "太阳距离 {n3} 万千米"
+    ],
+    "ask": "最大比最小多 ？ 万千米"
+   },
+   "bridge": {
+    "ask": "要求最大距离比最小距离多多少，先要",
+    "choices": [
+     "比较三个数，找出最大和最小",
+     "把三个距离相加",
+     "只比较前两个距离"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n3} - {n1} = {ans}（万千米）"
+   ],
+   "answer": "{ans}万千米",
+   "tip": "先排序找最大和最小，再相减；中间的距离不参与计算。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bignum",
+   "chapter": "bn-num",
+   "type": "distractor",
+   "skill": [
+    "distractor",
+    "unit"
+   ],
+   "level": 2,
+   "story": "某图书馆共有藏书{n1}册，其中少儿图书{n2}册。",
+   "question": "这个图书馆藏书总数的万级上是几？",
+   "params": {
+    "n1": [
+     120000,
+     980000,
+     10000
+    ],
+    "n2": [
+     10000,
+     90000,
+     10000
+    ]
+   },
+   "calc": {
+    "ans": "div({n1}, 10000)"
+   },
+   "constraints": [
+    "{n2} != {n1}"
+   ],
+   "segments": [
+    {
+     "t": "某图书馆共有藏书{n1}册，",
+     "type": "condition"
+    },
+    {
+     "t": "其中少儿图书{n2}册。",
+     "type": "distractor"
+    }
+   ],
+   "relations": [
+    "万级",
+    "其中"
+   ],
+   "table": {
+    "known": [
+     "藏书总数 {n1} 册",
+     "少儿图书 {n2} 册"
+    ],
+    "ask": "万级上的数 ？"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} ÷ 10000 = {ans}（万）"
+   ],
+   "answer": "{ans}",
+   "tip": "求藏书总数的万级，少儿图书册数是多余条件。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bignum",
+   "chapter": "bn-num",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "bridge",
+    "steps"
+   ],
+   "level": 2,
+   "story": "某景区去年接待游客{n1}万人次，今年比去年多接待若干万人次。",
+   "question": "两年一共接待游客多少万人次？",
+   "params": {
+    "n1": [
+     10,
+     50,
+     1
+    ],
+    "n0": [
+     1,
+     9,
+     1
+    ]
+   },
+   "calc": {
+    "thisYear": "{n1} + {n0}",
+    "ans": "{n1} + {thisYear}"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "某景区去年接待游客{n1}万人次，",
+     "type": "condition"
+    },
+    {
+     "t": "今年比去年多接待若干万人次。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "比去年多",
+    "一共"
+   ],
+   "table": {
+    "known": [
+     "去年 {n1} 万人次",
+     "今年比去年多若干万人次"
+    ],
+    "ask": "两年一共 ？ 万人次",
+    "supplyRow": "（补上今年比去年多多少）"
+   },
+   "bridge": {
+    "ask": "要求两年一共接待多少，先要算出",
+    "choices": [
+     "今年接待多少万人次",
+     "去年比今年多多少万人次",
+     "两年相差多少万人次"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} + {n0} = {thisYear}（万人次）",
+    "{n1} + {thisYear} = {ans}（万人次）"
+   ],
+   "answer": "{ans}万人次",
+   "tip": "先补出“多多少”，再求今年人数，最后把去年和今年相加。",
+   "supply": {
+    "choices": [
+     "今年比去年多接待{n0}万人次",
+     "今年接待{n0}万人次",
+     "去年比今年多接待{n0}万人次"
+    ],
+    "answer": 0,
+    "why": "题中只知今年比去年多，缺少“多多少”这个条件。"
+   }
+  },
+  {
+   "id": "NEW",
+   "unit": "bignum",
+   "chapter": "bn-num",
+   "type": "standard",
+   "skill": [
+    "relation",
+    "bridge",
+    "steps"
+   ],
+   "level": 2,
+   "story": "长江长约{n1}千米，黄河比长江短{n2}千米，珠江比黄河长{n3}千米。",
+   "question": "珠江长约多少千米？",
+   "params": {
+    "n1": [
+     5000,
+     7000,
+     100
+    ],
+    "n2": [
+     100,
+     500,
+     50
+    ],
+    "n3": [
+     100,
+     600,
+     50
+    ]
+   },
+   "calc": {
+    "yellow": "{n1} - {n2}",
+    "ans": "{yellow} + {n3}"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "长江长约{n1}千米，",
+     "type": "condition"
+    },
+    {
+     "t": "黄河比长江短{n2}千米，",
+     "type": "condition"
+    },
+    {
+     "t": "珠江比黄河长{n3}千米。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "比长江短",
+    "比黄河长"
+   ],
+   "table": {
+    "known": [
+     "长江 {n1} 千米",
+     "黄河比长江短 {n2} 千米",
+     "珠江比黄河长 {n3} 千米"
+    ],
+    "ask": "珠江 ？ 千米"
+   },
+   "bridge": {
+    "ask": "要求珠江长多少，先要算出",
+    "choices": [
+     "黄河长多少千米",
+     "长江比珠江长多少千米",
+     "三条河一共长多少千米"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} - {n2} = {yellow}（千米）",
+    "{yellow} + {n3} = {ans}（千米）"
+   ],
+   "answer": "{ans}千米",
+   "tip": "顺着“黄河比长江短”先求黄河，再按“珠江比黄河长”求珠江。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bignum",
+   "chapter": "bn-place",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "unit"
+   ],
+   "level": 1,
+   "story": "在计数器上，万位上拨了{n1}颗珠子，其余各数位都没有珠子。",
+   "question": "这个数写作多少？",
+   "params": {
+    "n1": [
+     1,
+     9,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n1} * 10000"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "在计数器上，",
+     "type": "plain"
+    },
+    {
+     "t": "万位上拨了{n1}颗珠子，",
+     "type": "condition"
+    },
+    {
+     "t": "其余各数位都没有珠子。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "万位",
+    "其余各数位"
+   ],
+   "table": {
+    "known": [
+     "万位 {n1} 颗",
+     "其余各数位是0"
+    ],
+    "ask": "这个数 ？"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × 10000 = {ans}（ ）"
+   ],
+   "answer": "{ans}",
+   "tip": "万位上是几，就表示几个万，后面添4个0。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bignum",
+   "chapter": "bn-place",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "unit"
+   ],
+   "level": 1,
+   "story": "数位顺序表中，每相邻两个计数单位之间的进率是10。这里有{n1}个十万。",
+   "question": "合起来是多少万？",
+   "params": {
+    "n1": [
+     1,
+     9,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n1} * 10"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "数位顺序表中，",
+     "type": "plain"
+    },
+    {
+     "t": "每相邻两个计数单位之间的进率是10。",
+     "type": "condition"
+    },
+    {
+     "t": "这里有{n1}个十万。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "进率是10",
+    "十万"
+   ],
+   "table": {
+    "known": [
+     "进率是10",
+     "有 {n1} 个十万"
+    ],
+    "ask": "合起来 ？ 万"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × 10 = {ans}（万）"
+   ],
+   "answer": "{ans}万",
+   "tip": "十万和万是相邻计数单位，1个十万等于10万。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bignum",
+   "chapter": "bn-place",
+   "type": "distractor",
+   "skill": [
+    "distractor",
+    "unit"
+   ],
+   "level": 2,
+   "story": "某市常住人口为{n1}人，其中城区人口为{n2}人。",
+   "question": "这个市常住人口的万级上是几？",
+   "params": {
+    "n1": [
+     120000,
+     980000,
+     10000
+    ],
+    "n2": [
+     10000,
+     90000,
+     10000
+    ]
+   },
+   "calc": {
+    "ans": "div({n1}, 10000)"
+   },
+   "constraints": [
+    "{n2} != {n1}"
+   ],
+   "segments": [
+    {
+     "t": "某市常住人口为{n1}人，",
+     "type": "condition"
+    },
+    {
+     "t": "其中城区人口为{n2}人。",
+     "type": "distractor"
+    }
+   ],
+   "relations": [
+    "万级",
+    "其中"
+   ],
+   "table": {
+    "known": [
+     "总人口 {n1} 人",
+     "城区人口 {n2} 人"
+    ],
+    "ask": "万级上的数 ？"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} ÷ 10000 = {ans}（万）"
+   ],
+   "answer": "{ans}",
+   "tip": "万级上的数用总人口除以10000，城区人数是干扰条件。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bignum",
+   "chapter": "bn-place",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "unit"
+   ],
+   "level": 2,
+   "story": "学校电子屏要显示一个八位数，最高位是{n1}，万位上的数没有显示，其余各数位都是0。",
+   "question": "这个八位数是多少？",
+   "params": {
+    "n1": [
+     1,
+     9,
+     1
+    ],
+    "n0": [
+     1,
+     9,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n1} * 10000000 + {n0} * 10000"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "学校电子屏要显示一个八位数，",
+     "type": "plain"
+    },
+    {
+     "t": "最高位是{n1}，",
+     "type": "condition"
+    },
+    {
+     "t": "万位上的数没有显示，",
+     "type": "plain"
+    },
+    {
+     "t": "其余各数位都是0。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "八位数",
+    "最高位",
+    "万位"
+   ],
+   "table": {
+    "known": [
+     "八位数",
+     "最高位 {n1}",
+     "其余各数位是0"
+    ],
+    "ask": "这个八位数 ？",
+    "supplyRow": "（补上万位上的数）"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × 10000000 + {n0} × 10000 = {ans}（ ）"
+   ],
+   "answer": "{ans}",
+   "tip": "八位数最高位是千万位，补上万位后再按数位写数。",
+   "supply": {
+    "choices": [
+     "万位上是{n0}",
+     "千位上是{n0}",
+     "个位上是{n0}"
+    ],
+    "answer": 0,
+    "why": "八位数的最高位是千万位，题中缺的是万位上的数。"
+   }
+  },
+  {
+   "id": "NEW",
+   "unit": "bignum",
+   "chapter": "bn-place",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "unit"
+   ],
+   "level": 2,
+   "story": "王阿姨的存折上有一个数，它由{n1}个万和{n2}个一组成。",
+   "question": "这个数写作多少？",
+   "params": {
+    "n1": [
+     1,
+     99,
+     1
+    ],
+    "n2": [
+     1,
+     9999,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n1} * 10000 + {n2}"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "王阿姨的存折上有一个数，",
+     "type": "plain"
+    },
+    {
+     "t": "它由{n1}个万和{n2}个一组成。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "由",
+    "组成"
+   ],
+   "table": {
+    "known": [
+     "{n1} 个万",
+     "{n2} 个一"
+    ],
+    "ask": "这个数 ？"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × 10000 + {n2} = {ans}（ ）"
+   ],
+   "answer": "{ans}",
+   "tip": "个级的数要占四位，不够四位时前面用0补足，再和万级合起来。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bignum",
+   "chapter": "bn-place",
+   "type": "standard",
+   "skill": [
+    "bridge",
+    "unit",
+    "steps"
+   ],
+   "level": 3,
+   "story": "某科技馆开馆以来累计参观人数由{n1}个亿、{n2}个万和{n3}个一组成。",
+   "question": "这个数写作多少？",
+   "params": {
+    "n1": [
+     1,
+     9,
+     1
+    ],
+    "n2": [
+     1,
+     9999,
+     1
+    ],
+    "n3": [
+     1,
+     9999,
+     1
+    ]
+   },
+   "calc": {
+    "base": "{n1} * 100000000",
+    "mid": "{n2} * 10000",
+    "ans": "{base} + {mid} + {n3}"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "某科技馆开馆以来累计参观人数由{n1}个亿、",
+     "type": "condition"
+    },
+    {
+     "t": "{n2}个万和{n3}个一组成。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "亿",
+    "万",
+    "一"
+   ],
+   "table": {
+    "known": [
+     "{n1} 个亿",
+     "{n2} 个万",
+     "{n3} 个一"
+    ],
+    "ask": "这个数 ？"
+   },
+   "bridge": {
+    "ask": "要求这个数，先要",
+    "choices": [
+     "分别写出亿级、万级、个级再相加",
+     "只把三个数直接相加",
+     "先求一共有几个亿"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × 100000000 = {base}（ ）",
+    "{n2} × 10000 = {mid}（ ）",
+    "{base} + {mid} + {n3} = {ans}（ ）"
+   ],
+   "answer": "{ans}",
+   "tip": "按亿级、万级、个级分级写数，万级和个级不足四位要用0补足。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bignum",
+   "chapter": "bn-conv",
+   "type": "standard",
+   "skill": [
+    "unit",
+    "steps"
+   ],
+   "level": 1,
+   "story": "某市人口为{n1}0000人。",
+   "question": "改写成用“万”作单位的数是多少万人？",
+   "params": {
+    "n1": [
+     12,
+     98,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "div({n1} * 10000, 10000)"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "某市人口为{n1}0000人。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "万",
+    "改写"
+   ],
+   "table": {
+    "known": [
+     "人口 {n1}0000 人"
+    ],
+    "ask": "改写后 ？ 万人"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1}0000 ÷ 10000 = {ans}（万）"
+   ],
+   "answer": "{ans}万人",
+   "tip": "整万数改写成“万”作单位，去掉末尾4个0。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bignum",
+   "chapter": "bn-conv",
+   "type": "standard",
+   "skill": [
+    "unit",
+    "steps"
+   ],
+   "level": 1,
+   "story": "某星球到地球的距离约{n1}00000000千米。",
+   "question": "改写成用“亿”作单位的数是多少亿千米？",
+   "params": {
+    "n1": [
+     1,
+     9,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "div({n1} * 100000000, 100000000)"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "某星球到地球的距离约{n1}00000000千米。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "亿",
+    "改写"
+   ],
+   "table": {
+    "known": [
+     "距离 {n1}00000000 千米"
+    ],
+    "ask": "改写后 ？ 亿千米"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1}00000000 ÷ 100000000 = {ans}（亿）"
+   ],
+   "answer": "{ans}亿千米",
+   "tip": "整亿数改写成“亿”作单位，去掉末尾8个0。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bignum",
+   "chapter": "bn-conv",
+   "type": "standard",
+   "skill": [
+    "bridge",
+    "unit"
+   ],
+   "level": 2,
+   "story": "某粮库有小麦{n1}{n2}000千克。",
+   "question": "省略万位后面的尾数，约是多少万千克？",
+   "params": {
+    "n1": [
+     12,
+     98,
+     1
+    ],
+    "n2": [
+     0,
+     4,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1} * 10000 + {n2} * 1000",
+    "ans": "{n1}"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "某粮库有小麦{n1}{n2}000千克。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "省略万位后面的尾数",
+    "约"
+   ],
+   "table": {
+    "known": [
+     "小麦 {n1}{n2}000 千克",
+     "千位是 {n2}"
+    ],
+    "ask": "约 ？ 万千克"
+   },
+   "bridge": {
+    "ask": "省略万位后面的尾数求近似数，先要",
+    "choices": [
+     "看千位上的数是否满5",
+     "把万位后面的数都加起来",
+     "看万位上的数是否满5"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1}{n2}000 ≈ {ans}万（千克）"
+   ],
+   "answer": "{ans}万千克",
+   "tip": "千位上的数不满5，直接舍去尾数。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bignum",
+   "chapter": "bn-conv",
+   "type": "standard",
+   "skill": [
+    "bridge",
+    "unit"
+   ],
+   "level": 2,
+   "story": "某图书馆有图书{n1}{n2}000册。",
+   "question": "省略万位后面的尾数，约是多少万册？",
+   "params": {
+    "n1": [
+     12,
+     98,
+     1
+    ],
+    "n2": [
+     5,
+     9,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1} * 10000 + {n2} * 1000",
+    "ans": "{n1} + 1"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "某图书馆有图书{n1}{n2}000册。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "省略万位后面的尾数",
+    "约"
+   ],
+   "table": {
+    "known": [
+     "图书 {n1}{n2}000 册",
+     "千位是 {n2}"
+    ],
+    "ask": "约 ？ 万册"
+   },
+   "bridge": {
+    "ask": "省略万位后面的尾数求近似数，先要",
+    "choices": [
+     "看千位上的数是否满5",
+     "看百位上的数是否满5",
+     "把万位后面的数都舍去"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1}{n2}000 ≈ {ans}万（册）"
+   ],
+   "answer": "{ans}万册",
+   "tip": "千位上的数满5，舍去尾数后要向万位进1。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bignum",
+   "chapter": "bn-conv",
+   "type": "distractor",
+   "skill": [
+    "distractor",
+    "unit"
+   ],
+   "level": 2,
+   "story": "某景区去年旅游收入为{n1}0000元，接待游客{n2}人。",
+   "question": "把旅游收入改写成用“万”作单位的数是多少万元？",
+   "params": {
+    "n1": [
+     100,
+     999,
+     1
+    ],
+    "n2": [
+     10000,
+     50000,
+     1000
+    ]
+   },
+   "calc": {
+    "ans": "div({n1} * 10000, 10000)"
+   },
+   "constraints": [
+    "{n2} != {n1}"
+   ],
+   "segments": [
+    {
+     "t": "某景区去年旅游收入为{n1}0000元，",
+     "type": "condition"
+    },
+    {
+     "t": "接待游客{n2}人。",
+     "type": "distractor"
+    }
+   ],
+   "relations": [
+    "万",
+    "改写"
+   ],
+   "table": {
+    "known": [
+     "旅游收入 {n1}0000 元",
+     "接待游客 {n2} 人"
+    ],
+    "ask": "改写后 ？ 万元"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1}0000 ÷ 10000 = {ans}（万）"
+   ],
+   "answer": "{ans}万元",
+   "tip": "改写收入与游客人数无关，游客人数是多余条件。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bignum",
+   "chapter": "bn-conv",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "bridge",
+    "unit"
+   ],
+   "level": 3,
+   "story": "某水库的蓄水量是一个九位数，亿位上是{n1}，万位上的数没有显示，其余各位都是0。",
+   "question": "要把它改写成用“万”作单位的数，需要补充哪个条件？改写后是多少万？",
+   "params": {
+    "n1": [
+     1,
+     9,
+     1
+    ],
+    "n0": [
+     0,
+     9,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1} * 100000000 + {n0} * 10000",
+    "ans": "div({total}, 10000)"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "某水库的蓄水量是一个九位数，",
+     "type": "plain"
+    },
+    {
+     "t": "亿位上是{n1}，",
+     "type": "condition"
+    },
+    {
+     "t": "万位上的数没有显示，",
+     "type": "plain"
+    },
+    {
+     "t": "其余各位都是0。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "九位数",
+    "亿位",
+    "万位",
+    "改写"
+   ],
+   "table": {
+    "known": [
+     "九位数",
+     "亿位 {n1}",
+     "万位未显示",
+     "其余各位是0"
+    ],
+    "ask": "改写后 ？ 万",
+    "supplyRow": "（补上万位上的数）"
+   },
+   "bridge": {
+    "ask": "要求改写后的数，先要",
+    "choices": [
+     "补上万位上的数，写出原数",
+     "把亿位和万位直接相加",
+     "先求一共有几个亿"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × 100000000 + {n0} × 10000 = {total}（ ）",
+    "{total} ÷ 10000 = {ans}（万）"
+   ],
+   "answer": "{ans}万",
+   "tip": "九位数最高位是亿位，补上万位后，用原数除以10000改写成“万”作单位。",
+   "supply": {
+    "choices": [
+     "万位上是{n0}",
+     "千万位上是{n0}",
+     "个位上是{n0}"
+    ],
+    "answer": 0,
+    "why": "题中缺少万位上的数，补上万位后才能写出原数并改写。"
+   }
+  }
+ ]
+}

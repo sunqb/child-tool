@@ -1,0 +1,836 @@
+{
+ "gradeId": "g4s",
+ "unitId": "bigcalc",
+ "templates": [
+  {
+   "id": "NEW",
+   "unit": "bigcalc",
+   "chapter": "bc-mul",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "steps"
+   ],
+   "level": 1,
+   "story": "一列火车每小时行驶{n1}千米，行驶了{n2}小时。",
+   "question": "这列火车一共行驶多少千米？",
+   "params": {
+    "n1": [
+     120,
+     320,
+     10
+    ],
+    "n2": [
+     12,
+     25,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n1} * {n2}"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "一列火车每小时行驶{n1}千米，",
+     "type": "condition"
+    },
+    {
+     "t": "行驶了{n2}小时。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "每小时行驶",
+    "行驶了"
+   ],
+   "table": {
+    "known": [
+     "每小时行驶 {n1} 千米",
+     "行驶了 {n2} 小时"
+    ],
+    "ask": "一共行驶 ？ 千米"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × {n2} = {ans}（千米）"
+   ],
+   "answer": "{ans} 千米",
+   "tip": "求路程用速度乘时间，计算时注意用两位数个位、十位分别去乘。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bigcalc",
+   "chapter": "bc-mul",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "steps"
+   ],
+   "level": 1,
+   "story": "果园把苹果装箱出售，每箱苹果售价{n1}元，今天卖出{n2}箱。",
+   "question": "今天卖苹果一共收入多少元？",
+   "params": {
+    "n1": [
+     105,
+     245,
+     5
+    ],
+    "n2": [
+     12,
+     36,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n1} * {n2}"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "果园把苹果装箱出售，",
+     "type": "plain"
+    },
+    {
+     "t": "每箱苹果售价{n1}元，",
+     "type": "condition"
+    },
+    {
+     "t": "今天卖出{n2}箱。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "每箱售价",
+    "卖出"
+   ],
+   "table": {
+    "known": [
+     "每箱售价 {n1} 元",
+     "卖出 {n2} 箱"
+    ],
+    "ask": "一共收入 ？ 元"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × {n2} = {ans}（元）"
+   ],
+   "answer": "{ans} 元",
+   "tip": "总价=单价×数量，先圈出每箱售价和箱数。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bigcalc",
+   "chapter": "bc-mul",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "bridge",
+    "steps"
+   ],
+   "level": 2,
+   "story": "某车间每天生产{n1}个零件，生产了{n2}天，已经运走{n3}个。",
+   "question": "车间里还剩多少个零件？",
+   "params": {
+    "n1": [
+     120,
+     300,
+     10
+    ],
+    "n2": [
+     12,
+     24,
+     2
+    ],
+    "n3": [
+     500,
+     1200,
+     100
+    ]
+   },
+   "calc": {
+    "total": "{n1} * {n2}",
+    "ans": "{total} - {n3}"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "某车间每天生产{n1}个零件，",
+     "type": "condition"
+    },
+    {
+     "t": "生产了{n2}天，",
+     "type": "condition"
+    },
+    {
+     "t": "已经运走{n3}个。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "每天生产",
+    "生产了",
+    "运走"
+   ],
+   "table": {
+    "known": [
+     "每天生产 {n1} 个",
+     "生产了 {n2} 天",
+     "运走 {n3} 个"
+    ],
+    "ask": "还剩 ？ 个"
+   },
+   "bridge": {
+    "ask": "要求还剩多少个，先要算出",
+    "choices": [
+     "一共生产多少个零件",
+     "每天运走多少个零件",
+     "生产了多少天"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {total}（个）",
+    "{total} - {n3} = {ans}（个）"
+   ],
+   "answer": "{ans} 个",
+   "tip": "先求总产量，再减去运走的数量；不要直接用每天生产数减运走数。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bigcalc",
+   "chapter": "bc-mul",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "bridge",
+    "steps"
+   ],
+   "level": 2,
+   "story": "学校图书室有{n2}个书架，每个书架放{n1}本书，今天借出{n3}本书。",
+   "question": "图书室还剩多少本书？",
+   "params": {
+    "n1": [
+     120,
+     350,
+     10
+    ],
+    "n2": [
+     12,
+     25,
+     1
+    ],
+    "n3": [
+     500,
+     1200,
+     100
+    ]
+   },
+   "calc": {
+    "total": "{n1} * {n2}",
+    "ans": "{total} - {n3}"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "学校图书室有{n2}个书架，",
+     "type": "condition"
+    },
+    {
+     "t": "每个书架放{n1}本书，",
+     "type": "condition"
+    },
+    {
+     "t": "今天借出{n3}本书。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "每个书架放",
+    "借出"
+   ],
+   "table": {
+    "known": [
+     "每个书架放 {n1} 本",
+     "有 {n2} 个书架",
+     "借出 {n3} 本"
+    ],
+    "ask": "还剩 ？ 本"
+   },
+   "bridge": {
+    "ask": "要求还剩多少本，先要算出",
+    "choices": [
+     "一共有多少本书",
+     "每个书架借出多少本",
+     "有多少个书架"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {total}（本）",
+    "{total} - {n3} = {ans}（本）"
+   ],
+   "answer": "{ans} 本",
+   "tip": "先求书架能放的总本数，再减借出的本数。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bigcalc",
+   "chapter": "bc-mul",
+   "type": "distractor",
+   "skill": [
+    "distractor",
+    "condition",
+    "steps"
+   ],
+   "level": 3,
+   "story": "超市购进{n2}箱牛奶，每箱售价{n1}元，每箱有{n0}盒。今天卖出{n3}箱。",
+   "question": "今天卖出的牛奶一共收入多少元？",
+   "params": {
+    "n1": [
+     105,
+     245,
+     5
+    ],
+    "n2": [
+     20,
+     50,
+     1
+    ],
+    "n0": [
+     10,
+     30,
+     1
+    ],
+    "n3": [
+     12,
+     18,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n1} * {n3}"
+   },
+   "constraints": [
+    "{n3} < {n2}",
+    "{n0} != {n1}"
+   ],
+   "segments": [
+    {
+     "t": "超市购进{n2}箱牛奶，",
+     "type": "distractor"
+    },
+    {
+     "t": "每箱售价{n1}元，",
+     "type": "condition"
+    },
+    {
+     "t": "每箱有{n0}盒。",
+     "type": "distractor"
+    },
+    {
+     "t": "今天卖出{n3}箱。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "每箱售价",
+    "卖出"
+   ],
+   "table": {
+    "known": [
+     "每箱售价 {n1} 元",
+     "卖出 {n3} 箱"
+    ],
+    "ask": "一共收入 ？ 元"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × {n3} = {ans}（元）"
+   ],
+   "answer": "{ans} 元",
+   "tip": "求卖出收入只需每箱售价和卖出箱数，购进总箱数和每箱盒数都是多余条件。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bigcalc",
+   "chapter": "bc-mul",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "steps"
+   ],
+   "level": 3,
+   "story": "修路队每天修路{n1}米，________。",
+   "question": "一共修路多少米？",
+   "params": {
+    "n1": [
+     120,
+     300,
+     10
+    ],
+    "n0": [
+     12,
+     24,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n1} * {n0}"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "修路队每天修路{n1}米，",
+     "type": "condition"
+    },
+    {
+     "t": "________。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每天修路"
+   ],
+   "table": {
+    "known": [
+     "每天修路 {n1} 米"
+    ],
+    "supplyRow": "（补上修路天数）",
+    "ask": "一共修路 ？ 米"
+   },
+   "supply": {
+    "choices": [
+     "修了{n0}天",
+     "每天修{n0}米",
+     "还剩{n0}米"
+    ],
+    "answer": 0,
+    "why": "求总路程需要知道每天修的长度和修的天数，题目缺少修路天数。"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × {n0} = {ans}（米）"
+   ],
+   "answer": "{ans} 米",
+   "tip": "求总量要用每天修的长度乘天数，先补上“修了几天”这个条件。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bigcalc",
+   "chapter": "bc-est",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "steps"
+   ],
+   "level": 1,
+   "story": "果园每箱苹果售价{n1}元，今天卖出{n2}箱。",
+   "question": "今天卖苹果大约收入多少元？",
+   "params": {
+    "n1": [
+     198,
+     898,
+     100
+    ],
+    "n2": [
+     19,
+     89,
+     10
+    ]
+   },
+   "calc": {
+    "est1": "{n1} + 2",
+    "est2": "{n2} + 1",
+    "ans": "{est1} * {est2}"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "果园每箱苹果售价{n1}元，",
+     "type": "condition"
+    },
+    {
+     "t": "今天卖出{n2}箱。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "每箱售价",
+    "卖出"
+   ],
+   "table": {
+    "known": [
+     "每箱售价 {n1} 元",
+     "卖出 {n2} 箱"
+    ],
+    "ask": "大约收入 ？ 元"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × {n2} ≈ {est1} × {est2} = {ans}（元）"
+   ],
+   "answer": "大约 {ans} 元",
+   "tip": "估算乘法时，把接近整百、整十的数先看作整百、整十再计算。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bigcalc",
+   "chapter": "bc-est",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "steps"
+   ],
+   "level": 1,
+   "story": "学校图书馆有故事书{n1}本，科技书{n2}本。",
+   "question": "故事书和科技书大约一共有多少本？",
+   "params": {
+    "n1": [
+     1198,
+     4798,
+     100
+    ],
+    "n2": [
+     798,
+     3798,
+     100
+    ]
+   },
+   "calc": {
+    "est1": "{n1} + 2",
+    "est2": "{n2} + 2",
+    "ans": "{est1} + {est2}"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "学校图书馆有故事书{n1}本，",
+     "type": "condition"
+    },
+    {
+     "t": "科技书{n2}本。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "故事书",
+    "科技书"
+   ],
+   "table": {
+    "known": [
+     "故事书 {n1} 本",
+     "科技书 {n2} 本"
+    ],
+    "ask": "大约共 ？ 本"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} + {n2} ≈ {est1} + {est2} = {ans}（本）"
+   ],
+   "answer": "大约 {ans} 本",
+   "tip": "估算加法时，把每个数看作接近的整百数，再把近似数相加。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bigcalc",
+   "chapter": "bc-est",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "bridge",
+    "steps"
+   ],
+   "level": 2,
+   "story": "学校要买{n2}套运动服，每套{n1}元，学校带了{n3}元。",
+   "question": "学校带的钱够吗？大约需要多少元？",
+   "params": {
+    "n1": [
+     198,
+     898,
+     100
+    ],
+    "n2": [
+     19,
+     89,
+     10
+    ],
+    "n3": [
+     80000,
+     100000,
+     1000
+    ]
+   },
+   "calc": {
+    "est1": "{n1} + 2",
+    "est2": "{n2} + 1",
+    "need": "{est1} * {est2}"
+   },
+   "constraints": [
+    "{n3} >= {need}"
+   ],
+   "segments": [
+    {
+     "t": "学校要买{n2}套运动服，",
+     "type": "condition"
+    },
+    {
+     "t": "每套{n1}元，",
+     "type": "condition"
+    },
+    {
+     "t": "学校带了{n3}元。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "每套",
+    "带了"
+   ],
+   "table": {
+    "known": [
+     "每套 {n1} 元",
+     "买 {n2} 套",
+     "带了 {n3} 元"
+    ],
+    "ask": "大约需要 ？ 元，够吗？"
+   },
+   "bridge": {
+    "ask": "要判断钱够不够，先要估算出",
+    "choices": [
+     "一共需要多少元",
+     "每套大约多少元",
+     "还剩多少元"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} ≈ {est1} × {est2} = {need}（元）",
+    "{n3} 元够买（{n3} ≥ {need}）"
+   ],
+   "answer": "够，大约需要 {need} 元",
+   "tip": "先估出总价，再和带的钱比较；估算总价不超过带的钱就够。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bigcalc",
+   "chapter": "bc-est",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "bridge",
+    "steps"
+   ],
+   "level": 2,
+   "story": "学校礼堂有{n2}排座位，每排大约{n1}个座位。四年级有{n3}人。",
+   "question": "四年级同学都来礼堂，座位够吗？",
+   "params": {
+    "n1": [
+     118,
+     278,
+     10
+    ],
+    "n2": [
+     18,
+     48,
+     10
+    ],
+    "n3": [
+     1500,
+     3500,
+     100
+    ]
+   },
+   "calc": {
+    "est1": "{n1} + 2",
+    "est2": "{n2} + 2",
+    "total": "{est1} * {est2}"
+   },
+   "constraints": [
+    "{total} >= {n3}"
+   ],
+   "segments": [
+    {
+     "t": "学校礼堂有{n2}排座位，",
+     "type": "condition"
+    },
+    {
+     "t": "每排大约{n1}个座位。",
+     "type": "condition"
+    },
+    {
+     "t": "四年级有{n3}人。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "排座位",
+    "每排大约"
+   ],
+   "table": {
+    "known": [
+     "有 {n2} 排",
+     "每排约 {n1} 个座位",
+     "四年级 {n3} 人"
+    ],
+    "ask": "座位够吗？"
+   },
+   "bridge": {
+    "ask": "要判断座位够不够，先要算出",
+    "choices": [
+     "礼堂大约一共有多少个座位",
+     "四年级每排坐多少人",
+     "礼堂有多少排"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} ≈ {est1} × {est2} = {total}（个）",
+    "{total} 个座位够 {n3} 人坐（{total} ≥ {n3}）"
+   ],
+   "answer": "够，礼堂大约有 {total} 个座位",
+   "tip": "先估算总座位数，再与人数比较；注意“大约”提示用整十数估算。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bigcalc",
+   "chapter": "bc-est",
+   "type": "distractor",
+   "skill": [
+    "distractor",
+    "condition",
+    "steps"
+   ],
+   "level": 3,
+   "story": "超市购进一批大米，每袋售价{n1}元，买了{n2}袋，每袋重{n0}千克。",
+   "question": "买这些大米大约要付多少元？",
+   "params": {
+    "n1": [
+     198,
+     898,
+     100
+    ],
+    "n2": [
+     19,
+     89,
+     10
+    ],
+    "n0": [
+     20,
+     50,
+     1
+    ]
+   },
+   "calc": {
+    "est1": "{n1} + 2",
+    "est2": "{n2} + 1",
+    "ans": "{est1} * {est2}"
+   },
+   "constraints": [
+    "{n0} != {n2}"
+   ],
+   "segments": [
+    {
+     "t": "超市购进一批大米，",
+     "type": "plain"
+    },
+    {
+     "t": "每袋售价{n1}元，",
+     "type": "condition"
+    },
+    {
+     "t": "买了{n2}袋，",
+     "type": "condition"
+    },
+    {
+     "t": "每袋重{n0}千克。",
+     "type": "distractor"
+    }
+   ],
+   "relations": [
+    "每袋售价",
+    "买了"
+   ],
+   "table": {
+    "known": [
+     "每袋售价 {n1} 元",
+     "买了 {n2} 袋"
+    ],
+    "ask": "大约要付 ？ 元"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × {n2} ≈ {est1} × {est2} = {ans}（元）"
+   ],
+   "answer": "大约 {ans} 元",
+   "tip": "求总价只需每袋价钱和袋数，“每袋重多少千克”是多余条件。"
+  },
+  {
+   "id": "NEW",
+   "unit": "bigcalc",
+   "chapter": "bc-est",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "steps"
+   ],
+   "level": 3,
+   "story": "菜场运来白菜{n1}千克，________。",
+   "question": "白菜和萝卜大约一共有多少千克？",
+   "params": {
+    "n1": [
+     1198,
+     4798,
+     100
+    ],
+    "n0": [
+     798,
+     1998,
+     100
+    ]
+   },
+   "calc": {
+    "est1": "{n1} + 2",
+    "est0": "{n0} + 2",
+    "ans": "{est1} + {est0}"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "菜场运来白菜{n1}千克，",
+     "type": "condition"
+    },
+    {
+     "t": "________。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "白菜",
+    "一共"
+   ],
+   "table": {
+    "known": [
+     "白菜 {n1} 千克"
+    ],
+    "supplyRow": "（补上萝卜的质量）",
+    "ask": "大约共 ？ 千克"
+   },
+   "supply": {
+    "choices": [
+     "萝卜{n0}千克",
+     "白菜比萝卜多{n0}千克",
+     "每筐萝卜{n0}千克"
+    ],
+    "answer": 0,
+    "why": "要求两种蔬菜一共多少千克，还缺少萝卜的质量。"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} + {n0} ≈ {est1} + {est0} = {ans}（千克）"
+   ],
+   "answer": "大约 {ans} 千克",
+   "tip": "求两种蔬菜总量，必须知道白菜和萝卜各多少千克；先补上缺少的萝卜质量。"
+  }
+ ]
+}

@@ -8,7 +8,7 @@
 
   var PREFIX = "math.";
   var MAX_SHEETS = 30;
-  var KNOWN_UNITS = ["volume", "division", "strategy", "average"];
+  var KNOWN_UNITS = ["division", "periarea", "mulrel", "mixed2", "bignum", "bigcalc", "average"];
   var KNOWN_LEVELS = ["mix", "1", "2", "3"];
   var KNOWN_SCAFFOLDS = ["A", "B", "C"];
 
@@ -41,7 +41,7 @@
 
   var DEFAULT_CONFIG = {
     subject: "math",             // 学科（catalog.subjects）
-    version: "sujiao",           // 教材版本（catalog.versions）
+    version: "sujiao2022",           // 教材版本（catalog.versions）
     grade: "g4s",                // 年级（catalog.grades）
     units: KNOWN_UNITS.slice(),  // 练哪些单元
     chapters: {},                // unitId -> [chapterId]；缺键/空数组 = 该单元全部章节
@@ -154,7 +154,7 @@
       if (Array.isArray(ids) && ids.length) catalogUnits = ids.slice();
     },
     unitName: function (u) {
-      return { volume: "升和毫升", division: "两、三位数除以两位数", strategy: "解决问题的策略（列表）", average: "平均数（四下）" }[u] || u;
+      return { division: "一 两、三位数除以两位数", periarea: "二 周长与面积", mulrel: "三 乘法数量关系", mixed2: "四 混合运算与数量关系（二）", bignum: "五 多位数的认识", bigcalc: "六 大数的运算", average: "平均数（四下）" }[u] || u;
     }
   };
 })(window);

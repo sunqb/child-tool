@@ -1,0 +1,1032 @@
+{
+ "gradeId": "g4s",
+ "unitId": "mixed2",
+ "templates": [
+  {
+   "id": "NEW",
+   "unit": "mixed2",
+   "chapter": "mx2-two",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 1,
+   "story": "买{n1}盒彩笔，每盒{n2}元，付了{n3}元，找回多少元？",
+   "question": "找回多少元？",
+   "params": {
+    "n1": [
+     2,
+     5,
+     1
+    ],
+    "n2": [
+     8,
+     12,
+     1
+    ],
+    "n3": [
+     70,
+     100,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1} * {n2}",
+    "ans": "{n3} - {total}"
+   },
+   "constraints": [
+    "{ans} >= 10"
+   ],
+   "segments": [
+    {
+     "t": "买{n1}盒彩笔，",
+     "type": "condition"
+    },
+    {
+     "t": "每盒{n2}元，",
+     "type": "condition"
+    },
+    {
+     "t": "付了{n3}元，",
+     "type": "condition"
+    },
+    {
+     "t": "找回多少元？",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每盒",
+    "找回"
+   ],
+   "table": {
+    "known": [
+     "买 {n1} 盒彩笔",
+     "每盒 {n2} 元",
+     "付了 {n3} 元"
+    ],
+    "ask": "找回 ？ 元"
+   },
+   "bridge": {
+    "ask": "要求找回多少元，先要算出",
+    "choices": [
+     "买彩笔一共花了多少元",
+     "每盒彩笔比每支彩笔贵多少元",
+     "还剩多少盒彩笔"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {total}（元）",
+    "{n3} - {total} = {ans}（元）"
+   ],
+   "answer": "{ans} 元",
+   "tip": "先求买彩笔一共花多少钱，再用付的钱减去花掉的钱。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mixed2",
+   "chapter": "mx2-two",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "bridge"
+   ],
+   "level": 1,
+   "story": "每个小组种{n1}棵树，有{n2}个小组，后来又种了{n3}棵，一共种了多少棵树？",
+   "question": "一共种了多少棵树？",
+   "params": {
+    "n1": [
+     5,
+     9,
+     1
+    ],
+    "n2": [
+     3,
+     7,
+     1
+    ],
+    "n3": [
+     4,
+     20,
+     1
+    ]
+   },
+   "calc": {
+    "first": "{n1} * {n2}",
+    "ans": "{first} + {n3}"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "每个小组种{n1}棵树，",
+     "type": "condition"
+    },
+    {
+     "t": "有{n2}个小组，",
+     "type": "condition"
+    },
+    {
+     "t": "后来又种了{n3}棵，",
+     "type": "condition"
+    },
+    {
+     "t": "一共种了多少棵树？",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每个小组",
+    "一共"
+   ],
+   "table": {
+    "known": [
+     "每个小组种 {n1} 棵树",
+     "有 {n2} 个小组",
+     "后来又种 {n3} 棵"
+    ],
+    "ask": "一共种 ？ 棵"
+   },
+   "bridge": {
+    "ask": "要求一共种了多少棵，先要算出",
+    "choices": [
+     "原来 {n2} 个小组一共种了多少棵",
+     "每个小组比原来多种多少棵",
+     "后来又种了多少个小组"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {first}（棵）",
+    "{first} + {n3} = {ans}（棵）"
+   ],
+   "answer": "{ans} 棵",
+   "tip": "先算每个小组种树棵数乘小组数，再加上又种的棵数。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mixed2",
+   "chapter": "mx2-two",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 2,
+   "story": "一个书架有{n1}层，每层放{n2}本书，借出{n3}本，还剩多少本？",
+   "question": "还剩多少本？",
+   "params": {
+    "n1": [
+     4,
+     6,
+     1
+    ],
+    "n2": [
+     8,
+     12,
+     1
+    ],
+    "n3": [
+     5,
+     20,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1} * {n2}",
+    "ans": "{total} - {n3}"
+   },
+   "constraints": [
+    "{ans} > 0"
+   ],
+   "segments": [
+    {
+     "t": "一个书架有{n1}层，",
+     "type": "condition"
+    },
+    {
+     "t": "每层放{n2}本书，",
+     "type": "condition"
+    },
+    {
+     "t": "借出{n3}本，",
+     "type": "condition"
+    },
+    {
+     "t": "还剩多少本？",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每层",
+    "还剩"
+   ],
+   "table": {
+    "known": [
+     "一个书架有 {n1} 层",
+     "每层放 {n2} 本书",
+     "借出 {n3} 本"
+    ],
+    "ask": "还剩 ？ 本"
+   },
+   "bridge": {
+    "ask": "要求还剩多少本，先要算出",
+    "choices": [
+     "书架上原来一共有多少本书",
+     "借出后每层还剩多少本",
+     "每层借出了多少本"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {total}（本）",
+    "{total} - {n3} = {ans}（本）"
+   ],
+   "answer": "{ans} 本",
+   "tip": "先求书架上一共有多少本书，再减去借出的本数。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mixed2",
+   "chapter": "mx2-two",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "bridge"
+   ],
+   "level": 2,
+   "story": "果园里每筐装{n1}个苹果，装了{n2}筐，筐外还有{n3}个，一共摘了多少个苹果？",
+   "question": "一共摘了多少个苹果？",
+   "params": {
+    "n1": [
+     8,
+     12,
+     1
+    ],
+    "n2": [
+     4,
+     7,
+     1
+    ],
+    "n3": [
+     3,
+     15,
+     1
+    ]
+   },
+   "calc": {
+    "boxed": "{n1} * {n2}",
+    "ans": "{boxed} + {n3}"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "果园里每筐装{n1}个苹果，",
+     "type": "condition"
+    },
+    {
+     "t": "装了{n2}筐，",
+     "type": "condition"
+    },
+    {
+     "t": "筐外还有{n3}个，",
+     "type": "condition"
+    },
+    {
+     "t": "一共摘了多少个苹果？",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每筐",
+    "一共"
+   ],
+   "table": {
+    "known": [
+     "每筐装 {n1} 个苹果",
+     "装了 {n2} 筐",
+     "筐外还有 {n3} 个"
+    ],
+    "ask": "一共摘 ？ 个"
+   },
+   "bridge": {
+    "ask": "要求一共摘了多少个苹果，先要算出",
+    "choices": [
+     "{n2}筐一共装了多少个苹果",
+     "每筐比筐外多多少个苹果",
+     "筐外还要装几筐"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {boxed}（个）",
+    "{boxed} + {n3} = {ans}（个）"
+   ],
+   "answer": "{ans} 个",
+   "tip": "先求筐里一共有多少个，再加上筐外的个数。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mixed2",
+   "chapter": "mx2-two",
+   "type": "distractor",
+   "skill": [
+    "condition",
+    "distractor",
+    "hidden"
+   ],
+   "level": 3,
+   "story": "学校买来{n1}套书，每套{n2}本，每本{n3}元，捐给班级{n0}本，还剩多少本？",
+   "question": "还剩多少本？",
+   "params": {
+    "n1": [
+     2,
+     5,
+     1
+    ],
+    "n2": [
+     6,
+     12,
+     1
+    ],
+    "n3": [
+     20,
+     30,
+     1
+    ],
+    "n0": [
+     2,
+     10,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1} * {n2}",
+    "ans": "{total} - {n0}"
+   },
+   "constraints": [
+    "{ans} > 0"
+   ],
+   "segments": [
+    {
+     "t": "学校买来{n1}套书，",
+     "type": "condition"
+    },
+    {
+     "t": "每套{n2}本，",
+     "type": "condition"
+    },
+    {
+     "t": "每本{n3}元，",
+     "type": "distractor"
+    },
+    {
+     "t": "捐给班级{n0}本，",
+     "type": "condition"
+    },
+    {
+     "t": "还剩多少本？",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每套",
+    "还剩"
+   ],
+   "table": {
+    "known": [
+     "学校买来 {n1} 套书",
+     "每套 {n2} 本",
+     "每本 {n3} 元",
+     "捐给班级 {n0} 本"
+    ],
+    "ask": "还剩 ？ 本"
+   },
+   "bridge": {
+    "ask": "要求还剩多少本，先要算出",
+    "choices": [
+     "学校一共买来多少本书",
+     "每本书多少元",
+     "每套书比捐出的多多少本"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {total}（本）",
+    "{total} - {n0} = {ans}（本）"
+   ],
+   "answer": "{ans} 本",
+   "tip": "求还剩多少本，只与总本数和捐出的本数有关；每本多少元是多余条件。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mixed2",
+   "chapter": "mx2-two",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "bridge"
+   ],
+   "level": 3,
+   "story": "做纸花，每朵用{n1}张彩纸，要做{n2}朵，还剩多少张彩纸？",
+   "question": "还剩多少张彩纸？",
+   "params": {
+    "n1": [
+     2,
+     5,
+     1
+    ],
+    "n2": [
+     6,
+     12,
+     1
+    ],
+    "n0": [
+     80,
+     150,
+     1
+    ]
+   },
+   "calc": {
+    "used": "{n1} * {n2}",
+    "ans": "{n0} - {used}"
+   },
+   "constraints": [
+    "{ans} > 0"
+   ],
+   "segments": [
+    {
+     "t": "做纸花，",
+     "type": "plain"
+    },
+    {
+     "t": "每朵用{n1}张彩纸，",
+     "type": "condition"
+    },
+    {
+     "t": "要做{n2}朵，",
+     "type": "condition"
+    },
+    {
+     "t": "还剩多少张彩纸？",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每朵",
+    "还剩"
+   ],
+   "table": {
+    "known": [
+     "每朵用 {n1} 张彩纸",
+     "要做 {n2} 朵"
+    ],
+    "ask": "还剩 ？ 张彩纸",
+    "supplyRow": "（补上：一共有多少张彩纸）"
+   },
+   "bridge": {
+    "ask": "要求还剩多少张彩纸，先要算出",
+    "choices": [
+     "做纸花一共用去多少张彩纸",
+     "每朵用多少张彩纸",
+     "一共做了多少朵纸花"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {used}（张）",
+    "{n0} - {used} = {ans}（张）"
+   ],
+   "answer": "{ans} 张",
+   "tip": "要求还剩多少张彩纸，必须先求出做纸花用去多少张；还缺原来一共有多少张彩纸。",
+   "supply": {
+    "choices": [
+     "一共有{n0}张彩纸",
+     "每朵用{n0}张彩纸",
+     "又做了{n0}朵纸花"
+    ],
+    "answer": 0,
+    "why": "要求还剩多少张彩纸，需要知道原来一共有多少张彩纸；已知每朵用纸数和朵数，还缺彩纸总数。"
+   }
+  },
+  {
+   "id": "NEW",
+   "unit": "mixed2",
+   "chapter": "mx2-bracket",
+   "type": "standard",
+   "skill": [
+    "relation",
+    "bridge",
+    "unit"
+   ],
+   "level": 1,
+   "story": "妈妈带{n1}元，买一个书包用去{n2}元，剩下的钱正好买{n3}本同样的笔记本，每本多少元？",
+   "question": "每本多少元？",
+   "params": {
+    "n1": [
+     40,
+     80,
+     4
+    ],
+    "n2": [
+     4,
+     20,
+     4
+    ],
+    "n3": [
+     4,
+     4,
+     1
+    ]
+   },
+   "calc": {
+    "diff": "{n1} - {n2}",
+    "ans": "div({diff}, {n3})"
+   },
+   "constraints": [
+    "{n1} > {n2}",
+    "mod({diff}, {n3}) == 0"
+   ],
+   "segments": [
+    {
+     "t": "妈妈带{n1}元，",
+     "type": "condition"
+    },
+    {
+     "t": "买一个书包用去{n2}元，",
+     "type": "condition"
+    },
+    {
+     "t": "剩下的钱正好买{n3}本同样的笔记本，",
+     "type": "condition"
+    },
+    {
+     "t": "每本多少元？",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "剩下",
+    "每本"
+   ],
+   "table": {
+    "known": [
+     "妈妈带 {n1} 元",
+     "买书包用去 {n2} 元",
+     "剩下的钱买 {n3} 本笔记本"
+    ],
+    "ask": "每本 ？ 元"
+   },
+   "bridge": {
+    "ask": "要求每本多少元，先要算出",
+    "choices": [
+     "买书包后剩下多少元",
+     "每本比书包便宜多少元",
+     "一共买了多少本笔记本"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} - {n2} = {diff}（元）",
+    "{diff} ÷ {n3} = {ans}（元）"
+   ],
+   "answer": "{ans} 元",
+   "tip": "先算括号里的剩余钱数，再把剩余钱数平均分成 {n3} 份。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mixed2",
+   "chapter": "mx2-bracket",
+   "type": "standard",
+   "skill": [
+    "relation",
+    "bridge",
+    "unit"
+   ],
+   "level": 1,
+   "story": "班级有{n1}人，其中{n2}人参加合唱队，剩下的人平均分成{n3}组，每组多少人？",
+   "question": "每组多少人？",
+   "params": {
+    "n1": [
+     40,
+     80,
+     4
+    ],
+    "n2": [
+     4,
+     20,
+     4
+    ],
+    "n3": [
+     4,
+     4,
+     1
+    ]
+   },
+   "calc": {
+    "diff": "{n1} - {n2}",
+    "ans": "div({diff}, {n3})"
+   },
+   "constraints": [
+    "{n1} > {n2}",
+    "mod({diff}, {n3}) == 0"
+   ],
+   "segments": [
+    {
+     "t": "班级有{n1}人，",
+     "type": "condition"
+    },
+    {
+     "t": "其中{n2}人参加合唱队，",
+     "type": "condition"
+    },
+    {
+     "t": "剩下的人平均分成{n3}组，",
+     "type": "condition"
+    },
+    {
+     "t": "每组多少人？",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "平均分成",
+    "每组"
+   ],
+   "table": {
+    "known": [
+     "班级有 {n1} 人",
+     "参加合唱队 {n2} 人",
+     "剩下的人平均分成 {n3} 组"
+    ],
+    "ask": "每组 ？ 人"
+   },
+   "bridge": {
+    "ask": "要求每组多少人，先要算出",
+    "choices": [
+     "剩下多少人没有参加合唱队",
+     "参加合唱队的人平均分几组",
+     "全班一共分几组"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} - {n2} = {diff}（人）",
+    "{diff} ÷ {n3} = {ans}（人）"
+   ],
+   "answer": "{ans} 人",
+   "tip": "先算剩下的人数，再除以组数。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mixed2",
+   "chapter": "mx2-bracket",
+   "type": "standard",
+   "skill": [
+    "relation",
+    "bridge",
+    "unit"
+   ],
+   "level": 2,
+   "story": "每个笔筒原来有{n1}支笔，又放入{n2}支，现在有{n3}个这样的笔筒，一共多少支笔？",
+   "question": "一共多少支笔？",
+   "params": {
+    "n1": [
+     5,
+     12,
+     1
+    ],
+    "n2": [
+     2,
+     8,
+     1
+    ],
+    "n3": [
+     4,
+     9,
+     1
+    ]
+   },
+   "calc": {
+    "each": "{n1} + {n2}",
+    "ans": "{each} * {n3}"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "每个笔筒原来有{n1}支笔，",
+     "type": "condition"
+    },
+    {
+     "t": "又放入{n2}支，",
+     "type": "condition"
+    },
+    {
+     "t": "现在有{n3}个这样的笔筒，",
+     "type": "condition"
+    },
+    {
+     "t": "一共多少支笔？",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每个",
+    "一共"
+   ],
+   "table": {
+    "known": [
+     "每个笔筒原来有 {n1} 支笔",
+     "又放入 {n2} 支",
+     "现在有 {n3} 个笔筒"
+    ],
+    "ask": "一共 ？ 支笔"
+   },
+   "bridge": {
+    "ask": "要求一共有多少支笔，先要算出",
+    "choices": [
+     "每个笔筒现在有多少支笔",
+     "一共有多少个笔筒",
+     "原来比现在少多少支"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} + {n2} = {each}（支）",
+    "{each} × {n3} = {ans}（支）"
+   ],
+   "answer": "{ans} 支",
+   "tip": "先算括号里每个笔筒现在的支数，再乘笔筒个数。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mixed2",
+   "chapter": "mx2-bracket",
+   "type": "standard",
+   "skill": [
+    "relation",
+    "bridge",
+    "unit"
+   ],
+   "level": 2,
+   "story": "每盒有{n1}个鸡蛋，每盒拿走{n2}个后，现在有{n3}盒，一共剩下多少个鸡蛋？",
+   "question": "一共剩下多少个鸡蛋？",
+   "params": {
+    "n1": [
+     10,
+     20,
+     1
+    ],
+    "n2": [
+     2,
+     6,
+     1
+    ],
+    "n3": [
+     3,
+     8,
+     1
+    ]
+   },
+   "calc": {
+    "each": "{n1} - {n2}",
+    "ans": "{each} * {n3}"
+   },
+   "constraints": [
+    "{n1} > {n2}"
+   ],
+   "segments": [
+    {
+     "t": "每盒有{n1}个鸡蛋，",
+     "type": "condition"
+    },
+    {
+     "t": "每盒拿走{n2}个后，",
+     "type": "condition"
+    },
+    {
+     "t": "现在有{n3}盒，",
+     "type": "condition"
+    },
+    {
+     "t": "一共剩下多少个鸡蛋？",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每盒",
+    "剩下"
+   ],
+   "table": {
+    "known": [
+     "每盒有 {n1} 个鸡蛋",
+     "每盒拿走 {n2} 个",
+     "现在有 {n3} 盒"
+    ],
+    "ask": "一共剩下 ？ 个鸡蛋"
+   },
+   "bridge": {
+    "ask": "要求一共剩下多少个鸡蛋，先要算出",
+    "choices": [
+     "每盒剩下多少个鸡蛋",
+     "一共有多少盒鸡蛋",
+     "每盒比原来少多少个"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} - {n2} = {each}（个）",
+    "{each} × {n3} = {ans}（个）"
+   ],
+   "answer": "{ans} 个",
+   "tip": "先算括号里每盒剩下的鸡蛋数，再乘盒数。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mixed2",
+   "chapter": "mx2-bracket",
+   "type": "distractor",
+   "skill": [
+    "distractor",
+    "relation",
+    "bridge"
+   ],
+   "level": 3,
+   "story": "学校有{n1}名同学参加运动会，其中{n2}名同学参加跳绳比赛，剩下的同学平均分成{n3}队参加接力赛，每队需要{n0}名老师负责，每队有多少名同学？",
+   "question": "每队有多少名同学？",
+   "params": {
+    "n1": [
+     40,
+     80,
+     4
+    ],
+    "n2": [
+     4,
+     20,
+     4
+    ],
+    "n3": [
+     4,
+     4,
+     1
+    ],
+    "n0": [
+     1,
+     3,
+     1
+    ]
+   },
+   "calc": {
+    "diff": "{n1} - {n2}",
+    "ans": "div({diff}, {n3})"
+   },
+   "constraints": [
+    "{n1} > {n2}",
+    "mod({diff}, {n3}) == 0"
+   ],
+   "segments": [
+    {
+     "t": "学校有{n1}名同学参加运动会，",
+     "type": "condition"
+    },
+    {
+     "t": "其中{n2}名同学参加跳绳比赛，",
+     "type": "condition"
+    },
+    {
+     "t": "剩下的同学平均分成{n3}队参加接力赛，",
+     "type": "condition"
+    },
+    {
+     "t": "每队需要{n0}名老师负责，",
+     "type": "distractor"
+    },
+    {
+     "t": "每队有多少名同学？",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "剩下",
+    "平均分成",
+    "每队"
+   ],
+   "table": {
+    "known": [
+     "参加运动会 {n1} 名同学",
+     "参加跳绳比赛 {n2} 名同学",
+     "剩下的平均分成 {n3} 队",
+     "每队需要 {n0} 名老师负责"
+    ],
+    "ask": "每队 ？ 名同学"
+   },
+   "bridge": {
+    "ask": "要求每队有多少名同学，先要算出",
+    "choices": [
+     "参加跳绳比赛后剩下多少名同学",
+     "每队需要多少名老师",
+     "参加跳绳比赛有多少名同学"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} - {n2} = {diff}（名）",
+    "{diff} ÷ {n3} = {ans}（名）"
+   ],
+   "answer": "{ans} 名",
+   "tip": "求每队学生人数，要用剩下学生数÷队数；老师人数是多余条件。"
+  },
+  {
+   "id": "NEW",
+   "unit": "mixed2",
+   "chapter": "mx2-bracket",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "relation",
+    "bridge"
+   ],
+   "level": 3,
+   "story": "修一条长{n1}米的路，已经修了{n2}米，剩下的平均每天修多少米？",
+   "question": "剩下的平均每天修多少米？",
+   "params": {
+    "n1": [
+     100,
+     200,
+     5
+    ],
+    "n2": [
+     10,
+     50,
+     5
+    ],
+    "n0": [
+     5,
+     5,
+     1
+    ]
+   },
+   "calc": {
+    "diff": "{n1} - {n2}",
+    "ans": "div({diff}, {n0})"
+   },
+   "constraints": [
+    "{n1} > {n2}",
+    "mod({diff}, {n0}) == 0"
+   ],
+   "segments": [
+    {
+     "t": "修一条长{n1}米的路，",
+     "type": "condition"
+    },
+    {
+     "t": "已经修了{n2}米，",
+     "type": "condition"
+    },
+    {
+     "t": "剩下的平均每天修多少米？",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "剩下",
+    "平均每天"
+   ],
+   "table": {
+    "known": [
+     "路长 {n1} 米",
+     "已经修了 {n2} 米"
+    ],
+    "ask": "剩下的平均每天修 ？ 米",
+    "supplyRow": "（补上：剩下的要几天修完）"
+   },
+   "bridge": {
+    "ask": "要求剩下的平均每天修多少米，先要算出",
+    "choices": [
+     "剩下多少米没修",
+     "已经修了多少天",
+     "每天修多少米"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} - {n2} = {diff}（米）",
+    "{diff} ÷ {n0} = {ans}（米）"
+   ],
+   "answer": "{ans} 米",
+   "tip": "先求剩下多少米，再除以剩下要修的天数。",
+   "supply": {
+    "choices": [
+     "剩下的要{n0}天修完",
+     "已经修了{n0}天",
+     "每天修{n0}米"
+    ],
+    "answer": 0,
+    "why": "要求剩下的平均每天修多少米，需要知道剩下的米数和剩下的天数；已知路长和已修米数，还缺剩下的天数。"
+   }
+  }
+ ]
+}

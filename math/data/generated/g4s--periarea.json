@@ -1,0 +1,1188 @@
+{
+ "gradeId": "g4s",
+ "unitId": "periarea",
+ "templates": [
+  {
+   "id": "NEW",
+   "unit": "periarea",
+   "chapter": "pa-peri",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation"
+   ],
+   "level": 1,
+   "story": "一块长方形菜地长{n1}米，宽{n2}米，四周围上篱笆。",
+   "question": "篱笆长多少米？",
+   "params": {
+    "n1": [
+     5,
+     15,
+     1
+    ],
+    "n2": [
+     3,
+     10,
+     1
+    ]
+   },
+   "calc": {
+    "perimeter": "({n1} + {n2}) * 2"
+   },
+   "constraints": [
+    "{n1} > {n2}"
+   ],
+   "segments": [
+    {
+     "t": "一块长方形菜地长{n1}米",
+     "type": "condition"
+    },
+    {
+     "t": "，宽{n2}米",
+     "type": "condition"
+    },
+    {
+     "t": "，四周围上篱笆。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "长方形",
+    "四周"
+   ],
+   "table": {
+    "known": [
+     "长 {n1} 米",
+     "宽 {n2} 米"
+    ],
+    "ask": "篱笆长 ？ 米"
+   },
+   "bridge": null,
+   "steps": [
+    "（{n1} + {n2}）× 2 = {perimeter}（米）"
+   ],
+   "answer": "{perimeter} 米",
+   "tip": "长方形周长 =（长+宽）×2，别漏乘2。"
+  },
+  {
+   "id": "NEW",
+   "unit": "periarea",
+   "chapter": "pa-peri",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation"
+   ],
+   "level": 1,
+   "story": "一块正方形手帕的边长是{n1}厘米，沿四周缝一圈花边。",
+   "question": "花边长多少厘米？",
+   "params": {
+    "n1": [
+     5,
+     20,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n1} * 4"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "一块正方形手帕的边长是{n1}厘米",
+     "type": "condition"
+    },
+    {
+     "t": "，沿四周缝一圈花边。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "正方形",
+    "四周"
+   ],
+   "table": {
+    "known": [
+     "边长 {n1} 厘米"
+    ],
+    "ask": "花边长 ？ 厘米"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × 4 = {ans}（厘米）"
+   ],
+   "answer": "{ans} 厘米",
+   "tip": "正方形周长=边长×4，四条边一样长。"
+  },
+  {
+   "id": "NEW",
+   "unit": "periarea",
+   "chapter": "pa-peri",
+   "type": "standard",
+   "skill": [
+    "relation",
+    "bridge",
+    "steps"
+   ],
+   "level": 2,
+   "story": "学校长方形操场长{n1}米，宽{n2}米。小明沿操场边线跑了两圈。",
+   "question": "小明一共跑了多少米？",
+   "params": {
+    "n1": [
+     20,
+     60,
+     5
+    ],
+    "n2": [
+     10,
+     30,
+     5
+    ]
+   },
+   "calc": {
+    "perimeter": "({n1} + {n2}) * 2",
+    "total": "{perimeter} * 2"
+   },
+   "constraints": [
+    "{n1} > {n2}"
+   ],
+   "segments": [
+    {
+     "t": "学校长方形操场长{n1}米",
+     "type": "condition"
+    },
+    {
+     "t": "，宽{n2}米。",
+     "type": "condition"
+    },
+    {
+     "t": "小明沿操场边线跑了两圈。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "沿操场边线",
+    "两圈"
+   ],
+   "table": {
+    "known": [
+     "长 {n1} 米",
+     "宽 {n2} 米",
+     "跑 2 圈"
+    ],
+    "ask": "一共跑 ？ 米"
+   },
+   "bridge": {
+    "ask": "要求跑两圈的总长度，先要算出什么？",
+    "choices": [
+     "操场一圈的周长",
+     "操场的面积",
+     "一圈的速度"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "（{n1} + {n2}）× 2 = {perimeter}（米）",
+    "{perimeter} × 2 = {total}（米）"
+   ],
+   "answer": "{total} 米",
+   "tip": "先求一圈周长，再乘圈数。"
+  },
+  {
+   "id": "NEW",
+   "unit": "periarea",
+   "chapter": "pa-peri",
+   "type": "distractor",
+   "skill": [
+    "distractor",
+    "relation"
+   ],
+   "level": 2,
+   "story": "教室后面的长方形宣传栏长{n1}分米，宽{n2}分米。老师买来一条长{n0}分米的彩带，准备沿宣传栏四周贴一圈花边。",
+   "question": "花边至少需要多少分米？",
+   "params": {
+    "n0": [
+     20,
+     40,
+     1
+    ],
+    "n1": [
+     8,
+     18,
+     1
+    ],
+    "n2": [
+     3,
+     8,
+     1
+    ]
+   },
+   "calc": {
+    "perimeter": "({n1} + {n2}) * 2"
+   },
+   "constraints": [
+    "{n1} > {n2}",
+    "{n0} != {n1}",
+    "{n0} != {n2}"
+   ],
+   "segments": [
+    {
+     "t": "教室后面的长方形宣传栏长{n1}分米",
+     "type": "condition"
+    },
+    {
+     "t": "，宽{n2}分米。",
+     "type": "condition"
+    },
+    {
+     "t": "老师买来一条长{n0}分米的彩带",
+     "type": "distractor"
+    },
+    {
+     "t": "，准备沿宣传栏四周贴一圈花边。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "四周",
+    "花边"
+   ],
+   "table": {
+    "known": [
+     "长 {n1} 分米",
+     "宽 {n2} 分米",
+     "彩带长 {n0} 分米"
+    ],
+    "ask": "花边需要 ？ 分米"
+   },
+   "bridge": null,
+   "steps": [
+    "（{n1} + {n2}）× 2 = {perimeter}（分米）"
+   ],
+   "answer": "{perimeter} 分米",
+   "tip": "彩带长度是多余条件，求花边长度只看宣传栏的长和宽。"
+  },
+  {
+   "id": "NEW",
+   "unit": "periarea",
+   "chapter": "pa-peri",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "relation"
+   ],
+   "level": 2,
+   "story": "一个正方形花坛四周围上栏杆。",
+   "question": "栏杆长多少米？",
+   "params": {
+    "n0": [
+     2,
+     10,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n0} * 4"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "一个正方形花坛四周围上栏杆。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "正方形",
+    "四周"
+   ],
+   "table": {
+    "known": [
+     "正方形花坛"
+    ],
+    "ask": "栏杆长 ？ 米",
+    "supplyRow": "（补上：边长 ？ 米）"
+   },
+   "supply": {
+    "choices": [
+     "边长 {n0} 米",
+     "面积 {n0} 平方米",
+     "周长 {n0} 米"
+    ],
+    "answer": 0,
+    "why": "已知是正方形，但求周长还缺边长。"
+   },
+   "bridge": null,
+   "steps": [
+    "{n0} × 4 = {ans}（米）"
+   ],
+   "answer": "{ans} 米",
+   "tip": "求正方形周长必须知道边长，题中缺少边长要补充。"
+  },
+  {
+   "id": "NEW",
+   "unit": "periarea",
+   "chapter": "pa-peri",
+   "type": "standard",
+   "skill": [
+    "relation",
+    "hidden",
+    "steps"
+   ],
+   "level": 3,
+   "story": "王奶奶用篱笆围一个长方形鸡舍，鸡舍长{n1}米，宽{n2}米，长边靠墙，另外三面围篱笆。",
+   "question": "至少需要篱笆多少米？",
+   "params": {
+    "n1": [
+     8,
+     20,
+     1
+    ],
+    "n2": [
+     3,
+     8,
+     1
+    ]
+   },
+   "calc": {
+    "twoWidths": "{n2} * 2",
+    "perimeter": "{n1} + {twoWidths}"
+   },
+   "constraints": [
+    "{n1} > {n2}"
+   ],
+   "segments": [
+    {
+     "t": "王奶奶用篱笆围一个长方形鸡舍",
+     "type": "plain"
+    },
+    {
+     "t": "，鸡舍长{n1}米",
+     "type": "condition"
+    },
+    {
+     "t": "，宽{n2}米",
+     "type": "condition"
+    },
+    {
+     "t": "，长边靠墙，另外三面围篱笆。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "靠墙",
+    "三面"
+   ],
+   "table": {
+    "known": [
+     "长 {n1} 米",
+     "宽 {n2} 米",
+     "长边靠墙"
+    ],
+    "ask": "篱笆长 ？ 米"
+   },
+   "bridge": {
+    "ask": "要求三面篱笆的长度，先要算出什么？",
+    "choices": [
+     "两个宽边的长度和",
+     "四条边的总长度",
+     "鸡舍的面积"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n2} × 2 = {twoWidths}（米）",
+    "{n1} + {twoWidths} = {perimeter}（米）"
+   ],
+   "answer": "{perimeter} 米",
+   "tip": "一面靠墙只围三面，靠墙的长边不用围，别直接算长方形周长。"
+  },
+  {
+   "id": "NEW",
+   "unit": "periarea",
+   "chapter": "pa-area",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation"
+   ],
+   "level": 1,
+   "story": "一个长方形花坛长{n1}米，宽{n2}米。",
+   "question": "花坛的面积是多少平方米？",
+   "params": {
+    "n1": [
+     4,
+     15,
+     1
+    ],
+    "n2": [
+     2,
+     9,
+     1
+    ]
+   },
+   "calc": {
+    "area": "{n1} * {n2}"
+   },
+   "constraints": [
+    "{n1} > {n2}"
+   ],
+   "segments": [
+    {
+     "t": "一个长方形花坛长{n1}米",
+     "type": "condition"
+    },
+    {
+     "t": "，宽{n2}米。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "长方形",
+    "面积"
+   ],
+   "table": {
+    "known": [
+     "长 {n1} 米",
+     "宽 {n2} 米"
+    ],
+    "ask": "面积 ？ 平方米"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × {n2} = {area}（平方米）"
+   ],
+   "answer": "{area} 平方米",
+   "tip": "长方形面积=长×宽，单位是平方米。"
+  },
+  {
+   "id": "NEW",
+   "unit": "periarea",
+   "chapter": "pa-area",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation"
+   ],
+   "level": 1,
+   "story": "一块正方形地砖的边长是{n1}分米。",
+   "question": "这块地砖的面积是多少平方分米？",
+   "params": {
+    "n1": [
+     2,
+     10,
+     1
+    ]
+   },
+   "calc": {
+    "area": "{n1} * {n1}"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "一块正方形地砖的边长是{n1}分米。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "正方形",
+    "面积"
+   ],
+   "table": {
+    "known": [
+     "边长 {n1} 分米"
+    ],
+    "ask": "面积 ？ 平方分米"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × {n1} = {area}（平方分米）"
+   ],
+   "answer": "{area} 平方分米",
+   "tip": "正方形面积=边长×边长，别和周长混淆。"
+  },
+  {
+   "id": "NEW",
+   "unit": "periarea",
+   "chapter": "pa-area",
+   "type": "standard",
+   "skill": [
+    "relation",
+    "bridge",
+    "steps"
+   ],
+   "level": 2,
+   "story": "一间长方形活动室地面长{n1}分米，宽{n2}分米。用面积是{n3}平方分米的正方形地砖铺满。",
+   "question": "一共需要多少块地砖？",
+   "params": {
+    "n1": [
+     8,
+     20,
+     4
+    ],
+    "n2": [
+     4,
+     16,
+     4
+    ],
+    "n3": [
+     4,
+     4,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1} * {n2}",
+    "blocks": "div({total}, {n3})"
+   },
+   "constraints": [
+    "mod({total}, {n3}) == 0"
+   ],
+   "segments": [
+    {
+     "t": "一间长方形活动室地面长{n1}分米",
+     "type": "condition"
+    },
+    {
+     "t": "，宽{n2}分米。",
+     "type": "condition"
+    },
+    {
+     "t": "用面积是{n3}平方分米的正方形地砖铺满。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "铺满",
+    "每块"
+   ],
+   "table": {
+    "known": [
+     "长 {n1} 分米",
+     "宽 {n2} 分米",
+     "每块地砖面积 {n3} 平方分米"
+    ],
+    "ask": "需要 ？ 块"
+   },
+   "bridge": {
+    "ask": "要求需要多少块地砖，先要算出什么？",
+    "choices": [
+     "活动室地面的总面积",
+     "每块地砖的周长",
+     "活动室的长宽之和"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {total}（平方分米）",
+    "{total} ÷ {n3} = {blocks}（块）"
+   ],
+   "answer": "{blocks} 块",
+   "tip": "先求地面总面积，再看总面积里有多少个地砖面积。"
+  },
+  {
+   "id": "NEW",
+   "unit": "periarea",
+   "chapter": "pa-area",
+   "type": "standard",
+   "skill": [
+    "relation",
+    "steps"
+   ],
+   "level": 3,
+   "story": "一个长方形花园长{n1}米，宽{n2}米，中间有一个边长{n3}米的正方形喷水池。",
+   "question": "花园里草地的面积是多少平方米？",
+   "params": {
+    "n1": [
+     8,
+     15,
+     1
+    ],
+    "n2": [
+     6,
+     12,
+     1
+    ],
+    "n3": [
+     2,
+     5,
+     1
+    ]
+   },
+   "calc": {
+    "garden": "{n1} * {n2}",
+    "pool": "{n3} * {n3}",
+    "grass": "{garden} - {pool}"
+   },
+   "constraints": [
+    "{n1} > {n3}",
+    "{n2} > {n3}"
+   ],
+   "segments": [
+    {
+     "t": "一个长方形花园长{n1}米",
+     "type": "condition"
+    },
+    {
+     "t": "，宽{n2}米",
+     "type": "condition"
+    },
+    {
+     "t": "，中间有一个边长{n3}米的正方形喷水池。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "草地",
+    "相减"
+   ],
+   "table": {
+    "known": [
+     "花园长 {n1} 米",
+     "花园宽 {n2} 米",
+     "水池边长 {n3} 米"
+    ],
+    "ask": "草地面积 ？ 平方米"
+   },
+   "bridge": {
+    "ask": "要求草地面积，先要算出什么？",
+    "choices": [
+     "花园总面积和喷水池面积",
+     "花园的周长和喷水池周长",
+     "长与宽的和"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {garden}（平方米）",
+    "{n3} × {n3} = {pool}（平方米）",
+    "{garden} - {pool} = {grass}（平方米）"
+   ],
+   "answer": "{grass} 平方米",
+   "tip": "先分别求总面积和水池面积，再相减。"
+  },
+  {
+   "id": "NEW",
+   "unit": "periarea",
+   "chapter": "pa-area",
+   "type": "distractor",
+   "skill": [
+    "distractor",
+    "relation"
+   ],
+   "level": 2,
+   "story": "一块长方形宣传板长{n1}分米，宽{n2}分米。做边框用了{n0}分米长的木条。",
+   "question": "宣传板的面积是多少平方分米？",
+   "params": {
+    "n0": [
+     30,
+     60,
+     1
+    ],
+    "n1": [
+     8,
+     18,
+     1
+    ],
+    "n2": [
+     3,
+     8,
+     1
+    ]
+   },
+   "calc": {
+    "area": "{n1} * {n2}"
+   },
+   "constraints": [
+    "{n1} > {n2}",
+    "{n0} != {n1}",
+    "{n0} != {n2}"
+   ],
+   "segments": [
+    {
+     "t": "一块长方形宣传板长{n1}分米",
+     "type": "condition"
+    },
+    {
+     "t": "，宽{n2}分米。",
+     "type": "condition"
+    },
+    {
+     "t": "做边框用了{n0}分米长的木条。",
+     "type": "distractor"
+    }
+   ],
+   "relations": [
+    "面积",
+    "长",
+    "宽"
+   ],
+   "table": {
+    "known": [
+     "长 {n1} 分米",
+     "宽 {n2} 分米",
+     "木条长 {n0} 分米"
+    ],
+    "ask": "面积 ？ 平方分米"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × {n2} = {area}（平方分米）"
+   ],
+   "answer": "{area} 平方分米",
+   "tip": "木条长度是求边框用的，求面积只看长和宽。"
+  },
+  {
+   "id": "NEW",
+   "unit": "periarea",
+   "chapter": "pa-area",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "condition"
+   ],
+   "level": 2,
+   "story": "学校有一个长方形花坛，长{n1}米。要计算花坛的面积。",
+   "question": "花坛的面积是多少平方米？",
+   "params": {
+    "n0": [
+     2,
+     8,
+     1
+    ],
+    "n1": [
+     3,
+     12,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n1} * {n0}"
+   },
+   "constraints": [
+    "{n0} != {n1}"
+   ],
+   "segments": [
+    {
+     "t": "学校有一个长方形花坛",
+     "type": "plain"
+    },
+    {
+     "t": "，长{n1}米。",
+     "type": "condition"
+    },
+    {
+     "t": "要计算花坛的面积。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "长方形",
+    "面积"
+   ],
+   "table": {
+    "known": [
+     "长 {n1} 米"
+    ],
+    "ask": "面积 ？ 平方米",
+    "supplyRow": "（补上：宽 ？ 米）"
+   },
+   "supply": {
+    "choices": [
+     "宽{n0}米",
+     "周长{n0}米",
+     "面积{n0}平方米"
+    ],
+    "answer": 0,
+    "why": "已知长，求长方形面积还缺宽，需要补充宽。"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × {n0} = {ans}（平方米）"
+   ],
+   "answer": "{ans} 平方米",
+   "tip": "求长方形面积必须同时知道长和宽，题中缺宽要补充。"
+  },
+  {
+   "id": "NEW",
+   "unit": "periarea",
+   "chapter": "pa-conv",
+   "type": "standard",
+   "skill": [
+    "unit",
+    "relation"
+   ],
+   "level": 1,
+   "story": "一张课桌面的面积是{n1}平方分米。",
+   "question": "合多少平方厘米？",
+   "params": {
+    "n1": [
+     2,
+     20,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n1} * 100"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "一张课桌面的面积是{n1}平方分米。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "平方分米",
+    "平方厘米"
+   ],
+   "table": {
+    "known": [
+     "面积 {n1} 平方分米"
+    ],
+    "ask": "合 ？ 平方厘米"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × 100 = {ans}（平方厘米）"
+   ],
+   "answer": "{ans} 平方厘米",
+   "tip": "1平方分米=100平方厘米，高级单位换低级单位乘100。"
+  },
+  {
+   "id": "NEW",
+   "unit": "periarea",
+   "chapter": "pa-conv",
+   "type": "standard",
+   "skill": [
+    "unit",
+    "relation"
+   ],
+   "level": 1,
+   "story": "教室地面的面积是{n1}平方米。",
+   "question": "合多少平方分米？",
+   "params": {
+    "n1": [
+     2,
+     12,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n1} * 100"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "教室地面的面积是{n1}平方米。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "平方米",
+    "平方分米"
+   ],
+   "table": {
+    "known": [
+     "面积 {n1} 平方米"
+    ],
+    "ask": "合 ？ 平方分米"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × 100 = {ans}（平方分米）"
+   ],
+   "answer": "{ans} 平方分米",
+   "tip": "1平方米=100平方分米，别和长度单位进率混淆。"
+  },
+  {
+   "id": "NEW",
+   "unit": "periarea",
+   "chapter": "pa-conv",
+   "type": "standard",
+   "skill": [
+    "unit",
+    "bridge",
+    "steps"
+   ],
+   "level": 2,
+   "story": "一块长方形桌布长{n1}分米，宽{n2}分米。",
+   "question": "它的面积是多少平方分米？合多少平方厘米？",
+   "params": {
+    "n1": [
+     4,
+     12,
+     1
+    ],
+    "n2": [
+     3,
+     9,
+     1
+    ]
+   },
+   "calc": {
+    "area": "{n1} * {n2}",
+    "ans": "{area} * 100"
+   },
+   "constraints": [
+    "{n1} > {n2}"
+   ],
+   "segments": [
+    {
+     "t": "一块长方形桌布长{n1}分米",
+     "type": "condition"
+    },
+    {
+     "t": "，宽{n2}分米。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "面积",
+    "平方分米",
+    "平方厘米"
+   ],
+   "table": {
+    "known": [
+     "长 {n1} 分米",
+     "宽 {n2} 分米"
+    ],
+    "ask": "面积 ？ 平方分米，合 ？ 平方厘米"
+   },
+   "bridge": {
+    "ask": "要求合多少平方厘米，先要算出什么？",
+    "choices": [
+     "桌布的面积是多少平方分米",
+     "桌布的周长是多少分米",
+     "长与宽的和"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {area}（平方分米）",
+    "{area} × 100 = {ans}（平方厘米）"
+   ],
+   "answer": "{area} 平方分米，合 {ans} 平方厘米",
+   "tip": "先求面积，再按1平方分米=100平方厘米换算。"
+  },
+  {
+   "id": "NEW",
+   "unit": "periarea",
+   "chapter": "pa-conv",
+   "type": "standard",
+   "skill": [
+    "unit",
+    "bridge",
+    "steps"
+   ],
+   "level": 2,
+   "story": "一块正方形地砖的边长是{n1}分米。",
+   "question": "它的面积是多少平方分米？合多少平方厘米？",
+   "params": {
+    "n1": [
+     2,
+     10,
+     1
+    ]
+   },
+   "calc": {
+    "area": "{n1} * {n1}",
+    "ans": "{area} * 100"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "一块正方形地砖的边长是{n1}分米。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "正方形",
+    "平方分米",
+    "平方厘米"
+   ],
+   "table": {
+    "known": [
+     "边长 {n1} 分米"
+    ],
+    "ask": "面积 ？ 平方分米，合 ？ 平方厘米"
+   },
+   "bridge": {
+    "ask": "要求地砖面积合多少平方厘米，先要算出什么？",
+    "choices": [
+     "地砖的面积是多少平方分米",
+     "地砖的周长是多少分米",
+     "边长的4倍"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n1} = {area}（平方分米）",
+    "{area} × 100 = {ans}（平方厘米）"
+   ],
+   "answer": "{area} 平方分米，合 {ans} 平方厘米",
+   "tip": "先算平方分米面积，再乘100换算成平方厘米。"
+  },
+  {
+   "id": "NEW",
+   "unit": "periarea",
+   "chapter": "pa-conv",
+   "type": "standard",
+   "skill": [
+    "unit",
+    "relation",
+    "steps"
+   ],
+   "level": 3,
+   "story": "一张长方形纸长{n1}厘米，宽{n2}厘米；一张正方形纸的面积是{n3}平方分米。",
+   "question": "两张纸的面积相差多少平方厘米？",
+   "params": {
+    "n1": [
+     10,
+     30,
+     1
+    ],
+    "n2": [
+     5,
+     20,
+     1
+    ],
+    "n3": [
+     1,
+     6,
+     1
+    ]
+   },
+   "calc": {
+    "rect": "{n1} * {n2}",
+    "squareCm": "{n3} * 100",
+    "hi": "max({rect}, {squareCm})",
+    "lo": "min({rect}, {squareCm})",
+    "diff": "{hi} - {lo}"
+   },
+   "constraints": [
+    "{rect} != {squareCm}"
+   ],
+   "segments": [
+    {
+     "t": "一张长方形纸长{n1}厘米",
+     "type": "condition"
+    },
+    {
+     "t": "，宽{n2}厘米；",
+     "type": "condition"
+    },
+    {
+     "t": "一张正方形纸的面积是{n3}平方分米。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "相差",
+    "平方厘米"
+   ],
+   "table": {
+    "known": [
+     "长方形长 {n1} 厘米",
+     "长方形宽 {n2} 厘米",
+     "正方形面积 {n3} 平方分米"
+    ],
+    "ask": "面积相差 ？ 平方厘米"
+   },
+   "bridge": {
+    "ask": "要求两张纸的面积差，先要算出什么？",
+    "choices": [
+     "长方形纸和正方形纸各自的面积",
+     "两张纸的周长",
+     "长与宽的和"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {rect}（平方厘米）",
+    "{n3} × 100 = {squareCm}（平方厘米）",
+    "{hi} - {lo} = {diff}（平方厘米）"
+   ],
+   "answer": "{diff} 平方厘米",
+   "tip": "单位不同不能直接比较，先统一成平方厘米再相减。"
+  },
+  {
+   "id": "NEW",
+   "unit": "periarea",
+   "chapter": "pa-conv",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "unit",
+    "steps"
+   ],
+   "level": 2,
+   "story": "一块长方形花布长{n1}分米，要计算它的面积。",
+   "question": "花布的面积合多少平方厘米？",
+   "params": {
+    "n0": [
+     2,
+     8,
+     1
+    ],
+    "n1": [
+     3,
+     12,
+     1
+    ]
+   },
+   "calc": {
+    "area": "{n1} * {n0}",
+    "ans": "{area} * 100"
+   },
+   "constraints": [
+    "{n0} != {n1}"
+   ],
+   "segments": [
+    {
+     "t": "一块长方形花布长{n1}分米",
+     "type": "condition"
+    },
+    {
+     "t": "，要计算它的面积。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "长方形",
+    "面积",
+    "平方厘米"
+   ],
+   "table": {
+    "known": [
+     "长 {n1} 分米"
+    ],
+    "ask": "面积合 ？ 平方厘米",
+    "supplyRow": "（补上：宽 ？ 分米）"
+   },
+   "supply": {
+    "choices": [
+     "宽{n0}分米",
+     "面积{n0}平方分米",
+     "周长{n0}分米"
+    ],
+    "answer": 0,
+    "why": "已知长，求长方形面积还缺宽，需要补充宽。"
+   },
+   "bridge": {
+    "ask": "要求面积合多少平方厘米，先要算出什么？",
+    "choices": [
+     "花布的面积是多少平方分米",
+     "花布的周长是多少分米",
+     "长与宽的和"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n0} = {area}（平方分米）",
+    "{area} × 100 = {ans}（平方厘米）"
+   ],
+   "answer": "{ans} 平方厘米",
+   "tip": "求面积缺宽，先补宽；求出平方分米后再乘100换算。"
+  }
+ ]
+}

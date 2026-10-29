@@ -1,0 +1,858 @@
+{
+ "gradeId": "g4x",
+ "unitId": "average",
+ "templates": [
+  {
+   "id": "NEW",
+   "unit": "average",
+   "chapter": "a-basic",
+   "type": "standard",
+   "skill": [
+    "unit",
+    "steps"
+   ],
+   "level": 1,
+   "story": "小明四次数学测验的总分是 {n1} 分。",
+   "question": "平均每次得多少分？",
+   "params": {
+    "n1": [
+     240,
+     360,
+     4
+    ]
+   },
+   "calc": {
+    "ans": "div({n1},4)"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "小明四次数学测验的总分是 {n1} 分。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "总分",
+    "平均"
+   ],
+   "table": {
+    "known": [
+     "四次总分 {n1} 分"
+    ],
+    "ask": "平均每次 ？ 分"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1}÷4={ans}（分）"
+   ],
+   "answer": "{ans} 分",
+   "tip": "平均数=总数÷份数，四次的总分要平均分成4份。"
+  },
+  {
+   "id": "NEW",
+   "unit": "average",
+   "chapter": "a-basic",
+   "type": "standard",
+   "skill": [
+    "relation",
+    "steps"
+   ],
+   "level": 1,
+   "story": "两名同学身高分别是 {n1} 厘米和 {n2} 厘米。",
+   "question": "平均身高多少厘米？",
+   "params": {
+    "n1": [
+     120,
+     150,
+     2
+    ],
+    "n2": [
+     122,
+     152,
+     2
+    ]
+   },
+   "calc": {
+    "total": "{n1}+{n2}",
+    "ans": "div({total},2)"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "两名同学身高分别是 {n1} 厘米和 {n2} 厘米。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "平均身高",
+    "分别是"
+   ],
+   "table": {
+    "known": [
+     "两人身高 {n1} 厘米、{n2} 厘米"
+    ],
+    "ask": "平均身高 ？ 厘米"
+   },
+   "bridge": {
+    "ask": "要求平均身高，先要算出什么？",
+    "choices": [
+     "两人的身高总和",
+     "两人的身高差",
+     "较高同学的身高"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1}+{n2}={total}（厘米）",
+    "{total}÷2={ans}（厘米）"
+   ],
+   "answer": "{ans} 厘米",
+   "tip": "先求两人身高的总和，再除以人数2。"
+  },
+  {
+   "id": "NEW",
+   "unit": "average",
+   "chapter": "a-basic",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "steps"
+   ],
+   "level": 2,
+   "story": "小红四天读书页数分别是 {n1} 页、{n2} 页、{n1} 页、{n2} 页。",
+   "question": "平均每天读多少页？",
+   "params": {
+    "n1": [
+     10,
+     40,
+     2
+    ],
+    "n2": [
+     12,
+     42,
+     2
+    ]
+   },
+   "calc": {
+    "total": "{n1}+{n2}+{n1}+{n2}",
+    "ans": "div({total},4)"
+   },
+   "constraints": [
+    "{n1} != {n2}"
+   ],
+   "segments": [
+    {
+     "t": "小红四天读书页数分别是 {n1} 页、{n2} 页、{n1} 页、{n2} 页。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "平均每天",
+    "四天"
+   ],
+   "table": {
+    "known": [
+     "四天页数 {n1}、{n2}、{n1}、{n2} 页"
+    ],
+    "ask": "平均每天 ？ 页"
+   },
+   "bridge": {
+    "ask": "要求平均每天读多少页，先要算出什么？",
+    "choices": [
+     "四天读书的总页数",
+     "第一天比第二天多读的页数",
+     "四天的平均页数"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1}+{n2}+{n1}+{n2}={total}（页）",
+    "{total}÷4={ans}（页）"
+   ],
+   "answer": "{ans} 页",
+   "tip": "先求四天总页数，再按4天平均分。"
+  },
+  {
+   "id": "NEW",
+   "unit": "average",
+   "chapter": "a-basic",
+   "type": "distractor",
+   "skill": [
+    "distractor",
+    "relation",
+    "steps"
+   ],
+   "level": 2,
+   "story": "王阿姨第一天收白菜 {n1} 千克，第二天收白菜 {n2} 千克，装白菜用了 {n0} 个筐。",
+   "question": "平均每天收白菜多少千克？",
+   "params": {
+    "n1": [
+     20,
+     60,
+     2
+    ],
+    "n2": [
+     22,
+     62,
+     2
+    ],
+    "n0": [
+     3,
+     10,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1}+{n2}",
+    "ans": "div({total},2)"
+   },
+   "constraints": [
+    "{n0} != {n1}",
+    "{n0} != {n2}"
+   ],
+   "segments": [
+    {
+     "t": "王阿姨第一天收白菜 {n1} 千克，",
+     "type": "condition"
+    },
+    {
+     "t": "第二天收白菜 {n2} 千克，",
+     "type": "condition"
+    },
+    {
+     "t": "装白菜用了 {n0} 个筐。",
+     "type": "distractor"
+    }
+   ],
+   "relations": [
+    "平均每天",
+    "用了几个筐"
+   ],
+   "table": {
+    "known": [
+     "第一天 {n1} 千克",
+     "第二天 {n2} 千克",
+     "用了 {n0} 个筐"
+    ],
+    "ask": "平均每天 ？ 千克"
+   },
+   "bridge": {
+    "ask": "要求平均每天收多少千克，先要算出什么？",
+    "choices": [
+     "两天收白菜的总千克数",
+     "装白菜用了几个筐",
+     "第一天比第二天多收多少千克"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1}+{n2}={total}（千克）",
+    "{total}÷2={ans}（千克）"
+   ],
+   "answer": "{ans} 千克",
+   "tip": "“用了几个筐”是多余条件，平均每天只需看总千克数和天数。"
+  },
+  {
+   "id": "NEW",
+   "unit": "average",
+   "chapter": "a-basic",
+   "type": "standard",
+   "skill": [
+    "hidden",
+    "relation",
+    "steps"
+   ],
+   "level": 3,
+   "story": "小明五次收集邮票平均每次收集 {n1} 枚，前四次共收集 {n2} 枚。",
+   "question": "第五次收集了多少枚邮票？",
+   "params": {
+    "n1": [
+     10,
+     15,
+     1
+    ],
+    "n2": [
+     30,
+     45,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1}*5",
+    "ans": "{total}-{n2}"
+   },
+   "constraints": [
+    "{n2} < {total}"
+   ],
+   "segments": [
+    {
+     "t": "小明五次收集邮票平均每次收集 {n1} 枚，",
+     "type": "condition"
+    },
+    {
+     "t": "前四次共收集 {n2} 枚。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "平均每次",
+    "共收集",
+    "第五次"
+   ],
+   "table": {
+    "known": [
+     "五次平均每次 {n1} 枚",
+     "前四次共 {n2} 枚"
+    ],
+    "ask": "第五次 ？ 枚"
+   },
+   "bridge": {
+    "ask": "要求第五次收集的枚数，先要算出什么？",
+    "choices": [
+     "五次收集的总枚数",
+     "前四次平均每次多少枚",
+     "第五次比平均多多少"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1}×5={total}（枚）",
+    "{total}-{n2}={ans}（枚）"
+   ],
+   "answer": "{ans} 枚",
+   "tip": "平均数×次数=总数，第五次=总数-前四次总数。"
+  },
+  {
+   "id": "NEW",
+   "unit": "average",
+   "chapter": "a-basic",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "hidden",
+    "steps"
+   ],
+   "level": 3,
+   "story": "小明几次跳绳的平均成绩是 {n1} 个，前四次共跳 {n2} 个。",
+   "question": "第五次跳了多少个？",
+   "params": {
+    "n1": [
+     80,
+     100,
+     1
+    ],
+    "n2": [
+     300,
+     380,
+     1
+    ],
+    "n0": [
+     5,
+     5,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1}*{n0}",
+    "ans": "{total}-{n2}"
+   },
+   "constraints": [
+    "{ans} > 0",
+    "{ans} <= 150"
+   ],
+   "segments": [
+    {
+     "t": "小明几次跳绳的平均成绩是 {n1} 个，",
+     "type": "condition"
+    },
+    {
+     "t": "前四次共跳 {n2} 个。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "平均成绩",
+    "前四次",
+    "第五次"
+   ],
+   "table": {
+    "known": [
+     "平均每次 {n1} 个",
+     "前四次共 {n2} 个"
+    ],
+    "ask": "第五次 ？ 个",
+    "supplyRow": "（补上：一共跳了 {n0} 次）"
+   },
+   "bridge": {
+    "ask": "补上总次数后，要求第五次跳的个数，先要算出什么？",
+    "choices": [
+     "五次跳绳的总个数",
+     "前四次的平均成绩",
+     "第五次比平均多跳多少个"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1}×{n0}={total}（个）",
+    "{total}-{n2}={ans}（个）"
+   ],
+   "answer": "{ans} 个",
+   "tip": "平均数×次数=总数，补上“几次”才能求总个数。",
+   "supply": {
+    "choices": [
+     "一共跳了 {n0} 次",
+     "前四次的平均成绩是多少",
+     "第五次比平均多跳多少个"
+    ],
+    "answer": 0,
+    "why": "题目只说了平均成绩和前四次总数，不知道一共跳了几次，无法求总个数。"
+   }
+  },
+  {
+   "id": "NEW",
+   "unit": "average",
+   "chapter": "a-app",
+   "type": "standard",
+   "skill": [
+    "unit",
+    "relation"
+   ],
+   "level": 1,
+   "story": "四年级3个班平均每班捐书 {n1} 本。",
+   "question": "三个班一共捐书多少本？",
+   "params": {
+    "n1": [
+     30,
+     60,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n1}*3"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "四年级3个班平均每班捐书 {n1} 本。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "平均每班",
+    "一共"
+   ],
+   "table": {
+    "known": [
+     "3个班",
+     "平均每班 {n1} 本"
+    ],
+    "ask": "一共 ？ 本"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1}×3={ans}（本）"
+   ],
+   "answer": "{ans} 本",
+   "tip": "平均数×份数=总数，先看清平均的是几个班。"
+  },
+  {
+   "id": "NEW",
+   "unit": "average",
+   "chapter": "a-app",
+   "type": "standard",
+   "skill": [
+    "relation",
+    "steps"
+   ],
+   "level": 2,
+   "story": "小明有 {n1} 张画片，小红有 {n2} 张画片。",
+   "question": "小明给小红多少张画片后，两人的画片同样多？",
+   "params": {
+    "n1": [
+     30,
+     50,
+     2
+    ],
+    "n2": [
+     10,
+     30,
+     2
+    ]
+   },
+   "calc": {
+    "diff": "{n1}-{n2}",
+    "ans": "div({diff},2)"
+   },
+   "constraints": [
+    "{n1} > {n2}"
+   ],
+   "segments": [
+    {
+     "t": "小明有 {n1} 张画片，",
+     "type": "condition"
+    },
+    {
+     "t": "小红有 {n2} 张画片。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "同样多",
+    "给"
+   ],
+   "table": {
+    "known": [
+     "小明 {n1} 张",
+     "小红 {n2} 张"
+    ],
+    "ask": "小明给小红 ？ 张"
+   },
+   "bridge": {
+    "ask": "要求小明给小红多少张，先要算出什么？",
+    "choices": [
+     "两人画片相差多少张",
+     "两人一共有多少张",
+     "小明原来有多少张"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1}-{n2}={diff}（张）",
+    "{diff}÷2={ans}（张）"
+   ],
+   "answer": "{ans} 张",
+   "tip": "移多补少时，给的是相差数的一半。"
+  },
+  {
+   "id": "NEW",
+   "unit": "average",
+   "chapter": "a-app",
+   "type": "distractor",
+   "skill": [
+    "distractor",
+    "hidden",
+    "steps"
+   ],
+   "level": 2,
+   "story": "四名同学的平均身高是 {n1} 厘米，其中三名同学的身高分别是 {n2}、{n3}、{n4} 厘米。教室门高 {n0} 厘米。",
+   "question": "第四名同学身高多少厘米？",
+   "params": {
+    "n1": [
+     135,
+     145,
+     1
+    ],
+    "n2": [
+     130,
+     140,
+     1
+    ],
+    "n3": [
+     132,
+     142,
+     1
+    ],
+    "n4": [
+     131,
+     141,
+     1
+    ],
+    "n0": [
+     190,
+     210,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1}*4",
+    "knownSum": "{n2}+{n3}+{n4}",
+    "ans": "{total}-{knownSum}"
+   },
+   "constraints": [
+    "{ans} >= 115",
+    "{ans} <= 175",
+    "{n0} != {n1}",
+    "{n0} != {n2}",
+    "{n0} != {n3}",
+    "{n0} != {n4}"
+   ],
+   "segments": [
+    {
+     "t": "四名同学的平均身高是 {n1} 厘米，",
+     "type": "condition"
+    },
+    {
+     "t": "其中三名同学的身高分别是 {n2}、{n3}、{n4} 厘米。",
+     "type": "condition"
+    },
+    {
+     "t": "教室门高 {n0} 厘米。",
+     "type": "distractor"
+    }
+   ],
+   "relations": [
+    "平均身高",
+    "第四名"
+   ],
+   "table": {
+    "known": [
+     "平均身高 {n1} 厘米",
+     "三名同学身高 {n2}、{n3}、{n4} 厘米",
+     "教室门高 {n0} 厘米"
+    ],
+    "ask": "第四名 ？ 厘米"
+   },
+   "bridge": {
+    "ask": "要求第四名同学的身高，先要算出什么？",
+    "choices": [
+     "四名同学的身高总和",
+     "教室门比同学高多少",
+     "前三名同学的平均身高"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1}×4={total}（厘米）",
+    "{n2}+{n3}+{n4}={knownSum}（厘米）",
+    "{total}-{knownSum}={ans}（厘米）"
+   ],
+   "answer": "{ans} 厘米",
+   "tip": "门高是多余条件，求身高总和时用不到。"
+  },
+  {
+   "id": "NEW",
+   "unit": "average",
+   "chapter": "a-app",
+   "type": "standard",
+   "skill": [
+    "unit",
+    "relation",
+    "steps"
+   ],
+   "level": 2,
+   "story": "四名同学数学平均分是 {n1} 分，又转来一名同学，他的数学成绩是 {n2} 分。",
+   "question": "现在五名同学的数学总分是多少分？",
+   "params": {
+    "n1": [
+     80,
+     95,
+     1
+    ],
+    "n2": [
+     70,
+     100,
+     1
+    ]
+   },
+   "calc": {
+    "oldTotal": "{n1}*4",
+    "ans": "{oldTotal}+{n2}"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "四名同学数学平均分是 {n1} 分，",
+     "type": "condition"
+    },
+    {
+     "t": "又转来一名同学，他的数学成绩是 {n2} 分。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "平均分",
+    "总分"
+   ],
+   "table": {
+    "known": [
+     "4名同学平均 {n1} 分",
+     "新同学 {n2} 分"
+    ],
+    "ask": "5名同学总分 ？ 分"
+   },
+   "bridge": {
+    "ask": "要求现在五名同学的总分，先要算出什么？",
+    "choices": [
+     "原来四名同学的总分",
+     "新同学的排名",
+     "五名同学的平均分"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1}×4={oldTotal}（分）",
+    "{oldTotal}+{n2}={ans}（分）"
+   ],
+   "answer": "{ans} 分",
+   "tip": "平均数×人数=原来总分，再把新同学成绩加上。"
+  },
+  {
+   "id": "NEW",
+   "unit": "average",
+   "chapter": "a-app",
+   "type": "standard",
+   "skill": [
+    "hidden",
+    "relation",
+    "steps"
+   ],
+   "level": 3,
+   "story": "前三天平均每天摘苹果 {n1} 千克，四天平均每天摘苹果 {n2} 千克。",
+   "question": "第四天摘了多少千克苹果？",
+   "params": {
+    "n1": [
+     20,
+     28,
+     1
+    ],
+    "n2": [
+     23,
+     30,
+     1
+    ]
+   },
+   "calc": {
+    "total3": "{n1}*3",
+    "total4": "{n2}*4",
+    "ans": "{total4}-{total3}"
+   },
+   "constraints": [
+    "{n2} > {n1}"
+   ],
+   "segments": [
+    {
+     "t": "前三天平均每天摘苹果 {n1} 千克，",
+     "type": "condition"
+    },
+    {
+     "t": "四天平均每天摘苹果 {n2} 千克。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "平均每天",
+    "第四天"
+   ],
+   "table": {
+    "known": [
+     "前三天平均每天 {n1} 千克",
+     "四天平均每天 {n2} 千克"
+    ],
+    "ask": "第四天 ？ 千克"
+   },
+   "bridge": {
+    "ask": "要求第四天摘的千克数，先要算出什么？",
+    "choices": [
+     "前三天的总产量和四天的总产量",
+     "前三天和四天的平均产量差",
+     "第四天比前三天平均多多少"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1}×3={total3}（千克）",
+    "{n2}×4={total4}（千克）",
+    "{total4}-{total3}={ans}（千克）"
+   ],
+   "answer": "{ans} 千克",
+   "tip": "平均每天×天数=总产量，第四天=四天总数-前三天总数。"
+  },
+  {
+   "id": "NEW",
+   "unit": "average",
+   "chapter": "a-app",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "hidden",
+    "steps"
+   ],
+   "level": 3,
+   "story": "四年级几个班平均每班有 {n1} 人，其中一班有 {n2} 人，二班有 {n3} 人。",
+   "question": "三班有多少人？",
+   "params": {
+    "n1": [
+     30,
+     40,
+     1
+    ],
+    "n2": [
+     28,
+     38,
+     1
+    ],
+    "n3": [
+     29,
+     39,
+     1
+    ],
+    "n0": [
+     3,
+     3,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1}*{n0}",
+    "sum12": "{n2}+{n3}",
+    "ans": "{total}-{sum12}"
+   },
+   "constraints": [
+    "{ans} > 0"
+   ],
+   "segments": [
+    {
+     "t": "四年级几个班平均每班有 {n1} 人，",
+     "type": "condition"
+    },
+    {
+     "t": "其中一班有 {n2} 人，",
+     "type": "condition"
+    },
+    {
+     "t": "二班有 {n3} 人。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "平均每班",
+    "三班"
+   ],
+   "table": {
+    "known": [
+     "平均每班 {n1} 人",
+     "一班 {n2} 人",
+     "二班 {n3} 人"
+    ],
+    "ask": "三班 ？ 人",
+    "supplyRow": "（补上：一共有 {n0} 个班）"
+   },
+   "bridge": {
+    "ask": "补上班级数后，要求三班人数，先要算出什么？",
+    "choices": [
+     "四年级总人数",
+     "一班和二班的平均人数",
+     "三班比二班多几人"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1}×{n0}={total}（人）",
+    "{n2}+{n3}={sum12}（人）",
+    "{total}-{sum12}={ans}（人）"
+   ],
+   "answer": "{ans} 人",
+   "tip": "平均数×份数=总数，补上“几个班”才能求总人数。",
+   "supply": {
+    "choices": [
+     "一共有 {n0} 个班",
+     "一班比二班多多少人",
+     "平均每班有多少人"
+    ],
+    "answer": 0,
+    "why": "题目只说了平均每班人数和两个班的人数，不知道一共有几个班，无法求总人数。"
+   }
+  }
+ ]
+}
