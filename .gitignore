@@ -17,3 +17,6 @@ __pycache__/
 
 # 教材下载产物：版权归出版社且体量大，不进库不部署
 textbook/books/
+
+# ZCode 客户端会话产物
+.zcode/
