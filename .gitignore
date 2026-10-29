@@ -14,3 +14,6 @@ flashcard/cards/base/
 
 # Python 字节码缓存
 __pycache__/
+
+# 教材下载产物：版权归出版社且体量大，不进库不部署
+textbook/books/

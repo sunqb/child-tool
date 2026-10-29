@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>审题雷达 · 数学审题训练</title>
+<link rel="icon" href="data:,">
+<style>
+  :root {
+    --ink: #1f2328;
+    --ink-2: #5c6470;
+    --ink-3: #98a1ad;
+    --paper: #f6f4ef;
+    --card: #ffffff;
+    --line: #e7e3da;
+    --accent: #7c3aed;
+    --accent-soft: #f1eafe;
+    --good: #0f766e;
+    --bad: #d6453d;
+    --radius: 14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: var(--paper); }
+  body {
+    font-family: -apple-system, "SF Pro Text", "PingFang SC", "Noto Sans SC", sans-serif;
+    color: var(--ink);
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 16px 16px 48px;
+  }
+
+  .top-bar { display: flex; justify-content: space-between; align-items: center; margin: 2px 2px 14px; }
+  .top-bar .home { font-size: 13px; color: var(--ink-3); text-decoration: none; }
+
+  .screen { display: none; }
+  .screen.on { display: block; }
+
+  .p-title { font-size: 21px; font-weight: 700; margin: 6px 2px 2px; }
+  .p-sub { font-size: 13px; color: var(--ink-2); margin: 0 2px 18px; }
+
+  .howto {
+    background: var(--card); border: 1.5px solid var(--line); border-radius: var(--radius);
+    padding: 12px 14px; font-size: 13px; color: var(--ink-2); margin-bottom: 16px; line-height: 1.9;
+  }
+  .howto b { color: var(--ink); }
+
+  .sec { margin-bottom: 20px; }
+  .sec-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .sec-num {
+    width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: #fff;
+    font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex: none;
+  }
+  .sec-head h3 { font-size: 15px; }
+  .sec-head .sec-side { margin-left: auto; font-size: 12px; color: var(--ink-3); }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    padding: 7px 14px; border-radius: 999px; border: 1.5px solid var(--line);
+    background: #fff; font-size: 14px; color: var(--ink-2); cursor: pointer; user-select: none;
+    transition: all .15s; font-family: inherit;
+  }
+  .chip.on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+
+  .seg { display: flex; background: #f0eee8; border-radius: 12px; padding: 3px; gap: 3px; }
+  .seg button {
+    flex: 1; border: none; background: transparent; padding: 8px 4px; border-radius: 9px;
+    font-size: 14px; color: var(--ink-2); cursor: pointer; font-family: inherit; white-space: nowrap;
+  }
+  .seg button.on { background: #fff; color: var(--ink); font-weight: 600; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+  .seg-note { font-size: 12px; color: var(--ink-3); margin-top: 6px; }
+
+  .row-line { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line); gap: 10px; }
+  .row-line:last-child { border-bottom: none; }
+  .row-line .r-label { font-size: 14px; }
+  .row-line .r-hint { font-size: 12px; color: var(--ink-3); }
+
+  .switch { width: 46px; height: 27px; border-radius: 999px; background: #d8d4cb; position: relative; cursor: pointer; transition: background .2s; flex: none; }
+  .switch::after {
+    content: ""; position: absolute; top: 2.5px; left: 3px; width: 22px; height: 22px;
+    border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.2); transition: left .2s;
+  }
+  .switch.on { background: var(--accent); }
+  .switch.on::after { left: 21px; }
+
+  .counter { display: flex; align-items: center; gap: 12px; }
+  .counter button {
+    width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid var(--line); background: #fff;
+    font-size: 17px; color: var(--ink); cursor: pointer; font-family: inherit; line-height: 1;
+  }
+  .counter .c-num { font-size: 17px; font-weight: 700; min-width: 2em; text-align: center; }
+
+  .notice {
+    display: none; background: #fff8e6; border: 1px solid #f0e0b0; color: #8a6d1a;
+    border-radius: 12px; padding: 8px 12px; font-size: 13px; margin-bottom: 12px;
+  }
+  .notice.show { display: block; }
+
+  .summary {
+    background: var(--accent-soft); border-radius: var(--radius); padding: 14px 16px;
+    font-size: 13px; color: var(--accent); margin-bottom: 14px;
+  }
+  .summary b { font-size: 15px; }
+
+  .cta {
+    display: block; width: 100%; border: none; background: var(--accent); color: #fff;
+    font-size: 17px; font-weight: 700; padding: 15px; border-radius: 16px; cursor: pointer;
+    font-family: inherit; letter-spacing: 0.05em;
+  }
+  .cta:active { transform: scale(.98); }
+  .cta:disabled { opacity: .45; cursor: not-allowed; }
+  .cta-sub { text-align: center; font-size: 12px; color: var(--ink-3); margin-top: 10px; }
+  .ghost-cta {
+    display: block; width: 100%; border: 1.5px solid var(--accent); background: #fff; color: var(--accent);
+    font-size: 15px; font-weight: 600; padding: 12px; border-radius: 14px; cursor: pointer;
+    font-family: inherit; margin-top: 10px;
+  }
+  .ghost-cta:disabled { opacity: .4; cursor: not-allowed; }
+
+  .iphone-hint {
+    display: none; background: #fdf1f0; color: var(--bad); border: 1px solid #f5c6c2;
+    border-radius: 12px; padding: 10px 14px; font-size: 13px; margin-bottom: 16px;
+  }
+  .iphone-hint.show { display: block; }
+
+  /* ---------- 历史列表 ---------- */
+  .his-row {
+    display: flex; align-items: center; gap: 10px; background: #fff;
+    border: 1.5px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-bottom: 8px;
+    cursor: pointer;
+  }
+  .his-row .h-main { flex: 1; }
+  .his-row .h-no { font-size: 15px; font-weight: 700; }
+  .his-row .h-meta { font-size: 12px; color: var(--ink-3); }
+  .his-row .h-wrong { font-size: 12px; color: var(--bad); font-weight: 600; }
+  .his-row .h-wrong.ok { color: var(--good); }
+  .his-row .h-arrow { color: var(--ink-3); font-size: 14px; }
+  .his-empty { font-size: 13px; color: var(--ink-3); text-align: center; padding: 20px 0; }
+
+  /* ---------- 详情标记 ---------- */
+  .mk-row {
+    display: flex; align-items: flex-start; gap: 10px; background: #fff;
+    border: 1.5px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-bottom: 8px;
+  }
+  .mk-row.wrong { border-color: #f5c6c2; background: #fdf6f5; }
+  .mk-row .m-no { font-size: 13px; font-weight: 700; color: var(--ink-3); flex: none; padding-top: 1px; }
+  .mk-row .m-story { flex: 1; font-size: 13px; color: var(--ink-2); line-height: 1.6; }
+  .mk-btn {
+    flex: none; border: 1.5px solid var(--line); background: #fff; color: var(--ink-2);
+    font-size: 12px; padding: 5px 10px; border-radius: 999px; cursor: pointer; font-family: inherit;
+  }
+  .mk-btn.on { border-color: var(--bad); background: #fdf1f0; color: var(--bad); font-weight: 600; }
+
+  .variant-note { font-size: 12px; color: var(--accent); background: var(--accent-soft); border-radius: 10px; padding: 6px 12px; margin-bottom: 12px; }
+
+  /* =========================================================
+   * 卷面（屏幕预览与打印共用；打印覆盖见 <style media="print">）
+   * ========================================================= */
+  .msheet { font-size: 10pt; color: #000; line-height: 1.5; }
+  .paper { background: #fff; border-radius: 10px; padding: 14px 14px 18px; box-shadow: 0 2px 10px rgba(31,35,40,.06); }
+
+  .ms-head { text-align: center; margin-bottom: 3mm; }
+  .ms-head .ms-title { font-size: 13pt; font-weight: 700; letter-spacing: .1em; }
+  .ms-head .ms-meta { font-size: 9.5pt; color: #444; margin: 1mm 0 1.5mm; }
+  .ms-creed {
+    border: 1.2pt solid #000; border-radius: 2mm; padding: 1.2mm 3mm; font-size: 9pt;
+    text-align: center; background: #f2f2f2; margin-bottom: 3mm;
+  }
+  .ms-creed b { letter-spacing: .08em; }
+
+  .mq { border-top: 1pt solid #999; padding: 2mm 0 2.5mm; break-inside: avoid; page-break-inside: avoid; }
+  .mq-story { line-height: 1.9; font-size: 10.5pt; margin-bottom: .3mm; }
+  .mq-q { line-height: 1.7; font-size: 10.5pt; font-weight: 700; margin-bottom: .8mm; }
+  .mq-step { font-size: 9.5pt; margin: .8mm 0 .5mm; font-weight: 600; }
+  .mq-choices { font-size: 10pt; line-height: 1.7; padding-left: 5mm; }
+  .mq-table { width: 100%; border-collapse: collapse; margin: .6mm 0 .8mm; }
+  .mq-table td, .mq-table th { border: .8pt solid #888; padding: 1mm 2.5mm; font-size: 9.5pt; height: 6mm; }
+  .mq-table td.c-label { width: 16mm; text-align: center; color: #444; font-size: 9pt; }
+  .mq-lines { font-size: 10pt; line-height: 1.9; padding-left: 2mm; }
+  /* 作答空线用 flex 自适应，不再用固定数量的全角下划线（窄屏预览会折行） */
+  .mq-lines .mq-line { display: flex; align-items: baseline; }
+  .mq-line-lab { flex: none; }
+  .mq-blank { flex: 1 1 auto; height: .8em; border-bottom: 1pt solid #000; }
+  .mq-ans { font-size: 10pt; margin-top: .8mm; }
+  .mq-free { height: 38mm; border: 1pt dashed #aaa; border-radius: 1.5mm; margin: 1.2mm 0; }
+
+  .mreview { page-break-before: always; break-before: page; }
+  /* 屏幕上没有分页，给讲评页加分隔，避免和最后一题粘在一起（打印仍另起一页） */
+  @media screen {
+    .mreview { margin-top: 20px; padding-top: 14px; border-top: 1.5px dashed #d8d2c4; }
+  }
+  .mr-head { text-align: center; font-size: 12pt; font-weight: 700; margin-bottom: 1.5mm; }
+  .mr-rule {
+    border: 1.2pt solid #000; border-radius: 2mm; background: #f2f2f2; padding: 1.2mm 3mm;
+    font-size: 9pt; text-align: center; margin-bottom: 3mm;
+  }
+  .mr { border-top: 1pt solid #999; padding: 2mm 0 2.5mm; break-inside: avoid; page-break-inside: avoid; }
+  /* 计星行与最后一题讲评绑在一起，避免单独被分页到下一张纸 */
+  .mr-tail { break-inside: avoid; page-break-inside: avoid; }
+  .mr-lab { font-size: 9.5pt; font-weight: 700; margin: .8mm 0 .5mm; }
+  .mr-story { font-size: 10pt; line-height: 1.6; }
+  .mr-story s { color: #333; }
+  .mr-badge {
+    display: inline-block; border: .8pt solid #333; border-radius: 1mm; font-size: 8.5pt;
+    padding: 0 1.2mm; margin: 0 1mm; color: #333;
+  }
+  .mr-table { width: 100%; border-collapse: collapse; margin: .8mm 0; }
+  .mr-table td { border: .8pt solid #888; padding: 1mm 2.5mm; font-size: 9.5pt; }
+  .mr-table td.c-label { width: 20mm; text-align: center; color: #444; font-size: 9pt; }
+  .mr-steps { font-size: 10pt; line-height: 1.7; }
+  .mr-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 4mm; }
+  .mr-answer {
+    font-size: 9.5pt; border: 1pt solid #000; border-radius: 1.5mm;
+    padding: 1mm 2.5mm; font-weight: 700; flex: none;
+  }
+  .mr-tip { font-size: 9pt; margin-top: 1.2mm; color: #222; }
+  .mr-foot { text-align: center; font-size: 10.5pt; margin-top: 4mm; letter-spacing: .1em; }
+
+  /* 屏幕上隐藏打印区（打印样式与 debug=print 模式里再显示，防止打印内容残留在页面底部） */
+  #print-sheet { display: none; }
+
+  /* debug=print：屏幕上模拟 A4 卷面 */
+  html.debug body { background: #9a9a9a !important; max-width: none; }
+  html.debug body > .screen { display: none !important; }
+  html.debug #print-sheet {
+    display: block !important; width: 210mm; margin: 12px auto; padding: 12mm;
+    background: #fff; box-shadow: 0 4px 24px rgba(0,0,0,.35);
+  }
+</style>
+</head>
+<body data-screen-label="math-setup">
+
+<!-- ============ 配置视图 ============ -->
+<div class="screen on" id="viewSetup">
+
+  <div class="top-bar">
+    <a class="home" href="../index.html">← 小工具合集</a>
+  </div>
+
+  <div class="p-title">审题雷达</div>
+  <p class="p-sub">打印成纸，练「从题里找条件」：一圈 · 二列 · 三桥 · 四式</p>
+
+  <div class="howto">
+    <b>怎么用：</b>① 家长选内容、出一卷，打印 A4 → ② 孩子在纸上按四步法做题 →
+    ③ 做完对卷尾「自查讲评页」，对一题画一颗 ★ → ④ 家长把做错的题标记起来，一键出<b>变式卷</b>（同题型换数字）再练。
+  </div>
+
+  <div class="iphone-hint" id="iphoneHint">iPhone 的浏览器不能直接打印。请生成后在电脑上打开本页打印（历史卷会保留）。</div>
+  <div class="notice" id="genNotice"></div>
+
+  <div class="sec">
+    <div class="sec-head"><span class="sec-num">1</span><h3>练什么</h3></div>
+    <div class="chips" id="unitChips"></div>
+    <p class="seg-note">「平均数」为四下衔接内容，未学到可不选</p>
+    <div style="height:12px"></div>
+    <div class="seg" id="levelSeg">
+      <button data-v="mix">混合</button>
+      <button data-v="1">基础</button>
+      <button data-v="2">进阶</button>
+      <button data-v="3">挑战</button>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-head"><span class="sec-num">2</span><h3>怎么练</h3></div>
+    <div class="seg" id="scaffoldSeg">
+      <button data-v="A">A 全程扶</button>
+      <button data-v="B">B 半扶</button>
+      <button data-v="C">C 放手</button>
+    </div>
+    <p class="seg-note" id="scaffoldNote"></p>
+    <div class="row-line">
+      <div><div class="r-label">每卷题量</div><div class="r-hint">建议 5 题，约 15 分钟</div></div>
+      <div class="counter">
+        <button id="countMinus">−</button>
+        <span class="c-num" id="countNum">5</span>
+        <button id="countPlus">＋</button>
+      </div>
+    </div>
+    <div class="row-line">
+      <div><div class="r-label">卷尾附自查讲评页</div><div class="r-hint">孩子做完对着改，答案在右下角小框</div></div>
+      <div class="switch on" id="reviewSwitch"></div>
+    </div>
+  </div>
+
+  <div class="summary" id="summary"></div>
+  <button class="cta" id="genBtn">出一卷 →</button>
+  <p class="cta-sub">每次出卷都会换数字 · 题型不重样</p>
+
+  <div style="height:26px"></div>
+
+  <div class="sec">
+    <div class="sec-head"><span class="sec-num">3</span><h3>历史与错题</h3><span class="sec-side" id="hisSide"></span></div>
+    <button class="ghost-cta" id="hisBtn">查看历史卷 →</button>
+  </div>
+
+</div>
+
+<!-- ============ 出卷视图 ============ -->
+<div class="screen" id="viewSheet" data-screen-label="math-sheet">
+
+  <div class="top-bar">
+    <a class="home" href="#" id="backSetup">← 返回配置</a>
+    <span style="font-size:13px;color:var(--ink-2);font-weight:600" id="sheetBadge"></span>
+  </div>
+
+  <div class="variant-note" id="variantNote" style="display:none"></div>
+
+  <div class="paper" id="previewPaper"></div>
+
+  <div style="height:16px"></div>
+  <button class="cta" id="printBtn">打印这张卷</button>
+  <button class="ghost-cta" id="regenBtn">换一批题（同配置再出一卷）</button>
+
+</div>
+
+<!-- ============ 历史视图 ============ -->
+<div class="screen" id="viewHistory" data-screen-label="math-history">
+
+  <div class="top-bar">
+    <a class="home" href="#" id="backSetup2">← 返回配置</a>
+  </div>
+  <div class="p-title">历史卷</div>
+  <p class="p-sub">点开一卷可标记错题；错题可出变式卷（同题型换数字）</p>
+
+  <div id="hisList"></div>
+
+  <div style="height:16px"></div>
+  <button class="cta" id="variantAllBtn" style="display:none"></button>
+
+</div>
+
+<!-- ============ 卷详情视图 ============ -->
+<div class="screen" id="viewDetail" data-screen-label="math-detail">
+
+  <div class="top-bar">
+    <a class="home" href="#" id="backHistory">← 历史卷</a>
+    <span style="font-size:13px;color:var(--ink-2);font-weight:600" id="detailBadge"></span>
+  </div>
+  <div class="p-title" id="detailTitle"></div>
+  <p class="p-sub">孩子做完后，把做错的题点出来 → 变式重练</p>
+
+  <div id="markList"></div>
+
+  <div style="height:16px"></div>
+  <button class="cta" id="variantBtn">用这卷的错题出变式卷</button>
+  <button class="ghost-cta" id="reprintBtn">重印这卷</button>
+  <button class="ghost-cta" id="delSheetBtn" style="border-color:var(--line);color:var(--ink-3)">删除这卷</button>
+
+</div>
+
+<!-- 打印区：屏幕隐藏，@media print 时仅显示它 -->
+<div id="print-sheet"></div>
+
+<!-- 打印规则集中在此块；?debug=print 时把 media 切成 all 以便在屏幕检查 -->
+<style media="print" id="printCss">
+  @page { size: A4 portrait; margin: 12mm; }
+  html, body { background: #fff !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+  body > *:not(#print-sheet) { display: none !important; }
+  #print-sheet { display: block !important; }
+  .mq { break-inside: avoid; page-break-inside: avoid; }
+  .mr { break-inside: avoid; page-break-inside: avoid; }
+  /* 打印时讲评页靠分页隔离，去掉屏幕预览用的分隔线与间距 */
+  .mreview { page-break-before: always; break-before: page; margin-top: 0; padding-top: 0; border-top: 0; }
+</style>
+
+<script src="js/store.js"></script>
+<script src="js/generator.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- 基础工具 ---------- */
+
+  function $(id) { return document.getElementById(id); }
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+
+  var isIphone = /iP(hone|od)/.test(navigator.userAgent) && !/iPad/.test(navigator.userAgent);
+  if (isIphone) $("iphoneHint").classList.add("show");
+
+  var DEBUG_PRINT = /[?&]debug=print/.test(location.search);
+  var DEBUG_AUTO = /[?&]auto=1/.test(location.search);
+  if (DEBUG_PRINT) {
+    document.documentElement.classList.add("debug");
+    $("printCss").setAttribute("media", "all");
+  }
+
+  /* ---------- 全局状态 ---------- */
+
+  var templates = [];
+  var tplIndex = {};   // id -> template
+  var currentSheet = null;   // Store 记录（含 id/no/date）
+  var detailId = null;
+  var cfg = Store.config.get();
+
+  var LEVEL_NAME = { "1": "基础", "2": "进阶", "3": "挑战", "mix": "混合" };
+  var SCAFFOLD_NOTE = {
+    A: "A 全程扶：表格画好行、搭桥圈选项、算式分步提示线——刚开始用这档",
+    B: "B 半扶：表格只有空行、搭桥填空——步骤自己走一半",
+    C: "C 放手：只给题目和作答区，四步全部自己完成——练熟后用这档"
+  };
+
+  /* ---------- 屏幕切换 ---------- */
+
+  function show(id) {
+    ["viewSetup", "viewSheet", "viewHistory", "viewDetail"].forEach(function (s) {
+      $(s).classList.toggle("on", s === id);
+    });
+    window.scrollTo(0, 0);
+  }
+
+  /* ---------- 配置渲染 ---------- */
+
+  function renderUnits() {
+    var box = $("unitChips");
+    box.textContent = "";
+    Store.UNITS.forEach(function (u) {
+      var c = el("button", "chip" + (cfg.units.indexOf(u) >= 0 ? " on" : ""), Store.unitName(u));
+      c.type = "button";
+      c.addEventListener("click", function () {
+        var i = cfg.units.indexOf(u);
+        if (i >= 0) {
+          if (cfg.units.length === 1) return; // 至少保留一个单元
+          cfg.units.splice(i, 1);
+        } else cfg.units.push(u);
+        Store.config.set({ units: cfg.units });
+        renderUnits(); renderSummary();
+      });
+      box.appendChild(c);
+    });
+  }
+
+  function wireSeg(id, getVal, onPick) {
+    var seg = $(id);
+    function mark() {
+      seg.querySelectorAll("button").forEach(function (b) {
+        b.classList.toggle("on", b.dataset.v === String(getVal()));
+      });
+    }
+    seg.addEventListener("click", function (e) {
+      var b = e.target.closest("button");
+      if (!b) return;
+      onPick(b.dataset.v);
+      mark();
+    });
+    mark();
+  }
+
+  function renderSummary() {
+    var names = cfg.units.map(function (u) { return Store.unitName(u); }).join("、");
+    var box = $("summary");
+    box.textContent = "";
+    box.appendChild(el("b", null, names));
+    box.appendChild(document.createElement("br"));
+    box.appendChild(document.createTextNode(
+      LEVEL_NAME[cfg.level] + "难度 · 每卷 " + cfg.count + " 题 · " + (cfg.withReview ? "含" : "不含") + "自查讲评页 · 脚手架 " + cfg.scaffold
+    ));
+  }
+
+  function refreshSetup() {
+    renderUnits();
+    renderSummary();
+    $("countNum").textContent = cfg.count;
+    $("scaffoldNote").textContent = SCAFFOLD_NOTE[cfg.scaffold];
+    $("reviewSwitch").classList.toggle("on", cfg.withReview);
+    var n = allMarked().length;
+    $("hisSide").textContent = n ? "已有 " + n + " 道错题" : "";
+  }
+
+  /* ---------- 生成 ---------- */
+
+  function generate() {
+    var res = Generator.make(cfg, templates);
+    var notice = $("genNotice");
+    notice.classList.remove("show");
+    if (!res.problems.length) {
+      notice.textContent = "所选范围内没有可用题型，请调整单元或难度。";
+      notice.classList.add("show");
+      return;
+    }
+    if (res.problems.length < cfg.count) {
+      notice.textContent = "所选范围内只有 " + res.poolSize + " 个题型，本卷出了 " + res.problems.length + " 题。";
+      notice.classList.add("show");
+    }
+    var rec = Store.sheets.add({
+      config: { level: cfg.level, scaffold: cfg.scaffold, withReview: cfg.withReview },
+      source: null,
+      problems: res.problems
+    });
+    openSheet(rec);
+  }
+
+  function openSheet(rec) {
+    currentSheet = rec;
+    $("variantNote").style.display = rec.source ? "block" : "none";
+    if (rec.source) {
+      var from = rec.source.variantFrom;
+      $("variantNote").textContent = typeof from === "number"
+        ? "变式卷：由第 " + from + " 卷的错题换数字重出。"
+        : "变式卷：由历史全部错题换数字重出。";
+    }
+    $("sheetBadge").textContent = "第 " + rec.no + " 卷 · " + rec.date;
+    renderInto($("previewPaper"), rec);
+    $("printBtn").disabled = isIphone;
+    show("viewSheet");
+  }
+
+  /* ---------- 卷面渲染（预览与打印共用） ---------- */
+
+  var CIRCLED = ["①", "②", "③", "④", "⑤", "⑥"];
+
+  // 在 text 中把 relations 词加下划线后挂到 node
+  function appendWithRel(node, text, relations) {
+    if (!relations || !relations.length || !text) { node.appendChild(document.createTextNode(text)); return; }
+    var best = -1, bestRel = null;
+    relations.forEach(function (r) {
+      var i = text.indexOf(r);
+      if (i >= 0 && (best < 0 || i < best)) { best = i; bestRel = r; }
+    });
+    if (best < 0) { node.appendChild(document.createTextNode(text)); return; }
+    node.appendChild(document.createTextNode(text.slice(0, best)));
+    node.appendChild(el("u", null, bestRel));
+    appendWithRel(node, text.slice(best + bestRel.length), relations);
+  }
+
+  function stepTable(p, scaffold) {
+    var t = el("table", "mq-table");
+    function row(label, value) {
+      var tr = document.createElement("tr");
+      var td1 = el("td", "c-label", label);
+      var td2 = el("td", null, value == null ? "" : value);
+      tr.appendChild(td1); tr.appendChild(td2);
+      t.appendChild(tr);
+    }
+    if (scaffold === "A") {
+      // 行数给足（含补条件行），内容由孩子填；问句行印出
+      p.table.known.forEach(function () { row("已知", null); });
+      if (p.type === "supply") row("补上", null);
+      row("要求", p.table.ask);
+    } else if (scaffold === "B") {
+      row("已知", null); row("已知", null); row("已知", null); row("要求", null);
+    }
+    return t;
+  }
+
+  function buildProblemEl(p, i, scaffold) {
+    var box = el("div", "mq");
+
+    // 题号并入题干行；①圈条件直接在题干上进行（方法见卷首口诀），不另占行
+    box.appendChild(el("div", "mq-story", (i + 1) + ". " + p.story));
+    box.appendChild(el("div", "mq-q", p.question));
+
+    // ② 补一补（supply 型；C 级自由补写）
+    if (p.type === "supply") {
+      if (scaffold !== "C") {
+        box.appendChild(el("div", "mq-step", "② 补一补：选出解决这道题需要的信息（圈一个）"));
+        var ch = el("div", "mq-choices");
+        var line = [];
+        p.supply.choices.forEach(function (c, ci) {
+          line.push(String.fromCharCode(65 + ci) + ". " + c);
+        });
+        ch.appendChild(document.createTextNode(line.join("　　")));
+        box.appendChild(ch);
+      } else {
+        box.appendChild(el("div", "mq-step", "② 补一补：这道题还缺一个条件，把它写在横线上"));
+        var supBox = el("div", "mq-lines");
+        var supRow = el("div", "mq-line");
+        supRow.appendChild(el("span", "mq-line-lab", "　"));
+        supRow.appendChild(el("span", "mq-blank"));
+        supBox.appendChild(supRow);
+        box.appendChild(supBox);
+      }
+    }
+
+    if (scaffold === "C") {
+      // C 放手：只留作答区
+      box.appendChild(el("div", "mq-step", "圈一圈 → 列一列 → 想一想 → 算一算："));
+      box.appendChild(el("div", "mq-free"));
+    } else {
+      // ②/③ 列一列：表格
+      box.appendChild(el("div", "mq-step", (p.type === "supply" ? "③" : "②") + " 列一列："));
+      box.appendChild(stepTable(p, scaffold));
+
+      // ③ 想一想：supply 的补一补已是思考步骤，跳过
+      if (p.type !== "supply") {
+        var think;
+        if (p.bridge) {
+          think = el("div", "mq-step");
+          think.appendChild(document.createTextNode("③ 想一想：" + p.bridge.ask + "："));
+          if (scaffold === "A") {
+            p.bridge.choices.forEach(function (c) {
+              think.appendChild(document.createTextNode(" ○ " + c));
+            });
+          } else {
+            think.appendChild(document.createTextNode("＿＿＿＿＿＿＿＿"));
+          }
+        } else {
+          think = el("div", "mq-step", "③ 想一想：这题是一步还是两步？" +
+            (scaffold === "A" ? " ○ 一步　○ 两步" : " ＿＿＿＿＿＿"));
+        }
+        box.appendChild(think);
+      }
+
+      // ④ 算一算：编号并入首行，省一行；两步及以上才印「第一步」提示，一步题不误导
+      var calc = el("div", "mq-lines");
+      var multi = (p.steps.length || 2) >= 2;
+      var count = multi ? Math.min(3, p.steps.length) : 2;
+      var labels = ["第一步：", "第二步：", "第三步："];
+      for (var s = 0; s < count; s++) {
+        var ln = el("div", "mq-line");
+        if (s === 0) ln.appendChild(el("b", null, "④ 算一算"));
+        ln.appendChild(el("span", "mq-line-lab",
+          scaffold === "A" && multi ? "　" + labels[s] : "　"));
+        ln.appendChild(el("span", "mq-blank"));
+        calc.appendChild(ln);
+      }
+      box.appendChild(calc);
+    }
+
+    box.appendChild(el("div", "mq-ans", "答：＿＿＿＿＿＿＿＿＿＿＿＿。"));
+    return box;
+  }
+
+  function buildReviewEl(p, i) {
+    var box = el("div", "mr");
+    box.appendChild(el("div", "mr-head", "第 " + (i + 1) + " 题 · 对答案"));
+
+    // ① 圈对了吗
+    box.appendChild(el("div", "mr-lab", "① 圈对了吗？（加粗的是条件，划线的是关键词）"));
+    var story = el("div", "mr-story");
+    var condN = 0;
+    p.segments.forEach(function (seg) {
+      if (seg.type === "condition") {
+        // 条件段常以「，」「。」开头：标点留在编号前面，编号紧贴自己的条件
+        var text = seg.t;
+        var lead = /^[，。、；：,.\s]+/.exec(text);
+        if (lead) {
+          story.appendChild(document.createTextNode(lead[0]));
+          text = text.slice(lead[0].length);
+        }
+        var b = el("b");
+        b.appendChild(document.createTextNode(CIRCLED[Math.min(condN, 5)] + " "));
+        appendWithRel(b, text, p.relations);
+        story.appendChild(b);
+      } else if (seg.type === "distractor") {
+        var s = el("s");
+        appendWithRel(s, seg.t, p.relations);
+        story.appendChild(s);
+        story.appendChild(el("span", "mr-badge", "多余"));
+      } else {
+        appendWithRel(story, seg.t, p.relations);
+      }
+      if (seg.type === "condition") condN++;
+    });
+    box.appendChild(story);
+    var q = el("div", "mr-story");
+    var qb = el("b");
+    appendWithRel(qb, p.question, p.relations);
+    q.appendChild(qb);
+    box.appendChild(q);
+
+    // ② 补条件（supply 型）
+    if (p.type === "supply") {
+      box.appendChild(el("div", "mr-lab", "② 补上了吗？"));
+      var sup = el("div", "mr-story");
+      sup.appendChild(document.createTextNode(
+        "应该补上：" + String.fromCharCode(65 + p.supply.answer) + ". " +
+        p.supply.choices[p.supply.answer] + "。"));
+      sup.appendChild(el("b", null, "  " + p.supply.why));
+      box.appendChild(sup);
+    }
+
+    // ③ 表格
+    box.appendChild(el("div", "mr-lab", (p.type === "supply" ? "③" : "②") + " 表格应该这样列："));
+    var t = el("table", "mr-table");
+    p.table.known.forEach(function (k) {
+      var tr = document.createElement("tr");
+      tr.appendChild(el("td", "c-label", "已知"));
+      tr.appendChild(el("td", null, k));
+      t.appendChild(tr);
+    });
+    if (p.table.supplyRow) {
+      var tr2 = document.createElement("tr");
+      tr2.appendChild(el("td", "c-label", "补上"));
+      tr2.appendChild(el("td", null, p.table.supplyRow));
+      t.appendChild(tr2);
+    }
+    var tr3 = document.createElement("tr");
+    tr3.appendChild(el("td", "c-label", "要求"));
+    tr3.appendChild(el("td", null, p.table.ask));
+    t.appendChild(tr3);
+    box.appendChild(t);
+
+    // 桥（练习页 supply 用「②补一补」充当思考步，没有③想一想，讲评页编号保持一致）
+    if (p.type !== "supply") {
+      if (p.bridge) {
+        var bl = el("div", "mr-lab", "③ 先要算出：");
+        bl.appendChild(el("b", null, p.bridge.choices[p.bridge.answer]));
+        box.appendChild(bl);
+      } else {
+        box.appendChild(el("div", "mr-lab", "③ 这题是一步题：条件够，直接列式。"));
+      }
+    }
+
+    // ④ 算式 + 答案（右下角小框）
+    box.appendChild(el("div", "mr-lab", "④ 算式："));
+    var row = el("div", "mr-row");
+    var steps = el("div", "mr-steps");
+    p.steps.forEach(function (s) { steps.appendChild(el("div", null, s)); });
+    row.appendChild(steps);
+    row.appendChild(el("div", "mr-answer", "答：" + p.answer));
+    box.appendChild(row);
+
+    box.appendChild(el("div", "mr-tip", "💡 审题小锦囊：" + p.tip));
+    return box;
+  }
+
+  function buildSheetEl(rec) {
+    var conf = rec.config || {};
+    var scaffold = conf.scaffold || "A";
+    var sheet = el("div", "msheet");
+
+    var head = el("div", "ms-head");
+    head.appendChild(el("div", "ms-title", "审题训练 · 第 " + rec.no + " 卷"));
+    head.appendChild(el("div", "ms-meta",
+      (rec.date || "") + " · " + (LEVEL_NAME[conf.level] || "混合") + "难度 · 共 " + rec.problems.length + " 题"));
+    sheet.appendChild(head);
+    var creed = el("div", "ms-creed");
+    creed.appendChild(el("b", null, "四步法：一圈 · 二列 · 三桥 · 四式"));
+    creed.appendChild(document.createTextNode("（圈出条件 → 列出表格 → 想先算什么 → 列出算式）"));
+    sheet.appendChild(creed);
+
+    rec.problems.forEach(function (p, i) {
+      sheet.appendChild(buildProblemEl(p, i, scaffold));
+    });
+
+    if (conf.withReview !== false && rec.problems.length) {
+      var rv = el("div", "mreview");
+      rv.appendChild(el("div", "mr-head", "讲评 · 自查页"));
+      var rule = el("div", "mr-rule");
+      rule.appendChild(el("b", null, "先做完所有题，再翻到这页来对答案。"));
+      rule.appendChild(document.createTextNode("每对一题，给自己画一颗 ★。"));
+      rv.appendChild(rule);
+      rec.problems.forEach(function (p, i) {
+        if (i === rec.problems.length - 1) {
+          // 最后一题与页脚计星行整组排版，防止计星行单独占一页
+          var tail = el("div", "mr-tail");
+          tail.appendChild(buildReviewEl(p, i));
+          tail.appendChild(el("div", "mr-foot", "我今天对了 ＿＿＿＿ 题。　★　★　★　★　★"));
+          rv.appendChild(tail);
+        } else {
+          rv.appendChild(buildReviewEl(p, i));
+        }
+      });
+      sheet.appendChild(rv);
+    }
+    return sheet;
+  }
+
+  function renderInto(container, rec) {
+    container.textContent = "";
+    container.appendChild(buildSheetEl(rec));
+  }
+
+  /* ---------- 打印 ---------- */
+
+  function printSheet(rec) {
+    if (isIphone) return;
+    var ps = $("print-sheet");
+    ps.textContent = "";
+    ps.appendChild(buildSheetEl(rec));
+    if (!DEBUG_PRINT) {
+      // afterprint 必须在 print() 之前挂上：事件可能在 window.print() 返回前就发出，
+      // 先挂后打保证第一次打印也能清空
+      window.onafterprint = function () { ps.textContent = ""; };
+    }
+    window.print();
+  }
+
+  /* ---------- 历史 ---------- */
+
+  function allMarked() {
+    var out = [];
+    Store.sheets.list().forEach(function (s) {
+      s.problems.forEach(function (p) { if (p.marked) out.push(p); });
+    });
+    return out;
+  }
+
+  function renderHistory() {
+    var list = Store.sheets.list().slice().reverse();
+    var box = $("hisList");
+    box.textContent = "";
+    if (!list.length) {
+      box.appendChild(el("div", "his-empty", "还没有卷子。回到配置页出一卷吧。"));
+    }
+    list.forEach(function (s) {
+      var wrong = s.problems.filter(function (p) { return p.marked; }).length;
+      var row = el("div", "his-row");
+      var main = el("div", "h-main");
+      main.appendChild(el("div", "h-no", "第 " + s.no + " 卷" + (s.source ? "（变式）" : "")));
+      main.appendChild(el("div", "h-meta",
+        s.date + " · " + s.problems.length + " 题 · " + LEVEL_NAME[s.config && s.config.level] + " · " + (s.config && s.config.scaffold || "A") + " 级"));
+      row.appendChild(main);
+      row.appendChild(el("span", "h-wrong" + (wrong ? "" : " ok"),
+        wrong ? "错 " + wrong : "无错题标记"));
+      row.appendChild(el("span", "h-arrow", "›"));
+      row.addEventListener("click", function () { openDetail(s.id); });
+      box.appendChild(row);
+    });
+
+    var marked = allMarked();
+    var btn = $("variantAllBtn");
+    btn.style.display = marked.length ? "block" : "none";
+    if (marked.length) {
+      btn.textContent = "用全部错题出变式卷（" + marked.length + " 题）";
+    }
+    refreshSetup();
+  }
+
+  /* ---------- 详情 ---------- */
+
+  function openDetail(id) {
+    detailId = id;
+    renderDetail();
+    show("viewDetail");
+  }
+
+  function renderDetail() {
+    var s = Store.sheets.get(detailId);
+    if (!s) { show("viewHistory"); return; }
+    $("detailTitle").textContent = "第 " + s.no + " 卷" + (s.source ? "（变式卷）" : "");
+    $("detailBadge").textContent = s.date;
+
+    var box = $("markList");
+    box.textContent = "";
+    s.problems.forEach(function (p, i) {
+      var row = el("div", "mk-row" + (p.marked ? " wrong" : ""));
+      row.appendChild(el("div", "m-no", "第" + (i + 1) + "题"));
+      row.appendChild(el("div", "m-story", p.story + " " + p.question));
+      var btn = el("button", "mk-btn" + (p.marked ? " on" : ""), p.marked ? "✓ 做错了" : "做错了？");
+      btn.type = "button";
+      btn.addEventListener("click", function () {
+        Store.sheets.mark(detailId, i, !p.marked);
+        renderDetail();
+        renderHistory();
+      });
+      row.appendChild(btn);
+      box.appendChild(row);
+    });
+
+    var wrong = s.problems.filter(function (p) { return p.marked; }).length;
+    var vb = $("variantBtn");
+    vb.disabled = wrong === 0;
+    vb.textContent = wrong ? "用这卷的错题出变式卷（" + wrong + " 题）" : "先标记错题，才能出变式卷";
+    $("reprintBtn").disabled = isIphone;
+  }
+
+  /* ---------- 变式卷 ---------- */
+
+  function makeVariant(problems, fromNo, scaffold) {
+    var ids = [];
+    problems.forEach(function (p) { if (ids.indexOf(p.tplId) < 0) ids.push(p.tplId); });
+    var tpls = ids.map(function (id) { return tplIndex[id]; }).filter(Boolean);
+    if (!tpls.length) return null;
+    var insts = Generator.variant(tpls);
+    if (!insts.length) return null;
+    // 档位沿用出处分卷（错题在什么档位做错的，就在什么档位重做）；无出处时用当前配置
+    var sc = scaffold && "ABC".indexOf(scaffold) >= 0 ? scaffold : cfg.scaffold;
+    return Store.sheets.add({
+      config: { level: cfg.level, scaffold: sc, withReview: cfg.withReview },
+      source: { variantFrom: fromNo },
+      problems: insts
+    });
+  }
+
+  /* ---------- 事件绑定 ---------- */
+
+  wireSeg("levelSeg", function () { return cfg.level; }, function (v) {
+    cfg.level = v; Store.config.set({ level: v }); renderSummary();
+  });
+  wireSeg("scaffoldSeg", function () { return cfg.scaffold; }, function (v) {
+    cfg.scaffold = v; Store.config.set({ scaffold: v });
+    $("scaffoldNote").textContent = SCAFFOLD_NOTE[v];
+  });
+
+  $("countMinus").addEventListener("click", function () {
+    if (cfg.count <= 3) return;
+    cfg.count--; Store.config.set({ count: cfg.count });
+    $("countNum").textContent = cfg.count; renderSummary();
+  });
+  $("countPlus").addEventListener("click", function () {
+    if (cfg.count >= 10) return;
+    cfg.count++; Store.config.set({ count: cfg.count });
+    $("countNum").textContent = cfg.count; renderSummary();
+  });
+  $("reviewSwitch").addEventListener("click", function () {
+    cfg.withReview = !cfg.withReview;
+    Store.config.set({ withReview: cfg.withReview });
+    this.classList.toggle("on", cfg.withReview);
+    renderSummary();
+  });
+
+  $("genBtn").addEventListener("click", generate);
+  $("regenBtn").addEventListener("click", generate);
+  $("printBtn").addEventListener("click", function () { if (currentSheet) printSheet(currentSheet); });
+  $("backSetup").addEventListener("click", function (e) { e.preventDefault(); refreshSetup(); show("viewSetup"); });
+  $("backSetup2").addEventListener("click", function (e) { e.preventDefault(); refreshSetup(); show("viewSetup"); });
+  $("hisBtn").addEventListener("click", function () { renderHistory(); show("viewHistory"); });
+  $("backHistory").addEventListener("click", function (e) { e.preventDefault(); renderHistory(); show("viewHistory"); });
+
+  $("variantAllBtn").addEventListener("click", function () {
+    var rec = makeVariant(allMarked(), "全部", cfg.scaffold);
+    if (rec) openSheet(rec); else renderHistory();
+  });
+  $("variantBtn").addEventListener("click", function () {
+    var s = Store.sheets.get(detailId);
+    if (!s) return;
+    var marked = s.problems.filter(function (p) { return p.marked; });
+    var rec = makeVariant(marked, s.no, s.config && s.config.scaffold);
+    if (rec) openSheet(rec);
+  });
+  $("reprintBtn").addEventListener("click", function () {
+    var s = Store.sheets.get(detailId);
+    if (s) printSheet(s);
+  });
+  $("delSheetBtn").addEventListener("click", function () {
+    var s = Store.sheets.get(detailId);
+    if (!s) return;
+    var wrong = s.problems.filter(function (p) { return p.marked; }).length;
+    if (!window.confirm("删除第 " + s.no + " 卷？" +
+        (wrong ? "这卷已标记的 " + wrong + " 道错题会一起删除。" : ""))) return;
+    Store.sheets.remove(detailId);
+    renderHistory();
+    show("viewHistory");
+  });
+
+  /* ---------- 初始化 ---------- */
+
+  fetch("data/problems.json", { cache: "no-cache" })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      if (!d || !Array.isArray(d.templates) || !d.templates.length) {
+        var n = $("genNotice");
+        n.textContent = "题库加载失败，请检查网络后刷新重试。";
+        n.classList.add("show");
+        $("genBtn").disabled = true;
+        return;
+      }
+      templates = d.templates;
+      templates.forEach(function (t) { tplIndex[t.id] = t; });
+      refreshSetup();
+
+      if (DEBUG_AUTO) { // 调试：自动出一卷（不落历史），debug=print 时直接铺进打印区
+        var res = Generator.make(cfg, templates);
+        currentSheet = {
+          id: null, no: 1, date: Store.today(),
+          config: { level: cfg.level, scaffold: cfg.scaffold, withReview: cfg.withReview },
+          problems: res.problems
+        };
+        renderInto($("previewPaper"), currentSheet);
+        $("print-sheet").appendChild(buildSheetEl(currentSheet));
+        $("printBtn").disabled = isIphone;
+        show("viewSheet");
+      }
+    })
+    .catch(function () {
+      var n = $("genNotice");
+      n.textContent = "题库加载失败，请检查网络后刷新重试。";
+      n.classList.add("show");
+    });
+})();
+</script>
+</body>
+</html>

@@ -18,6 +18,8 @@
     --orange-soft: #fff0e6;
     --blue: #2563eb;
     --blue-soft: #e8f0fe;
+    --violet: #7c3aed;
+    --violet-soft: #f1eafe;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { background: var(--paper); }
@@ -91,6 +93,7 @@
   .tool.dictation .t-icon { background: var(--teal-soft); }
   .tool.wrongbook .t-icon { background: var(--orange-soft); }
   .tool.flashcard .t-icon { background: var(--blue-soft); }
+  .tool.math .t-icon { background: var(--violet-soft); }
 
   .foot {
     text-align: center;
@@ -131,6 +134,13 @@
       <div class="t-icon">📇</div>
       <div class="t-name">单词闪卡</div>
       <div class="t-desc">看 AI 场景图卡记单词，点图上的单词就能发音，词库与默写小工具同源</div>
+    </a>
+
+    <a class="tool math" href="./math/index.html">
+      <span class="t-arrow">→</span>
+      <div class="t-icon">🔍</div>
+      <div class="t-name">审题雷达</div>
+      <div class="t-desc">打印 A4 审题训练卷：一圈二列三桥四式，附孩子自查讲评页，错题一键出变式卷</div>
     </a>
 
   </div>

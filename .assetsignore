@@ -1,12 +1,25 @@
 # 部署到 Cloudflare 时排除的内容（不从仓库删除，仅不作为静态资产上传）
 .git
 .gitignore
-# 开发期产物：构建脚本 / 文档 / 词库源分片（运行时只用 wordbank.json）/ 本地部署脚本
+.DS_Store
+# 开发期产物：构建脚本 / 文档 / 词库源分片（运行时只用 wordbank.json）/ 本地部署脚本 / 测试部署截图 / 设计稿
 dictation/tools/
 dictation/docs/
 dictation/data/parts/
 dictation/deploy.sh
+dictation/serve-root.sh
+dictation/test-artifacts/
+dictation/deploy-artifacts/
+dictation/design/
+wrongbook/design/
+wrongbook/docs/
 # 闪卡生产管线：脚本 / 卡方案与底图等中间产物（运行时只用 cards/manifest.json 与成品 jpg）
 flashcard/tools/
 flashcard/cards/plans/
 flashcard/cards/base/
+# 审题雷达：产品文档 / 架构契约 / 自检脚本（运行时只用 index.html + js + data/problems.json）
+math/design/
+math/docs/
+math/tools/
+# 教材本地下载（不进仓库）
+textbook/books/
