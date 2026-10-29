@@ -1,598 +1,6480 @@
 {
- "meta": { "schemaVersion": "1.0", "grade": "苏教版四年级上（含四下平均数衔接）", "units": {
-   "volume": "升和毫升", "division": "除法应用", "strategy": "解决问题的策略（列表）", "average": "平均数（衔接预练）"
- } },
+ "meta": {
+  "schemaVersion": "1.2",
+  "grade": "苏教版四年级上（平均数移至四下）",
+  "units": {
+   "volume": "升和毫升",
+   "division": "两、三位数除以两位数",
+   "strategy": "解决问题的策略（列表）",
+   "average": "平均数（四下）"
+  },
+  "catalog": {
+   "subjects": [
+    {
+     "id": "math",
+     "name": "数学"
+    }
+   ],
+   "versions": [
+    {
+     "id": "sujiao",
+     "name": "苏教版",
+     "subjectId": "math"
+    }
+   ],
+   "grades": [
+    {
+     "id": "g4s",
+     "name": "四年级·上册",
+     "versionId": "sujiao"
+    },
+    {
+     "id": "g4x",
+     "name": "四年级·下册",
+     "versionId": "sujiao"
+    }
+   ],
+   "units": [
+    {
+     "id": "volume",
+     "gradeId": "g4s",
+     "name": "升和毫升",
+     "book": "第一单元",
+     "chapters": [
+      {
+       "id": "v-know",
+       "name": "认识升和毫升"
+      },
+      {
+       "id": "v-conv",
+       "name": "升和毫升的换算"
+      }
+     ]
+    },
+    {
+     "id": "division",
+     "gradeId": "g4s",
+     "name": "两、三位数除以两位数",
+     "book": "第二单元",
+     "chapters": [
+      {
+       "id": "d-adv",
+       "name": "两、三位数除以两位数"
+      },
+      {
+       "id": "d-quot",
+       "name": "商不变与估算"
+      },
+      {
+       "id": "d-period",
+       "name": "简单的周期"
+      },
+      {
+       "id": "d-avg",
+       "name": "平均分问题"
+      },
+      {
+       "id": "d-norm",
+       "name": "归一问题"
+      },
+      {
+       "id": "d-shop",
+       "name": "购物与找零"
+      },
+      {
+       "id": "d-multi",
+       "name": "多步应用"
+      }
+     ]
+    },
+    {
+     "id": "observe",
+     "gradeId": "g4s",
+     "name": "观察物体",
+     "book": "第三单元",
+     "chapters": [],
+     "note": "图形操作单元，暂无应用题型"
+    },
+    {
+     "id": "stats",
+     "gradeId": "g4s",
+     "name": "统计表和条形统计图（一）",
+     "book": "第四单元",
+     "chapters": [
+      {
+       "id": "st-table",
+       "name": "统计表与条形统计图"
+      },
+      {
+       "id": "st-sport",
+       "name": "运动与身体变化"
+      }
+     ]
+    },
+    {
+     "id": "strategy",
+     "gradeId": "g4s",
+     "name": "解决问题的策略（列表）",
+     "book": "第五单元",
+     "chapters": [
+      {
+       "id": "s-trip",
+       "name": "行程问题"
+      },
+      {
+       "id": "s-match",
+       "name": "搭配与走法"
+      },
+      {
+       "id": "s-div",
+       "name": "有余数的除法"
+      },
+      {
+       "id": "s-shop",
+       "name": "购物问题"
+      }
+     ]
+    },
+    {
+     "id": "chance",
+     "gradeId": "g4s",
+     "name": "可能性",
+     "book": "第六单元",
+     "chapters": [
+      {
+       "id": "ch-basic",
+       "name": "可能性大小"
+      }
+     ]
+    },
+    {
+     "id": "mixed",
+     "gradeId": "g4s",
+     "name": "整数四则混合运算",
+     "book": "第七单元",
+     "chapters": [
+      {
+       "id": "mx-two",
+       "name": "两步混合运算"
+      },
+      {
+       "id": "mx-bracket",
+       "name": "含括号的混合运算"
+      }
+     ]
+    },
+    {
+     "id": "geometry",
+     "gradeId": "g4s",
+     "name": "垂线与平行线",
+     "book": "第八单元",
+     "chapters": [],
+     "note": "图形操作单元，暂无应用题型"
+    },
+    {
+     "id": "review",
+     "gradeId": "g4s",
+     "name": "整理与复习",
+     "book": "第九单元",
+     "chapters": [],
+     "note": "综合复习，题型取自各单元"
+    },
+    {
+     "id": "average",
+     "gradeId": "g4x",
+     "name": "平均数",
+     "book": "四下",
+     "chapters": [
+      {
+       "id": "a-basic",
+       "name": "求平均数"
+      },
+      {
+       "id": "a-app",
+       "name": "平均数的应用"
+      }
+     ]
+    }
+   ]
+  }
+ },
  "templates": [
-
- { "id": "T001", "unit": "division", "type": "standard", "skill": ["condition", "relation", "bridge"], "level": 1,
+  {
+   "id": "T001",
+   "unit": "division",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 1,
+   "chapter": "d-avg",
    "story": "超市运来{n1}箱酸奶，每箱{n2}盒，平均分装到{n3}个货架上。",
    "question": "每个货架放多少盒？",
-   "params": { "n1": [3, 9, 1], "n2": [24, 60, 6], "n3": [3, 6, 1] },
-   "calc": { "total": "{n1}*{n2}", "ans": "div({total}, {n3})" },
-   "constraints": ["mod({total}, {n3}) == 0", "{ans} >= 10", "{ans} <= 90"],
-   "segments": [
-     { "t": "超市运来{n1}箱酸奶", "type": "condition" },
-     { "t": "，每箱{n2}盒", "type": "condition" },
-     { "t": "，平均分装到{n3}个货架上", "type": "condition" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     3,
+     9,
+     1
+    ],
+    "n2": [
+     24,
+     60,
+     6
+    ],
+    "n3": [
+     3,
+     6,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1}*{n2}",
+    "ans": "div({total}, {n3})"
+   },
+   "constraints": [
+    "mod({total}, {n3}) == 0",
+    "{ans} >= 10",
+    "{ans} <= 90"
    ],
-   "relations": ["平均分装"],
-   "table": { "known": ["{n1} 箱酸奶", "每箱 {n2} 盒", "{n3} 个货架"], "ask": "每个货架 ？ 盒" },
-   "bridge": { "ask": "要求每个货架放多少盒，先要算出",
-               "choices": ["酸奶一共多少盒", "箱数", "货架层数"], "answer": 0 },
-   "steps": ["{n1} × {n2} = {total}（盒）", "{total} ÷ {n3} = {ans}（盒）"],
+   "segments": [
+    {
+     "t": "超市运来{n1}箱酸奶",
+     "type": "condition"
+    },
+    {
+     "t": "，每箱{n2}盒",
+     "type": "condition"
+    },
+    {
+     "t": "，平均分装到{n3}个货架上",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "平均分装"
+   ],
+   "table": {
+    "known": [
+     "{n1} 箱酸奶",
+     "每箱 {n2} 盒",
+     "{n3} 个货架"
+    ],
+    "ask": "每个货架 ？ 盒"
+   },
+   "bridge": {
+    "ask": "要求每个货架放多少盒，先要算出",
+    "choices": [
+     "酸奶一共多少盒",
+     "箱数",
+     "货架层数"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {total}（盒）",
+    "{total} ÷ {n3} = {ans}（盒）"
+   ],
    "answer": "{ans} 盒",
-   "tip": "「平均分装」= 总数 ÷ 份数。先求总数，再求每份。" },
-
- { "id": "T002", "unit": "division", "type": "standard", "skill": ["condition", "hidden", "bridge"], "level": 1,
+   "tip": "「平均分装」= 总数 ÷ 份数。先求总数，再求每份。"
+  },
+  {
+   "id": "T002",
+   "unit": "division",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "hidden",
+    "bridge"
+   ],
+   "level": 1,
+   "chapter": "d-norm",
    "story": "{n1}名同学一共折了{n2}朵纸花。",
    "question": "照这样计算，{n3}名同学一共能折多少朵？",
-   "params": { "n1": [2, 4, 1], "n2": [12, 48, 2], "n3": [5, 9, 1] },
-   "calc": { "per": "div({n2}, {n1})", "ans": "{per}*{n3}" },
-   "constraints": ["mod({n2}, {n1}) == 0", "{per} >= 4", "{per} <= 20", "{ans} <= 150"],
-   "segments": [
-     { "t": "{n1}名同学", "type": "condition" },
-     { "t": "一共折了{n2}朵纸花", "type": "condition" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     2,
+     4,
+     1
+    ],
+    "n2": [
+     12,
+     48,
+     2
+    ],
+    "n3": [
+     5,
+     9,
+     1
+    ]
+   },
+   "calc": {
+    "per": "div({n2}, {n1})",
+    "ans": "{per}*{n3}"
+   },
+   "constraints": [
+    "mod({n2}, {n1}) == 0",
+    "{per} >= 4",
+    "{per} <= 20",
+    "{ans} <= 150"
    ],
-   "relations": ["一共"],
-   "table": { "known": ["{n1} 名同学", "一共 {n2} 朵"], "ask": "{n3} 名同学 ？ 朵" },
-   "bridge": { "ask": "要求{n3}名同学一共折多少朵，先要算出",
-               "choices": ["每名同学折多少朵", "纸花总数", "同学总人数"], "answer": 0 },
-   "steps": ["{n2} ÷ {n1} = {per}（朵）", "{per} × {n3} = {ans}（朵）"],
+   "segments": [
+    {
+     "t": "{n1}名同学",
+     "type": "condition"
+    },
+    {
+     "t": "一共折了{n2}朵纸花",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "一共"
+   ],
+   "table": {
+    "known": [
+     "{n1} 名同学",
+     "一共 {n2} 朵"
+    ],
+    "ask": "{n3} 名同学 ？ 朵"
+   },
+   "bridge": {
+    "ask": "要求{n3}名同学一共折多少朵，先要算出",
+    "choices": [
+     "每名同学折多少朵",
+     "纸花总数",
+     "同学总人数"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n2} ÷ {n1} = {per}（朵）",
+    "{per} × {n3} = {ans}（朵）"
+   ],
    "answer": "{ans} 朵",
-   "tip": "「照这样计算」= 每人折的朵数不变。先用总数 ÷ 人数，求出每人折多少朵。" },
-
- { "id": "T003", "unit": "division", "type": "standard", "skill": ["condition", "relation", "bridge"], "level": 2,
+   "tip": "「照这样计算」= 每人折的朵数不变。先用总数 ÷ 人数，求出每人折多少朵。"
+  },
+  {
+   "id": "T003",
+   "unit": "division",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 2,
+   "chapter": "d-shop",
    "story": "文具店里的钢笔每支{n1}元。妈妈买了{n2}支，付给营业员{n3}元。",
    "question": "应找回多少元？",
-   "params": { "n1": [8, 25, 1], "n2": [2, 6, 1], "n3": [50, 200, 10] },
-   "calc": { "cost": "{n1}*{n2}", "ans": "{n3}-{cost}" },
-   "constraints": ["{n3} > {cost}", "{ans} >= 5", "{ans} <= 95"],
-   "segments": [
-     { "t": "文具店里的钢笔每支{n1}元", "type": "condition" },
-     { "t": "。妈妈买了{n2}支", "type": "condition" },
-     { "t": "，付给营业员{n3}元", "type": "condition" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     8,
+     25,
+     1
+    ],
+    "n2": [
+     2,
+     6,
+     1
+    ],
+    "n3": [
+     50,
+     200,
+     10
+    ]
+   },
+   "calc": {
+    "cost": "{n1}*{n2}",
+    "ans": "{n3}-{cost}"
+   },
+   "constraints": [
+    "{n3} > {cost}",
+    "{ans} >= 5",
+    "{ans} <= 95"
    ],
-   "relations": ["每支", "付给"],
-   "table": { "known": ["每支 {n1} 元", "买了 {n2} 支", "付出 {n3} 元"], "ask": "找回 ？ 元" },
-   "bridge": { "ask": "要求应找回多少元，先要算出",
-               "choices": ["买钢笔一共用了多少元", "每支钢笔多少元", "妈妈带了多少元"], "answer": 0 },
-   "steps": ["{n1} × {n2} = {cost}（元）", "{n3} - {cost} = {ans}（元）"],
+   "segments": [
+    {
+     "t": "文具店里的钢笔每支{n1}元",
+     "type": "condition"
+    },
+    {
+     "t": "。妈妈买了{n2}支",
+     "type": "condition"
+    },
+    {
+     "t": "，付给营业员{n3}元",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每支",
+    "付给"
+   ],
+   "table": {
+    "known": [
+     "每支 {n1} 元",
+     "买了 {n2} 支",
+     "付出 {n3} 元"
+    ],
+    "ask": "找回 ？ 元"
+   },
+   "bridge": {
+    "ask": "要求应找回多少元，先要算出",
+    "choices": [
+     "买钢笔一共用了多少元",
+     "每支钢笔多少元",
+     "妈妈带了多少元"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {cost}（元）",
+    "{n3} - {cost} = {ans}（元）"
+   ],
    "answer": "{ans} 元",
-   "tip": "「付给……应找回」：找回 = 付出的钱 - 用去的钱。先算一共用了多少元。" },
-
- { "id": "T004", "unit": "division", "type": "standard", "skill": ["condition", "steps"], "level": 1,
+   "tip": "「付给……应找回」：找回 = 付出的钱 - 用去的钱。先算一共用了多少元。"
+  },
+  {
+   "id": "T004",
+   "unit": "division",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "steps"
+   ],
+   "level": 1,
+   "chapter": "d-avg",
    "story": "果园里一共收了{n1}个柚子，每{n2}个装一箱。",
    "question": "一共能装多少箱？",
-   "params": { "n1": [100, 500, 10], "n2": [12, 40, 2] },
-   "calc": { "ans": "div({n1}, {n2})" },
-   "constraints": ["mod({n1}, {n2}) == 0", "{ans} >= 5", "{ans} <= 30"],
-   "segments": [
-     { "t": "果园里一共收了{n1}个柚子", "type": "condition" },
-     { "t": "，每{n2}个装一箱", "type": "condition" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     100,
+     500,
+     10
+    ],
+    "n2": [
+     12,
+     40,
+     2
+    ]
+   },
+   "calc": {
+    "ans": "div({n1}, {n2})"
+   },
+   "constraints": [
+    "mod({n1}, {n2}) == 0",
+    "{ans} >= 5",
+    "{ans} <= 30"
    ],
-   "relations": ["一共"],
-   "table": { "known": ["一共 {n1} 个", "每箱 {n2} 个"], "ask": "能装 ？ 箱" },
+   "segments": [
+    {
+     "t": "果园里一共收了{n1}个柚子",
+     "type": "condition"
+    },
+    {
+     "t": "，每{n2}个装一箱",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "一共"
+   ],
+   "table": {
+    "known": [
+     "一共 {n1} 个",
+     "每箱 {n2} 个"
+    ],
+    "ask": "能装 ？ 箱"
+   },
    "bridge": null,
-   "steps": ["{n1} ÷ {n2} = {ans}（箱）"],
+   "steps": [
+    "{n1} ÷ {n2} = {ans}（箱）"
+   ],
    "answer": "{ans} 箱",
-   "tip": "总数 ÷ 每箱的个数 = 箱数。这是一步题：两个条件直接列一个算式。" },
-
- { "id": "T005", "unit": "division", "type": "standard", "skill": ["condition", "hidden", "bridge"], "level": 3,
+   "tip": "总数 ÷ 每箱的个数 = 箱数。这是一步题：两个条件直接列一个算式。"
+  },
+  {
+   "id": "T005",
+   "unit": "division",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "hidden",
+    "bridge"
+   ],
+   "level": 3,
+   "chapter": "d-norm",
    "story": "李老师买圆珠笔作奖品，{n1}支一共用了{n2}元。",
    "question": "照这样计算，买{n3}支，带{n4}元钱够吗？",
-   "params": { "n1": [3, 6, 1], "n2": [12, 42, 3], "n3": [8, 15, 1], "n4": [50, 100, 10] },
-   "calc": { "per": "div({n2}, {n1})", "cost": "{per}*{n3}", "diff": "{cost}-{n4}", "rest": "{n4}-{cost}" },
-   "constraints": ["mod({n2}, {n1}) == 0", "{per} >= 3", "{per} <= 7", "{diff} >= -80", "{diff} <= 80", "{diff} != 0"],
+   "params": {
+    "n1": [
+     3,
+     6,
+     1
+    ],
+    "n2": [
+     12,
+     42,
+     3
+    ],
+    "n3": [
+     8,
+     15,
+     1
+    ],
+    "n4": [
+     50,
+     100,
+     10
+    ]
+   },
+   "calc": {
+    "per": "div({n2}, {n1})",
+    "cost": "{per}*{n3}",
+    "diff": "{cost}-{n4}",
+    "rest": "{n4}-{cost}"
+   },
+   "constraints": [
+    "mod({n2}, {n1}) == 0",
+    "{per} >= 3",
+    "{per} <= 7",
+    "{diff} >= -80",
+    "{diff} <= 80",
+    "{diff} != 0"
+   ],
    "segments": [
-     { "t": "李老师买圆珠笔作奖品", "type": "plain" },
-     { "t": "，{n1}支", "type": "condition" },
-     { "t": "一共用了{n2}元", "type": "condition" },
-     { "t": "。", "type": "plain" }
+    {
+     "t": "李老师买圆珠笔作奖品",
+     "type": "plain"
+    },
+    {
+     "t": "，{n1}支",
+     "type": "condition"
+    },
+    {
+     "t": "一共用了{n2}元",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
    ],
-   "relations": ["一共"],
-   "table": { "known": ["{n1} 支 {n2} 元", "要买 {n3} 支", "带了 {n4} 元"], "ask": "钱够不够 ？" },
-   "bridge": { "ask": "要求带的钱够不够，先要算出",
-               "choices": ["买{n3}支一共要多少元", "圆珠笔的单价", "李老师带的钱数"], "answer": 0 },
+   "relations": [
+    "一共"
+   ],
+   "table": {
+    "known": [
+     "{n1} 支 {n2} 元",
+     "要买 {n3} 支",
+     "带了 {n4} 元"
+    ],
+    "ask": "钱够不够 ？"
+   },
+   "bridge": {
+    "ask": "要求带的钱够不够，先要算出",
+    "choices": [
+     "买{n3}支一共要多少元",
+     "圆珠笔的单价",
+     "李老师带的钱数"
+    ],
+    "answer": 0
+   },
    "answers": [
-     { "when": "{diff} > 0",
-       "answer": "不够，还差 {diff} 元",
-       "steps": ["{n2} ÷ {n1} = {per}（元）", "{per} × {n3} = {cost}（元）", "带 {n4} 元 < 要用 {cost} 元，还差 {diff} 元"] },
-     { "when": "1",
-       "answer": "够，还剩 {rest} 元",
-       "steps": ["{n2} ÷ {n1} = {per}（元）", "{per} × {n3} = {cost}（元）", "带 {n4} 元 > 要用 {cost} 元，剩 {rest} 元"] }
+    {
+     "when": "{diff} > 0",
+     "answer": "不够，还差 {diff} 元",
+     "steps": [
+      "{n2} ÷ {n1} = {per}（元）",
+      "{per} × {n3} = {cost}（元）",
+      "带 {n4} 元 < 要用 {cost} 元，还差 {diff} 元"
+     ]
+    },
+    {
+     "when": "1",
+     "answer": "够，还剩 {rest} 元",
+     "steps": [
+      "{n2} ÷ {n1} = {per}（元）",
+      "{per} × {n3} = {cost}（元）",
+      "带 {n4} 元 > 要用 {cost} 元，剩 {rest} 元"
+     ]
+    }
    ],
-   "tip": "「照这样计算」= 每支的价钱不变。够不够，先算出要花多少元，再和带的钱比大小。" },
-
- { "id": "T006", "unit": "division", "type": "distractor", "skill": ["condition", "distractor", "bridge"], "level": 2,
+   "tip": "「照这样计算」= 每支的价钱不变。够不够，先算出要花多少元，再和带的钱比大小。"
+  },
+  {
+   "id": "T006",
+   "unit": "division",
+   "type": "distractor",
+   "skill": [
+    "condition",
+    "distractor",
+    "bridge"
+   ],
+   "level": 2,
+   "chapter": "d-avg",
    "story": "图书馆买来{n1}捆铅笔，每捆{n2}支。图书馆有{n0}名管理员。",
    "question": "把这些铅笔平均分给{n3}个班，每班分得多少支？",
-   "params": { "n1": [4, 9, 1], "n2": [10, 25, 1], "n3": [3, 6, 1], "n0": [2, 8, 1] },
-   "calc": { "total": "{n1}*{n2}", "ans": "div({total}, {n3})" },
-   "constraints": ["mod({total}, {n3}) == 0", "{ans} >= 8", "{n0} != {n1}", "{n0} != {n3}"],
-   "segments": [
-     { "t": "图书馆买来{n1}捆铅笔", "type": "condition" },
-     { "t": "，每捆{n2}支", "type": "condition" },
-     { "t": "。图书馆有{n0}名管理员", "type": "distractor" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     4,
+     9,
+     1
+    ],
+    "n2": [
+     10,
+     25,
+     1
+    ],
+    "n3": [
+     3,
+     6,
+     1
+    ],
+    "n0": [
+     2,
+     8,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1}*{n2}",
+    "ans": "div({total}, {n3})"
+   },
+   "constraints": [
+    "mod({total}, {n3}) == 0",
+    "{ans} >= 8",
+    "{n0} != {n1}",
+    "{n0} != {n3}"
    ],
-   "relations": ["平均分给"],
-   "table": { "known": ["{n1} 捆", "每捆 {n2} 支", "{n3} 个班"], "ask": "每班 ？ 支" },
-   "bridge": { "ask": "要求每班分得多少支，先要算出",
-               "choices": ["铅笔一共多少支", "捆数", "班级数"], "answer": 0 },
-   "steps": ["{n1} × {n2} = {total}（支）", "{total} ÷ {n3} = {ans}（支）"],
+   "segments": [
+    {
+     "t": "图书馆买来{n1}捆铅笔",
+     "type": "condition"
+    },
+    {
+     "t": "，每捆{n2}支",
+     "type": "condition"
+    },
+    {
+     "t": "。图书馆有{n0}名管理员",
+     "type": "distractor"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "平均分给"
+   ],
+   "table": {
+    "known": [
+     "{n1} 捆",
+     "每捆 {n2} 支",
+     "{n3} 个班"
+    ],
+    "ask": "每班 ？ 支"
+   },
+   "bridge": {
+    "ask": "要求每班分得多少支，先要算出",
+    "choices": [
+     "铅笔一共多少支",
+     "捆数",
+     "班级数"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {total}（支）",
+    "{total} ÷ {n3} = {ans}（支）"
+   ],
    "answer": "{ans} 支",
-   "tip": "「管理员人数」这道题用不上——多余条件！读题时要问自己：这个数和问题有关系吗？" },
-
- { "id": "T007", "unit": "division", "type": "supply", "skill": ["supply", "condition"], "level": 2,
+   "tip": "「管理员人数」这道题用不上——多余条件！读题时要问自己：这个数和问题有关系吗？"
+  },
+  {
+   "id": "T007",
+   "unit": "division",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "condition"
+   ],
+   "level": 2,
+   "chapter": "d-avg",
    "story": "王老师要把一批新书平均分给{n1}个小组。",
    "question": "每个小组分得多少本？",
-   "params": { "n1": [3, 6, 1], "n0": [60, 180, 2] },
-   "calc": { "ans": "div({n0}, {n1})" },
-   "constraints": ["mod({n0}, {n1}) == 0", "{ans} >= 4", "{ans} <= 20"],
-   "segments": [
-     { "t": "王老师要把一批新书", "type": "plain" },
-     { "t": "平均分给{n1}个小组", "type": "condition" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     3,
+     6,
+     1
+    ],
+    "n0": [
+     60,
+     180,
+     2
+    ]
+   },
+   "calc": {
+    "ans": "div({n0}, {n1})"
+   },
+   "constraints": [
+    "mod({n0}, {n1}) == 0",
+    "{ans} >= 4",
+    "{ans} <= 20"
    ],
-   "relations": ["平均分给"],
-   "table": { "known": ["{n1} 个小组"], "supplyRow": "书一共 {n0} 本（补上的条件）", "ask": "每组 ？ 本" },
+   "segments": [
+    {
+     "t": "王老师要把一批新书",
+     "type": "plain"
+    },
+    {
+     "t": "平均分给{n1}个小组",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "平均分给"
+   ],
+   "table": {
+    "known": [
+     "{n1} 个小组"
+    ],
+    "supplyRow": "书一共 {n0} 本（补上的条件）",
+    "ask": "每组 ？ 本"
+   },
    "bridge": null,
-   "steps": ["{n0} ÷ {n1} = {ans}（本）"],
+   "steps": [
+    "{n0} ÷ {n1} = {ans}（本）"
+   ],
    "answer": "{ans} 本",
-   "supply": { "choices": ["这批书一共有{n0}本", "每个小组有{n0}名同学", "这批书一共花了{n0}元"],
-               "answer": 0, "why": "要求每组分得多少本，必须知道书的总本数和小组数。小组数已经有了，缺总本数。" },
-   "tip": "补上「一共有{n0}本」后：总数 ÷ 组数 = 每组的本数。审题先看缺什么条件。" },
-
- { "id": "T008", "unit": "division", "type": "standard", "skill": ["condition", "bridge"], "level": 3,
+   "supply": {
+    "choices": [
+     "这批书一共有{n0}本",
+     "每个小组有{n0}名同学",
+     "这批书一共花了{n0}元"
+    ],
+    "answer": 0,
+    "why": "要求每组分得多少本，必须知道书的总本数和小组数。小组数已经有了，缺总本数。"
+   },
+   "tip": "补上「一共有{n0}本」后：总数 ÷ 组数 = 每组的本数。审题先看缺什么条件。"
+  },
+  {
+   "id": "T008",
+   "unit": "division",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "bridge"
+   ],
+   "level": 3,
+   "chapter": "d-multi",
    "story": "商店运来{n1}箱橙子，每箱{n2}个。卖出{n3}个后，把剩下的平均装进{n4}个筐里。",
    "question": "每筐装多少个？",
-   "params": { "n1": [4, 9, 1], "n2": [20, 40, 5], "n3": [20, 60, 5], "n4": [3, 6, 1] },
-   "calc": { "total": "{n1}*{n2}", "rest": "{total}-{n3}", "ans": "div({rest}, {n4})" },
-   "constraints": ["{rest} > 0", "mod({rest}, {n4}) == 0", "{ans} >= 5", "{ans} <= 60"],
-   "segments": [
-     { "t": "商店运来{n1}箱橙子", "type": "condition" },
-     { "t": "，每箱{n2}个", "type": "condition" },
-     { "t": "。卖出{n3}个后", "type": "condition" },
-     { "t": "，把剩下的平均装进{n4}个筐里", "type": "condition" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     4,
+     9,
+     1
+    ],
+    "n2": [
+     20,
+     40,
+     5
+    ],
+    "n3": [
+     20,
+     60,
+     5
+    ],
+    "n4": [
+     3,
+     6,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1}*{n2}",
+    "rest": "{total}-{n3}",
+    "ans": "div({rest}, {n4})"
+   },
+   "constraints": [
+    "{rest} > 0",
+    "mod({rest}, {n4}) == 0",
+    "{ans} >= 5",
+    "{ans} <= 60"
    ],
-   "relations": ["剩下的", "平均装进"],
-   "table": { "known": ["{n1} 箱", "每箱 {n2} 个", "卖出 {n3} 个", "{n4} 个筐"], "ask": "每筐 ？ 个" },
-   "bridge": { "ask": "要求每筐装多少个，先要算出",
-               "choices": ["橙子一共有多少个", "箱数", "筐数"], "answer": 0 },
-   "steps": ["{n1} × {n2} = {total}（个）", "{total} - {n3} = {rest}（个）", "{rest} ÷ {n4} = {ans}（个）"],
+   "segments": [
+    {
+     "t": "商店运来{n1}箱橙子",
+     "type": "condition"
+    },
+    {
+     "t": "，每箱{n2}个",
+     "type": "condition"
+    },
+    {
+     "t": "。卖出{n3}个后",
+     "type": "condition"
+    },
+    {
+     "t": "，把剩下的平均装进{n4}个筐里",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "剩下的",
+    "平均装进"
+   ],
+   "table": {
+    "known": [
+     "{n1} 箱",
+     "每箱 {n2} 个",
+     "卖出 {n3} 个",
+     "{n4} 个筐"
+    ],
+    "ask": "每筐 ？ 个"
+   },
+   "bridge": {
+    "ask": "要求每筐装多少个，先要算出",
+    "choices": [
+     "橙子一共有多少个",
+     "箱数",
+     "筐数"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {total}（个）",
+    "{total} - {n3} = {rest}（个）",
+    "{rest} ÷ {n4} = {ans}（个）"
+   ],
    "answer": "{ans} 个",
-   "tip": "三步题更要列表：先求总数，再求剩下的，最后平均分。每一步都用上一步的结果。" },
-
- { "id": "T009", "unit": "strategy", "type": "standard", "skill": ["condition", "steps"], "level": 1,
+   "tip": "三步题更要列表：先求总数，再求剩下的，最后平均分。每一步都用上一步的结果。"
+  },
+  {
+   "id": "T009",
+   "unit": "strategy",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "steps"
+   ],
+   "level": 1,
+   "chapter": "s-trip",
    "story": "一辆汽车每小时行驶{n1}千米，从甲地到乙地一共用了{n2}小时。",
    "question": "甲、乙两地相距多少千米？",
-   "params": { "n1": [60, 95, 5], "n2": [2, 6, 1] },
-   "calc": { "ans": "{n1}*{n2}" },
-   "constraints": ["{ans} >= 120", "{ans} <= 600"],
-   "segments": [
-     { "t": "一辆汽车每小时行驶{n1}千米", "type": "condition" },
-     { "t": "，从甲地到乙地一共用了{n2}小时", "type": "condition" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     60,
+     95,
+     5
+    ],
+    "n2": [
+     2,
+     6,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n1}*{n2}"
+   },
+   "constraints": [
+    "{ans} >= 120",
+    "{ans} <= 600"
    ],
-   "relations": ["每小时", "一共"],
-   "table": { "known": ["每小时 {n1} 千米（速度）", "{n2} 小时（时间）"], "ask": "相距 ？ 千米（路程）" },
+   "segments": [
+    {
+     "t": "一辆汽车每小时行驶{n1}千米",
+     "type": "condition"
+    },
+    {
+     "t": "，从甲地到乙地一共用了{n2}小时",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每小时",
+    "一共"
+   ],
+   "table": {
+    "known": [
+     "每小时 {n1} 千米（速度）",
+     "{n2} 小时（时间）"
+    ],
+    "ask": "相距 ？ 千米（路程）"
+   },
    "bridge": null,
-   "steps": ["{n1} × {n2} = {ans}（千米）"],
+   "steps": [
+    "{n1} × {n2} = {ans}（千米）"
+   ],
    "answer": "{ans} 千米",
-   "tip": "路程 = 速度 × 时间。「每小时行驶多少千米」是速度，「用了几小时」是时间。" },
-
- { "id": "T010", "unit": "strategy", "type": "standard", "skill": ["condition", "steps"], "level": 1,
+   "tip": "路程 = 速度 × 时间。「每小时行驶多少千米」是速度，「用了几小时」是时间。"
+  },
+  {
+   "id": "T010",
+   "unit": "strategy",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "steps"
+   ],
+   "level": 1,
+   "chapter": "s-trip",
    "story": "小明家到少年宫有{n1}米。他骑自行车每分钟行{n2}米。",
    "question": "从家到少年宫一共要行多少分钟？",
-   "params": { "n1": [600, 2400, 50], "n2": [120, 240, 10] },
-   "calc": { "ans": "div({n1}, {n2})" },
-   "constraints": ["mod({n1}, {n2}) == 0", "{ans} >= 4", "{ans} <= 16"],
-   "segments": [
-     { "t": "小明家到少年宫有{n1}米", "type": "condition" },
-     { "t": "。他骑自行车每分钟行{n2}米", "type": "condition" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     600,
+     2400,
+     50
+    ],
+    "n2": [
+     120,
+     240,
+     10
+    ]
+   },
+   "calc": {
+    "ans": "div({n1}, {n2})"
+   },
+   "constraints": [
+    "mod({n1}, {n2}) == 0",
+    "{ans} >= 4",
+    "{ans} <= 16"
    ],
-   "relations": ["每分钟"],
-   "table": { "known": ["路程 {n1} 米", "每分钟 {n2} 米（速度）"], "ask": "要行 ？ 分钟（时间）" },
+   "segments": [
+    {
+     "t": "小明家到少年宫有{n1}米",
+     "type": "condition"
+    },
+    {
+     "t": "。他骑自行车每分钟行{n2}米",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每分钟"
+   ],
+   "table": {
+    "known": [
+     "路程 {n1} 米",
+     "每分钟 {n2} 米（速度）"
+    ],
+    "ask": "要行 ？ 分钟（时间）"
+   },
    "bridge": null,
-   "steps": ["{n1} ÷ {n2} = {ans}（分钟）"],
+   "steps": [
+    "{n1} ÷ {n2} = {ans}（分钟）"
+   ],
    "answer": "{ans} 分钟",
-   "tip": "时间 = 路程 ÷ 速度。路程、速度、时间三个量，知道其中两个就能求第三个。" },
-
- { "id": "T011", "unit": "strategy", "type": "standard", "skill": ["condition", "bridge"], "level": 2,
+   "tip": "时间 = 路程 ÷ 速度。路程、速度、时间三个量，知道其中两个就能求第三个。"
+  },
+  {
+   "id": "T011",
+   "unit": "strategy",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "bridge"
+   ],
+   "level": 2,
+   "chapter": "s-trip",
    "story": "一辆汽车从甲地开往乙地，每小时行驶{n1}千米，行了{n2}小时到达。返回时每小时只行驶{n3}千米。",
    "question": "返回时用了多少小时？",
-   "params": { "n1": [50, 90, 5], "n2": [3, 6, 1], "n3": [40, 60, 5] },
-   "calc": { "dist": "{n1}*{n2}", "ans": "div({dist}, {n3})" },
-   "constraints": ["mod({dist}, {n3}) == 0", "{ans} > {n2}", "{ans} <= 16"],
-   "segments": [
-     { "t": "一辆汽车从甲地开往乙地", "type": "plain" },
-     { "t": "，每小时行驶{n1}千米", "type": "condition" },
-     { "t": "，行了{n2}小时到达", "type": "condition" },
-     { "t": "。返回时每小时只行驶{n3}千米", "type": "condition" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     50,
+     90,
+     5
+    ],
+    "n2": [
+     3,
+     6,
+     1
+    ],
+    "n3": [
+     40,
+     60,
+     5
+    ]
+   },
+   "calc": {
+    "dist": "{n1}*{n2}",
+    "ans": "div({dist}, {n3})"
+   },
+   "constraints": [
+    "mod({dist}, {n3}) == 0",
+    "{ans} > {n2}",
+    "{ans} <= 16"
    ],
-   "relations": ["每小时"],
-   "table": { "known": ["去：每小时 {n1} 千米，{n2} 小时", "回：每小时 {n3} 千米"], "ask": "回程 ？ 小时" },
-   "bridge": { "ask": "要求返回用了多少小时，先要算出",
-               "choices": ["甲、乙两地的路程", "去时用的时间", "返回的速度"], "answer": 0 },
-   "steps": ["{n1} × {n2} = {dist}（千米）", "{dist} ÷ {n3} = {ans}（小时）"],
+   "segments": [
+    {
+     "t": "一辆汽车从甲地开往乙地",
+     "type": "plain"
+    },
+    {
+     "t": "，每小时行驶{n1}千米",
+     "type": "condition"
+    },
+    {
+     "t": "，行了{n2}小时到达",
+     "type": "condition"
+    },
+    {
+     "t": "。返回时每小时只行驶{n3}千米",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每小时"
+   ],
+   "table": {
+    "known": [
+     "去：每小时 {n1} 千米，{n2} 小时",
+     "回：每小时 {n3} 千米"
+    ],
+    "ask": "回程 ？ 小时"
+   },
+   "bridge": {
+    "ask": "要求返回用了多少小时，先要算出",
+    "choices": [
+     "甲、乙两地的路程",
+     "去时用的时间",
+     "返回的速度"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {dist}（千米）",
+    "{dist} ÷ {n3} = {ans}（小时）"
+   ],
    "answer": "{ans} 小时",
-   "tip": "去和回走的是同一段路——路程不变！列表格把「去」和「回」两行理清楚。" },
-
- { "id": "T012", "unit": "strategy", "type": "standard", "skill": ["condition", "steps"], "level": 1,
+   "tip": "去和回走的是同一段路——路程不变！列表格把「去」和「回」两行理清楚。"
+  },
+  {
+   "id": "T012",
+   "unit": "strategy",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "steps"
+   ],
+   "level": 1,
+   "chapter": "s-match",
    "story": "妈妈准备了{n1}件上衣和{n2}条裤子。",
    "question": "每次穿1件上衣和1条裤子，一共有多少种不同的穿法？",
-   "params": { "n1": [2, 5, 1], "n2": [3, 6, 1] },
-   "calc": { "ans": "{n1}*{n2}" },
-   "constraints": ["{ans} >= 6"],
+   "params": {
+    "n1": [
+     2,
+     5,
+     1
+    ],
+    "n2": [
+     3,
+     6,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n1}*{n2}"
+   },
+   "constraints": [
+    "{ans} >= 6"
+   ],
    "segments": [
-     { "t": "妈妈准备了{n1}件上衣", "type": "condition" },
-     { "t": "和{n2}条裤子", "type": "condition" },
-     { "t": "。", "type": "plain" }
+    {
+     "t": "妈妈准备了{n1}件上衣",
+     "type": "condition"
+    },
+    {
+     "t": "和{n2}条裤子",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
    ],
    "relations": [],
-   "table": { "known": ["{n1} 件上衣", "{n2} 条裤子"], "ask": "共 ？ 种穿法" },
+   "table": {
+    "known": [
+     "{n1} 件上衣",
+     "{n2} 条裤子"
+    ],
+    "ask": "共 ？ 种穿法"
+   },
    "bridge": null,
-   "steps": ["{n1} × {n2} = {ans}（种）"],
+   "steps": [
+    "{n1} × {n2} = {ans}（种）"
+   ],
    "answer": "{ans} 种",
-   "tip": "搭配问题可以连线：每件上衣都能配一条裤子，几种上衣就是几个几，用乘法算。" },
-
- { "id": "T013", "unit": "strategy", "type": "standard", "skill": ["condition", "steps"], "level": 2,
+   "tip": "搭配问题可以连线：每件上衣都能配一条裤子，几种上衣就是几个几，用乘法算。"
+  },
+  {
+   "id": "T013",
+   "unit": "strategy",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "steps"
+   ],
+   "level": 2,
+   "chapter": "s-match",
    "story": "从甲地到乙地有{n1}条不同的路，从乙地到丙地有{n2}条不同的路。",
    "question": "从甲地经过乙地到丙地，一共有多少种不同的走法？",
-   "params": { "n1": [2, 5, 1], "n2": [2, 5, 1] },
-   "calc": { "ans": "{n1}*{n2}" },
-   "constraints": ["{ans} >= 6"],
+   "params": {
+    "n1": [
+     2,
+     5,
+     1
+    ],
+    "n2": [
+     2,
+     5,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n1}*{n2}"
+   },
+   "constraints": [
+    "{ans} >= 6"
+   ],
    "segments": [
-     { "t": "从甲地到乙地有{n1}条不同的路", "type": "condition" },
-     { "t": "，从乙地到丙地有{n2}条不同的路", "type": "condition" },
-     { "t": "。", "type": "plain" }
+    {
+     "t": "从甲地到乙地有{n1}条不同的路",
+     "type": "condition"
+    },
+    {
+     "t": "，从乙地到丙地有{n2}条不同的路",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
    ],
    "relations": [],
-   "table": { "known": ["甲→乙：{n1} 条路", "乙→丙：{n2} 条路"], "ask": "共 ？ 种走法" },
+   "table": {
+    "known": [
+     "甲→乙：{n1} 条路",
+     "乙→丙：{n2} 条路"
+    ],
+    "ask": "共 ？ 种走法"
+   },
    "bridge": null,
-   "steps": ["{n1} × {n2} = {ans}（种）"],
+   "steps": [
+    "{n1} × {n2} = {ans}（种）"
+   ],
    "answer": "{ans} 种",
-   "tip": "要分两段走：第一段有几种选法，每种后面又接几种——求总数用乘法。" },
-
- { "id": "T014", "unit": "strategy", "type": "standard", "skill": ["condition", "steps"], "level": 2,
+   "tip": "要分两段走：第一段有几种选法，每种后面又接几种——求总数用乘法。"
+  },
+  {
+   "id": "T014",
+   "unit": "strategy",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "steps"
+   ],
+   "level": 2,
+   "chapter": "s-div",
    "story": "王老师带{n1}元去买奖品笔记本，笔记本每本{n2}元。",
    "question": "最多能买多少本？还剩多少元？",
-   "params": { "n1": [50, 120, 2], "n2": [8, 25, 1] },
-   "calc": { "q": "div({n1}, {n2})", "r": "mod({n1}, {n2})" },
-   "constraints": ["{r} >= 1", "{q} >= 3", "{q} <= 12"],
-   "segments": [
-     { "t": "王老师带{n1}元", "type": "condition" },
-     { "t": "去买奖品笔记本", "type": "plain" },
-     { "t": "，笔记本每本{n2}元", "type": "condition" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     50,
+     120,
+     2
+    ],
+    "n2": [
+     8,
+     25,
+     1
+    ]
+   },
+   "calc": {
+    "q": "div({n1}, {n2})",
+    "r": "mod({n1}, {n2})"
+   },
+   "constraints": [
+    "{r} >= 1",
+    "{q} >= 3",
+    "{q} <= 12"
    ],
-   "relations": ["每本"],
-   "table": { "known": ["一共 {n1} 元", "每本 {n2} 元"], "ask": "能买 ？ 本，剩 ？ 元" },
+   "segments": [
+    {
+     "t": "王老师带{n1}元",
+     "type": "condition"
+    },
+    {
+     "t": "去买奖品笔记本",
+     "type": "plain"
+    },
+    {
+     "t": "，笔记本每本{n2}元",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每本"
+   ],
+   "table": {
+    "known": [
+     "一共 {n1} 元",
+     "每本 {n2} 元"
+    ],
+    "ask": "能买 ？ 本，剩 ？ 元"
+   },
    "bridge": null,
-   "steps": ["{n1} ÷ {n2} = {q}（本）……{r}（元）"],
+   "steps": [
+    "{n1} ÷ {n2} = {q}（本）……{r}（元）"
+   ],
    "answer": "最多买 {q} 本，还剩 {r} 元",
-   "tip": "「最多买多少本」用有余数的除法：商是能买的本数，余数是剩下的钱——不够再买一本了。" },
-
- { "id": "T015", "unit": "strategy", "type": "supply", "skill": ["supply", "condition"], "level": 2,
+   "tip": "「最多买多少本」用有余数的除法：商是能买的本数，余数是剩下的钱——不够再买一本了。"
+  },
+  {
+   "id": "T015",
+   "unit": "strategy",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "condition"
+   ],
+   "level": 2,
+   "chapter": "s-trip",
    "story": "甲、乙两港之间的水路长{n1}千米。一艘轮船从甲港开往乙港。",
    "question": "开完全程一共要行多少小时？",
-   "params": { "n1": [120, 480, 10], "n0": [15, 40, 5] },
-   "calc": { "ans": "div({n1}, {n0})" },
-   "constraints": ["mod({n1}, {n0}) == 0", "{ans} >= 3", "{ans} <= 20"],
+   "params": {
+    "n1": [
+     120,
+     480,
+     10
+    ],
+    "n0": [
+     15,
+     40,
+     5
+    ]
+   },
+   "calc": {
+    "ans": "div({n1}, {n0})"
+   },
+   "constraints": [
+    "mod({n1}, {n0}) == 0",
+    "{ans} >= 3",
+    "{ans} <= 20"
+   ],
    "segments": [
-     { "t": "甲、乙两港之间的水路长{n1}千米", "type": "condition" },
-     { "t": "。一艘轮船从甲港开往乙港", "type": "plain" },
-     { "t": "。", "type": "plain" }
+    {
+     "t": "甲、乙两港之间的水路长{n1}千米",
+     "type": "condition"
+    },
+    {
+     "t": "。一艘轮船从甲港开往乙港",
+     "type": "plain"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
    ],
    "relations": [],
-   "table": { "known": ["水路 {n1} 千米（路程）"], "supplyRow": "每小时 {n0} 千米（补上的条件）", "ask": "要行 ？ 小时" },
+   "table": {
+    "known": [
+     "水路 {n1} 千米（路程）"
+    ],
+    "supplyRow": "每小时 {n0} 千米（补上的条件）",
+    "ask": "要行 ？ 小时"
+   },
    "bridge": null,
-   "steps": ["{n1} ÷ {n0} = {ans}（小时）"],
+   "steps": [
+    "{n1} ÷ {n0} = {ans}（小时）"
+   ],
    "answer": "{ans} 小时",
-   "supply": { "choices": ["轮船每小时航行{n0}千米", "轮船一共航行了{n0}小时", "轮船最多装货{n0}吨"],
-               "answer": 0, "why": "要求时间，必须知道路程和速度。路程已经有了，缺速度。" },
-   "tip": "时间 = 路程 ÷ 速度。补上速度，条件和问题就齐了。" },
-
- { "id": "T016", "unit": "strategy", "type": "standard", "skill": ["condition", "hidden", "bridge"], "level": 1,
+   "supply": {
+    "choices": [
+     "轮船每小时航行{n0}千米",
+     "轮船一共航行了{n0}小时",
+     "轮船最多装货{n0}吨"
+    ],
+    "answer": 0,
+    "why": "要求时间，必须知道路程和速度。路程已经有了，缺速度。"
+   },
+   "tip": "时间 = 路程 ÷ 速度。补上速度，条件和问题就齐了。"
+  },
+  {
+   "id": "T016",
+   "unit": "strategy",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "hidden",
+    "bridge"
+   ],
+   "level": 1,
+   "chapter": "s-trip",
    "story": "小华去散步，{n1}分钟走了{n2}米。",
    "question": "照这样的速度，{n3}分钟能走多少米？",
-   "params": { "n1": [2, 4, 1], "n2": [120, 360, 20], "n3": [6, 12, 1] },
-   "calc": { "per": "div({n2}, {n1})", "ans": "{per}*{n3}" },
-   "constraints": ["mod({n2}, {n1}) == 0", "{per} >= 50", "{per} <= 90", "{ans} <= 1200"],
+   "params": {
+    "n1": [
+     2,
+     4,
+     1
+    ],
+    "n2": [
+     120,
+     360,
+     20
+    ],
+    "n3": [
+     6,
+     12,
+     1
+    ]
+   },
+   "calc": {
+    "per": "div({n2}, {n1})",
+    "ans": "{per}*{n3}"
+   },
+   "constraints": [
+    "mod({n2}, {n1}) == 0",
+    "{per} >= 50",
+    "{per} <= 90",
+    "{ans} <= 1200"
+   ],
    "segments": [
-     { "t": "小华去散步", "type": "plain" },
-     { "t": "，{n1}分钟走了{n2}米", "type": "condition" },
-     { "t": "。", "type": "plain" }
+    {
+     "t": "小华去散步",
+     "type": "plain"
+    },
+    {
+     "t": "，{n1}分钟走了{n2}米",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
    ],
    "relations": [],
-   "table": { "known": ["{n1} 分钟走 {n2} 米", "{n3} 分钟"], "ask": "{n3} 分钟 ？ 米" },
-   "bridge": { "ask": "要求{n3}分钟走多少米，先要算出",
-               "choices": ["每分钟走多少米", "一共走了多少米", "散步的总时间"], "answer": 0 },
-   "steps": ["{n2} ÷ {n1} = {per}（米）", "{per} × {n3} = {ans}（米）"],
+   "table": {
+    "known": [
+     "{n1} 分钟走 {n2} 米",
+     "{n3} 分钟"
+    ],
+    "ask": "{n3} 分钟 ？ 米"
+   },
+   "bridge": {
+    "ask": "要求{n3}分钟走多少米，先要算出",
+    "choices": [
+     "每分钟走多少米",
+     "一共走了多少米",
+     "散步的总时间"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n2} ÷ {n1} = {per}（米）",
+    "{per} × {n3} = {ans}（米）"
+   ],
    "answer": "{ans} 米",
-   "tip": "「照这样的速度」= 每分钟走的米数不变。先求每分钟走多少米。" },
-
- { "id": "T017", "unit": "volume", "type": "standard", "skill": ["condition", "hidden", "unit", "bridge"], "level": 2,
+   "tip": "「照这样的速度」= 每分钟走的米数不变。先求每分钟走多少米。"
+  },
+  {
+   "id": "T017",
+   "unit": "volume",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "hidden",
+    "unit",
+    "bridge"
+   ],
+   "level": 2,
+   "chapter": "v-conv",
    "story": "一瓶洗发水有{n1}毫升，另一瓶洗发水有{n2}升。",
    "question": "哪瓶装得多？多多少毫升？",
-   "params": { "n1": [200, 800, 50], "n2": [1, 2, 1] },
-   "calc": { "ml": "{n2}*1000", "diff": "{ml}-{n1}" },
-   "constraints": ["{ml} > {n1}", "{diff} >= 100", "{diff} <= 1500"],
+   "params": {
+    "n1": [
+     200,
+     800,
+     50
+    ],
+    "n2": [
+     1,
+     2,
+     1
+    ]
+   },
+   "calc": {
+    "ml": "{n2}*1000",
+    "diff": "{ml}-{n1}"
+   },
+   "constraints": [
+    "{ml} > {n1}",
+    "{diff} >= 100",
+    "{diff} <= 1500"
+   ],
    "segments": [
-     { "t": "一瓶洗发水有{n1}毫升", "type": "condition" },
-     { "t": "，另一瓶洗发水有{n2}升", "type": "condition" },
-     { "t": "。", "type": "plain" }
+    {
+     "t": "一瓶洗发水有{n1}毫升",
+     "type": "condition"
+    },
+    {
+     "t": "，另一瓶洗发水有{n2}升",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
    ],
    "relations": [],
-   "table": { "known": ["第一瓶 {n1} 毫升", "第二瓶 {n2} 升"], "ask": "多 ？ 毫升" },
-   "bridge": { "ask": "要求多多少毫升，先要算出",
-               "choices": ["{n2}升等于多少毫升", "两瓶一共有多少", "第一瓶有多少升"], "answer": 0 },
-   "steps": ["{n2} 升 = {ml} 毫升", "{ml} - {n1} = {diff}（毫升）"],
+   "table": {
+    "known": [
+     "第一瓶 {n1} 毫升",
+     "第二瓶 {n2} 升"
+    ],
+    "ask": "多 ？ 毫升"
+   },
+   "bridge": {
+    "ask": "要求多多少毫升，先要算出",
+    "choices": [
+     "{n2}升等于多少毫升",
+     "两瓶一共有多少",
+     "第一瓶有多少升"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n2} 升 = {ml} 毫升",
+    "{ml} - {n1} = {diff}（毫升）"
+   ],
    "answer": "{n2} 升的那瓶多，多 {diff} 毫升",
-   "tip": "单位不同不能直接比！隐藏条件：1 升 = 1000 毫升。先统一单位再比较。" },
-
- { "id": "T018", "unit": "volume", "type": "standard", "skill": ["condition", "hidden", "unit", "bridge"], "level": 1,
+   "tip": "单位不同不能直接比！隐藏条件：1 升 = 1000 毫升。先统一单位再比较。"
+  },
+  {
+   "id": "T018",
+   "unit": "volume",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "hidden",
+    "unit",
+    "bridge"
+   ],
+   "level": 1,
+   "chapter": "v-conv",
    "story": "妈妈买了{n1}瓶果汁，每瓶{n2}毫升。",
    "question": "果汁一共有多少毫升？合多少升？",
-   "params": { "n1": [2, 6, 1], "n2": [250, 500, 50] },
-   "calc": { "total": "{n1}*{n2}", "liters": "div({total}, 1000)" },
-   "constraints": ["mod({total}, 1000) == 0", "{liters} >= 1", "{liters} <= 6"],
-   "segments": [
-     { "t": "妈妈买了{n1}瓶果汁", "type": "condition" },
-     { "t": "，每瓶{n2}毫升", "type": "condition" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     2,
+     6,
+     1
+    ],
+    "n2": [
+     250,
+     500,
+     50
+    ]
+   },
+   "calc": {
+    "total": "{n1}*{n2}",
+    "liters": "div({total}, 1000)"
+   },
+   "constraints": [
+    "mod({total}, 1000) == 0",
+    "{liters} >= 1",
+    "{liters} <= 6"
    ],
-   "relations": ["每瓶"],
-   "table": { "known": ["{n1} 瓶", "每瓶 {n2} 毫升"], "ask": "共 ？ 毫升，合 ？ 升" },
-   "bridge": { "ask": "要求合多少升，先要算出",
-               "choices": ["果汁一共有多少毫升", "每瓶多少毫升", "一共有几瓶"], "answer": 0 },
-   "steps": ["{n1} × {n2} = {total}（毫升）", "{total} 毫升 = {liters} 升"],
+   "segments": [
+    {
+     "t": "妈妈买了{n1}瓶果汁",
+     "type": "condition"
+    },
+    {
+     "t": "，每瓶{n2}毫升",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每瓶"
+   ],
+   "table": {
+    "known": [
+     "{n1} 瓶",
+     "每瓶 {n2} 毫升"
+    ],
+    "ask": "共 ？ 毫升，合 ？ 升"
+   },
+   "bridge": {
+    "ask": "要求合多少升，先要算出",
+    "choices": [
+     "果汁一共有多少毫升",
+     "每瓶多少毫升",
+     "一共有几瓶"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {total}（毫升）",
+    "{total} 毫升 = {liters} 升"
+   ],
    "answer": "一共 {total} 毫升，合 {liters} 升",
-   "tip": "隐藏条件：1 升 = 1000 毫升。先算总毫升数，再换成升。" },
-
- { "id": "T019", "unit": "volume", "type": "standard", "skill": ["condition", "steps"], "level": 1,
+   "tip": "隐藏条件：1 升 = 1000 毫升。先算总毫升数，再换成升。"
+  },
+  {
+   "id": "T019",
+   "unit": "volume",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "steps"
+   ],
+   "level": 1,
+   "chapter": "v-know",
    "story": "食堂买来一大桶豆浆，一共{n1}毫升。每杯倒{n2}毫升。",
    "question": "这桶豆浆一共可以倒多少杯？",
-   "params": { "n1": [1200, 3000, 100], "n2": [150, 250, 10] },
-   "calc": { "ans": "div({n1}, {n2})" },
-   "constraints": ["mod({n1}, {n2}) == 0", "{ans} >= 6", "{ans} <= 15"],
-   "segments": [
-     { "t": "食堂买来一大桶豆浆", "type": "plain" },
-     { "t": "，一共{n1}毫升", "type": "condition" },
-     { "t": "。每杯倒{n2}毫升", "type": "condition" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     1200,
+     3000,
+     100
+    ],
+    "n2": [
+     150,
+     250,
+     10
+    ]
+   },
+   "calc": {
+    "ans": "div({n1}, {n2})"
+   },
+   "constraints": [
+    "mod({n1}, {n2}) == 0",
+    "{ans} >= 6",
+    "{ans} <= 15"
    ],
-   "relations": ["每杯"],
-   "table": { "known": ["一共 {n1} 毫升", "每杯 {n2} 毫升"], "ask": "能倒 ？ 杯" },
+   "segments": [
+    {
+     "t": "食堂买来一大桶豆浆",
+     "type": "plain"
+    },
+    {
+     "t": "，一共{n1}毫升",
+     "type": "condition"
+    },
+    {
+     "t": "。每杯倒{n2}毫升",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每杯"
+   ],
+   "table": {
+    "known": [
+     "一共 {n1} 毫升",
+     "每杯 {n2} 毫升"
+    ],
+    "ask": "能倒 ？ 杯"
+   },
    "bridge": null,
-   "steps": ["{n1} ÷ {n2} = {ans}（杯）"],
+   "steps": [
+    "{n1} ÷ {n2} = {ans}（杯）"
+   ],
    "answer": "{ans} 杯",
-   "tip": "总数 ÷ 每杯的毫升数 = 杯数。这是一步题。" },
-
- { "id": "T020", "unit": "volume", "type": "distractor", "skill": ["condition", "distractor", "hidden", "unit", "bridge"], "level": 2,
+   "tip": "总数 ÷ 每杯的毫升数 = 杯数。这是一步题。"
+  },
+  {
+   "id": "T020",
+   "unit": "volume",
+   "type": "distractor",
+   "skill": [
+    "condition",
+    "distractor",
+    "hidden",
+    "unit",
+    "bridge"
+   ],
+   "level": 2,
+   "chapter": "v-conv",
    "story": "超市里大瓶果汁每瓶{n1}毫升，售价{n2}元。小明家一次买了{n3}瓶。",
    "question": "小明家一共买了多少毫升果汁？合多少升？",
-   "params": { "n1": [500, 1500, 100], "n2": [8, 20, 1], "n3": [2, 6, 1] },
-   "calc": { "total": "{n1}*{n3}", "liters": "div({total}, 1000)" },
-   "constraints": ["mod({total}, 1000) == 0", "{liters} >= 1", "{liters} <= 9"],
-   "segments": [
-     { "t": "超市里大瓶果汁每瓶{n1}毫升", "type": "condition" },
-     { "t": "，售价{n2}元", "type": "distractor" },
-     { "t": "。小明家一次买了{n3}瓶", "type": "condition" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     500,
+     1500,
+     100
+    ],
+    "n2": [
+     8,
+     20,
+     1
+    ],
+    "n3": [
+     2,
+     6,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1}*{n3}",
+    "liters": "div({total}, 1000)"
+   },
+   "constraints": [
+    "mod({total}, 1000) == 0",
+    "{liters} >= 1",
+    "{liters} <= 9"
    ],
-   "relations": ["每瓶"],
-   "table": { "known": ["每瓶 {n1} 毫升", "买了 {n3} 瓶"], "ask": "共 ？ 毫升，合 ？ 升" },
-   "bridge": { "ask": "要求合多少升，先要算出",
-               "choices": ["一共买了多少毫升", "每瓶多少毫升", "买了多少瓶"], "answer": 0 },
-   "steps": ["{n1} × {n3} = {total}（毫升）", "{total} 毫升 = {liters} 升"],
+   "segments": [
+    {
+     "t": "超市里大瓶果汁每瓶{n1}毫升",
+     "type": "condition"
+    },
+    {
+     "t": "，售价{n2}元",
+     "type": "distractor"
+    },
+    {
+     "t": "。小明家一次买了{n3}瓶",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每瓶"
+   ],
+   "table": {
+    "known": [
+     "每瓶 {n1} 毫升",
+     "买了 {n3} 瓶"
+    ],
+    "ask": "共 ？ 毫升，合 ？ 升"
+   },
+   "bridge": {
+    "ask": "要求合多少升，先要算出",
+    "choices": [
+     "一共买了多少毫升",
+     "每瓶多少毫升",
+     "买了多少瓶"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n3} = {total}（毫升）",
+    "{total} 毫升 = {liters} 升"
+   ],
    "answer": "一共 {total} 毫升，合 {liters} 升",
-   "tip": "「售价多少元」是多余条件！问题问毫升和升，跟钱没有关系。" },
-
- { "id": "T021", "unit": "volume", "type": "supply", "skill": ["supply", "condition"], "level": 2,
+   "tip": "「售价多少元」是多余条件！问题问毫升和升，跟钱没有关系。"
+  },
+  {
+   "id": "T021",
+   "unit": "volume",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "condition"
+   ],
+   "level": 2,
+   "chapter": "v-know",
    "story": "早餐店一大桶豆浆有{n1}毫升。",
    "question": "平均每瓶装多少毫升？",
-   "params": { "n1": [1200, 3600, 100], "n0": [4, 9, 1] },
-   "calc": { "ans": "div({n1}, {n0})" },
-   "constraints": ["mod({n1}, {n0}) == 0", "{ans} >= 150", "{ans} <= 500"],
+   "params": {
+    "n1": [
+     1200,
+     3600,
+     100
+    ],
+    "n0": [
+     4,
+     9,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "div({n1}, {n0})"
+   },
+   "constraints": [
+    "mod({n1}, {n0}) == 0",
+    "{ans} >= 150",
+    "{ans} <= 500"
+   ],
    "segments": [
-     { "t": "早餐店一大桶豆浆有{n1}毫升", "type": "condition" },
-     { "t": "。", "type": "plain" }
+    {
+     "t": "早餐店一大桶豆浆有{n1}毫升",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
    ],
    "relations": [],
-   "table": { "known": ["一共 {n1} 毫升"], "supplyRow": "装了 {n0} 瓶（补上的条件）", "ask": "每瓶 ？ 毫升" },
+   "table": {
+    "known": [
+     "一共 {n1} 毫升"
+    ],
+    "supplyRow": "装了 {n0} 瓶（补上的条件）",
+    "ask": "每瓶 ？ 毫升"
+   },
    "bridge": null,
-   "steps": ["{n1} ÷ {n0} = {ans}（毫升）"],
+   "steps": [
+    "{n1} ÷ {n0} = {ans}（毫升）"
+   ],
    "answer": "{ans} 毫升",
-   "supply": { "choices": ["这桶豆浆一共装了{n0}瓶", "每瓶豆浆卖{n0}元", "早餐店有{n0}名店员"],
-               "answer": 0, "why": "要求每瓶装多少毫升，必须知道总量和瓶数。总量已经有了，缺瓶数。" },
-   "tip": "总数 ÷ 瓶数 = 每瓶的毫升数。补条件时想：求这个量，还缺哪个条件？" },
-
- { "id": "T022", "unit": "average", "type": "standard", "skill": ["condition", "relation", "bridge"], "level": 1,
+   "supply": {
+    "choices": [
+     "这桶豆浆一共装了{n0}瓶",
+     "每瓶豆浆卖{n0}元",
+     "早餐店有{n0}名店员"
+    ],
+    "answer": 0,
+    "why": "要求每瓶装多少毫升，必须知道总量和瓶数。总量已经有了，缺瓶数。"
+   },
+   "tip": "总数 ÷ 瓶数 = 每瓶的毫升数。补条件时想：求这个量，还缺哪个条件？"
+  },
+  {
+   "id": "T022",
+   "unit": "average",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 1,
+   "chapter": "a-basic",
    "story": "小丽期末考试，语文得{n1}分，数学得{n2}分，英语得{n3}分。",
    "question": "三门功课的平均分是多少分？",
-   "params": { "n1": [85, 98, 1], "n2": [85, 98, 1], "n3": [85, 98, 1] },
-   "calc": { "total": "{n1}+{n2}+{n3}", "ans": "div({total}, 3)" },
-   "constraints": ["mod({total}, 3) == 0", "{ans} >= 85"],
-   "segments": [
-     { "t": "小丽期末考试", "type": "plain" },
-     { "t": "，语文得{n1}分", "type": "condition" },
-     { "t": "，数学得{n2}分", "type": "condition" },
-     { "t": "，英语得{n3}分", "type": "condition" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     85,
+     98,
+     1
+    ],
+    "n2": [
+     85,
+     98,
+     1
+    ],
+    "n3": [
+     85,
+     98,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1}+{n2}+{n3}",
+    "ans": "div({total}, 3)"
+   },
+   "constraints": [
+    "mod({total}, 3) == 0",
+    "{ans} >= 85"
    ],
-   "relations": ["平均"],
-   "table": { "known": ["语文 {n1} 分", "数学 {n2} 分", "英语 {n3} 分"], "ask": "平均 ？ 分" },
-   "bridge": { "ask": "要求平均分是多少，先要算出",
-               "choices": ["三门功课的总分", "考得最好的一门", "一共考了几门"], "answer": 0 },
-   "steps": ["{n1} + {n2} + {n3} = {total}（分）", "{total} ÷ 3 = {ans}（分）"],
+   "segments": [
+    {
+     "t": "小丽期末考试",
+     "type": "plain"
+    },
+    {
+     "t": "，语文得{n1}分",
+     "type": "condition"
+    },
+    {
+     "t": "，数学得{n2}分",
+     "type": "condition"
+    },
+    {
+     "t": "，英语得{n3}分",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "平均"
+   ],
+   "table": {
+    "known": [
+     "语文 {n1} 分",
+     "数学 {n2} 分",
+     "英语 {n3} 分"
+    ],
+    "ask": "平均 ？ 分"
+   },
+   "bridge": {
+    "ask": "要求平均分是多少，先要算出",
+    "choices": [
+     "三门功课的总分",
+     "考得最好的一门",
+     "一共考了几门"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} + {n2} + {n3} = {total}（分）",
+    "{total} ÷ 3 = {ans}（分）"
+   ],
    "answer": "{ans} 分",
-   "tip": "平均数 = 总数 ÷ 份数。三个分数不一样，先合起来，再平均分。" },
-
- { "id": "T023", "unit": "average", "type": "standard", "skill": ["condition", "hidden"], "level": 2,
+   "tip": "平均数 = 总数 ÷ 份数。三个分数不一样，先合起来，再平均分。"
+  },
+  {
+   "id": "T023",
+   "unit": "average",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "hidden"
+   ],
+   "level": 2,
+   "chapter": "a-app",
    "story": "一辆汽车平均每天行驶{n1}千米。",
    "question": "照这样计算，一个星期一共行驶多少千米？",
-   "params": { "n1": [60, 120, 5] },
-   "calc": { "ans": "{n1}*7" },
-   "constraints": ["{ans} <= 1000"],
-   "segments": [
-     { "t": "一辆汽车平均每天行驶{n1}千米", "type": "condition" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     60,
+     120,
+     5
+    ]
+   },
+   "calc": {
+    "ans": "{n1}*7"
+   },
+   "constraints": [
+    "{ans} <= 1000"
    ],
-   "relations": ["平均每天"],
-   "table": { "known": ["平均每天 {n1} 千米"], "ask": "一个星期 ？ 千米" },
+   "segments": [
+    {
+     "t": "一辆汽车平均每天行驶{n1}千米",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "平均每天"
+   ],
+   "table": {
+    "known": [
+     "平均每天 {n1} 千米"
+    ],
+    "ask": "一个星期 ？ 千米"
+   },
    "bridge": null,
-   "steps": ["{n1} × 7 = {ans}（千米）"],
+   "steps": [
+    "{n1} × 7 = {ans}（千米）"
+   ],
    "answer": "{ans} 千米",
-   "tip": "「一个星期」里藏着一个条件：7 天！题目没写 7，你要自己知道。" },
-
- { "id": "T024", "unit": "average", "type": "standard", "skill": ["condition", "hidden", "bridge"], "level": 3,
+   "tip": "「一个星期」里藏着一个条件：7 天！题目没写 7，你要自己知道。"
+  },
+  {
+   "id": "T024",
+   "unit": "average",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "hidden",
+    "bridge"
+   ],
+   "level": 3,
+   "chapter": "a-basic",
    "story": "四(2)班{n1}名同学的平均身高是{n2}厘米。后来又转来1名同学，身高{n3}厘米。",
    "question": "现在全班的平均身高是多少厘米？",
-   "params": { "n1": [6, 12, 1], "n2": [135, 150, 1], "n3": [130, 160, 1] },
-   "calc": { "total": "{n1}*{n2}", "sum2": "{total}+{n3}", "ans": "div({sum2}, {n1}+1)" },
-   "constraints": ["mod({sum2}, {n1}+1) == 0", "{ans} >= 130", "{ans} <= 160"],
-   "segments": [
-     { "t": "四(2)班{n1}名同学的平均身高是{n2}厘米", "type": "condition" },
-     { "t": "。后来又转来1名同学", "type": "condition" },
-     { "t": "，身高{n3}厘米", "type": "condition" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     6,
+     12,
+     1
+    ],
+    "n2": [
+     135,
+     150,
+     1
+    ],
+    "n3": [
+     130,
+     160,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1}*{n2}",
+    "sum2": "{total}+{n3}",
+    "ans": "div({sum2}, {n1}+1)"
+   },
+   "constraints": [
+    "mod({sum2}, {n1}+1) == 0",
+    "{ans} >= 130",
+    "{ans} <= 160"
    ],
-   "relations": ["平均身高"],
-   "table": { "known": ["原来：{n1} 人，平均 {n2} 厘米", "转来 1 人：{n3} 厘米"], "ask": "现在平均 ？ 厘米" },
-   "bridge": { "ask": "要求现在的平均身高，先要算出",
-               "choices": ["原来{n1}人的身高总和", "转来同学的身高", "现在有多少人"], "answer": 0 },
-   "steps": ["{n1} × {n2} = {total}（厘米）", "{total} + {n3} = {sum2}（厘米）", "{sum2} ÷ ({n1}+1) = {ans}（厘米）"],
+   "segments": [
+    {
+     "t": "四(2)班{n1}名同学的平均身高是{n2}厘米",
+     "type": "condition"
+    },
+    {
+     "t": "。后来又转来1名同学",
+     "type": "condition"
+    },
+    {
+     "t": "，身高{n3}厘米",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "平均身高"
+   ],
+   "table": {
+    "known": [
+     "原来：{n1} 人，平均 {n2} 厘米",
+     "转来 1 人：{n3} 厘米"
+    ],
+    "ask": "现在平均 ？ 厘米"
+   },
+   "bridge": {
+    "ask": "要求现在的平均身高，先要算出",
+    "choices": [
+     "原来{n1}人的身高总和",
+     "转来同学的身高",
+     "现在有多少人"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {total}（厘米）",
+    "{total} + {n3} = {sum2}（厘米）",
+    "{sum2} ÷ ({n1}+1) = {ans}（厘米）"
+   ],
    "answer": "{ans} 厘米",
-   "tip": "平均数能倒过来用：平均身高 × 人数 = 总身高。人数变了，总身高也跟着变。" },
-
- { "id": "T025", "unit": "average", "type": "distractor", "skill": ["condition", "distractor", "bridge"], "level": 2,
+   "tip": "平均数能倒过来用：平均身高 × 人数 = 总身高。人数变了，总身高也跟着变。"
+  },
+  {
+   "id": "T025",
+   "unit": "average",
+   "type": "distractor",
+   "skill": [
+    "condition",
+    "distractor",
+    "bridge"
+   ],
+   "level": 2,
+   "chapter": "a-app",
    "story": "小红期末考试，语文得{n1}分，数学得{n2}分，英语得{n3}分，体育得{n4}分。",
    "question": "语文、数学、英语三门的平均分是多少分？",
-   "params": { "n1": [85, 98, 1], "n2": [85, 98, 1], "n3": [85, 98, 1], "n4": [80, 100, 1] },
-   "calc": { "total": "{n1}+{n2}+{n3}", "ans": "div({total}, 3)" },
-   "constraints": ["mod({total}, 3) == 0", "{ans} >= 85", "{n4} != {n1}", "{n4} != {n2}", "{n4} != {n3}"],
-   "segments": [
-     { "t": "小红期末考试", "type": "plain" },
-     { "t": "，语文得{n1}分", "type": "condition" },
-     { "t": "，数学得{n2}分", "type": "condition" },
-     { "t": "，英语得{n3}分", "type": "condition" },
-     { "t": "，体育得{n4}分", "type": "distractor" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     85,
+     98,
+     1
+    ],
+    "n2": [
+     85,
+     98,
+     1
+    ],
+    "n3": [
+     85,
+     98,
+     1
+    ],
+    "n4": [
+     80,
+     100,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1}+{n2}+{n3}",
+    "ans": "div({total}, 3)"
+   },
+   "constraints": [
+    "mod({total}, 3) == 0",
+    "{ans} >= 85",
+    "{n4} != {n1}",
+    "{n4} != {n2}",
+    "{n4} != {n3}"
    ],
-   "relations": ["平均"],
-   "table": { "known": ["语文 {n1} 分", "数学 {n2} 分", "英语 {n3} 分"], "ask": "三门平均 ？ 分" },
-   "bridge": { "ask": "要求三门的平均分，先要算出",
-               "choices": ["三门的总分", "四门的总分", "分数最高的科目"], "answer": 0 },
-   "steps": ["{n1} + {n2} + {n3} = {total}（分）", "{total} ÷ 3 = {ans}（分）"],
+   "segments": [
+    {
+     "t": "小红期末考试",
+     "type": "plain"
+    },
+    {
+     "t": "，语文得{n1}分",
+     "type": "condition"
+    },
+    {
+     "t": "，数学得{n2}分",
+     "type": "condition"
+    },
+    {
+     "t": "，英语得{n3}分",
+     "type": "condition"
+    },
+    {
+     "t": "，体育得{n4}分",
+     "type": "distractor"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "平均"
+   ],
+   "table": {
+    "known": [
+     "语文 {n1} 分",
+     "数学 {n2} 分",
+     "英语 {n3} 分"
+    ],
+    "ask": "三门平均 ？ 分"
+   },
+   "bridge": {
+    "ask": "要求三门的平均分，先要算出",
+    "choices": [
+     "三门的总分",
+     "四门的总分",
+     "分数最高的科目"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} + {n2} + {n3} = {total}（分）",
+    "{total} ÷ 3 = {ans}（分）"
+   ],
    "answer": "{ans} 分",
-   "tip": "问的是「语文、数学、英语三门」的平均——体育成绩用不上！看清平均的是哪几项。" },
-
- { "id": "T026", "unit": "average", "type": "supply", "skill": ["supply", "condition"], "level": 2,
+   "tip": "问的是「语文、数学、英语三门」的平均——体育成绩用不上！看清平均的是哪几项。"
+  },
+  {
+   "id": "T026",
+   "unit": "average",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "condition"
+   ],
+   "level": 2,
+   "chapter": "a-basic",
    "story": "{n1}名同学参加口算比赛。",
    "question": "平均每人做对了多少道题？",
-   "params": { "n1": [3, 6, 1], "n0": [60, 150, 3] },
-   "calc": { "ans": "div({n0}, {n1})" },
-   "constraints": ["mod({n0}, {n1}) == 0", "{ans} >= 8", "{ans} <= 25"],
+   "params": {
+    "n1": [
+     3,
+     6,
+     1
+    ],
+    "n0": [
+     60,
+     150,
+     3
+    ]
+   },
+   "calc": {
+    "ans": "div({n0}, {n1})"
+   },
+   "constraints": [
+    "mod({n0}, {n1}) == 0",
+    "{ans} >= 8",
+    "{ans} <= 25"
+   ],
    "segments": [
-     { "t": "{n1}名同学参加口算比赛", "type": "condition" },
-     { "t": "。", "type": "plain" }
+    {
+     "t": "{n1}名同学参加口算比赛",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
    ],
    "relations": [],
-   "table": { "known": ["{n1} 名同学"], "supplyRow": "一共做对 {n0} 道（补上的条件）", "ask": "平均每人 ？ 道" },
+   "table": {
+    "known": [
+     "{n1} 名同学"
+    ],
+    "supplyRow": "一共做对 {n0} 道（补上的条件）",
+    "ask": "平均每人 ？ 道"
+   },
    "bridge": null,
-   "steps": ["{n0} ÷ {n1} = {ans}（道）"],
+   "steps": [
+    "{n0} ÷ {n1} = {ans}（道）"
+   ],
    "answer": "{ans} 道",
-   "supply": { "choices": ["他们一共做对了{n0}道题", "每人用了{n0}分钟", "每人有{n0}支铅笔"],
-               "answer": 0, "why": "求平均数必须知道总数和人数。人数已经有了，缺做对的总题数。" },
-   "tip": "平均数 = 总数 ÷ 人数。补条件时想：求平均，总数有了吗？" },
-
- { "id": "T027", "unit": "division", "type": "standard", "skill": ["condition", "steps"], "level": 1,
+   "supply": {
+    "choices": [
+     "他们一共做对了{n0}道题",
+     "每人用了{n0}分钟",
+     "每人有{n0}支铅笔"
+    ],
+    "answer": 0,
+    "why": "求平均数必须知道总数和人数。人数已经有了，缺做对的总题数。"
+   },
+   "tip": "平均数 = 总数 ÷ 人数。补条件时想：求平均，总数有了吗？"
+  },
+  {
+   "id": "T027",
+   "unit": "division",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "steps"
+   ],
+   "level": 1,
+   "chapter": "d-avg",
    "story": "老师把{n1}本练习本平均分给{n2}名同学。",
    "question": "每名同学分到多少本？",
-   "params": { "n1": [24, 72, 2], "n2": [3, 8, 1] },
-   "calc": { "ans": "div({n1}, {n2})" },
-   "constraints": ["mod({n1}, {n2}) == 0", "{ans} >= 3", "{ans} <= 12"],
-   "segments": [
-     { "t": "老师把{n1}本练习本", "type": "condition" },
-     { "t": "平均分给{n2}名同学", "type": "condition" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     24,
+     72,
+     2
+    ],
+    "n2": [
+     3,
+     8,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "div({n1}, {n2})"
+   },
+   "constraints": [
+    "mod({n1}, {n2}) == 0",
+    "{ans} >= 3",
+    "{ans} <= 12"
    ],
-   "relations": ["平均分给"],
-   "table": { "known": ["一共 {n1} 本", "{n2} 名同学"], "ask": "每人 ？ 本" },
+   "segments": [
+    {
+     "t": "老师把{n1}本练习本",
+     "type": "condition"
+    },
+    {
+     "t": "平均分给{n2}名同学",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "平均分给"
+   ],
+   "table": {
+    "known": [
+     "一共 {n1} 本",
+     "{n2} 名同学"
+    ],
+    "ask": "每人 ？ 本"
+   },
    "bridge": null,
-   "steps": ["{n1} ÷ {n2} = {ans}（本）"],
+   "steps": [
+    "{n1} ÷ {n2} = {ans}（本）"
+   ],
    "answer": "{ans} 本",
-   "tip": "「平均分给」= 总数 ÷ 人数。一步题，看清谁除以谁。" },
-
- { "id": "T028", "unit": "strategy", "type": "standard", "skill": ["condition", "bridge"], "level": 2,
+   "tip": "「平均分给」= 总数 ÷ 人数。一步题，看清谁除以谁。"
+  },
+  {
+   "id": "T028",
+   "unit": "strategy",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "bridge"
+   ],
+   "level": 2,
+   "chapter": "s-shop",
    "story": "学校买了{n1}个足球，每个{n2}元；又买了{n3}个排球，每个{n4}元。",
    "question": "买足球和排球一共用了多少元？",
-   "params": { "n1": [3, 8, 1], "n2": [40, 80, 5], "n3": [4, 10, 1], "n4": [30, 60, 5] },
-   "calc": { "f": "{n1}*{n2}", "v": "{n3}*{n4}", "ans": "{f}+{v}" },
-   "constraints": ["{ans} <= 800"],
-   "segments": [
-     { "t": "学校买了{n1}个足球", "type": "condition" },
-     { "t": "，每个{n2}元", "type": "condition" },
-     { "t": "；又买了{n3}个排球", "type": "condition" },
-     { "t": "，每个{n4}元", "type": "condition" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     3,
+     8,
+     1
+    ],
+    "n2": [
+     40,
+     80,
+     5
+    ],
+    "n3": [
+     4,
+     10,
+     1
+    ],
+    "n4": [
+     30,
+     60,
+     5
+    ]
+   },
+   "calc": {
+    "f": "{n1}*{n2}",
+    "v": "{n3}*{n4}",
+    "ans": "{f}+{v}"
+   },
+   "constraints": [
+    "{ans} <= 800"
    ],
-   "relations": ["每个"],
-   "table": { "known": ["足球：{n1} 个，每个 {n2} 元", "排球：{n3} 个，每个 {n4} 元"], "ask": "一共 ？ 元" },
-   "bridge": { "ask": "要求一共用了多少元，先要算出",
-               "choices": ["买足球和买排球各用了多少元", "球的总个数", "足球的单价"], "answer": 0 },
-   "steps": ["{n1} × {n2} = {f}（元）", "{n3} × {n4} = {v}（元）", "{f} + {v} = {ans}（元）"],
+   "segments": [
+    {
+     "t": "学校买了{n1}个足球",
+     "type": "condition"
+    },
+    {
+     "t": "，每个{n2}元",
+     "type": "condition"
+    },
+    {
+     "t": "；又买了{n3}个排球",
+     "type": "condition"
+    },
+    {
+     "t": "，每个{n4}元",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每个"
+   ],
+   "table": {
+    "known": [
+     "足球：{n1} 个，每个 {n2} 元",
+     "排球：{n3} 个，每个 {n4} 元"
+    ],
+    "ask": "一共 ？ 元"
+   },
+   "bridge": {
+    "ask": "要求一共用了多少元，先要算出",
+    "choices": [
+     "买足球和买排球各用了多少元",
+     "球的总个数",
+     "足球的单价"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {f}（元）",
+    "{n3} × {n4} = {v}（元）",
+    "{f} + {v} = {ans}（元）"
+   ],
    "answer": "{ans} 元",
-   "tip": "两种球分开算，再加起来。列表时一行足球、一行排球，就不容易看错单价。" },
-
- { "id": "T030", "unit": "strategy", "type": "distractor", "skill": ["condition", "distractor", "steps"], "level": 3,
+   "tip": "两种球分开算，再加起来。列表时一行足球、一行排球，就不容易看错单价。"
+  },
+  {
+   "id": "T030",
+   "unit": "strategy",
+   "type": "distractor",
+   "skill": [
+    "condition",
+    "distractor",
+    "steps"
+   ],
+   "level": 3,
+   "chapter": "s-trip",
    "story": "一列火车从甲站开往乙站，每小时行驶{n1}千米，行了{n2}小时到达。这列火车共有{n3}节车厢，每节车厢有{n4}个座位。",
    "question": "甲、乙两站之间的铁路长多少千米？",
-   "params": { "n1": [70, 110, 5], "n2": [3, 6, 1], "n3": [10, 18, 1], "n4": [80, 120, 5] },
-   "calc": { "ans": "{n1}*{n2}" },
-   "constraints": ["{ans} >= 210", "{n4} != {n1}"],
-   "segments": [
-     { "t": "一列火车从甲站开往乙站", "type": "plain" },
-     { "t": "，每小时行驶{n1}千米", "type": "condition" },
-     { "t": "，行了{n2}小时到达", "type": "condition" },
-     { "t": "。这列火车共有{n3}节车厢", "type": "distractor" },
-     { "t": "，每节车厢有{n4}个座位", "type": "distractor" },
-     { "t": "。", "type": "plain" }
+   "params": {
+    "n1": [
+     70,
+     110,
+     5
+    ],
+    "n2": [
+     3,
+     6,
+     1
+    ],
+    "n3": [
+     10,
+     18,
+     1
+    ],
+    "n4": [
+     80,
+     120,
+     5
+    ]
+   },
+   "calc": {
+    "ans": "{n1}*{n2}"
+   },
+   "constraints": [
+    "{ans} >= 210",
+    "{n4} != {n1}"
    ],
-   "relations": ["每小时"],
-   "table": { "known": ["每小时 {n1} 千米（速度）", "{n2} 小时（时间）"], "ask": "铁路 ？ 千米" },
+   "segments": [
+    {
+     "t": "一列火车从甲站开往乙站",
+     "type": "plain"
+    },
+    {
+     "t": "，每小时行驶{n1}千米",
+     "type": "condition"
+    },
+    {
+     "t": "，行了{n2}小时到达",
+     "type": "condition"
+    },
+    {
+     "t": "。这列火车共有{n3}节车厢",
+     "type": "distractor"
+    },
+    {
+     "t": "，每节车厢有{n4}个座位",
+     "type": "distractor"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每小时"
+   ],
+   "table": {
+    "known": [
+     "每小时 {n1} 千米（速度）",
+     "{n2} 小时（时间）"
+    ],
+    "ask": "铁路 ？ 千米"
+   },
    "bridge": null,
-   "steps": ["{n1} × {n2} = {ans}（千米）"],
+   "steps": [
+    "{n1} × {n2} = {ans}（千米）"
+   ],
    "answer": "{ans} 千米",
-   "tip": "车厢节数、座位数都和「铁路长多少千米」没有关系——两个多余条件！问题问什么，就只找和它有关的条件。" },
-
- { "id": "T031", "unit": "average", "type": "standard", "skill": ["condition", "bridge", "hidden"], "level": 3,
+   "tip": "车厢节数、座位数都和「铁路长多少千米」没有关系——两个多余条件！问题问什么，就只找和它有关的条件。"
+  },
+  {
+   "id": "T031",
+   "unit": "average",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "bridge",
+    "hidden"
+   ],
+   "level": 3,
+   "chapter": "a-app",
    "story": "书架上两层书，上层有{n1}本，下层有{n2}本。",
    "question": "从上层拿多少本放到下层，两层的书就同样多？",
-   "params": { "n1": [30, 60, 1], "n2": [20, 50, 1] },
-   "calc": { "diff": "{n1}-{n2}", "ans": "div({diff}, 2)" },
-   "constraints": ["{n1} > {n2}", "mod({diff}, 2) == 0", "{diff} >= 4", "{ans} >= 2"],
+   "params": {
+    "n1": [
+     30,
+     60,
+     1
+    ],
+    "n2": [
+     20,
+     50,
+     1
+    ]
+   },
+   "calc": {
+    "diff": "{n1}-{n2}",
+    "ans": "div({diff}, 2)"
+   },
+   "constraints": [
+    "{n1} > {n2}",
+    "mod({diff}, 2) == 0",
+    "{diff} >= 4",
+    "{ans} >= 2"
+   ],
    "segments": [
-     { "t": "书架上两层书", "type": "plain" },
-     { "t": "，上层有{n1}本", "type": "condition" },
-     { "t": "，下层有{n2}本", "type": "condition" },
-     { "t": "。", "type": "plain" }
+    {
+     "t": "书架上两层书",
+     "type": "plain"
+    },
+    {
+     "t": "，上层有{n1}本",
+     "type": "condition"
+    },
+    {
+     "t": "，下层有{n2}本",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
    ],
    "relations": [],
-   "table": { "known": ["上层 {n1} 本", "下层 {n2} 本"], "ask": "拿走 ？ 本（两层同样多）" },
-   "bridge": { "ask": "要求拿多少本，先要算出",
-               "choices": ["上层比下层多多少本", "两层一共有多少本", "下层还差多少本"], "answer": 0 },
-   "steps": ["{n1} - {n2} = {diff}（本）", "{diff} ÷ 2 = {ans}（本）"],
+   "table": {
+    "known": [
+     "上层 {n1} 本",
+     "下层 {n2} 本"
+    ],
+    "ask": "拿走 ？ 本（两层同样多）"
+   },
+   "bridge": {
+    "ask": "要求拿多少本，先要算出",
+    "choices": [
+     "上层比下层多多少本",
+     "两层一共有多少本",
+     "下层还差多少本"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} - {n2} = {diff}（本）",
+    "{diff} ÷ 2 = {ans}（本）"
+   ],
    "answer": "拿 {ans} 本",
-   "tip": "移多补少：拿走的本数是相差数的一半。拿走 1 本，上层少 1、下层多 1，差距一次缩小 2。" }
-
+   "tip": "移多补少：拿走的本数是相差数的一半。拿走 1 本，上层少 1、下层多 1，差距一次缩小 2。"
+  },
+  {
+   "id": "T032",
+   "unit": "chance",
+   "chapter": "ch-basic",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "steps"
+   ],
+   "level": 1,
+   "story": "盒子里有{n1}个红球和{n2}个蓝球。",
+   "question": "任意摸一个球，摸到哪种颜色的球可能性大？",
+   "params": {
+    "n1": [
+     5,
+     9,
+     1
+    ],
+    "n2": [
+     1,
+     4,
+     1
+    ]
+   },
+   "calc": {
+    "diff": "{n1}-{n2}"
+   },
+   "constraints": [
+    "{diff} > 0"
+   ],
+   "segments": [
+    {
+     "t": "盒子里有{n1}个红球",
+     "type": "condition"
+    },
+    {
+     "t": "和{n2}个蓝球",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "可能性大"
+   ],
+   "table": {
+    "known": [
+     "红球 {n1} 个",
+     "蓝球 {n2} 个"
+    ],
+    "ask": "摸到哪种颜色球 ？"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} > {n2}，摸到红球的可能性大"
+   ],
+   "answer": "摸到红球的可能性大（{n1} > {n2}）",
+   "tip": "数量越多，被摸到的可能性越大。先比较红球和蓝球的个数。"
+  },
+  {
+   "id": "T033",
+   "unit": "chance",
+   "chapter": "ch-basic",
+   "type": "distractor",
+   "skill": [
+    "distractor",
+    "condition",
+    "relation"
+   ],
+   "level": 1,
+   "story": "转盘上有{n1}份红色区域和{n2}份黄色区域，转盘的直径是{n0}厘米。",
+   "question": "转动转盘，指针停在哪种颜色区域的可能性大？",
+   "params": {
+    "n1": [
+     6,
+     10,
+     1
+    ],
+    "n2": [
+     1,
+     4,
+     1
+    ],
+    "n0": [
+     10,
+     30,
+     5
+    ]
+   },
+   "calc": {
+    "diff": "{n1}-{n2}"
+   },
+   "constraints": [
+    "{diff} > 0",
+    "{n0} != {n1}",
+    "{n0} != {n2}"
+   ],
+   "segments": [
+    {
+     "t": "转盘上有{n1}份红色区域",
+     "type": "condition"
+    },
+    {
+     "t": "和{n2}份黄色区域",
+     "type": "condition"
+    },
+    {
+     "t": "，转盘的直径是{n0}厘米",
+     "type": "distractor"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "可能性大"
+   ],
+   "table": {
+    "known": [
+     "红色区域 {n1} 份",
+     "黄色区域 {n2} 份"
+    ],
+    "ask": "指针停在哪种颜色区域 ？"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} > {n2}，指针停在红色区域的可能性大"
+   ],
+   "answer": "停在红色区域的可能性大（{n1} > {n2}）",
+   "tip": "转盘直径与可能性大小无关，要看两种颜色区域的份数。"
+  },
+  {
+   "id": "T034",
+   "unit": "chance",
+   "chapter": "ch-basic",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "condition",
+    "steps"
+   ],
+   "level": 1,
+   "story": "盒子里有{n1}张唱歌签和一些跳舞签。",
+   "question": "任意抽一张，抽到哪种签的可能性大？",
+   "params": {
+    "n1": [
+     6,
+     10,
+     1
+    ],
+    "n0": [
+     1,
+     4,
+     1
+    ]
+   },
+   "calc": {
+    "diff": "{n1}-{n0}"
+   },
+   "constraints": [
+    "{diff} > 0"
+   ],
+   "segments": [
+    {
+     "t": "盒子里有{n1}张唱歌签",
+     "type": "condition"
+    },
+    {
+     "t": "和一些跳舞签",
+     "type": "plain"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "可能性大"
+   ],
+   "table": {
+    "known": [
+     "唱歌签 {n1} 张"
+    ],
+    "supplyRow": "跳舞签 {n0} 张（补上的条件）",
+    "ask": "抽到哪种签 ？"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} > {n0}，抽到唱歌签的可能性大"
+   ],
+   "answer": "抽到唱歌签的可能性大（{n1} > {n0}）",
+   "supply": {
+    "choices": [
+     "跳舞签有{n0}张",
+     "唱歌签有{n0}张",
+     "两种签一共有{n0}张"
+    ],
+    "answer": 0,
+    "why": "要求比较抽到两种签的可能性，必须知道两种签各有多少张。唱歌签的张数已有，缺跳舞签的张数。"
+   },
+   "tip": "补充跳舞签的张数后，比较两种签的张数：张数越多，被抽到的可能性越大。"
+  },
+  {
+   "id": "T035",
+   "unit": "chance",
+   "chapter": "ch-basic",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 2,
+   "story": "盒子里有红卡片{n1}张，绿卡片比红卡片少{n3}张。",
+   "question": "任意摸一张，摸到红卡片和绿卡片，哪种可能性大？",
+   "params": {
+    "n1": [
+     10,
+     20,
+     1
+    ],
+    "n3": [
+     1,
+     5,
+     1
+    ]
+   },
+   "calc": {
+    "green": "{n1}-{n3}"
+   },
+   "constraints": [
+    "{green} > 0",
+    "{n1} > {green}"
+   ],
+   "segments": [
+    {
+     "t": "盒子里有红卡片{n1}张",
+     "type": "condition"
+    },
+    {
+     "t": "，绿卡片比红卡片少{n3}张",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "比",
+    "可能性大"
+   ],
+   "table": {
+    "known": [
+     "红卡片 {n1} 张",
+     "绿卡片比红卡片少 {n3} 张"
+    ],
+    "ask": "哪种卡片可能性大 ？"
+   },
+   "bridge": {
+    "ask": "要求比较红、绿卡片被摸到的可能性，先要算出",
+    "choices": [
+     "绿卡片的张数",
+     "红卡片的张数",
+     "卡片总数"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} - {n3} = {green}（张）",
+    "{n1} > {green}，摸到红卡片的可能性大"
+   ],
+   "answer": "摸到红卡片的可能性大（{n1} > {green}）",
+   "tip": "先根据「绿卡片比红卡片少」求出绿卡片张数，再比较红、绿卡片的数量。"
+  },
+  {
+   "id": "T036",
+   "unit": "chance",
+   "chapter": "ch-basic",
+   "type": "distractor",
+   "skill": [
+    "distractor",
+    "condition",
+    "relation"
+   ],
+   "level": 2,
+   "story": "盒子里有黑棋子{n1}枚、白棋子{n2}枚，还有红棋子{n0}枚。",
+   "question": "任意摸一枚棋子，摸到黑棋子和白棋子，哪种可能性大？",
+   "params": {
+    "n1": [
+     8,
+     12,
+     1
+    ],
+    "n2": [
+     2,
+     5,
+     1
+    ],
+    "n0": [
+     3,
+     10,
+     1
+    ]
+   },
+   "calc": {
+    "diff": "{n1}-{n2}"
+   },
+   "constraints": [
+    "{diff} > 0",
+    "{n0} != {n1}",
+    "{n0} != {n2}"
+   ],
+   "segments": [
+    {
+     "t": "盒子里有黑棋子{n1}枚",
+     "type": "condition"
+    },
+    {
+     "t": "、白棋子{n2}枚",
+     "type": "condition"
+    },
+    {
+     "t": "，还有红棋子{n0}枚",
+     "type": "distractor"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "可能性大"
+   ],
+   "table": {
+    "known": [
+     "黑棋子 {n1} 枚",
+     "白棋子 {n2} 枚"
+    ],
+    "ask": "黑棋子和白棋子 ？"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} > {n2}，摸到黑棋子的可能性大"
+   ],
+   "answer": "摸到黑棋子的可能性大（{n1} > {n2}）",
+   "tip": "红棋子的数量不影响黑、白棋子之间的可能性比较，只看要比较的两种棋子数量。"
+  },
+  {
+   "id": "T037",
+   "unit": "chance",
+   "chapter": "ch-basic",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "condition",
+    "relation"
+   ],
+   "level": 3,
+   "story": "不透明箱子里有红积木{n1}块、黄积木{n2}块和一些蓝积木。",
+   "question": "任意摸一块积木，摸到哪种颜色积木的可能性最大？",
+   "params": {
+    "n1": [
+     8,
+     12,
+     1
+    ],
+    "n2": [
+     2,
+     5,
+     1
+    ],
+    "n0": [
+     1,
+     7,
+     1
+    ]
+   },
+   "calc": {
+    "d1": "{n1}-{n2}",
+    "d2": "{n1}-{n0}"
+   },
+   "constraints": [
+    "{d1} > 0",
+    "{d2} > 0",
+    "{n0} != {n2}"
+   ],
+   "segments": [
+    {
+     "t": "不透明箱子里有红积木{n1}块",
+     "type": "condition"
+    },
+    {
+     "t": "、黄积木{n2}块",
+     "type": "condition"
+    },
+    {
+     "t": "和一些蓝积木",
+     "type": "plain"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "可能性最大"
+   ],
+   "table": {
+    "known": [
+     "红积木 {n1} 块",
+     "黄积木 {n2} 块"
+    ],
+    "supplyRow": "蓝积木 {n0} 块（补上的条件）",
+    "ask": "哪种颜色积木 ？"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} > {n2}，{n1} > {n0}，摸到红积木的可能性最大"
+   ],
+   "answer": "摸到红积木的可能性最大（{n1} > {n2}，{n1} > {n0}）",
+   "supply": {
+    "choices": [
+     "蓝积木有{n0}块",
+     "红积木比蓝积木多{n0}块",
+     "黄积木和蓝积木一共有{n0}块"
+    ],
+    "answer": 0,
+    "why": "要比较三种积木被摸到的可能性，必须知道三种积木各有多少块。红、黄积木的块数已有，缺蓝积木的块数。"
+   },
+   "tip": "三种颜色比较时，先补出蓝积木的块数，再逐一比较：块数最多，摸到的可能性最大。"
+  },
+  {
+   "id": "T038",
+   "unit": "division",
+   "chapter": "d-adv",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "steps"
+   ],
+   "level": 1,
+   "story": "果园摘了{n1}个苹果，每{n2}个装一箱。",
+   "question": "能装满多少箱，还剩多少个？",
+   "params": {
+    "n1": [
+     120,
+     999,
+     1
+    ],
+    "n2": [
+     12,
+     49,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "div({n1}, {n2})",
+    "rem": "mod({n1}, {n2})"
+   },
+   "constraints": [
+    "{ans} >= 2"
+   ],
+   "segments": [
+    {
+     "t": "果园摘了{n1}个苹果",
+     "type": "condition"
+    },
+    {
+     "t": "，每{n2}个装一箱",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每",
+    "装满"
+   ],
+   "table": {
+    "known": [
+     "{n1} 个苹果",
+     "每箱装 {n2} 个"
+    ],
+    "ask": "装几箱，还剩 ？ 个"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} ÷ {n2} = {ans}（箱）……{rem}（个）"
+   ],
+   "answer": "{ans} 箱，还剩 {rem} 个",
+   "tip": "「每箱装几个」是每份数，用总数 ÷ 每份数，商是箱数，余数是剩下的个数。"
+  },
+  {
+   "id": "T039",
+   "unit": "division",
+   "chapter": "d-adv",
+   "type": "distractor",
+   "skill": [
+    "condition",
+    "distractor",
+    "relation"
+   ],
+   "level": 2,
+   "story": "学校组织{n1}名师生去参观，每辆车限乘{n2}人，每辆车还准备了{n0}瓶矿泉水。",
+   "question": "能坐满多少辆车，还剩多少人？",
+   "params": {
+    "n1": [
+     150,
+     999,
+     1
+    ],
+    "n2": [
+     20,
+     49,
+     1
+    ],
+    "n0": [
+     10,
+     50,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "div({n1}, {n2})",
+    "rem": "mod({n1}, {n2})"
+   },
+   "constraints": [
+    "{ans} >= 3",
+    "{n0} != {n2}"
+   ],
+   "segments": [
+    {
+     "t": "学校组织{n1}名师生去参观",
+     "type": "condition"
+    },
+    {
+     "t": "，每辆车限乘{n2}人",
+     "type": "condition"
+    },
+    {
+     "t": "，每辆车还准备了{n0}瓶矿泉水",
+     "type": "distractor"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每辆车",
+    "限乘",
+    "坐满"
+   ],
+   "table": {
+    "known": [
+     "{n1} 名师生",
+     "每辆车限乘 {n2} 人",
+     "每辆车准备 {n0} 瓶矿泉水"
+    ],
+    "ask": "坐满 ？ 辆车，还剩 ？ 人"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} ÷ {n2} = {ans}（辆）……{rem}（人）"
+   ],
+   "answer": "{ans} 辆，还剩 {rem} 人",
+   "tip": "「准备了多少瓶矿泉水」不影响坐车人数，是多余条件。求坐满车辆用总人数 ÷ 每车人数。"
+  },
+  {
+   "id": "T040",
+   "unit": "division",
+   "chapter": "d-adv",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "condition",
+    "steps"
+   ],
+   "level": 2,
+   "story": "装订车间要把一批练习本装订成包，每包放{n2}本。",
+   "question": "能装订多少包，还剩多少本？",
+   "params": {
+    "n0": [
+     120,
+     999,
+     1
+    ],
+    "n2": [
+     12,
+     45,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "div({n0}, {n2})",
+    "rem": "mod({n0}, {n2})"
+   },
+   "constraints": [
+    "{ans} >= 2"
+   ],
+   "segments": [
+    {
+     "t": "装订车间要把一批练习本装订成包",
+     "type": "plain"
+    },
+    {
+     "t": "，每包放{n2}本",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每包",
+    "装订"
+   ],
+   "table": {
+    "known": [
+     "每包装订 {n2} 本"
+    ],
+    "supplyRow": "这批练习本一共 {n0} 本（补上的条件）",
+    "ask": "能装 ？ 包，还剩 ？ 本"
+   },
+   "bridge": null,
+   "steps": [
+    "{n0} ÷ {n2} = {ans}（包）……{rem}（本）"
+   ],
+   "answer": "{ans} 包，还剩 {rem} 本",
+   "supply": {
+    "choices": [
+     "这批练习本一共有{n0}本",
+     "每本练习本厚{n0}页",
+     "每个包装袋长{n0}厘米"
+    ],
+    "answer": 0,
+    "why": "要求能装订多少包，必须知道练习本的总本数；题中只有每包的本数，缺总本数。"
+   },
+   "tip": "补上「一共有{n0}本」后，用总本数 ÷ 每包本数。审题先找缺少的条件。"
+  },
+  {
+   "id": "T041",
+   "unit": "division",
+   "chapter": "d-adv",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "steps"
+   ],
+   "level": 2,
+   "story": "同学们排队做操，{n1}名同学每行站{n2}人。",
+   "question": "能站成多少行，还剩多少人？",
+   "params": {
+    "n1": [
+     120,
+     999,
+     1
+    ],
+    "n2": [
+     12,
+     49,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "div({n1}, {n2})",
+    "rem": "mod({n1}, {n2})"
+   },
+   "constraints": [
+    "{ans} >= 2"
+   ],
+   "segments": [
+    {
+     "t": "同学们排队做操",
+     "type": "plain"
+    },
+    {
+     "t": "，{n1}名同学每行站{n2}人",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每行",
+    "站成"
+   ],
+   "table": {
+    "known": [
+     "{n1} 名同学",
+     "每行站 {n2} 人"
+    ],
+    "ask": "站成 ？ 行，还剩 ？ 人"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} ÷ {n2} = {ans}（行）……{rem}（人）"
+   ],
+   "answer": "{ans} 行，还剩 {rem} 人",
+   "tip": "「每行站几人」是每份数，用总人数 ÷ 每行人数，商是行数，余数是剩下人数。"
+  },
+  {
+   "id": "T042",
+   "unit": "division",
+   "chapter": "d-adv",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 3,
+   "story": "学校购进{n1}本图书，先拿出{n0}本放在阅览室，剩下的平均分给{n2}个班。",
+   "question": "每个班分到多少本，还剩多少本？",
+   "params": {
+    "n1": [
+     500,
+     999,
+     1
+    ],
+    "n0": [
+     50,
+     200,
+     1
+    ],
+    "n2": [
+     12,
+     45,
+     1
+    ]
+   },
+   "calc": {
+    "remain": "{n1} - {n0}",
+    "ans": "div({remain}, {n2})",
+    "rem": "mod({remain}, {n2})"
+   },
+   "constraints": [
+    "{remain} >= 100",
+    "{ans} >= 5"
+   ],
+   "segments": [
+    {
+     "t": "学校购进{n1}本图书",
+     "type": "condition"
+    },
+    {
+     "t": "，先拿出{n0}本放在阅览室",
+     "type": "condition"
+    },
+    {
+     "t": "，剩下的平均分给{n2}个班",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "先拿出",
+    "剩下的",
+    "平均分给"
+   ],
+   "table": {
+    "known": [
+     "共 {n1} 本图书",
+     "先拿出 {n0} 本",
+     "平均分给 {n2} 个班"
+    ],
+    "ask": "每班 ？ 本，还剩 ？ 本"
+   },
+   "bridge": {
+    "ask": "要求每班分到多少本，先要算出",
+    "choices": [
+     "剩下多少本图书",
+     "阅览室有多少个书架",
+     "一共有多少个班"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} - {n0} = {remain}（本）",
+    "{remain} ÷ {n2} = {ans}（本）……{rem}（本）"
+   ],
+   "answer": "{ans} 本，还剩 {rem} 本",
+   "tip": "「剩下的」是关键，先减去放到阅览室的本数，再用剩下的本数平均分。"
+  },
+  {
+   "id": "T043",
+   "unit": "division",
+   "chapter": "d-adv",
+   "type": "distractor",
+   "skill": [
+    "condition",
+    "distractor",
+    "bridge"
+   ],
+   "level": 3,
+   "story": "果园摘下{n1}个橙子，每{n2}个装一箱，已经装了{n0}箱；剩下的每{n3}个装一袋，每袋重{n4}千克。",
+   "question": "剩下的橙子能装多少袋，还剩多少个？",
+   "params": {
+    "n1": [
+     600,
+     999,
+     1
+    ],
+    "n2": [
+     12,
+     25,
+     1
+    ],
+    "n0": [
+     1,
+     4,
+     1
+    ],
+    "n3": [
+     12,
+     40,
+     1
+    ],
+    "n4": [
+     5,
+     20,
+     1
+    ]
+   },
+   "calc": {
+    "used": "{n2}*{n0}",
+    "remain": "{n1}-{used}",
+    "ans": "div({remain}, {n3})",
+    "rem": "mod({remain}, {n3})"
+   },
+   "constraints": [
+    "{ans} >= 1",
+    "{n4} != {n2}",
+    "{n4} != {n3}"
+   ],
+   "segments": [
+    {
+     "t": "果园摘下{n1}个橙子",
+     "type": "condition"
+    },
+    {
+     "t": "，每{n2}个装一箱",
+     "type": "condition"
+    },
+    {
+     "t": "，已经装了{n0}箱",
+     "type": "condition"
+    },
+    {
+     "t": "；剩下的每{n3}个装一袋",
+     "type": "condition"
+    },
+    {
+     "t": "，每袋重{n4}千克",
+     "type": "distractor"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "剩下的",
+    "每",
+    "装一袋"
+   ],
+   "table": {
+    "known": [
+     "共 {n1} 个橙子",
+     "每箱装 {n2} 个",
+     "已装 {n0} 箱",
+     "每袋装 {n3} 个",
+     "每袋重 {n4} 千克"
+    ],
+    "ask": "剩下能装 ？ 袋，还剩 ？ 个"
+   },
+   "bridge": {
+    "ask": "要求剩下的能装多少袋，先要算出",
+    "choices": [
+     "已经装了多少个橙子",
+     "每袋重多少千克",
+     "一共能装多少箱"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n2} × {n0} = {used}（个）",
+    "{n1} - {used} = {remain}（个）",
+    "{remain} ÷ {n3} = {ans}（袋）……{rem}（个）"
+   ],
+   "answer": "{ans} 袋，还剩 {rem} 个",
+   "tip": "「每袋重{n4}千克」与装袋个数无关；先算已装个数，再算剩下个数，最后按每袋个数分。"
+  },
+  {
+   "id": "T044",
+   "unit": "division",
+   "chapter": "d-quot",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "steps"
+   ],
+   "level": 1,
+   "story": "甲袋有{n1}颗糖，每{n2}颗装一盒；乙袋糖的颗数是甲袋的{n3}倍，每盒装的颗数也是甲袋的{n3}倍。",
+   "question": "乙袋糖能装多少盒？",
+   "params": {
+    "n1": [
+     120,
+     960,
+     12
+    ],
+    "n2": [
+     12,
+     24,
+     12
+    ],
+    "n3": [
+     2,
+     5,
+     1
+    ]
+   },
+   "calc": {
+    "a": "{n1}*{n3}",
+    "b": "{n2}*{n3}",
+    "ans": "div({a}, {b})"
+   },
+   "constraints": [
+    "mod({n1}, {n2}) == 0",
+    "{ans} >= 5",
+    "{ans} <= 80"
+   ],
+   "segments": [
+    {
+     "t": "甲袋有{n1}颗糖",
+     "type": "condition"
+    },
+    {
+     "t": "，每{n2}颗装一盒",
+     "type": "condition"
+    },
+    {
+     "t": "；乙袋糖的颗数是甲袋的{n3}倍",
+     "type": "condition"
+    },
+    {
+     "t": "，每盒装的颗数也是甲袋的{n3}倍",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每",
+    "倍",
+    "能装多少盒"
+   ],
+   "table": {
+    "known": [
+     "甲袋 {n1} 颗糖",
+     "每盒 {n2} 颗",
+     "乙袋颗数和每盒颗数都乘 {n3}"
+    ],
+    "ask": "乙袋 ？ 盒"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} × {n3} = {a}（颗）",
+    "{n2} × {n3} = {b}（颗）",
+    "{a} ÷ {b} = {ans}（盒）"
+   ],
+   "answer": "{ans} 盒",
+   "tip": "被除数和除数同时乘相同的数（{n3}），商不变，所以乙袋的盒数和甲袋一样多。"
+  },
+  {
+   "id": "T045",
+   "unit": "division",
+   "chapter": "d-quot",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "steps"
+   ],
+   "level": 2,
+   "story": "学校组织{n1}名同学去参观，每辆客车大约坐{n2}人。",
+   "question": "大约可以坐满多少辆客车？",
+   "params": {
+    "n1": [
+     300,
+     900,
+     10
+    ],
+    "n2": [
+     20,
+     60,
+     10
+    ]
+   },
+   "calc": {
+    "ans": "div({n1}, {n2})"
+   },
+   "constraints": [
+    "{ans} >= 5",
+    "{ans} <= 45"
+   ],
+   "segments": [
+    {
+     "t": "学校组织{n1}名同学去参观",
+     "type": "condition"
+    },
+    {
+     "t": "，每辆客车大约坐{n2}人",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "大约",
+    "每辆"
+   ],
+   "table": {
+    "known": [
+     "{n1} 名同学",
+     "每辆约坐 {n2} 人"
+    ],
+    "ask": "大约坐满 ？ 辆"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} ÷ {n2} ≈ {ans}（辆）"
+   ],
+   "answer": "{ans} 辆",
+   "tip": "看到「大约」，可把数据看成整十数估算；问「坐满」取商的整数部分。"
+  },
+  {
+   "id": "T046",
+   "unit": "division",
+   "chapter": "d-quot",
+   "type": "distractor",
+   "skill": [
+    "condition",
+    "distractor",
+    "relation"
+   ],
+   "level": 2,
+   "story": "果园有{n1}个苹果，每筐大约装{n2}个，一辆货车能运{n0}筐，每千克苹果卖{n4}元。",
+   "question": "这些苹果大约能装多少筐？",
+   "params": {
+    "n1": [
+     300,
+     999,
+     10
+    ],
+    "n2": [
+     20,
+     60,
+     10
+    ],
+    "n0": [
+     5,
+     20,
+     1
+    ],
+    "n4": [
+     4,
+     12,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "div({n1}, {n2})"
+   },
+   "constraints": [
+    "{ans} >= 5",
+    "{ans} <= 50",
+    "{n0} != {n2}"
+   ],
+   "segments": [
+    {
+     "t": "果园有{n1}个苹果",
+     "type": "condition"
+    },
+    {
+     "t": "，每筐大约装{n2}个",
+     "type": "condition"
+    },
+    {
+     "t": "，一辆货车能运{n0}筐",
+     "type": "distractor"
+    },
+    {
+     "t": "，每千克苹果卖{n4}元",
+     "type": "distractor"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "大约",
+    "每筐"
+   ],
+   "table": {
+    "known": [
+     "{n1} 个苹果",
+     "每筐约装 {n2} 个",
+     "货车能运 {n0} 筐",
+     "每千克卖 {n4} 元"
+    ],
+    "ask": "大约装 ？ 筐"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} ÷ {n2} ≈ {ans}（筐）"
+   ],
+   "answer": "{ans} 筐",
+   "tip": "「货车能运多少筐」「每千克卖多少元」与求总筐数无关，是多余条件。"
+  },
+  {
+   "id": "T047",
+   "unit": "division",
+   "chapter": "d-quot",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "condition",
+    "relation"
+   ],
+   "level": 2,
+   "story": "粮店购进一批大米，每袋装{n2}千克。",
+   "question": "大约能装多少袋？",
+   "params": {
+    "n0": [
+     200,
+     900,
+     10
+    ],
+    "n2": [
+     20,
+     60,
+     10
+    ]
+   },
+   "calc": {
+    "ans": "div({n0}, {n2})"
+   },
+   "constraints": [
+    "{ans} >= 5",
+    "{ans} <= 45"
+   ],
+   "segments": [
+    {
+     "t": "粮店购进一批大米",
+     "type": "plain"
+    },
+    {
+     "t": "，每袋装{n2}千克",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每袋",
+    "大约"
+   ],
+   "table": {
+    "known": [
+     "每袋装 {n2} 千克"
+    ],
+    "supplyRow": "这批大米共 {n0} 千克（补上的条件）",
+    "ask": "大约装 ？ 袋"
+   },
+   "bridge": null,
+   "steps": [
+    "{n0} ÷ {n2} ≈ {ans}（袋）"
+   ],
+   "answer": "{ans} 袋",
+   "supply": {
+    "choices": [
+     "这批大米一共有{n0}千克",
+     "每千克大米卖{n0}元",
+     "已经卖出{n0}袋"
+    ],
+    "answer": 0,
+    "why": "要求能装多少袋，必须知道大米的总千克数；题中只有每袋装的千克数，缺总数。"
+   },
+   "tip": "补上「一共有{n0}千克」后，用总千克数 ÷ 每袋千克数；先看缺的是总数还是份数。"
+  },
+  {
+   "id": "T048",
+   "unit": "division",
+   "chapter": "d-quot",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 3,
+   "story": "学校有{n1}本练习本，平均分给{n2}个班，练习本总数和班级数都同时扩大到原来的{n3}倍。",
+   "question": "现在平均每班分到多少本？",
+   "params": {
+    "n1": [
+     120,
+     960,
+     12
+    ],
+    "n2": [
+     12,
+     24,
+     12
+    ],
+    "n3": [
+     2,
+     5,
+     1
+    ]
+   },
+   "calc": {
+    "a": "{n1}*{n3}",
+    "b": "{n2}*{n3}",
+    "ans": "div({a}, {b})"
+   },
+   "constraints": [
+    "mod({n1}, {n2}) == 0",
+    "{ans} >= 5",
+    "{ans} <= 80"
+   ],
+   "segments": [
+    {
+     "t": "学校有{n1}本练习本",
+     "type": "condition"
+    },
+    {
+     "t": "，平均分给{n2}个班",
+     "type": "condition"
+    },
+    {
+     "t": "，练习本总数和班级数都同时扩大到原来的{n3}倍",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "平均分给",
+    "同时扩大"
+   ],
+   "table": {
+    "known": [
+     "原有 {n1} 本",
+     "平均分给 {n2} 个班",
+     "总数和班数都扩大 {n3} 倍"
+    ],
+    "ask": "现在每班 ？ 本"
+   },
+   "bridge": {
+    "ask": "要求现在每班分到多少本，先要算出",
+    "choices": [
+     "扩大后一共有多少本、一共有多少个班",
+     "原来每班多少本",
+     "练习本比原来多几本"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n3} = {a}（本）",
+    "{n2} × {n3} = {b}（个）",
+    "{a} ÷ {b} = {ans}（本）"
+   ],
+   "answer": "{ans} 本",
+   "tip": "被除数和除数同时扩大到原来的相同倍数，商不变；算出扩大后的总数和班数再相除也可以。"
+  },
+  {
+   "id": "T049",
+   "unit": "division",
+   "chapter": "d-quot",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 3,
+   "story": "仓库有{n1}箱货物，每辆车每次运{n2}箱，已经运了{n0}次；剩下的货物，每辆车每次运的箱数扩大到原来的{n3}倍。",
+   "question": "剩下的货物大约还需要运多少次？",
+   "params": {
+    "n1": [
+     500,
+     999,
+     1
+    ],
+    "n2": [
+     12,
+     30,
+     1
+    ],
+    "n0": [
+     1,
+     8,
+     1
+    ],
+    "n3": [
+     2,
+     5,
+     1
+    ]
+   },
+   "calc": {
+    "used": "{n2}*{n0}",
+    "remain": "{n1}-{used}",
+    "newper": "{n2}*{n3}",
+    "ans": "div({remain}, {newper})"
+   },
+   "constraints": [
+    "{remain} > 0",
+    "{ans} >= 1"
+   ],
+   "segments": [
+    {
+     "t": "仓库有{n1}箱货物",
+     "type": "condition"
+    },
+    {
+     "t": "，每辆车每次运{n2}箱",
+     "type": "condition"
+    },
+    {
+     "t": "，已经运了{n0}次",
+     "type": "condition"
+    },
+    {
+     "t": "；剩下的货物，每辆车每次运的箱数扩大到原来的{n3}倍",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "剩下的",
+    "扩大到原来的"
+   ],
+   "table": {
+    "known": [
+     "共 {n1} 箱",
+     "每次运 {n2} 箱",
+     "已运 {n0} 次",
+     "每次运量扩大 {n3} 倍"
+    ],
+    "ask": "剩下大约还需运 ？ 次"
+   },
+   "bridge": {
+    "ask": "要求剩下的货物还需要运多少次，先要算出",
+    "choices": [
+     "已经运走多少箱、还剩多少箱",
+     "每辆车每次原来运多少箱",
+     "一共运了多少次"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n2} × {n0} = {used}（箱）",
+    "{n1} - {used} = {remain}（箱）",
+    "{n2} × {n3} = {newper}（箱）",
+    "{remain} ÷ {newper} ≈ {ans}（次）"
+   ],
+   "answer": "{ans} 次",
+   "tip": "先减去已经运走的箱数，再按扩大后的每次运量估算；注意「剩下的」只算剩余部分。"
+  },
+  {
+   "id": "T050",
+   "unit": "division",
+   "chapter": "d-period",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "steps"
+   ],
+   "level": 1,
+   "story": "公园门口挂着一排彩灯，按红、黄、蓝、红、黄、蓝……的顺序排列。",
+   "question": "第{n1}盏彩灯是什么颜色？",
+   "params": {
+    "n1": [
+     10,
+     100,
+     1
+    ]
+   },
+   "calc": {
+    "q": "div({n1}, 3)",
+    "rem": "mod({n1}, 3)"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "公园门口挂着一排彩灯，按红、黄、蓝、红、黄、蓝……的顺序排列。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "按",
+    "第",
+    "顺序"
+   ],
+   "table": {
+    "known": [
+     "每3盏一组：红、黄、蓝"
+    ],
+    "ask": "第 {n1} 盏 ？ 颜色"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} ÷ 3 = {q}（组）……{rem}（盏）",
+    "余数是{rem}，对应每组第1盏，是红色"
+   ],
+   "tip": "先看几个一循环，再用总数除以周期；余数是1，就对应循环组里的第1个。",
+   "answers": [
+    {
+     "when": "{rem} == 1",
+     "answer": "红色",
+     "steps": [
+      "{n1} ÷ 3 = {q}（组）……{rem}（盏）",
+      "余数是 {rem}，对应每组第1盏，是红色"
+     ]
+    },
+    {
+     "when": "{rem} == 2",
+     "answer": "黄色",
+     "steps": [
+      "{n1} ÷ 3 = {q}（组）……{rem}（盏）",
+      "余数是 {rem}，对应每组第2盏，是黄色"
+     ]
+    },
+    {
+     "when": "{rem} == 0",
+     "answer": "蓝色",
+     "steps": [
+      "{n1} ÷ 3 = {q}（组）……{rem}（盏）",
+      "整除，对应每组最后一盏，是蓝色"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T051",
+   "unit": "division",
+   "chapter": "d-period",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "steps"
+   ],
+   "level": 1,
+   "story": "操场上插着一排彩旗，按红、红、黄、绿、红、红、黄、绿……的顺序排列。",
+   "question": "第{n1}面彩旗是什么颜色？",
+   "params": {
+    "n1": [
+     10,
+     100,
+     1
+    ]
+   },
+   "calc": {
+    "q": "div({n1}, 4)",
+    "rem": "mod({n1}, 4)"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "操场上插着一排彩旗，按红、红、黄、绿、红、红、黄、绿……的顺序排列。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "按",
+    "第",
+    "顺序"
+   ],
+   "table": {
+    "known": [
+     "每4面一组：红、红、黄、绿"
+    ],
+    "ask": "第 {n1} 面 ？ 颜色"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} ÷ 4 = {q}（组）……{rem}（面）",
+    "余数是{rem}，对应每组第2面，是红色"
+   ],
+   "tip": "周期是4；用第几个除以4，看余数落到这一组的第几个。",
+   "answers": [
+    {
+     "when": "{rem} == 1",
+     "answer": "红色",
+     "steps": [
+      "{n1} ÷ 4 = {q}（组）……{rem}（面）",
+      "余数是 {rem}，对应每组第1面，是红色"
+     ]
+    },
+    {
+     "when": "{rem} == 2",
+     "answer": "红色",
+     "steps": [
+      "{n1} ÷ 4 = {q}（组）……{rem}（面）",
+      "余数是 {rem}，对应每组第2面，是红色"
+     ]
+    },
+    {
+     "when": "{rem} == 3",
+     "answer": "黄色",
+     "steps": [
+      "{n1} ÷ 4 = {q}（组）……{rem}（面）",
+      "余数是 {rem}，对应每组第3面，是黄色"
+     ]
+    },
+    {
+     "when": "{rem} == 0",
+     "answer": "绿色",
+     "steps": [
+      "{n1} ÷ 4 = {q}（组）……{rem}（面）",
+      "整除，对应每组最后一面，是绿色"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T052",
+   "unit": "division",
+   "chapter": "d-period",
+   "type": "distractor",
+   "skill": [
+    "condition",
+    "distractor",
+    "steps"
+   ],
+   "level": 2,
+   "story": "一串珠子按红、黄、蓝、绿、红、黄、蓝、绿……的顺序排列，旁边盒子里还放着{n0}颗白珠子。",
+   "question": "第{n1}颗珠子是什么颜色？",
+   "params": {
+    "n0": [
+     5,
+     20,
+     1
+    ],
+    "n1": [
+     10,
+     100,
+     1
+    ]
+   },
+   "calc": {
+    "q": "div({n1}, 4)",
+    "rem": "mod({n1}, 4)"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "一串珠子按红、黄、蓝、绿、红、黄、蓝、绿……的顺序排列",
+     "type": "condition"
+    },
+    {
+     "t": "，旁边盒子里还放着{n0}颗白珠子",
+     "type": "distractor"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "按",
+    "第",
+    "顺序"
+   ],
+   "table": {
+    "known": [
+     "每4颗一组：红、黄、蓝、绿",
+     "旁边有 {n0} 颗白珠子"
+    ],
+    "ask": "第 {n1} 颗 ？ 颜色"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} ÷ 4 = {q}（组）……{rem}（颗）",
+    "余数是{rem}，对应每组第3颗，是蓝色"
+   ],
+   "tip": "「旁边有多少颗白珠子」不影响原来那串珠子的第{n1}颗，是多余条件。",
+   "answers": [
+    {
+     "when": "{rem} == 1",
+     "answer": "红色",
+     "steps": [
+      "{n1} ÷ 4 = {q}（组）……{rem}（颗）",
+      "余数是 {rem}，对应每组第1颗，是红色"
+     ]
+    },
+    {
+     "when": "{rem} == 2",
+     "answer": "黄色",
+     "steps": [
+      "{n1} ÷ 4 = {q}（组）……{rem}（颗）",
+      "余数是 {rem}，对应每组第2颗，是黄色"
+     ]
+    },
+    {
+     "when": "{rem} == 3",
+     "answer": "蓝色",
+     "steps": [
+      "{n1} ÷ 4 = {q}（组）……{rem}（颗）",
+      "余数是 {rem}，对应每组第3颗，是蓝色"
+     ]
+    },
+    {
+     "when": "{rem} == 0",
+     "answer": "绿色",
+     "steps": [
+      "{n1} ÷ 4 = {q}（组）……{rem}（颗）",
+      "整除，对应每组最后一颗，是绿色"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T053",
+   "unit": "division",
+   "chapter": "d-period",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "steps"
+   ],
+   "level": 2,
+   "story": "联欢会会场按黄、红、红、蓝、绿、黄、红、红、蓝、绿……的顺序挂气球。",
+   "question": "第{n1}个气球是什么颜色？",
+   "params": {
+    "n1": [
+     10,
+     100,
+     1
+    ]
+   },
+   "calc": {
+    "q": "div({n1}, 5)",
+    "rem": "mod({n1}, 5)"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "联欢会会场按黄、红、红、蓝、绿、黄、红、红、蓝、绿……的顺序挂气球。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "按",
+    "第",
+    "顺序"
+   ],
+   "table": {
+    "known": [
+     "每5个一组：黄、红、红、蓝、绿"
+    ],
+    "ask": "第 {n1} 个 ？ 颜色"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} ÷ 5 = {q}（组）……{rem}（个）",
+    "余数是0，对应每组最后一个，是绿色"
+   ],
+   "tip": "余数是0表示正好分完一组，要落在这一组的最后一个，不要错看成第0个。",
+   "answers": [
+    {
+     "when": "{rem} == 1",
+     "answer": "黄色",
+     "steps": [
+      "{n1} ÷ 5 = {q}（组）……{rem}（个）",
+      "余数是 {rem}，对应每组第1个，是黄色"
+     ]
+    },
+    {
+     "when": "{rem} == 2",
+     "answer": "红色",
+     "steps": [
+      "{n1} ÷ 5 = {q}（组）……{rem}（个）",
+      "余数是 {rem}，对应每组第2个，是红色"
+     ]
+    },
+    {
+     "when": "{rem} == 3",
+     "answer": "红色",
+     "steps": [
+      "{n1} ÷ 5 = {q}（组）……{rem}（个）",
+      "余数是 {rem}，对应每组第3个，是红色"
+     ]
+    },
+    {
+     "when": "{rem} == 4",
+     "answer": "蓝色",
+     "steps": [
+      "{n1} ÷ 5 = {q}（组）……{rem}（个）",
+      "余数是 {rem}，对应每组第4个，是蓝色"
+     ]
+    },
+    {
+     "when": "{rem} == 0",
+     "answer": "绿色",
+     "steps": [
+      "{n1} ÷ 5 = {q}（组）……{rem}（个）",
+      "整除，对应每组最后一个，是绿色"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T054",
+   "unit": "division",
+   "chapter": "d-period",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 3,
+   "story": "花坛里的花按红、黄、蓝、紫、白、黄、红、黄、蓝、紫、白、黄……的顺序排列。",
+   "question": "前{n1}盆花中，紫色花有多少盆？",
+   "params": {
+    "n1": [
+     12,
+     100,
+     1
+    ]
+   },
+   "calc": {
+    "q": "div({n1}, 6)",
+    "rem": "mod({n1}, 6)",
+    "ans": "{q}+1"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "花坛里的花按红、黄、蓝、紫、白、黄、红、黄、蓝、紫、白、黄……的顺序排列。",
+     "type": "condition"
+    }
+   ],
+   "relations": [
+    "按",
+    "前",
+    "紫色花"
+   ],
+   "table": {
+    "known": [
+     "每6盆一组：红、黄、蓝、紫、白、黄",
+     "每组有1盆紫花"
+    ],
+    "ask": "前 {n1} 盆中紫花 ？ 盆"
+   },
+   "bridge": {
+    "ask": "要求前{n1}盆中紫花有多少盆，先要算出",
+    "choices": [
+     "有几个完整组、余下几盆",
+     "红花有多少盆",
+     "一共有几种颜色"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} ÷ 6 = {q}（组）……{rem}（盆）",
+    "每组中有1盆紫花，余下的{rem}盆中还有1盆紫花",
+    "{q} + 1 = {ans}（盆）"
+   ],
+   "tip": "先算完整周期组数，再看余下部分是否包含紫色；本题余下4盆中包含第4盆紫花。",
+   "answers": [
+    {
+     "when": "{rem} >= 4",
+     "answer": "{ans} 盆",
+     "steps": [
+      "{n1} ÷ 6 = {q}（组）……{rem}（盆）",
+      "每组有 1 盆紫花，余下的 {rem} 盆里还有 1 盆紫花",
+      "{q} + 1 = {ans}（盆）"
+     ]
+    },
+    {
+     "when": "1",
+     "answer": "{q} 盆",
+     "steps": [
+      "{n1} ÷ 6 = {q}（组）……{rem}（盆）",
+      "每组有 1 盆紫花，余下的 {rem} 盆里没有紫花",
+      "共 {q} 盆"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T055",
+   "unit": "division",
+   "chapter": "d-period",
+   "type": "distractor",
+   "skill": [
+    "condition",
+    "distractor",
+    "bridge"
+   ],
+   "level": 3,
+   "story": "走廊里挂灯笼，按红、黄、蓝、绿、橙、红、黄、蓝、绿、橙……的顺序排列，布置会场还需要{n0}米彩绳。",
+   "question": "前{n1}盏灯笼中，红灯有多少盏？",
+   "params": {
+    "n1": [
+     10,
+     100,
+     1
+    ],
+    "n0": [
+     5,
+     20,
+     1
+    ]
+   },
+   "calc": {
+    "q": "div({n1}, 5)",
+    "rem": "mod({n1}, 5)",
+    "ans": "{q}+1"
+   },
+   "constraints": [],
+   "segments": [
+    {
+     "t": "走廊里挂灯笼，按红、黄、蓝、绿、橙、红、黄、蓝、绿、橙……的顺序排列",
+     "type": "condition"
+    },
+    {
+     "t": "，布置会场还需要{n0}米彩绳",
+     "type": "distractor"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "按",
+    "前",
+    "红灯"
+   ],
+   "table": {
+    "known": [
+     "每5盏一组：红、黄、蓝、绿、橙",
+     "每组有1盏红灯",
+     "还需 {n0} 米彩绳"
+    ],
+    "ask": "前 {n1} 盏中红灯 ？ 盏"
+   },
+   "bridge": {
+    "ask": "要求前{n1}盏灯笼中红灯有多少盏，先要算出",
+    "choices": [
+     "有几个完整组、余下几盏",
+     "彩绳一共有多少米",
+     "黄灯有多少盏"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} ÷ 5 = {q}（组）……{rem}（盏）",
+    "每组中有1盏红灯，余下的{rem}盏中还有1盏红灯",
+    "{q} + 1 = {ans}（盏）"
+   ],
+   "tip": "「需要多少米彩绳」与红灯盏数无关，是多余条件；先求完整组数，再看余下部分是否含红灯。",
+   "answers": [
+    {
+     "when": "{rem} >= 1",
+     "answer": "{ans} 盏",
+     "steps": [
+      "{n1} ÷ 5 = {q}（组）……{rem}（盏）",
+      "每组有 1 盏红灯，余下的 {rem} 盏里第 1 盏是红灯",
+      "{q} + 1 = {ans}（盏）"
+     ]
+    },
+    {
+     "when": "1",
+     "answer": "{q} 盏",
+     "steps": [
+      "{n1} ÷ 5 = {q}（组）……0（盏）",
+      "每组有 1 盏红灯，正好分完，没有多余",
+      "共 {q} 盏"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T056",
+   "unit": "mixed",
+   "chapter": "mx-two",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 1,
+   "story": "美术小组买来{n1}盒彩笔，每盒{n2}支，用去{n3}支。",
+   "question": "还剩多少支？",
+   "params": {
+    "n1": [
+     3,
+     8,
+     1
+    ],
+    "n2": [
+     8,
+     20,
+     1
+    ],
+    "n3": [
+     5,
+     40,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1}*{n2}",
+    "ans": "{total}-{n3}"
+   },
+   "constraints": [
+    "{n3} < {total}",
+    "{ans} >= 5",
+    "{ans} <= 150"
+   ],
+   "segments": [
+    {
+     "t": "美术小组买来{n1}盒彩笔",
+     "type": "condition"
+    },
+    {
+     "t": "，每盒{n2}支",
+     "type": "condition"
+    },
+    {
+     "t": "，用去{n3}支",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每盒",
+    "用去"
+   ],
+   "table": {
+    "known": [
+     "{n1} 盒彩笔",
+     "每盒 {n2} 支",
+     "用去 {n3} 支"
+    ],
+    "ask": "还剩 ？ 支"
+   },
+   "bridge": {
+    "ask": "要求还剩多少支，先要算出",
+    "choices": [
+     "彩笔一共有多少支",
+     "每盒有多少支",
+     "用去多少支"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {total}（支）",
+    "{total} - {n3} = {ans}（支）"
+   ],
+   "answer": "{ans} 支",
+   "tip": "先算「一共多少支」，再用总数减去用去的支数。"
+  },
+  {
+   "id": "T057",
+   "unit": "mixed",
+   "chapter": "mx-two",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "steps"
+   ],
+   "level": 1,
+   "story": "图书角原有{n1}本故事书，借出{n2}本后，又买来{n3}本。",
+   "question": "现在有故事书多少本？",
+   "params": {
+    "n1": [
+     40,
+     100,
+     1
+    ],
+    "n2": [
+     5,
+     30,
+     1
+    ],
+    "n3": [
+     5,
+     40,
+     1
+    ]
+   },
+   "calc": {
+    "after": "{n1}-{n2}",
+    "ans": "{after}+{n3}"
+   },
+   "constraints": [
+    "{n2} < {n1}",
+    "{ans} >= 20",
+    "{ans} <= 140"
+   ],
+   "segments": [
+    {
+     "t": "图书角原有{n1}本故事书",
+     "type": "condition"
+    },
+    {
+     "t": "，借出{n2}本后",
+     "type": "condition"
+    },
+    {
+     "t": "，又买来{n3}本",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "借出",
+    "又买来"
+   ],
+   "table": {
+    "known": [
+     "原有 {n1} 本",
+     "借出 {n2} 本",
+     "又买来 {n3} 本"
+    ],
+    "ask": "现在 ？ 本"
+   },
+   "bridge": {
+    "ask": "要求现在有多少本，先要算出",
+    "choices": [
+     "借出后剩下多少本",
+     "原来有多少本",
+     "又买来多少本"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} - {n2} = {after}（本）",
+    "{after} + {n3} = {ans}（本）"
+   ],
+   "answer": "{ans} 本",
+   "tip": "按事情发生的顺序算：原有 - 借出 + 买来。"
+  },
+  {
+   "id": "T058",
+   "unit": "mixed",
+   "chapter": "mx-two",
+   "type": "distractor",
+   "skill": [
+    "condition",
+    "distractor",
+    "bridge"
+   ],
+   "level": 2,
+   "story": "三年级有{n1}个班，每班有{n0}人，每班栽{n2}棵树；六年级栽了{n3}棵树。",
+   "question": "两个年级一共栽了多少棵树？",
+   "params": {
+    "n1": [
+     3,
+     6,
+     1
+    ],
+    "n0": [
+     30,
+     50,
+     1
+    ],
+    "n2": [
+     5,
+     12,
+     1
+    ],
+    "n3": [
+     20,
+     60,
+     1
+    ]
+   },
+   "calc": {
+    "three": "{n1}*{n2}",
+    "ans": "{three}+{n3}"
+   },
+   "constraints": [
+    "{n0} != {n2}",
+    "{n0} != {n3}",
+    "{ans} >= 40",
+    "{ans} <= 150"
+   ],
+   "segments": [
+    {
+     "t": "三年级有{n1}个班",
+     "type": "condition"
+    },
+    {
+     "t": "，每班有{n0}人",
+     "type": "distractor"
+    },
+    {
+     "t": "，每班栽{n2}棵树",
+     "type": "condition"
+    },
+    {
+     "t": "；六年级栽了{n3}棵树",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每班栽",
+    "一共"
+   ],
+   "table": {
+    "known": [
+     "{n1} 个班",
+     "每班栽 {n2} 棵",
+     "六年级 {n3} 棵",
+     "每班 {n0} 人（多余条件）"
+    ],
+    "ask": "两个年级一共 ？ 棵"
+   },
+   "bridge": {
+    "ask": "要求两个年级一共栽多少棵，先要算出",
+    "choices": [
+     "三年级一共栽多少棵",
+     "每班有多少人",
+     "六年级有多少个班"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {three}（棵）",
+    "{three} + {n3} = {ans}（棵）"
+   ],
+   "answer": "{ans} 棵",
+   "tip": "「每班人数」是多余条件，求总棵数要用班数乘每班栽的棵数。"
+  },
+  {
+   "id": "T059",
+   "unit": "mixed",
+   "chapter": "mx-two",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "condition",
+    "bridge"
+   ],
+   "level": 2,
+   "story": "学校买来{n1}盒粉笔，每盒{n2}支，用去一些。",
+   "question": "还剩多少支？",
+   "params": {
+    "n1": [
+     3,
+     8,
+     1
+    ],
+    "n2": [
+     10,
+     20,
+     1
+    ],
+    "n0": [
+     6,
+     60,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1}*{n2}",
+    "ans": "{total}-{n0}"
+   },
+   "constraints": [
+    "{n0} < {total}",
+    "{ans} >= 5",
+    "{n0} != {n2}"
+   ],
+   "segments": [
+    {
+     "t": "学校买来{n1}盒粉笔",
+     "type": "condition"
+    },
+    {
+     "t": "，每盒{n2}支",
+     "type": "condition"
+    },
+    {
+     "t": "，用去一些",
+     "type": "plain"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每盒",
+    "还剩"
+   ],
+   "table": {
+    "known": [
+     "{n1} 盒粉笔",
+     "每盒 {n2} 支"
+    ],
+    "supplyRow": "用去 {n0} 支（补上的条件）",
+    "ask": "还剩 ？ 支"
+   },
+   "bridge": {
+    "ask": "要求还剩多少支，先要算出",
+    "choices": [
+     "粉笔一共有多少支",
+     "每盒有多少支",
+     "用去了多少支"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {total}（支）",
+    "{total} - {n0} = {ans}（支）"
+   ],
+   "answer": "{ans} 支",
+   "supply": {
+    "choices": [
+     "用去了{n0}支",
+     "每盒有{n0}支",
+     "又买来{n0}支"
+    ],
+    "answer": 0,
+    "why": "要求还剩多少支，必须知道粉笔总支数和用去的支数；总支数可由盒数和每盒支数算出，缺的是用去的支数。"
+   },
+   "tip": "补上「用去 {n0} 支」后：总支数 - 用去支数 = 还剩支数。"
+  },
+  {
+   "id": "T060",
+   "unit": "mixed",
+   "chapter": "mx-two",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 2,
+   "story": "体育室有{n1}根跳绳，平均分给{n2}个班，每个班又借到{n3}个毽子。",
+   "question": "每个班现在一共有多少件体育用品？",
+   "params": {
+    "n1": [
+     40,
+     100,
+     5
+    ],
+    "n2": [
+     5,
+     5,
+     1
+    ],
+    "n3": [
+     3,
+     12,
+     1
+    ]
+   },
+   "calc": {
+    "share": "div({n1}, {n2})",
+    "ans": "{share}+{n3}"
+   },
+   "constraints": [
+    "mod({n1}, {n2}) == 0",
+    "{ans} >= 10",
+    "{ans} <= 35"
+   ],
+   "segments": [
+    {
+     "t": "体育室有{n1}根跳绳",
+     "type": "condition"
+    },
+    {
+     "t": "，平均分给{n2}个班",
+     "type": "condition"
+    },
+    {
+     "t": "，每个班又借到{n3}个毽子",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "平均分给"
+   ],
+   "table": {
+    "known": [
+     "{n1} 根跳绳",
+     "{n2} 个班",
+     "又借到 {n3} 个毽子"
+    ],
+    "ask": "每班现在 ？ 件"
+   },
+   "bridge": {
+    "ask": "要求每个班现在一共有多少件体育用品，先要算出",
+    "choices": [
+     "原来平均每班分到多少根跳绳",
+     "一共有多少个班",
+     "又借到多少个毽子"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} ÷ {n2} = {share}（根）",
+    "{share} + {n3} = {ans}（件）"
+   ],
+   "answer": "{ans} 件",
+   "tip": "先平均分求出原来每班多少根跳绳，再加上又借到的毽子数。"
+  },
+  {
+   "id": "T061",
+   "unit": "mixed",
+   "chapter": "mx-two",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 3,
+   "story": "果园里有{n1}棵果树，平均每棵收{n2}千克水果，已经运走{n3}千克。",
+   "question": "还剩多少千克水果？",
+   "params": {
+    "n1": [
+     20,
+     50,
+     1
+    ],
+    "n2": [
+     15,
+     40,
+     1
+    ],
+    "n3": [
+     100,
+     300,
+     10
+    ]
+   },
+   "calc": {
+    "total": "{n1}*{n2}",
+    "ans": "{total}-{n3}"
+   },
+   "constraints": [
+    "{ans} >= 50",
+    "{ans} <= 2000"
+   ],
+   "segments": [
+    {
+     "t": "果园里有{n1}棵果树",
+     "type": "condition"
+    },
+    {
+     "t": "，平均每棵收{n2}千克水果",
+     "type": "condition"
+    },
+    {
+     "t": "，已经运走{n3}千克",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "平均每棵收",
+    "运走"
+   ],
+   "table": {
+    "known": [
+     "{n1} 棵果树",
+     "每棵收 {n2} 千克",
+     "运走 {n3} 千克"
+    ],
+    "ask": "还剩 ？ 千克"
+   },
+   "bridge": {
+    "ask": "要求还剩多少千克水果，先要算出",
+    "choices": [
+     "水果一共有多少千克",
+     "每棵收多少千克",
+     "运走多少千克"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} × {n2} = {total}（千克）",
+    "{total} - {n3} = {ans}（千克）"
+   ],
+   "answer": "{ans} 千克",
+   "tip": "先算果树一共收多少千克，再减去运走的质量。"
+  },
+  {
+   "id": "T062",
+   "unit": "mixed",
+   "chapter": "mx-bracket",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 1,
+   "story": "四年级一班有{n1}名同学，其中男生{n2}名，平均分成{n3}个小组。",
+   "question": "每个小组有几名女生？",
+   "params": {
+    "n1": [
+     36,
+     48,
+     4
+    ],
+    "n2": [
+     12,
+     24,
+     4
+    ],
+    "n3": [
+     4,
+     4,
+     1
+    ]
+   },
+   "calc": {
+    "girls": "{n1}-{n2}",
+    "ans": "div({girls}, {n3})"
+   },
+   "constraints": [
+    "{n1} > {n2}",
+    "mod({girls}, {n3}) == 0",
+    "{ans} >= 2",
+    "{ans} <= 9"
+   ],
+   "segments": [
+    {
+     "t": "四年级一班有{n1}名同学",
+     "type": "condition"
+    },
+    {
+     "t": "，其中男生{n2}名",
+     "type": "condition"
+    },
+    {
+     "t": "，平均分成{n3}个小组",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "其中",
+    "平均分成"
+   ],
+   "table": {
+    "known": [
+     "全班 {n1} 人",
+     "男生 {n2} 人",
+     "分成 {n3} 组"
+    ],
+    "ask": "每组女生 ？ 人"
+   },
+   "bridge": {
+    "ask": "要求每个小组有几名女生，先要算出",
+    "choices": [
+     "女生一共有多少名",
+     "男生有多少名",
+     "一共有多少个小组"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} - {n2} = {girls}（名）",
+    "{girls} ÷ {n3} = {ans}（名）"
+   ],
+   "answer": "{ans} 名",
+   "tip": "先算括号里的「女生总人数」，再平均分到各组。"
+  },
+  {
+   "id": "T063",
+   "unit": "mixed",
+   "chapter": "mx-bracket",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 1,
+   "story": "学校买来{n1}本新图书，发给{n2}个班后，还剩{n3}本。",
+   "question": "平均每个班发到多少本？",
+   "params": {
+    "n1": [
+     80,
+     120,
+     10
+    ],
+    "n2": [
+     5,
+     5,
+     1
+    ],
+    "n3": [
+     10,
+     30,
+     10
+    ]
+   },
+   "calc": {
+    "remaining": "{n1}-{n3}",
+    "ans": "div({remaining}, {n2})"
+   },
+   "constraints": [
+    "{n1} > {n3}",
+    "mod({remaining}, {n2}) == 0",
+    "{ans} >= 10",
+    "{ans} <= 24"
+   ],
+   "segments": [
+    {
+     "t": "学校买来{n1}本新图书",
+     "type": "condition"
+    },
+    {
+     "t": "，发给{n2}个班后",
+     "type": "condition"
+    },
+    {
+     "t": "，还剩{n3}本",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "发给",
+    "还剩"
+   ],
+   "table": {
+    "known": [
+     "{n1} 本新图书",
+     "发给 {n2} 个班",
+     "还剩 {n3} 本"
+    ],
+    "ask": "每班发到 ？ 本"
+   },
+   "bridge": {
+    "ask": "要求平均每个班发到多少本，先要算出",
+    "choices": [
+     "已经发出去多少本",
+     "还剩多少本",
+     "一共有多少个班"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} - {n3} = {remaining}（本）",
+    "{remaining} ÷ {n2} = {ans}（本）"
+   ],
+   "answer": "{ans} 本",
+   "tip": "先算括号里的「发出去的本数」，再平均分给班级。"
+  },
+  {
+   "id": "T064",
+   "unit": "mixed",
+   "chapter": "mx-bracket",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 2,
+   "story": "学校买了{n3}套桌椅，每张桌子{n1}元，每把椅子{n2}元。",
+   "question": "买这些桌椅一共花了多少元？",
+   "params": {
+    "n1": [
+     80,
+     150,
+     10
+    ],
+    "n2": [
+     40,
+     90,
+     10
+    ],
+    "n3": [
+     20,
+     50,
+     1
+    ]
+   },
+   "calc": {
+    "per": "{n1}+{n2}",
+    "ans": "{per}*{n3}"
+   },
+   "constraints": [
+    "{ans} >= 2000",
+    "{ans} <= 15000"
+   ],
+   "segments": [
+    {
+     "t": "学校买了{n3}套桌椅",
+     "type": "condition"
+    },
+    {
+     "t": "，每张桌子{n1}元",
+     "type": "condition"
+    },
+    {
+     "t": "，每把椅子{n2}元",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每张",
+    "每把",
+    "一共"
+   ],
+   "table": {
+    "known": [
+     "{n3} 套桌椅",
+     "每张桌子 {n1} 元",
+     "每把椅子 {n2} 元"
+    ],
+    "ask": "一共 ？ 元"
+   },
+   "bridge": {
+    "ask": "要求买这些桌椅一共花多少元，先要算出",
+    "choices": [
+     "一套桌椅多少元",
+     "桌子一共多少张",
+     "椅子一共多少把"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} + {n2} = {per}（元）",
+    "{per} × {n3} = {ans}（元）"
+   ],
+   "answer": "{ans} 元",
+   "tip": "先算一套桌椅的价钱（括号里的加法），再乘套数。"
+  },
+  {
+   "id": "T065",
+   "unit": "mixed",
+   "chapter": "mx-bracket",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "condition",
+    "bridge"
+   ],
+   "level": 2,
+   "story": "果园里有苹果树{n1}棵，还有一些梨树，这些果树平均分给{n2}个小组采摘。",
+   "question": "平均每个小组负责多少棵果树？",
+   "params": {
+    "n1": [
+     60,
+     120,
+     10
+    ],
+    "n2": [
+     5,
+     5,
+     1
+    ],
+    "n0": [
+     30,
+     80,
+     10
+    ]
+   },
+   "calc": {
+    "total": "{n1}+{n0}",
+    "ans": "div({total}, {n2})"
+   },
+   "constraints": [
+    "mod({total}, {n2}) == 0",
+    "{ans} >= 18",
+    "{ans} <= 40"
+   ],
+   "segments": [
+    {
+     "t": "果园里有苹果树{n1}棵",
+     "type": "condition"
+    },
+    {
+     "t": "，还有一些梨树",
+     "type": "plain"
+    },
+    {
+     "t": "，这些果树平均分给{n2}个小组采摘",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "平均分给"
+   ],
+   "table": {
+    "known": [
+     "苹果树 {n1} 棵",
+     "{n2} 个小组"
+    ],
+    "supplyRow": "梨树 {n0} 棵（补上的条件）",
+    "ask": "每组负责 ？ 棵"
+   },
+   "bridge": {
+    "ask": "要求平均每个小组负责多少棵果树，先要算出",
+    "choices": [
+     "果树一共有多少棵",
+     "苹果树有多少棵",
+     "梨树有多少棵"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} + {n0} = {total}（棵）",
+    "{total} ÷ {n2} = {ans}（棵）"
+   ],
+   "answer": "{ans} 棵",
+   "supply": {
+    "choices": [
+     "梨树有{n0}棵",
+     "苹果树有{n0}棵",
+     "每组有{n0}人"
+    ],
+    "answer": 0,
+    "why": "要求每组负责多少棵果树，必须知道果树总棵数和小组数。苹果树棵数和小组数已知，缺梨树棵数。"
+   },
+   "tip": "补上「梨树 {n0} 棵」后：先算果树总棵数，再平均分。"
+  },
+  {
+   "id": "T066",
+   "unit": "mixed",
+   "chapter": "mx-bracket",
+   "type": "distractor",
+   "skill": [
+    "condition",
+    "distractor",
+    "bridge"
+   ],
+   "level": 3,
+   "story": "学校为合唱队买演出服，每件上衣{n1}元，每条裤子{n2}元，买了{n3}套；另外买了{n0}顶帽子。",
+   "question": "买演出服一共花了多少元？",
+   "params": {
+    "n1": [
+     120,
+     200,
+     10
+    ],
+    "n2": [
+     80,
+     150,
+     10
+    ],
+    "n3": [
+     20,
+     40,
+     1
+    ],
+    "n0": [
+     5,
+     30,
+     1
+    ]
+   },
+   "calc": {
+    "per": "{n1}+{n2}",
+    "ans": "{per}*{n3}"
+   },
+   "constraints": [
+    "{n0} != {n1}",
+    "{n0} != {n2}",
+    "{n0} != {n3}",
+    "{ans} >= 4000",
+    "{ans} <= 14000"
+   ],
+   "segments": [
+    {
+     "t": "学校为合唱队买演出服",
+     "type": "plain"
+    },
+    {
+     "t": "，每件上衣{n1}元",
+     "type": "condition"
+    },
+    {
+     "t": "，每条裤子{n2}元",
+     "type": "condition"
+    },
+    {
+     "t": "，买了{n3}套",
+     "type": "condition"
+    },
+    {
+     "t": "；另外买了{n0}顶帽子",
+     "type": "distractor"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "每件",
+    "每条",
+    "一共"
+   ],
+   "table": {
+    "known": [
+     "每件上衣 {n1} 元",
+     "每条裤子 {n2} 元",
+     "买了 {n3} 套",
+     "另买 {n0} 顶帽子（多余条件）"
+    ],
+    "ask": "演出服一共 ？ 元"
+   },
+   "bridge": {
+    "ask": "要求买演出服一共花多少元，先要算出",
+    "choices": [
+     "一套演出服多少元",
+     "买了多少顶帽子",
+     "上衣一共多少件"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} + {n2} = {per}（元）",
+    "{per} × {n3} = {ans}（元）"
+   ],
+   "answer": "{ans} 元",
+   "tip": "帽子是多余条件；演出服按套买，先求一套的价钱，再乘套数。"
+  },
+  {
+   "id": "T067",
+   "unit": "mixed",
+   "chapter": "mx-bracket",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 3,
+   "story": "学校原计划买{n1}个足球，实际少买了{n2}个，每个足球{n3}元。",
+   "question": "实际一共花了多少元？",
+   "params": {
+    "n1": [
+     50,
+     100,
+     5
+    ],
+    "n2": [
+     5,
+     20,
+     5
+    ],
+    "n3": [
+     60,
+     100,
+     10
+    ]
+   },
+   "calc": {
+    "actual": "{n1}-{n2}",
+    "ans": "{actual}*{n3}"
+   },
+   "constraints": [
+    "{n2} < {n1}",
+    "{ans} >= 1800",
+    "{ans} <= 10000"
+   ],
+   "segments": [
+    {
+     "t": "学校原计划买{n1}个足球",
+     "type": "condition"
+    },
+    {
+     "t": "，实际少买了{n2}个",
+     "type": "condition"
+    },
+    {
+     "t": "，每个足球{n3}元",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "少买了",
+    "每个"
+   ],
+   "table": {
+    "known": [
+     "原计划 {n1} 个",
+     "少买 {n2} 个",
+     "每个 {n3} 元"
+    ],
+    "ask": "实际一共 ？ 元"
+   },
+   "bridge": {
+    "ask": "要求实际一共花多少元，先要算出",
+    "choices": [
+     "实际买了多少个足球",
+     "原计划花多少元",
+     "每个足球多少元"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} - {n2} = {actual}（个）",
+    "{actual} × {n3} = {ans}（元）"
+   ],
+   "answer": "{ans} 元",
+   "tip": "先算括号里的「实际买了多少个」，再乘每个的价钱。"
+  },
+  {
+   "id": "T068",
+   "unit": "stats",
+   "chapter": "st-table",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 1,
+   "story": "四（1）班同学分组收集废电池，第一组收集{n1}节，第二组收集{n2}节，第三组收集{n3}节。",
+   "question": "三个组一共收集多少节废电池？",
+   "params": {
+    "n1": [
+     20,
+     60,
+     2
+    ],
+    "n2": [
+     15,
+     55,
+     1
+    ],
+    "n3": [
+     10,
+     50,
+     1
+    ]
+   },
+   "calc": {
+    "a": "{n1} + {n2}",
+    "total": "{a} + {n3}"
+   },
+   "constraints": [
+    "{total} >= 60",
+    "{total} <= 170"
+   ],
+   "segments": [
+    {
+     "t": "四（1）班同学分组收集废电池",
+     "type": "plain"
+    },
+    {
+     "t": "，第一组收集{n1}节",
+     "type": "condition"
+    },
+    {
+     "t": "，第二组收集{n2}节",
+     "type": "condition"
+    },
+    {
+     "t": "，第三组收集{n3}节",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "一共"
+   ],
+   "table": {
+    "known": [
+     "第一组 {n1} 节",
+     "第二组 {n2} 节",
+     "第三组 {n3} 节"
+    ],
+    "ask": "三组合计 ？ 节"
+   },
+   "bridge": {
+    "ask": "要求三个组一共收集多少节，先要算出",
+    "choices": [
+     "第一组和第二组一共收集多少节",
+     "第三组比第一组多收集多少节",
+     "三个组平均每组收集多少节"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} + {n2} = {a}（节）",
+    "{a} + {n3} = {total}（节）"
+   ],
+   "answer": "{total} 节",
+   "tip": "看到「一共」就用加法，三个数相加可以先把前两个合起来再加第三个。"
+  },
+  {
+   "id": "T069",
+   "unit": "stats",
+   "chapter": "st-table",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation"
+   ],
+   "level": 1,
+   "story": "学校统计兴趣小组人数，书法组有{n1}人，舞蹈组有{n2}人。",
+   "question": "舞蹈组比书法组多多少人？",
+   "params": {
+    "n1": [
+     18,
+     40,
+     1
+    ],
+    "n2": [
+     25,
+     60,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n2} - {n1}"
+   },
+   "constraints": [
+    "{ans} >= 5",
+    "{ans} <= 30"
+   ],
+   "segments": [
+    {
+     "t": "学校统计兴趣小组人数",
+     "type": "plain"
+    },
+    {
+     "t": "，书法组有{n1}人",
+     "type": "condition"
+    },
+    {
+     "t": "，舞蹈组有{n2}人",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "比"
+   ],
+   "table": {
+    "known": [
+     "书法组 {n1} 人",
+     "舞蹈组 {n2} 人"
+    ],
+    "ask": "舞蹈组比书法组多 ？ 人"
+   },
+   "bridge": null,
+   "steps": [
+    "{n2} - {n1} = {ans}（人）"
+   ],
+   "answer": "{ans} 人",
+   "tip": "「比……多」求相差数，用大数减小数，别把两个数加起来。"
+  },
+  {
+   "id": "T070",
+   "unit": "stats",
+   "chapter": "st-table",
+   "type": "distractor",
+   "skill": [
+    "condition",
+    "distractor",
+    "relation"
+   ],
+   "level": 2,
+   "story": "四（2）班图书角有故事书{n1}本，科技书{n2}本，连环画{n3}本。",
+   "question": "故事书和科技书一共有多少本？",
+   "params": {
+    "n1": [
+     30,
+     80,
+     2
+    ],
+    "n2": [
+     20,
+     60,
+     2
+    ],
+    "n3": [
+     15,
+     50,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1} + {n2}"
+   },
+   "constraints": [
+    "{n3} != {n1}",
+    "{n3} != {n2}",
+    "{total} >= 60"
+   ],
+   "segments": [
+    {
+     "t": "四（2）班图书角有故事书{n1}本",
+     "type": "condition"
+    },
+    {
+     "t": "，科技书{n2}本",
+     "type": "condition"
+    },
+    {
+     "t": "，连环画{n3}本",
+     "type": "distractor"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "一共"
+   ],
+   "table": {
+    "known": [
+     "故事书 {n1} 本",
+     "科技书 {n2} 本",
+     "连环画 {n3} 本（多余）"
+    ],
+    "ask": "故事书和科技书合计 ？ 本"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} + {n2} = {total}（本）"
+   ],
+   "answer": "{total} 本",
+   "tip": "问句只说「故事书和科技书」，连环画的本数是多余条件，不能算进去。"
+  },
+  {
+   "id": "T071",
+   "unit": "stats",
+   "chapter": "st-table",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 2,
+   "story": "四（3）班同学周一到周三收集塑料瓶，周一收集{n1}个，周二收集{n2}个，周三收集{n3}个。",
+   "question": "平均每天收集多少个塑料瓶？",
+   "params": {
+    "n1": [
+     21,
+     48,
+     3
+    ],
+    "n2": [
+     21,
+     48,
+     3
+    ],
+    "n3": [
+     21,
+     48,
+     3
+    ]
+   },
+   "calc": {
+    "a": "{n1} + {n2}",
+    "total": "{a} + {n3}",
+    "ans": "div({total}, 3)"
+   },
+   "constraints": [
+    "mod({total}, 3) == 0",
+    "{ans} >= 20",
+    "{ans} <= 50"
+   ],
+   "segments": [
+    {
+     "t": "四（3）班同学周一到周三收集塑料瓶",
+     "type": "plain"
+    },
+    {
+     "t": "，周一收集{n1}个",
+     "type": "condition"
+    },
+    {
+     "t": "，周二收集{n2}个",
+     "type": "condition"
+    },
+    {
+     "t": "，周三收集{n3}个",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "平均每天"
+   ],
+   "table": {
+    "known": [
+     "周一 {n1} 个",
+     "周二 {n2} 个",
+     "周三 {n3} 个"
+    ],
+    "ask": "平均每天 ？ 个"
+   },
+   "bridge": {
+    "ask": "要求平均每天收集多少个，先要算出",
+    "choices": [
+     "三天一共收集多少个",
+     "周三比周一多收集多少个",
+     "三天中最多的一天收集多少个"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} + {n2} = {a}（个）",
+    "{a} + {n3} = {total}（个）",
+    "{total} ÷ 3 = {ans}（个）"
+   ],
+   "answer": "{ans} 个",
+   "tip": "「平均每天」= 总数 ÷ 天数，先求三天的总数，再除以 3。"
+  },
+  {
+   "id": "T072",
+   "unit": "stats",
+   "chapter": "st-table",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "condition"
+   ],
+   "level": 3,
+   "story": "四年级三个班参加植树活动，一班植树{n1}棵，二班植树{n2}棵，三班植树的棵数没有记录。",
+   "question": "三个班一共植树多少棵？",
+   "params": {
+    "n1": [
+     20,
+     40,
+     1
+    ],
+    "n2": [
+     15,
+     35,
+     1
+    ],
+    "n0": [
+     25,
+     45,
+     1
+    ]
+   },
+   "calc": {
+    "a": "{n1} + {n2}",
+    "total": "{a} + {n0}"
+   },
+   "constraints": [
+    "{n0} != {n1}",
+    "{n0} != {n2}",
+    "{total} >= 70"
+   ],
+   "segments": [
+    {
+     "t": "四年级三个班参加植树活动",
+     "type": "plain"
+    },
+    {
+     "t": "，一班植树{n1}棵",
+     "type": "condition"
+    },
+    {
+     "t": "，二班植树{n2}棵",
+     "type": "condition"
+    },
+    {
+     "t": "，三班植树的棵数没有记录",
+     "type": "plain"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "一共"
+   ],
+   "table": {
+    "known": [
+     "一班 {n1} 棵",
+     "二班 {n2} 棵",
+     "三班 ？ 棵"
+    ],
+    "supplyRow": "三班植树 {n0} 棵（补上的条件）",
+    "ask": "三个班合计 ？ 棵"
+   },
+   "bridge": {
+    "ask": "要求三个班一共植树多少棵，先要算出",
+    "choices": [
+     "一班和二班一共植树多少棵",
+     "三班比一班多植树多少棵",
+     "三个班平均每班植树多少棵"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} + {n2} = {a}（棵）",
+    "{a} + {n0} = {total}（棵）"
+   ],
+   "answer": "{total} 棵",
+   "supply": {
+    "choices": [
+     "三班植树{n0}棵",
+     "三个班平均每班植树{n0}棵",
+     "三班比一班少植树{n0}棵"
+    ],
+    "answer": 0,
+    "why": "要求三个班一共植树多少棵，必须知道每个班的棵数。一班、二班已知，缺三班的棵数。"
+   },
+   "tip": "求总量要看每个部分是否齐全，缺哪个部分就先补哪个条件。"
+  },
+  {
+   "id": "T073",
+   "unit": "stats",
+   "chapter": "st-table",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 3,
+   "story": "水果店周日卖出苹果{n1}千克，香蕉{n2}千克，橘子{n3}千克。",
+   "question": "卖出的苹果和香蕉一共比橘子多多少千克？",
+   "params": {
+    "n1": [
+     25,
+     55,
+     1
+    ],
+    "n2": [
+     20,
+     50,
+     1
+    ],
+    "n3": [
+     20,
+     60,
+     1
+    ]
+   },
+   "calc": {
+    "a": "{n1} + {n2}",
+    "ans": "{a} - {n3}"
+   },
+   "constraints": [
+    "{a} > {n3}",
+    "{ans} >= 5",
+    "{ans} <= 60"
+   ],
+   "segments": [
+    {
+     "t": "水果店周日卖出苹果{n1}千克",
+     "type": "condition"
+    },
+    {
+     "t": "，香蕉{n2}千克",
+     "type": "condition"
+    },
+    {
+     "t": "，橘子{n3}千克",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "一共",
+    "比"
+   ],
+   "table": {
+    "known": [
+     "苹果 {n1} 千克",
+     "香蕉 {n2} 千克",
+     "橘子 {n3} 千克"
+    ],
+    "ask": "苹果和香蕉的总数比橘子多 ？ 千克"
+   },
+   "bridge": {
+    "ask": "要求苹果和香蕉一共比橘子多多少千克，先要算出",
+    "choices": [
+     "苹果和香蕉一共卖出多少千克",
+     "橘子比苹果少卖出多少千克",
+     "三种水果一共卖出多少千克"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} + {n2} = {a}（千克）",
+    "{a} - {n3} = {ans}（千克）"
+   ],
+   "answer": "{ans} 千克",
+   "tip": "问句里「一共」和「比……多」同时出现，先合并再比较，顺序不能颠倒。"
+  },
+  {
+   "id": "T074",
+   "unit": "stats",
+   "chapter": "st-sport",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation"
+   ],
+   "level": 1,
+   "story": "体育课上，小明一分钟跳绳{n1}下，小红一分钟跳绳{n2}下。",
+   "question": "两人一共跳了多少下？",
+   "params": {
+    "n1": [
+     85,
+     140,
+     1
+    ],
+    "n2": [
+     70,
+     135,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n1} + {n2}"
+   },
+   "constraints": [
+    "{ans} >= 170",
+    "{ans} <= 265"
+   ],
+   "segments": [
+    {
+     "t": "体育课上",
+     "type": "plain"
+    },
+    {
+     "t": "，小明一分钟跳绳{n1}下",
+     "type": "condition"
+    },
+    {
+     "t": "，小红一分钟跳绳{n2}下",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "一共"
+   ],
+   "table": {
+    "known": [
+     "小明 {n1} 下",
+     "小红 {n2} 下"
+    ],
+    "ask": "两人合计 ？ 下"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} + {n2} = {ans}（下）"
+   ],
+   "answer": "{ans} 下",
+   "tip": "「一共」把两人的成绩合起来，用加法，注意单位是「下」。"
+  },
+  {
+   "id": "T075",
+   "unit": "stats",
+   "chapter": "st-sport",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation"
+   ],
+   "level": 1,
+   "story": "运动前，小华每分钟心跳{n1}次；跳绳1分钟后，每分钟心跳{n2}次。",
+   "question": "跳绳后每分钟心跳比运动前多多少次？",
+   "params": {
+    "n1": [
+     70,
+     95,
+     1
+    ],
+    "n2": [
+     110,
+     150,
+     1
+    ]
+   },
+   "calc": {
+    "ans": "{n2} - {n1}"
+   },
+   "constraints": [
+    "{ans} >= 25",
+    "{ans} <= 70"
+   ],
+   "segments": [
+    {
+     "t": "运动前",
+     "type": "plain"
+    },
+    {
+     "t": "，小华每分钟心跳{n1}次",
+     "type": "condition"
+    },
+    {
+     "t": "；跳绳1分钟后",
+     "type": "plain"
+    },
+    {
+     "t": "，每分钟心跳{n2}次",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "比"
+   ],
+   "table": {
+    "known": [
+     "运动前 {n1} 次",
+     "运动后 {n2} 次"
+    ],
+    "ask": "运动后比运动前多 ？ 次"
+   },
+   "bridge": null,
+   "steps": [
+    "{n2} - {n1} = {ans}（次）"
+   ],
+   "answer": "{ans} 次",
+   "tip": "「比运动前多」是求相差数，用运动后的次数减运动前的次数。"
+  },
+  {
+   "id": "T076",
+   "unit": "stats",
+   "chapter": "st-sport",
+   "type": "distractor",
+   "skill": [
+    "condition",
+    "distractor"
+   ],
+   "level": 2,
+   "story": "四（1）班进行1分钟拍皮球比赛，小刚拍了{n1}下，小强拍了{n2}下，小丽拍了{n3}下。",
+   "question": "小刚和小强一共拍了多少下？",
+   "params": {
+    "n1": [
+     70,
+     120,
+     1
+    ],
+    "n2": [
+     65,
+     115,
+     1
+    ],
+    "n3": [
+     60,
+     130,
+     1
+    ]
+   },
+   "calc": {
+    "total": "{n1} + {n2}"
+   },
+   "constraints": [
+    "{n3} != {n1}",
+    "{n3} != {n2}",
+    "{total} >= 140"
+   ],
+   "segments": [
+    {
+     "t": "四（1）班进行1分钟拍皮球比赛",
+     "type": "plain"
+    },
+    {
+     "t": "，小刚拍了{n1}下",
+     "type": "condition"
+    },
+    {
+     "t": "，小强拍了{n2}下",
+     "type": "condition"
+    },
+    {
+     "t": "，小丽拍了{n3}下",
+     "type": "distractor"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "一共"
+   ],
+   "table": {
+    "known": [
+     "小刚 {n1} 下",
+     "小强 {n2} 下",
+     "小丽 {n3} 下（多余）"
+    ],
+    "ask": "小刚和小强合计 ？ 下"
+   },
+   "bridge": null,
+   "steps": [
+    "{n1} + {n2} = {total}（下）"
+   ],
+   "answer": "{total} 下",
+   "tip": "问句只点了小刚和小强，小丽的成绩是多余条件，别顺手加进去。"
+  },
+  {
+   "id": "T077",
+   "unit": "stats",
+   "chapter": "st-sport",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 2,
+   "story": "小华练习1分钟仰卧起坐，第一次做了{n1}个，第二次做了{n2}个，第三次做了{n3}个。",
+   "question": "小华平均每次做多少个？",
+   "params": {
+    "n1": [
+     21,
+     42,
+     3
+    ],
+    "n2": [
+     21,
+     42,
+     3
+    ],
+    "n3": [
+     21,
+     42,
+     3
+    ]
+   },
+   "calc": {
+    "a": "{n1} + {n2}",
+    "total": "{a} + {n3}",
+    "ans": "div({total}, 3)"
+   },
+   "constraints": [
+    "mod({total}, 3) == 0",
+    "{ans} >= 20",
+    "{ans} <= 45"
+   ],
+   "segments": [
+    {
+     "t": "小华练习1分钟仰卧起坐",
+     "type": "plain"
+    },
+    {
+     "t": "，第一次做了{n1}个",
+     "type": "condition"
+    },
+    {
+     "t": "，第二次做了{n2}个",
+     "type": "condition"
+    },
+    {
+     "t": "，第三次做了{n3}个",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "平均每次"
+   ],
+   "table": {
+    "known": [
+     "第一次 {n1} 个",
+     "第二次 {n2} 个",
+     "第三次 {n3} 个"
+    ],
+    "ask": "平均每次 ？ 个"
+   },
+   "bridge": {
+    "ask": "要求平均每次做多少个，先要算出",
+    "choices": [
+     "三次一共做了多少个",
+     "第三次比第一次多做了多少个",
+     "做得最多的一次是多少个"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} + {n2} = {a}（个）",
+    "{a} + {n3} = {total}（个）",
+    "{total} ÷ 3 = {ans}（个）"
+   ],
+   "answer": "{ans} 个",
+   "tip": "「平均每次」= 总个数 ÷ 次数，先求三次总数，再除以 3。"
+  },
+  {
+   "id": "T078",
+   "unit": "stats",
+   "chapter": "st-sport",
+   "type": "supply",
+   "skill": [
+    "supply",
+    "condition"
+   ],
+   "level": 3,
+   "story": "四（2）班四个小组进行1分钟跳绳比赛，第一组共跳{n1}下，第二组共跳{n2}下，第三组共跳{n3}下，第四组的成绩没有记下来。",
+   "question": "四个小组一共跳了多少下？",
+   "params": {
+    "n1": [
+     300,
+     500,
+     10
+    ],
+    "n2": [
+     300,
+     500,
+     10
+    ],
+    "n3": [
+     300,
+     500,
+     10
+    ],
+    "n0": [
+     320,
+     480,
+     10
+    ]
+   },
+   "calc": {
+    "a": "{n1} + {n2}",
+    "b": "{a} + {n3}",
+    "total": "{b} + {n0}"
+   },
+   "constraints": [
+    "{n0} != {n1}",
+    "{n0} != {n2}",
+    "{n0} != {n3}",
+    "{total} >= 1400",
+    "{total} <= 1900"
+   ],
+   "segments": [
+    {
+     "t": "四（2）班四个小组进行1分钟跳绳比赛",
+     "type": "plain"
+    },
+    {
+     "t": "，第一组共跳{n1}下",
+     "type": "condition"
+    },
+    {
+     "t": "，第二组共跳{n2}下",
+     "type": "condition"
+    },
+    {
+     "t": "，第三组共跳{n3}下",
+     "type": "condition"
+    },
+    {
+     "t": "，第四组的成绩没有记下来",
+     "type": "plain"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "一共"
+   ],
+   "table": {
+    "known": [
+     "第一组 {n1} 下",
+     "第二组 {n2} 下",
+     "第三组 {n3} 下",
+     "第四组 ？ 下"
+    ],
+    "supplyRow": "第四组共跳 {n0} 下（补上的条件）",
+    "ask": "四组合计 ？ 下"
+   },
+   "bridge": {
+    "ask": "要求四个小组一共跳多少下，先要算出",
+    "choices": [
+     "前三组一共跳了多少下",
+     "第四组比第一组多跳多少下",
+     "平均每组跳多少下"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} + {n2} = {a}（下）",
+    "{a} + {n3} = {b}（下）",
+    "{b} + {n0} = {total}（下）"
+   ],
+   "answer": "{total} 下",
+   "supply": {
+    "choices": [
+     "第四组共跳{n0}下",
+     "四个小组平均每组跳{n0}下",
+     "第四组比第三组多跳{n0}下"
+    ],
+    "answer": 0,
+    "why": "要求四个小组一共跳多少下，必须知道每组的成绩。前三组已知，缺第四组的成绩。"
+   },
+   "tip": "合计要凑齐每一部分，发现「没有记下来」就是缺条件，先补上再相加。"
+  },
+  {
+   "id": "T079",
+   "unit": "stats",
+   "chapter": "st-sport",
+   "type": "standard",
+   "skill": [
+    "condition",
+    "relation",
+    "bridge"
+   ],
+   "level": 3,
+   "story": "小华运动前每分钟心跳{n1}次，运动后每分钟心跳比运动前多{n2}次，休息3分钟后每分钟心跳比运动后少{n3}次。",
+   "question": "休息3分钟后小华每分钟心跳多少次？",
+   "params": {
+    "n1": [
+     70,
+     90,
+     1
+    ],
+    "n2": [
+     40,
+     60,
+     1
+    ],
+    "n3": [
+     30,
+     55,
+     1
+    ]
+   },
+   "calc": {
+    "after": "{n1} + {n2}",
+    "ans": "{after} - {n3}"
+   },
+   "constraints": [
+    "{ans} >= 75",
+    "{ans} <= 105"
+   ],
+   "segments": [
+    {
+     "t": "小华运动前每分钟心跳{n1}次",
+     "type": "condition"
+    },
+    {
+     "t": "，运动后每分钟心跳比运动前多{n2}次",
+     "type": "condition"
+    },
+    {
+     "t": "，休息3分钟后每分钟心跳比运动后少{n3}次",
+     "type": "condition"
+    },
+    {
+     "t": "。",
+     "type": "plain"
+    }
+   ],
+   "relations": [
+    "比",
+    "比"
+   ],
+   "table": {
+    "known": [
+     "运动前 {n1} 次",
+     "运动后比运动前多 {n2} 次",
+     "休息后比运动后少 {n3} 次"
+    ],
+    "ask": "休息3分钟后 ？ 次"
+   },
+   "bridge": {
+    "ask": "要求休息3分钟后每分钟心跳多少次，先要算出",
+    "choices": [
+     "运动后每分钟心跳多少次",
+     "运动前比休息后多多少次",
+     "运动后和运动前一共多少次"
+    ],
+    "answer": 0
+   },
+   "steps": [
+    "{n1} + {n2} = {after}（次）",
+    "{after} - {n3} = {ans}（次）"
+   ],
+   "answer": "{ans} 次",
+   "tip": "沿着「运动前→运动后→休息后」的顺序一步步推，先加后减，顺序不能乱。"
+  }
  ]
 }

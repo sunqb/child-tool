@@ -61,6 +61,13 @@
     transition: all .15s; font-family: inherit;
   }
   .chip.on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+  .chip .c-n { font-size: 11px; color: var(--ink-3); margin-left: 5px; font-weight: 400; }
+  .chip.on .c-n { color: var(--accent); }
+
+  /* 章节按所选单元分组 */
+  .ch-group { margin-bottom: 12px; }
+  .ch-group:last-child { margin-bottom: 0; }
+  .ch-unit { font-size: 12px; color: var(--ink-3); margin: 0 2px 6px; }
 
   .seg { display: flex; background: #f0eee8; border-radius: 12px; padding: 3px; gap: 3px; }
   .seg button {
@@ -249,20 +256,41 @@
   <div class="notice" id="genNotice"></div>
 
   <div class="sec">
-    <div class="sec-head"><span class="sec-num">1</span><h3>练什么</h3></div>
+    <div class="sec-head"><span class="sec-num">1</span><h3>学科</h3></div>
+    <div class="chips" id="subjectChips"></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-head"><span class="sec-num">2</span><h3>教材版本</h3></div>
+    <div class="chips" id="versionChips"></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-head"><span class="sec-num">3</span><h3>年级</h3></div>
+    <div class="chips" id="gradeChips"></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-head"><span class="sec-num">4</span><h3>单元</h3><span class="sec-side">可多选</span></div>
     <div class="chips" id="unitChips"></div>
-    <p class="seg-note">「平均数」为四下衔接内容，未学到可不选</p>
-    <div style="height:12px"></div>
+    <p class="seg-note">「平均数」是四下内容，在「年级」里切换 · 图形类单元（观察物体、垂线与平行线）暂无应用题型</p>
+  </div>
+
+  <div class="sec" id="chapterSec">
+    <div class="sec-head"><span class="sec-num">5</span><h3>章节</h3><span class="sec-side">按单元分组 · 可多选</span></div>
+    <div id="chapterBox"></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-head"><span class="sec-num">6</span><h3>怎么练</h3></div>
     <div class="seg" id="levelSeg">
       <button data-v="mix">混合</button>
       <button data-v="1">基础</button>
       <button data-v="2">进阶</button>
       <button data-v="3">挑战</button>
     </div>
-  </div>
-
-  <div class="sec">
-    <div class="sec-head"><span class="sec-num">2</span><h3>怎么练</h3></div>
+    <p class="seg-note">难度按题目标注，「混合」三档都出</p>
+    <div style="height:12px"></div>
     <div class="seg" id="scaffoldSeg">
       <button data-v="A">A 全程扶</button>
       <button data-v="B">B 半扶</button>
@@ -290,7 +318,7 @@
   <div style="height:26px"></div>
 
   <div class="sec">
-    <div class="sec-head"><span class="sec-num">3</span><h3>历史与错题</h3><span class="sec-side" id="hisSide"></span></div>
+    <div class="sec-head"><span class="sec-num">7</span><h3>历史与错题</h3><span class="sec-side" id="hisSide"></span></div>
     <button class="ghost-cta" id="hisBtn">查看历史卷 →</button>
   </div>
 
@@ -394,6 +422,7 @@
 
   var templates = [];
   var tplIndex = {};   // id -> template
+  var catalog = null;  // problems.json meta.catalog：学科→版本→年级→单元→章节
   var currentSheet = null;   // Store 记录（含 id/no/date）
   var detailId = null;
   var cfg = Store.config.get();
@@ -414,25 +443,141 @@
     window.scrollTo(0, 0);
   }
 
-  /* ---------- 配置渲染 ---------- */
+  /* ---------- 级联选择：学科 → 教材版本 → 年级 → 单元 → 章节 ---------- */
 
-  function renderUnits() {
-    var box = $("unitChips");
+  function versionsForSubject(sid) {
+    return catalog.versions.filter(function (v) { return !sid || v.subjectId === sid; });
+  }
+  function gradesForVersion(vid) {
+    return catalog.grades.filter(function (g) { return !vid || g.versionId === vid; });
+  }
+  function unitsForGrade(gid) {
+    return catalog.units.filter(function (u) { return !gid || u.gradeId === gid; });
+  }
+  function unitOf(id) {
+    return catalog.units.find(function (u) { return u.id === id; }) || null;
+  }
+  function tplCount(pred) { return templates.filter(pred).length; }
+
+  // 该单元实际选中的章节；cfg.chapters 缺键或空数组 = 全部章节
+  function effChapters(unitId) {
+    var u = unitOf(unitId);
+    var sel = cfg.chapters[unitId];
+    if (Array.isArray(sel) && sel.length) return sel.slice();
+    return (u && u.chapters || []).map(function (c) { return c.id; });
+  }
+
+  // 选择链路失效时逐级回退（旧缓存/题库更新都兜得住），再修剪章节映射
+  function normalizeSelection() {
+    var subs = catalog.subjects;
+    if (!subs.some(function (s) { return s.id === cfg.subject; })) cfg.subject = subs[0].id;
+    var vs = versionsForSubject(cfg.subject);
+    if (!vs.some(function (v) { return v.id === cfg.version; })) cfg.version = (vs[0] || {}).id || null;
+    var gs = gradesForVersion(cfg.version);
+    if (!gs.some(function (g) { return g.id === cfg.grade; })) cfg.grade = (gs[0] || {}).id || null;
+    var us = unitsForGrade(cfg.grade);
+    cfg.units = cfg.units.filter(function (u) { return us.some(function (x) { return x.id === u; }); });
+    if (!cfg.units.length && us.length) cfg.units = us.map(function (x) { return x.id; });
+    var ch = {};
+    cfg.units.forEach(function (uid) {
+      var u = unitOf(uid);
+      var valid = (u && u.chapters || []).map(function (c) { return c.id; });
+      var sel = cfg.chapters[uid];
+      if (!Array.isArray(sel)) return;
+      var keep = sel.filter(function (id) { return valid.indexOf(id) >= 0; });
+      if (keep.length && keep.length < valid.length) ch[uid] = keep; // 全选不存储，缺键即全选
+    });
+    cfg.chapters = ch;
+  }
+
+  function persistSel() {
+    Store.config.set({
+      subject: cfg.subject, version: cfg.version, grade: cfg.grade,
+      units: cfg.units, chapters: cfg.chapters
+    });
+  }
+
+  function chipRow(box, items, isOn, onPick) {
     box.textContent = "";
-    Store.UNITS.forEach(function (u) {
-      var c = el("button", "chip" + (cfg.units.indexOf(u) >= 0 ? " on" : ""), Store.unitName(u));
+    items.forEach(function (it) {
+      var c = el("button", "chip" + (isOn(it.id) ? " on" : ""));
       c.type = "button";
-      c.addEventListener("click", function () {
-        var i = cfg.units.indexOf(u);
-        if (i >= 0) {
-          if (cfg.units.length === 1) return; // 至少保留一个单元
-          cfg.units.splice(i, 1);
-        } else cfg.units.push(u);
-        Store.config.set({ units: cfg.units });
-        renderUnits(); renderSummary();
-      });
+      c.appendChild(document.createTextNode(it.label));
+      if (it.count != null) c.appendChild(el("span", "c-n", String(it.count)));
+      c.addEventListener("click", function () { onPick(it.id); });
       box.appendChild(c);
     });
+  }
+
+  function renderCascade() {
+    normalizeSelection();
+    persistSel(); // 跨年级/题库更新后修剪过的选择写回，避免刷新闪错
+
+    // 1 学科（单选）
+    chipRow($("subjectChips"),
+      catalog.subjects.map(function (s) { return { id: s.id, label: s.name }; }),
+      function (id) { return id === cfg.subject; },
+      function (id) { cfg.subject = id; persistSel(); refreshSetup(); });
+
+    // 2 教材版本（单选）
+    chipRow($("versionChips"),
+      versionsForSubject(cfg.subject).map(function (v) { return { id: v.id, label: v.name }; }),
+      function (id) { return id === cfg.version; },
+      function (id) { cfg.version = id; persistSel(); refreshSetup(); });
+
+    // 3 年级（单选）
+    chipRow($("gradeChips"),
+      gradesForVersion(cfg.version).map(function (g) { return { id: g.id, label: g.name }; }),
+      function (id) { return id === cfg.grade; },
+      function (id) { cfg.grade = id; persistSel(); refreshSetup(); });
+
+    // 4 单元（多选，至少留一个）
+    var us = unitsForGrade(cfg.grade);
+    chipRow($("unitChips"),
+      us.map(function (u) {
+        return { id: u.id, label: u.name, count: tplCount(function (t) { return t.unit === u.id; }) };
+      }),
+      function (id) { return cfg.units.indexOf(id) >= 0; },
+      function (id) {
+        var i = cfg.units.indexOf(id);
+        if (i >= 0) {
+          if (cfg.units.length === 1) return;
+          cfg.units.splice(i, 1);
+          delete cfg.chapters[id];
+        } else cfg.units.push(id);
+        persistSel(); refreshSetup();
+      });
+
+    // 5 章节（按选中单元分组，多选；某单元全选时不落存储）
+    var chBox = $("chapterBox");
+    chBox.textContent = "";
+    var anyCh = false;
+    us.forEach(function (u) {
+      if (cfg.units.indexOf(u.id) < 0 || !(u.chapters || []).length) return;
+      anyCh = true;
+      var eff = effChapters(u.id);
+      var g = el("div", "ch-group");
+      g.appendChild(el("div", "ch-unit", u.name));
+      var row = el("div", "chips");
+      chipRow(row,
+        u.chapters.map(function (c) {
+          return { id: c.id, label: c.name,
+                   count: tplCount(function (t) { return t.unit === u.id && t.chapter === c.id; }) };
+        }),
+        function (id) { return eff.indexOf(id) >= 0; },
+        function (id) {
+          var cur = effChapters(u.id);
+          var i = cur.indexOf(id);
+          if (i >= 0) { if (cur.length === 1) return; cur.splice(i, 1); }
+          else cur.push(id);
+          if (cur.length === u.chapters.length) delete cfg.chapters[u.id];
+          else cfg.chapters[u.id] = cur;
+          persistSel(); refreshSetup();
+        });
+      g.appendChild(row);
+      chBox.appendChild(g);
+    });
+    $("chapterSec").style.display = anyCh ? "" : "none";
   }
 
   function wireSeg(id, getVal, onPick) {
@@ -453,17 +598,21 @@
 
   function renderSummary() {
     var names = cfg.units.map(function (u) { return Store.unitName(u); }).join("、");
+    var v = catalog.versions.find(function (x) { return x.id === cfg.version; });
+    var g = catalog.grades.find(function (x) { return x.id === cfg.grade; });
+    var partial = Object.keys(cfg.chapters).length > 0;
     var box = $("summary");
     box.textContent = "";
     box.appendChild(el("b", null, names));
     box.appendChild(document.createElement("br"));
     box.appendChild(document.createTextNode(
+      (v ? v.name : "") + " · " + (g ? g.name : "") + (partial ? " · 章节已筛选" : "") + " · " +
       LEVEL_NAME[cfg.level] + "难度 · 每卷 " + cfg.count + " 题 · " + (cfg.withReview ? "含" : "不含") + "自查讲评页 · 脚手架 " + cfg.scaffold
     ));
   }
 
   function refreshSetup() {
-    renderUnits();
+    renderCascade();
     renderSummary();
     $("countNum").textContent = cfg.count;
     $("scaffoldNote").textContent = SCAFFOLD_NOTE[cfg.scaffold];
@@ -479,7 +628,7 @@
     var notice = $("genNotice");
     notice.classList.remove("show");
     if (!res.problems.length) {
-      notice.textContent = "所选范围内没有可用题型，请调整单元或难度。";
+      notice.textContent = "所选范围内没有可用题型，请调整单元、章节或难度。";
       notice.classList.add("show");
       return;
     }
@@ -942,6 +1091,24 @@
 
   /* ---------- 初始化 ---------- */
 
+  // catalog 缺失/畸形时兜底：单学科单版本单年级、单元无章节（章节区自动隐藏）
+  function normalizeCatalog(d) {
+    var cat = d && d.meta && d.meta.catalog;
+    if (cat && Array.isArray(cat.subjects) && cat.subjects.length &&
+        Array.isArray(cat.versions) && Array.isArray(cat.grades) && Array.isArray(cat.units) && cat.units.length) {
+      cat.units.forEach(function (u) { if (!Array.isArray(u.chapters)) u.chapters = []; });
+      return cat;
+    }
+    return {
+      subjects: [{ id: "math", name: "数学" }],
+      versions: [{ id: "v0", name: "通用", subjectId: "math" }],
+      grades: [{ id: "g0", name: "通用", versionId: "v0" }],
+      units: Store.UNITS.map(function (u) {
+        return { id: u, gradeId: "g0", name: Store.unitName(u), chapters: [] };
+      })
+    };
+  }
+
   fetch("data/problems.json", { cache: "no-cache" })
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (d) {
@@ -954,6 +1121,8 @@
       }
       templates = d.templates;
       templates.forEach(function (t) { tplIndex[t.id] = t; });
+      catalog = normalizeCatalog(d);
+      Store.setCatalogUnits(catalog.units.map(function (u) { return u.id; }));
       refreshSetup();
 
       if (DEBUG_AUTO) { // 调试：自动出一卷（不落历史），debug=print 时直接铺进打印区

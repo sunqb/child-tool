@@ -22,6 +22,36 @@ function err(id, msg) {
   fail++;
 }
 
+/* catalog 结构校验：模板 unit/chapter 必须落在 catalog 树内 */
+var catalog = data.meta && data.meta.catalog;
+if (!catalog || !Array.isArray(catalog.units) || !catalog.units.length) {
+  err("meta", "meta.catalog.units 缺失或为空");
+} else {
+  var catUnits = {};
+  catalog.units.forEach(function (u) {
+    if (catUnits[u.id]) err("meta", "catalog 单元 id 重复: " + u.id);
+    catUnits[u.id] = {};
+    (u.chapters || []).forEach(function (c) {
+      if (catUnits[u.id][c.id]) err("meta", "catalog 章节 id 重复: " + u.id + "/" + c.id);
+      catUnits[u.id][c.id] = 0;
+    });
+  });
+  data.templates.forEach(function (tpl) {
+    if (!catUnits[tpl.unit]) { err(tpl.id, "unit 不在 catalog: " + tpl.unit); return; }
+    var chs = Object.keys(catUnits[tpl.unit]);
+    if (chs.length) {
+      if (!tpl.chapter || !(tpl.chapter in catUnits[tpl.unit])) {
+        err(tpl.id, "章节缺失或不在 catalog: " + tpl.unit + "/" + (tpl.chapter || "(无)"));
+      } else catUnits[tpl.unit][tpl.chapter]++;
+    }
+  });
+  catalog.units.forEach(function (u) {
+    (u.chapters || []).forEach(function (c) {
+      if (!catUnits[u.id][c.id]) err("meta", "章节下无模板: " + u.id + "/" + c.id);
+    });
+  });
+}
+
 data.templates.forEach(function (tpl) {
   var id = tpl.id;
   var ok = 0, segBad = 0, relBad = 0, leftoverBad = 0, nonInt = 0, scopeDump = null;

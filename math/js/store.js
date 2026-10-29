@@ -40,20 +40,43 @@
   /* ---------- 家长配置 ---------- */
 
   var DEFAULT_CONFIG = {
+    subject: "math",             // 学科（catalog.subjects）
+    version: "sujiao",           // 教材版本（catalog.versions）
+    grade: "g4s",                // 年级（catalog.grades）
     units: KNOWN_UNITS.slice(),  // 练哪些单元
+    chapters: {},                // unitId -> [chapterId]；缺键/空数组 = 该单元全部章节
     level: "mix",                // mix | 1 | 2 | 3
     scaffold: "A",               // A 全程扶 | B 半扶 | C 放手
     count: 5,                    // 每卷题量 3-10
     withReview: true             // 卷尾附自查讲评页
   };
 
+  // 单元白名单：catalog 加载后由页面端注入（含新增单元）；注入前用内置默认
+  var catalogUnits = null;
+
   var config = {
     get: function () {
+      var known = catalogUnits || KNOWN_UNITS;
       var c = readRaw("config");
       var out = Object.assign({}, DEFAULT_CONFIG, (c && typeof c === "object") ? c : {});
-      if (!Array.isArray(out.units) || !out.units.length) out.units = KNOWN_UNITS.slice();
-      out.units = out.units.filter(function (u) { return KNOWN_UNITS.indexOf(u) >= 0; });
-      if (!out.units.length) out.units = KNOWN_UNITS.slice();
+      if (typeof out.subject !== "string" || !out.subject) out.subject = DEFAULT_CONFIG.subject;
+      if (typeof out.version !== "string" || !out.version) out.version = DEFAULT_CONFIG.version;
+      if (typeof out.grade !== "string" || !out.grade) out.grade = DEFAULT_CONFIG.grade;
+      if (!Array.isArray(out.units) || !out.units.length) out.units = known.slice();
+      out.units = out.units.filter(function (u) { return known.indexOf(u) >= 0; });
+      if (!out.units.length) out.units = known.slice();
+      // chapters 只保留「已知单元 + 字符串数组」；与 catalog 的深层对齐在页面端 normalizeSelection 做
+      var ch = {};
+      if (out.chapters && typeof out.chapters === "object" && !Array.isArray(out.chapters)) {
+        Object.keys(out.chapters).forEach(function (k) {
+          if (known.indexOf(k) < 0) return;
+          var arr = Array.isArray(out.chapters[k])
+            ? out.chapters[k].filter(function (x) { return typeof x === "string" && x; })
+            : [];
+          if (arr.length) ch[k] = arr;
+        });
+      }
+      out.chapters = ch;
       if (KNOWN_LEVELS.indexOf(String(out.level)) < 0) out.level = "mix";
       if (KNOWN_SCAFFOLDS.indexOf(out.scaffold) < 0) out.scaffold = "A";
       out.count = Math.min(10, Math.max(3, Number(out.count) || 5));
@@ -127,8 +150,11 @@
     sheets: sheets,
     today: localDate,
     UNITS: KNOWN_UNITS,
+    setCatalogUnits: function (ids) {
+      if (Array.isArray(ids) && ids.length) catalogUnits = ids.slice();
+    },
     unitName: function (u) {
-      return { volume: "升和毫升", division: "除法应用", strategy: "列表策略", average: "平均数" }[u] || u;
+      return { volume: "升和毫升", division: "两、三位数除以两位数", strategy: "解决问题的策略（列表）", average: "平均数（四下）" }[u] || u;
     }
   };
 })(window);

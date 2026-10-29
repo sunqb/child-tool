@@ -9,6 +9,9 @@ dictation/deploy-artifacts/
 flashcard/tools/.env
 flashcard/tools/.venv/
 
+# 审题雷达生成管线：密钥不入库
+math/tools/.env
+
 # 闪卡底图与锚点缓存：体量大且可由 plan + API 重新生成，不进库
 flashcard/cards/base/
 
