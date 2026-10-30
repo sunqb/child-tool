@@ -459,16 +459,17 @@
   }
   function tplCount(pred) { return templates.filter(pred).length; }
 
-  // 该单元实际选中的章节；cfg.chapters 缺键或空数组 = 全部章节
+  // 该单元实际选中的章节；cfg.chapters 缺键 = 全部章节，空数组 = 明确不选
   function effChapters(unitId) {
     var u = unitOf(unitId);
     var sel = cfg.chapters[unitId];
-    if (Array.isArray(sel) && sel.length) return sel.slice();
+    if (Array.isArray(sel)) return sel.slice();
     return (u && u.chapters || []).map(function (c) { return c.id; });
   }
 
   // 选择链路失效时逐级回退（旧缓存/题库更新都兜得住），再修剪章节映射
   function normalizeSelection() {
+    var previousGrade = cfg.grade;
     var subs = catalog.subjects;
     if (!subs.some(function (s) { return s.id === cfg.subject; })) cfg.subject = subs[0].id;
     var vs = versionsForSubject(cfg.subject);
@@ -477,7 +478,8 @@
     if (!gs.some(function (g) { return g.id === cfg.grade; })) cfg.grade = (gs[0] || {}).id || null;
     var us = unitsForGrade(cfg.grade);
     cfg.units = cfg.units.filter(function (u) { return us.some(function (x) { return x.id === u; }); });
-    if (!cfg.units.length && us.length) cfg.units = us.map(function (x) { return x.id; });
+    // 允许用户清空单元；只有切换年级时才默认选中新年级全部单元
+    if (cfg.grade !== previousGrade && us.length) cfg.units = us.map(function (x) { return x.id; });
     var ch = {};
     cfg.units.forEach(function (uid) {
       var u = unitOf(uid);
@@ -485,7 +487,7 @@
       var sel = cfg.chapters[uid];
       if (!Array.isArray(sel)) return;
       var keep = sel.filter(function (id) { return valid.indexOf(id) >= 0; });
-      if (keep.length && keep.length < valid.length) ch[uid] = keep; // 全选不存储，缺键即全选
+      if (!sel.length || (keep.length && keep.length < valid.length)) ch[uid] = keep; // 全选不存储，缺键即全选
     });
     cfg.chapters = ch;
   }
@@ -529,9 +531,16 @@
     chipRow($("gradeChips"),
       gradesForVersion(cfg.version).map(function (g) { return { id: g.id, label: g.name }; }),
       function (id) { return id === cfg.grade; },
-      function (id) { cfg.grade = id; persistSel(); refreshSetup(); });
+      function (id) {
+        if (id !== cfg.grade) {
+          cfg.grade = id;
+          cfg.units = unitsForGrade(id).map(function (u) { return u.id; });
+          cfg.chapters = {};
+        }
+        persistSel(); refreshSetup();
+      });
 
-    // 4 单元（多选，至少留一个）
+    // 4 单元（多选，可全部取消）
     var us = unitsForGrade(cfg.grade);
     chipRow($("unitChips"),
       us.map(function (u) {
@@ -541,7 +550,6 @@
       function (id) {
         var i = cfg.units.indexOf(id);
         if (i >= 0) {
-          if (cfg.units.length === 1) return;
           cfg.units.splice(i, 1);
           delete cfg.chapters[id];
         } else cfg.units.push(id);
@@ -568,7 +576,7 @@
         function (id) {
           var cur = effChapters(u.id);
           var i = cur.indexOf(id);
-          if (i >= 0) { if (cur.length === 1) return; cur.splice(i, 1); }
+          if (i >= 0) cur.splice(i, 1);
           else cur.push(id);
           if (cur.length === u.chapters.length) delete cfg.chapters[u.id];
           else cfg.chapters[u.id] = cur;
@@ -597,7 +605,7 @@
   }
 
   function renderSummary() {
-    var names = cfg.units.map(function (u) { return Store.unitName(u); }).join("、");
+    var names = cfg.units.length ? cfg.units.map(function (u) { return Store.unitName(u); }).join("、") : "未选择单元";
     var v = catalog.versions.find(function (x) { return x.id === cfg.version; });
     var g = catalog.grades.find(function (x) { return x.id === cfg.grade; });
     var partial = Object.keys(cfg.chapters).length > 0;
@@ -624,9 +632,14 @@
   /* ---------- 生成 ---------- */
 
   function generate() {
-    var res = Generator.make(cfg, templates);
     var notice = $("genNotice");
     notice.classList.remove("show");
+    if (!cfg.units.length) {
+      notice.textContent = "请至少选择一个单元。";
+      notice.classList.add("show");
+      return;
+    }
+    var res = Generator.make(cfg, templates);
     if (!res.problems.length) {
       notice.textContent = "所选范围内没有可用题型，请调整单元、章节或难度。";
       notice.classList.add("show");

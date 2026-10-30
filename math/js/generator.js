@@ -259,7 +259,7 @@
   /**
    * 从模板库组一卷
    * cfg: { units: ["division",...], chapters: {division:["d-avg",...]}, level: "mix"|1|2|3, count: 5 }
-   * chapters 缺键或空数组 = 该单元全部章节
+   * chapters 缺键 = 该单元全部章节，空数组 = 明确不选任何章节
    * 返回 { problems: [实例], poolSize: 可用模板数 }
    */
   function make(cfg, templates) {
@@ -267,7 +267,7 @@
     var pool = templates.filter(function (t) {
       if (cfg.units.indexOf(t.unit) < 0) return false;
       var chs = cfg.chapters && cfg.chapters[t.unit];
-      if (chs && chs.length && chs.indexOf(t.chapter || "") < 0) return false;
+      if (Array.isArray(chs) && chs.indexOf(t.chapter || "") < 0) return false;
       if (level !== "mix" && level !== "all" && String(t.level) !== String(level)) return false;
       return true;
     });

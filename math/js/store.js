@@ -44,7 +44,7 @@
     version: "sujiao2022",           // 教材版本（catalog.versions）
     grade: "g4s",                // 年级（catalog.grades）
     units: KNOWN_UNITS.slice(),  // 练哪些单元
-    chapters: {},                // unitId -> [chapterId]；缺键/空数组 = 该单元全部章节
+    chapters: {},                // unitId -> [chapterId]；缺键 = 全选，空数组 = 明确不选
     level: "mix",                // mix | 1 | 2 | 3
     scaffold: "A",               // A 全程扶 | B 半扶 | C 放手
     count: 5,                    // 每卷题量 3-10
@@ -62,18 +62,16 @@
       if (typeof out.subject !== "string" || !out.subject) out.subject = DEFAULT_CONFIG.subject;
       if (typeof out.version !== "string" || !out.version) out.version = DEFAULT_CONFIG.version;
       if (typeof out.grade !== "string" || !out.grade) out.grade = DEFAULT_CONFIG.grade;
-      if (!Array.isArray(out.units) || !out.units.length) out.units = known.slice();
+      if (!Array.isArray(out.units)) out.units = known.slice();
       out.units = out.units.filter(function (u) { return known.indexOf(u) >= 0; });
-      if (!out.units.length) out.units = known.slice();
       // chapters 只保留「已知单元 + 字符串数组」；与 catalog 的深层对齐在页面端 normalizeSelection 做
       var ch = {};
       if (out.chapters && typeof out.chapters === "object" && !Array.isArray(out.chapters)) {
         Object.keys(out.chapters).forEach(function (k) {
           if (known.indexOf(k) < 0) return;
-          var arr = Array.isArray(out.chapters[k])
-            ? out.chapters[k].filter(function (x) { return typeof x === "string" && x; })
-            : [];
-          if (arr.length) ch[k] = arr;
+          if (Array.isArray(out.chapters[k])) {
+            ch[k] = out.chapters[k].filter(function (x) { return typeof x === "string" && x; });
+          }
         });
       }
       out.chapters = ch;
