@@ -163,65 +163,79 @@
   /* =========================================================
    * 卷面（屏幕预览与打印共用；打印覆盖见 <style media="print">）
    * ========================================================= */
-  .msheet { font-size: 10pt; color: #000; line-height: 1.5; }
-  .paper { background: #fff; border-radius: 10px; padding: 14px 14px 18px; box-shadow: 0 2px 10px rgba(31,35,40,.06); }
-
-  .ms-head { text-align: center; margin-bottom: 3mm; }
-  .ms-head .ms-title { font-size: 13pt; font-weight: 700; letter-spacing: .1em; }
-  .ms-head .ms-meta { font-size: 9.5pt; color: #444; margin: 1mm 0 1.5mm; }
-  .ms-creed {
-    border: 1.2pt solid #000; border-radius: 2mm; padding: 1.2mm 3mm; font-size: 9pt;
-    text-align: center; background: #f2f2f2; margin-bottom: 3mm;
+  .msheet {
+    font-size: 11pt; color: #000; line-height: 1.6;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
   }
-  .ms-creed b { letter-spacing: .08em; }
+  .paper { background: #fff; border-radius: 10px; padding: 14px 14px 18px; box-shadow: 0 2px 10px rgba(31,35,40,.06); }
+  body.sheet-view { max-width: 900px; }
+  .sheet-view .paper { width: 100%; max-width: 210mm; margin: 0 auto; padding: 12mm 13mm 14mm; border-radius: 4px; }
+  @media screen and (max-width: 720px) {
+    body.sheet-view { padding: 10px; }
+    .sheet-view .paper { padding: 16px; }
+  }
 
-  .mq { border-top: 1pt solid #999; padding: 2mm 0 2.5mm; break-inside: avoid; page-break-inside: avoid; }
-  .mq-story { line-height: 1.9; font-size: 10.5pt; margin-bottom: .3mm; }
-  .mq-q { line-height: 1.7; font-size: 10.5pt; font-weight: 700; margin-bottom: .8mm; }
-  .mq-step { font-size: 9.5pt; margin: .8mm 0 .5mm; font-weight: 600; }
-  .mq-choices { font-size: 10pt; line-height: 1.7; padding-left: 5mm; }
-  .mq-table { width: 100%; border-collapse: collapse; margin: .6mm 0 .8mm; }
-  .mq-table td, .mq-table th { border: .8pt solid #888; padding: 1mm 2.5mm; font-size: 9.5pt; height: 6mm; }
-  .mq-table td.c-label { width: 16mm; text-align: center; color: #444; font-size: 9pt; }
-  .mq-lines { font-size: 10pt; line-height: 1.9; padding-left: 2mm; }
+  .ms-head { text-align: center; margin-bottom: 3mm; break-inside: avoid; page-break-inside: avoid; }
+  .ms-head .ms-title { font-size: 17pt; font-weight: 700; letter-spacing: .08em; }
+  .ms-head .ms-meta { font-size: 10pt; color: #444; margin: 1mm 0 2mm; }
+  .ms-student { display: flex; gap: 8mm; margin-top: 3mm; font-size: 10.5pt; text-align: left; }
+  .ms-field { display: flex; align-items: baseline; flex: 1; white-space: nowrap; }
+  .ms-fill { flex: 1; height: 1.1em; border-bottom: .8pt solid #555; }
+  .ms-creed {
+    border: 1pt solid #000; border-radius: 1.5mm; padding: 1.8mm 3mm; font-size: 10pt;
+    text-align: center; background: #f5f5f5; margin-bottom: 3mm;
+    break-inside: avoid; page-break-inside: avoid; break-after: avoid; page-break-after: avoid;
+  }
+  .ms-creed b { letter-spacing: .06em; }
+
+  .mq { border-top: .8pt solid #999; padding: 2mm 0 2.5mm; break-inside: avoid; page-break-inside: avoid; }
+  .mq-story { line-height: 1.75; font-size: 11.5pt; margin-bottom: .5mm; }
+  .mq-q { line-height: 1.7; font-size: 11.5pt; font-weight: 700; margin-bottom: 1mm; }
+  .mq-step { font-size: 10.5pt; margin: .7mm 0 .4mm; font-weight: 600; }
+  .mq-choices { font-size: 10.5pt; line-height: 1.8; padding-left: 5mm; }
+  .mq-table { width: 100%; border-collapse: collapse; margin: .8mm 0 1mm; }
+  .mq-table td, .mq-table th { border: .7pt solid #888; padding: 1mm 2.5mm; font-size: 10.5pt; height: 7mm; }
+  .mq-table td.c-label { width: 18mm; text-align: center; color: #444; font-size: 10pt; }
+  .mq-lines { font-size: 11pt; line-height: 1.9; padding-left: 2mm; }
   /* 作答空线用 flex 自适应，不再用固定数量的全角下划线（窄屏预览会折行） */
-  .mq-lines .mq-line { display: flex; align-items: baseline; }
+  .mq-lines .mq-line { display: flex; align-items: baseline; min-height: 8mm; }
   .mq-line-lab { flex: none; }
-  .mq-blank { flex: 1 1 auto; height: .8em; border-bottom: 1pt solid #000; }
-  .mq-ans { font-size: 10pt; margin-top: .8mm; }
-  .mq-free { height: 38mm; border: 1pt dashed #aaa; border-radius: 1.5mm; margin: 1.2mm 0; }
+  .mq-blank { flex: 1 1 auto; height: .9em; border-bottom: .8pt solid #000; }
+  .mq-ans { display: flex; align-items: baseline; gap: 1mm; font-size: 11pt; margin-top: 1mm; }
+  .mq-free { height: 42mm; border: .8pt dashed #aaa; border-radius: 1.5mm; margin: 1.2mm 0; }
 
   .mreview { page-break-before: always; break-before: page; }
   /* 屏幕上没有分页，给讲评页加分隔，避免和最后一题粘在一起（打印仍另起一页） */
   @media screen {
     .mreview { margin-top: 20px; padding-top: 14px; border-top: 1.5px dashed #d8d2c4; }
   }
-  .mr-head { text-align: center; font-size: 12pt; font-weight: 700; margin-bottom: 1.5mm; }
+  .mr-head { text-align: center; font-size: 14pt; font-weight: 700; margin-bottom: 2mm; }
   .mr-rule {
-    border: 1.2pt solid #000; border-radius: 2mm; background: #f2f2f2; padding: 1.2mm 3mm;
-    font-size: 9pt; text-align: center; margin-bottom: 3mm;
+    border: 1pt solid #000; border-radius: 1.5mm; background: #f5f5f5; padding: 1.2mm 3mm;
+    font-size: 9.5pt; text-align: center; margin-bottom: 2mm;
   }
-  .mr { border-top: 1pt solid #999; padding: 2mm 0 2.5mm; break-inside: avoid; page-break-inside: avoid; }
+  .mr { border-top: .8pt solid #999; padding: 1.3mm 0 1.5mm; break-inside: avoid; page-break-inside: avoid; }
   /* 计星行与最后一题讲评绑在一起，避免单独被分页到下一张纸 */
   .mr-tail { break-inside: avoid; page-break-inside: avoid; }
-  .mr-lab { font-size: 9.5pt; font-weight: 700; margin: .8mm 0 .5mm; }
-  .mr-story { font-size: 10pt; line-height: 1.6; }
+  .mr-qhead { font-size: 10.5pt; font-weight: 700; margin-bottom: .4mm; }
+  .mr-lab { font-size: 9.5pt; font-weight: 700; margin: .4mm 0 .2mm; }
+  .mr-story { font-size: 10pt; line-height: 1.5; }
   .mr-story s { color: #333; }
   .mr-badge {
     display: inline-block; border: .8pt solid #333; border-radius: 1mm; font-size: 8.5pt;
     padding: 0 1.2mm; margin: 0 1mm; color: #333;
   }
-  .mr-table { width: 100%; border-collapse: collapse; margin: .8mm 0; }
-  .mr-table td { border: .8pt solid #888; padding: 1mm 2.5mm; font-size: 9.5pt; }
+  .mr-table { width: 100%; border-collapse: collapse; margin: .5mm 0; }
+  .mr-table td { border: .7pt solid #888; padding: .5mm 2mm; font-size: 9.5pt; }
   .mr-table td.c-label { width: 20mm; text-align: center; color: #444; font-size: 9pt; }
-  .mr-steps { font-size: 10pt; line-height: 1.7; }
+  .mr-steps { font-size: 10pt; line-height: 1.5; }
   .mr-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 4mm; }
   .mr-answer {
     font-size: 9.5pt; border: 1pt solid #000; border-radius: 1.5mm;
-    padding: 1mm 2.5mm; font-weight: 700; flex: none;
+    padding: .8mm 2mm; font-weight: 700; flex: none; max-width: 65mm;
   }
-  .mr-tip { font-size: 9pt; margin-top: 1.2mm; color: #222; }
-  .mr-foot { text-align: center; font-size: 10.5pt; margin-top: 4mm; letter-spacing: .1em; }
+  .mr-tip { font-size: 9pt; margin-top: .5mm; color: #222; }
+  .mr-foot { text-align: center; font-size: 10.5pt; margin-top: 3mm; letter-spacing: .08em; }
 
   /* 屏幕上隐藏打印区（打印样式与 debug=print 模式里再显示，防止打印内容残留在页面底部） */
   #print-sheet { display: none; }
@@ -230,7 +244,7 @@
   html.debug body { background: #9a9a9a !important; max-width: none; }
   html.debug body > .screen { display: none !important; }
   html.debug #print-sheet {
-    display: block !important; width: 210mm; margin: 12px auto; padding: 12mm;
+    display: block !important; width: 210mm; margin: 12px auto; padding: 12mm 13mm 14mm;
     background: #fff; box-shadow: 0 4px 24px rgba(0,0,0,.35);
   }
 </style>
@@ -382,12 +396,11 @@
 
 <!-- 打印规则集中在此块；?debug=print 时把 media 切成 all 以便在屏幕检查 -->
 <style media="print" id="printCss">
-  @page { size: A4 portrait; margin: 12mm; }
+  @page { size: A4 portrait; margin: 12mm 13mm 14mm; }
   html, body { background: #fff !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
   body > *:not(#print-sheet) { display: none !important; }
-  #print-sheet { display: block !important; }
-  .mq { break-inside: avoid; page-break-inside: avoid; }
-  .mr { break-inside: avoid; page-break-inside: avoid; }
+  #print-sheet { display: block !important; width: auto !important; }
+  .ms-head, .ms-creed, .mq, .mr, .mr-tail { break-inside: avoid; page-break-inside: avoid; }
   /* 打印时讲评页靠分页隔离，去掉屏幕预览用的分隔线与间距 */
   .mreview { page-break-before: always; break-before: page; margin-top: 0; padding-top: 0; border-top: 0; }
 </style>
@@ -440,6 +453,7 @@
     ["viewSetup", "viewSheet", "viewHistory", "viewDetail"].forEach(function (s) {
       $(s).classList.toggle("on", s === id);
     });
+    document.body.classList.toggle("sheet-view", id === "viewSheet");
     window.scrollTo(0, 0);
   }
 
@@ -784,13 +798,17 @@
       box.appendChild(calc);
     }
 
-    box.appendChild(el("div", "mq-ans", "答：＿＿＿＿＿＿＿＿＿＿＿＿。"));
+    var ans = el("div", "mq-ans");
+    ans.appendChild(el("span", null, "答："));
+    ans.appendChild(el("span", "mq-blank"));
+    ans.appendChild(el("span", null, "。"));
+    box.appendChild(ans);
     return box;
   }
 
   function buildReviewEl(p, i) {
     var box = el("div", "mr");
-    box.appendChild(el("div", "mr-head", "第 " + (i + 1) + " 题 · 对答案"));
+    box.appendChild(el("div", "mr-qhead", "第 " + (i + 1) + " 题 · 对答案"));
 
     // ① 圈对了吗
     box.appendChild(el("div", "mr-lab", "① 圈对了吗？（加粗的是条件，划线的是关键词）"));
@@ -891,6 +909,13 @@
     head.appendChild(el("div", "ms-title", "审题训练 · 第 " + rec.no + " 卷"));
     head.appendChild(el("div", "ms-meta",
       (rec.date || "") + " · " + (LEVEL_NAME[conf.level] || "混合") + "难度 · 共 " + rec.problems.length + " 题"));
+    var student = el("div", "ms-student");
+    ["姓名：", "班级：", "日期："].forEach(function (label) {
+      var field = el("span", "ms-field", label);
+      field.appendChild(el("span", "ms-fill"));
+      student.appendChild(field);
+    });
+    head.appendChild(student);
     sheet.appendChild(head);
     var creed = el("div", "ms-creed");
     creed.appendChild(el("b", null, "四步法：一圈 · 二列 · 三桥 · 四式"));
@@ -903,7 +928,7 @@
 
     if (conf.withReview !== false && rec.problems.length) {
       var rv = el("div", "mreview");
-      rv.appendChild(el("div", "mr-head", "讲评 · 自查页"));
+      rv.appendChild(el("div", "mr-head", "第 " + rec.no + " 卷 · 自查讲评"));
       var rule = el("div", "mr-rule");
       rule.appendChild(el("b", null, "先做完所有题，再翻到这页来对答案。"));
       rule.appendChild(document.createTextNode("每对一题，给自己画一颗 ★。"));
