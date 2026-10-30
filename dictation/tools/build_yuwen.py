@@ -166,16 +166,37 @@ LESSON_HEAD = re.compile(r"^(\d{1,2})(?:\s+|$)(.*)$")
 CN_NUM = {"一": 1, "二": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "八": 8}
 
 DENY_FRAG = re.compile(
-    r"死尸|嫖|赌|毒瘾|色情|裸体|性交|强奸|自杀|杀人|王八|狗屎"
+    r"死尸|嫖|赌|毒瘾|色情|裸体|性交|强奸|自杀|杀人|王八|狗屎|"
+    r"淫秽|外阴|排便|梅毒|剖腹|他杀|太监|驾崩"
 )
 GENERIC_WORDS = {
     "一个", "一些", "一种", "一定", "不是", "什么", "我们", "他们", "自己",
     "可以", "没有", "这个", "那个", "因为", "所以", "已经", "还有", "以及",
     "这样", "那样", "如何", "怎么", "为什么", "只是", "还是", "或者",
-    "波音", "皇岗", "政制", "作法", "发球", "防渗", "量级", "专项",
-    "增幅", "涨幅", "国师", "后主", "京广", "特务", "剖腹", "发球",
-    "选择题", "抗菌素", "历史系",
+    "二者", "三者", "二爷", "三相", "七言", "七律", "九品", "九姓",
+    "合十", "日军", "吗啡", "荷兰籍", "一般", "统一", "银川", "波音",
+    "历史系", "欧洲人", "检察官", "保险费", "纤维素", "解剖学", "核爆炸",
+    "爆炸性", "爆炸声", "弃权票", "准备金", "侧重点", "清晰度", "监督权",
+    "负责制", "获奖者", "承担者", "感染者", "流浪者", "牺牲品", "乃蛮",
+    "奈良", "即墨", "扶余", "比绍", "泰币", "职介", "扭矩", "矩阵",
+    "籍没", "籍授", "魔教", "援藏", "园圃", "昼间", "锄奸", "扳机",
+    "剃度", "阻尼", "代码", "姆妈", "翘楚", "季梁", "轧钢", "废液",
+    "呻唤", "媚外", "耽心", "恒业", "管式", "吟哦", "枢密院", "登陆舰",
+    "考试院", "旧社会", "充其量", "其内", "穷汉", "外阴", "切块",
+    "铅直", "森工", "番号", "防渗", "藤牌", "臀鳍", "囊中", "卖乖",
+    "滴定", "庸碌", "商贾", "疑忌", "申遗", "侨眷", "酒肆", "干贝",
+    "分贝", "光合", "藻井", "阳府", "古墓", "地衣", "临床", "主叫",
+    "海胆", "洋芋", "金领", "秋审", "干吗", "仙桃", "岭子", "教众",
+    "皂隶", "顿首", "企鹅", "摔交", "蝶泳", "赖帐", "斑竹", "几率",
+    "人本", "右派", "大巴", "半岛", "太子", "太监", "个股", "皇上",
+    "股东", "日益", "项目", "手段", "亲王", "王位", "郡王", "洋行",
+    "起诉", "数论", "反切", "路由", "受理", "化肥", "探矿", "涨幅",
+    "量级", "填报", "赤膊", "方丈", "割据", "回扣", "冶炼", "锻压",
+    "市肆", "轧制", "犬吠", "耽于", "华筝", "羁绊", "绞盘", "寨主",
+    "刑部", "阶级", "外戚", "贵戚", "霉素", "控股", "信贷",
 }
+FUNCTION_CHARS = set("一二三四五六七八九十")
+NAME_POS = ("nr", "ns", "nt", "nz", "nrt", "nrf")
 DATE_WORD = re.compile(
     r"^[一二三四五六七八九十百千万两零]+[日天月年号点分秒]$"
 )
@@ -464,63 +485,108 @@ def load_freq() -> dict[str, tuple[int, str]]:
                 continue
             if DENY_FRAG.search(w):
                 continue
-            if pos in BAD_POS:
+            if pos in BAD_POS or pos.startswith(NAME_POS):
                 continue
             freq[w] = (int(fr), pos)
     return freq
 
 
+def common_chars_from(freq: dict[str, tuple[int, str]], n: int = 2800) -> set[str]:
+    from collections import Counter
+    c = Counter()
+    for w, (fr, _pos) in freq.items():
+        if len(w) == 2:
+            for ch in w:
+                c[ch] += fr
+    return {ch for ch, _ in c.most_common(n)}
+
+
 def related_from_chars(chars: list[str], freq: dict[str, tuple[int, str]],
                        learned: set[str], exclude: set[str],
-                       grade: int) -> list[str]:
-    """用写字表汉字组词：二字词，用字必须已出现在写字表，且是小学常用词。"""
+                       grade: int, common: set[str] | None = None) -> list[str]:
+    """按写字表生字扩常用词。至少含一个本课会写的字。"""
     if not chars:
         return []
     unit_set = set(chars)
     pool = unit_set | learned
-    min_freq = {1: 400, 2: 250, 3: 150, 4: 100, 5: 60, 6: 40}[grade]
-    max_total = 8
-    allow_pos = set("n v a vn an i l ng vg".split())
+    common = common or set()
+    min_freq = {1: 80, 2: 50, 3: 30, 4: 18, 5: 12, 6: 8}[grade]
+    per_char = 2
+    max_len = 2 if grade <= 2 else 3
+    max_total = min(24, max(12, len(chars) + 4))
+    allow_pos = set("n v a vn an i l ng vg s f".split())
 
-    cands: list[tuple[int, str]] = []
+    by_char: dict[str, list[tuple[int, str]]] = {c: [] for c in chars}
     for w, (fr, pos) in freq.items():
         if w in exclude or w in GENERIC_WORDS:
             continue
-        if len(w) != 2 or fr < min_freq or pos not in allow_pos:
+        if not (2 <= len(w) <= max_len):
+            continue
+        if len(w) == 3:
+            if fr < max(min_freq * 4, 200):
+                continue
+            if w.endswith(("者", "性", "率", "权", "费", "票", "舰", "院", "籍")):
+                continue
+        if fr < min_freq or pos not in allow_pos or pos.startswith(NAME_POS):
             continue
         if all(c in NUM_CHARS for c in w) or DATE_WORD.match(w):
             continue
-        if any(c not in pool for c in w):
+        if DENY_FRAG.search(w) or w.endswith("籍"):
             continue
-        hits = sum(1 for c in w if c in unit_set)
-        if hits == 0:
+        hits = [c for c in w if c in unit_set]
+        if not hits:
             continue
-        # 叠词只留高频名词/动词（娃娃、看看）；「见见/时时」丢掉
-        if w[0] == w[1] and not (pos in {"n", "v"} and fr >= 800):
+        others = [c for c in w if c not in unit_set]
+        if any(c not in common and c not in pool for c in others):
             continue
-        # 单字在本课、另一字仅「已学」时，要求更常用
-        if hits == 1 and fr < min_freq * 3:
+        # 「一/二/十/了」等虚字组词时，另一字尽量已学，避免「统一/二者」
+        if hits and all(c in FUNCTION_CHARS for c in hits) and others:
+            if any(c not in pool for c in others):
+                continue
+        if w[0] == w[1] and not (pos in {"n", "v"} and fr >= 400):
             continue
         rev = w[::-1]
         if rev != w and rev in freq and freq[rev][0] > fr:
             continue
+        in_pool = sum(1 for c in w if c in pool)
         adj = any(w in (chars[i] + chars[i + 1], chars[i + 1] + chars[i])
                   for i in range(len(chars) - 1))
-        cands.append((hits * 50000 + (15000 if adj else 0) + min(fr, 8000), w))
-    cands.sort(reverse=True)
-    picked, seen, used = [], set(), set()
-    for _, w in cands:
-        if w in seen or w[::-1] in seen:
-            continue
-        fresh = [c for c in w if c in unit_set and c not in used]
-        if not fresh and len(picked) >= 3:
-            continue
-        picked.append(w)
-        seen.add(w)
-        used.update(c for c in w if c in unit_set)
+        score = (len(hits) * 40000
+                 + in_pool * 8000
+                 + (12000 if adj else 0)
+                 + (4000 if len(w) == 2 else 0)
+                 + min(fr, 6000))
+        for c in hits:
+            by_char[c].append((score, w))
+    for c in chars:
+        by_char[c].sort(reverse=True)
+
+    picked, seen = [], set()
+    for c in chars:
+        n = 0
+        for _, w in by_char[c]:
+            if w in seen or w[::-1] in seen:
+                continue
+            picked.append(w)
+            seen.add(w)
+            n += 1
+            if n >= per_char:
+                break
         if len(picked) >= max_total:
             break
-    return picked
+    if len(picked) < max_total:
+        rest = []
+        for c in chars:
+            rest.extend(by_char[c])
+        rest.sort(reverse=True)
+        for _, w in rest:
+            if w in seen or w[::-1] in seen:
+                continue
+            picked.append(w)
+            seen.add(w)
+            if len(picked) >= max_total:
+                break
+    return picked[:max_total]
 
 
 def compact_json(obj) -> str:
@@ -534,7 +600,7 @@ def compact_json(obj) -> str:
     return text + "\n"
 
 
-def build_g12_units(book, xiezi, ciyu, freq, grade):
+def build_g12_units(book, xiezi, ciyu, freq, grade, common):
     units_out = []
     learned = set()
     book_ciyu = {w for ws in ciyu.values() for w in ws}
@@ -562,7 +628,7 @@ def build_g12_units(book, xiezi, ciyu, freq, grade):
                 "id": uid, "name": uname + " · 词语表",
                 "words": [{"word": w} for w in ci_words],
             })
-        rel = related_from_chars(chars, freq, learned, book_ciyu | set(ci_words), grade)
+        rel = related_from_chars(chars, freq, learned, book_ciyu | set(ci_words), grade, common)
         if not rel and chars and not ci_words:
             rel = chars[:]  # 一年级拼音单元几乎没有可组词，退回本课会写的字
         if rel:
@@ -584,7 +650,7 @@ def chars_count(bucket) -> int:
     return n
 
 
-def build_g36_units(book, xiezi, ciyu, freq, grade):
+def build_g36_units(book, xiezi, ciyu, freq, grade, common):
     ranges = book["lesson_ranges"]
     xz_lessons = {k[1]: v for k, v in xiezi.items() if k[0] == "课"}
     ci_lessons = {k[1]: v for k, v in ciyu.items() if k[0] == "课"}
@@ -658,7 +724,7 @@ def build_g36_units(book, xiezi, ciyu, freq, grade):
                 "id": uid, "name": uname + " · 词语表",
                 "words": [{"word": w} for w in ci_words],
             })
-        rel = related_from_chars(chars_u, freq, learned, book_ciyu | set(ci_words), grade)
+        rel = related_from_chars(chars_u, freq, learned, book_ciyu | set(ci_words), grade, common)
         if rel:
             units_out.append({
                 "id": uid + "-xz", "name": uname + " · 写字表",
@@ -709,6 +775,7 @@ def main() -> int:
     args = ap.parse_args()
 
     freq = load_freq()
+    common = common_chars_from(freq)
     grades = []
     ok = True
     for book in BOOKS:
@@ -721,11 +788,11 @@ def main() -> int:
         if book["kind"] == "g12":
             xiezi = parse_xiezi_g12(sec["xiezi"])
             ciyu = parse_ciyu(sec["ciyu"], "g12")
-            units, nx, nc = build_g12_units(book, xiezi, ciyu, freq, grade_num(book["id"]))
+            units, nx, nc = build_g12_units(book, xiezi, ciyu, freq, grade_num(book["id"]), common)
         else:
             xiezi = parse_xiezi_g36(sec["xiezi"])
             ciyu = parse_ciyu(sec["ciyu"], "g36")
-            units, nx, nc = build_g36_units(book, xiezi, ciyu, freq, grade_num(book["id"]))
+            units, nx, nc = build_g36_units(book, xiezi, ciyu, freq, grade_num(book["id"]), common)
         exp_x, exp_c = book["expect_xiezi"], book["expect_ciyu"]
         flag = ""
         if exp_x and abs(nx - exp_x) > 5:
